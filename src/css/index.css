@@ -62,6 +62,7 @@
     font-size: 17px;
     line-height: 1.4;
     text-align: center;
+
 }
 .teamLeaderContainer{
     text-align: center;
@@ -125,4 +126,5 @@
     font-weight: 400;
     margin-top: -2px;
     color: var(--text-grey);
+
 }
