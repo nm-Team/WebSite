@@ -1,0 +1,128 @@
+:root{
+    --teamLeader-color: #f8f8f8;
+}
+.indexHeader{
+    position: relative;
+    left: -8px;
+    top: -82px;
+    z-index: 999;
+    width: calc(100% + 16px);
+    height: 60vh;
+    margin-bottom: -40px;
+    background-color: var(--logolike-yellow-lighter);
+    background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@256.png);
+    background-position-x: center;
+    background-position-y: 40%;
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+}
+.indexHeader i{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 69%;
+    bottom: 4%;
+    background-image: url(/src/img/logotext.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+.indexMain{
+    position: relative;
+    margin: 0;
+    padding: 5px 10%;
+}
+.indexMainBlock{
+    margin: 0 0 15px 0;
+}
+.indexMainBlock h1, .indexMainBlock h2{
+    position: relative;
+    margin: 0;
+    padding: 10px 10%;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-yellow);
+}
+.indexMainBlock h1{
+    padding: 10px 10%;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-yellow);
+}
+.indexMainBlock h2{
+    padding: 10px 10%;
+    font-size: 20px;
+}
+.indexMainBlock p{
+    position: relative;
+    margin: 0;
+    padding: 1.5px 10%;
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: center;
+}
+.teamLeaderContainer{
+    text-align: center;
+    margin: 0 8%;
+}
+.teamLeader{
+    display: inline-block;
+    position: relative;
+    height: 90px;
+    width: calc(50% - 12px);
+    margin: 2px;
+    padding: 0px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    box-shadow: #3333334f 1px 2px 4px;
+    overflow: hidden;
+    text-decoration: none!important;
+    color: var(--text-color);
+}
+@media (max-width: 500px) {
+    .teamLeader{
+        width: 100%;
+    }
+}
+@media (min-width: 1300px) {
+    .teamLeader{
+        width: 24%;
+    }
+}
+.teamLeader p{
+    text-align: left;
+    margin: 0px 10px 0 78px;
+    padding: 1px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.teamLeader i{
+    position: absolute;
+    top: 14px;
+    left: 9px;
+    width: 60px;
+    height: 60px;
+    border-radius: 666px;
+    background-size: 60px;
+}
+.teamLeader .name{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 8px;
+    color: var(--text-deepbrown);
+}
+.teamLeader .job{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -2px;
+    color: var(--text-deepbrown);
+}
+.teamLeader .describe{
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: -2px;
+    color: var(--text-grey);
+}
