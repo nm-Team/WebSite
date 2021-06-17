@@ -1,6 +1,11 @@
 :root{
     --teamLeader-color: #f8f8f8;
 }
+@media (prefers-color-scheme: dark){
+    :root{
+        --teamLeader-color: #303030;
+    }
+}
 .indexHeader{
     position: relative;
     left: -8px;
@@ -64,67 +69,60 @@
     text-align: center;
 
 }
-.teamLeaderContainer{
-    text-align: center;
-    margin: 0 8%;
+.nmProductsPreview{
+    width: 100%;
+    max-width: 600px;
+    height: 180px;
+    margin: 20px auto 10px auto;
 }
-.teamLeader{
-    display: inline-block;
-    position: relative;
-    height: 90px;
-    width: calc(50% - 12px);
-    margin: 2px;
-    padding: 0px;
-    background-color: #f8f8f8;
-    border-radius: 4px;
-    box-shadow: #3333334f 1px 2px 4px;
-    overflow: hidden;
-    text-decoration: none!important;
+@media (max-width: 600px) {
+    .nmProductsPreview{
+        width: auto;
+        max-width: unset;
+        height: 200px;
+        margin: 20px -14% 10px -14%;
+    }
+}
+.nmProductsPreview .swiper-button-prev::after, .nmProductsPreview .swiper-button-next::after{
+    font-size: 10px;
+    color: var(--logolike-yellow-lighter);
+}
+/* .nmProductsPreview .swiper-button-prev{
+    left: -20px;
+}
+.nmProductsPreview .swiper-button-next{
+    right: -20px;
+} */
+.swiper-pagination-bullet{
+    background: var(--logolike-yellow-lighter);
+}
+.nmProductsPreview .swiper-slide{
+    width: 200px;
+    height: 170px;
+    text-align: center;
+    background-position-x: 50%;
+    background-position-y: 2%;
+    background-size: 63%;
+    background-repeat: no-repeat;
+}
+/* .nmProductsPreview .swiper-slide:not(.swiper-slide swiper-slide-active){
+    transform: scale(0.9);
+} */
+.nmProductsPreview .swiper-slide p{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 72%;
+    font-size: 20px;
+    font-weight: 450;
     color: var(--text-color);
 }
-@media (max-width: 500px) {
-    .teamLeader{
-        width: 100%;
-    }
+.indexMoreLink{
+    display: block;
+    text-align: center;
+    color: var(--text-yellow)!important;
+    text-decoration: none!important;
 }
-@media (min-width: 1300px) {
-    .teamLeader{
-        width: 24%;
-    }
-}
-.teamLeader p{
-    text-align: left;
-    margin: 0px 10px 0 78px;
-    padding: 1px 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.teamLeader i{
-    position: absolute;
-    top: 14px;
-    left: 9px;
-    width: 60px;
-    height: 60px;
-    border-radius: 666px;
-    background-size: 60px;
-}
-.teamLeader .name{
-    font-size: 20px;
-    font-weight: 500;
-    margin-top: 8px;
-    color: var(--text-deepbrown);
-}
-.teamLeader .job{
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: -2px;
-    color: var(--text-deepbrown);
-}
-.teamLeader .describe{
-    font-size: 13px;
-    font-weight: 400;
-    margin-top: -2px;
-    color: var(--text-grey);
-
-}
+.indexMoreLink:hover{
+    opacity: 0.7
+;}

@@ -44,3 +44,12 @@ function stop() {
 	// }
 
 // }
+
+window.onscroll = function () { setHeader(); };
+window.onload = function () { setHeader(); };
+function setHeader() {
+    if (window.scrollY < 70)
+        document.getElementById("header-main").className = "height hidden";
+    else document.getElementById("header-main").className = "height ";
+}
+document.getElementById("header-main")
