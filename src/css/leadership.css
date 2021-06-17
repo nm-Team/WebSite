@@ -1,0 +1,71 @@
+:root{
+    --teamLeader-color: #f8f8f8;
+}
+@media (prefers-color-scheme: dark){
+    :root{
+        --teamLeader-color: #303030;
+    }
+}
+.teamLeaderContainer{
+    text-align: center;
+    margin: 0 10% 20px 10%;
+}
+.teamLeader{
+    display: inline-block;
+    position: relative;
+    height: 90px;
+    width: calc(50% - 12px);
+    margin: 2px;
+    padding: 0px;
+    background-color: var(--teamLeader-color);
+    border-radius: 4px;
+    box-shadow: #3333334f 1px 2px 4px;
+    overflow: hidden;
+    text-decoration: none!important;
+    color: var(--text-color);
+}
+@media (max-width: 600px) {
+    .teamLeader{
+        width: 100%;
+    }
+}
+@media (min-width: 1300px) {
+    .teamLeader{
+        width: 24%;
+    }
+}
+.teamLeader p{
+    text-align: left;
+    margin: 0px 10px 0 78px;
+    padding: 1px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.teamLeader i{
+    position: absolute;
+    top: 14px;
+    left: 9px;
+    width: 60px;
+    height: 60px;
+    border-radius: 666px;
+    background-size: 60px;
+}
+.teamLeader .name{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 8px;
+    color: var(--text-deepbrown);
+}
+.teamLeader .job{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -2px;
+    color: var(--text-deepbrown);
+}
+.teamLeader .describe{
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: -2px;
+    color: var(--text-grey);
+}

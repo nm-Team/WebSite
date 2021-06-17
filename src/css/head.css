@@ -12,6 +12,12 @@
 	overflow:hidden;
 	text-overflow:ellipsis;
 }
+
+#header-main.hidden {
+	background: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+}
 #header-title {
 	margin-top:18px;
 	z-index:1000;
@@ -325,16 +331,6 @@
 .footer-a:visited {
 	color:white;
 	text-decoration:none;
-}
-.footer-span {
-	
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
-	backdrop-filter: saturate(180%) blur(20px);
-	background-color: var(--jianbian-color);
-	overflow: hidden;
-	text-overflow: ellipsis;
-
-
 }
 
 #header-title{
@@ -688,20 +684,10 @@
 	}
 
 
-	.map-link div:link{
+	.map-link div:link, .map-link div:hover{
 		text-decoration:none;
-		background-color:grey;
+		background-color:rgba(190, 190, 190, 0.527);
 		color:white;
-	}
-	.map-link div:hover{
-		text-decoration:none;
-		background-color:grey;
-		color:white;
-	}
-	.map-link div:visited{
-		background-color:grey;
-		text-decoration:none;
-		color:black;
 	}
 	.map-link div{
 		background-color:none!important;
@@ -713,7 +699,7 @@
 
 	@media (prefers-color-scheme: dark) {
 		
-			.map-link div:link{
+		.map-link div:link{
 			text-decoration:none;
 			background-color:white;
 			color:black;
