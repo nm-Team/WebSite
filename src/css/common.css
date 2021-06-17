@@ -6,7 +6,9 @@
 	--logolike-yellow-lighter: #EAD050;
 	--logolike-yellow-darker: #E5A923;
 	--text-yellow: #E5A923;
-	
+	--text-deepbrown: #604D42;
+	--text-grey: #757575;
+
 }
 
 @media (prefers-color-scheme: dark){
@@ -15,6 +17,8 @@
 		
 		--jianbian-color: rgba(52,50,50,0.7);
 		--text-yellow: #EAD050;
+    --text-deepbrown: #dbcabf;
+		--text-grey: #757575;
 
 	}
 
@@ -30,12 +34,13 @@
 body{
 
 	line-height: normal;
-
-}
-
-body{
-
 	font-family: PingFangSC-Regular;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 
 }
 
@@ -46,21 +51,21 @@ body{
 
 }
 
-a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):not(.card-seemore):link{
+a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):link{
 
 	text-decoration: none;
 	color: var(--a-color);
 
 }
 
-a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):not(.card-seemore):hover{
+a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):hover{
 
 	text-decoration: underline;
 	color: var(--a-color);
 
 }
 
-a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):not(.card-seemore):visited{
+a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):visited{
 
 	color: var(--a-color);
 	text-decoration: none;
