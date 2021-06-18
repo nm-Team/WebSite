@@ -82,6 +82,7 @@ body{
     padding: 130px 34px 13px 34px;
     text-align: left;
     color: #000;
+    overflow-y: hidden;
 
 }
 
@@ -94,6 +95,7 @@ body{
 .title h1{
     
     margin: 0 0 10px 0;
+    animation: main 0.5s;
 
 }
 
@@ -119,6 +121,7 @@ body{
 
 	font-size: 20px;
 	font-weight: 300;
+    animation: main 0.5s;
 
 }
 
@@ -127,6 +130,7 @@ body{
     position: relative;
     margin: 0;
     padding: 5px 10%;
+    animation: main 0.5s;
 
 }
 
@@ -306,6 +310,37 @@ beta-tag{
     color: var(--text-grey);
 }
 
+.mainBlock{
+    margin: 0 0 15px 0;
+}
+.mainBlock h1, .mainBlock h2{
+    position: relative;
+    margin: 0;
+    padding: 10px 10%;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-yellow);
+}
+.mainBlock h1{
+    padding: 10px 10%;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-yellow);
+}
+.mainBlock h2{
+    padding: 10px 10%;
+    font-size: 20px;
+}
+.mainBlock p{
+    position: relative;
+    margin: 0;
+    padding: 1.5px 10%;
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: center;
+
+}
 @-webkit-keyframes stretchdelay{
 
     0%, 40%, 100%
@@ -342,6 +377,22 @@ beta-tag{
     
 }
 
+}
+
+@keyframes main{
+    0%{
+        position: relative;
+        top: 50px;
+        opacity: 0;
+    }
+    99%{
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+    100%{
+
+    }
 }
 
 .insiderTip{
