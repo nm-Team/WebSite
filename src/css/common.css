@@ -53,11 +53,12 @@ body{
     line-height: normal;
     font-family: PingFangSC-Regular;
     /* -webkit-touch-callout: none; */
+	/* 调试期间先不留
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none; */
 
 }
 
@@ -77,10 +78,30 @@ body{
 
     background: var(--logolike-yellow-lighter);
     position: relative;
-    margin: -80px -8px 18px -8px;
+    margin: -82px -8px 18px -8px;
     padding: 130px 34px 13px 34px;
     text-align: left;
     color: #000;
+    overflow-y: hidden;
+
+}
+
+.title.center{
+
+	text-align: center;
+
+}
+
+.title h1{
+    
+    margin: 0 0 10px 0;
+    animation: main 0.5s;
+
+}
+
+.title.largepadding{
+
+	padding: 130px calc(10% + 8px) 13px calc(10% + 8px);
 
 }
 
@@ -100,7 +121,17 @@ body{
 
 	font-size: 20px;
 	font-weight: 300;
-	
+    animation: main 0.5s;
+
+}
+
+.main{
+
+    position: relative;
+    margin: 0;
+    padding: 5px 10%;
+    animation: main 0.5s;
+
 }
 
 a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):link{
@@ -272,6 +303,44 @@ beta-tag{
 
 }
 
+.updateDate{
+    margin: 20px 10%;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-grey);
+}
+
+.mainBlock{
+    margin: 0 0 15px 0;
+}
+.mainBlock h1, .mainBlock h2{
+    position: relative;
+    margin: 0;
+    padding: 10px 10%;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-yellow);
+}
+.mainBlock h1{
+    padding: 10px 10%;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-yellow);
+}
+.mainBlock h2{
+    padding: 10px 10%;
+    font-size: 20px;
+}
+.mainBlock p{
+    position: relative;
+    margin: 0;
+    padding: 1.5px 10%;
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: center;
+
+}
 @-webkit-keyframes stretchdelay{
 
     0%, 40%, 100%
@@ -308,6 +377,22 @@ beta-tag{
     
 }
 
+}
+
+@keyframes main{
+    0%{
+        position: relative;
+        top: 50px;
+        opacity: 0;
+    }
+    99%{
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+    100%{
+
+    }
 }
 
 .insiderTip{

@@ -20,6 +20,7 @@
     background-position-y: 40%;
     background-size: auto 50%;
     background-repeat: no-repeat;
+    animation: logoComing 2s;
 }
 .indexHeader i{
     position: absolute;
@@ -32,42 +33,10 @@
     background-position-y: center;
     background-size: auto 100%;
     background-repeat: no-repeat;
+    animation: nameComing 1s;
 }
-.indexMain{
-    position: relative;
-    margin: 0;
-    padding: 5px 10%;
-}
-.indexMainBlock{
-    margin: 0 0 15px 0;
-}
-.indexMainBlock h1, .indexMainBlock h2{
-    position: relative;
-    margin: 0;
-    padding: 10px 10%;
-    font-weight: 500;
-    text-align: center;
-    color: var(--text-yellow);
-}
-.indexMainBlock h1{
-    padding: 10px 10%;
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    color: var(--text-yellow);
-}
-.indexMainBlock h2{
-    padding: 10px 10%;
-    font-size: 20px;
-}
-.indexMainBlock p{
-    position: relative;
-    margin: 0;
-    padding: 1.5px 10%;
-    font-size: 17px;
-    line-height: 1.4;
-    text-align: center;
-
+.body{
+    animation: indexmain 1.6s ;
 }
 .nmProductsPreview{
     width: 100%;
@@ -124,5 +93,142 @@
     text-decoration: none!important;
 }
 .indexMoreLink:hover{
-    opacity: 0.7
-;}
+    opacity: 0.7;
+}
+.contactContainer{
+    padding: 5px 10%;
+    text-align: center;
+}
+a.contact{
+    display: inline-block;
+    background-position-x: 6px;
+    background-position-y: 50%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 6px;
+    max-width: 20px;
+    font-size: 300;
+    border-radius: 233px;
+    box-shadow: #3333334f 1px 2px 4px;
+    background-color: var(--teamLeader-color);
+    color: var(--text)!important;
+    overflow: hidden;
+    transition: all 0.8s;
+    text-decoration: none!important;
+}
+.contact:hover{
+    max-width: 12em;
+}
+.contact b{
+    padding-right: 5px;
+    font-size: 400;
+    padding-left: 23px;
+    opacity: 0;
+    transition: opacity 0.1s 0.7s;
+}
+.contact:hover b{
+    opacity: 1;
+    transition: opacity 0s 0s;
+}
+@keyframes logoComing{
+    0%{
+        background-position-y: 50%;
+        background-size: auto 1000%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: auto;
+    }
+    50%{
+        background-position-x: center;
+        background-position-y: 40%;
+        background-size: auto 50%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: auto;
+    }
+    60%{
+        background-position-x: center;
+        background-position-y: 40%;
+        background-size: auto 50%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: auto;
+    }
+    60.000000001%{
+        background-position-x: center;
+        background-position-y: 40%;
+        background-size: auto 50%;
+        position: relative;
+        margin-top: -0px;
+        top: -74px;
+        height: calc(100vh + 45px);
+        /* height: 100vh; */
+        /* margin-bottom: -28px; */
+    }
+}
+@media (min-width: 700px) {
+        
+    @keyframes logoComing{
+        0%{
+            background-position-y: 50%;
+            background-size: auto 1000%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            height: auto;
+        }
+        50%{
+            background-position-x: center;
+            background-position-y: 40%;
+            background-size: auto 50%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            height: auto;
+        }
+        60%{
+            background-position-x: center;
+            background-position-y: 40%;
+            background-size: auto 50%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            height: auto;
+        }
+        60.000000001%{
+            background-position-x: center;
+            background-position-y: 40%;
+            background-size: auto 50%;
+            position: relative;
+            margin-top: -0px;
+            top: -84px;
+            height: calc(100vh + 43px);
+            /* height: 100vh; */
+            /* margin-bottom: -28px; */
+        }
+    }
+}
+@keyframes nameComing{
+    0%{
+        top: 73%;
+        opacity: 0;
+    }
+        90%{
+        top: 73%;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes indexmain{
+    0%{
+        height: 0;
+    }
+    2%{
+        height: auto;
+    }
+}
