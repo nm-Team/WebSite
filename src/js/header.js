@@ -58,3 +58,9 @@ function setHeader() {
 	else document.getElementById("header-main").className = "height ";
 }
 
+
+// Fuck IE
+if (window.navigator.userAgent.indexOf('MSIE ') > 0 &&
+	window.confirm('Your browser is not supported, click \'OK\' to update.')) {
+	window.location = 'https://www.google.cn/chrome/';
+}
