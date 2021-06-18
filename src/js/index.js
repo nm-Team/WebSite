@@ -1,7 +1,3 @@
-window.onloadstart=function(){
-    window.location.href="#";
-}
-
 var mySwiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: true,

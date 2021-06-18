@@ -12,8 +12,7 @@
     display: inline-block;
     outline: none;
     color: var(--text);
-	/* animation: main 0.6s; */
-    
+	
 }
 
 #searchbox::-webkit-input-placeholder{
@@ -32,7 +31,6 @@
 .products-container{
 
     margin: 17px;
-    animation: main 0.6s;
 
 }
 
