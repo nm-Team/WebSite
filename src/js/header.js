@@ -34,22 +34,27 @@ function stop() {
 	cover.className = "";
 	sit = 0;
 }
-// window.onresize=function() {
-	// if (document.body.clientWidth > 700)
-		// document.getElementById("map-box-main").style.visibility = "visible";
-	// else {
-		// document.getElementById("map-box-main").style.visibility = "hidden";
-		// document.getElementById("cover").style.visibility = "hidden";
 
-	// }
+// 页面更新日期
+if (fcont.getAttribute("updatetime") && fcont.getAttribute("updatetime").length == 8) {
+	fcont.innerHTML = "<div class=updateDate>页面更新日期：" + fcont.getAttribute("updatetime").slice(0, 4) + " 年 " + fcont.getAttribute("updatetime").slice(4, 6) + " 月 " + fcont.getAttribute("updatetime").slice(6, 8) + " 日</div>" + fcont.innerHTML;
+}
+// window.onresize=function() {
+// if (document.body.clientWidth > 700)
+// document.getElementById("map-box-main").style.visibility = "visible";
+// else {
+// document.getElementById("map-box-main").style.visibility = "hidden";
+// document.getElementById("cover").style.visibility = "hidden";
+
+// }
 
 // }
 
 window.onscroll = function () { setHeader(); };
 window.onload = function () { setHeader(); };
 function setHeader() {
-    if (window.scrollY < 70)
-        document.getElementById("header-main").className = "height hidden";
-    else document.getElementById("header-main").className = "height ";
+	if (window.scrollY < 70)
+		document.getElementById("header-main").className = "height hidden";
+	else document.getElementById("header-main").className = "height ";
 }
-document.getElementById("header-main")
+
