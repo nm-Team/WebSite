@@ -35,9 +35,9 @@
     }
 }
 .teamLeader p{
-    text-align: left;
-    margin: 0px 10px 0 78px;
-    padding: 1px 0px;
+    text-align: left!important;
+    margin: 0px 10px 0 78px!important;
+    padding: 1px 0px!important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -54,18 +54,18 @@
 .teamLeader .name{
     font-size: 20px;
     font-weight: 500;
-    margin-top: 8px;
+    margin-top: 8px!important;
     color: var(--text-deepbrown);
 }
 .teamLeader .job{
     font-size: 16px;
     font-weight: 400;
-    margin-top: -2px;
+    margin-top: -2px!important;
     color: var(--text-deepbrown);
 }
 .teamLeader .describe{
     font-size: 13px;
     font-weight: 400;
-    margin-top: -2px;
+    margin-top: -2px!important;
     color: var(--text-grey);
 }

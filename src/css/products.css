@@ -54,6 +54,12 @@
 
 }
 
+.products-box{
+
+    width: calc(100% + 0px);
+
+}
+
 .products{
 
     width: 100%;
