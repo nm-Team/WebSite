@@ -57,6 +57,78 @@
                     ],
                     "dtype": "网页",
                     "djrx": "与大多数现代浏览器兼容。"
+                },
+                {
+                    "name": "nmCDN",
+                    "third_party": false,
+                    "page_url": "/",
+                    "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
+                    "slug": "A 记录 CDN，你值得拥有。",
+                    "describe": "nmCDN developing.",
+                    "tag": "",
+                    "hot": true,
+                    "available": false,
+                    "operation": "—",
+                    "developer": "0",
+                    "img": [
+                        "https://logos.nmteam.agou.im/nmTeam/logo@256.png"
+                    ],
+                    "dtype": "网页",
+                    "djrx": "与大多数现代浏览器兼容。"
+                },
+                {
+                    "name": "example",
+                    "third_party": false,
+                    "page_url": "/",
+                    "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
+                    "slug": "To show what it can does.",
+                    "describe": "Now you see describe. ",
+                    "tag": "",
+                    "hot": true,
+                    "available": true,
+                    "operation": "打开",
+                    "developer": "0",
+                    "img": [
+                        "https://logos.nmteam.agou.im/nmTeam/logo@256.png","https://logos.nmteam.agou.im/nmTeam/logo@256.png","https://logos.nmteam.agou.im/nmTeam/logo@256.png"
+                    ],
+                    "dtype": "网页",
+                    "djrx": "与大多数现代浏览器兼容。"
+                },
+                {
+                    "name": "nmCDN",
+                    "third_party": false,
+                    "page_url": "/",
+                    "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
+                    "slug": "A 记录 CDN，你值得拥有。",
+                    "describe": "nmCDN developing.",
+                    "tag": "",
+                    "hot": true,
+                    "available": false,
+                    "operation": "—",
+                    "developer": "0",
+                    "img": [
+                        "https://logos.nmteam.agou.im/nmTeam/logo@256.png"
+                    ],
+                    "dtype": "网页",
+                    "djrx": "与大多数现代浏览器兼容。"
+                },
+                {
+                    "name": "example",
+                    "third_party": false,
+                    "page_url": "/",
+                    "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
+                    "slug": "To show what it can does.",
+                    "describe": "Now you see describe. ",
+                    "tag": "",
+                    "hot": true,
+                    "available": true,
+                    "operation": "打开",
+                    "developer": "0",
+                    "img": [
+                        "https://logos.nmteam.agou.im/nmTeam/logo@256.png","https://logos.nmteam.agou.im/nmTeam/logo@256.png","https://logos.nmteam.agou.im/nmTeam/logo@256.png"
+                    ],
+                    "dtype": "网页",
+                    "djrx": "与大多数现代浏览器兼容。"
                 }
             ]
         }
