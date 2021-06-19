@@ -339,11 +339,26 @@ beta-tag{
 .mainBlock p{
     position: relative;
     margin: 0;
-    padding: 1.5px 10%;
+    padding: 1.5px 0;
     font-size: 17px;
     line-height: 1.4;
+    text-align: left;
+}
+.mainBlock.center p{
     text-align: center;
-
+}
+.mainBlock.widepadding p{
+    padding: 1.5px 10%;
+}
+.indexMoreLink{
+    display: block;
+    text-align: center;
+    padding: 4px 0;
+    color: var(--text-yellow)!important;
+    text-decoration: none!important;
+}
+.indexMoreLink:hover{
+    opacity: 0.7;
 }
 @-webkit-keyframes stretchdelay{
 
