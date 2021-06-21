@@ -1,3 +1,5 @@
+// 这是只在首页执行的 js
+
 window.onloadstart = function () {
     window.location.href = "#";
 }
@@ -30,23 +32,3 @@ var mySwiper = new Swiper('.swiper-container', {
         el: '.swiper-scrollbar',
     },
 })
-
-var language; // 全局语言
-
-// 更改语言函数
-function changeLanguage(lang = "zh_CN") {
-    language = lang;
-    i18n.init(
-        {
-            lng: language,
-
-            // 所有翻译在 /src/locales/ 目录下
-            // 注：该目录下的 dev.json 请勿删除
-            resGetPath: '/src/locales/__lng__.json'
-        },
-        function (t) {
-            $('html').i18n();
-        }
-    );
-}
-changeLanguage();

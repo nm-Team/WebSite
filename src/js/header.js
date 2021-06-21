@@ -1,3 +1,4 @@
+// 这是在每一页上都会执行的 js
 function loadc(name) {
 	let xhr = new XMLHttpRequest(),
 		okStatus = document.location.protocol === "file:" ? 0 : 200;
@@ -37,7 +38,7 @@ function stop() {
 
 // 页面更新日期
 if (fcont.getAttribute("updatetime") && fcont.getAttribute("updatetime").length == 8) {
-	fcont.innerHTML = "<div class=updateDate>页面更新日期：" + fcont.getAttribute("updatetime").slice(0, 4) + " 年 " + fcont.getAttribute("updatetime").slice(4, 6) + " 月 " + fcont.getAttribute("updatetime").slice(6, 8) + " 日</div>" + fcont.innerHTML;
+	fcont.innerHTML = "<div class='updateDate'><span data-i18n='page_update'></span>" + fcont.getAttribute("updatetime").slice(0, 4) + "<span data-i18n='page_update_y'></span>" + fcont.getAttribute("updatetime").slice(4, 6) +"<span data-i18n='page_update_m'></span>" + fcont.getAttribute("updatetime").slice(6, 8) +"<span data-i18n='page_update_d'></span></div>" + fcont.innerHTML;
 }
 // window.onresize=function() {
 // if (document.body.clientWidth > 700)
@@ -64,3 +65,4 @@ if (window.navigator.userAgent.indexOf('MSIE ') > 0 &&
 	window.confirm('Your browser is not supported, click \'OK\' to update.')) {
 	window.location = 'https://www.google.cn/chrome/';
 }
+
