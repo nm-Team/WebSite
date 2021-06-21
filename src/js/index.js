@@ -1,5 +1,7 @@
-window.onloadstart=function(){
-    window.location.href="#";
+// 这是只在首页执行的 js
+
+window.onloadstart = function () {
+    window.location.href = "#";
 }
 
 var mySwiper = new Swiper('.swiper-container', {
