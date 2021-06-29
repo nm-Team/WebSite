@@ -14,6 +14,10 @@
 		"h2": "你也想加入 nmTeam 了吗？",
 		"title": "关于 nmTeam"
 	},
+	"account": {
+		"click_to_log": "点击登录",
+		"unable_to_load": "无法连接登录服务器"
+	},
 	"ceo": "CEO",
 	"co-founder": "联合创始人",
 	"comes_soon": "此页面正在制作中，敬请期待！",

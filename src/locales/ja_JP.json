@@ -14,6 +14,10 @@
 		"h2": "nmTeamにも参加しますか？",
 		"title": "nmTeamについて"
 	},
+	"account": {
+		"click_to_log": "クリックしてログイン",
+		"unable_to_load": "ログインサーバーに接続できません"
+	},
 	"ceo": "CEO",
 	"co-founder": "共同創設者",
 	"comes_soon": "このページは制作中ですので、お楽しみに！ ",
