@@ -1,4 +1,4 @@
-logURL = "http://localhost:2338";
+logURL = "https://accounts.nmteam.ml";
 enableAccount = false;
 
 // 这是在每一页上都会执行的 js
@@ -89,4 +89,6 @@ window.onload = function () {
 		}
 		changeLanguage();
 	}
+	else nickBox.innerHTML = "<span data-i18n='account.click_to_log'></span>";
+	changeLanguage();
 }
