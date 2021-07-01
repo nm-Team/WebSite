@@ -38,6 +38,8 @@ function changeLanguage(lang) {
             lng: language,
             // 所有翻译在 /src/locales/ 目录下
             // 注：该目录下的 dev.json 请勿删除
+            fallbackLng: 'en_US',
+            // 缺省语言
             resGetPath: '/src/locales/__lng__.json'
         },
         function (t) {
