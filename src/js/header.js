@@ -1,5 +1,5 @@
 logURL = "https://accounts.nmteam.ml";
-enableAccount = false;
+enableAccount = true;
 
 // 这是在每一页上都会执行的 js
 function loadc(name) {
