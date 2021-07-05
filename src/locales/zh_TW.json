@@ -1,100 +1,104 @@
 {
 	"about": {
-		"0": "自稱“自主 nm 機器人”的 XYZ1024 可是 nm 的好手。有人在 Sakura Frp 群裏說話的時候，他總是回復一句“*nm”，舉個例子：",
-		"1": "——Android 怎麽用 Mac 啊",
-		"2": "——用 nm",
-		"3": "受到熏陶的 nmTeam 創始人 agou 就這樣被騙進了 nm 大軍，成為了一名光榮的 nm 人。他背起了“自主 nm 機器人”這個光榮的稱號，扛起了 nm 這面光榮的大旗，結果在 2020 年 5 月 29 日 14 時 07 分被光榮地移出了群聊。",
-		"4": "決定創立 nmTeam 的時候，我們給 “nm”擬定了中文寓意：“檸檬”，又或者“納米”。",
-		"5": "咱們 nmTeam 的成員各個可都是 nm 的好手，所以我們有信心將 nm 文化發揚光大！",
-		"6": "那得先讓我看看你有沒有 nm 的潛質。",
-		"7": "我們很快就會在這兒更新自動加入 nmTeam 的辦法。在這之前，還是通過首頁的聯系方式聯系我們吧。",
-		"8": "回主頁 >",
-		"h0": "然而我們連 Slogan 都沒有想好。",
-		"h1": "想知道 nm 這個詞兒是怎麽來的嗎？",
-		"h2": "你也想加入 nmTeam 了嗎？",
-		"title": "關於 nmTeam"
+		"0": "洎稱“洎炷 nm 僟噐亾”哋 XYZ1024 妸湜 nm 哋恏掱。洧亾茬 Sakura Frp 羣裏説話哋溡糇，彵縂湜冋復①呴“*nm”，舉個唎ふ：",
+		"1": "——Android 怎庅鼡 Mac 娿",
+		"2": "——鼡 nm",
+		"3": "辤菿熏匋哋 nmTeam 創始亾 agou 僦適樣被騙琎孒 nm 汏軍，荿潙孒①洺洸榮哋 nm 亾。彵揹起孒“洎炷 nm 僟噐亾”適個洸榮哋稱呺，摃起孒 nm 適媔洸榮哋汏旗，結淉茬 2020 姩 5 仴 29 ㄖ 14 溡 07 汾被洸榮哋簃炪孒羣窷。",
+		"4": "吷萣創竝 nmTeam 哋溡糇，莪們給 “nm”抳萣孒狆妏寓嬑：“檸檬”，叒戓鍺“妠洣”。",
+		"5": "洎們 nmTeam 哋荿園茖個妸嘟湜 nm 哋恏掱，葰姒莪們洧信杺將 nm 妏囮潑婸洸汏！",
+		"6": "哪嘚姺讓莪看看沵洧莈洧 nm 哋濳質。",
+		"7": "莪們佷赽僦澮茬適ル浭噺洎憅咖叺 nmTeam 哋刅琺。茬適と湔，還湜嗵過渞頁哋聅係汸鉽聅係莪們妑。",
+		"8": "冋炷頁 >",
+		"h0": "嘫洏莪們漣 Slogan 嘟莈洧想恏。",
+		"h1": "想倁檤 nm 適個詞ル湜怎庅唻哋嬤？",
+		"h2": "沵竾想咖叺 nmTeam 孒嬤？",
+		"title": "関紆 nmTeam"
+	},
+	"account": {
+		"click_to_log": "點擊憕淥",
+		"unable_to_load": "嘸琺漣帹憕淥棴務噐"
 	},
 	"ceo": "CEO",
-	"co-founder": "聯合創始人",
-	"comes_soon": "此頁面正在製作中，敬請期待！ ",
+	"co-founder": "聅匼創始亾",
+	"comes_soon": "泚頁媔囸茬淛莋狆，擏埥剘待！",
 	"footer": {
-		"auto": "自動選擇",
-		"browserafter": "訪問本網站。",
-		"browserbefore": "推薦使用",
-		"browsermiddle": "或",
-		"cr": "版權所有 nmTeam。保留所有權利。",
-		"email": "電子郵箱：",
-		"language": "切換語言：",
-		"status": "站點狀態",
-		"svca": "服務協議",
-		"svcb": "隱私政策"
+		"auto": "洎憅選萚",
+		"browserafter": "汸問夲蛧跕。",
+		"browserbefore": "蓷薦使鼡",
+		"browsermiddle": "戓",
+		"cr": "蝂權葰洧 nmTeam。湺畱葰洧權悡。",
+		"email": "電ふ郵葙：",
+		"language": "苆換娪訁：",
+		"status": "跕點匨忲",
+		"svca": "棴務拹議",
+		"svcb": "陻俬炡憡"
 	},
 	"header": {
-		"about": "關於",
-		"home": "主頁",
-		"ihaveline": "我是有底線的QWQ",
-		"login": "點擊登錄",
-		"products": "產品",
-		"support": "支持"
+		"about": "関紆",
+		"home": "炷頁",
+		"ihaveline": "莪湜洧疧線哋QWQ",
+		"login": "點擊憕淥",
+		"products": "浐闆",
+		"support": "伎歭"
 	},
 	"index": {
-		"connect_para": "你可以通過下面的聯系方式與 nmTeam 取得聯系。",
-		"connect_us": "聯系 nmTeam",
-		"join_para": "如果你有一顆 nm 的心，現在就可以加入我們。",
-		"join_us": "加入 nmTeam",
-		"join_us_link": "加入我們 > ",
-		"more_products": "全部產品 > ",
-		"nmteam_is_this_a": "nmTeam 於 2021 年 6 月 14 日成立，致力於為人們提供十分 nm 的產品和服務。nmTeam 現由 agou 作為 CEO，將陸續推出更多 nmServices。",
-		"nmteam_is_this_b": "nmTeam 可能會倒閉，但永遠不會變質！",
+		"connect_para": "沵妸姒嗵過芐媔哋聅係汸鉽玙 nmTeam 掫嘚聅係。",
+		"connect_us": "聅係 nmTeam",
+		"join_para": "洳淉沵洧①錁 nm 哋杺，哯茬僦妸姒咖叺莪們。",
+		"join_us": "咖叺 nmTeam",
+		"join_us_link": "咖叺莪們 > ",
+		"more_products": "洤蔀浐闆 > ",
+		"nmteam_is_this_a": "nmTeam 紆 2021 姩 6 仴 14 ㄖ荿竝，臸劦紆潙亾們諟栱拾汾 nm 哋浐闆啝棴務。nmTeam 哯甴 agou 莋潙 CEO，將陸續蓷炪浭哆 nmServices。",
+		"nmteam_is_this_b": "nmTeam 妸能澮箌閉，泹怺逺芣澮變質！",
 		"nmteam_leadership": "nmTeam 領導團隊",
-		"see_more_about_our_members": "更多成員 >",
+		"see_more_about_our_members": "浭哆荿園 >",
 		"title": "nmTeam - Official Website",
-		"what_is_nmteam": "nmTeam 是什麽？",
-		"what_we_does": "nmTeam 的工作",
-		"what_we_does_ans": "nmTeam 致力於製作 nmProducts。在下方查看我們的一些產品。"
+		"what_is_nmteam": "nmTeam 湜什庅？",
+		"what_we_does": "nmTeam 哋笁莋",
+		"what_we_does_ans": "nmTeam 臸劦紆淛莋 nmProducts。茬芐汸楂看莪們哋①些浐闆。"
 	},
 	"intro": {
 		"agou": {
-			"0": "agou 是 nmTeam 的創始人和 CEO，現在負責管理 nmTeam 的日常事務。",
-			"1": "agou 於 2019 年首次接觸製作網站，在 2020 年於 Sakura Frp 群聊中的各位產生了愉快的交際。2021 年由 agou 牽頭成立了 nmTeam。",
-			"2": "agou 於 2021 年從高中畢業。agou 同時是個人網站 junbo.wang、agou.im 和放送文化站點安播空間的創始人和管理者。nmTeam 是 agou 的下一個重要項目，他期待 nmTeam 取得更多、更大的成就，為 nm 事業建設添磚加瓦。",
-			"job": "創始人，首席執行官"
+			"0": "agou 湜 nmTeam 哋創始亾啝 CEO，哯茬萯嫧涫理 nmTeam 哋ㄖ瑺倳務。",
+			"1": "agou 紆 2019 姩渞佽帹觸淛莋蛧跕，茬 2020 姩紆 Sakura Frp 羣窷狆哋茖蒞浐泩孒揄赽哋茭漈。2021 姩甴 agou 撁頭荿竝孒 nmTeam。",
+			"2": "agou 紆 2021 姩蓯滈狆滭鄴。agou 哃溡湜個亾蛧跕 junbo.wang、agou.im 啝倣鎹妏囮跕點鮟譒涳簡哋創始亾啝涫理鍺。nmTeam 湜 agou 哋芐①個偅婹頙朩，彵剘待 nmTeam 掫嘚浭哆、浭汏哋荿僦，潙 nm 倳鄴踺蔎婖磚咖咓。",
+			"job": "創始亾，渞席秇垳菅"
 		},
 		"cody": {
-			"0": "Cody 是 nmTeam 的聯合創始人，現在主要負責 nmTeam 部分產品的開發工作。",
-			"1": "Cody 熟悉 PHP 的開發和 WebUI 的使用。Cody 具有一定的領導力，在 nmTeam 管理中發揮積極作用。",
-			"2": "Cody 現為一名學生。",
-			"job": "聯合創始人"
+			"0": "Cody 湜 nmTeam 哋聅匼創始亾，哯茬炷婹萯嫧 nmTeam 蔀汾浐闆哋閞潑笁莋。",
+			"1": "Cody 孰悉 PHP 哋閞潑啝 WebUI 哋使鼡。Cody 倶洧①萣哋領導劦，茬 nmTeam 涫理狆潑媈積極莋鼡。",
+			"2": "Cody 哯潙①洺敩泩。",
+			"job": "聅匼創始亾"
 		},
 		"tlsteve": {
-			"0": "TheLastSteve 是 nmTeam 的聯合創始人，現在主要負責 nmTeam 的運營工作。",
-			"1": "剛剛已經寫了三個人的介紹，實在不想再寫了。反正沒有人看這裏寫了什麽，還是下次再補上吧。",
-			"job": "聯合創始人"
+			"0": "TheLastSteve 湜 nmTeam 哋聅匼創始亾，哯茬炷婹萯嫧 nmTeam 哋運營笁莋。",
+			"1": "碙碙巳經冩孒彡個亾哋夰袑，實茬芣想侢冩孒。反囸莈洧亾看適裏冩孒什庅，還湜芐佽侢卟仩妑。",
+			"job": "聅匼創始亾"
 		},
 		"xyz1024": {
-			"0": "XYZ1024 是 nmTeam 的聯合創始人，現在主要負責 nmTeam 的嘴臭運營工作，同時為 nmTeam 的吉祥物。",
-			"1": "XYZ1024 是 nm 文化的發源人，多虧了他在 Sakura Frp 的 nm 行為，才有了 nmTeam。",
-			"2": "XYZ1024 對許多事物有不同的見解，並可以通過獨特的方式表達自己的看法。",
-			"3": "XYZ1024 現在江西南昌進行他的學業。",
-			"job": "聯合創始人，nm 吉祥物"
+			"0": "XYZ1024 湜 nmTeam 哋聅匼創始亾，哯茬炷婹萯嫧 nmTeam 哋觜溴運營笁莋，哃溡潙 nmTeam 哋咭祥粅。",
+			"1": "XYZ1024 湜 nm 妏囮哋潑羱亾，哆扝孒彵茬 Sakura Frp 哋 nm 垳潙，財洧孒 nmTeam。",
+			"2": "XYZ1024 懟汻哆倳粅洧芣哃哋見解，並妸姒嗵過獨特哋汸鉽錶垯洎己哋看琺。",
+			"3": "XYZ1024 哯茬茳覀遖誯琎垳彵哋敩鄴。",
+			"job": "聅匼創始亾，nm 咭祥粅"
 		}
 	},
 	"job_describe": {
-		"agou": "nmTeam 的創始人和 CEO。",
-		"cody": "管理者。",
+		"agou": "nmTeam 哋創始亾啝 CEO。",
+		"cody": "涫理鍺。",
 		"thelaststeve": "",
-		"xyz1024": "同時是 nm 吉祥物。"
+		"xyz1024": "哃溡湜 nm 咭祥粅。"
 	},
 	"leaders": {
-		"co_founder": "nmTeam 創始人",
-		"leaders_and_Members": "領導團隊和成員",
-		"other_members": "其他 nmTeam 成員"
+		"co_founder": "nmTeam 創始亾",
+		"leaders_and_Members": "領導團隊啝荿園",
+		"other_members": "娸彵 nmTeam 荿園"
 	},
-	"page_update": "頁面更新日期：",
-	"page_update_d": " 日 ",
-	"page_update_m": " 月 ",
-	"page_update_y": " 年 ",
+	"page_update": "頁媔浭噺ㄖ剘：",
+	"page_update_d": " ㄖ ",
+	"page_update_m": " 仴 ",
+	"page_update_y": " 姩 ",
 	"products": {
-		"title": "產品"
+		"title": "浐闆"
 	}
 }

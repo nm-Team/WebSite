@@ -1,3 +1,6 @@
+logURL = "https://accounts.nmteam.ml";
+enableAccount = true;
+
 // 这是在每一页上都会执行的 js
 function loadc(name) {
 	let xhr = new XMLHttpRequest(),
@@ -38,7 +41,7 @@ function stop() {
 
 // 页面更新日期
 if (fcont.getAttribute("updatetime") && fcont.getAttribute("updatetime").length == 8) {
-	fcont.innerHTML = "<div class='updateDate'><span data-i18n='page_update'></span>" + fcont.getAttribute("updatetime").slice(0, 4) + "<span data-i18n='page_update_y'></span>" + fcont.getAttribute("updatetime").slice(4, 6) +"<span data-i18n='page_update_m'></span>" + fcont.getAttribute("updatetime").slice(6, 8) +"<span data-i18n='page_update_d'></span></div>" + fcont.innerHTML;
+	fcont.innerHTML = "<div class='updateDate'><span data-i18n='page_update'></span>" + fcont.getAttribute("updatetime").slice(0, 4) + "<span data-i18n='page_update_y'></span>" + fcont.getAttribute("updatetime").slice(4, 6) + "<span data-i18n='page_update_m'></span>" + fcont.getAttribute("updatetime").slice(6, 8) + "<span data-i18n='page_update_d'></span></div>" + fcont.innerHTML;
 }
 // window.onresize=function() {
 // if (document.body.clientWidth > 700)
@@ -66,3 +69,28 @@ if (window.navigator.userAgent.indexOf('MSIE ') > 0 &&
 	window.location = 'https://www.google.cn/chrome/';
 }
 
+// 登录账户
+window.onload = function () {
+	if (enableAccount) {
+		getInfo(function () {
+			accountInfo = returnWord;
+			headerAccountA.setAttribute("href", "" + logURL + "?name=target.website&returnto=" + window.location.href + "&msg=msg.website");
+			headerAccountA.setAttribute("target", "_self");
+			if (accountInfo == -1) {
+				nickBox.innerHTML = "<span data-i18n='account.click_to_log'></span>";
+			}
+			else if (accountInfo == -2) {
+				nickBox.innerHTML = "<span data-i18n='account.unable_to_load'></span>";
+			}
+			else {
+				avatarBox.setAttribute("src", accountInfo['avatar']);
+				nickBox.innerHTML = accountInfo['nick'];
+				headerAccountA.setAttribute("href", "" + logURL + "/info.html");
+				headerAccountA.setAttribute("target", "_blank");
+			}
+			changeLanguage();
+		});
+	}
+	else nickBox.innerHTML = "<span data-i18n='account.click_to_log'></span>";
+	changeLanguage();
+}
