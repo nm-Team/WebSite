@@ -85,7 +85,7 @@ window.onload = function () {
 			else {
 				avatarBox.setAttribute("src", accountInfo['avatar']);
 				nickBox.innerHTML = accountInfo['nick'];
-				headerAccountA.setAttribute("href", "" + logURL + "/info.html");
+				headerAccountA.setAttribute("href", "" + logURL + "/info.html?sessionid="+getCookie("PHPSESSID")+"");
 				headerAccountA.setAttribute("target", "_blank");
 			}
 			changeLanguage();

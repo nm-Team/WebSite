@@ -7,10 +7,10 @@
                 {
                     "name": "nmBrowser StartPage",
                     "third_party": false,
-                    "page_url": "https://start.nmteam.ml",
-                    "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
-                    "slug": "-",
-                    "describe": "nmBrowser StartPage. ",
+                    "page_url": "https://sp.nmteam.ml",
+                    "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
+                    "slug": "Give you a better surfing experience. ",
+                    "describe": "This is the homepage for our product nmBrowser and our plugins for other browsers. <br>You can also set it as the homepage of your browser, but only in nmBrowser and our plugins for other browsers can you get the best experience.",
                     "tag": "",
                     "hot": true,
                     "available": true,
@@ -19,8 +19,38 @@
                     "img": [
                         "https://logos.nmteam.agou.im/nmTeam/logo@256.png"
                     ],
-                    "dtype": "网页",
-                    "djrx": "与大多数现代浏览器兼容。"
+                    "dtype": "Website",
+                    "djrx": "Compatible with most modern browsers. "
+                },
+                {
+                    "name": "StartPage Extension for Chromium",
+                    "third_party": false,
+                    "page_url": "",
+                    "icon": "https://logos.nmteam.agou.im/nmBrowser-plugin/logo@64.png",
+                    "slug": "Give you a better surfing experience. ",
+                    "describe": "This is the homepage extension for our product nmBrowser and our plugins for other browsers. ",
+                    "tag": "",
+                    "hot": true,
+                    "available": false,
+                    "operation": "Download",
+                    "developer": "0",
+                    "dtype": "Extension",
+                    "djrx": "Compatible with most of browsers bases on Chromium. "
+                },
+                {
+                    "name": "nmChat",
+                    "third_party": false,
+                    "page_url": "https://chat.nmteam.ml",
+                    "icon": "https://logos.nmteam.agou.im/nmChat/logo@32.png",
+                    "slug": "nmChat, chat nm. ",
+                    "describe": "",
+                    "tag": "",
+                    "hot": true,
+                    "available": true,
+                    "operation": "Open",
+                    "developer": "0",
+                    "dtype": "Website",
+                    "djrx": "Compatible with most modern browsers. "
                 }
             ]
         }

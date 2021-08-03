@@ -100,5 +100,15 @@
 	"page_update_y": "-",
 	"products": {
 		"title": "Products"
+	},
+	"supportus": {
+		"h0": "Support nmTeam",
+		"h1": "Thank Our Supporters",
+		"l0": "Support Us on \"AiFaDian\" >",
+		"p0": "nmTeam firmly believes that its existence brings unique value to people.",
+		"p1": "If you agree with this point, you may as well support nmTeam on \"Love Power\", so that we can go further.",
+		"p2": "nmTeam will use these donated funds for nmTeam's research and development and daily expenses, or to buy a cup of coffee.",
+		"p3": "No matter how you support nmTeam, we would like to express our heartfelt thanks to you. With your kindness, we must work harder.",
+		"title": "Support nmTeam"
 	}
 }
