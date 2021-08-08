@@ -7,7 +7,7 @@
                 {
                     "name": "nmBrowser StartPage",
                     "third_party": false,
-                    "page_url": "https://sp.nmteam.ml",
+                    "page_url": "https://bs.nmteam.ml",
                     "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
                     "slug": "Give you a better surfing experience. ",
                     "describe": "This is the homepage for our product nmBrowser and our plugins for other browsers. <br>You can also set it as the homepage of your browser, but only in nmBrowser and our plugins for other browsers can you get the best experience.",
@@ -41,7 +41,7 @@
                     "name": "nmChat",
                     "third_party": false,
                     "page_url": "https://chat.nmteam.ml",
-                    "icon": "https://logos.nmteam.agou.im/nmChat/logo@32.png",
+                    "icon": "https://logos.nmteam.agou.im/nmTeam/logo@32.png",
                     "slug": "nmChat, chat nm. ",
                     "describe": "",
                     "tag": "",

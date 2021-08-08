@@ -12,3 +12,16 @@ if (nowChannel != "main") {
     document.write("<p class='insiderTip' id='insiderTip'>您正在通过 " + nowChannel + " 通道访问 nmTeam 网站。<a href='javascript:document.getElementById(`insiderTip`).style.visibilty=`hidden`;'></a></p>");
     document.title = "[" + nowChannel[0] + "]" + document.title;
 }
+document.write(
+    `
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8202YMVF5B"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8202YMVF5B');
+    </script>
+    `
+);
