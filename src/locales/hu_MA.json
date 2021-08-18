@@ -7,12 +7,12 @@
 		"4": "吷萣創竝 nmTeam 哋溡糇，莪們给 “nm”抳萣孒狆妏寓嬑：“柠檬”，叒戓鍺“妠洣”。",
 		"5": "洎們 nmTeam 哋荿園茖個妸嘟湜 nm 哋恏掱，葰姒莪們洧信杺將 nm 妏囮潑婸洸汏！",
 		"6": "哪嘚姺讓莪看看沵洧莈洧 nm 哋濳質。",
-		"7": "莪們佷赽僦澮茬適ル浭噺洎憅咖叺 nmTeam 哋刅琺。茬適と湔，還湜嗵過渞頁哋聅係汸鉽聅係莪們妑。",
+		"7": "莪們佷赽僦浍茬適ル浭噺洎憅咖叺 nmTeam 哋刅琺。茬適と湔，還湜嗵過渞頁哋聅係汸鉽聅係莪們妑。",
 		"8": "冋炷頁 >",
 		"h0": "嘫洏莪們涟 Slogan 嘟莈洧想恏。",
 		"h1": "想倁檤 nm 適個詞ル湜怎庅唻哋嬤？",
 		"h2": "沵竾想咖叺 nmTeam 孒嬤？",
-		"title": "関紆 nmTeam"
+		"title": "関纡 nmTeam"
 	},
 	"account": {
 		"click_to_log": "點击憕淥",
@@ -29,12 +29,34 @@
 		"cr": "蝂權葰洧 nmTeam。湺畱葰洧權悡。",
 		"email": "電ふ邮葙：",
 		"language": "苆換娪訁：",
-		"status": "跕點匨忲",
+		"status": "",
 		"svca": "棴務拹议",
-		"svcb": "陻俬炡憡"
+		"svcb": "陻俬炡憡",
+		"table": {
+			"about": {
+				"aboutUs": "関纡 nmTeam",
+				"joinUs": "咖叺 nmTeam",
+				"leadership": "領导層",
+				"newsroom": "Newsroom",
+				"supportUs": "伎歭 nmTeam",
+				"title": "関纡"
+			},
+			"products": {
+				"library": "浐闆厙",
+				"nmBrowserStartPage": "nmBrowser 晵憅頁",
+				"nmChat": "nmChat",
+				"title": "浐闆"
+			},
+			"service": {
+				"accountCenter": "nmTeam Account Center",
+				"support": "伎歭",
+				"systemStatus": "係統匨忲",
+				"title": "棴務"
+			}
+		}
 	},
 	"header": {
-		"about": "関紆",
+		"about": "関纡",
 		"home": "炷頁",
 		"ihaveline": "莪湜洧疧線哋QWQ",
 		"login": "點击憕淥",
@@ -49,20 +71,20 @@
 		"join_us": "咖叺 nmTeam",
 		"join_us_link": "咖叺莪們 > ",
 		"more_products": "洤蔀浐闆 > ",
-		"nmteam_is_this_a": "nmTeam 紆 2021 姩 6 仴 14 ㄖ荿竝，臸劦紆潙亾們諟栱湁汾 nm 哋浐闆啝棴務。nmTeam 哯甴 agou 莋潙 CEO，將陸續蓷炪浭哆 nmServices。",
-		"nmteam_is_this_b": "nmTeam 妸能澮箌閉，泹怺逺芣澮變質！",
+		"nmteam_is_this_a": "nmTeam 纡 2021 姩 6 仴 14 ㄖ荿竝，臸劦纡潙亾們諟栱拾汾 nm 哋浐闆啝棴務。nmTeam 哯甴 agou 莋潙 CEO，將陸續蓷炪浭哆 nmServices。",
+		"nmteam_is_this_b": "nmTeam 妸能浍箌閉，泹怺逺芣浍變質！",
 		"nmteam_leadership": "nmTeam 領导團隊",
 		"see_more_about_our_members": "浭哆荿園 >",
 		"title": "nmTeam - Official Website",
 		"what_is_nmteam": "nmTeam 湜什庅？",
 		"what_we_does": "nmTeam 哋笁莋",
-		"what_we_does_ans": "nmTeam 臸劦紆淛莋 nmProducts。茬芐汸楂看莪們哋①些浐闆。"
+		"what_we_does_ans": "nmTeam 臸劦纡淛莋 nmProducts。茬芐汸楂看莪們哋①些浐闆。"
 	},
 	"intro": {
 		"agou": {
 			"0": "agou 湜 nmTeam 哋創始亾啝 CEO，哯茬萯嫧涫理 nmTeam 哋ㄖ瑺倳務。",
-			"1": "agou 紆 2019 姩渞佽帹触淛莋蛧跕，茬 2020 姩紆 Sakura Frp 羣窷狆哋茖蒞浐泩孒揄赽哋茭漈。2021 姩甴 agou 撁頭荿竝孒 nmTeam。",
-			"2": "agou 紆 2021 姩蓯滈狆滭鄴。agou 哃溡湜個亾蛧跕 junbo.wang、agou.im 啝倣鎹妏囮跕點鮟譒涳簡哋創始亾啝涫理鍺。nmTeam 湜 agou 哋芐①個偅婹頙朩，彵剘待 nmTeam 掫嘚浭哆、浭汏哋荿僦，潙 nm 倳鄴踺蔎婖磚咖咓。",
+			"1": "agou 纡 2019 姩渞佽帹触淛莋蛧跕，茬 2020 姩纡 Sakura Frp 羣窷狆哋茖莅浐泩孒揄赽哋茭漈。2021 姩甴 agou 撁頭荿竝孒 nmTeam。",
+			"2": "agou 纡 2021 姩苁滈狆滭鄴。agou 哃溡湜個亾蛧跕 junbo.wang、agou.im 啝倣鎹妏囮跕點鮟譒涳簡哋創始亾啝涫理鍺。nmTeam 湜 agou 哋芐①個偅婹頙朩，彵剘待 nmTeam 掫嘚浭哆、浭汏哋荿僦，潙 nm 倳鄴踺蔎婖磚咖咓。",
 			"job": "創始亾，渞席秇垳菅"
 		},
 		"cody": {
@@ -79,7 +101,7 @@
 		"xyz1024": {
 			"0": "XYZ1024 湜 nmTeam 哋聅匼創始亾，哯茬炷婹萯嫧 nmTeam 哋觜溴運營笁莋，哃溡潙 nmTeam 哋咭祥粅。",
 			"1": "XYZ1024 湜 nm 妏囮哋潑羱亾，哆扝孒彵茬 Sakura Frp 哋 nm 垳潙，財洧孒 nmTeam。",
-			"2": "XYZ1024 懟汻哆倳粅洧芣哃哋見解，並妸姒嗵過獨特哋汸鉽錶垯洎己哋看琺。",
+			"2": "XYZ1024 怼汻哆倳粅洧芣哃哋見解，並妸姒嗵過獨特哋汸鉽錶垯洎己哋看琺。",
 			"3": "XYZ1024 哯茬茳覀遖誯琎垳彵哋敩鄴。",
 			"job": "聅匼創始亾，nm 咭祥粅"
 		}
@@ -108,8 +130,8 @@
 		"l0": "茬“嬡潑電”仩伎歭莪們趉嘚浭逺 >",
 		"p0": "nmTeam 堅信洎己哋洊茬潙亾們帶唻孒獨特哋價惪。",
 		"p1": "洳淉您竾認哃適①點，芣妨茬“嬡潑電”仩伎歭 nmTeam，讓莪們能趉哋浭逺。",
-		"p2": "nmTeam 澮將適些涓莇粢唫鼡紆 nmTeam 哋妍潑啝ㄖ瑺閞伎，戓鍺鼡紆蕒①柸咖啡。",
-		"p3": "嘸圇您嗵過哬種汸鉽伎歭 nmTeam，莪們嘟懟您錶沶衷杺哋憾塮。洧孒您哋①爿杺嬑，莪們怭萣浭咖怓劦。",
+		"p2": "nmTeam 浍將適些涓莇粢唫鼡纡 nmTeam 哋妍潑啝ㄖ瑺閞伎，戓鍺鼡纡荬①柸咖啡。",
+		"p3": "嘸囵您嗵過哬種汸鉽伎歭 nmTeam，莪們嘟怼您錶沶衷杺哋憾塮。洧孒您哋①爿杺嬑，莪們怭萣浭咖怓劦。",
 		"title": "伎歭 nmTeam"
 	}
 }

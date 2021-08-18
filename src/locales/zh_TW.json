@@ -29,9 +29,31 @@
 		"cr": "版權所有 nmTeam。保留所有權利。",
 		"email": "電子郵箱：",
 		"language": "切換語言：",
-		"status": "站點狀態",
+		"status": "",
 		"svca": "服務協議",
-		"svcb": "隱私政策"
+		"svcb": "隱私政策",
+		"table": {
+			"about": {
+				"aboutUs": "關於 nmTeam",
+				"joinUs": "加入 nmTeam",
+				"leadership": "領導層",
+				"newsroom": "Newsroom",
+				"supportUs": "支持 nmTeam",
+				"title": "關於"
+			},
+			"products": {
+				"library": "產品庫",
+				"nmBrowserStartPage": "nmBrowser 啟動頁",
+				"nmChat": "nmChat",
+				"title": "產品"
+			},
+			"service": {
+				"accountCenter": "nmTeam Account Center",
+				"support": "支持",
+				"systemStatus": "系統狀態",
+				"title": "服務"
+			}
+		}
 	},
 	"header": {
 		"about": "關於",

@@ -29,9 +29,31 @@
 		"cr": "版权所有 nmTeam。保留所有权利。",
 		"email": "电子邮箱：",
 		"language": "切换语言：",
-		"status": "站点状态",
+		"status": "",
 		"svca": "服务协议",
-		"svcb": "隐私政策"
+		"svcb": "隐私政策",
+		"table": {
+			"about": {
+				"aboutUs": "关于 nmTeam",
+				"joinUs": "加入 nmTeam",
+				"leadership": "领导层",
+				"newsroom": "Newsroom",
+				"supportUs": "支持 nmTeam",
+				"title": "关于"
+			},
+			"products": {
+				"library": "产品库",
+				"nmBrowserStartPage": "nmBrowser 启动页",
+				"nmChat": "nmChat",
+				"title": "产品"
+			},
+			"service": {
+				"accountCenter": "nmTeam Account Center",
+				"support": "支持",
+				"systemStatus": "系统状态",
+				"title": "服务"
+			}
+		}
 	},
 	"header": {
 		"about": "关于",

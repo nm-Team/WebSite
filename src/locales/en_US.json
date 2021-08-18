@@ -31,7 +31,29 @@
 		"language": "Select Language: ",
 		"status": "System Status",
 		"svca": "Network Service Protocol",
-		"svcb": "Pricary Policy"
+		"svcb": "Pricary Policy",
+		"table": {
+			"about": {
+				"aboutUs": "About nmTeam",
+				"joinUs": "Join nmTeam",
+				"leadership": "Leadership",
+				"newsroom": "Newsroom",
+				"supportUs": "Support nmTeam",
+				"title": "About"
+			},
+			"products": {
+				"library": "Products Library",
+				"nmBrowserStartPage": "nmBrowser StartPage",
+				"nmChat": "nmChat",
+				"title": "Products"
+			},
+			"service": {
+				"accountCenter": "nmTeam Account Center",
+				"support": "Support",
+				"systemStatus": "System Status",
+				"title": "Services"
+			}
+		}
 	},
 	"header": {
 		"about": "About",
