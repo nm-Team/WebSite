@@ -23,5 +23,7 @@ document.write(
 
     gtag('config', 'G-8202YMVF5B');
     </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5779459433500433"
+     crossorigin="anonymous"></script>
     `
 );
