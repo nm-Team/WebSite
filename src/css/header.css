@@ -192,7 +192,7 @@ body{
     #hcont .header .right{
         display: flex;
         flex-direction: column;
-        justify-content: end;  
+        /* justify-content: end;   */
         align-items: center;
         flex-grow: 1;
         flex-shrink: 1;
