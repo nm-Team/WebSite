@@ -50,13 +50,7 @@ body{
     user-select: none;
 }
 *:focus-visible{
-    outline: none;
-    border: 3px solid var(--text-yellow);
-    box-shadow: var(--text-yellow) 1px 1px 6px;
-    border-radius: 3px;
-    /* transform: scale(0.96); */
-    transition: all 0.1s;
-    opacity: 0.9;
+    outline: auto;
 }
 .title{
     background: var(--logolike-yellow-lighter);
