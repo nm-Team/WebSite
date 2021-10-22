@@ -109,6 +109,8 @@ body{
         justify-content: end;  
         align-items: center;
         margin-left: 8px;
+        border: none;
+        background: none;
     }
     #hcont .header .right .accountBox i{
         display: inline-block;
