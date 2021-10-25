@@ -231,6 +231,8 @@ body{
         flex-direction: row;
         justify-content: center;
         margin: 14px 0;
+        border: none;
+        background: none;
     }
     #hcont .header .right .accountBox i{
         position: absolute;
