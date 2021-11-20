@@ -48,9 +48,10 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 *:focus-visible{
-    outline: auto;
+    outline: 3px solid rgb(250 187 0 / 60%);
 }
 .title{
     background: var(--logolike-yellow-lighter);
