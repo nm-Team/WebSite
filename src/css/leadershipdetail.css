@@ -25,3 +25,17 @@
         margin-left: 4%;
     }
 }
+.leader-website{
+    color: var(--content-link);
+    transition: opacity 0.3s;
+}
+.leader-website:hover{
+    opacity: 0.8;
+}
+.leader-website svg{
+    width: 16px;
+    height: 16px;
+    fill: var(--a-color);
+    display: inline-block;
+    margin: -3px 0px;
+}
