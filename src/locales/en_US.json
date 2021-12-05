@@ -112,6 +112,12 @@
 		"thelaststeve": "",
 		"xyz1024": "Also nm mascot."
 	},
+	"language": {
+		"page": {
+			"title": "Change Language",
+			"tip": "Browse nmTeam website in a language that you are familiar with. Some content may not be displayed in the language you selected."
+		}
+	},
 	"leaders": {
 		"co_founder": "Co-founders of nmTeam",
 		"leaders_and_Members": "Leaders and Members",

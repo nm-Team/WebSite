@@ -112,6 +112,12 @@
 		"thelaststeve": "",
 		"xyz1024": "同时是 nm 吉祥物。"
 	},
+	"language": {
+		"page": {
+			"title": "切换语言",
+			"tip": "以您熟悉的语言浏览 nmTeam 网站。某些内容可能不会以您选定的语言显示。"
+		}
+	},
 	"leaders": {
 		"co_founder": "nmTeam 创始人",
 		"leaders_and_Members": "领导团队和成员",
