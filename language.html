@@ -59,7 +59,7 @@
 		$("#lanList .selection").on("click", function () {
 			console.log("Switch language to " + $(this).attr("data-lanid"));
 			changeLanguage($(this).attr("data-lanid"));
-			window.location.href=backCallURL;
+			if (backCallURL) window.location.href = backCallURL;
 		});
 	</script>
 </body>
