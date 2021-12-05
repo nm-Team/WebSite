@@ -90,6 +90,12 @@
 		"thelaststeve": "",
 		"xyz1024": "nmのマスコットでもあります。"
 	},
+	"language": {
+		"page": {
+			"title": "言語の切り替え",
+			"tip": "おなじみの言語でnmTeam Webサイトを参照してください。一部のコンテンツは、選択した言語で表示されない場合があります。"
+		}
+	},
 	"leaders": {
 		"co_founder": "nmTeamの共同創設者",
 		"leaders_and_Members": "リーダーとメンバー",

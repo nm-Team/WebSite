@@ -11,6 +11,8 @@
 
 var language; // 全局语言
 
+languageList = { "zh_CN": "中文（简体）", "zh_TW": "中文（繁体）", "en_US": "English", "ja_JP": "日本語", "hu_MA": "焱暒妏", };
+
 // 更改语言函数
 function changeLanguage(lang) {
     if (lang == "auto") { // 设置为自动

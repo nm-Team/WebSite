@@ -30,6 +30,7 @@ function setHeader() {
 
 // 登录账户
 window.onload = function () {
+	$("#footer_selectLanguageButton span")[0].innerHTML=(languageList[language]);
 	if (enableAccount) {
 		returnWord = "";
 		getInfo(function () {
@@ -60,4 +61,9 @@ function headerClick() {
 	else if (pageHeader.getAttribute("open") == "true")
 		pageHeader.removeAttribute("open");
 	else pageHeader.setAttribute("open", "true");
+}
+
+// footer 切换语言按钮
+footer_selectLanguageButton.onclick = function () {
+	window.location.href = window.location.origin + "/language.html?bks=" + window.location.href;
 }
