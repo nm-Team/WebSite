@@ -397,7 +397,7 @@ body{
 }
 #footer_selectLanguageButton span{
     position: relative;
-    top: -0.7px;
+    top: -1.7px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
