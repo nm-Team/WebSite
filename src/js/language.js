@@ -1,14 +1,3 @@
-/* 为什么要把多语言单独做js？
- * 
- * 要执行下面的代码，很显然需要先加载JQuery和翻译js。
- * 但这两个js加载需要时间，这期间页面的header出不来。
- * header的加载优先级得高些，而且header也可能需要翻译。
- * 所以只好先加载header.js，再做翻译。
- * 但按照之前的逻辑，header.js是唯一可用加载完成后执行的js。
- * 只能再来一个js维持一下这样子。
- * 不知道效果怎么样额，不行再用Ctrl+Shift+H全局替换。
- * agou 2021.06.20  */
-
 var language; // 全局语言
 
 languageList = { "zh_CN": "中文（简体）", "zh_TW": "中文（繁体）", "en_US": "English", "ja_JP": "日本語", "hu_MA": "焱暒妏", };
@@ -22,7 +11,14 @@ function changeLanguage(lang) {
     else if (lang == undefined) { // 视为页面载入时执行的，而不是更改语言。此种情况作判定
         if (!getCookie('pageLanguage') || getCookie('pageLanguage') == "auto") { // 没有设置Cookie或者Cookie为auto，可以按照浏览器判断
             lang = navigator.language || navigator.userLanguage;
+            // bugfix: 对于某些设置语言不包含地区的用户配置列表中第一个支持的语言
+            if (lang.indexOf("-" == -1)) {
+                for (lanSearch in languageList) {
+                    if (lanSearch.split("_")[0] == lang) { lang = lanSearch; break; }
+                }
+            }
             lang = lang.replace('-', '_');
+            if(!languageList[lang]) lang="en_US";
         }
         else {
             // 设置了 Cookie，按Cookie来

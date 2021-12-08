@@ -38,9 +38,11 @@
 
 	<script>
 		backCallURL = getQueryVariable("bks");
+		cookieLanguage = getCookie("pageLanguage");
 		lanT = `<button class="selection" data-lanid="{{lan}}" data-lanname="{{lanname}}" data-active="{{active}}" title="{{lanname}}">{{lanname}}</button>`;
+		lanList.innerHTML += lanT.replace(/{{lan}}/g, "auto").replace(/{{lanname}}/g, "<t data-i18n='footer.auto'></t>").replace(/{{active}}/g, (cookieLanguage == "" || cookieLanguage == "auto"));
 		for (flan in languageList) {
-			lanList.innerHTML += lanT.replace(/{{lan}}/g, flan).replace(/{{lanname}}/g, languageList[flan]).replace(/{{active}}/g, language == flan);
+			lanList.innerHTML += lanT.replace(/{{lan}}/g, flan).replace(/{{lanname}}/g, languageList[flan]).replace(/{{active}}/g, cookieLanguage == flan);
 		}
 		function getQueryVariable(variable) {
 			var query = window.location.search.substring(1);
