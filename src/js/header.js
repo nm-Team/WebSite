@@ -30,7 +30,7 @@ function setHeader() {
 
 // 登录账户
 window.onload = function () {
-	$("#footer_selectLanguageButton span")[0].innerHTML=(languageList[language]);
+	$("#footer_selectLanguageButton span")[0].innerHTML = (languageList[language]);
 	if (enableAccount) {
 		returnWord = "";
 		getInfo(function () {

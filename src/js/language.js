@@ -1,6 +1,6 @@
 var language; // 全局语言
 
-languageList = { "zh_CN": "中文（简体）", "zh_TW": "中文（繁体）", "en_US": "English", "ja_JP": "日本語", "hu_MA": "焱暒妏", };
+languageList = { "zh_CN": "中文（简体）", "zh_HK": "中文（繁体）", "en_US": "English", "ja_JP": "日本語", "hu_MA": "焱暒妏", };
 
 // 更改语言函数
 function changeLanguage(lang) {
@@ -18,12 +18,12 @@ function changeLanguage(lang) {
                 }
             }
             lang = lang.replace('-', '_');
-            if(!languageList[lang]) lang="en_US";
         }
         else {
             // 设置了 Cookie，按Cookie来
             lang = getCookie('pageLanguage');
         }
+        if (!languageList[lang]) lang = "en_US";
     }
     else {
         document.cookie = "pageLanguage=" + lang + "; max-age=999999999999999; path=/; ";
@@ -42,10 +42,15 @@ function changeLanguage(lang) {
             $('html').i18n();
         }
     );
+    $("#footer_selectLanguageButton span")[0].innerHTML = (languageList[language]);
 }
 changeLanguage();
 
-
+$(window).on('load', function () {
+    if (getUrlParam("lan")) {
+        changeLanguage(getUrlParam("lan"));
+    }
+});
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -55,4 +60,10 @@ function getCookie(cname) {
         if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
     }
     return "";
+}
+
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+    if (r != null) return unescape(r[2]); return null; //返回参数值
 }

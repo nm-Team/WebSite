@@ -43,11 +43,6 @@ body{
     line-height: normal;
     font-family: PingFangSC-Regular;
     margin: 0;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 *:focus-visible{
@@ -246,9 +241,9 @@ beta-tag{
 .mainBlock p{
     position: relative;
     margin: 0;
-    padding: 1.5px 0;
+    padding: 0;
     font-size: 17px;
-    line-height: 1.4;
+    line-height: 1.6;
     text-align: left;
 }
 .mainBlock.center p{
@@ -260,9 +255,10 @@ beta-tag{
 .indexMoreLink{
     display: block;
     text-align: center;
-    padding: 4px 0;
+    padding: 9px 0;
     color: var(--text-yellow)!important;
     text-decoration: none!important;
+    border-radius: 2px;
 }
 .indexMoreLink:hover{
     opacity: 0.7;
