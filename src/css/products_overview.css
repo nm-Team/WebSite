@@ -94,6 +94,7 @@
     right: 0;
     padding: 0 20px;
     text-align: center;
+    overflow-y: auto;
     color: var(--products-box-text);
 }
 .products-overview .box .content .content-title{
@@ -102,9 +103,18 @@
     font-size: 22px;
     font-weight: 500;
 }
+.products-overview .box .content .content-title i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    transform: scale(1.5);
+}
 .products-overview .box .content .intro{
     margin: 0;
-    padding: 10px 0 10px 0;
+    padding: 4px 0 ;
     font-size: 16px;
     font-weight: 300;
 }
@@ -121,7 +131,7 @@
     outline: none;
     margin: 2px;
     padding: 8px 12px;
-    border: 1.5px solid #ffffff00;
+    border: 1.6px solid #ffffff00;
     border-radius: 300px;
     text-decoration: none!important;
     color: var(--products-box-text)!important;
@@ -132,20 +142,21 @@
 }
 .products-overview .box .content .opes a:hover, .products-overview .box .content .opes a:focus-visible{
     background: var(--products-box-link-hover-background);
-    border: 1.5px solid var(--products-box-link-border);
+    border: 1.6px solid var(--products-box-link-border);
 }
-.products-overview .box .content .opes a:focus-visible, .products-overview .box .content .opes a:hover{
-    padding: 8px 10px;
+.products-overview .box .content .opes a:not(*[data-button-type=no]):focus-visible, .products-overview .box .content .opes a:not(*[data-button-type=no]):hover{
+    padding: 8px 11px;
 }
 .products-overview .box .content .opes a span{
+    font-weight: 500;
     
 }
 .products-overview .box .content .opes a .svg{
-    margin: 1.5px -2px 0 0px;
+    margin: 1.5px -2px 0 2px;
     width: 15px;
     height: 15px;
     fill: var(--products-box-text);
-    opacity: 0.5;
+    opacity: 0.8;
     transition: all 0.33s;
 }
 .products-overview .box .content .opes a:focus-visible .svg, .products-overview .box .content .opes a:hover .svg{
