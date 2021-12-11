@@ -59,6 +59,11 @@
 .products-overview .box.x2,.products-overview .box.x3{
     width: 100%;
 }
+@media (max-width: 700px) {
+    .products-overview .box{
+        margin-bottom: 18px;
+    }
+}
 @media (min-width: 700px) {
     .products-overview .box{
         width: calc(100% / 2 - 12px);
@@ -108,10 +113,10 @@
 }
 .products-overview .box .tip{
     position: relative;
-    top: -25%;
-    font-size: 50%;
-    padding: 3px;
-    margin: -3px;
+    top: -.58em;
+    font-size: .5em;
+    padding: .3em;
+    margin: -.3em;
     color: var(--products-box-text)!important;
 }
 .products-overview .box.center .content{
@@ -140,6 +145,7 @@
     padding: 4px 0;
     font-size: 16px;
     font-weight: 300;
+    line-height: 1.6;
 }
 .products-overview .box .content .opes{
     display: flex;

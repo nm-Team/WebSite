@@ -35,9 +35,9 @@ catch (err) {
 function checkTip(w, json) {
     return w.replace(/\[tip\]/g, function (word) {
         tipsNum++;
-        products_footer_explain_by_javascript.innerHTML += `<p id="products_footer_explain_"` + tipsNum + `><b>` + tipsNum + `. </b>` + json['tip'][sTipsNum] + `</p>`;
+        products_footer_explain_by_javascript.innerHTML += `<p id="products_footer_explain_` + tipsNum + `"><b>` + tipsNum + `. </b>` + json['tip'][sTipsNum] + `</p>`;
 
         sTipsNum++;
-        return `<object><a class="tip" href="#products_footer_explain_"` + tipsNum + `" target="_self">` + tipsNum + `</a></object>`;
+        return `<object><a class="tip" href="#products_footer_explain_` + tipsNum + `" target="_self">` + tipsNum + `</a></object>`;
     });
 }
