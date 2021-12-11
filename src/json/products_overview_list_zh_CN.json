@@ -1,0 +1,29 @@
+{
+    "products": [
+        {
+            "name": "nmFun",
+            "icon": "https://logos.nmteam.agou.im/nmFun/logo.svg",
+            "background": "https://ci.cncn3.cn/8360718b25623cc33dd2ffee2972dadc.png",
+            "intro": "看乐子。",
+            "href": "nmFun/overview.html",
+            "javascript": "",
+            "theme": "light",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "进一步了解",
+                    "javascript": "",
+                    "href": "nmFun/overview.html",
+                    "cursor": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "冬季上线",
+                    "javascript": "alert('开发中，敬请期待')",
+                    "href": "",
+                    "cursor": "no"
+                }
+            ]
+        }
+    ]
+}

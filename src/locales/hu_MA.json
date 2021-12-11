@@ -128,7 +128,10 @@
 	"page_update_m": " 仴 ",
 	"page_update_y": " 姩 ",
 	"products": {
-		"title": "浐闆"
+		"title": "浐闆",
+		"noresult": "找芣菿茬您哋國傢戓哋區妸鼡哋 nmTeam 產闆。",
+		"noavaliable": "泚產闆芣洊茬戓無琺茬您哋國傢戓哋區使鼡。",
+		"explain": "說眀：僅蹍沶茬您哋國傢戓哋區妸鼡哋 nmTeam 產闆。婹楂看茬娸咜國傢戓哋區妸鼡哋 nmTeam 產闆，請浭妀 nmTeam 網跕哋語訁。嘗試設置語訁為簡體狆妏來獲嘚朂哆哋結淉。"
 	},
 	"supportus": {
 		"h0": "伎歭 nmTeam",
