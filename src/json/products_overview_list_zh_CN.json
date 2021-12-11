@@ -4,25 +4,30 @@
             "name": "nmFun",
             "icon": "https://logos.nmteam.agou.im/nmFun/logo.svg",
             "background": "https://ci.cncn3.cn/8360718b25623cc33dd2ffee2972dadc.png",
-            "intro": "看乐子。",
+            "intro": "一起乐翻天。[tip]",
             "href": "nmFun/overview.html",
             "javascript": "",
+            "target": "_self",
             "theme": "light",
+            "align": "top",
             "length": "2",
+            "tip": [
+                "nmFun 构建的乐子生态让您驰骋于乐子的海洋。"
+            ],
             "buttons": [
                 {
                     "id": "seemore",
                     "name": "进一步了解",
                     "javascript": "",
                     "href": "nmFun/overview.html",
-                    "cursor": "in"
+                    "towards": "in"
                 },
                 {
                     "id": "go",
                     "name": "冬季上线",
                     "javascript": "alert('开发中，敬请期待')",
                     "href": "",
-                    "cursor": "no"
+                    "towards": "no"
                 }
             ]
         },
@@ -33,7 +38,9 @@
             "intro": "马上开始，有聊了。",
             "href": "nmChat/overview.html",
             "javascript": "",
+            "target": "_self",
             "theme": "light",
+            "align": "top",
             "length": "1",
             "buttons": [
                 {
@@ -41,7 +48,7 @@
                     "name": "进一步了解",
                     "javascript": "",
                     "href": "nmChat/overview.html",
-                    "cursor": "in"
+                    "towards": "in"
                 }
             ]
         },
@@ -52,7 +59,9 @@
             "intro": "纳米铸就方块。",
             "href": "nmCraft/overview.html",
             "javascript": "",
+            "target": "_self",
             "theme": "dark",
+            "align": "top",
             "length": "1",
             "buttons": [
                 {
@@ -60,40 +69,63 @@
                     "name": "进一步了解",
                     "javascript": "",
                     "href": "nmCraft/overview.html",
-                    "cursor": "in"
+                    "towards": "in"
                 },
                 {
                     "id": "add",
                     "name": "加入",
                     "javascript": "",
                     "href": "nmCraft/go.html",
-                    "cursor": "in"
+                    "towards": "in"
                 }
             ]
         },
         {
             "name": "nmCloud",
             "icon": "",
-            "background": "",
-            "intro": "",
+            "background": "https://ci.cncn3.cn/142b080fb604098801eadc5feafa1c0a.jpg",
+            "intro": "纳米般速度，纳米级服务。",
             "href": "nmCloud/overview.html",
             "javascript": "",
-            "theme": "light",
-            "length": "2",
+            "target": "_blank",
+            "theme": "dark",
+            "align": "top",
+            "length": "1",
             "buttons": [
-                {
-                    "id": "seemore",
-                    "name": "进一步了解",
-                    "javascript": "",
-                    "href": "nmCloud/overview.html",
-                    "cursor": "in"
-                },
                 {
                     "id": "buy",
                     "name": "选购",
                     "javascript": "",
-                    "href": "cloud.nmteam.xyz",
-                    "cursor": "out"
+                    "href": "https://cloud.nmteam.xyz",
+                    "towards": "out"
+                }
+            ]
+        },
+        {
+            "name": "StartPage",
+            "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
+            "background": "https://i.zerodream.net/0c0ab22f016457417f35f437d0cfea89.png",
+            "intro": "美好的一天，始于 nmBrowser 启动页。",
+            "href": "nmBrowser-StartPage/overview.html",
+            "javascript": "",
+            "target": "_self",
+            "theme": "dark",
+            "align": "bottom",
+            "length": "1",
+            "buttons": [
+                {
+                    "id": "buseemore",
+                    "name": "进一步了解",
+                    "javascript": "",
+                    "href": "nmBrowser-StartPage/overview.html",
+                    "towards": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "访问",
+                    "javascript": "",
+                    "href": "https://bs.nmteam.xyz?from=nmTeamProductsPage",
+                    "towards": "out"
                 }
             ]
         }
