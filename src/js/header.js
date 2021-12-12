@@ -23,7 +23,7 @@ if (fcont.getAttribute("updatetime") && fcont.getAttribute("updatetime").length 
 window.onscroll = function () { setHeader(); };
 setHeader();
 function setHeader() {
-	if (window.scrollY < 130)
+	if (window.scrollY < 80)
 		document.getElementById("pageHeader").className = "header hidden";
 	else document.getElementById("pageHeader").className = "header ";
 }
