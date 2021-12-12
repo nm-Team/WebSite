@@ -14,6 +14,80 @@ body{
         --products-footer-hover: rgb(230, 230, 230);
     }
 }
+.light{
+    --products-box-link-background: #ffffff99;
+    --products-box-link-hover-background: #fff;
+    --products-box-link-border: rgb(41, 41, 41);
+}
+.dark{
+    --products-box-link-background: #20202099;
+    --products-box-link-hover-background: rgba(41, 41, 41, 0.705);
+    --products-box-link-border: rgb(196, 196, 196);
+}
+.products-page *{
+    margin: 0;
+    padding: 0;
+}
+.products-page .msg{
+    display: block;
+    width: calc(100% - 16%);
+    text-align: center;
+    margin: 73px 8%;
+    line-height: 2;
+    opacity: 0.8;
+}
+.products-page .tip{
+    position: relative;
+    top: -.58em;
+    font-size: .5em;
+    padding: .3em;
+    margin: -.3em;
+    color: inherit!important;
+}
+.products-page .content .opes{
+    display: flex;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+.products-page .content .opes a{
+    display: flex;
+    flex-direction: row;
+    outline: none;
+    margin: 2px;
+    padding: 8px 12px;
+    border: 1.6px solid #ffffff00;
+    border-radius: 300px;
+    text-decoration: none!important;
+    color: var(--products-box-text)!important;
+    background: var(--products-box-link-background);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    transition: all 0.33s;
+}
+.products-page .content .opes a:hover, .products-page .content .opes a:focus-visible{
+    background: var(--products-box-link-hover-background);
+    border: 1.6px solid var(--products-box-link-border);
+}
+.products-page .content .opes a:not(*[data-button-type=no]):focus-visible, .products-page .content .opes a:not(*[data-button-type=no]):hover{
+    padding: 8px 11px;
+}
+.products-page .content .opes a span{
+    font-weight: 500;
+}
+.products-page .content .opes a .svg{
+    margin: 1.5px -2px 0 2px;
+    width: 15px;
+    height: 15px;
+    fill: var(--products-box-text);
+    opacity: 0.8;
+    transition: all 0.33s;
+}
+.products-page .content .opes a:focus-visible .svg, .products-page .content .opes a:hover .svg{
+    margin-left: 4px;
+    opacity: 1;
+}
 .products_footer{
     position: relative;
     display: block;

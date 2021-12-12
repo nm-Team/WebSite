@@ -1,0 +1,93 @@
+{
+    "page": {
+        "productName": "nmChat",
+        "theme": "light"
+    },
+    "header": {
+        "name": "nmChat",
+        "intro": "聊起来。[tip]",
+        "icon": "https://logos.nmteam.agou.im/nmTeam/logo@64.png",
+        "background": "https://ci.cncn3.cn/1d221fa369b8cad95cc48d82c8996321.png",
+        "backgroundColor": "",
+        "color": "#fff",
+        "height": "",
+        "align": "bottom",
+        "buttons": [
+            {
+                "id": "go",
+                "name": "冬季上线",
+                "javascript": "alert('开发中，敬请期待')",
+                "href": "",
+                "towards": "no"
+            }
+        ],
+        "tip": [
+            "test。"
+        ],
+        "custom": ""
+    },
+    "main": [
+        {
+            "type": "subtitle",
+            "id": "design",
+            "class": "",
+            "theme": "",
+            "margin": "no",
+            "attr": {
+                "h1": "设计",
+                "h2": "简洁画风，<br><span style='color: #E5A923'>美翻了。[tip]</span>",
+                "tip": ["测试文本。"]
+            }
+        },
+        {
+            "type": "single",
+            "id": "design_comp",
+            "class": "",
+            "theme": "",
+            "margin": "",
+            "attr": {
+                "p": "深知其它即时通讯软件的臃肿和花哨，nmChat 采用简约而不简单的小清新设计。<br>初见如初恋，细品似细绢。",
+                "image": "https://ci.cncn3.cn/3b41346b0b08ddb1ce43c872c800ebf3.png",
+                "imgStyle": "border-radius:10px",
+                "imgTitle": "nmChat 的页面设计",
+                "align": ""
+            }
+        },
+        {
+            "type": "subtitle",
+            "id": "design_dark",
+            "class": "",
+            "theme": "dark",
+            "margin": "no",
+            "attr": {
+                "h1": "",
+                "h2": "深色模式，<br><span style='color: #E5A923'>酷毙了。</span>"
+            }
+        },
+        {
+            "type": "single",
+            "id": "design_comp",
+            "class": "",
+            "theme": "dark",
+            "margin": "",
+            "attr": {
+                "p": "测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本",
+                "image": "https://ci.cncn3.cn/83154630d2b2b45b58accd52116bd99c.png",
+                "imgStyle": "border-radius:10px",
+                "imgTitle": "nmChat 的页面设计",
+                "align": ""
+            }
+        },
+        {
+            "type": "subtitle",
+            "id": "design_frame",
+            "class": "",
+            "theme": "",
+            "margin": "",
+            "attr": {
+                "h1": "",
+                "h2": "响应式设计，<br><span style='color: #E5A923'>帅呆了。</span>"
+            }
+        }
+    ]
+}

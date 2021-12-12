@@ -10,9 +10,6 @@
     --products-box-grey-hover-shadow: rgba(1, 1, 1, 0.308);
     --products-box-grey-active-shadow: rgba(1, 1, 1, 0.37);
     --products-box-text: #000;
-    --products-box-link-background: #ffffff99;
-    --products-box-link-hover-background: #fff;
-    --products-box-link-border: rgb(41, 41, 41);
 }
 .products-overview .box.dark{
     --products-box-background: rgb(27, 27, 27);
@@ -21,9 +18,6 @@
     --products-box-grey-hover-shadow: rgba(1, 1, 1, 0.308);
     --products-box-grey-active-shadow: rgba(1, 1, 1, 0.37);
     --products-box-text: rgb(255, 255, 255);
-    --products-box-link-background: #20202099;
-    --products-box-link-hover-background: rgba(41, 41, 41, 0.705);
-    --products-box-link-border: rgb(196, 196, 196);
 }
 .products-overview{
     display: flex;
@@ -33,14 +27,6 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.products-overview .msg{
-    display: block;
-    width: calc(100% - 16%);
-    text-align: center;
-    margin: 73px 8%;
-    line-height: 2;
-    opacity: 0.8;
 }
 .products-overview .box{
     display: block;
@@ -111,14 +97,6 @@
     overflow-y: auto;
     color: var(--products-box-text);
 }
-.products-overview .box .tip{
-    position: relative;
-    top: -.58em;
-    font-size: .5em;
-    padding: .3em;
-    margin: -.3em;
-    color: var(--products-box-text)!important;
-}
 .products-overview .box.center .content{
     justify-content: center;
 }
@@ -129,7 +107,7 @@
     margin: 0;
     padding: 10px 0 10px 0;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: bold;
 }
 .products-overview .box .content .content-title i{
     display: inline-block;
@@ -146,49 +124,4 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 1.6;
-}
-.products-overview .box .content .opes{
-    display: flex;
-    margin: 0;
-    padding: 10px 0 10px 0;
-    font-size: 14px;
-    font-weight: 300;
-}
-.products-overview .box .content .opes a{
-    display: flex;
-    flex-direction: row;
-    outline: none;
-    margin: 2px;
-    padding: 8px 12px;
-    border: 1.6px solid #ffffff00;
-    border-radius: 300px;
-    text-decoration: none!important;
-    color: var(--products-box-text)!important;
-    background: var(--products-box-link-background);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    transition: all 0.33s;
-}
-.products-overview .box .content .opes a:hover, .products-overview .box .content .opes a:focus-visible{
-    background: var(--products-box-link-hover-background);
-    border: 1.6px solid var(--products-box-link-border);
-}
-.products-overview .box .content .opes a:not(*[data-button-type=no]):focus-visible, .products-overview .box .content .opes a:not(*[data-button-type=no]):hover{
-    padding: 8px 11px;
-}
-.products-overview .box .content .opes a span{
-    font-weight: 500;
-    
-}
-.products-overview .box .content .opes a .svg{
-    margin: 1.5px -2px 0 2px;
-    width: 15px;
-    height: 15px;
-    fill: var(--products-box-text);
-    opacity: 0.8;
-    transition: all 0.33s;
-}
-.products-overview .box .content .opes a:focus-visible .svg, .products-overview .box .content .opes a:hover .svg{
-    margin-left: 4px;
-    opacity: 1;
 }
