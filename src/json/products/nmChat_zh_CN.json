@@ -5,18 +5,19 @@
     },
     "header": {
         "name": "nmChat",
-        "intro": "聊起来。[tip]",
+        "slug": "聊起来。[tip]",
+        "intro": "nmChat 通过创新设计及强大功能重塑您的聊天体验。",
         "icon": "https://logos.nmteam.agou.im/nmTeam/logo@64.png",
-        "background": "https://ci.cncn3.cn/1d221fa369b8cad95cc48d82c8996321.png",
-        "backgroundColor": "",
-        "color": "#fff",
-        "height": "",
+        "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "height": "80vh",
         "align": "bottom",
         "buttons": [
             {
                 "id": "go",
-                "name": "冬季上线",
-                "javascript": "alert('开发中，敬请期待')",
+                "name": "预览",
+                "javascript": "false",
                 "href": "",
                 "towards": "no"
             }
@@ -28,66 +29,245 @@
     },
     "main": [
         {
-            "type": "subtitle",
-            "id": "design",
-            "class": "",
+            "id": "design_draw",
             "theme": "",
-            "margin": "no",
-            "attr": {
-                "h1": "设计",
-                "h2": "简洁画风，<br><span style='color: #E5A923'>美翻了。[tip]</span>",
-                "tip": ["测试文本。"]
-            }
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "设计",
+                        "h2": "简洁画风，<br><span style='color: #E5A923'>美<span style='transform: rotate(180deg); display: inline-block;'>翻</span>了。[tip]</span>",
+                        "tip": [
+                            "测试文本。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_comp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "深知其它即时通讯软件的臃肿和花哨，nmChat 采用简约而不简单的小清新设计。<br>初见如初恋，细品似细绢。",
+                        "mediaType": "img",
+                        "media": "https://ci.cncn3.cn/3b41346b0b08ddb1ce43c872c800ebf3.png",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmChat 的页面设计",
+                        "align": ""
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "进一步了解 nmChat 的设计",
+                                        "javascript": "openChild('design_child')",
+                                        "href": "",
+                                        "towards": "plus"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "type": "single",
-            "id": "design_comp",
-            "class": "",
-            "theme": "",
-            "margin": "",
-            "attr": {
-                "p": "深知其它即时通讯软件的臃肿和花哨，nmChat 采用简约而不简单的小清新设计。<br>初见如初恋，细品似细绢。",
-                "image": "https://ci.cncn3.cn/3b41346b0b08ddb1ce43c872c800ebf3.png",
-                "imgStyle": "border-radius:10px",
-                "imgTitle": "nmChat 的页面设计",
-                "align": ""
-            }
-        },
-        {
-            "type": "subtitle",
             "id": "design_dark",
-            "class": "",
             "theme": "dark",
-            "margin": "no",
-            "attr": {
-                "h1": "",
-                "h2": "深色模式，<br><span style='color: #E5A923'>酷毙了。</span>"
-            }
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_dark",
+                    "class": "",
+                    "theme": "dark",
+                    "attr": {
+                        "h1": "",
+                        "h2": "深色模式，<br><span style='color: #E5A923'>酷毙了。</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_dark_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 专为深色模式设计，在深色模式下呈现出绝对优秀的表现。<br>在夜间呵护您的双眼，更优化您的体验。",
+                        "mediaType": "img",
+                        "media": "https://ci.cncn3.cn/83154630d2b2b45b58accd52116bd99c.png",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmChat 在深色模式下可用",
+                        "align": ""
+                    }
+                }
+            ]
         },
         {
-            "type": "single",
-            "id": "design_comp",
-            "class": "",
-            "theme": "dark",
-            "margin": "",
-            "attr": {
-                "p": "测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本",
-                "image": "https://ci.cncn3.cn/83154630d2b2b45b58accd52116bd99c.png",
-                "imgStyle": "border-radius:10px",
-                "imgTitle": "nmChat 的页面设计",
-                "align": ""
-            }
-        },
-        {
-            "type": "subtitle",
             "id": "design_frame",
-            "class": "",
             "theme": "",
-            "margin": "",
-            "attr": {
-                "h1": "",
-                "h2": "响应式设计，<br><span style='color: #E5A923'>帅呆了。</span>"
-            }
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "响应式设计，<br><span style='color: #E5A923'>帅呆了。</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 采用先进的响应式设计，无论手机、平板电脑或是电脑，甚至智能手表[tip]，均用同一套设计语言打通。在几个设备间切换时，您甚至无法感受到任何变化——手机视图与电脑视图一脉相承。",
+                        "mediaType": "img",
+                        "media": "https://i.zerodream.net/9dfd6815e94b73cb5e2984368b4c5450.gif",
+                        "mediaStyle": "position: relative; top: -18px; margin-bottom: -77px",
+                        "mediaTitle": "nmChat 采用响应式设计，在多种设备上可用",
+                        "align": "",
+                        "tip": [
+                            "要正常使用 nmChat，设备屏幕分辨率应当大于 250 像素。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "design_usage",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_usage_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "即开即用，<br><span style='color: #E5A923'>快极了。</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "不同于其它即时通讯软件，nmChat 将网页视作主要的聊天终端。只需要打开浏览器输入网址，即可立即开始使用 nmChat[tip]。<br>有了渐进式 Web 应用技术的加持，nmChat 即使作为网页运行，也能带来超越原生应用的优质体验。当然，我们也提供不同平台的应用程序[tip]。",
+                        "mediaType": "img",
+                        "media": "https://i.zerodream.net/b33f333fd68c52365caf7572d1ee299f.png",
+                        "mediaStyle": "",
+                        "mediaTitle": "将 nmChat 作为 PWA 安装",
+                        "align": "",
+                        "tip": [
+                            "要正常使用 nmChat，请使用最新版本的 Microsoft Edge、Google Chrome 或 Apple Safari。",
+                            "nmChat 应用程序仅在部分终端上可用，且将陆续推出。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "function",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "function_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "功能",
+                        "h2": "特色功能，<br><span style='color: #D35230'>有♥了。</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_overview",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "深知用户在日常聊天中遇到的种种不便，nmChat 拥有让“强迫症”也更加舒适的使用体验。举手投足间，匠心可见。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_sendnojump",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>发送而不跳转</b><br>nmChat 提供一种新的消息发送方式，让你得以发送消息，同时不影响你的阅读进度。<br>只需要长按或右键发送按钮，随叫随到。",
+                        "mediaType": "img",
+                        "media": "https://i.zerodream.net/4829aebf7b79c28b9e8486e58d02582c.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_repeat",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>复读</b><br>在群里聊天时想重复一条消息？<br>无需使用剪贴板，只需要展开操作面板，选择“复读”。你的剪贴板比群聊更重要。",
+                        "mediaType": "img",
+                        "media": "https://i.zerodream.net/edf2171af6ade63d8d43e748bd8933c4.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_man",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>账号管理，轻松搞定</b><br>工作生活想要分离，或是第二人格玩到飞起？<br>在 nmChat，多账号切换零距离。",
+                        "mediaType": "img",
+                        "media": "https://i.zerodream.net/0d76d85fe52867340b91ca89da69a85d.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": "privacy",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "隐私",
+                        "h2": "你的消息，<br><svg t=\"1639413582640\" class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"2323\" width=\"30\" height=\"30\"><path d=\"M385.150849 385.662338l-128.895105 0 0-150.377622q0-49.102897 19.436563-91.556444t53.706294-74.677323 80.815185-50.637363 101.786214-18.413586q49.102897 0 94.625375 18.413586t80.815185 50.637363 56.263736 74.677323 20.971029 91.556444l0 150.377622-123.78022 0 0-121.734266q0-64.447552-35.804196-99.74026t-97.182817-35.292707q-55.240759 0-88.999001 35.292707t-33.758242 99.74026l0 121.734266zM826.053946 447.040959q27.62038 0 47.568432 19.948052t19.948052 47.568432l0 317.122877q0 27.62038-9.718282 51.66034t-26.597403 41.942058-39.896104 28.131868-50.637363 10.22977l-516.603397 0q-27.62038 0-50.125874-10.22977t-38.361638-27.108891-24.551449-39.384615-8.695305-48.07992l0-324.283716q0-27.62038 19.436563-47.568432t47.056943-19.948052l61.378621 0 128.895105 0 255.744256 0 123.78022 0 61.378621 0z\" p-id=\"2324\" fill=\"#2c2c2c\"></path></svg><span style='color: #222'><small style='opacity: 0.7'>层<small style='opacity: 0.7'>层<small style='opacity: 0.7'>加<small style='opacity: 0.7'>密<small style='opacity: 0.7'>。</small></small></small></small></small></span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 采用先进的 https 和 SSL 技术加密传输数据。[tip]",
+                        "tip": [
+                            "nmChat 通过加密方式传输大部分数据。"
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }

@@ -18,11 +18,13 @@ body{
     --products-box-link-background: #ffffff99;
     --products-box-link-hover-background: #fff;
     --products-box-link-border: rgb(41, 41, 41);
+    --products-box-link-border-b: rgba(41, 41, 41, 0.5);
 }
 .dark{
     --products-box-link-background: #20202099;
     --products-box-link-hover-background: rgba(41, 41, 41, 0.705);
     --products-box-link-border: rgb(196, 196, 196);
+    --products-box-link-border-b: rgba(196, 196, 196, 0.5);
 }
 .products-page *{
     margin: 0;
@@ -44,14 +46,14 @@ body{
     margin: -.3em;
     color: inherit!important;
 }
-.products-page .content .opes{
+.products-page .opes{
     display: flex;
     margin: 0;
     padding: 10px 0 10px 0;
     font-size: 14px;
     font-weight: 300;
 }
-.products-page .content .opes a{
+.products-page .opes a{
     display: flex;
     flex-direction: row;
     outline: none;
@@ -66,17 +68,20 @@ body{
     backdrop-filter: blur(20px);
     transition: all 0.33s;
 }
-.products-page .content .opes a:hover, .products-page .content .opes a:focus-visible{
+.detail-block .opes a{
+    border-color: var(--products-box-link-border-b);
+}
+.products-page .opes a:hover, .products-page .opes a:focus-visible{
     background: var(--products-box-link-hover-background);
     border: 1.6px solid var(--products-box-link-border);
 }
-.products-page .content .opes a:not(*[data-button-type=no]):focus-visible, .products-page .content .opes a:not(*[data-button-type=no]):hover{
+.products-page .opes a:not(*[data-button-type=no]):focus-visible, .products-page .opes a:not(*[data-button-type=no]):hover{
     padding: 8px 11px;
 }
-.products-page .content .opes a span{
+.products-page .opes a span{
     font-weight: 500;
 }
-.products-page .content .opes a .svg{
+.products-page .opes a .svg{
     margin: 1.5px -2px 0 2px;
     width: 15px;
     height: 15px;
@@ -84,7 +89,7 @@ body{
     opacity: 0.8;
     transition: all 0.33s;
 }
-.products-page .content .opes a:focus-visible .svg, .products-page .content .opes a:hover .svg{
+.products-page .opes a:focus-visible .svg, .products-page .opes a:hover .svg{
     margin-left: 4px;
     opacity: 1;
 }

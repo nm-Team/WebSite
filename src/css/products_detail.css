@@ -18,7 +18,7 @@
     width: 100%;
     height: calc(70vh - 5px);
 }
-.products-detail .background{
+.products-detail .product-header .background{
     position: absolute;
     top: 0px;
     z-index: 0;
@@ -29,7 +29,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-.products-detail .content{
+.products-detail .product-header .content{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -65,10 +65,17 @@
     background-position: center bottom;
     background-repeat: no-repeat;
 }
+.products-detail .content .productSlug{
+    margin: 0;
+    padding: 4px 10%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+}
 .products-detail .content .productIntro{
     margin: 0;
-    padding: 4px 0;
-    font-size: 20px;
+    padding: 8px 10%;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
 }
@@ -78,17 +85,17 @@
 .products-detail .products-main{
     
 }
-.detail-block{
+.detail-blocks, .detail-block{
     display: block;
     color: var(--products-box-text);
     background-color: var(--products-background);
-    padding: 30px 10%;
+    padding: 30px 0;
 }
-.detail-block[data-margin=no]{
-    padding-bottom: 0;
+.detail-block:not(.detail-block .detail-block){
+    padding: 13px 10% 0 10%;
 }
-.detail-block[data-margin=no]+.detail-block{
-    padding-top: 13px;
+.detail-block .detail-block{
+    padding: 10px 0 10px 0;
 }
 .detail-block[data-block-type=subtitle]{
     font-weight: bold;
@@ -106,30 +113,37 @@
     font-size: 30px;
     line-height: 1.31;
 }
-.detail-block[data-block-type=single]{
+.detail-block[data-block-type=single] .singleMain{
     color: var(--products-box-text);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-size: 15px;
-    line-height: 1.54;
+    line-height: 1.74;
+}
+.detail-block[data-block-type=single] .img{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 @media (max-width:700px) {
     .detail-block[data-block-type=single] .img{
-        width: 70%;
+        width: 84%;
         max-height: 40vh;
         object-fit: contain;
         display: flex;
-        margin: 20px auto 0 auto;
+        margin: 20px auto 0 auto!important;
     }   
 }
 @media (min-width:700px) {
-    .detail-block[data-block-type=single]{
+    .detail-block[data-block-type=single] .singleMain{
+        position: relative;
         flex-direction: row;
         align-items: self-start;
     }
     .detail-block .word{
         margin: 1px 0 20px 0;
-        line-height: 2;
+        line-height: 1.8;
     }   
     .detail-block[data-block-type=single] .img{
         width: 40%;

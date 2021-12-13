@@ -47,7 +47,7 @@
                     "id": "seemore",
                     "name": "进一步了解",
                     "javascript": "",
-                    "href": "nmChat",
+                    "href": "overview.html?product=nmChat",
                     "towards": "in"
                 }
             ]
@@ -114,7 +114,7 @@
             "length": "1",
             "buttons": [
                 {
-                    "id": "buseemore",
+                    "id": "seemore",
                     "name": "进一步了解",
                     "javascript": "",
                     "href": "overview.html?product=nmBrowser-StartPage",
