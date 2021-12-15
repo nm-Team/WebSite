@@ -1,37 +1,37 @@
-// try {
-productsJson = JSON.parse(loadc("/src/json/products/" + getUrlParam("product") + "_" + language + ".json"));
-products_detail_inner.innerHTML = "";
-console.log("Get product detail JSON file. ");
-tipsNum = 0;
-totalBlockNum = 0;
-// 处理 page
-products_detail_inner.setAttribute("data-product-name", productsJson.page.productName);
-document.title = productsJson.page.productName +" "+ document.title;
-products_detail_inner.setAttribute("data-theme", productsJson.page.theme);
-products_detail_inner.className += " " + productsJson.page.theme + " ";
-// 处理 header 
-pHeader = productsJson.header;
-sTipsNum = 0;
-btshtml = setButton(pHeader.buttons);
-products_detail_inner.innerHTML = `<div class="product-header" data-align="` + pHeader.align + `" style="` + (pHeader.height ? "height:" + pHeader.height + ";" : "") + (pHeader.backgroundColor ? "background-color:" + pHeader.backgroundColor + ";" : "") + (pHeader.color ? "color:" + pHeader.color + "!important;" : "") + `">
+try {
+    productsJson = JSON.parse(loadc("/src/json/products/" + getUrlParam("product") + "_" + language + ".json"));
+    products_detail_inner.innerHTML = "";
+    console.log("Get product detail JSON file. ");
+    tipsNum = 0;
+    totalBlockNum = 0;
+    // 处理 page
+    products_detail_inner.setAttribute("data-product-name", productsJson.page.productName);
+    document.title = productsJson.page.productName + " " + document.title;
+    products_detail_inner.setAttribute("data-theme", productsJson.page.theme);
+    products_detail_inner.className += " " + productsJson.page.theme + " ";
+    // 处理 header 
+    pHeader = productsJson.header;
+    sTipsNum = 0;
+    btshtml = setButton(pHeader.buttons);
+    products_detail_inner.innerHTML = `<div class="product-header" data-align="` + pHeader.align + `" style="` + (pHeader.height ? "height:" + pHeader.height + ";" : "") + (pHeader.backgroundColor ? "background-color:" + pHeader.backgroundColor + ";" : "") + (pHeader.color ? "color:" + pHeader.color + "!important;" : "") + `">
     <div class="background" style="background-image:url(`+ pHeader.background + `)"></div>
     <div class="content"><i class="main-icon" style="background-image:url(`+ pHeader.icon + `)"></i>
     <p class="productName" style="`+ (pHeader.color ? "color:" + pHeader.color + "!important;" : "") + `">` + pHeader.name + `</p><p class="productSlug"  style="` + (pHeader.color ? "color:" + pHeader.color + "!important;" : "") + `">` + checkTip(pHeader.slug, pHeader) + `</p><p class="productIntro"  style="` + (pHeader.color ? "color:" + pHeader.color + "!important;" : "") + `">` + checkTip(pHeader.intro, pHeader) + `</p>
     <object><div class="opes">`+ btshtml + `</div></object></div>` + pHeader.custom + `</div><div class="products-main" id="products_detail_main"></div>`;
-// 处理主要区块
-pBSMain = productsJson.main;
-for (bls in pBSMain) {
-    products_detail_main.innerHTML += `<div class="detail-blocks" id="detail_blocks_` + bls + `" data-blocks-num="` + bls + `" data-blocks-selfid="` + pBSMain[bls]['id'] + `" data-theme="` + pBSMain[bls]['theme'] + `" ></div>`;
-    pMBSId = `detail_blocks_` + bls;
-    pMain = pBSMain[bls].blockItems;
-    generateBlock(pMBSId, pMain);
+    // 处理主要区块
+    pBSMain = productsJson.main;
+    for (bls in pBSMain) {
+        products_detail_main.innerHTML += `<div class="detail-blocks" id="detail_blocks_` + bls + `" data-blocks-num="` + bls + `" data-blocks-selfid="` + pBSMain[bls]['id'] + `" data-theme="` + pBSMain[bls]['theme'] + `" ></div>`;
+        pMBSId = `detail_blocks_` + bls;
+        pMain = pBSMain[bls].blockItems;
+        generateBlock(pMBSId, pMain);
+    }
 }
-// }
-// catch (err) {
-// console.error(err);
-// products_detail_inner.innerHTML = "<div class='msg' data-i18n='products.noavaliable'></div>";
-// changeLanguage();
-// }
+catch (err) {
+    console.error(err);
+    products_detail_inner.innerHTML = "<div class='msg' data-i18n='products.noavaliable'></div>";
+    changeLanguage();
+}
 
 // 定时操作
 setInterval(() => {
@@ -43,6 +43,18 @@ setInterval(() => {
         } catch (err) { }
     }
 }, 10);
+
+function openChild(childName) {
+    new_element = document.createElement("div");
+    new_element.setAttribute("id", "detail_child_" + childName);
+    new_element.setAttribute("class", "products-page detail-childframe " + productsJson.child[childName]['theme']);
+    new_element.setAttribute("data-theme", productsJson.child[childName]['theme']);
+    new_element.innerHTML = `<button class="closeButton" title="关闭" onclick="document.getElementById('` + "detail_child_" + childName + `').outerHTML='';document.body.style.overflow='auto';"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M544.448 499.2l284.576-284.576a32 32 0 0 0-45.248-45.248L499.2 453.952 214.624 169.376a32 32 0 0 0-45.248 45.248l284.576 284.576-284.576 284.576a32 32 0 0 0 45.248 45.248l284.576-284.576 284.576 284.576a31.904 31.904 0 0 0 45.248 0 32 32 0 0 0 0-45.248L544.448 499.2z"></path></svg></button><div id="` + "detail_child_" + productsJson.child[childName]['id'] + `_childContent"></div>`;
+    document.getElementById("products_child_inner").appendChild(new_element);
+    document.getElementById("detail_child_" + childName).getElementsByClassName("closeButton")[0].focus();
+    document.body.style.overflow = "hidden";
+    generateBlock("detail_child_" + childName, productsJson.child[childName]['blockItems']);
+}
 
 function generateBlock(pMBId, blockJson) {
     for (bl in blockJson) {
@@ -58,7 +70,7 @@ function generateBlock(pMBId, blockJson) {
                 document.getElementById(bLId).innerHTML = `<p class="h1">` + checkTip(attrList.h1, attrList) + `</p><p class="h2">` + checkTip(attrList.h2, attrList) + `</p>`;
                 break;
             case "single":
-                document.getElementById(bLId).innerHTML = `<div class="singleMain"><p class="word">` + checkTip(attrList.p, attrList) + `</p>` + (attrList.mediaType == "img" ? `<img class="img" style="` + attrList.mediaStyle + `" src="` + attrList.media + `" ondragstart="return false;" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" />` : (attrList.mediaType == "video" ? `<video class="img" style=""` + attrList.mediaStyle + `" src="` + attrList.media + `" ondragstart="return false;" autoplay="autoplay" muted="muted" controls="false" controlslist="nodownload" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" ></video>` : ""))+`</div>`;
+                document.getElementById(bLId).innerHTML = `<div class="singleMain"><p class="word">` + checkTip(attrList.p, attrList) + `</p>` + (attrList.mediaType == "img" ? `<img class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" />` : (attrList.mediaType == "video" ? `<video class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" autoplay="autoplay" muted="muted" controls="false" controlslist="nodownload" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" ></video>` : "")) + `</div>`;
                 break;
             case "buttons":
                 document.getElementById(bLId).innerHTML = `<object class="opes">` + setButton(attrList.buttons) + `</object>`;

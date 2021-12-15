@@ -5,7 +5,7 @@
     },
     "header": {
         "name": "nmChat",
-        "slug": "聊起来。[tip]",
+        "slug": "聊起来。",
         "intro": "nmChat 通过创新设计及强大功能重塑您的聊天体验。",
         "icon": "https://logos.nmteam.agou.im/nmTeam/logo@64.png",
         "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
@@ -22,9 +22,6 @@
                 "towards": "no"
             }
         ],
-        "tip": [
-            "test。"
-        ],
         "custom": ""
     },
     "main": [
@@ -39,10 +36,8 @@
                     "theme": "",
                     "attr": {
                         "h1": "设计",
-                        "h2": "简洁画风，<br><span style='color: #E5A923'>美<span style='transform: rotate(180deg); display: inline-block;'>翻</span>了。[tip]</span>",
-                        "tip": [
-                            "测试文本。"
-                        ]
+                        "h2": "简洁画风，<br><span style='color: #E5A923'>美<span style='transform: rotate(180deg); display: inline-block;'>翻</span>了。</span>",
+                        "tip": []
                     }
                 },
                 {
@@ -266,8 +261,88 @@
                             "nmChat 通过加密方式传输大部分数据。"
                         ]
                     }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<i style=' display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px'>nmTeam</span>保护你的隐私"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 遵循 nmTeam 隐私政策。",
+                        "tip": []
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "查看 nmTeam 隐私政策",
+                                        "javascript": "",
+                                        "href": "/legal/privacy-policy.html",
+                                        "towards": "out"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
                 }
             ]
         }
-    ]
+    ],
+    "child": {
+        "design_child": {
+            "theme": "light",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_child_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "每一处都经过打磨。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_child_int",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 从细节做起来优化体验。",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_child_f0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>收窄侧栏</b><br>nmChat 对侧边栏展开和收窄的两种情况进行了深入分析。<br>最终，我们选择用两种不同的方式来呈现列表信息和按钮。更为珍贵的是，我们制作了完美的动画，使两种页面设计交错而又统一。",
+                        "mediaType": "video",
+                        "media": "/src/img/products/nmChat_detail_leftBox.mp4",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmChat 为此制作了动画",
+                        "specialAttr": "loop='loop' controls='nocontrols'"
+                    }
+                }
+            ]
+        }
+    }
 }

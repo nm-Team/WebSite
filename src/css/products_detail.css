@@ -153,3 +153,29 @@
         margin: 0 0 0 40px;
     }   
 }
+.detail-childframe{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: var(--products-background);
+    overflow: auto;
+    overflow: overlay;
+}
+.detail-childframe .closeButton{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 20px 0 30px calc(10% - 16px);
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.detail-childframe .closeButton svg{
+    width: 33px;
+    height: 33px;
+    padding: 2.5px;
+    fill: var(--products-box-text);
+}
