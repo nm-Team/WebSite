@@ -269,7 +269,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<i style=' display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px'>nmTeam</span>保护你的隐私"
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'><i style=' display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>保护你的隐私。</span></l>"
                     }
                 },
                 {
@@ -302,6 +302,28 @@
                     ]
                 }
             ]
+        }
+    ],
+    "footer": [
+        {
+            "icon": "M512 170.432a117.568 117.568 0 1 1 0 235.136 117.568 117.568 0 0 1 0-235.136z m0 504c166.336 0 341.632 81.728 341.632 117.568v61.632H170.368v-61.632c0-35.84 175.232-117.632 341.568-117.632zM512 64a223.936 223.936 0 0 0-224 224C288 411.776 388.224 512 512 512s224-100.224 224-224S635.776 64 512 64z m0 512c-149.504 0-448 73.536-448 219.456V960h896v-164.544C960 649.536 661.504 576 512 576z",
+            "name": "nmChat 账号",
+            "intro": "使用 nmTeam Account 登录 nmChat，轻松同步您的账户信息。",
+            "button": "nmTeam Account Center",
+            "href": "https://accounts.nmteam.xyz?from=nmchat_intropage",
+            "javascript":"",
+            "type": "out",
+            "towards":"out"
+        },
+        {
+            "icon": "M512 896C299.936 896 128 724.064 128 512S299.936 128 512 128s384 171.936 384 384-171.936 384-384 384m0-832C264.96 64 64 264.96 64 512s200.96 448 448 448 448-200.96 448-448S759.04 64 512 64\"></path><path d=\"M511.68 704a48 48 0 1 0 0 96 48 48 0 0 0 0-96M512 256l-0.288 0.032A160.16 160.16 0 0 0 352 416h64a96.096 96.096 0 0 1 95.712-95.968L512 320c52.928 0 96 43.072 96 96s-43.072 96-96 96l-0.288-0.032V512H480v128h64v-67.264A160.224 160.224 0 0 0 672 416c0-88.224-71.776-160-160-160",
+            "name": "nmChat 帮助",
+            "intro": "",
+            "button": "开发中",
+            "href": "",
+            "javascript":";",
+            "type": "no",
+            "towards":"no"
         }
     ],
     "child": {

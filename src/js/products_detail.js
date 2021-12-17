@@ -26,6 +26,12 @@ try {
         pMain = pBSMain[bls].blockItems;
         generateBlock(pMBSId, pMain);
     }
+    // 处理底部信息
+    pFoot = productsJson.footer;
+    products_detail_main.innerHTML += `<div class="detail-footer" id="detail_footer" data-theme="` + productsJson.footer.theme + `" ></div>`;
+    for (fItems in pFoot) {
+        detail_footer.innerHTML += `<div class="footer-item" data-itemname="` + pFoot[fItems]['name'] + `" title="` + pFoot[fItems]['name'] + `"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="` + pFoot[fItems]['icon'] + `"></path></svg><p class="name">` + pFoot[fItems]['name'] + `</p><p class="intro">` + pFoot[fItems]['intro'] + `</p><a class="but"  target="` + (pFoot[fItems]['towards'] == "out" ? "_blank" : "_self") + `" ` + (pFoot[fItems]['javascript'] ? ` href="javascript:" onclick="` + pFoot[fItems]['javascript'] + `" ondragstart="return false;" ` : `href="` + pFoot[fItems]['href'] + `"`) + `>` + pFoot[fItems]['button'] + svgList[pFoot[fItems]['type']]+`</a></div>`;
+    }
 }
 catch (err) {
     console.error(err);
