@@ -5,20 +5,24 @@ svgList = {
     "plus": `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z" p-id="1258"></path><path d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"></path></svg>`
 }
 
+chinesePun = "，。；：？";
+
 function checkTip(w, json) {
-    return w.replace(/\[tip\]/g, function (word) {
+    w = w.replace(/\[tip\]/g, function (word) {
         tipsNum++;
         products_footer_explain_by_javascript.innerHTML += `<p id="products_footer_explain_` + tipsNum + `"><b>` + tipsNum + `. </b>` + json['tip'][sTipsNum] + `</p>`;
-
         sTipsNum++;
         return `<object><a class="tip" href="#products_footer_explain_` + tipsNum + `" target="_self" title="Turn to note">` + tipsNum + `</a></object>`;
     });
+    if (w && chinesePun.indexOf(w[w.length - 1]) > 0) {
+        w = w.slice(0, -1) + "<bs>" + w[w.length - 1] + "</bs>";
+    }
+    return w;
 }
-
 function setButton(json) {
     btshtml = '';
     for (j in json) {
-        btshtml += `<a data-button-id="` + json[j]['id'] + `" data-button-type="` + json[j]['towards'] + `" target="` + (json[j]['towards'] == "out" ? "_blank" : "_self") + `" ` + (json[j]['javascript'] ? ` href="javascript:" onclick="` + json[j]['javascript'] + `" ondragstart="return false;" ` : `href="` + json[j]['href'] + `"`) + ` title="` + json[j]['name'] + `"><span>` + json[j]['name'] + `</span>` + svgList[json[j]['towards']] + `</a>`;
+        btshtml += `<a data-button-id="` + json[j]['id'] + `" data-button-type="` + json[j]['towards'] + `" target="` + (json[j]['towards'] == "out" ? "_blank" : "_self") + `" ` + (json[j]['javascript'] ? ` href="javascript:" onclick="` + json[j]['javascript'] + `" ondragstart="return false;" ` : `href="` + json[j]['href'] + `"`) + ` title="` + json[j]['name'].replace(/\[tip\]/g, "") + `"><span>` + checkTip(json[j]['name'], json[j]) + `</span>` + svgList[json[j]['towards']] + `</a>`;
     }
     return btshtml;
 }

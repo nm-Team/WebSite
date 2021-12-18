@@ -66,16 +66,9 @@
             "buttons": [
                 {
                     "id": "seemore",
-                    "name": "进一步了解",
-                    "javascript": "",
+                    "name": "开发中",
+                    "javascript": ";",
                     "href": "overview.html?product=nmCraft",
-                    "towards": "in"
-                },
-                {
-                    "id": "add",
-                    "name": "加入",
-                    "javascript": "",
-                    "href": "nmCraft/go.html",
                     "towards": "in"
                 }
             ]
@@ -85,8 +78,8 @@
             "icon": "",
             "background": "https://ci.cncn3.cn/142b080fb604098801eadc5feafa1c0a.jpg",
             "intro": "纳米般速度，纳米级服务。",
-            "href": "overview.html?product=nmCloud",
-            "javascript": "",
+            "href": ";",
+            "javascript": ";",
             "target": "_blank",
             "theme": "dark",
             "align": "top",
@@ -94,10 +87,10 @@
             "buttons": [
                 {
                     "id": "buy",
-                    "name": "选购",
-                    "javascript": "",
-                    "href": "https://cloud.nmteam.xyz",
-                    "towards": "out"
+                    "name": "开发中",
+                    "javascript": ";",
+                    "href": "",
+                    "towards": "in"
                 }
             ]
         },
@@ -106,7 +99,7 @@
             "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
             "background": "https://i.zerodream.net/0c0ab22f016457417f35f437d0cfea89.png",
             "intro": "美好的一天，始于 nmBrowser 启动页。",
-            "href": "nmBrowser-StartPage",
+            "href": "/products/overview.html?product=nmBrowser-StartPage",
             "javascript": "",
             "target": "_self",
             "theme": "dark",

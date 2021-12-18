@@ -30,12 +30,13 @@ try {
     pFoot = productsJson.footer;
     products_detail_main.innerHTML += `<div class="detail-footer" id="detail_footer" data-theme="` + productsJson.footer.theme + `" ></div>`;
     for (fItems in pFoot) {
-        detail_footer.innerHTML += `<div class="footer-item" data-itemname="` + pFoot[fItems]['name'] + `" title="` + pFoot[fItems]['name'] + `"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="` + pFoot[fItems]['icon'] + `"></path></svg><p class="name">` + pFoot[fItems]['name'] + `</p><p class="intro">` + pFoot[fItems]['intro'] + `</p><a class="but"  target="` + (pFoot[fItems]['towards'] == "out" ? "_blank" : "_self") + `" ` + (pFoot[fItems]['javascript'] ? ` href="javascript:" onclick="` + pFoot[fItems]['javascript'] + `" ondragstart="return false;" ` : `href="` + pFoot[fItems]['href'] + `"`) + `>` + pFoot[fItems]['button'] + svgList[pFoot[fItems]['type']]+`</a></div>`;
+        detail_footer.innerHTML += `<div class="footer-item" data-itemname="` + pFoot[fItems]['name'] + `" title="` + pFoot[fItems]['name'] + `"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="` + pFoot[fItems]['icon'] + `"></path></svg><p class="name">` + pFoot[fItems]['name'] + `</p><p class="intro">` + pFoot[fItems]['intro'] + `</p><a class="but"  target="` + (pFoot[fItems]['towards'] == "out" ? "_blank" : "_self") + `" ` + (pFoot[fItems]['javascript'] ? ` href="javascript:" onclick="` + pFoot[fItems]['javascript'] + `" ondragstart="return false;" ` : `href="` + pFoot[fItems]['href'] + `"`) + `>` + pFoot[fItems]['button'] + svgList[pFoot[fItems]['type']] + `</a></div>`;
     }
 }
 catch (err) {
     console.error(err);
     products_detail_inner.innerHTML = "<div class='msg' data-i18n='products.noavaliable'></div>";
+    document.title = "Product Not Found " + document.title;
     changeLanguage();
 }
 
@@ -77,6 +78,9 @@ function generateBlock(pMBId, blockJson) {
                 break;
             case "single":
                 document.getElementById(bLId).innerHTML = `<div class="singleMain"><p class="word">` + checkTip(attrList.p, attrList) + `</p>` + (attrList.mediaType == "img" ? `<img class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" />` : (attrList.mediaType == "video" ? `<video class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" autoplay="autoplay" muted="muted" controls="false" controlslist="nodownload" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" ></video>` : "")) + `</div>`;
+                break;
+            case "img":
+                document.getElementById(bLId).innerHTML = `` + (attrList.mediaType == "img" ? `<img class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" />` : (attrList.mediaType == "video" ? `<video class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" autoplay="autoplay" muted="muted" controls="false" controlslist="nodownload" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" ></video>` : "")) + `<p>` + checkTip(attrList.p, attrList) + `</p>`;
                 break;
             case "buttons":
                 document.getElementById(bLId).innerHTML = `<object class="opes">` + setButton(attrList.buttons) + `</object>`;

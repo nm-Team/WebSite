@@ -30,6 +30,10 @@ body{
     margin: 0;
     padding: 0;
 }
+bs{
+    display: inline-block;
+    width: 0.5em;
+}
 .products-page .msg{
     display: block;
     width: calc(100% - 16%);
@@ -53,7 +57,7 @@ body{
     font-size: 14px;
     font-weight: 300;
 }
-.products-page .opes a{
+.products-page .opes a:not(.tip){
     display: flex;
     flex-direction: row;
     outline: none;
@@ -68,20 +72,20 @@ body{
     backdrop-filter: blur(20px);
     transition: all 0.33s;
 }
-.detail-block .opes a{
+.detail-block .opes a:not(.tip){
     border-color: var(--products-box-link-border-b);
 }
-.products-page .opes a:hover, .products-page .opes a:focus-visible{
+.products-page .opes a:not(.tip):hover, .products-page .opes a:not(.tip):focus-visible{
     background: var(--products-box-link-hover-background);
     border: 1.6px solid var(--products-box-link-border);
 }
-.products-page .opes a:not(*[data-button-type=no]):focus-visible, .products-page .opes a:not(*[data-button-type=no]):hover{
+.products-page .opes a:not(.tip):not(*[data-button-type=no]):focus-visible, .products-page .opes a:not(.tip):not(*[data-button-type=no]):hover{
     padding: 8px 11px;
 }
-.products-page .opes a span{
+.products-page .opes a:not(.tip) span{
     font-weight: 500;
 }
-.products-page .opes a .svg{
+.products-page .opes a:not(.tip) .svg{
     margin: 1.5px -2px 0 2px;
     width: 15px;
     height: 15px;
@@ -89,7 +93,7 @@ body{
     opacity: 0.8;
     transition: all 0.33s;
 }
-.products-page .opes a:focus-visible .svg, .products-page .opes a:hover .svg{
+.products-page .opes a:not(.tip):focus-visible .svg, .products-page .opes a:not(.tip):hover .svg{
     margin-left: 4px;
     opacity: 1;
 }
@@ -110,11 +114,11 @@ body{
     padding-top: 60px;
     line-height: 1.78;
 }
-.products_footer a{
+.products_footer a:not(.tip){
     color: var(--products-footer-a);
     text-decoration: none;
     transition: color 0.5s;
 }
-.products_footer a:hover, .products_footer a:focus-visible{
+.products_footer a:not(.tip):hover, .products_footer a:not(.tip):focus-visible{
     color: var(--products-footer-hover);
 }
