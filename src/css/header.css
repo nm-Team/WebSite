@@ -97,6 +97,7 @@ body{
     #hcont .header .right .links a{
         padding: 10px 8px;
         word-break: keep-all;
+        border-radius: 3px;
     }
     #hcont .header .right .links a:hover, #hcont .header .right .links a:focus-visible, #hcont .header .right .accountBox:hover p, #hcont .header .right .accountBox:focus-visible p{
         color: var(--header-a-hover);
@@ -111,6 +112,7 @@ body{
         margin-left: 8px;
         border: none;
         background: none;
+        border-radius: 3px;
     }
     #hcont .header .right .accountBox i{
         display: inline-block;
@@ -218,6 +220,7 @@ body{
     #hcont .header .right .links a{
         padding: 10px 8px;
         word-break: keep-all;
+        border-radius: 3px;
     }
     #hcont .header .right .links a:hover, #hcont .header .right .links a:focus-visible, #hcont .header .right .accountBox:hover p, #hcont .header .right .accountBox:focus-visible p{
         color: var(--header-a-hover);
@@ -233,6 +236,7 @@ body{
         margin: 14px 0;
         border: none;
         background: none;
+        border-radius: 3px;
     }
     #hcont .header .right .accountBox i{
         position: absolute;
@@ -275,6 +279,7 @@ body{
     color: var(--footer-a);
     text-decoration: none;
     transition: color 0.5s;
+    border-radius: 3px;
 }
 #fcont a:hover, #fcont a:focus-visible{
     color: var(--footer-hover);
