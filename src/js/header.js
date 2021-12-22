@@ -55,12 +55,22 @@ window.onload = function () {
 }
 
 function headerClick() {
-	if (window.offsetWidth > 600) {
-		window.location.href = "";
+	if (window.innerWidth > 600) {
+		window.location.href = "/";
 	}
-	else if (pageHeader.getAttribute("open") == "true")
+	else if (pageHeader.getAttribute("open") == "true") {
 		pageHeader.removeAttribute("open");
-	else pageHeader.setAttribute("open", "true");
+		document.body.style.overflow = "auto";
+	}
+	else {
+		pageHeader.setAttribute("open", "true");
+		document.body.style.overflow = "hidden";
+	}
+}
+
+window.onresize = function () {
+	pageHeader.removeAttribute("open");
+	document.body.style.overflow = "auto";
 }
 
 // footer 切换语言按钮
