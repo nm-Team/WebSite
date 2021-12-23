@@ -10,7 +10,7 @@
     position: relative;
     left: 0px;
     top: -82px;
-    z-index: 999;
+    z-index: 0;
     width: calc(100%);
     height: 60vh;
     margin-bottom: -40px;
@@ -126,6 +126,7 @@ a.contact{
         top: 0;
         bottom: 0;
         height: auto;
+        z-index: 999;
     }
     50%{
         background-position-x: center;
@@ -151,8 +152,9 @@ a.contact{
         background-size: auto 50%;
         position: relative;
         margin-top: -0px;
-        top: -74px;
+        top: -80px;
         height: calc(100vh + 45px);
+        z-index: 999;
         /* height: 100vh; */
         /* margin-bottom: -28px; */
     }
@@ -161,6 +163,7 @@ a.contact{
         
     @keyframes logoComing{
         0%{
+            z-index: 999;
             background-position-y: 50%;
             background-size: auto 1000%;
             position: fixed;
@@ -176,6 +179,7 @@ a.contact{
             top: 0;
             bottom: 0;
             height: auto;
+            z-index: 999;
         }
         60%{
             background-position-x: center;
@@ -185,6 +189,7 @@ a.contact{
             top: 0;
             bottom: 0;
             height: auto;
+            z-index: 999;
         }
         60.000000001%{
             background-position-x: center;
@@ -194,6 +199,7 @@ a.contact{
             margin-top: -0px;
             top: -84px;
             height: calc(100vh + 43px);
+            z-index: 999;
             /* height: 100vh; */
             /* margin-bottom: -28px; */
         }

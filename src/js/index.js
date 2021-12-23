@@ -32,3 +32,16 @@ var mySwiper = new Swiper('.swiper-container', {
         el: '.swiper-scrollbar',
     },
 })
+
+// header icon 
+
+function setHeader() {
+    if (window.scrollY < $(".indexHeader")[0].getBoundingClientRect().height - 55) {
+        $("#pageHeader")[0].className += " hidden hidetitle ";
+    }
+    else {
+        $("#pageHeader")[0].className = $("#pageHeader")[0].className.replace(/hidden/g, " ").replace(/hidetitle/g, " ");
+    }
+}
+
+setHeader();
