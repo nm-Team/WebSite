@@ -37,7 +37,7 @@
 	<script src="/src/js/language.js"></script>
 
 	<script>
-		backCallURL = getQueryVariable("bks");
+		backCallURL = unescape(getQueryVariable("bks"));
 		cookieLanguage = getCookie("pageLanguage");
 		lanT = `<button class="selection" data-lanid="{{lan}}" data-lanname="{{lanname}}" data-active="{{active}}" title="{{lanname}}">{{lanname}}</button>`;
 		lanList.innerHTML += lanT.replace(/{{lan}}/g, "auto").replace(/{{lanname}}/g, "<t data-i18n='footer.auto'></t>").replace(/{{active}}/g, (cookieLanguage == "" || cookieLanguage == "auto"));

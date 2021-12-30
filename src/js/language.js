@@ -49,6 +49,7 @@ changeLanguage();
 $(window).on('load', function () {
     if (getUrlParam("lan")) {
         changeLanguage(getUrlParam("lan"));
+        changeURLParam("lan", "");
     }
 });
 
@@ -66,4 +67,23 @@ function getUrlParam(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
     var r = window.location.search.substr(1).match(reg);  //匹配目标参数
     if (r != null) return unescape(r[2]); return null; //返回参数值
+}
+
+function changeURLParam(name, value) {
+    var url = document.URL, resultUrl = ''
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+    var r = window.location.search.substr(1).match(reg);
+    var replaceText = name + '=' + value;
+    if (r != null) {
+        var tmp = url.replace(unescape(name + '=' + r[2]), replaceText);
+        resultUrl = (tmp);
+    } else {
+        if (url.match('[\?]')) {
+            resultUrl = url + '&' + replaceText;
+        }
+        else {
+            resultUrl = url + '?' + replaceText;
+        }
+    }
+    history.replaceState(null, null, resultUrl)
 }

@@ -75,5 +75,5 @@ window.onresize = function () {
 
 // footer 切换语言按钮
 footer_selectLanguageButton.onclick = function () {
-	window.location.href = window.location.origin + "/language.html?bks=" + window.location.href;
+	window.location.href = window.location.origin + "/language.html?bks=" + escape(window.location.href);
 }
