@@ -1,0 +1,53 @@
+{
+    "products": [
+        {
+            "name": "nmChat",
+            "icon": "",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
+            "intro": "Let's go chat. ",
+            "href": "overview.html?product=nmChat&lan=en_US",
+            "javascript": "",
+            "target": "_self",
+            "theme": "light",
+            "align": "top",
+            "length": "1",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "Learn more (English)",
+                    "javascript": "",
+                    "href": "overview.html?product=nmChat&lan=en_US",
+                    "towards": "in"
+                }
+            ]
+        },
+        {
+            "name": "StartPage",
+            "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
+            "background": "https://i.zerodream.net/0c0ab22f016457417f35f437d0cfea89.png",
+            "intro": "Good day from StartPage.",
+            "href": "/products/overview.html?product=nmBrowser-StartPage&lan=en_US",
+            "javascript": "",
+            "target": "_self",
+            "theme": "dark",
+            "align": "bottom",
+            "length": "1",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "Learn more (English)",
+                    "javascript": "",
+                    "href": "overview.html?product=nmBrowser-StartPage&lan=en_US",
+                    "towards": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "Try now",
+                    "javascript": "",
+                    "href": "https://bs.nmteam.xyz?from=nmTeamProductsPage",
+                    "towards": "out"
+                }
+            ]
+        }
+    ]
+}

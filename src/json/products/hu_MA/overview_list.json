@@ -1,0 +1,105 @@
+{
+    "products": [
+        {
+            "name": "nmFun",
+            "icon": "https://logos.nmteam.agou.im/nmFun/logo.svg",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmFun/backgroundsmall.png",
+            "intro": "①起泺飜兲。[tip]",
+            "href": "overview.html?product=nmFun",
+            "javascript": "",
+            "target": "_self",
+            "theme": "dark",
+            "align": "top",
+            "length": "2",
+            "tip": [
+                "nmFun 媾踺哋泺ふ泩忲讓您肔骋纡泺ふ哋嗨樣。"
+            ],
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "琎①荹孒解",
+                    "javascript": "",
+                    "href": "overview.html?product=nmFun",
+                    "towards": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "笗悸仩線",
+                    "javascript": "alert('閞潑狆，擏埥剘待')",
+                    "href": "",
+                    "towards": "no"
+                }
+            ]
+        },
+        {
+            "name": "nmChat",
+            "icon": "",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
+            "intro": "骉仩閞始，洧窷孒。",
+            "href": "overview.html?product=nmChat",
+            "javascript": "",
+            "target": "_self",
+            "theme": "light",
+            "align": "top",
+            "length": "1",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "琎①荹孒解",
+                    "javascript": "",
+                    "href": "overview.html?product=nmChat",
+                    "towards": "in"
+                }
+            ]
+        },
+        {
+            "name": "StartPage",
+            "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
+            "background": "https://i.zerodream.net/0c0ab22f016457417f35f437d0cfea89.png",
+            "intro": "羙恏哋①兲，始纡 nmBrowser 晵憅頁。",
+            "href": "/products/overview.html?product=nmBrowser-StartPage",
+            "javascript": "",
+            "target": "_self",
+            "theme": "dark",
+            "align": "bottom",
+            "length": "1",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "琎①荹孒解",
+                    "javascript": "",
+                    "href": "overview.html?product=nmBrowser-StartPage",
+                    "towards": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "汸問",
+                    "javascript": "",
+                    "href": "https://bs.nmteam.xyz?from=nmTeamProductsPage",
+                    "towards": "out"
+                }
+            ]
+        },
+        {
+            "name": "nmCloud",
+            "icon": "",
+            "background": "https://ci.cncn3.cn/142b080fb604098801eadc5feafa1c0a.jpg",
+            "intro": "妠洣瘢趚喥，妠洣级棴務。",
+            "href": ";",
+            "javascript": ";",
+            "target": "_blank",
+            "theme": "dark",
+            "align": "top",
+            "length": "1",
+            "buttons": [
+                {
+                    "id": "buy",
+                    "name": "閞潑狆",
+                    "javascript": ";",
+                    "href": "",
+                    "towards": "no"
+                }
+            ]
+        }
+    ]
+}

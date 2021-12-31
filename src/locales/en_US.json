@@ -128,7 +128,11 @@
 	"page_update_m": "-",
 	"page_update_y": "-",
 	"products": {
-		"title": "Products"
+		"title": "Products",
+		"noresult": "No nmTeam product available in your country or region was found.",
+		"noavaliable": "This product does not exist or cannot be used in your country or region.",
+		"explain": "Explanation: Only display nmTeam products available in your country or region. To view nmTeam products available in other countries or regions, please change the language of the nmTeam website. Try to set the language to simplified Chinese to get the most results.",
+		"error": "Something happened。"
 	},
 	"supportus": {
 		"h0": "Support nmTeam",

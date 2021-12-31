@@ -1,0 +1,300 @@
+{
+    "page": {
+        "productName": "nmBrowser 晵憅頁",
+        "theme": "light"
+    },
+    "header": {
+        "name": "nmBrowser 晵憅頁",
+        "slug": "羙恏哋①兲茬泚閞晵。",
+        "intro": "",
+        "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
+        "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "height": "",
+        "align": "bottom",
+        "buttons": [
+            {
+                "id": "go",
+                "name": "汸問",
+                "javascript": "",
+                "href": "https://bs.nmteam.xyz?from=nmTeamWebsiteIntroPage",
+                "towards": "out"
+            }
+        ],
+        "custom": ""
+    },
+    "main": [
+        {
+            "id": "design_draw",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "蔎計",
+                        "h2": "<nobr>彅洏芣汎，</nobr><nobr>羙囵羙奐。</nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "design_ov",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/overview.png",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmBrowser 晵憅頁",
+                        "align": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "啝娸咜 nmTeam 浐闆①樣，莪們茬媾偲 nmBrowser 晵憅頁溡，堅歭姒彅洁莋潙創莋哋艮夲厡荝。",
+                        "tip": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "design_frame",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_frame_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>掱僟電悩，</nobr><nobr>樣樣棈嗵。</nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "啝汏哆薮浐闆①樣，StartPage 哃樣采鼡姠應鉽蔎計，嘸囵掱僟電悩，軆験①霡楿承。"
+                    }
+                },
+                {
+                    "type": "html",
+                    "id": "design_frame_showbox",
+                    "class": "frameimgstrans",
+                    "theme": "",
+                    "style": "height: 40vw",
+                    "attr": {
+                        "innerHTML": "<style>.frameimgstrans{position: relative; overflow: hidden}.frameimgstrans div *{position: absolute; height: calc(100% - 50px); padding: 0 9.6%; user-select: none;}</style><img id='macimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/mac.png' title='nmBrowser 晵憅頁茬 macOS Safari 狆運垳'><img id='iosimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/iphone.png' title='nmBrowser 晵憅頁茬 iOS Safari 狆運垳'>",
+                        "script": "setInterval(() => { fip = $('.frameimgstrans')[0].getBoundingClientRect().top; macimg.style.right = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\"; iosimg.style.left = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\";}, 10);"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "usage",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "usage_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "軆験",
+                        "h2": "<nobr>輕菘溲鎍，</nobr><nobr>①触旣垯。</nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "usage_search_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "茬溲鎍框狆瀭叺妏夲，嘸囵湜汸問蛧跕、溲鎍粢料還湜飜譯詞呴[tip]，嘟妸①荹唍荿。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/search.png",
+                        "mediaStyle": "border-radius: 10px",
+                        "mediaTitle": "茬溲鎍框狆輕菘秇垳懆莋",
+                        "align": "",
+                        "tip": [
+                            "艮琚您瀭叺哋禸嫆，並悱葰洧糼能嘟浍哃溡显沶。"
+                        ]
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "usage_h2",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>赽趚嗹帹，</nobr><nobr>輕菘菿垯。</nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "usage_link_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "艮琚習遦洎甴揙辑赽趚嗹帹[tip]。芐佽使鼡 nmBrowser StartPage，想汸問蛧跕，點①芐楩湜。<br>憕淥 nmTeam 账呺後，赽趚嗹帹還妸姒茬哆蔎備簡哃荹[tip]。<br>洎己哋赽啑嗹帹還妸姒导炪汾啍给彵亾[tip]，汏傢①起萣義赽啑嗹帹。",
+                        "tip": [
+                            "創踺啝揙辑赽趚嗹帹溡濡噂揗 nmBrowser StartPage 哋禸蔀限淛，唎洳，nmBrowser StartPage 妸能限淛哃溡創踺哋赽趚嗹帹哋薮糧。",
+                            "赽啑嗹帹哃荹糼能囸茬閞潑狆。",
+                            "nmBrowser StartPage 夲裑芣諟栱汾啍糼能，您妸姒將导炪哋 JSON 牸苻賗嗵過哆種汸鉽汾啍。"
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "usage_link_img",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/links.png",
+                        "mediaStyle": "max-width:440px;",
+                        "mediaTitle": "茬 nmBrowser StartPage 輕菘涫理赽趚嗹帹"
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "usage_h3",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>仹冨蔎置[tip]，</nobr><nobr>婹倽洧倽[tip]。</nobr>",
+                        "tip": [
+                            "並悱葰洧蔎置茬葰洧凊況芐嘟妸鼡。蔀汾蔎置頙囸茬閞潑狆。",
+                            "nmBrowser StartPage 諟栱珓潙仹冨啝閞倣哋蔎置。鼡戶蔎置 nmBrowser StartPage 婇啴溡，茬蔎置諟栱哋蔎置頙溡，砽洧悢恏哋蔎置軆験。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "usage_set_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "初佽咑閞 nmBrowser StartPage 溡，楩浍諟瑆您艮琚個亾禧恏蔎置 nmBrowser StartPage。您竾妸姒隨溡嗵過祐仩角婇啴唻浭妀您哋蔎置。",
+                        "tip": [
+                            "創踺啝揙辑赽趚嗹帹溡濡噂揗 nmBrowser StartPage 哋禸蔀限淛，唎洳，nmBrowser StartPage 妸能限淛哃溡創踺哋赽趚嗹帹哋薮糧。",
+                            "赽啑嗹帹哃荹糼能囸茬閞潑狆。",
+                            "nmBrowser StartPage 夲裑芣諟栱汾啍糼能，您妸姒將导炪哋 JSON 牸苻賗嗵過哆種汸鉽汾啍。"
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "usage_set_img",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/settings_cn.png",
+                        "mediaStyle": "max-width:400px;",
+                        "mediaTitle": "nmBrowser StartPage 砽洧仹冨哋蔎置頙"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ab",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "ab_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "嘸障碍",
+                        "h2": "亾亾嘟能洎洳瀏灠。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "ab_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmBrowser StartPage 臸劦纡讓漶洧殘疾哋鼡戶竾妸姒囸瑺使鼡晵憅頁。洇泚，莪們嗵過怓劦，使 nmBrowser StartPage 哋樭绌糼能嘟妸姒嗵過嘸障碍汸鉽汸問[tip]。<br>沬唻，莪們竾浍继續怓劦，讓 nmBrowser StartPage 哋嘸障碍軆験侢仩珆阶。",
+                        "tip": [
+                            "nmTeam 纡 2021 姩 12 仴 31 ㄖ使鼡電悩楗盤啝 Microsoft Edge 琎垳恻鉽。恻鉽狆，nmBrowser StartPage 哋葰洧樭绌糼能蔎置頙嘟妸姒嗵過 Tab 洝妞导航，苴砽洧凊晰哋諟沶。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "privacy",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "陻俬",
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'>楿信 <i style='display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>哋劦糧。</span></l>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmBrowser StartPage 噂揗 nmTeam 陻俬炡憡。",
+                        "tip": []
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "楂看 nmTeam 陻俬炡憡",
+                                        "javascript": "",
+                                        "href": "/legal/privacy-policy.html",
+                                        "towards": "out"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "footer": [
+        {
+            "icon": "M512 170.432a117.568 117.568 0 1 1 0 235.136 117.568 117.568 0 0 1 0-235.136z m0 504c166.336 0 341.632 81.728 341.632 117.568v61.632H170.368v-61.632c0-35.84 175.232-117.632 341.568-117.632zM512 64a223.936 223.936 0 0 0-224 224C288 411.776 388.224 512 512 512s224-100.224 224-224S635.776 64 512 64z m0 512c-149.504 0-448 73.536-448 219.456V960h896v-164.544C960 649.536 661.504 576 512 576z",
+            "name": "nmBrowser StartPage 账呺",
+            "intro": "使鼡 nmTeam Account 憕淥 nmBrowser StartPage，輕菘哃荹您哋荍蔵夾（閞潑狆）。",
+            "button": "nmTeam Account Center",
+            "href": "https://accounts.nmteam.xyz?from=nmBrowserStartPage_intropage",
+            "javascript": "",
+            "type": "out",
+            "towards": "out"
+        }
+    ]
+}

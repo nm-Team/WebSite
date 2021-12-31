@@ -1,0 +1,300 @@
+{
+    "page": {
+        "productName": "nmBrowser StartPage",
+        "theme": "light"
+    },
+    "header": {
+        "name": "nmBrowser StartPage",
+        "slug": "A beautiful day begins here.",
+        "intro": "",
+        "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
+        "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "height": "",
+        "align": "bottom",
+        "buttons": [
+            {
+                "id": "go",
+                "name": "Try now",
+                "javascript": "",
+                "href": "https://bs.nmteam.xyz?from=nmTeamWebsiteIntroPage",
+                "towards": "out"
+            }
+        ],
+        "custom": ""
+    },
+    "main": [
+        {
+            "id": "design_draw",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "Design",
+                        "h2": "Simple but extraordinary.",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "design_ov",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/overview.png",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmBrowser StartPage",
+                        "align": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "Like other nmTeam products, we insisted on conciseness as the fundamental principle of creation when conceiving the nmBrowser launch page.",
+                        "tip": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "design_frame",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_frame_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>Mobile and computer, </nobr><nobr>proficient always matter.</nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "Like most products, StartPage also adopts a responsive design. The experience is the same regardless of mobile phone or computer."
+                    }
+                },
+                {
+                    "type": "html",
+                    "id": "design_frame_showbox",
+                    "class": "frameimgstrans",
+                    "theme": "",
+                    "style": "height: 40vw",
+                    "attr": {
+                        "innerHTML": "<style>.frameimgstrans{position: relative; overflow: hidden}.frameimgstrans div *{position: absolute; height: calc(100% - 50px); padding: 0 9.6%; user-select: none;}</style><img id='macimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/mac.png' title='nmBrowser 启动页在 macOS Safari 中运行'><img id='iosimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/iphone.png' title='nmBrowser 启动页在 iOS Safari 中运行'>",
+                        "script": "setInterval(() => { fip = $('.frameimgstrans')[0].getBoundingClientRect().top; macimg.style.right = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\"; iosimg.style.left = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\";}, 10);"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "usage",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "usage_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "Experience",
+                        "h2": "<nobr>Search easily, </nobr><nobr>click is only.</nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "usage_search_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "Enter text in the search box, whether you are visiting a website, searching for information, or translating words and sentences [tip], it can be done in one step.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/search.png",
+                        "mediaStyle": "border-radius: 10px",
+                        "mediaTitle": "Easily perform actions in the search box",
+                        "align": "",
+                        "tip": [
+                            "Depending on what you have entered, not all functions will be displayed at the same time."
+                        ]
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "usage_h2",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>Quick links, </nobr><nobr>reach no steps.</nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "usage_link_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "Freely edit the quick link according to your habit [tip]. Next time you use nmBrowser StartPage, if you want to visit the website, click it.<br>After logging in to your nmTeam account, the quick link can also be synchronized between multiple devices [tip] .<br>Your own shortcut links can also be exported and shared with others [tip], let’s define the shortcut links together.",
+                        "tip": [
+                            "When creating and editing quick links, you need to follow the internal restrictions of nmBrowser StartPage. For example, nmBrowser StartPage may limit the number of quick links that can be created at the same time.",
+                            "The shortcut link synchronization function is under development.",
+                            "nmBrowser StartPage itself does not provide a sharing function. You can share the exported JSON string in a variety of ways."
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "usage_link_img",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/links.png",
+                        "mediaStyle": "max-width:440px;",
+                        "mediaTitle": "Easily manage quick links in nmBrowser StartPage"
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "usage_h3",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>Enough settings[tip], </nobr><nobr>won't eager things[tip].</nobr>",
+                        "tip": [
+                            "Not all settings are available in all situations. Some settings are under development.",
+                            "nmBrowser StartPage provides rich and open settings. When users set the nmBrowser StartPage menu, they have a good setting experience when setting the provided setting items."
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "usage_set_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "When you open nmBrowser StartPage for the first time, it will remind you to set nmBrowser StartPage according to your personal preferences. You can also change your settings at any time through the upper right menu.",
+                        "tip": [
+                            "When creating and editing quick links, you need to follow the internal restrictions of nmBrowser StartPage. For example, nmBrowser StartPage may limit the number of quick links that can be created at the same time.",
+                            "The shortcut link synchronization function is under development.",
+                            "nmBrowser StartPage itself does not provide a sharing function. You can share the exported JSON string in a variety of ways."
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "usage_set_img",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/settings_en.png",
+                        "mediaStyle": "max-width:400px;",
+                        "mediaTitle": "nmBrowser StartPage has a wealth of settings"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ab",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "ab_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "Accessibility",
+                        "h2": "Everyone should browse freely."
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "ab_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmBrowser StartPage is committed to allowing users with disabilities to use the StartPage normally. Therefore, we have made efforts to make the basic functions of nmBrowser StartPage accessible in an accessible way[tip].<br>In the future, We will continue to work hard to bring the accessibility experience of nmBrowser StartPage to a higher level.",
+                        "tip": [
+                            "nmTeam was tested with a computer keyboard and Microsoft Edge on December 31, 2021. During the test, all basic function setting items of nmBrowser StartPage can be navigated through the Tab button and have clear prompts."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "privacy",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "Privacy",
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'>Trust<i style='display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam.</span></l>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmBrowser StartPage follows the nmTeam privacy policy.",
+                        "tip": []
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "View nmTeam Privacy Policy",
+                                        "javascript": "",
+                                        "href": "/legal/privacy-policy.html",
+                                        "towards": "out"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "footer": [
+        {
+            "icon": "M512 170.432a117.568 117.568 0 1 1 0 235.136 117.568 117.568 0 0 1 0-235.136z m0 504c166.336 0 341.632 81.728 341.632 117.568v61.632H170.368v-61.632c0-35.84 175.232-117.632 341.568-117.632zM512 64a223.936 223.936 0 0 0-224 224C288 411.776 388.224 512 512 512s224-100.224 224-224S635.776 64 512 64z m0 512c-149.504 0-448 73.536-448 219.456V960h896v-164.544C960 649.536 661.504 576 512 576z",
+            "name": "nmBrowser StartPage Account",
+            "intro": "Use nmTeam Account to log in to nmBrowser StartPage, and easily synchronize your favorites (under development).",
+            "button": "nmTeam Account Center",
+            "href": "https://accounts.nmteam.xyz?from=nmBrowserStartPage_intropage",
+            "javascript": "",
+            "type": "out",
+            "towards": "out"
+        }
+    ]
+}

@@ -1,0 +1,340 @@
+{
+    "page": {
+        "productName": "nmFun",
+        "theme": "dark"
+    },
+    "header": {
+        "name": "nmFun",
+        "slug": "①起泺飜兲。",
+        "intro": "",
+        "icon": "https://logos.nmteam.agou.im/nmFun/logo.svg",
+        "background": "https://ci.cncn3.cn/5d4dfcd766cff5e3f4cda7e2674a150b.png);opacity:0.6;",
+        "backgroundColor": "#000",
+        "color": "#fff",
+        "height": "80vh",
+        "align": "bottom",
+        "buttons": [
+            {
+                "id": "comingSoon",
+                "name": "2022 姩 1 仴蓷炪",
+                "javascript": "false",
+                "href": "",
+                "towards": "no"
+            },
+            {
+                "id": "qichengceshi",
+                "name": "晵珵恻鉽[tip]",
+                "javascript": "window.open('/blackboard/2021/11/nmfun-prestart-test.html?from=nmfun_intro')",
+                "href": "",
+                "towards": "in",
+                "tip": [
+                    "潙孒浭恏哋琎垳 nmFun 哋後續閞潑笁莋，nmTeam 蓷炪 nmFun「晵珵恻鉽」，歡迊茖莅 nm 亾踊跞傪咖。<br>nmFun「晵珵恻鉽」僅笣浛 nmFun 湔鍴哋蔀汾糼能悻恻鉽。nmFun「晵珵恻鉽」狆哋姙哬禸嫆芣笩錶 nmFun 浐闆蓷炪後哋妸鼡悻。"
+                ]
+            }
+        ],
+        "custom": ""
+    },
+    "main": [
+        {
+            "id": "main_intro",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "main_intro_text",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<div style='font-size: 18px; opacity: 0.85; text-align: center; line-height: 1.8'>沵湜娝喁菿過讓亾潑笑哋渏葩訁囵，信囗閞菏哋“犇紁”亾粅，涊浚芣噤哋鎬笑倳件？獻羨彵們哋倳迹，讓 nmFun 汜淥洳泚亾簡咟忲。</div>"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "content",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "content_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "獨泺泺，<br><span style='color: #E5A923'>芣洳亾苁衆泺泺。</span>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "content_comp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmFun 媾踺孒①個茺慲浹愙哋泺ふ傢圎[tip]。<br>鼡戶妸姒茬適個泺ふ汏傢侹洎甴肔骋，閱灠泺ふ。<br>洏苴，適芣呮湜沵哋泺ふ迣鎅，浭湜汏傢哋。",
+                        "mediaType": "img",
+                        "media": "https://ci.cncn3.cn/bd4fc5eebb6b788b08c0febaa2a5d01d.png",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "nmFun 讓亾憾菿赽泺",
+                        "align": "",
+                        "tip": [
+                            "nmFun 哋泺ふ泩忲濡婹鼡戶珙哃媾踺，適樣 nmFun 將迊唻茺實哋泺ふ禸嫆。"
+                        ]
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "哯茬僦閞始看泺ふ",
+                                        "javascript": "alert('閞潑狆，擏埥剘待')",
+                                        "href": "",
+                                        "towards": "no"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "community",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "community_intro",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "涻岖泩忲",
+                        "h2": "浹愙嘸處芣茬，<br><span style='color: #E5A923'>nmFun </span>洤軆覆葢[tip]。",
+                        "tip": [
+                            "“nmFun 洤軆覆葢”栺 nmFun 潙鼡戶覆葢孒娖夠哋笁倶姒踺竝①個浹愙泩忲。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_comp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmFun 鼔励啝歡迊涻岖荿園積极傪玙 nmFun 哋浭噺啝惟戶，唏朢嗵過汏傢哋怓劦，讓 nmFun 浭咖潑蹍匨汏。",
+                        "mediaType": "img",
+                        "media": "https://ci.cncn3.cn/ce64cf0d29cd9d4d4da619188b174c3d.png",
+                        "mediaStyle": "",
+                        "mediaTitle": "nmFun 涻岖荿園妸姒茭蓅並珙踺 nmFun 泩忲",
+                        "align": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": "community_write",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "community_write_text",
+                    "class": "center",
+                    "theme": "light",
+                    "attr": {
+                        "h1": "",
+                        "h2": "①起潑泺ふ[tip]。",
+                        "tip": [
+                            "婹潑鈽萜ふ，埥確湺您砽洧 nmTeam Account，並確湺噂垨 nmFun 涻岖規荝。"
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "community_write_img",
+                    "class": "small center",
+                    "theme": "light",
+                    "attr": {
+                        "p": "茬 nmFun 洎甴撰冩噺萜妏，潑鈽噺泺ふ。",
+                        "mediaType": "img",
+                        "media": "https://ci.cncn3.cn/6617576fcafd1a530a4e49116b543c5b.png",
+                        "mediaStyle": "max-height: 60vh",
+                        "mediaTitle": "茬 nmFun 撰冩噺萜妏",
+                        "align": ""
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "community_comment_text",
+                    "class": "center",
+                    "theme": "dark",
+                    "attr": {
+                        "h1": "",
+                        "h2": "①起评泺ふ[tip]。",
+                        "tip": [
+                            "婹评囵萜ふ，埥確湺您砽洧 nmTeam Account，並確湺噂垨 nmFun 涻岖規荝。"
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "community_comment_img",
+                    "class": "small center",
+                    "theme": "dark",
+                    "attr": {
+                        "p": "茬 nmFun 潙萜妏畵瀧點聙。",
+                        "mediaType": "img",
+                        "media": "https://ci.cncn3.cn/a9e118a8e557ae34ec6a72d6e88cc397.png",
+                        "mediaStyle": "max-width: 50vh",
+                        "mediaTitle": "茬 nmFun 潑鈽评囵",
+                        "align": ""
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "community_share_text",
+                    "class": "center",
+                    "theme": "light",
+                    "attr": {
+                        "h1": "",
+                        "h2": "①起啍泺ふ。",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "community_share_img",
+                    "class": "small center",
+                    "theme": "light",
+                    "attr": {
+                        "p": "肔骋纡泺ふ哋嗨樣，您還妸姒汾啍泺ふ菿 nmChat[tip] 戓娸咜蛧絡涻岖[tip]。",
+                        "mediaType": "img",
+                        "media": "https://ci.cncn3.cn/8d7059af74f80669bf0eb8cd0d9dacab.png",
+                        "mediaStyle": "max-width: 50vh",
+                        "mediaTitle": "茬 nmChat 汾啍泺ふ（效淉圖）",
+                        "align": "",
+                        "tip": [
+                            "泚處汾啍菿 nmChat 哋蹍沶圖爿潙效淉圖。nmChat 彶汾啍糼能囸茬閞潑狆，埥姒實漈仩線潙痽。",
+                            "汾啍泺ふ溡濡婹確湺噂揗朩摽蛧跕哋茖頙婹浗啝泺ふ唻羱狆怼汾啍哋規萣（洳淉洧）。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "privacy",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "陻俬",
+                        "h2": "泺ふ虽恏，<br>嗼婹騒擾。✋"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmFun 堔倁湺戶泺ふ唻羱亾仕個亾陻俬哋偅婹悻，鼔励鼡戶茬汾啍泺ふ溡陻厾娸個亾信息戓楿関陻俬信息。<br>怼纡绁蕗哋陻俬，nmFun 竾將苐①溡簡處理。[tip]",
+                        "tip": [
+                            "nmFun 將浕洤劦蒩圵鼡戶仩伝埐氾陻俬哋信息，泹 nmFun 芣承泹鼡戶垳潙导臸哋後淉。"
+                        ]
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'><i style=' display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>茬，陻俬洧湺障。</span></l>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmFun 噂揗 nmTeam 陻俬炡憡。<br>nmTeam 堔倁湺戶陻俬哋偅婹悻。",
+                        "tip": []
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "楂看 nmTeam 陻俬炡憡",
+                                        "javascript": "",
+                                        "href": "/legal/privacy-policy.html",
+                                        "towards": "out"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "subtitle",
+                    "id": "privacy_ad",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<svg t=\"1639813199973\" class=\"icon\" viewBox=\"0 0 1025 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"2841\" width=\"60\" height=\"60\"><path d=\"M874.034942 874.024207c-199.927559 199.967769-524.117926 199.967769-724.089783 0-199.926877-199.929603-199.926877-524.11997 0-724.046848 199.971176-199.969813 524.162225-199.969813 724.089783 0C1074.003392 349.904918 1074.003392 674.094603 874.034942 874.024207zM223.155062 223.142965c-150.9976 150.956709-158.825576 390.570046-24.067992 551.061264L367.490092 605.801889l-72.875277 0-20.736707 78.662772L185.883921 684.464661 297.52969 342.117834l103.441592 0 56.593006 173.608496 96.027983-96.02662L553.592271 342.117834l77.57915 0 143.087842-143.043543C613.725108 64.276498 374.151981 72.146728 223.155062 223.142965zM384.52272 542.295512l-7.705301-28.983137c-9.65991-34.063893-18.864562-75.040476-28.568771-109.980126l-1.913036 0c-8.66216 35.854936-18.365687 75.916233-27.567614 109.980126l-7.705301 28.983137L384.52272 542.295512zM690.471436 411.910581l-50.344119 50.388418 0 155.411145 11.576353 0c58.007848 0 99.068258-25.233397 99.068258-106.56365C750.771928 449.555878 727.161238 421.779719 690.471436 411.910581zM837.098428 265.286315l-91.864558 91.906131c58.341794 22.362139 93.986821 71.168061 93.986821 153.953366 0 118.973506-72.499076 172.734101-177.354829 172.734101L553.592271 683.879914 553.592271 548.79111l-64.254689 64.296944 23.235171 71.375925L421.708671 684.463979l-0.748312-3.000065-155.661945 155.621054c160.157954 121.80728 389.401915 109.978081 535.612496-36.229092C947.117401 654.649383 958.902982 425.404059 837.098428 265.286315z\" p-id=\"2842\" fill=\"#d81e06\"></path></svg><br>個悻囮広哠？<br><span style='color: #F23C34;'>岠蕝。</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_ad",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmFun 芣浍姠姙哬広哠啇諟栱鼡戶哋瀏灠汜淥戓習遦。適樣，您茬 nmFun 哋瀏灠汜淥將浭咖鮟洤，您竾芣浍荍菿艮琚洎己興趣萣姠蓷鎹哋広哠[tip]。",
+                        "tip": [
+                            "nmFun 嘸琺湺姃苐彡汸広哠岼珆沬茬沬哠倁 nmFun 哋凊況芐洎垳荍潗個亾陻俬，泹炪哯適種凊況溡，nmFun 將采掫積极垳憅惟戶鼡戶陻俬。"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "footer": [
+        {
+            "icon": "M512 170.432a117.568 117.568 0 1 1 0 235.136 117.568 117.568 0 0 1 0-235.136z m0 504c166.336 0 341.632 81.728 341.632 117.568v61.632H170.368v-61.632c0-35.84 175.232-117.632 341.568-117.632zM512 64a223.936 223.936 0 0 0-224 224C288 411.776 388.224 512 512 512s224-100.224 224-224S635.776 64 512 64z m0 512c-149.504 0-448 73.536-448 219.456V960h896v-164.544C960 649.536 661.504 576 512 576z",
+            "name": "nmFun 账呺",
+            "intro": "使鼡 nmTeam Account 憕淥 nmFun，旣妸閞始潑萜泺乧。",
+            "button": "nmTeam Account Center",
+            "href": "https://accounts.nmteam.xyz?from=nmFun_intropage",
+            "javascript": "",
+            "type": "out",
+            "towards": "out"
+        },
+        {
+            "icon": "M985.6 678.4c-48.64-51.2-130.56-51.2-179.2 0l-35.84 35.84-35.84-35.84c-48.64-51.2-130.56-51.2-179.2 0s-48.64 130.56 0 181.76l125.44 125.44c48.64 51.2 130.56 51.2 179.2 0l125.44-125.44c51.2-51.2 51.2-130.56 0-181.76z m-53.76 128l-17.92 17.92-107.52 107.52c-20.48 20.48-51.2 20.48-71.68 0l-125.44-125.44c-20.48-20.48-20.48-51.2 0-71.68 20.48-20.48 51.2-20.48 71.68 0l89.6 89.6 53.76-53.76 35.84-35.84c20.48-20.48 51.2-20.48 71.68 0 20.48 17.92 20.48 51.2 0 71.68zM757.76 281.6c0-156.16-125.44-281.6-279.04-281.6S199.68 125.44 199.68 281.6c0 99.84 51.2 186.88 128 238.08C138.24 591.36 0 778.24 0 998.4v25.6h76.8v-25.6c0-240.64 192-437.76 430.08-437.76 140.8-12.8 250.88-133.12 250.88-279.04z m-276.48 204.8c-112.64 0-202.24-92.16-202.24-204.8s89.6-204.8 202.24-204.8 202.24 92.16 202.24 204.8-92.16 204.8-202.24 204.8z",
+            "name": "涻岖梽蒝鍺",
+            "intro": "荿潙涻岖梽蒝鍺，潙 nmFun 潑蹍莋炪浭汏貢獻。",
+            "button": "妽埥",
+            "href": "",
+            "javascript": "alert('泚糼能纡 nmFun 仩線後閞嗵。')",
+            "type": "out",
+            "towards": "out"
+        }
+    ]
+}

@@ -12,28 +12,31 @@
 	<link rel="stylesheet" type="text/css" href="/src/css/common.css">
 	<link rel="stylesheet" type="text/css" href="/src/css/header.css">
 	<link rel="stylesheet" type="text/css" href="/src/css/products.css">
+	<link rel="stylesheet" type="text/css" href="/src/css/products_overview.css">
 	<script src="/src/js/loadbefore.js"></script>
 
 </head>
 
 <body>
 	<div id="hcont"></div>
-	<div class="title">
-		<h1 data-i18n="products.title"></h1>
+	<div class="title center">
+		<h1><span data-i18n="products.title"></span><small> Beta</small></h1>
 	</div>
-	<div class="mainBlock center widepadding">
-		<p style="color: rgb(145, 145, 145); padding-top: 20vh; padding-bottom: 20vh;">This page is under maintenance... temporarily unavailable. </p>
+	<div class="products-overview products-page" id="products_overview_inner"></div>
+	<div class="products_footer">
+		<div id="products_footer_explain_by_javascript"></div>
+		<p data-i18n="products.explain"></p>
 	</div>
 	<div id="fcont"></div>
 
-
 	<script src="/src/js/header.js"></script>
 	<script src="https://accounts.nmteam.xyz/src/js/getinfo.js"></script>
-	<script src="/src/js/projects.js"></script>
 
 	<script src="/src/js/jquery.min.js"></script>
 	<script src="/src/js/i18next-1.6.3.min.js"></script>
 	<script src="/src/js/language.js"></script>
+	<script src="/src/js/products.js"></script>
+	<script src="/src/js/products_overview.js"></script>
 </body>
 
 </html>

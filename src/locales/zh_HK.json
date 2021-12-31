@@ -128,7 +128,10 @@
 	"page_update_m": " 月 ",
 	"page_update_y": " 年 ",
 	"products": {
-		"title": "產品"
+		"title": "產品",
+		"noresult": "找不到在您的國家或地區可用的 nmTeam 產品。",
+		"noavaliable": "此產品不存在或無法在您的國家或地區使用。",
+		"explain": "說明：僅展示在您的國家或地區可用的 nmTeam 產品。要查看在其它國家或地區可用的 nmTeam 產品，請更改 nmTeam 網站的語言。嘗試設置語言為簡體中文來獲得最多的結果。"
 	},
 	"supportus": {
 		"h0": "支持 nmTeam",

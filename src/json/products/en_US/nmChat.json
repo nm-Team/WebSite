@@ -1,0 +1,386 @@
+{
+    "page": {
+        "productName": "nmChat",
+        "theme": "light"
+    },
+    "header": {
+        "name": "nmChat",
+        "slug": "Let's chat.",
+        "intro": "nmChat reshapes your chat experience through innovative design and powerful features.",
+        "icon": "https://logos.nmteam.agou.im/nmTeam/logo@64.png",
+        "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "height": "80vh",
+        "align": "bottom",
+        "buttons": [
+            {
+                "id": "go",
+                "name": "Preview",
+                "javascript": "false",
+                "href": "",
+                "towards": "no"
+            }
+        ],
+        "custom": ""
+    },
+    "main": [
+        {
+            "id": "design_draw",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "Design",
+                        "h2": "Simple but <br><span style='color: #E5A923'>beautiful.</span>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_comp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "Knowing the bloatedness and fancy of other instant messaging software, nmChat adopts a simple but not simple small and fresh design. <br>First sight is like first love, fine product is like fine silk.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_over.png",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmChat page design",
+                        "align": ""
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "Learn more about the design of nmChat",
+                                        "javascript": "openChild('design_child')",
+                                        "href": "",
+                                        "towards": "plus"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "design_dark",
+            "theme": "dark",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_dark",
+                    "class": "",
+                    "theme": "dark",
+                    "attr": {
+                        "h1": "",
+                        "h2": "Dark mode, <br><span style='color: #E5A923'>fantastic.</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_dark_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat is specially designed for dark mode, showing absolutely excellent performance in dark mode. <br>Take care of your eyes at night to optimize your experience.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_dark.png",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmChat is available in dark mode",
+                        "align": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": "design_frame",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_frame_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "Responsive design, <br><span style='color: #E5A923'>so cool.</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat uses an advanced responsive design, no matter mobile phones, tablets, computers, or even smart watches[tip], they all use the same design language to get through. When switching between several devices, you can’t even feel Any changes-the phone view is the same as the computer view.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_comp.gif",
+                        "mediaStyle": "position: relative; top: -18px; margin-bottom: -77px",
+                        "mediaTitle": "nmChat adopts a responsive design and is available on multiple devices",
+                        "align": "",
+                        "tip": [
+                            "To use nmChat normally, the device screen resolution should be greater than 250 pixels."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "design_usage",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_usage_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "Ready to use,<br><span style='color: #E5A923'>fast as lightning⚡.</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "Different from other instant messaging software, nmChat regards web pages as the main chat terminal.<br><b>Just open the browser and enter the URL to start using nmChat immediately.</b>[tip] ",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_web_en.png",
+                        "mediaStyle": "transform: scale(0.95)",
+                        "mediaTitle": "nmChat runs in the browser",
+                        "align": "",
+                        "tip": [
+                            "To use nmChat normally, please use the latest version of Microsoft Edge, Google Chrome or Apple Safari."
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p_2",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>With the blessing of progressive web application technology</b>, nmChat, even if it runs as a webpage, can bring a high-quality experience beyond native applications. Of course, we also provide applications on different platforms[tip].",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_pwa_en.png",
+                        "mediaStyle": "",
+                        "mediaTitle": "Install nmChat as a PWA",
+                        "align": "",
+                        "tip": [
+                            "The nmChat application is only available on some terminals and will be launched one after another."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "function",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "function_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "Functions",
+                        "h2": "Special features,<br><span style='color: #D35230'>full of ♥.</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_overview",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "Knowing all the inconveniences users encounter in daily chats, nmChat has a more comfortable experience for \"obsessive-compulsive disorder\". The ingenuity can be seen in every gesture."
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_sendnojump",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>Send without jump</b><br>nmChat provides a new way to send messages, allowing you to send messages without affecting your reading progress.<br>It only takes a long time Press or right-click the send button, and you will be there on call.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_send_en.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_repeat",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>Repeat</b><br>Want to repeat a message when chatting in the group?<br>No need to use the clipboard, just expand the operation panel and select \"Repeat\". Your clipboard is better than Group chat is more important.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_repeat_en.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_man",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>Account management</b><br>Want to separate work and life, or do you want to play the second personality to fly?<br>In nmChat, switch between multiple accounts at zero distance.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_acc_en.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": "privacy",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "Privacy",
+                        "h2": "Your messages are <br><svg t=\"1639413582640\" class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"2323\" width=\"30\" height=\"30\"><path d=\"M385.150849 385.662338l-128.895105 0 0-150.377622q0-49.102897 19.436563-91.556444t53.706294-74.677323 80.815185-50.637363 101.786214-18.413586q49.102897 0 94.625375 18.413586t80.815185 50.637363 56.263736 74.677323 20.971029 91.556444l0 150.377622-123.78022 0 0-121.734266q0-64.447552-35.804196-99.74026t-97.182817-35.292707q-55.240759 0-88.999001 35.292707t-33.758242 99.74026l0 121.734266zM826.053946 447.040959q27.62038 0 47.568432 19.948052t19.948052 47.568432l0 317.122877q0 27.62038-9.718282 51.66034t-26.597403 41.942058-39.896104 28.131868-50.637363 10.22977l-516.603397 0q-27.62038 0-50.125874-10.22977t-38.361638-27.108891-24.551449-39.384615-8.695305-48.07992l0-324.283716q0-27.62038 19.436563-47.568432t47.056943-19.948052l61.378621 0 128.895105 0 255.744256 0 123.78022 0 61.378621 0z\" p-id=\"2324\" fill=\"#2c2c2c\"></path></svg><span style='color: #222'><small style='opacity: 0.7'>layer<small style='opacity: 0.7'> layer <small style='opacity: 0.7'> layer <small style='opacity: 0.7'> encrypted. </small></small></small></small></span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat uses advanced https and SSL technology to encrypt data for transmission.[tip]",
+                        "tip": [
+                            "nmChat transfers most of the data through encryption."
+                        ]
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'><i style='display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 10px; word-break: keep-all'>nmTeam </span><span style='word-break: keep-all'>protects your privacy.</span></l>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat follows the nmTeam privacy policy.",
+                        "tip": []
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "View nmTeam privacy policy",
+                                        "javascript": "",
+                                        "href": "/legal/privacy-policy.html",
+                                        "towards": "out"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "footer": [
+        {
+            "icon": "M512 170.432a117.568 117.568 0 1 1 0 235.136 117.568 117.568 0 0 1 0-235.136z m0 504c166.336 0 341.632 81.728 341.632 117.568v61.632H170.368v-61.632c0-35.84 175.232-117.632 341.568-117.632zM512 64a223.936 223.936 0 0 0-224 224C288 411.776 388.224 512 512 512s224-100.224 224-224S635.776 64 512 64z m0 512c-149.504 0-448 73.536-448 219.456V960h896v-164.544C960 649.536 661.504 576 512 576z",
+            "name": "nmChat Account",
+            "intro": "Use nmTeam Account to log in to nmChat to easily synchronize your account information.",
+            "button": "nmTeam Account Center",
+            "href": "https://accounts.nmteam.xyz?from=nmchat_intropage",
+            "javascript": "",
+            "type": "out",
+            "towards": "out"
+        },
+        {
+            "icon": "M512 896C299.936 896 128 724.064 128 512S299.936 128 512 128s384 171.936 384 384-171.936 384-384 384m0-832C264.96 64 64 264.96 64 512s200.96 448 448 448 448-200.96 448-448S759.04 64 512 64\"></path><path d=\"M511.68 704a48 48 0 1 0 0 96 48 48 0 0 0 0-96M512 256l-0.288 0.032A160.16 160.16 0 0 0 352 416h64a96.096 96.096 0 0 1 95.712-95.968L512 320c52.928 0 96 43.072 96 96s-43.072 96-96 96l-0.288-0.032V512H480v128h64v-67.264A160.224 160.224 0 0 0 672 416c0-88.224-71.776-160-160-160",
+            "name": "nmChat Help",
+            "intro": "",
+            "button": "Under Development",
+            "href": "",
+            "javascript": ";",
+            "type": "no",
+            "towards": "no"
+        }
+    ],
+    "child": {
+        "design_child": {
+            "theme": "light",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_child_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "Everything has been polished."
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_child_int",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat optimizes the experience from the details.",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_child_f0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>Narrow the sidebar</b><br>nmChat conducted an in-depth analysis of the two situations of sidebar expansion and narrowing.<br>In the end, we chose to use two different methods To present the list information and buttons. What’s more precious is that we made a perfect animation to make the two page designs staggered and unified.",
+                        "mediaType": "video",
+                        "media": "/src/img/products/nmChat_detail_leftBox.mp4",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmChat made an animation for this",
+                        "specialAttr": "loop='loop' controls='nocontrols'"
+                    }
+                }
+            ]
+        }
+    }
+}

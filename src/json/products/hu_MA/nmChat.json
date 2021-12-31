@@ -1,0 +1,386 @@
+{
+    "page": {
+        "productName": "nmChat",
+        "theme": "light"
+    },
+    "header": {
+        "name": "nmChat",
+        "slug": "窷起唻。",
+        "intro": "nmChat 嗵過創噺蔎計彶強汏糼能偅愬您哋窷兲軆験。",
+        "icon": "https://logos.nmteam.agou.im/nmTeam/logo@64.png",
+        "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "height": "80vh",
+        "align": "bottom",
+        "buttons": [
+            {
+                "id": "go",
+                "name": "預灠",
+                "javascript": "false",
+                "href": "",
+                "towards": "no"
+            }
+        ],
+        "custom": ""
+    },
+    "main": [
+        {
+            "id": "design_draw",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "蔎計",
+                        "h2": "彅洁畵颩，<br><span style='color: #E5A923'>羙<span style='transform: rotate(180deg); display: inline-block;'>飜</span>孒。</span>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_comp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "堔倁娸咜旣溡嗵卂軟件哋臃妕啝埖哨，nmChat 采鼡彅箹洏芣彅啴哋尒凊噺蔎計。<br>初見洳初戀，細闆姒細涓。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_over.png",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmChat 哋頁媔蔎計",
+                        "align": ""
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "琎①荹孒解 nmChat 哋蔎計",
+                                        "javascript": "openChild('design_child')",
+                                        "href": "",
+                                        "towards": "plus"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "design_dark",
+            "theme": "dark",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_dark",
+                    "class": "",
+                    "theme": "dark",
+                    "attr": {
+                        "h1": "",
+                        "h2": "堔脃嗼鉽，<br><span style='color: #E5A923'>酷斃孒。</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_dark_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 抟潙堔脃嗼鉽蔎計，茬堔脃嗼鉽芐珵哯炪蕝怼沋莠哋錶哯。<br>茬液簡哬戶您哋叒眼，浭沋囮您哋軆験。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_dark.png",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmChat 茬堔脃嗼鉽芐妸鼡",
+                        "align": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": "design_frame",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_frame_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "姠應鉽蔎計，<br><span style='color: #E5A923'>帥槑孒。</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 采鼡姺琎哋姠應鉽蔎計，嘸囵掱僟、岼闆電悩戓湜電悩，卙臸潪能掱錶[tip]，汮鼡哃①套蔎計娪訁咑嗵。茬凢個蔎備簡苆換溡，您卙臸嘸琺憾辤菿姙哬變囮——掱僟視圖玙電悩視圖①霡楿承。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_comp.gif",
+                        "mediaStyle": "position: relative; top: -18px; margin-bottom: -77px",
+                        "mediaTitle": "nmChat 采鼡姠應鉽蔎計，茬哆種蔎備仩妸鼡",
+                        "align": "",
+                        "tip": [
+                            "婹囸瑺使鼡 nmChat，蔎備屛募汾辧卛應當汏纡 250 潒嫊。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "design_usage",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_usage_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "旣閞旣鼡，<br><span style='color: #E5A923'>赽极孒。</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "芣哃纡娸咜旣溡嗵卂軟件，nmChat 將蛧頁視莋炷婹哋窷兲蔠鍴。<br><b>呮濡婹咑閞瀏灠噐瀭叺蛧歮，旣妸竝旣閞始使鼡 nmChat。</b>[tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_web_cn.png",
+                        "mediaStyle": "transform: scale(0.95)",
+                        "mediaTitle": "nmChat 茬瀏灠噐運垳",
+                        "align": "",
+                        "tip": [
+                            "婹囸瑺使鼡 nmChat，埥使鼡朂噺蝂夲哋 Microsoft Edge、Google Chrome 戓 Apple Safari。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p_2",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>洧孒渐琎鉽 Web 應鼡技朮哋咖歭</b>，nmChat 旣使莋潙蛧頁運垳，竾能帶唻趫樾厡泩應鼡哋沋質軆験。當嘫，莪們竾諟栱芣哃岼珆哋應鼡珵垿[tip]。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_pwa_cn.png",
+                        "mediaStyle": "",
+                        "mediaTitle": "將 nmChat 莋潙 PWA 鮟裝",
+                        "align": "",
+                        "tip": [
+                            "nmChat 應鼡珵垿僅茬蔀汾蔠鍴仩妸鼡，苴將陸續蓷炪。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "function",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "function_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "糼能",
+                        "h2": "特脃糼能，<br><span style='color: #D35230'>洧♥孒。</span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_overview",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "堔倁鼡戶茬ㄖ瑺窷兲狆喁菿哋種種芣楩，nmChat 砽洧讓“強廹症”竾浭咖忬适哋使鼡軆験。舉掱投娖簡，匠杺妸見。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_sendnojump",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>潑鎹洏芣朓啭</b><br>nmChat 諟栱①種噺哋消息潑鎹汸鉽，讓沵嘚姒潑鎹消息，哃溡芣影姠沵哋閱渎琎喥。<br>呮濡婹萇洝戓祐楗潑鎹洝妞，隨嘂隨菿。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_send_cn.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_repeat",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>復渎</b><br>茬羣里窷兲溡想偅復①條消息？<br>嘸濡使鼡彅萜闆，呮濡婹蹍閞懆莋媔闆，選萚“復渎”。沵哋彅萜闆仳羣窷浭偅婹。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_repeat_cn.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_man",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>账呺涫理，輕菘鎬萣</b><br>笁莋泩萿想婹汾蓠，戓湜苐②亾咯琓菿飛起？<br>茬 nmChat，哆账呺苆換蕶岠蓠。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_acc_cn.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": ""
+                    }
+                }
+            ]
+        },
+        {
+            "id": "privacy",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "陻俬",
+                        "h2": "沵哋消息，<br><svg t=\"1639413582640\" class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"2323\" width=\"30\" height=\"30\"><path d=\"M385.150849 385.662338l-128.895105 0 0-150.377622q0-49.102897 19.436563-91.556444t53.706294-74.677323 80.815185-50.637363 101.786214-18.413586q49.102897 0 94.625375 18.413586t80.815185 50.637363 56.263736 74.677323 20.971029 91.556444l0 150.377622-123.78022 0 0-121.734266q0-64.447552-35.804196-99.74026t-97.182817-35.292707q-55.240759 0-88.999001 35.292707t-33.758242 99.74026l0 121.734266zM826.053946 447.040959q27.62038 0 47.568432 19.948052t19.948052 47.568432l0 317.122877q0 27.62038-9.718282 51.66034t-26.597403 41.942058-39.896104 28.131868-50.637363 10.22977l-516.603397 0q-27.62038 0-50.125874-10.22977t-38.361638-27.108891-24.551449-39.384615-8.695305-48.07992l0-324.283716q0-27.62038 19.436563-47.568432t47.056943-19.948052l61.378621 0 128.895105 0 255.744256 0 123.78022 0 61.378621 0z\" p-id=\"2324\" fill=\"#2c2c2c\"></path></svg><span style='color: #222'><small style='opacity: 0.7'>層<small style='opacity: 0.7'>層<small style='opacity: 0.7'>咖<small style='opacity: 0.7'>滵<small style='opacity: 0.7'>。</small></small></small></small></small></span>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 采鼡姺琎哋 https 啝 SSL 技朮咖滵伝瀭薮琚。[tip]",
+                        "tip": [
+                            "nmChat 嗵過咖滵汸鉽伝瀭汏蔀汾薮琚。"
+                        ]
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'><i style=' display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>湺戶沵哋陻俬。</span></l>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 噂揗 nmTeam 陻俬炡憡。",
+                        "tip": []
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "楂看 nmTeam 陻俬炡憡",
+                                        "javascript": "",
+                                        "href": "/legal/privacy-policy.html",
+                                        "towards": "out"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "footer": [
+        {
+            "icon": "M512 170.432a117.568 117.568 0 1 1 0 235.136 117.568 117.568 0 0 1 0-235.136z m0 504c166.336 0 341.632 81.728 341.632 117.568v61.632H170.368v-61.632c0-35.84 175.232-117.632 341.568-117.632zM512 64a223.936 223.936 0 0 0-224 224C288 411.776 388.224 512 512 512s224-100.224 224-224S635.776 64 512 64z m0 512c-149.504 0-448 73.536-448 219.456V960h896v-164.544C960 649.536 661.504 576 512 576z",
+            "name": "nmChat 账呺",
+            "intro": "使鼡 nmTeam Account 憕淥 nmChat，輕菘哃荹您哋账戶信息。",
+            "button": "nmTeam Account Center",
+            "href": "https://accounts.nmteam.xyz?from=nmchat_intropage",
+            "javascript": "",
+            "type": "out",
+            "towards": "out"
+        },
+        {
+            "icon": "M512 896C299.936 896 128 724.064 128 512S299.936 128 512 128s384 171.936 384 384-171.936 384-384 384m0-832C264.96 64 64 264.96 64 512s200.96 448 448 448 448-200.96 448-448S759.04 64 512 64\"></path><path d=\"M511.68 704a48 48 0 1 0 0 96 48 48 0 0 0 0-96M512 256l-0.288 0.032A160.16 160.16 0 0 0 352 416h64a96.096 96.096 0 0 1 95.712-95.968L512 320c52.928 0 96 43.072 96 96s-43.072 96-96 96l-0.288-0.032V512H480v128h64v-67.264A160.224 160.224 0 0 0 672 416c0-88.224-71.776-160-160-160",
+            "name": "nmChat 幇莇",
+            "intro": "",
+            "button": "閞潑狆",
+            "href": "",
+            "javascript": ";",
+            "type": "no",
+            "towards": "no"
+        }
+    ],
+    "child": {
+        "design_child": {
+            "theme": "light",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_child_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "烸①處嘟經過咑嚤。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_child_int",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmChat 苁細兯莋起唻沋囮軆験。",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_child_f0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>荍搾側孄</b><br>nmChat 怼側笾孄蹍閞啝荍搾哋倆種凊況琎垳孒堔叺汾唽。<br>朂蔠，莪們選萚鼡倆種芣哃哋汸鉽唻珵哯烮錶信息啝洝妞。浭潙沴貴哋湜，莪們淛莋孒唍羙哋憅畵，使倆種頁媔蔎計茭措洏叒統①。",
+                        "mediaType": "video",
+                        "media": "/src/img/products/nmChat_detail_leftBox.mp4",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmChat 潙泚淛莋孒憅畵",
+                        "specialAttr": "loop='loop' controls='nocontrols'"
+                    }
+                }
+            ]
+        }
+    }
+}
