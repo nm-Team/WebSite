@@ -43,11 +43,13 @@ bs{
     opacity: 0.8;
 }
 .products-page .tip{
+    display: inline-block;
     position: relative;
     top: -.58em;
     font-size: .5em;
     padding: .3em;
     margin: -.3em;
+    border-radius: 0.5em;
     color: inherit!important;
 }
 .products-page .opes{

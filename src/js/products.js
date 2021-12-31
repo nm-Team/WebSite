@@ -8,14 +8,19 @@ svgList = {
 chinesePun = "，。；：？";
 
 function checkTip(w, json) {
-    w = w.replace(/\[tip\]/g, function (word) {
-        tipsNum++;
-        products_footer_explain_by_javascript.innerHTML += `<p id="products_footer_explain_` + tipsNum + `"><b>` + tipsNum + `. </b>` + json['tip'][sTipsNum] + `</p>`;
-        sTipsNum++;
-        return `<object><a class="tip" href="#products_footer_explain_` + tipsNum + `" target="_self" title="Turn to note">` + tipsNum + `</a></object>`;
-    });
-    if (w && chinesePun.indexOf(w[w.length - 1]) > 0) {
-        w = w.slice(0, -1) + "<bs>" + w[w.length - 1] + "</bs>";
+    try {
+        if(!w) return "";
+        w = w.replace(/\[tip\]/g, function (word) {
+            tipsNum++;
+            products_footer_explain_by_javascript.innerHTML += `<p id="products_footer_explain_` + tipsNum + `"><b>` + tipsNum + `. </b>` + json['tip'][sTipsNum] + `</p>`;
+            sTipsNum++;
+            return `<object><a class="tip" href="#products_footer_explain_` + tipsNum + `" target="_self" title="Turn to note">` + tipsNum + `</a></object>`;
+        });
+        if (w && chinesePun.indexOf(w[w.length - 1]) > 0) {
+            w = w.slice(0, -1) + "<bs>" + w[w.length - 1] + "</bs>";
+        }
+    } catch (e) {
+        console.error(e);
     }
     return w;
 }

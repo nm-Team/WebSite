@@ -1,0 +1,300 @@
+{
+    "page": {
+        "productName": "nmBrowser 启动页",
+        "theme": "light"
+    },
+    "header": {
+        "name": "nmBrowser 启动页",
+        "slug": "美好的一天在此开启。",
+        "intro": "",
+        "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
+        "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "height": "",
+        "align": "bottom",
+        "buttons": [
+            {
+                "id": "go",
+                "name": "访问",
+                "javascript": "",
+                "href": "https://bs.nmteam.xyz?from=nmTeamWebsiteIntroPage",
+                "towards": "out"
+            }
+        ],
+        "custom": ""
+    },
+    "main": [
+        {
+            "id": "design_draw",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "设计",
+                        "h2": "<nobr>简而不凡，</nobr><nobr>美轮美奂。</nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "design_ov",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/overview.png",
+                        "mediaStyle": "border-radius:10px",
+                        "mediaTitle": "nmBrowser 启动页",
+                        "align": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "和其它 nmTeam 产品一样，我们在构思 nmBrowser 启动页时，坚持以简洁作为创作的根本原则。",
+                        "tip": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "design_frame",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "design_frame_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>手机电脑，</nobr><nobr>样样精通。</nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "和大多数产品一样，StartPage 同样采用响应式设计，无论手机电脑，体验一脉相承。"
+                    }
+                },
+                {
+                    "type": "html",
+                    "id": "design_frame_showbox",
+                    "class": "frameimgstrans",
+                    "theme": "",
+                    "style": "height: 40vw",
+                    "attr": {
+                        "innerHTML": "<style>.frameimgstrans{position: relative; overflow: hidden}.frameimgstrans div *{position: absolute; height: calc(100% - 50px); padding: 0 9.6%; user-select: none;}</style><img id='macimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/mac.png' title='nmBrowser 启动页在 macOS Safari 中运行'><img id='iosimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/iphone.png' title='nmBrowser 启动页在 iOS Safari 中运行'>",
+                        "script": "setInterval(() => { fip = $('.frameimgstrans')[0].getBoundingClientRect().top; macimg.style.right = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\"; iosimg.style.left = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\";}, 10);"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "usage",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "usage_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "体验",
+                        "h2": "<nobr>轻松搜索，</nobr><nobr>一触即达。</nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "usage_search_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "在搜索框中输入文本，无论是访问网站、搜索资料还是翻译词句[tip]，都可一步完成。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/search.png",
+                        "mediaStyle": "border-radius: 10px",
+                        "mediaTitle": "在搜索框中轻松执行操作",
+                        "align": "",
+                        "tip": [
+                            "根据您输入的内容，并非所有功能都会同时显示。"
+                        ]
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "usage_h2",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>快速链接，</nobr><nobr>轻松到达。</nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "usage_link_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "根据习惯自由编辑快速链接[tip]。下次使用 nmBrowser StartPage，想访问网站，点一下便是。<br>登录 nmTeam 账号后，快速链接还可以在多设备间同步[tip]。<br>自己的快捷链接还可以导出分享给他人[tip]，大家一起定义快捷链接。",
+                        "tip": [
+                            "创建和编辑快速链接时需遵循 nmBrowser StartPage 的内部限制，例如，nmBrowser StartPage 可能限制同时创建的快速链接的数量。",
+                            "快捷链接同步功能正在开发中。",
+                            "nmBrowser StartPage 本身不提供分享功能，您可以将导出的 JSON 字符串通过多种方式分享。"
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "usage_link_img",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/links.png",
+                        "mediaStyle": "max-width:440px;",
+                        "mediaTitle": "在 nmBrowser StartPage 轻松管理快速链接"
+                    }
+                },
+                {
+                    "type": "subtitle",
+                    "id": "usage_h3",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>丰富设置[tip]，</nobr><nobr>要啥有啥[tip]。</nobr>",
+                        "tip": [
+                            "并非所有设置在所有情况下都可用。部分设置项正在开发中。",
+                            "nmBrowser StartPage 提供较为丰富和开放的设置。用户设置 nmBrowser StartPage 菜单时，在设置提供的设置项时，拥有良好的设置体验。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "usage_set_p",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "初次打开 nmBrowser StartPage 时，便会提醒您根据个人喜好设置 nmBrowser StartPage。您也可以随时通过右上角菜单来更改您的设置。",
+                        "tip": [
+                            "创建和编辑快速链接时需遵循 nmBrowser StartPage 的内部限制，例如，nmBrowser StartPage 可能限制同时创建的快速链接的数量。",
+                            "快捷链接同步功能正在开发中。",
+                            "nmBrowser StartPage 本身不提供分享功能，您可以将导出的 JSON 字符串通过多种方式分享。"
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "usage_set_img",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/settings_cn.png",
+                        "mediaStyle": "max-width:400px;",
+                        "mediaTitle": "nmBrowser StartPage 拥有丰富的设置项"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ab",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "ab_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "无障碍",
+                        "h2": "人人都能自如浏览。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "ab_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmBrowser StartPage 致力于让患有残疾的用户也可以正常使用启动页。因此，我们通过努力，使 nmBrowser StartPage 的基础功能都可以通过无障碍方式访问[tip]。<br>未来，我们也会继续努力，让 nmBrowser StartPage 的无障碍体验再上台阶。",
+                        "tip": [
+                            "nmTeam 于 2021 年 12 月 31 日使用电脑键盘和 Microsoft Edge 进行测试。测试中，nmBrowser StartPage 的所有基础功能设置项都可以通过 Tab 按钮导航，且拥有清晰的提示。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "privacy",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "privacy_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "隐私",
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'>相信<i style='display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>的力量。</span></l>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "privacy_intro_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmBrowser StartPage 遵循 nmTeam 隐私政策。",
+                        "tip": []
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "seemore",
+                                        "name": "查看 nmTeam 隐私政策",
+                                        "javascript": "",
+                                        "href": "/legal/privacy-policy.html",
+                                        "towards": "out"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "footer": [
+        {
+            "icon": "M512 170.432a117.568 117.568 0 1 1 0 235.136 117.568 117.568 0 0 1 0-235.136z m0 504c166.336 0 341.632 81.728 341.632 117.568v61.632H170.368v-61.632c0-35.84 175.232-117.632 341.568-117.632zM512 64a223.936 223.936 0 0 0-224 224C288 411.776 388.224 512 512 512s224-100.224 224-224S635.776 64 512 64z m0 512c-149.504 0-448 73.536-448 219.456V960h896v-164.544C960 649.536 661.504 576 512 576z",
+            "name": "nmBrowser StartPage 账号",
+            "intro": "使用 nmTeam Account 登录 nmBrowser StartPage，轻松同步您的收藏夹。",
+            "button": "nmTeam Account Center",
+            "href": "https://accounts.nmteam.xyz?from=nmBrowserStartPage_intropage",
+            "javascript": "",
+            "type": "out",
+            "towards": "out"
+        }
+    ]
+}

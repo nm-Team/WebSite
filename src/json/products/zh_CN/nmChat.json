@@ -48,7 +48,7 @@
                     "attr": {
                         "p": "深知其它即时通讯软件的臃肿和花哨，nmChat 采用简约而不简单的小清新设计。<br>初见如初恋，细品似细绢。",
                         "mediaType": "img",
-                        "media": "https://ci.cncn3.cn/3b41346b0b08ddb1ce43c872c800ebf3.png",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_over.png",
                         "mediaStyle": "border-radius:10px",
                         "mediaTitle": "nmChat 的页面设计",
                         "align": ""
@@ -97,7 +97,7 @@
                     "attr": {
                         "p": "nmChat 专为深色模式设计，在深色模式下呈现出绝对优秀的表现。<br>在夜间呵护您的双眼，更优化您的体验。",
                         "mediaType": "img",
-                        "media": "https://ci.cncn3.cn/83154630d2b2b45b58accd52116bd99c.png",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_dark.png",
                         "mediaStyle": "border-radius:10px",
                         "mediaTitle": "nmChat 在深色模式下可用",
                         "align": ""
@@ -111,7 +111,7 @@
             "blockItems": [
                 {
                     "type": "subtitle",
-                    "id": "design_frame_p",
+                    "id": "design_frame_h",
                     "class": "",
                     "theme": "",
                     "attr": {
@@ -127,7 +127,7 @@
                     "attr": {
                         "p": "nmChat 采用先进的响应式设计，无论手机、平板电脑或是电脑，甚至智能手表[tip]，均用同一套设计语言打通。在几个设备间切换时，您甚至无法感受到任何变化——手机视图与电脑视图一脉相承。",
                         "mediaType": "img",
-                        "media": "https://i.zerodream.net/9dfd6815e94b73cb5e2984368b4c5450.gif",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_comp.gif",
                         "mediaStyle": "position: relative; top: -18px; margin-bottom: -77px",
                         "mediaTitle": "nmChat 采用响应式设计，在多种设备上可用",
                         "align": "",
@@ -158,14 +158,30 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "不同于其它即时通讯软件，nmChat 将网页视作主要的聊天终端。只需要打开浏览器输入网址，即可立即开始使用 nmChat[tip]。<br>有了渐进式 Web 应用技术的加持，nmChat 即使作为网页运行，也能带来超越原生应用的优质体验。当然，我们也提供不同平台的应用程序[tip]。",
+                        "p": "不同于其它即时通讯软件，nmChat 将网页视作主要的聊天终端。<br><b>只需要打开浏览器输入网址，即可立即开始使用 nmChat。</b>[tip]",
                         "mediaType": "img",
-                        "media": "https://i.zerodream.net/b33f333fd68c52365caf7572d1ee299f.png",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_web_cn.png",
+                        "mediaStyle": "transform: scale(0.95)",
+                        "mediaTitle": "nmChat 在浏览器运行",
+                        "align": "",
+                        "tip": [
+                            "要正常使用 nmChat，请使用最新版本的 Microsoft Edge、Google Chrome 或 Apple Safari。"
+                         ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "design_frame_p_2",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>有了渐进式 Web 应用技术的加持</b>，nmChat 即使作为网页运行，也能带来超越原生应用的优质体验。当然，我们也提供不同平台的应用程序[tip]。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_pwa_cn.png",
                         "mediaStyle": "",
                         "mediaTitle": "将 nmChat 作为 PWA 安装",
                         "align": "",
                         "tip": [
-                            "要正常使用 nmChat，请使用最新版本的 Microsoft Edge、Google Chrome 或 Apple Safari。",
                             "nmChat 应用程序仅在部分终端上可用，且将陆续推出。"
                         ]
                     }
@@ -203,7 +219,7 @@
                     "attr": {
                         "p": "<b>发送而不跳转</b><br>nmChat 提供一种新的消息发送方式，让你得以发送消息，同时不影响你的阅读进度。<br>只需要长按或右键发送按钮，随叫随到。",
                         "mediaType": "img",
-                        "media": "https://i.zerodream.net/4829aebf7b79c28b9e8486e58d02582c.png",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_send_cn.png",
                         "mediaStyle": "border-radius:10px;max-width:200px;",
                         "mediaTitle": ""
                     }
@@ -216,7 +232,7 @@
                     "attr": {
                         "p": "<b>复读</b><br>在群里聊天时想重复一条消息？<br>无需使用剪贴板，只需要展开操作面板，选择“复读”。你的剪贴板比群聊更重要。",
                         "mediaType": "img",
-                        "media": "https://i.zerodream.net/edf2171af6ade63d8d43e748bd8933c4.png",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_repeat_cn.png",
                         "mediaStyle": "border-radius:10px;max-width:200px;",
                         "mediaTitle": ""
                     }
@@ -229,7 +245,7 @@
                     "attr": {
                         "p": "<b>账号管理，轻松搞定</b><br>工作生活想要分离，或是第二人格玩到飞起？<br>在 nmChat，多账号切换零距离。",
                         "mediaType": "img",
-                        "media": "https://i.zerodream.net/0d76d85fe52867340b91ca89da69a85d.png",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_acc_cn.png",
                         "mediaStyle": "border-radius:10px;max-width:200px;",
                         "mediaTitle": ""
                     }

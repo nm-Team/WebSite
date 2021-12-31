@@ -1,5 +1,5 @@
 try {
-    productsJson = JSON.parse(loadc("/src/json/products/" + getUrlParam("product") + "_" + language + ".json"));
+    productsJson = JSON.parse(loadc("/src/json/products/" + language + "/" + getUrlParam("product") + ".json"));
     products_detail_inner.innerHTML = "";
     console.log("Get product detail JSON file. ");
     tipsNum = 0;
@@ -67,7 +67,7 @@ function generateBlock(pMBId, blockJson) {
     for (bl in blockJson) {
         // 生成信息
         console.log("Generating " + totalBlockNum + " " + JSON.stringify(blockJson[bl]));
-        document.getElementById(pMBId).innerHTML += `<div class="detail-block ` + blockJson[bl]['class'] + ` " id="detail_block_` + totalBlockNum + `_` + blockJson[bl]['type'] + "_" + blockJson[bl]['id'] + `" data-block-num="` + totalBlockNum + `" data-block-type="` + blockJson[bl]['type'] + `" data-block-selfid="` + blockJson[bl]['id'] + `" data-theme="` + blockJson[bl]['theme'] + `"></div>`;
+        document.getElementById(pMBId).innerHTML += `<div class="detail-block ` + blockJson[bl]['class'] + ` " id="detail_block_` + totalBlockNum + `_` + blockJson[bl]['type'] + "_" + blockJson[bl]['id'] + `" data-block-num="` + totalBlockNum + `" data-block-type="` + blockJson[bl]['type'] + `" data-block-selfid="` + blockJson[bl]['id'] + `" data-theme="` + blockJson[bl]['theme'] + `" style="` + blockJson[bl]['style'] + `"></div>`;
         bLId = `detail_block_` + totalBlockNum + `_` + blockJson[bl]['type'] + "_" + blockJson[bl]['id'];
         attrList = blockJson[bl]['attr'];
         sTipsNum = 0;
@@ -86,7 +86,14 @@ function generateBlock(pMBId, blockJson) {
                 document.getElementById(bLId).innerHTML = `<object class="opes">` + setButton(attrList.buttons) + `</object>`;
                 break;
             default:
-                document.getElementById(bLId).innerHTML = attrList.innerHTML;
+                cacheHTML = document.createElement("div");
+                cacheHTML.innerHTML = attrList.innerHTML;
+                document.getElementById(bLId).appendChild(cacheHTML);
+        }
+        if (attrList.script) {
+            scriptBox = document.createElement("script");
+            scriptBox.innerHTML = attrList.script;
+            document.body.appendChild(scriptBox);
         }
         totalBlockNum++;
         if (blockJson[bl]['blockItems']) generateBlock(bLId, blockJson[bl]['blockItems']);

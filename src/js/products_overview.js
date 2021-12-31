@@ -1,5 +1,5 @@
 try {
-    productsJson = JSON.parse(loadc("/src/json/products_overview_list_" + language + ".json")).products;
+    productsJson = JSON.parse(loadc("/src/json/products/" + language + "/overview_list.json")).products;
     products_overview_inner.innerHTML = "";
     console.log("Get products JSON file. ");
     tipsNum = 0;
@@ -20,5 +20,5 @@ try {
     }
 }
 catch (err) {
-    products_overview_inner.innerHTML = "<div class='msg'>An error occured :(</div>";
+    products_overview_inner.innerHTML = "<div class='msg'>:(<br><br>" + i18n.t("products.error") + "</div>";
 }
