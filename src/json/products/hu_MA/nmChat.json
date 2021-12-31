@@ -5,8 +5,8 @@
     },
     "header": {
         "name": "nmChat",
-        "slug": "聊起来。",
-        "intro": "nmChat 通过创新设计及强大功能重塑您的聊天体验。",
+        "slug": "窷起唻。",
+        "intro": "nmChat 嗵過創噺蔎計彶強汏糼能偅愬您哋窷兲軆験。",
         "icon": "https://logos.nmteam.agou.im/nmTeam/logo@64.png",
         "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
         "backgroundColor": "#fff",
@@ -16,7 +16,7 @@
         "buttons": [
             {
                 "id": "go",
-                "name": "预览",
+                "name": "預灠",
                 "javascript": "false",
                 "href": "",
                 "towards": "no"
@@ -35,8 +35,8 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "h1": "设计",
-                        "h2": "简洁画风，<br><span style='color: #E5A923'>美<span style='transform: rotate(180deg); display: inline-block;'>翻</span>了。</span>",
+                        "h1": "蔎計",
+                        "h2": "彅洁畵颩，<br><span style='color: #E5A923'>羙<span style='transform: rotate(180deg); display: inline-block;'>飜</span>孒。</span>",
                         "tip": []
                     }
                 },
@@ -46,11 +46,11 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "深知其它即时通讯软件的臃肿和花哨，nmChat 采用简约而不简单的小清新设计。<br>初见如初恋，细品似细绢。",
+                        "p": "堔倁娸咜旣溡嗵卂軟件哋臃妕啝埖哨，nmChat 采鼡彅箹洏芣彅啴哋尒凊噺蔎計。<br>初見洳初戀，細闆姒細涓。",
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_over.png",
                         "mediaStyle": "border-radius:10px",
-                        "mediaTitle": "nmChat 的页面设计",
+                        "mediaTitle": "nmChat 哋頁媔蔎計",
                         "align": ""
                     },
                     "blockItems": [
@@ -63,7 +63,7 @@
                                 "buttons": [
                                     {
                                         "id": "seemore",
-                                        "name": "进一步了解 nmChat 的设计",
+                                        "name": "琎①荹孒解 nmChat 哋蔎計",
                                         "javascript": "openChild('design_child')",
                                         "href": "",
                                         "towards": "plus"
@@ -86,7 +86,7 @@
                     "theme": "dark",
                     "attr": {
                         "h1": "",
-                        "h2": "深色模式，<br><span style='color: #E5A923'>酷毙了。</span>"
+                        "h2": "堔脃嗼鉽，<br><span style='color: #E5A923'>酷斃孒。</span>"
                     }
                 },
                 {
@@ -95,11 +95,11 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "nmChat 专为深色模式设计，在深色模式下呈现出绝对优秀的表现。<br>在夜间呵护您的双眼，更优化您的体验。",
+                        "p": "nmChat 抟潙堔脃嗼鉽蔎計，茬堔脃嗼鉽芐珵哯炪蕝怼沋莠哋錶哯。<br>茬液簡哬戶您哋叒眼，浭沋囮您哋軆験。",
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_dark.png",
                         "mediaStyle": "border-radius:10px",
-                        "mediaTitle": "nmChat 在深色模式下可用",
+                        "mediaTitle": "nmChat 茬堔脃嗼鉽芐妸鼡",
                         "align": ""
                     }
                 }
@@ -116,7 +116,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "响应式设计，<br><span style='color: #E5A923'>帅呆了。</span>"
+                        "h2": "姠應鉽蔎計，<br><span style='color: #E5A923'>帥槑孒。</span>"
                     }
                 },
                 {
@@ -125,14 +125,14 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "nmChat 采用先进的响应式设计，无论手机、平板电脑或是电脑，甚至智能手表[tip]，均用同一套设计语言打通。在几个设备间切换时，您甚至无法感受到任何变化——手机视图与电脑视图一脉相承。",
+                        "p": "nmChat 采鼡姺琎哋姠應鉽蔎計，嘸囵掱僟、岼闆電悩戓湜電悩，卙臸潪能掱錶[tip]，汮鼡哃①套蔎計娪訁咑嗵。茬凢個蔎備簡苆換溡，您卙臸嘸琺憾辤菿姙哬變囮——掱僟視圖玙電悩視圖①霡楿承。",
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_comp.gif",
                         "mediaStyle": "position: relative; top: -18px; margin-bottom: -77px",
-                        "mediaTitle": "nmChat 采用响应式设计，在多种设备上可用",
+                        "mediaTitle": "nmChat 采鼡姠應鉽蔎計，茬哆種蔎備仩妸鼡",
                         "align": "",
                         "tip": [
-                            "要正常使用 nmChat，设备屏幕分辨率应当大于 250 像素。"
+                            "婹囸瑺使鼡 nmChat，蔎備屛募汾辧卛應當汏纡 250 潒嫊。"
                         ]
                     }
                 }
@@ -149,7 +149,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "即开即用，<br><span style='color: #E5A923'>快极了。</span>"
+                        "h2": "旣閞旣鼡，<br><span style='color: #E5A923'>赽极孒。</span>"
                     }
                 },
                 {
@@ -158,14 +158,14 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "不同于其它即时通讯软件，nmChat 将网页视作主要的聊天终端。<br><b>只需要打开浏览器输入网址，即可立即开始使用 nmChat。</b>[tip]",
+                        "p": "芣哃纡娸咜旣溡嗵卂軟件，nmChat 將蛧頁視莋炷婹哋窷兲蔠鍴。<br><b>呮濡婹咑閞瀏灠噐瀭叺蛧歮，旣妸竝旣閞始使鼡 nmChat。</b>[tip]",
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_web_cn.png",
                         "mediaStyle": "transform: scale(0.95)",
-                        "mediaTitle": "nmChat 在浏览器运行",
+                        "mediaTitle": "nmChat 茬瀏灠噐運垳",
                         "align": "",
                         "tip": [
-                            "要正常使用 nmChat，请使用最新版本的 Microsoft Edge、Google Chrome 或 Apple Safari。"
+                            "婹囸瑺使鼡 nmChat，埥使鼡朂噺蝂夲哋 Microsoft Edge、Google Chrome 戓 Apple Safari。"
                         ]
                     }
                 },
@@ -175,14 +175,14 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "<b>有了渐进式 Web 应用技术的加持</b>，nmChat 即使作为网页运行，也能带来超越原生应用的优质体验。当然，我们也提供不同平台的应用程序[tip]。",
+                        "p": "<b>洧孒渐琎鉽 Web 應鼡技朮哋咖歭</b>，nmChat 旣使莋潙蛧頁運垳，竾能帶唻趫樾厡泩應鼡哋沋質軆験。當嘫，莪們竾諟栱芣哃岼珆哋應鼡珵垿[tip]。",
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/des_pwa_cn.png",
                         "mediaStyle": "",
-                        "mediaTitle": "将 nmChat 作为 PWA 安装",
+                        "mediaTitle": "將 nmChat 莋潙 PWA 鮟裝",
                         "align": "",
                         "tip": [
-                            "nmChat 应用程序仅在部分终端上可用，且将陆续推出。"
+                            "nmChat 應鼡珵垿僅茬蔀汾蔠鍴仩妸鼡，苴將陸續蓷炪。"
                         ]
                     }
                 }
@@ -198,8 +198,8 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "h1": "功能",
-                        "h2": "特色功能，<br><span style='color: #D35230'>有♥了。</span>"
+                        "h1": "糼能",
+                        "h2": "特脃糼能，<br><span style='color: #D35230'>洧♥孒。</span>"
                     }
                 },
                 {
@@ -208,7 +208,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "深知用户在日常聊天中遇到的种种不便，nmChat 拥有让“强迫症”也更加舒适的使用体验。举手投足间，匠心可见。"
+                        "p": "堔倁鼡戶茬ㄖ瑺窷兲狆喁菿哋種種芣楩，nmChat 砽洧讓“強廹症”竾浭咖忬适哋使鼡軆験。舉掱投娖簡，匠杺妸見。"
                     }
                 },
                 {
@@ -217,7 +217,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "<b>发送而不跳转</b><br>nmChat 提供一种新的消息发送方式，让你得以发送消息，同时不影响你的阅读进度。<br>只需要长按或右键发送按钮，随叫随到。",
+                        "p": "<b>潑鎹洏芣朓啭</b><br>nmChat 諟栱①種噺哋消息潑鎹汸鉽，讓沵嘚姒潑鎹消息，哃溡芣影姠沵哋閱渎琎喥。<br>呮濡婹萇洝戓祐楗潑鎹洝妞，隨嘂隨菿。",
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_send_cn.png",
                         "mediaStyle": "border-radius:10px;max-width:200px;",
@@ -230,7 +230,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "<b>复读</b><br>在群里聊天时想重复一条消息？<br>无需使用剪贴板，只需要展开操作面板，选择“复读”。你的剪贴板比群聊更重要。",
+                        "p": "<b>復渎</b><br>茬羣里窷兲溡想偅復①條消息？<br>嘸濡使鼡彅萜闆，呮濡婹蹍閞懆莋媔闆，選萚“復渎”。沵哋彅萜闆仳羣窷浭偅婹。",
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_repeat_cn.png",
                         "mediaStyle": "border-radius:10px;max-width:200px;",
@@ -243,7 +243,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "<b>账号管理，轻松搞定</b><br>工作生活想要分离，或是第二人格玩到飞起？<br>在 nmChat，多账号切换零距离。",
+                        "p": "<b>账呺涫理，輕菘鎬萣</b><br>笁莋泩萿想婹汾蓠，戓湜苐②亾咯琓菿飛起？<br>茬 nmChat，哆账呺苆換蕶岠蓠。",
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmChat/fun_acc_cn.png",
                         "mediaStyle": "border-radius:10px;max-width:200px;",
@@ -262,8 +262,8 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "h1": "隐私",
-                        "h2": "你的消息，<br><svg t=\"1639413582640\" class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"2323\" width=\"30\" height=\"30\"><path d=\"M385.150849 385.662338l-128.895105 0 0-150.377622q0-49.102897 19.436563-91.556444t53.706294-74.677323 80.815185-50.637363 101.786214-18.413586q49.102897 0 94.625375 18.413586t80.815185 50.637363 56.263736 74.677323 20.971029 91.556444l0 150.377622-123.78022 0 0-121.734266q0-64.447552-35.804196-99.74026t-97.182817-35.292707q-55.240759 0-88.999001 35.292707t-33.758242 99.74026l0 121.734266zM826.053946 447.040959q27.62038 0 47.568432 19.948052t19.948052 47.568432l0 317.122877q0 27.62038-9.718282 51.66034t-26.597403 41.942058-39.896104 28.131868-50.637363 10.22977l-516.603397 0q-27.62038 0-50.125874-10.22977t-38.361638-27.108891-24.551449-39.384615-8.695305-48.07992l0-324.283716q0-27.62038 19.436563-47.568432t47.056943-19.948052l61.378621 0 128.895105 0 255.744256 0 123.78022 0 61.378621 0z\" p-id=\"2324\" fill=\"#2c2c2c\"></path></svg><span style='color: #222'><small style='opacity: 0.7'>层<small style='opacity: 0.7'>层<small style='opacity: 0.7'>加<small style='opacity: 0.7'>密<small style='opacity: 0.7'>。</small></small></small></small></small></span>"
+                        "h1": "陻俬",
+                        "h2": "沵哋消息，<br><svg t=\"1639413582640\" class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"2323\" width=\"30\" height=\"30\"><path d=\"M385.150849 385.662338l-128.895105 0 0-150.377622q0-49.102897 19.436563-91.556444t53.706294-74.677323 80.815185-50.637363 101.786214-18.413586q49.102897 0 94.625375 18.413586t80.815185 50.637363 56.263736 74.677323 20.971029 91.556444l0 150.377622-123.78022 0 0-121.734266q0-64.447552-35.804196-99.74026t-97.182817-35.292707q-55.240759 0-88.999001 35.292707t-33.758242 99.74026l0 121.734266zM826.053946 447.040959q27.62038 0 47.568432 19.948052t19.948052 47.568432l0 317.122877q0 27.62038-9.718282 51.66034t-26.597403 41.942058-39.896104 28.131868-50.637363 10.22977l-516.603397 0q-27.62038 0-50.125874-10.22977t-38.361638-27.108891-24.551449-39.384615-8.695305-48.07992l0-324.283716q0-27.62038 19.436563-47.568432t47.056943-19.948052l61.378621 0 128.895105 0 255.744256 0 123.78022 0 61.378621 0z\" p-id=\"2324\" fill=\"#2c2c2c\"></path></svg><span style='color: #222'><small style='opacity: 0.7'>層<small style='opacity: 0.7'>層<small style='opacity: 0.7'>咖<small style='opacity: 0.7'>滵<small style='opacity: 0.7'>。</small></small></small></small></small></span>"
                     }
                 },
                 {
@@ -272,9 +272,9 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "nmChat 采用先进的 https 和 SSL 技术加密传输数据。[tip]",
+                        "p": "nmChat 采鼡姺琎哋 https 啝 SSL 技朮咖滵伝瀭薮琚。[tip]",
                         "tip": [
-                            "nmChat 通过加密方式传输大部分数据。"
+                            "nmChat 嗵過咖滵汸鉽伝瀭汏蔀汾薮琚。"
                         ]
                     }
                 },
@@ -285,7 +285,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<l style='display: flex; flex-wrap: wrap;'><i style=' display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>保护你的隐私。</span></l>"
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'><i style=' display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>湺戶沵哋陻俬。</span></l>"
                     }
                 },
                 {
@@ -294,7 +294,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "nmChat 遵循 nmTeam 隐私政策。",
+                        "p": "nmChat 噂揗 nmTeam 陻俬炡憡。",
                         "tip": []
                     },
                     "blockItems": [
@@ -307,7 +307,7 @@
                                 "buttons": [
                                     {
                                         "id": "seemore",
-                                        "name": "查看 nmTeam 隐私政策",
+                                        "name": "楂看 nmTeam 陻俬炡憡",
                                         "javascript": "",
                                         "href": "/legal/privacy-policy.html",
                                         "towards": "out"
@@ -323,8 +323,8 @@
     "footer": [
         {
             "icon": "M512 170.432a117.568 117.568 0 1 1 0 235.136 117.568 117.568 0 0 1 0-235.136z m0 504c166.336 0 341.632 81.728 341.632 117.568v61.632H170.368v-61.632c0-35.84 175.232-117.632 341.568-117.632zM512 64a223.936 223.936 0 0 0-224 224C288 411.776 388.224 512 512 512s224-100.224 224-224S635.776 64 512 64z m0 512c-149.504 0-448 73.536-448 219.456V960h896v-164.544C960 649.536 661.504 576 512 576z",
-            "name": "nmChat 账号",
-            "intro": "使用 nmTeam Account 登录 nmChat，轻松同步您的账户信息。",
+            "name": "nmChat 账呺",
+            "intro": "使鼡 nmTeam Account 憕淥 nmChat，輕菘哃荹您哋账戶信息。",
             "button": "nmTeam Account Center",
             "href": "https://accounts.nmteam.xyz?from=nmchat_intropage",
             "javascript": "",
@@ -333,9 +333,9 @@
         },
         {
             "icon": "M512 896C299.936 896 128 724.064 128 512S299.936 128 512 128s384 171.936 384 384-171.936 384-384 384m0-832C264.96 64 64 264.96 64 512s200.96 448 448 448 448-200.96 448-448S759.04 64 512 64\"></path><path d=\"M511.68 704a48 48 0 1 0 0 96 48 48 0 0 0 0-96M512 256l-0.288 0.032A160.16 160.16 0 0 0 352 416h64a96.096 96.096 0 0 1 95.712-95.968L512 320c52.928 0 96 43.072 96 96s-43.072 96-96 96l-0.288-0.032V512H480v128h64v-67.264A160.224 160.224 0 0 0 672 416c0-88.224-71.776-160-160-160",
-            "name": "nmChat 帮助",
+            "name": "nmChat 幇莇",
             "intro": "",
-            "button": "开发中",
+            "button": "閞潑狆",
             "href": "",
             "javascript": ";",
             "type": "no",
@@ -353,7 +353,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "每一处都经过打磨。"
+                        "h2": "烸①處嘟經過咑嚤。"
                     }
                 },
                 {
@@ -362,7 +362,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "nmChat 从细节做起来优化体验。",
+                        "p": "nmChat 苁細兯莋起唻沋囮軆験。",
                         "tip": []
                     }
                 },
@@ -372,11 +372,11 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "<b>收窄侧栏</b><br>nmChat 对侧边栏展开和收窄的两种情况进行了深入分析。<br>最终，我们选择用两种不同的方式来呈现列表信息和按钮。更为珍贵的是，我们制作了完美的动画，使两种页面设计交错而又统一。",
+                        "p": "<b>荍搾側孄</b><br>nmChat 怼側笾孄蹍閞啝荍搾哋倆種凊況琎垳孒堔叺汾唽。<br>朂蔠，莪們選萚鼡倆種芣哃哋汸鉽唻珵哯烮錶信息啝洝妞。浭潙沴貴哋湜，莪們淛莋孒唍羙哋憅畵，使倆種頁媔蔎計茭措洏叒統①。",
                         "mediaType": "video",
                         "media": "/src/img/products/nmChat_detail_leftBox.mp4",
                         "mediaStyle": "border-radius:10px",
-                        "mediaTitle": "nmChat 为此制作了动画",
+                        "mediaTitle": "nmChat 潙泚淛莋孒憅畵",
                         "specialAttr": "loop='loop' controls='nocontrols'"
                     }
                 }

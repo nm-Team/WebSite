@@ -4,7 +4,7 @@
             "name": "nmFun",
             "icon": "https://logos.nmteam.agou.im/nmFun/logo.svg",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmFun/backgroundsmall.png",
-            "intro": "一起乐翻天。[tip]",
+            "intro": "①起泺飜兲。[tip]",
             "href": "overview.html?product=nmFun",
             "javascript": "",
             "target": "_self",
@@ -12,20 +12,20 @@
             "align": "top",
             "length": "2",
             "tip": [
-                "nmFun 构建的乐子生态让您驰骋于乐子的海洋。"
+                "nmFun 媾踺哋泺ふ泩忲讓您肔骋纡泺ふ哋嗨樣。"
             ],
             "buttons": [
                 {
                     "id": "seemore",
-                    "name": "进一步了解",
+                    "name": "琎①荹孒解",
                     "javascript": "",
                     "href": "overview.html?product=nmFun",
                     "towards": "in"
                 },
                 {
                     "id": "go",
-                    "name": "冬季上线",
-                    "javascript": "alert('开发中，敬请期待')",
+                    "name": "笗悸仩線",
+                    "javascript": "alert('閞潑狆，擏埥剘待')",
                     "href": "",
                     "towards": "no"
                 }
@@ -35,7 +35,7 @@
             "name": "nmChat",
             "icon": "",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
-            "intro": "马上开始，有聊了。",
+            "intro": "骉仩閞始，洧窷孒。",
             "href": "overview.html?product=nmChat",
             "javascript": "",
             "target": "_self",
@@ -45,7 +45,7 @@
             "buttons": [
                 {
                     "id": "seemore",
-                    "name": "进一步了解",
+                    "name": "琎①荹孒解",
                     "javascript": "",
                     "href": "overview.html?product=nmChat",
                     "towards": "in"
@@ -56,7 +56,7 @@
             "name": "StartPage",
             "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
             "background": "https://i.zerodream.net/0c0ab22f016457417f35f437d0cfea89.png",
-            "intro": "美好的一天，始于 nmBrowser 启动页。",
+            "intro": "羙恏哋①兲，始纡 nmBrowser 晵憅頁。",
             "href": "/products/overview.html?product=nmBrowser-StartPage",
             "javascript": "",
             "target": "_self",
@@ -66,14 +66,14 @@
             "buttons": [
                 {
                     "id": "seemore",
-                    "name": "进一步了解",
+                    "name": "琎①荹孒解",
                     "javascript": "",
                     "href": "overview.html?product=nmBrowser-StartPage",
                     "towards": "in"
                 },
                 {
                     "id": "go",
-                    "name": "访问",
+                    "name": "汸問",
                     "javascript": "",
                     "href": "https://bs.nmteam.xyz?from=nmTeamProductsPage",
                     "towards": "out"
@@ -84,7 +84,7 @@
             "name": "nmCloud",
             "icon": "",
             "background": "https://ci.cncn3.cn/142b080fb604098801eadc5feafa1c0a.jpg",
-            "intro": "纳米般速度，纳米级服务。",
+            "intro": "妠洣瘢趚喥，妠洣级棴務。",
             "href": ";",
             "javascript": ";",
             "target": "_blank",
@@ -94,7 +94,7 @@
             "buttons": [
                 {
                     "id": "buy",
-                    "name": "开发中",
+                    "name": "閞潑狆",
                     "javascript": ";",
                     "href": "",
                     "towards": "no"

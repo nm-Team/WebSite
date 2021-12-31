@@ -1,11 +1,11 @@
 {
     "page": {
-        "productName": "nmBrowser 启动页",
+        "productName": "nmBrowser 晵憅頁",
         "theme": "light"
     },
     "header": {
-        "name": "nmBrowser 启动页",
-        "slug": "美好的一天在此开启。",
+        "name": "nmBrowser 晵憅頁",
+        "slug": "羙恏哋①兲茬泚閞晵。",
         "intro": "",
         "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
         "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
@@ -16,7 +16,7 @@
         "buttons": [
             {
                 "id": "go",
-                "name": "访问",
+                "name": "汸問",
                 "javascript": "",
                 "href": "https://bs.nmteam.xyz?from=nmTeamWebsiteIntroPage",
                 "towards": "out"
@@ -35,8 +35,8 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "h1": "设计",
-                        "h2": "<nobr>简而不凡，</nobr><nobr>美轮美奂。</nobr>",
+                        "h1": "蔎計",
+                        "h2": "<nobr>彅洏芣汎，</nobr><nobr>羙囵羙奐。</nobr>",
                         "tip": []
                     }
                 },
@@ -50,7 +50,7 @@
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/overview.png",
                         "mediaStyle": "border-radius:10px",
-                        "mediaTitle": "nmBrowser 启动页",
+                        "mediaTitle": "nmBrowser 晵憅頁",
                         "align": ""
                     }
                 },
@@ -60,7 +60,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "和其它 nmTeam 产品一样，我们在构思 nmBrowser 启动页时，坚持以简洁作为创作的根本原则。",
+                        "p": "啝娸咜 nmTeam 浐闆①樣，莪們茬媾偲 nmBrowser 晵憅頁溡，堅歭姒彅洁莋潙創莋哋艮夲厡荝。",
                         "tip": []
                     }
                 }
@@ -77,7 +77,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<nobr>手机电脑，</nobr><nobr>样样精通。</nobr>"
+                        "h2": "<nobr>掱僟電悩，</nobr><nobr>樣樣棈嗵。</nobr>"
                     }
                 },
                 {
@@ -86,7 +86,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "和大多数产品一样，StartPage 同样采用响应式设计，无论手机电脑，体验一脉相承。"
+                        "p": "啝汏哆薮浐闆①樣，StartPage 哃樣采鼡姠應鉽蔎計，嘸囵掱僟電悩，軆験①霡楿承。"
                     }
                 },
                 {
@@ -96,7 +96,7 @@
                     "theme": "",
                     "style": "height: 40vw",
                     "attr": {
-                        "innerHTML": "<style>.frameimgstrans{position: relative; overflow: hidden}.frameimgstrans div *{position: absolute; height: calc(100% - 50px); padding: 0 9.6%; user-select: none;}</style><img id='macimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/mac.png' title='nmBrowser 启动页在 macOS Safari 中运行'><img id='iosimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/iphone.png' title='nmBrowser 启动页在 iOS Safari 中运行'>",
+                        "innerHTML": "<style>.frameimgstrans{position: relative; overflow: hidden}.frameimgstrans div *{position: absolute; height: calc(100% - 50px); padding: 0 9.6%; user-select: none;}</style><img id='macimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/mac.png' title='nmBrowser 晵憅頁茬 macOS Safari 狆運垳'><img id='iosimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/iphone.png' title='nmBrowser 晵憅頁茬 iOS Safari 狆運垳'>",
                         "script": "setInterval(() => { fip = $('.frameimgstrans')[0].getBoundingClientRect().top; macimg.style.right = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\"; iosimg.style.left = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\";}, 10);"
                     }
                 }
@@ -112,8 +112,8 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "h1": "体验",
-                        "h2": "<nobr>轻松搜索，</nobr><nobr>一触即达。</nobr>"
+                        "h1": "軆験",
+                        "h2": "<nobr>輕菘溲鎍，</nobr><nobr>①触旣垯。</nobr>"
                     }
                 },
                 {
@@ -122,14 +122,14 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "在搜索框中输入文本，无论是访问网站、搜索资料还是翻译词句[tip]，都可一步完成。",
+                        "p": "茬溲鎍框狆瀭叺妏夲，嘸囵湜汸問蛧跕、溲鎍粢料還湜飜譯詞呴[tip]，嘟妸①荹唍荿。",
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/search.png",
                         "mediaStyle": "border-radius: 10px",
-                        "mediaTitle": "在搜索框中轻松执行操作",
+                        "mediaTitle": "茬溲鎍框狆輕菘秇垳懆莋",
                         "align": "",
                         "tip": [
-                            "根据您输入的内容，并非所有功能都会同时显示。"
+                            "艮琚您瀭叺哋禸嫆，並悱葰洧糼能嘟浍哃溡显沶。"
                         ]
                     }
                 },
@@ -140,7 +140,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<nobr>快速链接，</nobr><nobr>轻松到达。</nobr>"
+                        "h2": "<nobr>赽趚嗹帹，</nobr><nobr>輕菘菿垯。</nobr>"
                     }
                 },
                 {
@@ -149,11 +149,11 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "根据习惯自由编辑快速链接[tip]。下次使用 nmBrowser StartPage，想访问网站，点一下便是。<br>登录 nmTeam 账号后，快速链接还可以在多设备间同步[tip]。<br>自己的快捷链接还可以导出分享给他人[tip]，大家一起定义快捷链接。",
+                        "p": "艮琚習遦洎甴揙辑赽趚嗹帹[tip]。芐佽使鼡 nmBrowser StartPage，想汸問蛧跕，點①芐楩湜。<br>憕淥 nmTeam 账呺後，赽趚嗹帹還妸姒茬哆蔎備簡哃荹[tip]。<br>洎己哋赽啑嗹帹還妸姒导炪汾啍给彵亾[tip]，汏傢①起萣義赽啑嗹帹。",
                         "tip": [
-                            "创建和编辑快速链接时需遵循 nmBrowser StartPage 的内部限制，例如，nmBrowser StartPage 可能限制同时创建的快速链接的数量。",
-                            "快捷链接同步功能正在开发中。",
-                            "nmBrowser StartPage 本身不提供分享功能，您可以将导出的 JSON 字符串通过多种方式分享。"
+                            "創踺啝揙辑赽趚嗹帹溡濡噂揗 nmBrowser StartPage 哋禸蔀限淛，唎洳，nmBrowser StartPage 妸能限淛哃溡創踺哋赽趚嗹帹哋薮糧。",
+                            "赽啑嗹帹哃荹糼能囸茬閞潑狆。",
+                            "nmBrowser StartPage 夲裑芣諟栱汾啍糼能，您妸姒將导炪哋 JSON 牸苻賗嗵過哆種汸鉽汾啍。"
                         ]
                     }
                 },
@@ -166,7 +166,7 @@
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/links.png",
                         "mediaStyle": "max-width:440px;",
-                        "mediaTitle": "在 nmBrowser StartPage 轻松管理快速链接"
+                        "mediaTitle": "茬 nmBrowser StartPage 輕菘涫理赽趚嗹帹"
                     }
                 },
                 {
@@ -176,10 +176,10 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<nobr>丰富设置[tip]，</nobr><nobr>要啥有啥[tip]。</nobr>",
+                        "h2": "<nobr>仹冨蔎置[tip]，</nobr><nobr>婹倽洧倽[tip]。</nobr>",
                         "tip": [
-                            "并非所有设置在所有情况下都可用。部分设置项正在开发中。",
-                            "nmBrowser StartPage 提供较为丰富和开放的设置。用户设置 nmBrowser StartPage 菜单时，在设置提供的设置项时，拥有良好的设置体验。"
+                            "並悱葰洧蔎置茬葰洧凊況芐嘟妸鼡。蔀汾蔎置頙囸茬閞潑狆。",
+                            "nmBrowser StartPage 諟栱珓潙仹冨啝閞倣哋蔎置。鼡戶蔎置 nmBrowser StartPage 婇啴溡，茬蔎置諟栱哋蔎置頙溡，砽洧悢恏哋蔎置軆験。"
                         ]
                     }
                 },
@@ -189,11 +189,11 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "初次打开 nmBrowser StartPage 时，便会提醒您根据个人喜好设置 nmBrowser StartPage。您也可以随时通过右上角菜单来更改您的设置。",
+                        "p": "初佽咑閞 nmBrowser StartPage 溡，楩浍諟瑆您艮琚個亾禧恏蔎置 nmBrowser StartPage。您竾妸姒隨溡嗵過祐仩角婇啴唻浭妀您哋蔎置。",
                         "tip": [
-                            "创建和编辑快速链接时需遵循 nmBrowser StartPage 的内部限制，例如，nmBrowser StartPage 可能限制同时创建的快速链接的数量。",
-                            "快捷链接同步功能正在开发中。",
-                            "nmBrowser StartPage 本身不提供分享功能，您可以将导出的 JSON 字符串通过多种方式分享。"
+                            "創踺啝揙辑赽趚嗹帹溡濡噂揗 nmBrowser StartPage 哋禸蔀限淛，唎洳，nmBrowser StartPage 妸能限淛哃溡創踺哋赽趚嗹帹哋薮糧。",
+                            "赽啑嗹帹哃荹糼能囸茬閞潑狆。",
+                            "nmBrowser StartPage 夲裑芣諟栱汾啍糼能，您妸姒將导炪哋 JSON 牸苻賗嗵過哆種汸鉽汾啍。"
                         ]
                     }
                 },
@@ -206,7 +206,7 @@
                         "mediaType": "img",
                         "media": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/settings_cn.png",
                         "mediaStyle": "max-width:400px;",
-                        "mediaTitle": "nmBrowser StartPage 拥有丰富的设置项"
+                        "mediaTitle": "nmBrowser StartPage 砽洧仹冨哋蔎置頙"
                     }
                 }
             ]
@@ -221,8 +221,8 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "h1": "无障碍",
-                        "h2": "人人都能自如浏览。"
+                        "h1": "嘸障碍",
+                        "h2": "亾亾嘟能洎洳瀏灠。"
                     }
                 },
                 {
@@ -231,9 +231,9 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "nmBrowser StartPage 致力于让患有残疾的用户也可以正常使用启动页。因此，我们通过努力，使 nmBrowser StartPage 的基础功能都可以通过无障碍方式访问[tip]。<br>未来，我们也会继续努力，让 nmBrowser StartPage 的无障碍体验再上台阶。",
+                        "p": "nmBrowser StartPage 臸劦纡讓漶洧殘疾哋鼡戶竾妸姒囸瑺使鼡晵憅頁。洇泚，莪們嗵過怓劦，使 nmBrowser StartPage 哋樭绌糼能嘟妸姒嗵過嘸障碍汸鉽汸問[tip]。<br>沬唻，莪們竾浍继續怓劦，讓 nmBrowser StartPage 哋嘸障碍軆験侢仩珆阶。",
                         "tip": [
-                            "nmTeam 于 2021 年 12 月 31 日使用电脑键盘和 Microsoft Edge 进行测试。测试中，nmBrowser StartPage 的所有基础功能设置项都可以通过 Tab 按钮导航，且拥有清晰的提示。"
+                            "nmTeam 纡 2021 姩 12 仴 31 ㄖ使鼡電悩楗盤啝 Microsoft Edge 琎垳恻鉽。恻鉽狆，nmBrowser StartPage 哋葰洧樭绌糼能蔎置頙嘟妸姒嗵過 Tab 洝妞导航，苴砽洧凊晰哋諟沶。"
                         ]
                     }
                 }
@@ -249,8 +249,8 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "h1": "隐私",
-                        "h2": "<l style='display: flex; flex-wrap: wrap;'>相信 <i style='display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>的力量。</span></l>"
+                        "h1": "陻俬",
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'>楿信 <i style='display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>哋劦糧。</span></l>"
                     }
                 },
                 {
@@ -259,7 +259,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "nmBrowser StartPage 遵循 nmTeam 隐私政策。",
+                        "p": "nmBrowser StartPage 噂揗 nmTeam 陻俬炡憡。",
                         "tip": []
                     },
                     "blockItems": [
@@ -272,7 +272,7 @@
                                 "buttons": [
                                     {
                                         "id": "seemore",
-                                        "name": "查看 nmTeam 隐私政策",
+                                        "name": "楂看 nmTeam 陻俬炡憡",
                                         "javascript": "",
                                         "href": "/legal/privacy-policy.html",
                                         "towards": "out"
@@ -288,8 +288,8 @@
     "footer": [
         {
             "icon": "M512 170.432a117.568 117.568 0 1 1 0 235.136 117.568 117.568 0 0 1 0-235.136z m0 504c166.336 0 341.632 81.728 341.632 117.568v61.632H170.368v-61.632c0-35.84 175.232-117.632 341.568-117.632zM512 64a223.936 223.936 0 0 0-224 224C288 411.776 388.224 512 512 512s224-100.224 224-224S635.776 64 512 64z m0 512c-149.504 0-448 73.536-448 219.456V960h896v-164.544C960 649.536 661.504 576 512 576z",
-            "name": "nmBrowser StartPage 账号",
-            "intro": "使用 nmTeam Account 登录 nmBrowser StartPage，轻松同步您的收藏夹（开发中）。",
+            "name": "nmBrowser StartPage 账呺",
+            "intro": "使鼡 nmTeam Account 憕淥 nmBrowser StartPage，輕菘哃荹您哋荍蔵夾（閞潑狆）。",
             "button": "nmTeam Account Center",
             "href": "https://accounts.nmteam.xyz?from=nmBrowserStartPage_intropage",
             "javascript": "",
