@@ -5,8 +5,8 @@ https://nmteam.xyz/leadership/tlsteve
 https://nmteam.xyz/leadership/xyz1024
 https://nmteam.xyz/leadership/
 https://nmteam.xyz/products/
-https://nmteam.xyz/products/nmFun?lan=zh_CN
-https://nmteam.xyz/products/nmChat
-https://nmteam.xyz/products/nmBrowser-StartPage
+https://nmteam.xyz/products/overview/nmFun?lan=zh_CN
+https://nmteam.xyz/products/overview/nmChat
+https://nmteam.xyz/products/overview/nmBrowser-StartPage
 https://nmteam.xyz/aboutus
 https://nmteam.xyz/status

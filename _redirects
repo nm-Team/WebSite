@@ -1,1 +1,1 @@
-/products/* /products/overview.html?product=:splat 301
+/products/overview/* /products/overview.html?product=:splat 301
