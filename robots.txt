@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /src/
+Disallow: 404
+Disallow: 404.html
+Disallow: header
+Disallow: header.html
+Disallow: footer
+Disallow: footer.html
