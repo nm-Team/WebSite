@@ -1,1 +1,2 @@
 /products/overview/:pid /products/overview.html?product=:pid 301
+/products/overview/:pid?:query /products/overview.html?product=:pid&:query 301
