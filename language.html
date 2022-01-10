@@ -42,7 +42,7 @@
 		backCallURL = unescape(getQueryVariable("bks"));
 		cookieLanguage = getCookie("pageLanguage");
 		lanT = `<button class="selection" data-lanid="{{lan}}" data-lanname="{{lanname}}" data-active="{{active}}" title="{{lanname}}">{{lanname}}</button>`;
-		lanList.innerHTML += lanT.replace(/{{lan}}/g, "auto").replace(/{{lanname}}/g, "<t data-i18n='footer.auto'></t>").replace(/{{active}}/g, (cookieLanguage == "" || cookieLanguage == "auto"));
+		lanList.innerHTML += lanT.replace(/{{lan}}/g, "auto").replace(/title="{{lanname}}"/g, "").replace(/{{lanname}}/g, "<t data-i18n='footer.auto'></t>").replace(/{{active}}/g, (cookieLanguage == "" || cookieLanguage == "auto"));
 		for (flan in languageList) {
 			lanList.innerHTML += lanT.replace(/{{lan}}/g, flan).replace(/{{lanname}}/g, languageList[flan]).replace(/{{active}}/g, cookieLanguage == flan);
 		}
