@@ -16,7 +16,7 @@
         "buttons": [
             {
                 "id": "comingSoon",
-                "name": "2022 年 1 月推出",
+                "name": "春季推出",
                 "javascript": "false",
                 "href": "",
                 "towards": "no"
