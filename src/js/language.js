@@ -46,12 +46,10 @@ function changeLanguage(lang) {
 }
 changeLanguage();
 
-$(window).on('load', function () {
-    if (getUrlParam("lan")) {
-        changeLanguage(getUrlParam("lan"));
-        changeURLParam("lan", "");
-    }
-});
+if (getUrlParam("lan")) {
+    changeLanguage(getUrlParam("lan"));
+    changeURLParam("lan", "");
+}
 
 function getCookie(cname) {
     var name = cname + "=";
