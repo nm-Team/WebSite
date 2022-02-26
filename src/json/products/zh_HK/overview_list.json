@@ -55,7 +55,7 @@
         {
             "name": "StartPage",
             "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
-            "background": "https://i.zerodream.net/0c0ab22f016457417f35f437d0cfea89.png",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
             "intro": "美好的一天，始於 nmBrowser 啟動頁。",
             "href": "/products/overview.html?product=nmBrowser-StartPage",
             "javascript": "",
