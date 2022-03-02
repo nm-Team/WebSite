@@ -2,7 +2,7 @@
     "products": [
         {
             "name": "nmFun",
-            "icon": "https://logos.nmteam.agou.im/nmFun/logo.svg",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmFun/backgroundsmall.png",
             "intro": "①起泺飜兲。[tip]",
             "href": "overview.html?product=nmFun",
@@ -54,7 +54,7 @@
         },
         {
             "name": "StartPage",
-            "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
             "intro": "羙恏哋①兲，始纡 nmBrowser 晵憅頁。",
             "href": "/products/overview.html?product=nmBrowser-StartPage",

@@ -7,7 +7,7 @@
         "name": "nmBrowser StartPage",
         "slug": "A beautiful day begins here.",
         "intro": "",
-        "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@64.png",
+        "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@64.png",
         "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
         "backgroundColor": "#fff",
         "color": "#000",
@@ -250,7 +250,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "Privacy",
-                        "h2": "<l style='display: flex; flex-wrap: wrap;'>Trust<i style='display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam.</span></l>"
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'>Trust<i style='display: inline-block; width: 31px; height: 31px; background-image: url(https://websiteres.nmteam.xyz/producticon/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam.</span></l>"
                     }
                 },
                 {

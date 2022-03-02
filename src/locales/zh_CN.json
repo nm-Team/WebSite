@@ -7,8 +7,8 @@
 		"4": "决定创立 nmTeam 的时候，我们给 “nm”拟定了中文寓意：“柠檬”，又或者“纳米”。",
 		"5": "咱们 nmTeam 的成员各个可都是 nm 的好手，所以我们有信心将 nm 文化发扬光大！",
 		"6": "那得先让我看看你有没有 nm 的潜质。",
-		"7": "只要你有一颗 nm 的心，nmTeam 随时欢迎你的加入。请通过电子邮件联系我们并告知您的愿景和能力。",
-		"8": "回主页 >",
+		"7": "只要你有一颗 nm 的心，nmTeam 随时欢迎你的加入。请前往此页面进一步了解申请加入 nmTeam 的条件。",
+		"8": "了解如何加入 nmTeam > ",
 		"h0": "然而我们连 Slogan 都没有想好。",
 		"h1": "想知道 nm 这个词儿是怎么来的吗？",
 		"h2": "你也想加入 nmTeam 了吗？",
@@ -37,7 +37,6 @@
 			"about": {
 				"aboutUs": "关于 nmTeam",
 				"joinUs": "加入 nmTeam",
-				"leadership": "领导层",
 				"newsroom": "Newsroom",
 				"supportUs": "支持 nmTeam",
 				"title": "关于"
@@ -61,68 +60,30 @@
 		"home": "主页",
 		"ihaveline": "我是有底线的QWQ",
 		"login": "点击登录",
-		"newsroom": "NewsRoom",
+		"newsroom": "Newsroom",
 		"products": "产品",
 		"support": "支持"
 	},
 	"index": {
 		"connect_para": "你可以通过下面的联系方式与 nmTeam 取得联系。",
 		"connect_us": "联系 nmTeam",
-		"join_para": "如果你有一颗 nm 的心，现在就可以加入我们。",
+		"join_para": "如果你有一颗 nm 的心，现在就可以申请加入我们。",
+		"join_para_2": "请前往此页面进一步了解申请加入 nmTeam 的条件。",
 		"join_us": "加入 nmTeam",
-		"join_us_link": "加入我们 > ",
-		"more_products": "全部产品 > ",
+		"join_us_link": "了解如何加入 nmTeam > ",
+		"more_products": "查看产品页面 > ",
 		"nmteam_is_this_a": "nmTeam 于 2021 年 6 月 14 日成立，致力于为人们提供十分 nm 的产品和服务。nmTeam 现由 agou 作为 CEO，将陆续推出更多 nmServices。",
 		"nmteam_is_this_b": "nmTeam 可能会倒闭，但永远不会变质！",
-		"nmteam_leadership": "nmTeam 领导团队",
-		"see_more_about_our_members": "更多成员 >",
 		"title": "nmTeam - Official Website",
 		"what_is_nmteam": "nmTeam 是什么？",
-		"what_we_does": "nmTeam 的工作",
+		"what_we_does": "nmTeam 造就 nmProducts",
 		"what_we_does_ans": "nmTeam 致力于制作 nmProducts。在下方查看我们的一些产品。"
-	},
-	"intro": {
-		"agou": {
-			"0": "agou 是 nmTeam 的创始人和 CEO，现在负责管理 nmTeam 的日常事务。",
-			"1": "agou 于 2019 年首次接触制作网站，在 2020 年于 Sakura Frp 群聊中的各位产生了愉快的交际。2021 年由 agou 牵头成立了 nmTeam。",
-			"2": "agou 于 2021 年从高中毕业。agou 同时是个人网站 junbo.wang、agou.im 和放送文化站点安播空间的创始人和管理者。nmTeam 是 agou 的下一个重要项目，他期待 nmTeam 取得更多、更大的成就，为 nm 事业建设添砖加瓦。",
-			"job": "创始人，首席执行官"
-		},
-		"cody": {
-			"0": "Cody 是 nmTeam 的联合创始人，现在主要负责 nmTeam 部分产品的开发工作。",
-			"1": "Cody 熟悉 PHP 的开发和 WebUI 的使用。Cody 具有一定的领导力，在 nmTeam 管理中发挥积极作用。",
-			"2": "Cody 现为一名学生。",
-			"job": "联合创始人"
-		},
-		"tlsteve": {
-			"0": "TheLastSteve 是 nmTeam 的联合创始人，现在主要负责 nmTeam 的运营工作。",
-			"1": "刚刚已经写了三个人的介绍，实在不想再写了。反正没有人看这里写了什么，还是下次再补上吧。",
-			"job": "联合创始人"
-		},
-		"xyz1024": {
-			"0": "XYZ1024 是 nmTeam 的联合创始人，现在主要负责 nmTeam 的嘴臭运营工作，同时为 nmTeam 的吉祥物。",
-			"1": "XYZ1024 是 nm 文化的发源人，多亏了他在 Sakura Frp 的 nm 行为，才有了 nmTeam。",
-			"2": "XYZ1024 对许多事物有不同的见解，并可以通过独特的方式表达自己的看法。",
-			"3": "XYZ1024 现在江西南昌进行他的学业。",
-			"job": "联合创始人，nm 吉祥物"
-		}
-	},
-	"job_describe": {
-		"agou": "nmTeam 的创始人和 CEO。",
-		"cody": "管理者。",
-		"thelaststeve": "",
-		"xyz1024": "同时是 nm 吉祥物。"
 	},
 	"language": {
 		"page": {
 			"title": "切换语言",
 			"tip": "以您熟悉的语言浏览 nmTeam 网站。某些内容可能不会以您选定的语言显示。"
 		}
-	},
-	"leaders": {
-		"co_founder": "nmTeam 创始人",
-		"leaders_and_Members": "领导团队和成员",
-		"other_members": "其他 nmTeam 成员"
 	},
 	"page_update": "页面更新日期：",
 	"page_update_d": " 日 ",

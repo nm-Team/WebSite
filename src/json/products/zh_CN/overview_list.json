@@ -2,7 +2,7 @@
     "products": [
         {
             "name": "nmFun",
-            "icon": "https://logos.nmteam.agou.im/nmFun/logo.svg",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmFun/backgroundsmall.png",
             "intro": "一起乐翻天。[tip]",
             "href": "overview.html?product=nmFun",
@@ -24,7 +24,7 @@
                 },
                 {
                     "id": "go",
-                    "name": "冬季上线",
+                    "name": "即将上线",
                     "javascript": "alert('开发中，敬请期待')",
                     "href": "",
                     "towards": "no"
@@ -54,7 +54,7 @@
         },
         {
             "name": "StartPage",
-            "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
             "intro": "美好的一天，始于 nmBrowser 启动页。",
             "href": "/products/overview.html?product=nmBrowser-StartPage",

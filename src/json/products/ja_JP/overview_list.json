@@ -23,7 +23,7 @@
         },
         {
             "name": "StartPage",
-            "icon": "https://logos.nmteam.agou.im/nmBrowser/logo@32.png",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
             "intro": "Good day from StartPage.",
             "href": "/products/overview.html?product=nmBrowser-StartPage&lan=en_US",

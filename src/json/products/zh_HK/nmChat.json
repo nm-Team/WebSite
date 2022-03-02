@@ -7,7 +7,7 @@
         "name": "nmChat",
         "slug": "聊起來。",
         "intro": "nmChat 透過創新設計及強大功能重塑您的聊天體驗。",
-        "icon": "https://logos.nmteam.agou.im/nmTeam/logo@64.png",
+        "icon": "https://websiteres.nmteam.xyz/producticon/nmTeam/logo@64.png",
         "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
         "backgroundColor": "#fff",
         "color": "#000",
@@ -285,7 +285,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<l style='display: flex; flex-wrap: wrap;'><i style=' display: inline-block; width: 31px; height: 31px; background-image: url(https://logos.nmteam.agou.im/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>保護你的隱私。</span></l>"
+                        "h2": "<l style='display: flex; flex-wrap: wrap;'><i style=' display: inline-block; width: 31px; height: 31px; background-image: url(https://websiteres.nmteam.xyz/producticon/nmTeam/logo@32.png); background-size: 31px; position: relative; top: 3px'></i><span style='color: #EAD050; margin-right: 4px; word-break: keep-all'>nmTeam</span><span style='word-break: keep-all'>保護你的隱私。</span></l>"
                     }
                 },
                 {
