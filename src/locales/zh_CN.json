@@ -80,6 +80,21 @@
 		"what_we_does": "nmTeam 的工作",
 		"what_we_does_ans": "nmTeam 致力于制作 nmProducts。在下方查看我们的一些产品。"
 	},
+	"new_index": {
+		"slogan": "纳米量天下。",
+		"about": {
+			"h2": "",
+			"h1": "一切始于 nm。",
+			"sen0": "nmTeam 于 2021 年 6 月 14 日成立，致力于为人们提供十分 nm 的产品和服务。",
+			"sen1": "nmTeam 现由 agou 作为 CEO，将陆续推出更多 nmServices。",
+			"sen2": "nmTeam 可能会倒闭，但永远不会变质！"
+		},
+		"products": {
+			"h2": "非凡创意",
+			"h1": "成就 nm 产品。"
+		},
+		"footer_h1": "想看什么？"
+	},
 	"intro": {
 		"agou": {
 			"0": "agou 是 nmTeam 的创始人和 CEO，现在负责管理 nmTeam 的日常事务。",

@@ -1,0 +1,235 @@
+body{
+    overflow: hidden;
+    --index-text-yellow: #e8c200;
+    --index-button-background: #ffffff99;
+    --index-button-hover-background: #fff;
+    --index-button-border: rgb(41, 41, 41);
+    --index-button-border-b: rgba(41, 41, 41, 0.5);
+    --index-card-swiper-background: rgb(255, 255, 255);
+    --index-card-swiper-shadow: rgba(168, 168, 168, 0.39);
+    --index-card-swiper-button-background: rgba(0, 0, 0, 0.1);
+    --index-card-swiper-button: #000;
+}
+@media (prefers-color-scheme: dark){
+    body{
+        --index-button-background: #20202099;
+        --index-button-hover-background: rgba(41, 41, 41, 0.705);
+        --index-button-border: rgb(196, 196, 196);
+        --index-button-border-b: rgba(196, 196, 196, 0.5);
+    }
+}
+#indexMainBox{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+#indexMainBox .swiper-wrapper{
+    /* width: 100%; */
+    /* height: 100%; */
+}
+#indexMainBox .indexBlock:not(.swiper-slide-active) main{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s 0.2s;
+}
+#indexMainBox .indexBlock.swiper-slide-active main{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s 0.4s;
+}
+.indexBlock{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.indexBlock main{
+    position: absolute;
+    top: 80px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+}
+.indexBlock main h1{
+    font-size: 40px;
+    text-align: left;
+    margin: 0 10vw 10px 10vw;
+    color: var(--index-text-yellow);
+    flex-shrink: 0;
+}
+.indexBlock main h2{
+    font-size: 20px;
+    text-align: left;
+    margin: 0 10vw 0px 10vw;
+    color: var(--index-text-yellow);
+    opacity: 0.76;
+    flex-shrink: 0;
+}
+.indexBlock section .block{
+    margin: 10px 10vw 10px 10vw;
+    flex-shrink: 0;
+}
+.indexBlock section .block *{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 16px;
+}
+.indexBlock section .block p {
+    line-height: 1.8;
+}
+.indexBlock section .block .opes a:not(.tip){
+    display: flex;
+    flex-direction: row;
+    outline: none;
+    margin: 2px;
+    padding: 8px 12px;
+    border: 1.6px solid #ffffff00;
+    border-color: var(--index-button-border-b);
+    border-radius: 300px;
+    text-decoration: none!important;
+    color: var(--products-box-text)!important;
+    background: var(--index-button-background);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    transition: all 0.33s;
+}
+.indexBlock section .block .opes a:not(.tip):hover, .indexBlock section .block .opes a:not(.tip):focus-visible{
+    background: var(--index-button-hover-background);
+    border: 1.6px solid var(--index-button-border);
+}
+.indexBlock section .block .opes a:not(.tip):not(*[data-button-type=no]):focus-visible, .indexBlock section .block .opes a:not(.tip):not(*[data-button-type=no]):hover{
+    padding: 8px 11px;
+}
+.indexBlock section .block .opes a:not(.tip) span{
+    font-weight: 500;
+}
+.indexBlock section .block .opes a:not(.tip) .svg{
+    margin: 1.5px -2px 0 2px;
+    width: 15px;
+    height: 15px;
+    fill: var(--products-box-text);
+    opacity: 0.8;
+    transition: all 0.33s;
+}
+.indexBlock section .block .opes a:not(.tip):focus-visible .svg, .indexBlock section .block .opes a:not(.tip):hover .svg{
+    margin-left: 4px;
+    opacity: 1;
+}
+.cardSwiper{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    /* height: 100vh; */
+}
+.cardSwiper .swiper-wrapper{
+    margin: 0 10vw;
+}
+.cardSwiper .swiper-slide{
+    width: min(270px, 80vw);
+    margin: 10px 20px 10px 0;
+    height: min(350px, 44vh);
+    background: var(--index-card-swiper-background);
+    border-radius: 10px;
+    box-shadow: var(--index-card-swiper-shadow) 1px 1px 7px;
+    transition: all 0.5s, outline 0s;
+}
+.cardSwiper .swiper-slide:hover, .cardSwiper .swiper-slide:focus-visible{
+    transform: translateY(-6px);
+    box-shadow: var(--index-card-swiper-shadow) 1px 2px 12px;
+}
+.cardSwiper .swiper-button-prev, .cardSwiper .swiper-button-next{
+    width: 21px;
+    height: 21px;
+    margin: 0vw;
+    padding: 14px;
+    border-radius: 50%;
+    background-color: var(--index-card-swiper-button-background);
+    color: var(--index-card-swiper-button);
+    transition: opacity 0.3s;
+}
+.cardSwiper .swiper-button-prev:after, .cardSwiper .swiper-button-next:after{
+    font-size: 17px;
+}
+.indexBlock.index{
+    background-color: #EAD050;
+    background-image: url(../img/indexbackground.png);
+    background-size: 120px;
+    background-repeat: repeat;
+}
+.indexBlock.index .icon{
+    position: absolute;
+    top: 14%;
+    bottom: 52%;
+    left: 10vw;
+    right: 10vw;
+    background-image: url(../img/logo_filled.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.indexBlock.index .word{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 54%;
+    bottom: 20%;
+    background-image: url(../img/logotext.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.indexBlock.index .slogan{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 78%;
+    bottom: 10%;
+    color: #000;
+    text-align: center;
+    font-size: 3.5vh;
+}
+#fcont{
+    position: fixed;
+    bottom: 0;
+    top: calc(100%);
+    left: 0;
+    right: 0;
+    display: block;
+    visibility: hidden;
+    z-index: 9;
+    overflow: auto;
+    transition: all 1s;
+}
+#fcont.data-index-show{
+    visibility: visible;
+    top: 11em;
+}
+.productsSwiper .swiper-wrapper .swiper-slide{
+    background-repeat: no-repeat;
+    background-position: center calc(50% - 36px);
+    background-size: 70%;
+}
+.productsSwiper .swiper-wrapper .swiper-slide p{
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    right: 10px;
+    color: var(--text)!important;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+}
