@@ -33,6 +33,14 @@ body{
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+    transition: all 0.3s;
+}
+    @media (max-height: 700px) and (max-width: 7200px) {
+    #indexMainBox{
+        transform: scale(.75)translate(-22.21vw, -23vh);
+        width: calc(100vw / .75);
+        height: 134%;
+    }    
 }
 #indexMainBox .swiper-wrapper{
     /* width: 100%; */
@@ -47,6 +55,7 @@ body{
     visibility: visible;
     opacity: 1;
     transition: all 0.3s 0.4s;
+    flex-grow: 1;
 }
 .indexBlock{
     background-position: center center;
@@ -58,6 +67,7 @@ body{
     position: absolute;
     top: 80px;
     bottom: 50px;
+    height: calc(100vh - 130px);
     left: 0;
     right: 0;
     overflow: hidden;
@@ -85,6 +95,7 @@ body{
 .indexBlock section .block{
     margin: 10px 10vw 10px 10vw;
     flex-shrink: 0;
+    /* flex-grow: 1; */
 }
 .indexBlock section .block *{
     margin: 0;
@@ -226,15 +237,24 @@ body{
 .productsSwiper .swiper-wrapper .swiper-slide{
     background-repeat: no-repeat;
     background-position: center calc(50% - 36px);
-    background-size: 70%;
+    background-size: auto 56%;
 }
 .productsSwiper .swiper-wrapper .swiper-slide p{
+    margin: 0;
+    padding: 0;
     position: absolute;
-    bottom: 30px;
+    bottom: 14%;
     left: 10px;
     right: 10px;
     color: var(--text)!important;
     font-size: 23px;
     font-weight: bold;
     text-align: center;
+}
+.indexBlock section .block *.aboutAniBox{
+    width: 40vh;
+    height: 40vh;
+    flex-grow: 1;
+    margin: 0 auto;
+    border: 1px solid;
 }
