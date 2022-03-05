@@ -378,6 +378,7 @@ a.contact{
 }
 #newsSwiperItems .swiper-slide .time svg{
     width: 12px;
+    height: 12px;
     margin-right: 5px;
     fill: var(--text);
 }
