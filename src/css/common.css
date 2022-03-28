@@ -122,41 +122,6 @@ a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):visited{
     border-radius: 50%;
     margin: 0 5px -8px 0;
 }
-.button{
-    backdrop-filter: var(--jianbian);
-    -webkit-backdrop-filter: var(--jianbian);
-    background-color: var(--jianbian-color);
-    cursor: pointer;
-    /* min-height:60px; */
-    transition: all 0.11s;
-    -moz-transition: all 0.11s;
-    -webkit-transition: all 0.11s;
-    -o-transition: all 0.11s;
-}
-.button:hover{
-    box-shadow: 0px 0px 4px black;
-    background-color: rgba(255,255,255,0.2);
-    transform: scale(0.99);
-    -ms-transform: rotate(0.99);
-     /* IE 9 */
-    -moz-transform: rotate(0.99);
-     /* Firefox */
-    -webkit-transform: rotate(0.99);
- /* Safari 和 Chrome */
-    -o-transform: rotate(0.99);
-     /* Opera */
-}
-.button:active{
-    transform: scale(0.97);
-    -ms-transform: rotate(0.97);
-     /* IE 9 */
-    -moz-transform: rotate(0.97);
-     /* Firefox */
-    -webkit-transform: rotate(0.97);
- /* Safari 和 Chrome */
-    -o-transform: rotate(0.97);
-     /* Opera */
-}
 .flex{
     display: flex;
     flex-wrap: wrap;
@@ -296,6 +261,58 @@ beta-tag{
     }
     100%{
     }
+}
+.pageConfirmDialog{
+    visibility: hidden;
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    right: -720px;
+    width: min(400px, calc(100vw - 80px));
+    max-height: calc(100vh - 120px);
+    padding: 16px 18px!important;
+    background-color: var(--jianbian-color);
+    backdrop-filter: var(--jianbian);
+    -webkit-backdrop-filter: var(--jianbian);
+    border-radius: 8px;
+    box-shadow: #00000026 1px 3px 17px;
+    color: var(--text-color);
+    overflow-y: auto;
+    transition: right 0.6s, visibility 0.8s;
+}
+.pageConfirmDialog[data-status=open]{
+    visibility: visible;
+    right: 20px;
+}
+.pageConfirmDialogHeader{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4!important;
+    padding-bottom: 8px!important;
+}
+.pageConfirmDialogBody{
+    font-size: 16px;
+    line-height: 1.7!important;
+    padding-bottom: 3px!important;
+}
+.pageConfirmDialogFooter{
+    padding-top: 1px!important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.pageConfirmDialogFooter button{
+    color: var(--text-yellow);
+    padding: 3px 12px!important;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.pageConfirmDialogFooter button:hover, .pageConfirmDialogFooter button:focus-visible{
+    background-color: #00000022;
 }
 .insiderTip{
     position: fixed;

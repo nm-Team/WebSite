@@ -397,3 +397,10 @@ a.contact{
     bottom: -2px;
     background-image: linear-gradient(#ffffff00, var(--index-card-swiper-background));
 }
+.lemonLine{
+    width: 80vw;
+    margin: 0 10vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}

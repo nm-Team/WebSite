@@ -77,3 +77,8 @@ window.onresize = function () {
 footer_selectLanguageButton.onclick = function () {
 	window.location.href = window.location.origin + "/language.html?bks=" + escape(window.location.href);
 }
+
+// Cookie 提示 
+if (localStorage.cookieTipv0Checked != "true") setTimeout(() => {
+	pageCookieConfirmDialog.setAttribute("data-status", "open");
+}, 3000);

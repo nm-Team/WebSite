@@ -62,5 +62,18 @@
 				style="background-image: url('https://websiteres.nmteam.xyz/producticon/nmTeam/logo@64.png'); filter: brightness(0); width: 60px; height: 60px; opacity: 0.16;"></i>
 		</div>
 	</div>
-
+</div>
+<div class="pageDialogs">
+	<div class="pageConfirmDialog" id="pageCookieConfirmDialog">
+		<div class="pageConfirmDialogHeader" data-i18n="cookie.cookieConfirmDialog.header"></div>
+		<div class="pageConfirmDialogBody">
+			<p data-i18n="cookie.cookieConfirmDialog.body.0"></p>
+			<p data-i18n="cookie.cookieConfirmDialog.body.1"></p>
+		</div>
+		<div class="pageConfirmDialogFooter">
+			<!-- <button data-i18n="cookie.cookieConfirmDialog.button.customize"></button> -->
+			<button data-i18n="cookie.cookieConfirmDialog.button.accept"
+				onclick="localStorage.cookieTipv0Checked = 'true'; pageCookieConfirmDialog.setAttribute('data-status', 'close');"></button>
+		</div>
+	</div>
 </div>

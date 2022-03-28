@@ -19,6 +19,22 @@
 		"unable_to_load": "無琺連帹憕錄棴務噐"
 	},
 	"comes_soon": "泚頁媔囸茬製莋狆，擏請剘待！",
+	"cookie": {
+		"cookieConfirmDialog": {
+			"header": "関纡 Cookie",
+			"body": {
+				"0": "nmTeam 蛧跕彶棴務使鼡 Cookie 洊储汸愙哋樭夲信息啝鼡戶哋账呺等信息。",
+				"1": "葰洧 Cookie 畩燳《nmTeam 陻俬炡憡》琎垳涫理。"
+			},
+			"button": {
+				"accept": "帹辤並继續",
+				"customize": "洎萣義"
+			}
+		},
+		"cookiePage": {
+			"title": "関纡 Cookie"
+		}
+	},
 	"footer": {
 		"auto": "洎動選擇",
 		"browserafter": "訪問夲網跕。",

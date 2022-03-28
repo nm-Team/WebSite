@@ -18,9 +18,23 @@
 		"click_to_log": "点击登录",
 		"unable_to_load": "无法连接登录服务器"
 	},
-	"ceo": "CEO",
-	"co-founder": "联合创始人",
 	"comes_soon": "此页面正在制作中，敬请期待！",
+	"cookie": {
+		"cookieConfirmDialog": {
+			"header": "关于 Cookie",
+			"body": {
+				"0": "nmTeam 网站及服务使用 Cookie 存储访客的基本信息和用户的账号等信息。",
+				"1": "所有 Cookie 依照《nmTeam 隐私政策》进行管理。"
+			},
+			"button": {
+				"accept": "接受并继续",
+				"customize": "自定义"
+			}
+		},
+		"cookiePage": {
+			"title": "关于 Cookie"
+		}
+	},
 	"footer": {
 		"auto": "自动选择",
 		"browserafter": "访问本网站。",

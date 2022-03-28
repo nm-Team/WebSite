@@ -9,7 +9,7 @@ chinesePun = "，。；：？";
 
 function checkTip(w, json) {
     try {
-        if(!w) return "";
+        if (!w) return "";
         w = w.replace(/\[tip\]/g, function (word) {
             tipsNum++;
             products_footer_explain_by_javascript.innerHTML += `<p id="products_footer_explain_` + tipsNum + `"><b>` + tipsNum + `. </b>` + json['tip'][sTipsNum] + `</p>`;
@@ -24,6 +24,7 @@ function checkTip(w, json) {
     }
     return w;
 }
+
 function setButton(json) {
     btshtml = '';
     for (j in json) {

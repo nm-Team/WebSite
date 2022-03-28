@@ -18,9 +18,23 @@
 		"click_to_log": "Click to login",
 		"unable_to_load": "Unable to connect to login server"
 	},
-	"ceo": "Chief Executive Officer",
-	"co-founder": "Co-founder",
 	"comes_soon": "This page is in production, so stay tuned! ",
+	"cookie": {
+		"cookieConfirmDialog": {
+			"header": "About Cookies",
+			"body": {
+				"0": "nmTeam website and services use cookies to store basic visitor information and user account information.",
+				"1": "All cookies are managed in accordance with the nmTeam Privacy Policy."
+			},
+			"button": {
+				"accept": "Accept & Continue",
+				"customize": "Customize"
+			}
+		},
+		"cookiePage": {
+			"title": "About Cookies"
+		}
+	},
 	"footer": {
 		"auto": "Auto select",
 		"browserafter": ". ",

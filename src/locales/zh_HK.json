@@ -19,6 +19,22 @@
 		"unable_to_load": "無法連接登錄服務器"
 	},
 	"comes_soon": "此頁面正在製作中，敬請期待！",
+	"cookie": {
+		"cookieConfirmDialog": {
+			"header": "關於 Cookie",
+			"body": {
+				"0": "nmTeam 網站及服務使用 Cookie 存儲訪客的基本信息和用戶的賬號等信息。",
+				"1": "所有 Cookie 依照《nmTeam 隱私政策》進行管理。"
+			},
+			"button": {
+				"accept": "接受並繼續",
+				"customize": "自定義"
+			}
+		},
+		"cookiePage": {
+			"title": "關於 Cookie"
+		}
+	},
 	"footer": {
 		"auto": "自動選擇",
 		"browserafter": "訪問本網站。",
