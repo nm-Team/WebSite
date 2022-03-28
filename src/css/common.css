@@ -299,7 +299,10 @@ beta-tag{
     padding-top: 1px!important;
     display: flex;
     flex-wrap: wrap;
+    text-align: end;
     justify-content: end;
+    align-content: flex-end;
+    align-items: flex-end;
 }
 .pageConfirmDialogFooter button{
     color: var(--text-yellow);
