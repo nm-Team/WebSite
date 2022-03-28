@@ -368,7 +368,7 @@ body{
 }
 @media (max-width: 600px){
     #fcont *{
-        line-height: 2.2;
+        line-height: 1.8;
     }
     #fcont .footer-table{
         flex-direction: column;
