@@ -5,3 +5,5 @@ https://nmteam.xyz/products/overview/nmChat
 https://nmteam.xyz/products/overview/nmBrowser-StartPage
 https://nmteam.xyz/aboutus
 https://nmteam.xyz/status
+https://nmteam.xyz/join
+https://nmteam.xyz/join/forum

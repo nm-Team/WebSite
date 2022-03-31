@@ -53,6 +53,22 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
+     <link>https://nmteam.xyz/join</link>
+     <title>Come and Join nmTeam - nmTeam - Official Website</title>
+     <description>Come and Join nmTeam - nmTeam - Official Website</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://nmteam.xyz/join/forum</link>
+     <title>Come and Join nmTeam - nmTeam - Official Website</title>
+     <description>Come and Join nmTeam - nmTeam - Official Website</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
      <link>https://nmteam.xyz/status</link>
      <title>nmTeam System Status - nmTeam - Official Website</title>
      <description>nmTeam System Status.</description>

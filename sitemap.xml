@@ -36,6 +36,16 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://nmteam.xyz/join</loc>
+  <lastmod>2022-03-28T16:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nmteam.xyz/join/forum</loc>
+  <lastmod>2022-03-28T16:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://nmteam.xyz/status</loc>
   <lastmod>2022-03-28T16:00:00+00:00</lastmod>
   <priority>0.80</priority>

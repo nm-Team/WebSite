@@ -99,6 +99,65 @@
 		"what_we_does": "nmTeam 造就 nmProducts",
 		"what_we_does_ans": "nmTeam 致力于制作 nmProducts。在下方查看我们的一些产品。"
 	},
+	"join": {
+		"join_requirement_page": {
+			"title": "欢迎加入 nmTeam！",
+			"intro": {
+				"0": "你知道吗？nmTeam 拥有和谐的团队氛围和自由的管理安排。",
+				"1": "加入 nmTeam 将是一个简单又愉快的过程——你的才能将对我们最新的产品大有裨益，我们甚至可以为你量身定制专属产品！而且你的努力会有丰富的回报，你对nmTeam的贡献还可以获得公开表扬和不少的奖金；在加入nmTeam之后，就算你没有太多贡献，也不会受到批评。所以快来找到自己中意的位置，即刻加入 nmTeam！",
+				"2": ""
+			},
+			"jobs": {
+				"common": {
+					"nm_heart": "拥有一颗 nm 的心",
+					"nm_heart_intro": "既然作为 nm 人，总得懂点 nm 道理。你是如何看待 nm 这个单词的？",
+					"basic_morality": "有基本的团队责任感，能保证不破坏 nmTeam 创作环境和成员的基本道德要求",
+					"basic_morality_intro": "在一些特殊情况下请多多理解，nmTeam 成员绝非圣贤，无论如何还请多多包容；就算无法接受，也请不要毁坏 nmTeam 服务和销毁 nmTeam 数据文件。",
+					"friendly_wish": "能与或希望与其他成员展开友好的交流合作"
+				},
+				"developer": {
+					"title": "nmTeam 开发",
+					"knowledge": "对电脑有基本的认知水平",
+					"experience": "有至少基本的软件开发经验，或渴望通过参与 nmTeam 开发提升自己",
+					"experience_intro": "我们乐于看到 nmTeam 成员在加入 nmTeam 后的提升，所以不要担心自己目前的开发水平能否胜任 nmTeam 的需要。大胆闯一闯，保持一颗上进的心，看到你的进步就是 nmTeam 的大家最大的快乐。",
+					"additional": "当然，我们更欢迎熟练使用 Git，且对网页开发或 app 开发掌握较好的 nm 人加入我们，所以请一定踊跃报名。"
+				},
+				"support": {
+					"title": "客户支持",
+					"part_time": "享受空闲时间",
+					"part_time_intro": "nmTeam 不要求你专门为提供服务腾出时间，仅当您想换换心情时，即可查看 nmTeam 用户需要的帮助。紧急服务将由 nmTeam 管理层直接负责，毋需担心。",
+					"attitude": "以良好的态度面对 nmTeam 客户",
+					"attitude_intro": "nmTeam 客户并不是在所有时候都提出轻松的问题，希望您能以平和的心态回应用户的诉求。",
+					"bill": "精神损失费",
+					"bill_intro": "处理客户服务有时是一件让人略感疲惫的事情。nmTeam 将研究根据服务情况为我们的服务团队成员发放奖金，以资鼓励。"
+				},
+				"writer": {
+					"title": "运营",
+					"lan_level": "有基本的文学素养，能写出不含语病和标点符号错误，并且表意明确的文案",
+					"lan_level_intro": "若能做到妙笔生花，我们对你赞赏有加，加入我们你将稳坐沙发。",
+					"knowledge": "深入了解 nmTeam 的产品特性和相关规划，能深入浅出地传达 nmTeam 的价值观，并带来积极引导作用",
+					"english": "掌握一定的外语水平优先"
+				}
+			},
+			"register": "加入",
+			"language_request": "暂时只招募能互相通过中文流畅交流的成员。",
+			"more": {
+				"resources": {
+					"title": "相关资料",
+					"nmteam_member_rules": "nmTeam 成员工作和管理规范（制定中）"
+				},
+				"already_been_member": {
+					"title": "已经是 nmTeam 成员",
+					"panel": "nmTeam 工作面板（开发中）"
+				}
+			},
+			"publicity": "nmTeam 加入规则正在公示中，并可能随时修改。请通过电子邮箱向 nmTeam 反馈：support@nmteam.xyz"
+		},
+		"join_register_page": {
+			"title": "申请加入 nmTeam",
+			"tip": "抱歉，还未正式开放 nmTeam 加入申请，请过两天再看看。"
+		}
+	},
 	"language": {
 		"page": {
 			"title": "切换语言",

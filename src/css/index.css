@@ -1,9 +1,4 @@
 :root{
-    --index-text-yellow: #e8c200;
-    --index-button-background: #ffffff99;
-    --index-button-hover-background: #fff;
-    --index-button-border: rgb(41, 41, 41);
-    --index-button-border-b: rgb(147 147 147 / 30%);
     --index-card-swiper-background: rgb(255, 255, 255);
     --index-card-swiper-shadow: rgba(168, 168, 168, 0.39);
     --index-card-swiper-button-background: rgba(0, 0, 0, 0.1);
@@ -11,11 +6,6 @@
     }
 @media (prefers-color-scheme: dark){
     :root{
-        --index-text-yellow: #f1d442;
-        --index-button-background: #20202099;
-        --index-button-hover-background: rgba(41, 41, 41, 0.705);
-        --index-button-border: rgb(196, 196, 196);
-        --index-button-border-b: rgba(196, 196, 196, 0.5);
         --index-card-swiper-background: rgb(43, 43, 43);
         --index-card-swiper-shadow: rgba(0, 0, 0, 0.219);
         --index-card-swiper-button-background: rgba(235, 235, 235, 0.267);
@@ -281,51 +271,6 @@ a.contact{
 }
 .cardSwiper .swiper-button-prev:after, .cardSwiper .swiper-button-next:after{
     font-size: 17px;
-}
-.indexMoreLinks{
-    display: flex;
-    margin: 14px 0 5px 0;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.indexMoreLinks a:not(.tip){
-    display: flex;
-    flex-direction: row;
-    outline: none;
-    margin: 2px;
-    padding: 8px 12px;
-    border: 1.6px solid #ffffff00;
-    border-color: var(--index-button-border-b);
-    border-radius: 300px;
-    text-decoration: none!important;
-    color: var(--text)!important;
-    background: var(--index-button-background);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    transition: all 0.33s;
-}
-.indexMoreLinks a:not(.tip):hover, .indexMoreLinks a:not(.tip):focus-visible{
-    background: var(--index-button-hover-background);
-    border: 1.6px solid var(--index-button-border);
-}
-.indexMoreLinks a:not(.tip):not(*[data-button-type=no]):focus-visible, .indexMoreLinks a:not(.tip):not(*[data-button-type=no]):hover{
-    padding: 8px 11px;
-}
-.indexMoreLinks a:not(.tip) span{
-    font-weight: 500;
-}
-.indexMoreLinks a:not(.tip) .svg{
-    margin: 1.5px -2px 0 2px;
-    width: 15px;
-    height: 15px;
-    fill: var(--text);
-    opacity: 0.8;
-    transition: all 0.33s;
-}
-.indexMoreLinks a:not(.tip):focus-visible .svg, .indexMoreLinks a:not(.tip):hover .svg{
-    margin-left: 4px;
-    opacity: 1;
 }
 .productsSwiper .swiper-wrapper .swiper-slide{
     background-repeat: no-repeat;
