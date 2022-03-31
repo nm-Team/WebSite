@@ -99,6 +99,65 @@
 		"what_we_does": "nmTeam makes nmProducts",
 		"what_we_does_ans": "nmTeam is committed to making nmProducts. Check out some of our products below. "
 	},
+	"join": {
+		"join_requirement_page": {
+			"title": "Welcome to join nmTeam!",
+			"intro": {
+				"0": "Do you know that nmTeam has a harmonious team atmosphere and free management arrangements?",
+				"1": "Joining nmTeam will be an easy and enjoyable process - your talents will be of great benefit to our latest products, and we can even create exclusive products for you! What's more, your hard work will be rewarded richly, your contribution to nmTeam can also get public praise and a lot of bonuses. After joining nmTeam, even if you don't contribute too much, you will not be criticized. So come and find your favorite job and join nmTeam immediately!",
+				"2": ""
+			},
+			"jobs": {
+				"common": {
+					"nm_heart": "Having a heart of nm",
+					"nm_heart_intro": "Since you are an nmer, you have to understand a little about nm. What do you think about the word \"nm\"?",
+					"basic_morality": "Have a basic sense of team responsibility to ensure that the basic morality of the nmTeam creative environment and members is not undermined",
+					"basic_morality_intro": "In some special cases, please understand, nmTeam members are by no means saints, please be tolerant anyway; even if it is unacceptable, please do not destroy nmTeam services and destroy nmTeam data files.",
+					"friendly_wish": "Able to have friendly cooperation with other members"
+				},
+				"developer": {
+					"title": "nmTeam Developer",
+					"knowledge": "Basic knowledge of computers",
+					"experience": "You should have at least basic software development experience, or desire to improve yourself by participating in nmTeam development",
+					"experience_intro": "We are happy to see the improvement of nmTeam members after joining nmTeam, so don't worry about whether your current development level is up to the needs of nmTeam. Be bold, keep an aggressive mind, and see your progress It is the greatest joy for everyone in nmTeam.",
+					"additional": "Of course, we welcome nmers who are proficient in using Git and have a good grasp of web development or app development to join us more, so please be sure to sign up."
+				},
+				"support": {
+					"title": "Customer Support",
+					"part_time": "Enjoy your free time",
+					"part_time_intro": "nmTeam does not require you to devote time to providing services, only when you want to change your mood, you can view the help that nmTeam users need. Emergency services will be directly handled by nmTeam management, no worries.",
+					"attitude": "Have a good attitude towards nmTeam customers",
+					"attitude_intro": "nmTeam customers don't ask easy questions all the time, and I hope you can respond to your users' requests with peace of mind.",
+					"bill": "Mental damage fee",
+					"bill_intro": "Dealing with customer service can be a bit tiring at times. nmTeam will look into awarding bonuses to our service team members based on service as an incentive."
+				},
+				"writer": {
+					"title": "Operation",
+					"lan_level": "Have basic literary literacy, be able to write clear copy without language errors and punctuation errors",
+					"lan_level_intro": "If you can do it well, we will treat you well.",
+					"knowledge": "Have an in-depth understanding of nmTeam's product features and related planning, which can convey nmTeam's values ​​in a simple way and bring positive guidance",
+					"english": "Mastering a certain foreign language is preferred"
+				}
+			},
+			"register": "Join",
+			"language_request": "Only recruit members who can communicate with each other fluently in Chinese.",
+			"more": {
+				"resources": {
+					"title": "Related information",
+					"nmteam_member_rules": "nmTeam member work and management rules (in development)"
+				},
+				"already_been_member": {
+					"title": "Already a member of nmTeam",
+					"panel": "nmTeam work panel (in development)"
+				}
+			},
+			"publicity": "nmTeam joining rules are being announced and may be revised at any time. Please send feedback to nmTeam via email: support@nmteam.xyz"
+		},
+		"join_register_page": {
+			"title": "Apply to join nmTeam",
+			"tip": "Sorry, the application for joining nmTeam has not been officially opened yet, please check again in two days."
+		}
+	},
 	"language": {
 		"page": {
 			"title": "Change Language",

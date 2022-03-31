@@ -131,7 +131,7 @@
 					"bill": "精神损失费",
 					"bill_intro": "处理客户服务有时是一件让人略感疲惫的事情。nmTeam 将研究根据服务情况为我们的服务团队成员发放奖金，以资鼓励。"
 				},
-				"writor": {
+				"writer": {
 					"title": "运营",
 					"lan_level": "有基本的文学素养，能写出不含语病和标点符号错误，并且表意明确的文案",
 					"lan_level_intro": "若能做到妙笔生花，我们对你赞赏有加，加入我们你将稳坐沙发。",
@@ -150,7 +150,12 @@
 					"title": "已经是 nmTeam 成员",
 					"panel": "nmTeam 工作面板（开发中）"
 				}
-			}
+			},
+			"publicity": "nmTeam 加入规则正在公示中，并可能随时修改。请通过电子邮箱向 nmTeam 反馈：support@nmteam.xyz"
+		},
+		"join_register_page": {
+			"title": "申请加入 nmTeam",
+			"tip": "抱歉，还未正式开放 nmTeam 加入申请，请过两天再看看。"
 		}
 	},
 	"language": {

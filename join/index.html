@@ -25,20 +25,18 @@
         <h1 data-i18n="join.join_requirement_page.title"></h1>
     </div>
     <div class="main">
-        <!-- <h2 data-i18n=""></h2> -->
         <div class="mainBlock">
-            <!-- <h1 data-i18n=""></h1> -->
             <p data-i18n="join.join_requirement_page.intro.0"></p>
             <p data-i18n="join.join_requirement_page.intro.1"></p>
             <p data-i18n="join.join_requirement_page.intro.2"></p>
+            <p data-i18n="join.join_requirement_page.publicity" style="color: #FF0000;"></p>
         </div>
         <div class="mainBlock">
             <div class="tabView joinTab" id="joinTab">
                 <div class="tabHeader">
                     <button data-i18n="join.join_requirement_page.jobs.developer.title" data-tab="developer"></button>
                     <button data-i18n="join.join_requirement_page.jobs.support.title" data-tab="support"></button>
-                    <button data-i18n="join.join_requirement_page.jobs.writor.title" data-tab="writor"></button>
-                    <!-- <button data-i18n="join.join_requirement_page.jobs.developer.title"></button> -->
+                    <button data-i18n="join.join_requirement_page.jobs.writer.title" data-tab="writer"></button>
                 </div>
                 <div class="tabContents">
                     <div class="content" data-tab="developer">
@@ -107,8 +105,8 @@
                         </div>
                         <div class="detail" data-i18n="join.join_requirement_page.language_request"></div>
                     </div>
-                    <div class="content" data-tab="writor">
-                        <h2 data-i18n="join.join_requirement_page.jobs.writor.title"></h2>
+                    <div class="content" data-tab="writer">
+                        <h2 data-i18n="join.join_requirement_page.jobs.writer.title"></h2>
                         <p class="requirementName" data-i18n="join.join_requirement_page.jobs.common.nm_heart">
                         </p>
                         <div class="detail" data-i18n="join.join_requirement_page.jobs.common.nm_heart_intro"></div>
@@ -118,15 +116,13 @@
                         </div>
                         <p class="requirementName" data-i18n="join.join_requirement_page.jobs.common.friendly_wish">
                         </p>
-                        <p class="requirementName" data-i18n="join.join_requirement_page.jobs.writor.lan_level"></p>
-                        <div class="detail" data-i18n="join.join_requirement_page.jobs.writor.lan_level_intro">
+                        <p class="requirementName" data-i18n="join.join_requirement_page.jobs.writer.lan_level"></p>
+                        <div class="detail" data-i18n="join.join_requirement_page.jobs.writer.lan_level_intro">
                         </div>
-                        <p class="requirementName" data-i18n="join.join_requirement_page.jobs.writor.knowledge"></p>
-                        <!-- <div class="detail" data-i18n="join.join_requirement_page.jobs.writor.knowledge_intro"> -->
-                        <!-- </div> -->
-                        <p class="requirementName" data-i18n="join.join_requirement_page.jobs.writor.english"></p>
+                        <p class="requirementName" data-i18n="join.join_requirement_page.jobs.writer.knowledge"></p>
+                        <p class="requirementName" data-i18n="join.join_requirement_page.jobs.writer.english"></p>
                         <div class="indexMoreLinks">
-                            <a target="_self" href="/join/forum.html?jobType=writor">
+                            <a target="_self" href="/join/forum.html?jobType=writer">
                                 <span data-i18n="join.join_requirement_page.register"></span>
                                 <svg class="svg" viewBox="0 0 1024 1024" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -167,14 +163,16 @@
 
     <script src="/src/js/header.js"></script>
     <script src="https://accounts.nmteam.xyz/src/js/getinfo.js"></script>
-    <script src="/src/js/join_requirement.js"></script>
+    <!-- <script src="/src/js/join_requirement.js"></script> -->
 
     <script src="/src/js/jquery.min.js"></script>
     <script src="/src/js/i18next-1.6.3.min.js"></script>
     <script src="/src/js/language.js"></script>
     <script src="/src/js/tab.js"></script>
-    <script>focusTab($("#joinTab"), "developer");</script>
-    <script>focusTab($("#moreTab"), "resources");</script>
+    <script>
+        focusTab($("#joinTab"), "developer");
+        focusTab($("#moreTab"), "resources");
+    </script>
 </body>
 
 </html>
