@@ -125,7 +125,7 @@ body{
     }
     #hcont .header .right .links a:hover, #hcont .header .right .links a:focus-visible, #hcont .header .right .accountBox:hover p, #hcont .header .right .accountBox:focus-visible p{
         color: var(--header-a-hover);
-        font-weight: 400;
+        font-weight: bold;
         cursor: pointer;
     }
     #hcont .header .right .accountBox{
@@ -259,7 +259,7 @@ body{
     }
     #hcont .header .right .links a:hover, #hcont .header .right .links a:focus-visible, #hcont .header .right .accountBox:hover p, #hcont .header .right .accountBox:focus-visible p{
         color: var(--header-a-hover);
-        font-weight: 400;
+        font-weight: bold;
         cursor: pointer;
     }
     #hcont .header .right .accountBox{
@@ -318,7 +318,7 @@ body{
 }
 #fcont a:hover, #fcont a:focus-visible{
     color: var(--footer-hover);
-    font-weight: 500;
+    font-weight: bold;
 }
 #fcont .footer-table{
     display: flex;

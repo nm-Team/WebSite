@@ -15,6 +15,11 @@
     --grey3: #e1e1e1;
     --grey4: #808080;
     --grey5: #5a5a5a;
+    --index-text-yellow: #e8c200;
+    --index-button-background: #ffffff99;
+    --index-button-hover-background: #fff;
+    --index-button-border: rgb(41, 41, 41);
+    --index-button-border-b: rgb(147 147 147 / 30%);
 }
 body{
     background: #fff;
@@ -33,6 +38,11 @@ body{
         --grey3: #666666;
         --grey4: #515151;
         --grey5: #d8d8d8;
+        --index-text-yellow: #f1d442;
+        --index-button-background: #20202099;
+        --index-button-hover-background: rgba(41, 41, 41, 0.705);
+        --index-button-border: rgb(196, 196, 196);
+        --index-button-border-b: rgba(196, 196, 196, 0.5);
     }
     body{
         color: white;
@@ -41,10 +51,16 @@ body{
 }
 body{
     line-height: normal;
-    font-family: PingFangSC-Regular;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,NotoSansHansRegular,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,Microsoft YaHei,sans-serif;
     margin: 0;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+/* @font-face {
+    font-family: 'NotoSansHansRegular';
+    src: url('https://websiteres.nmteam.xyz/nmwebsite/font/NotoSansSC.otf');
+    src: local('NotoSansHans Regular'),
+    local('NotoSansHans'),
+} */
 *:focus-visible{
     outline: 3px solid rgb(250 187 0 / 60%);
 }
@@ -184,14 +200,14 @@ beta-tag{
     position: relative;
     margin: 0;
     padding: 10px 10%;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
     color: var(--text-yellow);
 }
 .main h1{
     padding: 10px 10%;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
     color: var(--text-yellow);
 }
@@ -228,6 +244,51 @@ beta-tag{
 .indexMoreLink:hover{
     opacity: 0.7;
 }
+.indexMoreLinks{
+    display: flex;
+    margin: 14px 0 5px 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.indexMoreLinks a:not(.tip){
+    display: flex;
+    flex-direction: row;
+    outline: none;
+    margin: 2px;
+    padding: 8px 12px;
+    border: 1.6px solid #ffffff00;
+    border-color: var(--index-button-border-b);
+    border-radius: 300px;
+    text-decoration: none!important;
+    color: var(--text)!important;
+    background: var(--index-button-background);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    transition: all 0.33s;
+}
+.indexMoreLinks a:not(.tip):hover, .indexMoreLinks a:not(.tip):focus-visible{
+    background: var(--index-button-hover-background);
+    border: 1.6px solid var(--index-button-border);
+}
+.indexMoreLinks a:not(.tip):not(*[data-button-type=no]):focus-visible, .indexMoreLinks a:not(.tip):not(*[data-button-type=no]):hover{
+    padding: 8px 11px;
+}
+.indexMoreLinks a:not(.tip) span{
+    font-weight: bold;
+}
+.indexMoreLinks a:not(.tip) .svg{
+    margin: 1.5px -2px 0 2px;
+    width: 15px;
+    height: 15px;
+    fill: var(--text);
+    opacity: 0.8;
+    transition: all 0.33s;
+}
+.indexMoreLinks a:not(.tip):focus-visible .svg, .indexMoreLinks a:not(.tip):hover .svg{
+    margin-left: 4px;
+    opacity: 1;
+}
 @-webkit-keyframes stretchdelay{
 
     0%, 40%, 100%{
@@ -261,6 +322,65 @@ beta-tag{
     }
     100%{
     }
+}
+.tabView{
+    
+}
+.tabHeader{
+    overflow: visible;
+    overflow-x: auto;
+    /* overflow-x: overlay; */
+    white-space: nowrap;
+    /* height: 50px; */
+    display: flex;
+    border-radius: 6px 6px 0 0;
+    justify-content: flex-start;
+    align-items: flex-end;
+    scrollbar-width: thin;
+}
+.tabHeader button{
+    border: none;
+    outline: none;
+    background: var(--grey1);
+    color: var(--text);
+    padding: 12px 12px 8px 12px;
+    margin: 0px 4px 0 0px;
+    border-radius: 6px 6px 0 0;
+    font-size: 16px;
+    transition: padding 0.2s;
+}
+.tabHeader *:last-child{
+    margin-right: 0;
+}
+.tabHeader button:hover, .tabHeader button:focus-visible{
+    padding-bottom: 12px;
+    filter: brightness(0.94);
+}
+.tabHeader button[data-status=focus]{
+    font-weight: bold;
+    background: var(--logolike-yellow-lighter);
+    color: #000;
+    padding-bottom: 12px;
+}
+.tabContents{
+    border: 1px solid var(--logolike-yellow-lighter);
+    border-radius: 0 0 6px 6px;
+    min-height: 100px;
+    transition: all 0.3s;
+}
+.tabContents .content{
+    display: none;
+    visibility: hidden;
+    /* max-height: 0; */
+    padding: 0 10px;
+    overflow: hidden;
+}
+.tabContents .content[data-status=focus]{
+    display: block;
+    visibility: visible;
+    /* max-height: 80vh; */
+    padding: 12px 20px;
+    /* overflow: auto; */
 }
 .pageConfirmDialog{
     visibility: hidden;
@@ -326,4 +446,7 @@ beta-tag{
     z-index: 9999;
     margin: 0;
     padding: 0;
+}
+.tabContents .indexMoreLinks{
+    justify-content: left;
 }

@@ -85,7 +85,7 @@ bs{
     padding: 8px 11px;
 }
 .products-page .opes a:not(.tip) span{
-    font-weight: 500;
+    font-weight: bold;
 }
 .products-page .opes a:not(.tip) .svg{
     margin: 1.5px -2px 0 2px;

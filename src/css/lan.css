@@ -35,7 +35,7 @@ body{
     padding: 19px 23px;
     border: 2px solid var(--lan-active-border);
     color: var(--lan-active-text);
-    font-weight: 500;
+    font-weight: bold;
 }
 @media (min-width:750px) {
     #lanList .selection{
