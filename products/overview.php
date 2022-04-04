@@ -20,4 +20,5 @@ setHeader();
 <div class="products_footer">
 	<div id="products_footer_explain_by_javascript"></div>
 </div>
+<div id="products_child_inner"></div>
 <?php setFooter(); ?>
