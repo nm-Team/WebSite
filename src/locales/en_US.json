@@ -4,7 +4,8 @@
 		"site_intro": "nmTeam is a team that makes nmProducts to the world with incredible thoughts.",
 		"page_not_found": {
 			"title": "Page Not Found",
-			"img_title": "The code 404 means that the page you are looking for is not found."
+			"img_title": "The code 404 means that the page you are looking for is not found.",
+			"home": "Home"
 		}
 	},
 	"about": {

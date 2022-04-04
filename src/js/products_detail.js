@@ -1,5 +1,5 @@
 try {
-    productsJson = JSON.parse(loadc("/src/json/products/" + language + "/" + getUrlParam("product") + ".json"));
+    productsJson = JSON.parse(loadc("/src/json/products/" + language + "/" + pName + ".json"));
     products_detail_inner.innerHTML = "";
     console.log("Get product detail JSON file. ");
     tipsNum = 0;

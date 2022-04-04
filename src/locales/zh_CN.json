@@ -4,7 +4,8 @@
 		"site_intro": "nmTeam 凭借非凡创意，为世界创造无与伦比的nm产品。",
 		"page_not_found": {
 			"title": "找不到页面",
-			"img_title": "404 表明无法找到此页面"
+			"img_title": "404 表明无法找到此页面",
+			"home": "主页"
 		}
 	},
 	"about": {

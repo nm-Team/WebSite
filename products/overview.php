@@ -13,6 +13,7 @@ setHeader();
 <!-- 过渡i18n方案 -->
 <script>
 	productI18n = <?php echo json_encode(t("products")); ?>;
+	pName = "<?php echo $_GET["product"]; ?>";
 </script>
 <!-- 过渡页面，以后将使用php改写 -->
 <div class="products-detail products-page" id="products_detail_inner"></div>
