@@ -47,10 +47,6 @@
 		}
 	},
 	"footer": {
-		"auto": "Auto select",
-		"browserafter": ". ",
-		"browserbefore": "We suggest you surf our site with",
-		"browsermiddle": "or",
 		"cr": "Copyright nmTeam. All rights reserved.",
 		"email": "E-mail: ",
 		"language": "Select Language: ",
@@ -154,11 +150,11 @@
 			"more": {
 				"resources": {
 					"title": "Related information",
-					"nmteam_member_rules": "nmTeam member work and management rules (in development)"
+					"nmteam_member_rules": "nmTeam member work and management rules (Under development)"
 				},
 				"already_been_member": {
 					"title": "Already a member of nmTeam",
-					"panel": "nmTeam work panel (in development)"
+					"panel": "nmTeam work panel (Under development)"
 				}
 			},
 			"publicity": "nmTeam joining rules are being announced and may be revised at any time. Please send feedback to nmTeam via email: support@nmteam.xyz"
