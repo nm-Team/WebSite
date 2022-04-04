@@ -74,7 +74,6 @@ function setHeader()
             echo "<link rel='stylesheet' type='text/css' href='" . $value . "'>";
         }
         ?>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8202YMVF5B"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -191,7 +190,7 @@ function setFooter()
                         <div class="rowName"><?php p("footer.table.service.title"); ?></div>
                         <a href="https://accounts.nmteam.xyz" target="blank"><?php p("footer.table.service.accountCenter"); ?></a>
                         <a href="/status" target="blank"><?php p("footer.table.service.systemStatus"); ?></a>
-                        <a href="javascript:alert('<?php p("comes_soon");?>')"><?php p("footer.table.service.support"); ?></a>
+                        <a href="javascript:alert('<?php p("comes_soon"); ?>')"><?php p("footer.table.service.support"); ?></a>
                     </div>
                     <div class="row">
                         <div class="rowName"><?php p("footer.table.about.title"); ?></div>
@@ -226,7 +225,7 @@ function setFooter()
                                 margin: 6px 0px 0 0 !important;
                             }
                         </style>
-                        <p><a href="/status" target="_blank" title="Freshping Badge"><object>
+                        <p><a href="/status" target="_blank" title="Freshping Badge. <?php p("status_page.description"); ?>"><object>
                                     <div class="freshping_badge"></div>
                                 </object></a></p>
                     </div>
