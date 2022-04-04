@@ -2,8 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /src/
 Disallow: 404
-Disallow: 404
-Disallow: header
-Disallow: header
-Disallow: footer
-Disallow: footer
+Disallow: functions

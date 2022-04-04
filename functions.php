@@ -183,9 +183,9 @@ function setFooter()
                     <div class="row">
                         <div class="rowName"><?php p("footer.table.products.title"); ?></div>
                         <a href="/products/"><?php p("footer.table.products.library"); ?></a>
-                        <a href="/products/overview?product=nmFun">nmFun</a>
-                        <a href="/products/overview?product=nmChat">nmChat</a>
-                        <a href="/products/overview?product=nmBrowser-StartPage"><?php p("footer.table.products.nmBrowserStartPage"); ?></a>
+                        <a href="/products/overview/nmFun">nmFun</a>
+                        <a href="/products/overview/nmChat">nmChat</a>
+                        <a href="/products/overview/nmBrowser-StartPage"><?php p("footer.table.products.nmBrowserStartPage"); ?></a>
                     </div>
                     <div class="row">
                         <div class="rowName"><?php p("footer.table.service.title"); ?></div>

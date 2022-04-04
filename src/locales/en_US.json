@@ -149,8 +149,8 @@
 					"english": "Mastering a certain foreign language is preferred"
 				}
 			},
-			"register": "Join",
-			"language_request": "Only recruit members who can communicate with each other fluently in Chinese.",
+			"register": "Register",
+			"language_request": "We only recruit members who can communicate with each other fluently in Chinese now.",
 			"more": {
 				"resources": {
 					"title": "Related information",
@@ -164,7 +164,7 @@
 			"publicity": "nmTeam joining rules are being announced and may be revised at any time. Please send feedback to nmTeam via email: support@nmteam.xyz"
 		},
 		"join_register_page": {
-			"title": "Apply to join nmTeam",
+			"title": "Apply to Join nmTeam",
 			"description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
 			"tip": "Sorry, the application for joining nmTeam has not been officially opened yet, please check again in two days."
 		}
@@ -173,14 +173,14 @@
 		"page": {
 			"title": "Change Language",
 			"tip": "Browse nmTeam website in a language that you are familiar with. Some content may not be displayed in the language you selected.",
-			"auto": "Auto select"
+			"auto": "Auto Select"
 		}
 	},
-	"page_update": "Page updated on: {year}-{month}-{day}",
+	"page_update": "Page updated on: {month}/{day}/{year}",
 	"products": {
 		"title": "Products",
 		"description": "See nmTeam's wonderful nmProducts",
-		"noresult": "No nmTeam product available in your country or region was found.",
+		"noresult": "No nmProduct available in your country or region was found.",
 		"unavaliable": "This product does not exist or cannot be used in your country or region.",
 		"explain": "Explanation: Only display nmTeam products available in your country or region. To view nmTeam products available in other countries or regions, please change the language of the nmTeam website. Try to set the language to simplified Chinese to get the most results.",
 		"error": "Oops, Something went wrong.",

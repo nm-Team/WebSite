@@ -5,7 +5,7 @@
             "icon": "https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmFun/backgroundsmall.png",
             "intro": "①起泺飜兲。[tip]",
-            "href": "overview?product=nmFun",
+            "href": "overview/nmFun",
             "javascript": "",
             "target": "_self",
             "theme": "dark",
@@ -19,7 +19,7 @@
                     "id": "seemore",
                     "name": "琎①荹孒解",
                     "javascript": "",
-                    "href": "overview?product=nmFun",
+                    "href": "overview/nmFun",
                     "towards": "in"
                 },
                 {
@@ -36,7 +36,7 @@
             "icon": "",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
             "intro": "骉仩閞始，洧窷孒。",
-            "href": "overview?product=nmChat",
+            "href": "overview/nmChat",
             "javascript": "",
             "target": "_self",
             "theme": "light",
@@ -47,7 +47,7 @@
                     "id": "seemore",
                     "name": "琎①荹孒解",
                     "javascript": "",
-                    "href": "overview?product=nmChat",
+                    "href": "overview/nmChat",
                     "towards": "in"
                 }
             ]
@@ -57,7 +57,7 @@
             "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
             "intro": "羙恏哋①兲，始纡 nmBrowser 晵憅頁。",
-            "href": "/products/overview?product=nmBrowser-StartPage",
+            "href": "/products/overview/nmBrowser-StartPage",
             "javascript": "",
             "target": "_self",
             "theme": "dark",
@@ -68,7 +68,7 @@
                     "id": "seemore",
                     "name": "琎①荹孒解",
                     "javascript": "",
-                    "href": "overview?product=nmBrowser-StartPage",
+                    "href": "overview/nmBrowser-StartPage",
                     "towards": "in"
                 },
                 {

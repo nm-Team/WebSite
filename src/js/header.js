@@ -67,9 +67,9 @@ window.onresize = function () {
 }
 
 // Cookie 提示 
-if (localStorage.cookieTipv0Checked != "true")
+if (localStorage.cookieTipv0Checked != "true") setTimeout(() => {
 	pageCookieConfirmDialog.setAttribute("data-status", "open");
-;
+}, 3000);
 
 function getCookie(cname) {
 	var name = cname + "=";
