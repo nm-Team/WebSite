@@ -5,7 +5,7 @@
             "icon": "",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
             "intro": "Let's go chat. ",
-            "href": "overview.html?product=nmChat&lan=en_US",
+            "href": "overview?product=nmChat&lan=en_US",
             "javascript": "",
             "target": "_self",
             "theme": "light",
@@ -16,7 +16,7 @@
                     "id": "seemore",
                     "name": "Learn more (English)",
                     "javascript": "",
-                    "href": "overview.html?product=nmChat&lan=en_US",
+                    "href": "overview?product=nmChat&lan=en_US",
                     "towards": "in"
                 }
             ]
@@ -26,7 +26,7 @@
             "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
             "intro": "Good day from StartPage.",
-            "href": "/products/overview.html?product=nmBrowser-StartPage&lan=en_US",
+            "href": "/products/overview?product=nmBrowser-StartPage&lan=en_US",
             "javascript": "",
             "target": "_self",
             "theme": "dark",
@@ -37,7 +37,7 @@
                     "id": "seemore",
                     "name": "Learn more (English)",
                     "javascript": "",
-                    "href": "overview.html?product=nmBrowser-StartPage&lan=en_US",
+                    "href": "overview?product=nmBrowser-StartPage&lan=en_US",
                     "towards": "in"
                 },
                 {

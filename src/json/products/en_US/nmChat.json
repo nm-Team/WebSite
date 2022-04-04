@@ -309,7 +309,7 @@
                                         "id": "seemore",
                                         "name": "View nmTeam privacy policy",
                                         "javascript": "",
-                                        "href": "/legal/privacy-policy.html",
+                                        "href": "/legal/privacy-policy",
                                         "towards": "out"
                                     }
                                 ]

@@ -35,9 +35,8 @@ try {
 }
 catch (err) {
     console.error(err);
-    products_detail_inner.innerHTML = "<div class='msg' data-i18n='products.noavaliable'></div>";
-    document.title = "Product Not Found " + document.title;
-    changeLanguage();
+    products_detail_inner.innerHTML = "<div class='msg'>" + productI18n.unavaliable + "</div>";
+    document.title = productI18n.notfound + document.title;
 }
 
 // 定时操作

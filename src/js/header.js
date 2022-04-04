@@ -10,10 +10,6 @@ function loadc(name) {
 	xhr.send(null);
 	return xhr.status === okStatus ? xhr.responseText : null;
 }
-c = loadc("/header.html");
-hcont.innerHTML = c;
-c = loadc("/footer.html");
-fcont.innerHTML = c;
 
 // 页面更新日期
 if (fcont.getAttribute("updatetime") && fcont.getAttribute("updatetime").length == 8) {
@@ -30,28 +26,25 @@ function setHeader() {
 
 // 登录账户
 window.onload = function () {
-	$("#footer_selectLanguageButton span")[0].innerHTML = (languageList[language]);
 	if (enableAccount) {
 		returnWord = "";
 		getInfo(function () {
 			accountInfo = returnWord;
 			accountBox.setAttribute("onclick", "window.location.href='" + logURL + "?name=target.website&returnto=" + window.location.href + "&msg=msg.website'");
 			if (accountInfo == -1) {
-				userName.innerHTML = "<span data-i18n='account.click_to_log'></span>";
+				userName.innerHTML = accountI18n.click_to_log;
 			}
 			else if (accountInfo == -2) {
-				userName.innerHTML = "<span data-i18n='account.unable_to_load'></span>";
+				userName.innerHTML = accountI18n.unable_to_load;
 			}
 			else {
 				avatarBox.setAttribute("style", "background-image:url(" + accountInfo['avatar'] + ")");
 				userName.innerHTML = accountInfo['nick'];
-				accountBox.setAttribute("onclick", "window.open('" + logURL + "/info.html?sessionid=" + getCookie("PHPSESSID") + "')");
+				accountBox.setAttribute("onclick", "window.open('" + logURL + "/info?sessionid=" + getCookie("PHPSESSID") + "')");
 			}
-			changeLanguage();
 		});
 	}
-	else userName.innerHTML = "<span data-i18n='account.click_to_log'></span>";
-	changeLanguage();
+	else userName.innerHTML = accountI18n.click_to_log;
 }
 
 function headerClick() {
@@ -73,12 +66,42 @@ window.onresize = function () {
 	document.body.style.overflow = "auto";
 }
 
-// footer 切换语言按钮
-footer_selectLanguageButton.onclick = function () {
-	window.location.href = window.location.origin + "/language.html?bks=" + escape(window.location.href);
+// Cookie 提示 
+if (localStorage.cookieTipv0Checked != "true")
+	pageCookieConfirmDialog.setAttribute("data-status", "open");
+;
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i].trim();
+		if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+	}
+	return "";
 }
 
-// Cookie 提示 
-if (localStorage.cookieTipv0Checked != "true") setTimeout(() => {
-	pageCookieConfirmDialog.setAttribute("data-status", "open");
-}, 3000);
+function getUrlParam(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+	var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+	if (r != null) return unescape(r[2]); return null; //返回参数值
+}
+
+function changeURLParam(name, value) {
+	var url = document.URL, resultUrl = '';
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	var r = window.location.search.substr(1).match(reg);
+	var replaceText = name + '=' + value;
+	if (r != null) {
+		var tmp = url.replace(unescape(name + '=' + r[2]), replaceText);
+		resultUrl = (tmp);
+	} else {
+		if (url.match('[\?]')) {
+			resultUrl = url + '&' + replaceText;
+		}
+		else {
+			resultUrl = url + '?' + replaceText;
+		}
+	}
+	history.replaceState(null, null, resultUrl);
+}

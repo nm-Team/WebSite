@@ -5,7 +5,7 @@ try {
     tipsNum = 0;
     if (productsJson.length == 0) {
         products_overview_inner.innerHTML = "<div class='msg' data-i18n='products.noresult'>" + "</div>";
-        changeLanguage();
+        
     }
     for (i in productsJson) {
         sTipsNum = 0;
@@ -20,5 +20,5 @@ try {
     }
 }
 catch (err) {
-    products_overview_inner.innerHTML = "<div class='msg'>:(<br><br>" + i18n.t("products.error") + "</div>";
+    products_overview_inner.innerHTML = "<div class='msg'>:(<br><br>" + productI18n.error + "</div>";
 }

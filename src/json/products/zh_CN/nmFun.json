@@ -24,7 +24,7 @@
             {
                 "id": "qichengceshi",
                 "name": "启程测试[tip]",
-                "javascript": "window.open('/blackboard/2021/11/nmfun-prestart-test.html?from=nmfun_intro')",
+                "javascript": "window.open('/blackboard/2021/11/nmfun-prestart-test?from=nmfun_intro')",
                 "href": "",
                 "towards": "in",
                 "tip": [
@@ -282,7 +282,7 @@
                                         "id": "seemore",
                                         "name": "查看 nmTeam 隐私政策",
                                         "javascript": "",
-                                        "href": "/legal/privacy-policy.html",
+                                        "href": "/legal/privacy-policy",
                                         "towards": "out"
                                     }
                                 ]

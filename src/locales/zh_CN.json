@@ -1,4 +1,12 @@
 {
+	"pagebases": {
+		"official_website": "官方网站",
+		"site_intro": "nmTeam 凭借非凡创意，为世界创造无与伦比的nm产品。",
+		"page_not_found": {
+			"title": "找不到页面",
+			"img_title": "404 表明无法找到此页面"
+		}
+	},
 	"about": {
 		"0": "自称“自主 nm 机器人”的 XYZ1024 可是 nm 的好手。有人在 Sakura Frp 群里说话的时候，他总是回复一句“*nm”，举个例子：",
 		"1": "——Android 怎么用 Mac 啊",
@@ -12,11 +20,13 @@
 		"h0": "然而我们连 Slogan 都没有想好。",
 		"h1": "想知道 nm 这个词儿是怎么来的吗？",
 		"h2": "你也想加入 nmTeam 了吗？",
-		"title": "关于 nmTeam"
+		"title": "关于 nmTeam",
+		"description": "了解 nmTeam 的历史与含义吧。"
 	},
 	"account": {
+		"loading": "加载中...",
 		"click_to_log": "点击登录",
-		"unable_to_load": "无法连接登录服务器"
+		"unable_to_load": "加载出错"
 	},
 	"comes_soon": "此页面正在制作中，敬请期待！",
 	"cookie": {
@@ -24,7 +34,7 @@
 			"header": "关于 Cookie",
 			"body": {
 				"0": "nmTeam 网站及服务使用 Cookie 存储访客的基本信息和用户的账号等信息。",
-				"1": "所有 Cookie 依照《nmTeam 隐私政策》进行管理。"
+				"1": "所有 Cookie 依照<a href='/legal/privacy-policy.php'>《nmTeam 隐私政策》</a>进行管理。"
 			},
 			"button": {
 				"accept": "接受并继续",
@@ -72,8 +82,6 @@
 	"header": {
 		"about": "关于",
 		"home": "主页",
-		"ihaveline": "我是有底线的QWQ",
-		"login": "点击登录",
 		"newsroom": "Newsroom",
 		"products": "产品",
 		"support": "支持"
@@ -94,7 +102,7 @@
 		"nmteam_is_this_a": "nmTeam 于 2021 年 6 月 14 日成立，致力于为人们提供十分 nm 的产品和服务。nmTeam 现由 agou 作为 CEO，将陆续推出更多 nmServices。",
 		"nmteam_is_this_b": "nmTeam 可能会倒闭，但永远不会变质！",
 		"nmteam_about_link": "关于 nmTeam",
-		"title": "nmTeam - Official Website",
+		"title": "",
 		"what_is_nmteam": "nmTeam 是什么？",
 		"what_we_does": "nmTeam 造就 nmProducts",
 		"what_we_does_ans": "nmTeam 致力于制作 nmProducts。在下方查看我们的一些产品。"
@@ -102,6 +110,7 @@
 	"join": {
 		"join_requirement_page": {
 			"title": "欢迎加入 nmTeam！",
+			"description": "加入 nmTeam，和我们一起发扬 nm 文化，共建 nm 生态。",
 			"intro": {
 				"0": "你知道吗？nmTeam 拥有和谐的团队氛围和自由的管理安排。",
 				"1": "加入 nmTeam 将是一个简单又愉快的过程——你的才能将对我们最新的产品大有裨益，我们甚至可以为你量身定制专属产品！而且你的努力会有丰富的回报，你对nmTeam的贡献还可以获得公开表扬和不少的奖金；在加入nmTeam之后，就算你没有太多贡献，也不会受到批评。所以快来找到自己中意的位置，即刻加入 nmTeam！",
@@ -154,6 +163,7 @@
 			"publicity": "nmTeam 加入规则正在公示中，并可能随时修改。请通过电子邮箱向 nmTeam 反馈：support@nmteam.xyz"
 		},
 		"join_register_page": {
+			"description": "加入 nmTeam，和我们一起发扬 nm 文化，共建 nm 生态。",
 			"title": "申请加入 nmTeam",
 			"tip": "抱歉，还未正式开放 nmTeam 加入申请，请过两天再看看。"
 		}
@@ -161,28 +171,39 @@
 	"language": {
 		"page": {
 			"title": "切换语言",
-			"tip": "以您熟悉的语言浏览 nmTeam 网站。某些内容可能不会以您选定的语言显示。"
+			"tip": "以您熟悉的语言浏览 nmTeam 网站。某些内容可能不会以您选定的语言显示。",
+			"auto": "自动选择"
 		}
 	},
-	"page_update": "页面更新日期：",
-	"page_update_d": " 日 ",
-	"page_update_m": " 月 ",
-	"page_update_y": " 年 ",
+	"legal": {
+		"nsp": "网络服务使用协议",
+		"pp": "隐私政策",
+		"description": "查看 nmTeam 服务条款。"
+	},
+	"page_update": "页面更新日期：{year} 年 {month} 月 {day} 日",
 	"products": {
 		"title": "产品",
+		"description": "查看 nmTeam 的精彩产品。",
 		"noresult": "找不到在您的国家或地区可用的 nmTeam 产品。",
-		"noavaliable": "此产品不存在或无法在您的国家或地区使用。",
+		"unavaliable": "此产品不存在或无法在您的国家或地区使用。",
 		"explain": "说明：仅展示在您的国家或地区可用的 nmTeam 产品。要查看在其它国家或地区可用的 nmTeam 产品，请更改 nmTeam 网站的语言。",
-		"error": "发生了一些错误。"
+		"error": "发生了一些错误。",
+		"notfound": "未找到产品"
+	},
+	"sitemap": {
+		"title": "站点地图",
+		"description": "查看 nmTeam 站点地图，快速定向您喜爱的 nmTeam 网站页面。"
+	},
+	"status_page": {
+		"title": "nmTeam 系统状态",
+		"description": "跟踪 nmTeam 各服务的工作状态。",
+		"redirecting": "正在重定向到 nmTeam 系统状态独立页面..."
 	},
 	"supportus": {
-		"h0": "支持 nmTeam",
-		"h1": "鸣谢支持者",
+		"title": "支持 nmTeam",
+		"description": "支持 nmTeam，帮助我们走得更远。",
+		"tks_supporter": "鸣谢支持者",
 		"l0": "在“爱发电”上支持我们走得更远 >",
-		"p0": "nmTeam 坚信自己的存在为人们带来了独特的价值。",
-		"p1": "如果您也认同这一点，不妨在“爱发电”上支持 nmTeam，让我们能走的更远。",
-		"p2": "nmTeam 会将这些捐助资金用于 nmTeam 的研发和日常开支，或者用于买一杯咖啡。",
-		"p3": "无论您通过何种方式支持 nmTeam，我们都对您表示衷心的感谢。有了您的一片心意，我们必定更加努力。",
-		"title": "支持 nmTeam"
+		"para": "nmTeam 坚信自己的存在为人们带来了独特的价值。<br>如果您也认同这一点，不妨在“爱发电”上支持 nmTeam，让我们能走的更远。<br>nmTeam 会将这些捐助资金用于 nmTeam 的研发和日常开支，或者用于买一杯咖啡。<br>无论您通过何种方式支持 nmTeam，我们都对您表示衷心的感谢。有了您的一片心意，我们必定更加努力。"
 	}
 }

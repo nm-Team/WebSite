@@ -274,7 +274,7 @@
                                         "id": "seemore",
                                         "name": "View nmTeam Privacy Policy",
                                         "javascript": "",
-                                        "href": "/legal/privacy-policy.html",
+                                        "href": "/legal/privacy-policy",
                                         "towards": "out"
                                     }
                                 ]

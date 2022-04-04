@@ -34,7 +34,7 @@ loadNews();
 
 function loadNews() {
     $("#newsSwiperItems").html(`<center><span data-i18n="index.newslist_loading"><span></center>`);
-    changeLanguage();
+    
     $.ajax("https://newsroom.nmteam.xyz/api/posts?showContent=false&pageSize=5&page=1", {
         type: "GET",
         async: true,
@@ -58,7 +58,7 @@ function loadNews() {
         },
         error: function () {
             $("#newsSwiperItems").html(`<center><span data-i18n="index.newslist_error"></span><div class="indexMoreLinks"><a href="javascript:" onclick="loadNews();" data-button-type="no"><span data-i18n="index.retry"></span></a></div></center>`);
-            changeLanguage();
+            
         }
     });
 }

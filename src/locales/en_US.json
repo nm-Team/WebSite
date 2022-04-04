@@ -1,4 +1,12 @@
 {
+	"pagebases": {
+		"official_website": "Official Website",
+		"site_intro": "nmTeam is a team that makes nmProducts to the world with incredible thoughts.",
+		"page_not_found": {
+			"title": "Page Not Found",
+			"img_title": "The code 404 means that the page you are looking for is not found."
+		}
+	},
 	"about": {
 		"0": "XYZ1024 (self-proclaimed \"self-learning robot\") is a senior nm person. When someone sends a message in the Sakura Frp official group chat, XYZ1024 often responds in the form of \"*nm\". E.g:",
 		"1": "——How to use Mac with Android?",
@@ -12,11 +20,13 @@
 		"h0": "Unfortunately, we didn't even think about slogan.",
 		"h1": "Want to know the origin of nm?",
 		"h2": "Want to join us?",
-		"title": "About nmTeam"
+		"title": "About nmTeam",
+		"description": "Know the meaning and history of nm in this page."
 	},
 	"account": {
-		"click_to_log": "Click to login",
-		"unable_to_load": "Unable to connect to login server"
+		"loading": "Loading...",
+		"click_to_log": "Click to Login",
+		"unable_to_load": "Error"
 	},
 	"comes_soon": "This page is in production, so stay tuned! ",
 	"cookie": {
@@ -24,7 +34,7 @@
 			"header": "About Cookies",
 			"body": {
 				"0": "nmTeam website and services use cookies to store basic visitor information and user account information.",
-				"1": "All cookies are managed in accordance with the nmTeam Privacy Policy."
+				"1": "All cookies are managed in accordance with <a href='/legal/privacy-policy.php'>the nmTeam Privacy Policy</a>."
 			},
 			"button": {
 				"accept": "Accept & Continue",
@@ -72,8 +82,6 @@
 	"header": {
 		"about": "About",
 		"home": "Home",
-		"ihaveline": "There's no more things here. ",
-		"login": "Log in",
 		"newsroom": "Newsroom",
 		"products": "Products",
 		"support": "Support"
@@ -94,7 +102,7 @@
 		"nmteam_is_this_a": "Established on June 14, 2021, nmTeam is committed to providing people with very nm products and services. nmTeam now has agou as the CEO, and more nmServices will be launched one after another.",
 		"nmteam_is_this_b": "nmTeam may go bankrupt, but it will never deteriorate! ",
 		"nmteam_about_link": "View About Page",
-		"title": "nmTeam - Official Website",
+		"title": "",
 		"what_is_nmteam": "What is nmTeam?",
 		"what_we_does": "nmTeam makes nmProducts",
 		"what_we_does_ans": "nmTeam is committed to making nmProducts. Check out some of our products below. "
@@ -102,6 +110,7 @@
 	"join": {
 		"join_requirement_page": {
 			"title": "Welcome to join nmTeam!",
+			"description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
 			"intro": {
 				"0": "Do you know that nmTeam has a harmonious team atmosphere and free management arrangements?",
 				"1": "Joining nmTeam will be an easy and enjoyable process - your talents will be of great benefit to our latest products, and we can even create exclusive products for you! What's more, your hard work will be rewarded richly, your contribution to nmTeam can also get public praise and a lot of bonuses. After joining nmTeam, even if you don't contribute too much, you will not be criticized. So come and find your favorite job and join nmTeam immediately!",
@@ -155,38 +164,41 @@
 		},
 		"join_register_page": {
 			"title": "Apply to join nmTeam",
+			"description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
 			"tip": "Sorry, the application for joining nmTeam has not been officially opened yet, please check again in two days."
 		}
 	},
 	"language": {
 		"page": {
 			"title": "Change Language",
-			"tip": "Browse nmTeam website in a language that you are familiar with. Some content may not be displayed in the language you selected."
+			"tip": "Browse nmTeam website in a language that you are familiar with. Some content may not be displayed in the language you selected.",
+			"auto": "Auto select"
 		}
 	},
-	"page_update": "Page updated on: ",
-	"page_update_d": "",
-	"page_update_m": "-",
-	"page_update_y": "-",
+	"page_update": "Page updated on: {year}-{month}-{day}",
 	"products": {
 		"title": "Products",
+		"description": "See nmTeam's wonderful nmProducts",
 		"noresult": "No nmTeam product available in your country or region was found.",
-		"noavaliable": "This product does not exist or cannot be used in your country or region.",
+		"unavaliable": "This product does not exist or cannot be used in your country or region.",
 		"explain": "Explanation: Only display nmTeam products available in your country or region. To view nmTeam products available in other countries or regions, please change the language of the nmTeam website. Try to set the language to simplified Chinese to get the most results.",
-		"error": "Something happened。"
+		"error": "Oops, Something went wrong.",
+		"notfound": "Oops, The product you are looking for does not exist or is unavaliable in your country or region."
+	},
+	"sitemap": {
+		"title": "Sitemap",
+		"description": "View the nmTeam sitemap for quick directions to your favorite nmTeam website pages."
+	},
+	"status_page": {
+		"title": "nmTeam System Status",
+		"description": "Track the working status of each service of nmTeam.",
+		"redirecting": "Redirecting to the nmTeam system status standalone page..."
 	},
 	"supportus": {
-		"h0": "Support nmTeam",
-		"h1": "Thank Our Supporters",
+		"title": "Support nmTeam",
+		"description": "Support nmTeam by donating to the nmTeam project.",
+		"h1": "Thanks Supporters",
 		"l0": "Support Us on \"AiFaDian\" >",
-		"p0": "nmTeam firmly believes that its existence brings unique value to people.",
-		"p1": "If you agree with this point, you may as well support nmTeam on \"Love Power\", so that we can go further.",
-		"p2": "nmTeam will use these donated funds for nmTeam's research and development and daily expenses, or to buy a cup of coffee.",
-		"p3": "No matter how you support nmTeam, we would like to express our heartfelt thanks to you. With your kindness, we must work harder.",
-		"title": "Support nmTeam"
-	},
-	"join_requirement": {
-		"title": "How to Join nmTeam",
-		"h1_0": ""
+		"para": "nmTeam firmly believes that its existence brings unique value to people. <br>If you agree with this point, you may as well support nmTeam on \"Love Power\", so that we can go further. <br>nmTeam will use these donated funds for nmTeam's research and development and daily expenses, or to buy a cup of coffee. <br>No matter how you support nmTeam, we would like to express our heartfelt thanks to you. With your kindness, we must work harder."
 	}
 }
