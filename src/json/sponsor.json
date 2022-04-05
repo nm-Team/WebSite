@@ -1,0 +1,21 @@
+{
+    "update": "20220405",
+    "sponsor": [
+        {
+            "name": "萝卜炖鱼丸",
+            "avatar": "https://pic1.afdiancdn.com/user/f2178e768f5f11ec9d5052540025c377/avatar/09d0717c499b8f0bcd5e8d0e2b329da4_w640_h640_s27.jpg?imageView2/1/w/240/h/240",
+            "amount": "13.20"
+        },
+        {
+            "name": "桥粮",
+            "avatar": "https://pic1.afdiancdn.com/user/e284869870c811e9957452540025c377/avatar/5f6b2b632b7479e95e2824ec529045a5_w861_h1200_s788.jpg?imageView2/1/w/240/h/240",
+            "amount": "6.66"
+        },
+        {
+            "name": "JimWong",
+            "avatar": "https://pic1.afdiancdn.com/user/6db11fe4139011ecb80052540025c377/avatar/13b2c47e85c2fc5b62666dfb25be0758_w700_h700_s514.jpg?imageView2/1/w/240/h/240",
+            "amount": "6.60"
+        }
+    ],
+    "other": []
+}

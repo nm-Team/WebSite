@@ -59,7 +59,7 @@
 				"aboutUs": "About nmTeam",
 				"joinUs": "Join nmTeam",
 				"newsroom": "Newsroom",
-				"supportUs": "Support nmTeam",
+				"supportUs": "Sponsor nmTeam",
 				"title": "About"
 			},
 			"products": {
@@ -192,10 +192,21 @@
 		"redirecting": "Redirecting to the nmTeam system status standalone page..."
 	},
 	"supportus": {
-		"title": "Support nmTeam",
-		"description": "Support nmTeam by donating to the nmTeam project.",
-		"h1": "Thanks Supporters",
-		"l0": "Support Us on \"AiFaDian\" >",
-		"para": "nmTeam firmly believes that its existence brings unique value to people. <br>If you agree with this point, you may as well support nmTeam on \"Love Power\", so that we can go further. <br>nmTeam will use these donated funds for nmTeam's research and development and daily expenses, or to buy a cup of coffee. <br>No matter how you support nmTeam, we would like to express our heartfelt thanks to you. With your kindness, we must work harder."
+		"title": "Sponsor nmTeam",
+		"description": "Sponsor nmTeam to help us go further.",
+		"tks_sponsor": "Thanks to Our Sponsors",
+		"tks_other": "Thanks to Other nmTeam Contributors",
+		"links": {
+			"afdian": "AFDian",
+			"patreon": "Patreon"
+		},
+		"para": "nmTeam believes that its existence brings unique value to people.<br>If you agree with this, you may wish to sponsor nmTeam so that we can go further.<br>nmTeam will use these donation funds to For nmTeam's R&D and overhead, or to buy a cup of coffee.<br>No matter how you support nmTeam, we thank you really much. With your support, we will continue working hard.",
+		"table": {
+			"name": "Nickname",
+			"amount": "Amount",
+			"avatar": "Avatar",
+			"contribution": "Contribution"
+		},
+		"sponsors_info_note": "The names and avatars of nmTeam sponsors listed above are set by them and have nothing to do with nmTeam.<br>The above sponsorship ways will jump to third-party platforms, nmTeam is not responsible for its content."
 	}
 }

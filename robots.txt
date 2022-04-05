@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /src/
 Disallow: 404
 Disallow: functions

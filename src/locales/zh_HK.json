@@ -59,7 +59,7 @@
 				"aboutUs": "關於 nmTeam",
 				"joinUs": "加入 nmTeam",
 				"newsroom": "Newsroom",
-				"supportUs": "支持 nmTeam",
+				"supportUs": "贊助 nmTeam",
 				"title": "關於"
 			},
 			"products": {
@@ -197,10 +197,21 @@
 		"redirecting": "正在重定向到 nmTeam 系統狀態獨立頁面..."
 	},
 	"supportus": {
-		"title": "支持 nmTeam",
-		"description": "支持 nmTeam，幫助我們走得更遠。",
-		"tks_supporter": "鳴謝支持者",
-		"l0": "在「愛發電」上支持我們走得更遠 >",
-		"para": "nmTeam 堅信自己的存在為人們帶來了獨特的價值。<br>如果您也認同這一點，不妨在「愛發電」上支持 nmTeam，讓我們能走的更遠。<br>nmTeam 會將這些捐助資金用於 nmTeam 的研發和日常開支，或者用於買一杯咖啡。<br>無論您通過何種方式支持 nmTeam，我們都對您表示衷心的感謝。有了您的一片心意，我們必定更加努力。"
+		"title": "贊助 nmTeam",
+		"description": "贊助 nmTeam，幫助我們走得更遠。",
+		"tks_sponsor": "鳴謝贊助者",
+		"tks_other": "鳴謝其他 nmTeam 貢獻者",
+		"links": {
+			"afdian": "愛發電",
+			"patreon": "Patreon"
+		},
+		"para": "nmTeam 堅信自己的存在為人們帶來了獨特的價值。<br>如果您也認同這一點，不妨贊助 nmTeam，讓我們能走的更遠。<br>nmTeam 會將這些捐助資金用於 nmTeam 的研發和日常開支，或者用於買一杯咖啡。<br>無論您通過何種方式支持 nmTeam，我們都對您表示衷心的感謝。有了您的一片心意，我們必定更加努力。",
+		"table": {
+			"name": "昵稱",
+			"amount": "金額",
+			"avatar": "頭像",
+			"contribution": "貢獻"
+		},
+		"sponsors_info_note": "以上所列的 nmTeam 贊助者的姓名和頭像為其自行設定，與 nmTeam 無關。<br>以上贊助渠道將跳轉到第三方平臺，nmTeam 不對其內容負責。"
 	}
 }
