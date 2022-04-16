@@ -1,0 +1,36 @@
+#sTab h2, #sTab h3{
+    text-align: left;
+    margin: 0;
+    padding: 20px 0 20px 0;
+}
+#sTab .chart{
+    background: #fff;
+    border-radius: 2px;
+}
+.overview{
+    display: flex;
+    flex-wrap: wrap;
+}
+.overviewBlock, .overview::after{
+    width: 100px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+.overviewBlock .num{
+    font-size: 25px;
+    color: var(--text-yellow);
+    padding-bottom: 7px;
+}
+.overviewBlock .otitle{
+    font-size: 15px;
+}
+.oSummary{
+    font-size: 15px;
+    line-height: 1.6;
+}
+pre{
+    overflow-x: auto;
+}

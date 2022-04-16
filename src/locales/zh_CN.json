@@ -216,6 +216,49 @@
 				"REACH_ACCOUNY_LIMIT": "超过了账号提交次数",
 				"REACH_IP_LIMIT": "此 IP 的提交频率太频繁，请稍后再试"
 			}
+		},
+		"backstage": {
+			"title": "nmTeam 表单分析数据",
+			"name": "表单：",
+			"tip": {
+				"not_admin": "抱歉，您不是 nmTeam 管理员，没有权限访问此页面。",
+				"not_log": "抱歉，您未登录 nmTeam 管理员账户。",
+				"not_found": "未找到此表单。"
+			},
+			"link": "链接",
+			"data_type": {
+				"analyze": "分析",
+				"origin": "源数据",
+				"preview": "源表单",
+				"JSON": "JSON"
+			},
+			"question_type": {
+				"single": "单项选择",
+				"multiple": "多选",
+				"input": "填空",
+				"textarea": "多行输入",
+				"must_answer": "必填",
+				"chosen_answer": "选填"
+			},
+			"analyze": {
+				"overview": "概览",
+				"result_num": "结果数",
+				"time": "平均用时",
+				"detail": "详情",
+				"percent": "百分比",
+				"keyword": "关键词",
+				"input_rate": "填写率"
+			},
+			"origin": {
+				"id": "ID",
+				"uid": "UID",
+				"ip": "IP",
+				"submit_time": "提交时间",
+				"start_time": "开始填写时间",
+				"time": "耗时",
+				"answer": "答案"
+			},
+			"gentime": "页面生成时间："
 		}
 	},
 	"sitemap": {
