@@ -60,7 +60,7 @@ $(document).ready(function () {
                 else {
                     $("#sessionDiv").css("display", "block");
                     $("#sessionNameP").html($("#sessionNameP").html().replace(/{name}/g, accountInfo.nick));
-                    $("#sessionid").val(getCookie("PHPSESSID"));
+                    $("#sessionid").val(getCookie("sessionid"));
                 }
             });
         } catch (e) {

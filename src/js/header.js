@@ -40,7 +40,7 @@ window.onload = function () {
 			else {
 				avatarBox.setAttribute("style", "background-image:url(" + accountInfo['avatar'] + ")");
 				userName.innerHTML = accountInfo['nick'];
-				accountBox.setAttribute("onclick", "window.open('" + logURL + "/info?sessionid=" + getCookie("PHPSESSID") + "')");
+				accountBox.setAttribute("onclick", "window.open('" + logURL + "/info?sessionid=" + getCookie("sessionid") + "')");
 			}
 		});
 	}
