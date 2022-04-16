@@ -187,6 +187,37 @@
 		"error": "发生了一些错误。",
 		"notfound": "未找到产品"
 	},
+	"questionnaire": {
+		"title": "nmTeam 表单",
+		"description": "填写 nmTeam 表单。",
+		"submit": "提交",
+		"select_num_limit": "请选择 {min} 至 {max} 项。",
+		"select_sin_limit": "请选择 {min} 项。",
+		"select_min_limit": "请至少选择 {n} 项。",
+		"select_max_limit": "请最多选择 {n} 项。",
+		"limit": "此表单需登录 nmTeam Account 后方可提交，且每账号可最多提交 {t} 次。",
+		"multiple": "多选",
+		"must_input": "请填写此项。",
+		"log_require": "需要登录 nmTeam 账号才可以填写此表单。",
+		"account": {
+			"title": "将使用 {name} 提交此表单",
+			"description": "nmTeam 工作人员将看到您的账号信息。",
+			"error": "发生了一些错误，无法验证登录状态。"
+		},
+		"result": {
+			"title_success": "表单提交成功",
+			"info_success": "您已成功提交表单 <b>{name}</b>。",
+			"title_error": "表单提交失败",
+			"info_error": "提交表单 <b>{name}</b> 失败。<br><br>错误信息：{error}。",
+			"error_code": {
+				"LOG_VERIFY_ERROR": "用户登录状态校验失败",
+				"EMPTY_ANSWER": "有必填问题未填写",
+				"SERVER_ERROR": "出现了一些服务器错误",
+				"REACH_ACCOUNY_LIMIT": "超过了账号提交次数",
+				"REACH_IP_LIMIT": "此 IP 的提交频率太频繁，请稍后再试"
+			}
+		}
+	},
 	"sitemap": {
 		"title": "站点地图",
 		"description": "查看 nmTeam 站点地图，快速定向您喜爱的 nmTeam 网站页面。"

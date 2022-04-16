@@ -187,6 +187,37 @@
 		"error": "發生了一些錯誤。",
 		"notfound": "未找到產品"
 	},
+	"questionnaire": {
+		"title": "nmTeam 表單",
+		"description": "填寫 nmTeam 表單。",
+		"submit": "提交",
+		"select_num_limit": "請選擇 {min} 至 {max} 項。",
+		"select_sin_limit": "請選擇 {min} 項。",
+		"select_min_limit": "請至少選擇 {n} 項。",
+		"select_max_limit": "請最多選擇 {n} 項。",
+		"limit": "此表單需登錄 nmTeam Account 後方可提交，且每賬號可最多提交 {t} 次。",
+		"multiple": "多選",
+		"must_input": "請填寫此項。",
+		"log_require": "需要登錄 nmTeam 賬號才可以填寫此表單。",
+		"account": {
+			"title": "將使用 {name} 提交此表單",
+			"description": "nmTeam 工作人員將看到您的賬號信息。",
+			"error": "發生了一些錯誤，無法驗證登錄狀態。"
+		},
+		"result": {
+			"title_success": "表單提交成功",
+			"info_success": "您已成功提交表單 <b>{name}</b>。",
+			"title_error": "表單提交失敗",
+			"info_error": "提交表單 <b>{name}</b> 失敗。<br><br>錯誤信息：{error}。",
+			"error_code": {
+				"LOG_VERIFY_ERROR": "用戶登錄狀態校驗失敗",
+				"EMPTY_ANSWER": "有必填問題未填寫",
+				"SERVER_ERROR": "出現了一些服務器錯誤",
+				"REACH_ACCOUNY_LIMIT": "超過了賬號提交次數",
+				"REACH_IP_LIMIT": "此 IP 的提交頻率太頻繁，請稍後再試"
+			}
+		}
+	},
 	"sitemap": {
 		"title": "站點地圖",
 		"description": "查看 nmTeam 站點地圖，快速定向您喜愛的 nmTeam 網站頁面。"

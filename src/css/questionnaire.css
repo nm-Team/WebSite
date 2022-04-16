@@ -1,0 +1,125 @@
+body{
+    --must-answer: #ff0000;
+    --input-border: #cccccc;
+    --submit-button: #EAD050;
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        --must-answer: #ff8080;
+        --input-border: #616161;
+        --submit-button: #EAD050;
+    }
+    .questionAnswers .input input {
+        filter: invert(1) brightness(2.5);
+    }
+}
+.questionnaireDescription{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+.question{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.question[data-mention=true]{
+    animation: mention .4s;
+}
+@keyframes mention{
+    0%{
+        transform: none;
+    }
+    25%{
+        transform: translateX(-10px);
+    }
+    75%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: none;
+    }
+}
+.question *{
+    margin: 0;
+    padding: 0;
+}
+.question .questionTitle{
+    display: flex;
+    flex-direction: row;
+}
+.question .questionTitle .mustAnswer{
+    color: var(--must-answer);
+    width: 14px;
+    margin-left: -14px;
+    flex-shrink: 0;
+}
+.question .questionTitle p{
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+.question .questionTitle .tTip{
+    font-weight: bold;
+    opacity: 0.6;
+}
+.question .questionDescription{
+    font-size: 15.5px;
+    line-height: 1.62;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+.question .questionDescription .dTip{
+    color: var(--must-answer);
+}
+.question .questionOptions{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.questionAnswers{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+}
+.questionAnswers .input{
+    padding: 5px 0;
+    font-size: 16px;
+    display: flex;
+    line-height: 1.6;
+    flex-direction: row;
+    align-items: center;
+}
+.questionAnswers .input input{
+    margin-right: 7px;
+    flex-shrink: 0;
+}
+.questionAnswers input[data-type=text], .questionAnswers textarea{
+    border: 2px solid var(--input-border);
+    border-radius: 0px;
+    margin: 3px 0 5px 0;
+    padding: 8px 10px;
+    font-size: 16px;
+    resize: vertical;
+    background: none;
+    color: var(--text-color);
+}
+.submitDiv{
+    margin: 7px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.submitDiv button{
+    padding: 10px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 1px;
+    background-color: var(--submit-button);
+    color: #000000;
+    cursor: pointer;
+}

@@ -1,0 +1,273 @@
+{
+    "title": "nmTeam 定向调查：对现有 SSH 客户端体验和需求的调研",
+    "description": "nmTeam 希望调查您和您的群体对现有 SSH 客户端的体验感受和需求。<br>nmTeam 将对您的问卷数据保密，仅将总体数据应用于 nmTeam 的相应决策。<br>nmTeam 进行的此调查与 nmTeam 的任何产品均无直接关联。",
+    "time": "20220416",
+    "requireLog": false,
+    "questions": [
+        {
+            "type": "multiple",
+            "title": "以下 SSH 客户端，您经常使用的有哪些？",
+            "must": true,
+            "max_num": 5,
+            "description": "",
+            "answers": [
+                {
+                    "text": "FinalShell",
+                    "value": "FinalShell"
+                },
+                {
+                    "text": "PuTTY",
+                    "value": "PuTTY"
+                },
+                {
+                    "text": "XShell",
+                    "value": "XShell"
+                },
+                {
+                    "text": "OpenSSH",
+                    "value": "OpenSSH"
+                },
+                {
+                    "text": "Termius",
+                    "value": "Termius"
+                },
+                {
+                    "text": "MobaXterm",
+                    "value": "MobaXterm"
+                },
+                {
+                    "text": "Tabby",
+                    "value": "Tabby"
+                },
+                {
+                    "text": "Next Terminal",
+                    "value": "Next Terminal"
+                },
+                {
+                    "text": "其它",
+                    "value": "Other"
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "您认为对一款 SSH 工具来说，最影响其体验的是？",
+            "must": true,
+            "min_num": 2,
+            "max_num": 2,
+            "answers": [
+                {
+                    "text": "操作方便，容易上手",
+                    "value": "easy"
+                },
+                {
+                    "text": "性能强悍",
+                    "value": "powerful"
+                },
+                {
+                    "text": "界面美观",
+                    "value": "beautiful"
+                },
+                {
+                    "text": "功能强大，拥有特色功能",
+                    "value": "function"
+                },
+                {
+                    "text": "其它",
+                    "value": "Other"
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "您认为对 SSH 工具来说，哪些功能不可或缺？ ",
+            "must": true,
+            "min_num": 1,
+            "max_num": 4,
+            "answers": [
+                {
+                    "text": "同时连接多个 SSH",
+                    "value": "multi_ssh_connect"
+                },
+                {
+                    "text": "同时操作多个 SSH",
+                    "value": "multi_ssh_op"
+                },
+                {
+                    "text": "展示服务器系统信息和性能",
+                    "value": "show_sys_info"
+                },
+                {
+                    "text": "快速操作服务器指令",
+                    "value": "quick_op"
+                },
+                {
+                    "text": "FTP",
+                    "value": "FTP"
+                },
+                {
+                    "text": "跨平台可用",
+                    "value": "cross_platform"
+                },
+                {
+                    "text": "在多个客户端上云同步服务器数据",
+                    "value": "cloud_sync"
+                },
+                {
+                    "text": "其它",
+                    "value": "Other"
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "您一般有在哪些平台使用 SSH 工具的需求？",
+            "must": true,
+            "min_num": 1,
+            "max_num": 4,
+            "answers": [
+                {
+                    "text": "Windows",
+                    "value": "win"
+                },
+                {
+                    "text": "Linux",
+                    "value": "lin"
+                },
+                {
+                    "text": "macOS",
+                    "value": "mac"
+                },
+                {
+                    "text": "Android",
+                    "value": "android"
+                },
+                {
+                    "text": "iOS",
+                    "value": "ios"
+                },
+                {
+                    "text": "Web",
+                    "value": "web"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "您一般最多同时连接到多少个 SSH？",
+            "must": false,
+            "description": "请输入一个具体数字。若您未同时连接到多个 SSH，请留空。",
+            "placeholder": "示例：2",
+            "filter": "number"
+        },
+        {
+            "type": "single",
+            "title": "您是否顾虑云同步功能泄露您的 SSH 连接信息？",
+            "must": true,
+            "answers": [
+                {
+                    "text": "是",
+                    "value": "true"
+                },
+                {
+                    "text": "否",
+                    "value": "false"
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "您认为现有的 SSH 工具在体验上存在哪些问题？",
+            "must": true,
+            "min_num": 1,
+            "max_num": 3,
+            "answers": [
+                {
+                    "text": "不够稳定，容易出现闪退、卡死等问题",
+                    "value": "unstable"
+                },
+                {
+                    "text": "页面设计不够现代化或不够美观",
+                    "value": "not_modern"
+                },
+                {
+                    "text": "没有提供我想要的功能",
+                    "value": "not_function"
+                },
+                {
+                    "text": "没有在我需要的设备上提供客户端",
+                    "value": "not_device"
+                },
+                {
+                    "text": "曾曝出过安全问题，使用有顾虑",
+                    "value": "security"
+                },
+                {
+                    "text": "其它",
+                    "value": "Other"
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "您对 SSH 工具有哪些期待？",
+            "must": true,
+            "min_num": 2,
+            "max_num": 5,
+            "answers": [
+                {
+                    "text": "免费开源",
+                    "value": "free"
+                },
+                {
+                    "text": "拥有人性化的操作逻辑",
+                    "value": "human_logic"
+                },
+                {
+                    "text": "包含丰富的个性化选项",
+                    "value": "personal_option"
+                },
+                {
+                    "text": "拥有独到的功能（请稍后举例说明）",
+                    "value": "unique_function"
+                },
+                {
+                    "text": "包含“大家都在买”板块，推荐优质的服务器资源",
+                    "value": "recommend_server"
+                },
+                {
+                    "text": "在服务器连接失败时提供让人暖心的帮助",
+                    "value": "ad_help"
+                },
+                {
+                    "text": "其它",
+                    "value": "Other"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "关于以上问题，若有任何想法想补充，请在此填写。",
+            "must": false,
+            "description": "若选择了“其它”选项，请在此补充具体内容。",
+            "placeholder": "请输入内容",
+            "filter": "text"
+        },
+        {
+            "type": "textarea",
+            "title": "关于 SSH 工具，若您还想补充任何意见，请告诉我们。",
+            "must": false,
+            "description": "我们将认真阅读你的想法。",
+            "placeholder": "请输入内容",
+            "filter": "text"
+        },
+        {
+            "type": "input",
+            "title": "填写您的电子邮箱，方便我们与您取得进一步联系。 ",
+            "must": false,
+            "description": "",
+            "placeholder": "电子邮箱",
+            "filter": "email"
+        }
+    ]
+}

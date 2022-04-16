@@ -182,6 +182,37 @@
 		"error": "Oops, Something went wrong.",
 		"notfound": "Oops, The product you are looking for does not exist or is unavaliable in your country or region."
 	},
+	"questionnaire": {
+		"title": "nmTeam Form",
+		"description": "Fill out the nmTeam form.",
+		"submit": "Submit",
+		"select_num_limit": "Please select {min} to {max} items.",
+		"select_sin_limit": "Please select {min} items.",
+		"select_min_limit": "Please select at least {n} items.",
+		"select_max_limit": "Please select at most {n} items.",
+		"limit": "This form can only be submitted after logging in to the nmTeam Account, and each account can submit a maximum of {t} times.",
+		"multiple": "Multiple Choices",
+		"must_input": "Please fill in this blank.",
+		"log_require": "You need to be logged in to your nmTeam account to fill out this form.",
+		"account": {
+			"title": "This form will be submitted with {name}",
+			"description": "nmTeam staff will see your account information.",
+			"error": "Some errors occurred and the login status could not be verified."
+		},
+		"result": {
+			"title_success": "Form submitted Successfully",
+			"info_success": "You have successfully submitted the form <b>{name}</b>.",
+			"title_error": "Form Submission Failed",
+			"info_error": "Failed to submit form <b>{name}</b>.<br><br>Error: {error}.",
+			"error_code": {
+				"LOG_VERIFY_ERROR": "User login status verification failed",
+				"EMPTY_ANSWER": "Mandatory questions are not filled in",
+				"SERVER_ERROR": "Some server error occurred",
+				"REACH_ACCOUNY_LIMIT": "Exceeded account submissions",
+				"REACH_IP_LIMIT": "This IP is submitted too frequently, please try again later"
+			}
+		}
+	},
 	"sitemap": {
 		"title": "Sitemap",
 		"description": "View the nmTeam sitemap for quick directions to your favorite nmTeam website pages."

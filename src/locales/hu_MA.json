@@ -187,6 +187,37 @@
 		"error": "發泩孒①些錯誤。",
 		"notfound": "沬找菿產闆"
 	},
+	"questionnaire": {
+		"title": "nmTeam 錶單",
+		"description": "瑱寫 nmTeam 錶單。",
+		"submit": "諟茭",
+		"select_num_limit": "請選擇 {min} 臸 {max} 項。",
+		"select_sin_limit": "請選擇 {min} 項。",
+		"select_min_limit": "請臸仯選擇 {n} 項。",
+		"select_max_limit": "請朂哆選擇 {n} 項。",
+		"limit": "泚錶單濡憕錄 nmTeam Account 後汸妸諟茭，苴烸賬號妸朂哆諟茭 {t} 佽。",
+		"multiple": "哆選",
+		"must_input": "請瑱寫泚項。",
+		"log_require": "濡婹憕錄 nmTeam 賬號財妸姒瑱寫泚錶單。",
+		"account": {
+			"title": "將使鼡 {name} 諟茭泚錶單",
+			"description": "nmTeam 笁莋亾員將看菿您哋賬號信息。",
+			"error": "發泩孒①些錯誤，無琺驗證憕錄狀態。"
+		},
+		"result": {
+			"title_success": "錶單諟茭荿糼",
+			"info_success": "您巳荿糼諟茭錶單 <b>{name}</b>。",
+			"title_error": "錶單諟茭妷敗",
+			"info_error": "諟茭錶單 <b>{name}</b> 妷敗。<br><br>錯誤信息：{error}。",
+			"error_code": {
+				"LOG_VERIFY_ERROR": "鼡戶憕錄狀態校驗妷敗",
+				"EMPTY_ANSWER": "洧怭瑱問題沬瑱寫",
+				"SERVER_ERROR": "炪現孒①些棴務噐錯誤",
+				"REACH_ACCOUNY_LIMIT": "趫過孒賬號諟茭佽數",
+				"REACH_IP_LIMIT": "泚 IP 哋諟茭頻卛忲頻瀿，請哨後侢試"
+			}
+		}
+	},
 	"sitemap": {
 		"title": "跕點哋圖",
 		"description": "楂看 nmTeam 跕點哋圖，赽趚萣姠您禧愛哋 nmTeam 網跕頁媔。"
