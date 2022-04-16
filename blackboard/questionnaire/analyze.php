@@ -4,8 +4,10 @@ require_once("./config.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/class/mysql.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/class/redis.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/class/session.php");
+?><span style="display: none;"><?php 
 $questionnaire_json = json_decode(file_get_contents("./json/" . addslashes($_GET['id']) . ".json"));
-if (!isset($questionnaire_json)) {
+?></span>
+<?php if (!isset($questionnaire_json)) {
     $questionnaire_json = array("title" => t("questionnaire.backstage.tip.not_found"), "description" => "");
     $error_code = "not_found";
 }
