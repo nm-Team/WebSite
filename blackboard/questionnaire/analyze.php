@@ -273,7 +273,7 @@ $data = $db->get($sql);
 </div>
 <?php
 $ana_end = microtime(true);
-echo '<div class="updateDate">' . t("questionnaire.backstage.gentime") . (($ana_end - $ana_start) * 100) . 'ms</div>';
+echo '<div class="updateDate">' . t("questionnaire.backstage.gentime") . (($ana_end - $ana_start) * 1000) . 'ms</div>';
 ?>
 <?php setFooter(); ?>
 <script>
