@@ -1,0 +1,80 @@
+{
+    "title": "nmFun 问题反馈",
+    "description": "nmFun 团队很遗憾获知您在使用 nmFun 时遇到问题。<br>请告诉我们出现了什么问题，来帮助我们调查与解决。",
+    "time": "20220504",
+    "requireLog": false,
+    "questions": [
+        {
+            "type": "single",
+            "title": "在使用 nmFun 时遇到了什么问题？",
+            "must": true,
+            "description": "",
+            "answers": [
+                {
+                    "text": "页面载入失败、卡屏或未响应",
+                    "value": "stuck"
+                },
+                {
+                    "text": "页面性能过低",
+                    "value": "performance"
+                },
+                {
+                    "text": "页面显示不完整或被遮挡",
+                    "value": "blocked"
+                },
+                {
+                    "text": "页面布局错误或部分元素显示错误",
+                    "value": "layout"
+                },
+                {
+                    "text": "页面交互无法进行或提示服务器错误",
+                    "value": "interaction"
+                },
+                {
+                    "text": "遇到了其它问题",
+                    "value": "other"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "请告诉我们具体发生了什么。",
+            "must": true,
+            "description": "简述操作步骤和错误详情将帮助我们查找问题。<br>注意请勿包含账号、密码等私密信息。",
+            "placeholder": "请输入内容",
+            "filter": "text"
+        },
+        {
+            "type": "input",
+            "title": "请提供您的 nmTeam Account 昵称、UID 或用户名。",
+            "must": true,
+            "description": "",
+            "placeholder": "昵称、UID 或用户名",
+            "filter": "text"
+        },
+        {
+            "type": "input",
+            "title": "请填写您的电子邮箱地址。 ",
+            "must": true,
+            "description": "",
+            "placeholder": "电子邮箱",
+            "filter": "email"
+        },
+        {
+            "type": "single",
+            "title": "您是否允许 nmFun 团队进一步联系您取得更多信息？",
+            "must": true,
+            "description": "",
+            "answers": [
+                {
+                    "text": "是",
+                    "value": "true"
+                },
+                {
+                    "text": "否",
+                    "value": "false"
+                }
+            ]
+        }
+    ]
+}

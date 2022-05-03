@@ -1,0 +1,72 @@
+{
+    "title": "nmFun 产品建议",
+    "description": "nmFun 团队乐于接受建议。<br>请告诉我们您对 nmFun 的期望，nmFun 团队将根据您的期待改进我们的产品。",
+    "time": "20220504",
+    "requireLog": false,
+    "questions": [
+        {
+            "type": "single",
+            "title": "对 nmFun 有哪方面的建议？",
+            "must": true,
+            "description": "",
+            "answers": [
+                {
+                    "text": "页面设计",
+                    "value": "design"
+                },
+                {
+                    "text": "功能",
+                    "value": "function"
+                },
+                {
+                    "text": "无障碍",
+                    "value": "accessibility"
+                },
+                {
+                    "text": "其它建议",
+                    "value": "other"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "请告诉我们您对 nmFun 的建议。",
+            "must": true,
+            "description": "nmFun 团队对您的建议不胜感激，并将仔细考虑您的看法。",
+            "placeholder": "请输入内容",
+            "filter": "text"
+        },
+        {
+            "type": "input",
+            "title": "请提供您的 nmTeam Account 昵称、UID 或用户名。",
+            "must": true,
+            "description": "",
+            "placeholder": "昵称、UID 或用户名",
+            "filter": "text"
+        },
+        {
+            "type": "input",
+            "title": "请填写您的电子邮箱地址。 ",
+            "must": true,
+            "description": "",
+            "placeholder": "电子邮箱",
+            "filter": "email"
+        },
+        {
+            "type": "single",
+            "title": "您是否允许 nmFun 团队进一步联系您取得更多信息？",
+            "must": true,
+            "description": "",
+            "answers": [
+                {
+                    "text": "是",
+                    "value": "true"
+                },
+                {
+                    "text": "否",
+                    "value": "false"
+                }
+            ]
+        }
+    ]
+}
