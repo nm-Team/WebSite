@@ -1,0 +1,283 @@
+{
+    "page": {
+        "productName": "輔助功能",
+        "theme": "light"
+    },
+    "header": {
+        "name": "<small>輔助功能</small><br>nm 齊刷刷<bs>，</bs><br>一個都不落<bs>。</bs>",
+        "slug": "",
+        "intro": "",
+        "icon": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/icon.png",
+        "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "height": "",
+        "align": "bottom",
+        "buttons": [],
+        "custom": ""
+    },
+    "main": [
+        {
+            "id": "ov",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "single",
+                    "id": "ovt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "全世界現有超過 1 億殘障人士。[tip]對他們中的許多人來說，像其他人一樣正常上網和使用電子設備往往更加困難。<br>不僅他們和您往往需要更多為之量身打造的輔助功能，而且提供優質的基礎體驗也本應是優質產品的一部分。<br>nmTeam 註意到這些需求，並將無障礙理念貫徹到每一個產品的設計與開發中[tip]，讓 nmProducts 對所有人和每個人都一樣好用[tip]。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/ov.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "鍵盤",
+                        "align": "",
+                        "tip": [
+                            "數據來自世界衛生組織。請參閱：https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health ",
+                            "受 nmTeam 開發技術限製，部分輔助功能在實現上可能存在缺陷。",
+                            "受部分 nmTeam 產品 (例如遊戲) 的性質所限，本頁面中所述的部分內容對這些產品可能不適用。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ba",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "bat",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>基礎牢牢打<bs>，</bs><br></nobr><nobr>上層玩開花<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "bap",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam 產品在設計之初就為所有人做好了規劃。例如在設計 nmProducts 時，頁面整體采用清晰的布局與顏色[tip]，便於用戶和屏幕閱讀器理解[tip]。我們努力減少非標準交互對象的使用，並為特殊情況專門提供了鍵盤優化。<br>nmTeam 定義了自己的 <span class='outline'>outline</span> [tip]，認準它，指哪打哪。<style>.outline{outline: 3px solid rgb(250 187 0 / 60%); border-radius: 3px; padding: 2px 3px}</style>",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/ba.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "",
+                        "align": "",
+                        "tip": [
+                            "對於某些特殊的 nmTeam 產品 (例如遊戲) ，頁面設計可能較為復雜。",
+                            "我們仍在研究針對屏幕閱讀器的優化。",
+                            "部分產品可能擁有自己的相關設計。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "kb",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "kbt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>鍵盤沙哢啦<bs>，</bs><br></nobr><nobr>指令諾必達<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "kbp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam 產品致力於讓用戶不必使用鼠標或鍵盤，而是無論如何都能用，都好用。<br>我們盡力為幾乎所有頁面適配鍵盤操作，這樣，無論暫需單手操作還是身為殘障人士，都可以通過 nmTeam 產品獲得更佳體驗。[tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/kb.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "鍵盤",
+                        "align": "",
+                        "tip": [
+                            "相較未適配鼠標和鍵盤的產品，nmTeam 產品將在這些方面帶來更好的用戶體驗。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "kb_rate",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<style>.kbRateN{font-size: 38px; font-weight: bold;}.kbRateT{font-size: 14px; font-weight: normal;}</style><span class='kbRateN'><span id='kbR'>100</span>%</span><br><span class='kbRateT'>鍵盤導航率[tip]</span>",
+                        "tip": [
+                            "數值適用於含 nmFun、nmBrowser 啟動頁和 nmTeam Account Center 在內的大多數 nmTeam 產品。nmTeam 於 2022 年 5 月 19 日使用 Windows 10 操作系統和 Microsoft Edge 在 nmFun (預發布版本)、nmBrowser 啟動頁和 nmTeam Account Center 頁面中操作 Tab 鍵逐個導航所有按鈕和輸入框。實際數據可能因產品更新、軟件問題而略有差異。"
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "kbi",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "在 nmTeam Account Center 裁剪頭像時，不便使用鼠標的用戶可以使用鍵盤按鍵操作。[tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/kb_zh_CN.png",
+                        "mediaStyle": "border-radius:5px;max-width:340px",
+                        "mediaTitle": "在 nmTeam Account Center 裁剪頭像時，不便使用鼠標的用戶可以使用鍵盤按鍵操作。",
+                        "align": "",
+                        "tip": [
+                            "要獲得更優質的體驗，nmTeam 仍然建議使用鼠標操作裁剪框。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "sp",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "spt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>雖小猶用心<bs>，</bs><br></nobr><nobr>細處見真情<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "html",
+                    "id": "sp_line",
+                    "attr": {
+                        "innerHTML": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "sp_noblur",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>跑不了，回車就好</b><br>nmTeam 為鍵盤操作適配了焦點跟隨和限製。[tip]<br>這樣，用戶將不再因鍵盤焦點錯誤而誤操作，同時也帶來了更加方便快捷的鍵盤體驗。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/sp_noblur.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": "nmTeam 產品菜單。",
+                        "tip": [
+                            "目前僅可用於部分新開發的 nmTeam 產品。針對更多 nmTeam 產品的優化將陸續推出。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "sp_title",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>看不了，寫明就好</b><br>nmTeam 為圖片和圖標添加和顯示替代文本，方便視障人群理解其中含義。[tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/sp_title.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": "nmTeam 為按鈕顯示替代文本。",
+                        "tip": [
+                            "受各種因素影響，部分圖片和圖標暫未添加替代文本。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "fb",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "fbt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>我們是新手<bs>，</bs><br></nobr><nobr>還需要教授<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "fbp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam 深知自己在輔助功能和無障礙建設上見識淺薄。<br>正因如此，無論您在輔助功能建設上略有心得還是大有作為，我們衷心希望您不吝賜教。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/fb.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "合作愉快。",
+                        "align": "",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "buttons",
+                    "id": "fbb",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "buttons": [
+                            {
+                                "id": "seemore",
+                                "name": "向我們提意見",
+                                "javascript": "",
+                                "href": "/blackboard/questionnaire/product_accessibility_suggestion",
+                                "towards": "in"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "su",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "sut",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>敢為出頭鳥<bs>，</bs><br></nobr><nobr>不願做獨苗<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "sup",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam 發現不少 nmServices 的競品在輔助功能方面有待提高。<br>nmTeam 呼籲軟件和互聯網服務開發商與 nmTeam 共同努力為所有人提供更好的基礎體驗和輔助功能。<br>這對 nmTeam 或許有害，但對用戶必然有利。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/su.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "nmTeam 呼籲所有軟件開發者在軟件開發過程中貫徹落實無障礙理念。",
+                        "align": "",
+                        "tip": []
+                    }
+                }
+            ]
+        }
+    ],
+    "footer": []
+}

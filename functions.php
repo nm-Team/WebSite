@@ -195,6 +195,7 @@ function setFooter()
                     <div class="row">
                         <div class="rowName"><?php p("footer.table.about.title"); ?></div>
                         <a href="/aboutus"><?php p("footer.table.about.aboutUs"); ?></a>
+                        <a href="/products/overview/product-accessibility"><?php p("footer.table.about.accessibility"); ?></a>
                         <a href="https://newsroom.nmteam.xyz" target="blank"><?php p("footer.table.about.newsroom"); ?></a>
                         <a href="/join/"><?php p("footer.table.about.joinUs"); ?></a>
                         <a href="/supportus"><?php p("footer.table.about.supportUs"); ?></a>

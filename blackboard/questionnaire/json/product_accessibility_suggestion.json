@@ -1,0 +1,48 @@
+{
+    "title": "nmTeam 无障碍和辅助功能建议 / nmTeam accessibility suggestions",
+    "description": "nmTeam 团队乐于接受关于无障碍和辅助功能的建议。<br>请告诉我们您对 nmTeam 无障碍和辅助功能的期望，nmTeam 团队将根据您的期待改进我们的产品的无障碍和辅助功能。<br>nmTeam welcomes suggestions for accessibility of our products. <br>Please tell us what you expect from nmTeam accessibility, and nmTeam will improve the accessibility of our products according to your expectations.",
+    "time": "20220504",
+    "requireLog": false,
+    "questions": [
+        {
+            "type": "textarea",
+            "title": "请告诉我们您对 nmTeam 无障碍和辅助功能的建议。",
+            "must": true,
+            "description": "Let us know your suggestions for nmTeam accessibility.<br>nmTeam 团队对您的建议不胜感激，并将仔细考虑您的看法。<br>nmTeam appreciates your suggestions for accessibility of our products. <br>We will carefully consider your opinion and make improvements accordingly.",
+            "placeholder": "",
+            "filter": "text"
+        },
+        {
+            "type": "input",
+            "title": "请提供您的 nmTeam Account 昵称、UID 或用户名（如果有）。",
+            "must": false,
+            "description": "Please provide your nmTeam Account nickname, UID or username (if available).",
+            "placeholder": "Nickname, UID or Username",
+            "filter": "text"
+        },
+        {
+            "type": "input",
+            "title": "请填写您的电子邮箱地址。 ",
+            "must": true,
+            "description": "Please fill in your email address.",
+            "placeholder": "E-Mail",
+            "filter": "email"
+        },
+        {
+            "type": "single",
+            "title": "您是否允许 nmTeam 团队进一步联系您取得更多信息？",
+            "must": true,
+            "description": "Do you allow nmTeam to contact you for further information?",
+            "answers": [
+                {
+                    "text": "是 / Yes",
+                    "value": "true"
+                },
+                {
+                    "text": "否 / No",
+                    "value": "false"
+                }
+            ]
+        }
+    ]
+}

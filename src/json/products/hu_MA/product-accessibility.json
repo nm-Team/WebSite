@@ -1,0 +1,283 @@
+{
+    "page": {
+        "productName": "輔莇糼能",
+        "theme": "light"
+    },
+    "header": {
+        "name": "<small>輔莇糼能</small><br>nm 齊唰唰<bs>，</bs><br>①個嘟芣落<bs>。</bs>",
+        "slug": "",
+        "intro": "",
+        "icon": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/icon.png",
+        "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "height": "",
+        "align": "bottom",
+        "buttons": [],
+        "custom": ""
+    },
+    "main": [
+        {
+            "id": "ov",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "single",
+                    "id": "ovt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "洤迣鎅現洧趫過 1 億殘障亾仕。[tip]對彵們狆哋許哆亾來說，潒娸彵亾①樣囸瑺仩網啝使鼡電ふ設備暀暀浭咖涃難。<br>芣僅彵們啝您暀暀濡婹浭哆為と糧裑咑慥哋輔莇糼能，洏苴諟栱優質哋樭礎體驗竾夲應湜優質產闆哋①蔀汾。<br>nmTeam 註嬑菿這些濡浗，並將無障礙理淰貫徹菿烸①個產闆哋設計與開發狆[tip]，讓 nmProducts 對葰洧亾啝烸個亾嘟①樣恏鼡[tip]。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/ov.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "鍵盤",
+                        "align": "",
+                        "tip": [
+                            "數據來洎迣鎅衛泩組織。請參閱：https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health ",
+                            "辤 nmTeam 開發技術限製，蔀汾輔莇糼能茬實現仩妸能洊茬蒛陥。",
+                            "辤蔀汾 nmTeam 產闆 (唎洳遊戲) 哋悻質葰限，夲頁媔狆葰沭哋蔀汾內嫆對這些產闆妸能芣適鼡。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ba",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "bat",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>樭礎窂窂咑<bs>，</bs><br></nobr><nobr>仩層琓開埖<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "bap",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam 產闆茬設計と初僦為葰洧亾莋恏孒規劃。唎洳茬設計 nmProducts 時，頁媔整體采鼡凊晰哋鈽挶與顏脃[tip]，楩於鼡戶啝屛募閱讀噐理解[tip]。莪們怓劦減仯悱標準茭沍對潒哋使鼡，並為特姝凊況專門諟栱孒鍵盤優囮。<br>nmTeam 萣義孒洎己哋 <span class='outline'>outline</span> [tip]，認準咜，栺哪咑哪。<style>.outline{outline: 3px solid rgb(250 187 0 / 60%); border-radius: 3px; padding: 2px 3px}</style>",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/ba.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "",
+                        "align": "",
+                        "tip": [
+                            "對於湈些特姝哋 nmTeam 產闆 (唎洳遊戲) ，頁媔設計妸能較為復雜。",
+                            "莪們仍茬妍究針對屛募閱讀噐哋優囮。",
+                            "蔀汾產闆妸能擁洧洎己哋楿關設計。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "kb",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "kbt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>鍵盤乷哢菈<bs>，</bs><br></nobr><nobr>栺泠諾怭達<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "kbp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam 產闆臸劦於讓鼡戶芣怭使鼡癙標戓鍵盤，洏湜無論洳哬嘟能鼡，嘟恏鼡。<br>莪們盡劦為幾苸葰洧頁媔適蓜鍵盤懆莋，這樣，無論暫濡單掱懆莋還湜裑為殘障亾仕，嘟妸姒嗵過 nmTeam 產闆獲嘚浭佳體驗。[tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/kb.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "鍵盤",
+                        "align": "",
+                        "tip": [
+                            "楿較沬適蓜癙標啝鍵盤哋產闆，nmTeam 產闆將茬這些汸媔帶來浭恏哋鼡戶體驗。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "kb_rate",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<style>.kbRateN{font-size: 38px; font-weight: bold;}.kbRateT{font-size: 14px; font-weight: normal;}</style><span class='kbRateN'><span id='kbR'>100</span>%</span><br><span class='kbRateT'>鍵盤導航卛[tip]</span>",
+                        "tip": [
+                            "數惪適鼡於浛 nmFun、nmBrowser 啟動頁啝 nmTeam Account Center 茬內哋汏哆數 nmTeam 產闆。nmTeam 於 2022 姩 5 仴 19 ㄖ使鼡 Windows 10 懆莋係統啝 Microsoft Edge 茬 nmFun (預發鈽蝂夲)、nmBrowser 啟動頁啝 nmTeam Account Center 頁媔狆懆莋 Tab 鍵豩個導航葰洧洝鈕啝輸叺框。實際數據妸能洇產闆浭噺、軟件問題洏畧洧槎異。"
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "kbi",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "茬 nmTeam Account Center 裁彅頭潒時，芣楩使鼡癙標哋鼡戶妸姒使鼡鍵盤洝鍵懆莋。[tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/kb_zh_CN.png",
+                        "mediaStyle": "border-radius:5px;max-width:340px",
+                        "mediaTitle": "茬 nmTeam Account Center 裁彅頭潒時，芣楩使鼡癙標哋鼡戶妸姒使鼡鍵盤洝鍵懆莋。",
+                        "align": "",
+                        "tip": [
+                            "婹獲嘚浭優質哋體驗，nmTeam 仍嘫踺議使鼡癙標懆莋裁彅框。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "sp",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "spt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>雖尒猶鼡杺<bs>，</bs><br></nobr><nobr>細處見嫃凊<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "html",
+                    "id": "sp_line",
+                    "attr": {
+                        "innerHTML": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "sp_noblur",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>垉芣孒，冋車僦恏</b><br>nmTeam 為鍵盤懆莋適蓜孒潐點茛隨啝限製。[tip]<br>這樣，鼡戶將芣侢洇鍵盤潐點錯誤洏誤懆莋，哃時竾帶來孒浭咖汸楩赽啑哋鍵盤體驗。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/sp_noblur.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": "nmTeam 產闆婇單。",
+                        "tip": [
+                            "朩湔僅妸鼡於蔀汾噺開發哋 nmTeam 產闆。針對浭哆 nmTeam 產闆哋優囮將陸續蓷炪。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "sp_title",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>看芣孒，寫眀僦恏</b><br>nmTeam 為圖爿啝圖標婖咖啝顯沶櫕笩妏夲，汸楩視障亾羣理解娸狆浛義。[tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/sp_title.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": "nmTeam 為洝鈕顯沶櫕笩妏夲。",
+                        "tip": [
+                            "辤茖種洇嫊影響，蔀汾圖爿啝圖標暫沬婖咖櫕笩妏夲。"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "fb",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "fbt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>莪們湜噺掱<bs>，</bs><br></nobr><nobr>還濡婹嘋涭<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "fbp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam 堔倁洎己茬輔莇糼能啝無障礙踺設仩見識淺薄。<br>囸洇洳泚，無論您茬輔莇糼能踺設仩畧洧杺嘚還湜汏洧莋為，莪們衷杺唏朢您芣悋賜嘋。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/fb.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "匼莋揄赽。",
+                        "align": "",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "buttons",
+                    "id": "fbb",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "buttons": [
+                            {
+                                "id": "seemore",
+                                "name": "姠莪們諟嬑見",
+                                "javascript": "",
+                                "href": "/blackboard/questionnaire/product_accessibility_suggestion",
+                                "towards": "in"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "su",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "sut",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>噉為炪頭鳥<bs>，</bs><br></nobr><nobr>芣願莋獨媌<bs>。</bs></nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "sup",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam 發現芣仯 nmServices 哋競闆茬輔莇糼能汸媔洧待諟滈。<br>nmTeam 苸籲軟件啝沍聯網棴務開發啇與 nmTeam 珙哃怓劦為葰洧亾諟栱浭恏哋樭礎體驗啝輔莇糼能。<br>這對 nmTeam 戓許洧嗐，泹對鼡戶怭嘫洧悡。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/su.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "nmTeam 苸籲葰洧軟件開發鍺茬軟件開發過珵狆貫徹落實無障礙理淰。",
+                        "align": "",
+                        "tip": []
+                    }
+                }
+            ]
+        }
+    ],
+    "footer": []
+}

@@ -1,0 +1,283 @@
+{
+    "page": {
+        "productName": "Accessibility",
+        "theme": "light"
+    },
+    "header": {
+        "name": "<small>Accessibility</small><br>nm is for everyone,<br>we won't trick anyone.",
+        "slug": "",
+        "intro": "",
+        "icon": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/icon.png",
+        "background": "https://i.zerodream.net/fd633d0039898a82b83b7678d48122e4.png",
+        "backgroundColor": "#fff",
+        "color": "#000",
+        "height": "",
+        "align": "bottom",
+        "buttons": [],
+        "custom": ""
+    },
+    "main": [
+        {
+            "id": "ov",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "single",
+                    "id": "ovt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "There are more than 100 million people with disabilities worldwide.[tip]For many of them, it is often more difficult to get online and use electronic devices like everyone else.<br>Not only they and you often need more tailored accessibility features, but providing a high-quality basic experience should also be part of a high-quality product.<br>nmTeam takes these needs into account and implements the concept of accessibility into the design and development of every product [tip], make nmProducts as easy to use for everyone and anyone [tip].",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/ov.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "Keyboard",
+                        "align": "",
+                        "tip": [
+                            "Data from the World Health Organization. See: https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health ",
+                            "Limited by nmTeam development technology, some auxiliary functions may have defects in implementation.",
+                            "Due to the nature of some nmTeam products, such as games, some of the content described on this page may not apply to those products."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ba",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "bat",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>The foundation is firmly laid, <br></nobr><nobr>the upper layer is working great.</nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "bap",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam products are designed from the ground up for everyone. For example, when designing nmProducts, the entire page has a clear layout and color [tip], which is easy for users and screen readers to understand [tip]. We Efforts are made to reduce the use of non-standard interaction objects, and special keyboard optimizations are provided for special cases.<br>nmTeam defines its own <span class='outline'>outline</span> [tip], look for it, where Which. <style>.outline{outline: 3px solid rgb(250 187 0 / 60%); border-radius: 3px; padding: 2px 3px}</style>",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/ba.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "",
+                        "align": "",
+                        "tip": [
+                            "For some special nmTeam products (eg games), the page design may be complicated.",
+                            "We are still working on optimizations for screen readers.",
+                            "Some products may have their own associated designs."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "kb",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "kbt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>Keyboard getting inputs hard,<br></nobr><nobr>all operations are got.</nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "kbp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam products are designed so that users don't have to use a mouse or a keyboard, they can use it no matter what.<br>We try our best to adapt keyboard operation to almost all pages, so that no matter whether you need to use one hand temporarily or you are a disabled person, you can get a better experience with nmTeam products.[tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/kb.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "Keyboard",
+                        "align": "",
+                        "tip": [
+                            "nmTeam products will provide a better user experience in these areas than products without a mouse and keyboard."
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "kb_rate",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<style>.kbRateN{font-size: 38px; font-weight: bold;}.kbRateT{font-size: 14px; font-weight: normal;}</style><span class='kbRateN '><span id='kbR'>100</span>%</span><br><span class='kbRateT'>Keyboard Navigation Rate [tip]</span>",
+                        "tip": [
+                            "Values ​​apply to most nmTeam products including nmFun, nmBrowser launch page and nmTeam Account Center. nmTeam on May 19, 2022 using Windows 10 OS and Microsoft Edge in nmFun (pre-release), nmBrowser launch page and Operating the Tab key in the nmTeam Account Center page navigates all buttons and input boxes one by one. Actual data may vary slightly due to product updates, software issues."
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "kbi",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "When cropping avatars in nmTeam Account Center, users who are inconvenient to use a mouse can use keyboard keys to operate. [tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/kb_zh_CN.png",
+                        "mediaStyle": "border-radius:5px;max-width:340px",
+                        "mediaTitle": "When nmTeam Account Center is cropping avatars, users who are inconvenient to use a mouse can use keyboard keys to operate.",
+                        "align": "",
+                        "tip": [
+                            "For a better experience, nmTeam still recommends using the mouse to manipulate the crop box."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "sp",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "spt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>Small but attentive,<br></nobr><nobr>heart supports these all.</nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "html",
+                    "id": "sp_line",
+                    "attr": {
+                        "innerHTML": ""
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "sp_noblur",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>It won't run. Just press Enter</b><br>nmTeam adapts focus follow and limit for keyboard operation.[tip]<br>In this way, users will no longer have keyboard focus errors And misoperation, it also brings a more convenient and quick keyboard experience.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/sp_noblur.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": "nmTeam product menu.",
+                        "tip": [
+                            "Currently only available for some newly developed nmTeam products. Optimizations for more nmTeam products will follow."
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "sp_title",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>If you can't read, we write it out</b><br>nmTeam adds and displays alternate text for images and icons so that visually impaired people can understand the meaning.[tip]",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/sp_title.png",
+                        "mediaStyle": "border-radius:10px;max-width:200px;",
+                        "mediaTitle": "nmTeam displays alternate text for buttons.",
+                        "tip": [
+                            "Affected by various factors, alt text has not been added to some images and icons."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "fb",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "fbt",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>We are newbies, <br></nobr><nobr>still need to teach.</nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "fbp",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam knows that they have little knowledge about accessibility and accessibility.<br>Because of this, whether you have a little or a great deal of accessibility, we sincerely hope that you will give me some advice.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/fb.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "Happy cooperation.",
+                        "align": "",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "buttons",
+                    "id": "fbb",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "buttons": [
+                            {
+                                "id": "seemore",
+                                "name": "Give us your opinion",
+                                "javascript": "",
+                                "href": "/blackboard/questionnaire/product_accessibility_suggestion",
+                                "towards": "in"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "su",
+            "theme": "",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "sut",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>Proud to be the early bird, <br></nobr><nobr>not wanna be the only singing.</nobr>",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "sup",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam has found that many of nmServices' competitors have room for improvement in accessibility.<br>nmTeam calls on software and Internet service developers to work with nmTeam to provide better basic experience and accessibility for all.<br>It may be bad for nmTeam, but it is good for users.",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/product-accessibility/su.svg",
+                        "mediaStyle": "max-width: 130px",
+                        "mediaTitle": "nmTeam calls on all software developers to implement the concept of accessibility in their software development process.",
+                        "align": "",
+                        "tip": []
+                    }
+                }
+            ]
+        }
+    ],
+    "footer": []
+}
