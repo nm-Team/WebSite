@@ -53,7 +53,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<nobr>The foundation is firmly laid, <br></nobr><nobr>the upper layer is working great.</nobr>",
+                        "h2": "<nobr>The foundation</nobr><nobr> is firmly laid, <br></nobr><nobr>the upper layer</nobr><nobr> is working great.</nobr>",
                         "tip": []
                     }
                 },
@@ -89,7 +89,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<nobr>Keyboard getting inputs hard,<br></nobr><nobr>all operations are got.</nobr>",
+                        "h2": "Keyboard getting inputs hard, <br>all operations are got. ",
                         "tip": []
                     }
                 },
@@ -152,7 +152,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<nobr>Small but attentive,<br></nobr><nobr>heart supports these all.</nobr>",
+                        "h2": "<nobr>Small but attentive,<br></nobr><nobr>heart </nobr><nobr>supports these all.</nobr>",
                         "tip": []
                     }
                 },
@@ -257,7 +257,7 @@
                     "theme": "",
                     "attr": {
                         "h1": "",
-                        "h2": "<nobr>Proud to be the early bird, <br></nobr><nobr>not wanna be the only singing.</nobr>",
+                        "h2": "<nobr>Proud to be </nobr><nobr>the early bird, <br></nobr><nobr>not wanna be </nobr><nobr>the only singing.</nobr>",
                         "tip": []
                     }
                 },
