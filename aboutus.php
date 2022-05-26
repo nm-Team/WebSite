@@ -23,7 +23,7 @@ setHeader();
 		<p><?php p("about.3"); ?></p>
 		<p><?php p("about.4"); ?></p>
 		<p><?php p("about.5"); ?></p>
-		<center><img src="https://ci.cncn3.cn/1f7060d25af7a8b80bfd2d3660eb9995.jpg" width="70%"></center>
+		<center><img src="https://websiteres.nmteam.xyz/nmwebsite/img/nmteam-about-small.png" width="70%"></center>
 	</div>
 </div>
 <div class="main">
