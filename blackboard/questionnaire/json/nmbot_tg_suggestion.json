@@ -1,0 +1,64 @@
+{
+    "title": "nmBot 产品建议",
+    "description": "nmBot 团队乐于接受建议。<br>请告诉我们您对 nmBot 的期望，nmBot 团队将根据您的期待改进我们的产品。",
+    "time": "20220504",
+    "requireLog": false,
+    "questions": [
+        {
+            "type": "single",
+            "title": "对 nmBot 有哪方面的建议？",
+            "must": true,
+            "description": "",
+            "answers": [
+                {
+                    "text": "设计",
+                    "value": "design"
+                },
+                {
+                    "text": "功能",
+                    "value": "function"
+                },
+                {
+                    "text": "问题",
+                    "value": "issue"
+                },
+                {
+                    "text": "其它建议",
+                    "value": "other"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "请告诉我们您对 nmBot 的建议。",
+            "must": true,
+            "description": "nmBot 团队对您的建议不胜感激，并将仔细考虑您的看法。",
+            "placeholder": "请输入内容",
+            "filter": "text"
+        },
+        {
+            "type": "input",
+            "title": "可以提供您的 Telegram 用户名或其它信息。",
+            "must": false,
+            "description": "",
+            "placeholder": "昵称、UID 或用户名",
+            "filter": "text"
+        },
+        {
+            "type": "single",
+            "title": "您是否允许 nmBot 团队进一步联系您取得更多信息？",
+            "must": true,
+            "description": "",
+            "answers": [
+                {
+                    "text": "是",
+                    "value": "true"
+                },
+                {
+                    "text": "否",
+                    "value": "false"
+                }
+            ]
+        }
+    ]
+}
