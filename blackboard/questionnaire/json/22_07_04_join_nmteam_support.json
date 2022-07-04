@@ -1,0 +1,66 @@
+{
+    "title": "加入 nmTeam - 支持人员",
+    "description": "欢迎您申请成为 nmTeam 支持人员，助力 nmProducts 用户充分利用产品。<br>为了让我们更好的了解您，请填写以下表单，我们会有专人与您取得进一步联系。",
+    "time": "20220704",
+    "requireLog": false,
+    "questions": [
+        {
+            "type": "multiple",
+            "title": "请选择您擅长的语言。",
+            "must": false,
+            "description": "这是一个加分项，但您大可跳过。",
+            "answers": [
+                {
+                    "text": "英语",
+                    "value": "english"
+                },
+                {
+                    "text": "日语",
+                    "value": "japanese"
+                },
+                {
+                    "text": "火星文",
+                    "value": "mar"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "请简要介绍自己。",
+            "must": true,
+            "description": "可以介绍自己制作或参与的项目，在必要时还可以提供链接。",
+            "placeholder": "请输入内容",
+            "filter": "text"
+        },
+        {
+            "type": "multiple",
+            "title": "我承诺自己有基本的团队责任感，能保证不破坏 nmTeam 创作环境和成员的基本道德要求。",
+            "must": true,
+            "min_num": 1,
+            "max_num": 1,
+            "description": "我们希望 nmTeam 成员做团队秩序的守护者，而不是破坏者。",
+            "answers": [
+                {
+                    "text": "我承诺",
+                    "value": "yes"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "填写您的电子邮箱，方便我们与您取得进一步联系。 ",
+            "must": true,
+            "description": "",
+            "placeholder": "电子邮箱",
+            "filter": "email"
+        },
+        {
+            "type": "input",
+            "title": "请留下您的其他联系方式，方便我们与您取得进一步联系。 ",
+            "must": true,
+            "description": "推荐使用 Telegram 或 QQ 来提供区别于 E-Mail 的即时通讯工具。",
+            "placeholder": "请注明联系方式类别",
+            "filter": "text"
+        }
+    ]
+}

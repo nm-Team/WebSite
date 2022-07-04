@@ -1,0 +1,81 @@
+{
+    "title": "加入 nmTeam - 开发人员",
+    "description": "欢迎您申请成为 nmTeam 开发人员，和我们一起开发惊艳世界的产品。<br>为了让我们更好的了解您，请填写以下表单，我们会有专人与您取得进一步联系。",
+    "time": "20220704",
+    "requireLog": false,
+    "questions": [
+        {
+            "type": "input",
+            "title": "请告诉我们您较为擅长的编程语言或框架等。 ",
+            "must": true,
+            "description": "或者告诉我们您想在 nmTeam 学到什么。",
+            "placeholder": "例如：Java、C++、Python、Ruby、Node.js、PHP、Go",
+            "filter": "text"
+        },
+        {
+            "type": "textarea",
+            "title": "请简要介绍自己。",
+            "must": true,
+            "description": "可以介绍自己制作或参与的项目，在必要时还可以提供链接。",
+            "placeholder": "请输入内容",
+            "filter": "text"
+        },
+        {
+            "type": "textarea",
+            "title": "加入 nmTeam 后，您希望能为 nmTeam 带来什么改变，并在 nmTeam 收获什么？",
+            "must": true,
+            "description": "",
+            "placeholder": "请输入内容",
+            "filter": "text"
+        },
+        {
+            "type": "single",
+            "title": "您更喜欢前端工作还是后端工作？",
+            "must": true,
+            "answers": [
+                {
+                    "text": "前端",
+                    "value": "frontend"
+                },
+                {
+                    "text": "后端",
+                    "value": "backend"
+                },
+                {
+                    "text": "我不关心",
+                    "value": "both"
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "我承诺自己有基本的团队责任感，能保证不破坏 nmTeam 创作环境和成员的基本道德要求。",
+            "must": true,
+            "min_num": 1,
+            "max_num": 1,
+            "description": "我们希望 nmTeam 成员做团队秩序的守护者，而不是破坏者。",
+            "answers": [
+                {
+                    "text": "我承诺",
+                    "value": "yes"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "填写您的电子邮箱，方便我们与您取得进一步联系。 ",
+            "must": true,
+            "description": "",
+            "placeholder": "电子邮箱",
+            "filter": "email"
+        },
+        {
+            "type": "input",
+            "title": "请留下您的其他联系方式，方便我们与您取得进一步联系。 ",
+            "must": true,
+            "description": "推荐使用 Telegram 或 QQ 来提供区别于 E-Mail 的即时通讯工具。",
+            "placeholder": "请注明联系方式类别",
+            "filter": "text"
+        }
+    ]
+}
