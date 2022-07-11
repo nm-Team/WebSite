@@ -4,9 +4,9 @@ require_once("./config.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/class/mysql.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/class/redis.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/class/session.php");
-?><span style="display: none;"><?php 
-$questionnaire_json = json_decode(file_get_contents("./json/" . addslashes($_GET['id']) . ".json"));
-?></span>
+?><span style="display: none;"><?php
+                                $questionnaire_json = json_decode(file_get_contents("./json/" . addslashes($_GET['id']) . ".json"));
+                                ?></span>
 <?php if (!isset($questionnaire_json)) {
     $questionnaire_json = array("title" => t("questionnaire.backstage.tip.not_found"), "description" => "");
     $error_code = "not_found";
@@ -134,7 +134,7 @@ $data = $db->get($sql);
                                                         $count = 0;
                                                         foreach ($data as $d) {
                                                             if (($question->type == "single" && $answer->value == (string)$d["q_" . $index])
-                                                                || ($question->type != "single" && in_array($answer->value, json_decode($d["q_$index"])))
+                                                                || ($question->type != "single" && in_array($answer->value, (json_decode($d["q_$index"]) !== null ? json_decode($d["q_$index"]) : array())))
                                                             ) {
                                                                 $count++;
                                                             }
@@ -208,7 +208,7 @@ $data = $db->get($sql);
                                                 break;
                                             case "multiple":
                                                 foreach ($question->answers as $answer) {
-                                                    if (in_array($answer->value, json_decode($d["q_$index"]))) echo "<p>" . $answer->text . "</p>";
+                                                    if ($d["q_$index"] && in_array($answer->value, json_decode($d["q_$index"]))) echo "<p>" . $answer->text . "</p>";
                                                 }
                                         }
                                         ?>

@@ -8,7 +8,9 @@ $questionnaire_json = json_decode(file_get_contents("./json/" . addslashes($_GET
 $data = array();
 foreach ($questionnaire_json->questions as $index => $question) {
     if ($question->must == true && str_replace(" ", "", $_POST['q_' . $index]) == "") {
-        die(header("Location: result.php?id=" . addslashes($_GET['id'])  . "&status=error&code=EMPTY_ANSWER"));
+        if (!$question->filter_bind) {
+            die(header("Location: result.php?id=" . addslashes($_GET['id'])  . "&status=error&code=EMPTY_ANSWER"));
+        }
     }
     if (is_array($_POST['q_' . $index])) {
         $data['q_' . $index] = array();

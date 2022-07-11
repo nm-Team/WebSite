@@ -1,0 +1,459 @@
+{
+    "title": "Telegram 机器人娱乐功能调研问卷",
+    "description": "nmTeam 希望调查您对 Telegram 机器人娱乐功能的相关情况和评价。",
+    "time": "20220708",
+    "requireLog": false,
+    "questions": [
+        {
+            "type": "multiple",
+            "title": "您在 Telegram 上曾使用过以下哪些机器人的娱乐功能？",
+            "must": true,
+            "min_num": 1,
+            "max_num": 5,
+            "description": "娱乐功能指包括智能聊天、签到与积分、随机禁言、概率、小游戏在内的一些为增强群组黏性与活跃度而设置的功能。",
+            "answers": [
+                {
+                    "text": "Telegram 抽奖助手",
+                    "value": "cnLottery_bot"
+                },
+                {
+                    "text": "鲁小迅",
+                    "value": "luxiaoxun_bot"
+                },
+                {
+                    "text": "瓜瓜的聒噪bot",
+                    "value": "lemon"
+                },
+                {
+                    "text": "KinhRoBot",
+                    "value": "KinhRoBot"
+                },
+                {
+                    "text": "無名/無名V2 [Beta]",
+                    "value": "wuming"
+                },
+                {
+                    "text": "Group Word Cloud",
+                    "value": "GroupWordCloud"
+                },
+                {
+                    "text": "干物妹！小霾",
+                    "value": "WooMaiBot"
+                },
+                {
+                    "text": "nmBot",
+                    "value": "nmbot"
+                },
+                {
+                    "text": "没有使用过上述机器人的娱乐功能",
+                    "value": "none"
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "您在 Telegram 上曾使用过机器人的哪类娱乐功能？",
+            "id": "use_which",
+            "must": true,
+            "min_num": 1,
+            "max_num": 7,
+            "description": "",
+            "answers": [
+                {
+                    "text": "自助禁言（例如 /banme, /kickme）",
+                    "value": "ban"
+                },
+                {
+                    "text": "益智游戏（例如扫雷、井字棋）",
+                    "value": "other_game"
+                },
+                {
+                    "text": "与其他群成员的互动（例如瓜瓜的聒噪bot）",
+                    "value": "interaction"
+                },
+                {
+                    "text": "群组聊天数据分析和词云",
+                    "value": "analyze"
+                },
+                {
+                    "text": "抽奖和发奖（差额随机，例如随机抽取用户赠送 Telegram 会员）",
+                    "value": "lottery_and_award"
+                },
+                {
+                    "text": "抽奖和发奖（等额随机，用户通过参与群聊获取抽取次数，随机获得某种奖励）",
+                    "value": "lottery_and_award_equal"
+                },
+                {
+                    "text": "奖励（按贡献计算，例如用户连续 3 天在群聊中活跃即可获得软件下载链接）",
+                    "value": "award_contribution"
+                },
+                {
+                    "text": "智能聊天",
+                    "value": "smart_chat"
+                },
+                {
+                    "text": "获取和聆听音乐",
+                    "value": "music"
+                },
+                {
+                    "text": "其它娱乐功能",
+                    "value": "other"
+                },
+                {
+                    "text": "没有使用过上述娱乐功能",
+                    "value": "none"
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "您在使用自助禁言（例如 /banme, /kickme）时是否有以下感受？",
+            "must": true,
+            "filter_bind": "use_which",
+            "filter_value": "ban",
+            "description": "",
+            "min_num": 1,
+            "max_num": 2,
+            "answers": [
+                {
+                    "text": "惊险刺激",
+                    "value": "exciting"
+                },
+                {
+                    "text": "无法主动解除禁言，想发言时仍未解除",
+                    "value": "cannot_cancel"
+                },
+                {
+                    "text": "无法分享我的 banme 记录，向好友炫耀",
+                    "value": "cannot_share"
+                },
+                {
+                    "text": "没有以上感受",
+                    "value": "none"
+                }
+            ]
+        },
+        {
+            "type": "single",
+            "title": "你是否可以接受在 banme 中引入抽卡和保底等游戏机制？",
+            "must": true,
+            "filter_bind": "use_which",
+            "filter_value": "ban",
+            "description": "",
+            "answers": [
+                {
+                    "text": "是",
+                    "value": "yes"
+                },
+                {
+                    "text": "否",
+                    "value": "no"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "若有其它关于自助禁言（例如 /banme, /kickme）的想法和感受，请分享给我们。",
+            "must": false,
+            "filter_bind": "use_which",
+            "filter_value": "ban",
+            "description": ""
+        },
+        {
+            "type": "multiple",
+            "id": "which_game",
+            "title": "您具体玩过哪些游戏？",
+            "must": true,
+            "filter_bind": "use_which",
+            "filter_value": "other_game",
+            "description": "",
+            "min_num": 1,
+            "max_num": 4,
+            "answers": [
+                {
+                    "text": "扫雷",
+                    "value": "mine_sweeper"
+                },
+                {
+                    "text": "井字棋",
+                    "value": "chess"
+                },
+                {
+                    "text": "@gamee 网页游戏",
+                    "value": "web"
+                },
+                {
+                    "text": "其它",
+                    "value": "other"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "您指的“其它游戏”具体包含哪些？",
+            "must": true,
+            "filter_bind": "which_game",
+            "filter_value": "other",
+            "description": ""
+        },
+        {
+            "type": "multiple",
+            "title": "您在使用益智游戏（例如扫雷、井字棋）时是否有以下感受？",
+            "must": true,
+            "filter_bind": "use_which",
+            "filter_value": "other_game",
+            "description": "",
+            "min_num": 1,
+            "max_num": 3,
+            "answers": [
+                {
+                    "text": "相关游戏刷屏，影响正常聊天",
+                    "value": "screen_blocking"
+                },
+                {
+                    "text": "相关游戏在 Telegram 聊天中显示不清晰，不清楚如何操作",
+                    "value": "game_not_clear"
+                },
+                {
+                    "text": "无法分享我的游戏记录，向好友炫耀",
+                    "value": "cannot_share"
+                },
+                {
+                    "text": "没有以上感受",
+                    "value": "none"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "若有其它关于益智游戏（例如扫雷、井字棋）的想法和感受，请分享给我们。",
+            "must": false,
+            "filter_bind": "use_which",
+            "filter_value": "other_game",
+            "description": ""
+        },
+        {
+            "type": "multiple",
+            "title": "您在使用与其他群成员的互动（例如瓜瓜的聒噪bot）时是否有以下感受？",
+            "must": true,
+            "filter_bind": "use_which",
+            "filter_value": "interaction",
+            "description": "",
+            "min_num": 1,
+            "max_num": 6,
+            "answers": [
+                {
+                    "text": "功能极大地增大了群友间的友好交流",
+                    "value": "friendship_increased"
+                },
+                {
+                    "text": "并不了解可以在回复群友时添加特殊字符插入时间、空回复值等和进行一些高级操作",
+                    "value": "cannot_understand_advanced_operation"
+                },
+                {
+                    "text": "发现该功能不能在频道讨论组使用",
+                    "value": "cannot_use_in_channel"
+                },
+                {
+                    "text": "希望完成操作后可以自动删除我的消息",
+                    "value": "auto_delete_my_message"
+                },
+                {
+                    "text": "在添加第三者时感到不便",
+                    "value": "cannot_add_third_party"
+                },
+                {
+                    "text": "输入错别字和其他错误时，无法收回消息",
+                    "value": "cannot_recover_message"
+                },
+                {
+                    "text": "没有以上感受",
+                    "value": "none"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "若有其它关于与其他群成员的互动（例如瓜瓜的聒噪bot）的想法和感受，请分享给我们。",
+            "must": false,
+            "filter_bind": "use_which",
+            "filter_value": "interaction",
+            "description": ""
+        },
+        {
+            "type": "multiple",
+            "title": "您在使用群组聊天数据分析和词云时是否有以下感受？",
+            "must": true,
+            "filter_bind": "use_which",
+            "filter_value": "analyze",
+            "description": "",
+            "min_num": 1,
+            "max_num": 4,
+            "answers": [
+                {
+                    "text": "参与聊天多的群成员不需要词云，查看词云的成员也 GET 不到其中内涵",
+                    "value": "no_need"
+                },
+                {
+                    "text": "词云功能对群组聊天内容进行了极佳的归纳总结",
+                    "value": "good_summary"
+                },
+                {
+                    "text": "聊天数据分析和词云在消息量少时不正确且无意义，也就是说，这种情况下可以不推送相关分析",
+                    "value": "small_group"
+                },
+                {
+                    "text": "担心数据分析功能收集用户隐私",
+                    "value": "privacy_concern"
+                },
+                {
+                    "text": "词云的相关功能发掘不充分",
+                    "value": "need_further_develop"
+                },
+                {
+                    "text": "没有以上感受",
+                    "value": "none"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "若有其它关于群组聊天数据分析和词云的想法和感受，请分享给我们。",
+            "must": false,
+            "filter_bind": "use_which",
+            "filter_value": "analyze",
+            "description": ""
+        },
+        {
+            "type": "textarea",
+            "title": "若有关于奖励机制的想法和感受，请分享给我们。",
+            "must": false,
+            "filter_bind": "use_which",
+            "filter_value": "lottery_and_award,lottery_and_award_equal,award_contribution",
+            "description": ""
+        },
+        {
+            "type": "textarea",
+            "title": "若有关于智能聊天的想法和感受，请分享给我们。",
+            "must": false,
+            "filter_bind": "use_which",
+            "filter_value": "smart_chat",
+            "description": ""
+        },
+        {
+            "type": "single",
+            "title": "你是否知道使用的机器人的音乐功能是否侵犯著作权？",
+            "must": true,
+            "filter_bind": "use_which",
+            "filter_value": "music",
+            "description": "",
+            "answers": [
+                {
+                    "text": "我知道",
+                    "value": "yes"
+                },
+                {
+                    "text": "我不知道",
+                    "value": "no"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "若有关于获取和聆听音乐的想法和感受，请分享给我们。",
+            "must": false,
+            "filter_bind": "use_which",
+            "filter_value": "music",
+            "description": ""
+        },
+        {
+            "type": "input",
+            "title": "您还使用过哪些娱乐功能？",
+            "must": true,
+            "filter_bind": "use_which",
+            "filter_value": "other",
+            "description": ""
+        },
+        {
+            "type": "multiple",
+            "title": "您对 Telegram 网页游戏（例如 @gamee 游戏）的看法是？",
+            "must": true,
+            "min_num": 1,
+            "max_num": 3,
+            "description": "",
+            "answers": [
+                {
+                    "text": "可以和群友一起玩",
+                    "value": "play_together"
+                },
+                {
+                    "text": "感觉在这些游戏上花费时间不值得",
+                    "value": "not_worth"
+                },
+                {
+                    "text": "排行榜激发了我的挑战欲望",
+                    "value": "ranking_excite"
+                },
+                {
+                    "text": "容易被破解和作弊",
+                    "value": "trick"
+                },
+                {
+                    "text": "与 Telegram 程序分离的体验割裂",
+                    "value": "separate"
+                },
+                {
+                    "text": "其它看法",
+                    "value": "other"
+                }
+            ]
+        },
+        {
+            "type": "single",
+            "title": "你是否了解 nmBot？",
+            "id": "know_nmbot",
+            "must": true,
+            "description": "",
+            "answers": [
+                {
+                    "text": "了解",
+                    "value": "yes"
+                },
+                {
+                    "text": "不了解",
+                    "value": "no"
+                }
+            ]
+        },
+        {
+            "type": "single",
+            "title": "你是否使用过 nmBot？",
+            "filter_bind": "know_nmbot",
+            "filter_value": "yes",
+            "must": true,
+            "description": "",
+            "answers": [
+                {
+                    "text": "使用过",
+                    "value": "yes"
+                },
+                {
+                    "text": "未使用过",
+                    "value": "no"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "title": "若您对 Telegram 机器人娱乐功能还有任何想法和建议，请分享给我们。",
+            "must": false,
+            "description": ""
+        },
+        {
+            "type": "input",
+            "title": "若您同意 nmTeam 就问卷问题与您取得进一步联系，请填写您的 Telegram 账号。",
+            "must": false,
+            "description": ""
+        }
+    ]
+}

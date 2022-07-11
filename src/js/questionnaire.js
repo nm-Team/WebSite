@@ -31,7 +31,27 @@ $("[data-must-answer=true] .input input").on("change", function (e) {
     }
 })
 
+$("[data-filter-id] .input input").on("change", function (e) {
+    var $this = $(this);
+    $("[data-filter-bind=" + $this.parents(".question").attr("data-filter-id") + "]").each(function (i, e) {
+        $(e).css("display", "none");
+    });
+    $this.parents(".questionAnswers").find("input:checked").each(function (i, e) {
+        $("[data-filter-bind=" + $this.parents(".question").attr("data-filter-id") + "]").each(function (i2, e2) {
+            if (e2.getAttribute("data-filter-value").split(",").indexOf(e.value) > -1) {
+                $(e2).css("display", "block");
+            }
+        });
+    });
+})
+
 function submitQue() {
+    $(".question").each(function (i, e) {
+        if ($(e).attr("data-filter-bind") != "" && $(e).css("display") == "none") {
+            $(e).find("input").prop("checked", false);
+            quesAnswerList[i] = true;
+        }
+    });
     if (quesAnswerList.indexOf(false) != -1) {
         window.location.href = "#q_" + quesAnswerList.indexOf(false);
         $(`#q_${quesAnswerList.indexOf(false)}`).find(".dTip:empty").html(questionnaireI18n.must_input);
@@ -69,5 +89,4 @@ $(document).ready(function () {
             $("#logErrDiv").css("display", "block");
         }
     }
-}
-);
+});
