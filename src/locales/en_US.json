@@ -1,244 +1,282 @@
 {
-	"pagebases": {
-		"official_website": "Official Website",
-		"site_intro": "nmTeam is a team that makes nmProducts to the world with incredible thoughts.",
-		"page_not_found": {
-			"title": "Page Not Found",
-			"img_title": "The code 404 means that the page you are looking for is not found.",
-			"home": "Home"
-		}
-	},
-	"about": {
-		"0": "XYZ1024 (self-proclaimed \"self-learning robot\") is a senior nm person. When someone sends a message in the Sakura Frp official group chat, XYZ1024 often responds in the form of \"*nm\". E.g:",
-		"1": "——How to use Mac with Android?",
-		"2": "——Use nm.",
-		"3": "Subsequently, the founder of nmTeam agou joined the nm army. He called himself an \"autonomous nm robot\", and carried forward the nm career, so he was removed from the group chat at 14:07 on May 29, 2020.",
-		"4": "When nmTeam was about to be founded, we chose the Chinese expression \"Lemon\" (or \"Nano\") for nm.",
-		"5": "All members of our nmTeam are loyal fans of nm, as a basis of which we are working hard to carry forward the nm culture!",
-		"6": "Let us know if you have a heart of nm.",
-		"7": "As long as you have an nm heart, nmTeam welcomes you to join at any time. Please visit this page to learn more.",
-		"8": "Learn How to Join nmTeam > ",
-		"h0": "Unfortunately, we didn't even think about slogan.",
-		"h1": "Want to know the origin of nm?",
-		"h2": "Want to join us?",
-		"title": "About nmTeam",
-		"description": "Know the meaning and history of nm in this page."
-	},
-	"account": {
-		"loading": "Loading...",
-		"click_to_log": "Click to Login",
-		"unable_to_load": "Error"
-	},
-	"comes_soon": "This page is in production, so stay tuned! ",
-	"cookie": {
-		"cookieConfirmDialog": {
-			"header": "About Cookies",
-			"body": {
-				"0": "nmTeam website and services use cookies to store basic visitor information and user account information.",
-				"1": "All cookies are managed in accordance with <a href='/legal/privacy-policy.php'>the nmTeam Privacy Policy</a>."
-			},
-			"button": {
-				"accept": "Accept & Continue",
-				"customize": "Customize"
-			}
-		},
-		"cookiePage": {
-			"title": "About Cookies"
-		}
-	},
-	"footer": {
-		"cr": "Copyright nmTeam. All rights reserved.",
-		"email": "E-mail: ",
-		"language": "Select Language: ",
-		"sitemap": "Sitemap",
-		"status": "System Status",
-		"svca": "Network Service Protocol",
-		"svcb": "Pricary Policy",
-		"table": {
-			"about": {
-				"aboutUs": "About nmTeam",
-				"accessibility": "Accessibility",
-				"joinUs": "Join nmTeam",
-				"newsroom": "Newsroom",
-				"supportUs": "Sponsor nmTeam",
-				"title": "About"
-			},
-			"products": {
-				"library": "Products Library",
-				"nmBrowserStartPage": "nmBrowser StartPage",
-				"nmChat": "nmChat",
-				"title": "Products"
-			},
-			"service": {
-				"accountCenter": "nmTeam Account Center",
-				"support": "Support",
-				"systemStatus": "System Status",
-				"title": "Services"
-			}
-		}
-	},
-	"header": {
-		"about": "About",
-		"home": "Home",
-		"newsroom": "Newsroom",
-		"products": "Products",
-		"support": "Support"
-	},
-	"index": {
-		"connect_para": "You can get in touch with nmTeam in the following ways.",
-		"connect_us": "Contact Us",
-		"join_para": "If you have a heart of nm, you can join us today.",
-		"join_para_2": "Please visit this page to learn more.",
-		"join_us": "Join Us",
-		"join_us_link": "Learn How to Join nmTeam",
-		"more_products": "All Products",
-		"newslist": "nmTeam Latest News",
-		"newslist_loading": "Loading nmTeam news...",
-		"newslist_error": "An error occored while loading news.",
-		"newslist_more": "nmTeam Newsroom",
-		"retry": "Retry",
-		"nmteam_is_this_a": "Established on June 14, 2021, nmTeam is committed to providing people with very nm products and services. nmTeam now has agou as the CEO, and more nmServices will be launched one after another.",
-		"nmteam_is_this_b": "nmTeam may go bankrupt, but it will never deteriorate! ",
-		"nmteam_about_link": "View About Page",
-		"title": "",
-		"what_is_nmteam": "What is nmTeam?",
-		"what_we_does": "nmTeam makes nmProducts",
-		"what_we_does_ans": "nmTeam is committed to making nmProducts. Check out some of our products below. "
-	},
-	"join": {
-		"join_requirement_page": {
-			"title": "Welcome to join nmTeam!",
-			"description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
-			"intro": {
-				"0": "Do you know that nmTeam has a harmonious team atmosphere and free management arrangements?",
-				"1": "Joining nmTeam will be an easy and enjoyable process - your talents will be of great benefit to our latest products, and we can even create exclusive products for you! What's more, your hard work will be rewarded richly, your contribution to nmTeam can also get public praise and a lot of bonuses. After joining nmTeam, even if you don't contribute too much, you will not be criticized. So come and find your favorite job and join nmTeam immediately!",
-				"2": ""
-			},
-			"jobs": {
-				"common": {
-					"nm_heart": "Having a heart of nm",
-					"nm_heart_intro": "Since you are an nmer, you have to understand a little about nm. What do you think about the word \"nm\"?",
-					"basic_morality": "Have a basic sense of team responsibility to ensure that the basic morality of the nmTeam creative environment and members is not undermined",
-					"basic_morality_intro": "In some special cases, please understand, nmTeam members are by no means saints, please be tolerant anyway; even if it is unacceptable, please do not destroy nmTeam services and destroy nmTeam data files.",
-					"friendly_wish": "Able to have friendly cooperation with other members"
-				},
-				"developer": {
-					"title": "nmTeam Developer",
-					"knowledge": "Basic knowledge of computers",
-					"experience": "You should have at least basic software development experience, or desire to improve yourself by participating in nmTeam development",
-					"experience_intro": "We are happy to see the improvement of nmTeam members after joining nmTeam, so don't worry about whether your current development level is up to the needs of nmTeam. Be bold, keep an aggressive mind, and see your progress It is the greatest joy for everyone in nmTeam.",
-					"additional": "Of course, we welcome nmers who are proficient in using Git and have a good grasp of web development or app development to join us more, so please be sure to sign up."
-				},
-				"support": {
-					"title": "Customer Support",
-					"part_time": "Enjoy your free time",
-					"part_time_intro": "nmTeam does not require you to devote time to providing services, only when you want to change your mood, you can view the help that nmTeam users need. Emergency services will be directly handled by nmTeam management, no worries.",
-					"attitude": "Have a good attitude towards nmTeam customers",
-					"attitude_intro": "nmTeam customers don't ask easy questions all the time, and I hope you can respond to your users' requests with peace of mind.",
-					"bill": "Mental damage fee",
-					"bill_intro": "Dealing with customer service can be a bit tiring at times. nmTeam will look into awarding bonuses to our service team members based on service as an incentive."
-				},
-				"writer": {
-					"title": "Operation",
-					"lan_level": "Have basic literary literacy, be able to write clear copy without language errors and punctuation errors",
-					"lan_level_intro": "If you can do it well, we will treat you well.",
-					"knowledge": "Have an in-depth understanding of nmTeam's product features and related planning, which can convey nmTeam's values ​​in a simple way and bring positive guidance",
-					"english": "Mastering a certain foreign language is preferred"
-				}
-			},
-			"register": "Register",
-			"language_request": "We only recruit members who can communicate with each other fluently in Chinese now.",
-			"more": {
-				"resources": {
-					"title": "Related information",
-					"nmteam_member_rules": "nmTeam member work and management rules (Under development)"
-				},
-				"already_been_member": {
-					"title": "Already a member of nmTeam",
-					"panel": "nmTeam work panel (Under development)"
-				}
-			},
-			"publicity": "nmTeam joining rules are being announced and may be revised at any time. Please send feedback to nmTeam via email: support@nmteam.xyz"
-		},
-		"join_register_page": {
-			"title": "Apply to Join nmTeam",
-			"description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
-			"tip": "Sorry, the application for joining nmTeam has not been officially opened yet, please check again in two days."
-		}
-	},
-	"language": {
-		"page": {
-			"title": "Change Language",
-			"tip": "Browse nmTeam website in a language that you are familiar with. Some content may not be displayed in the language you selected.",
-			"auto": "Auto Select"
-		}
-	},
-	"page_update": "Page updated on: {month}/{day}/{year}",
-	"products": {
-		"title": "Products",
-		"description": "See nmTeam's wonderful nmProducts",
-		"noresult": "No nmProduct available in your country or region was found.",
-		"unavaliable": "This product does not exist or cannot be used in your country or region.",
-		"explain": "Explanation: Only display nmTeam products available in your country or region. To view nmTeam products available in other countries or regions, please change the language of the nmTeam website. Try to set the language to simplified Chinese to get the most results.",
-		"error": "Oops, Something went wrong.",
-		"notfound": "Oops, The product you are looking for does not exist or is unavaliable in your country or region."
-	},
-	"questionnaire": {
-		"title": "nmTeam Form",
-		"description": "Fill out the nmTeam form.",
-		"submit": "Submit",
-		"select_num_limit": "Please select {min} to {max} items.",
-		"select_sin_limit": "Please select {min} items.",
-		"select_min_limit": "Please select at least {n} items.",
-		"select_max_limit": "Please select at most {n} items.",
-		"limit": "This form can only be submitted after logging in to the nmTeam Account, and each account can submit a maximum of {t} times.",
-		"multiple": "Multiple Choices",
-		"must_input": "Please fill in this blank.",
-		"log_require": "You need to be logged in to your nmTeam account to fill out this form.",
-		"account": {
-			"title": "This form will be submitted with {name}",
-			"description": "nmTeam staff will see your account information.",
-			"error": "Some errors occurred and the login status could not be verified."
-		},
-		"result": {
-			"title_success": "Form submitted Successfully",
-			"info_success": "You have successfully submitted the form <b>{name}</b>.",
-			"title_error": "Form Submission Failed",
-			"info_error": "Failed to submit form <b>{name}</b>.<br><br>Error: {error}.",
-			"error_code": {
-				"LOG_VERIFY_ERROR": "User login status verification failed",
-				"EMPTY_ANSWER": "Mandatory questions are not filled in",
-				"SERVER_ERROR": "Some server error occurred",
-				"REACH_ACCOUNY_LIMIT": "Exceeded account submissions",
-				"REACH_IP_LIMIT": "This IP is submitted too frequently, please try again later"
-			}
-		}
-	},
-	"sitemap": {
-		"title": "Sitemap",
-		"description": "View the nmTeam sitemap for quick directions to your favorite nmTeam website pages."
-	},
-	"status_page": {
-		"title": "nmTeam System Status",
-		"description": "Track the working status of each service of nmTeam.",
-		"redirecting": "Redirecting to the nmTeam system status standalone page..."
-	},
-	"supportus": {
-		"title": "Sponsor nmTeam",
-		"description": "Sponsor nmTeam to help us go further.",
-		"tks_sponsor": "Thanks to Our Sponsors",
-		"tks_other": "Thanks to Other nmTeam Contributors",
-		"links": {
-			"afdian": "AFDian",
-			"patreon": "Patreon"
-		},
-		"para": "nmTeam believes that its existence brings unique value to people.<br>If you agree with this, you may wish to sponsor nmTeam so that we can go further.<br>nmTeam will use these donation funds to For nmTeam's R&D and overhead, or to buy a cup of coffee.<br>No matter how you support nmTeam, we thank you really much. With your support, we will continue working hard.",
-		"table": {
-			"name": "Nickname",
-			"amount": "Amount",
-			"avatar": "Avatar",
-			"contribution": "Contribution"
-		},
-		"sponsors_info_note": "The names and avatars of nmTeam sponsors listed above are set by them and have nothing to do with nmTeam.<br>The above sponsorship ways will jump to third-party platforms, nmTeam is not responsible for its content."
-	}
+    "pagebases": {
+        "official_website": "Official Website",
+        "site_intro": "nmTeam is a team that makes nmProducts to the world with incredible thoughts.",
+        "page_not_found": {
+            "title": "Page Not Found",
+            "img_title": "The code 404 means that the page you are looking for is not found.",
+            "home": "Home"
+        }
+    },
+    "about": {
+        "0": "XYZ1024 (self-proclaimed \"self-learning robot\") is a senior nm person. When someone sends a message in the Sakura Frp official group chat, XYZ1024 often responds in the form of \"*nm\". E.g:",
+        "1": "——How to use Mac with Android?",
+        "2": "——Use nm.",
+        "3": "Subsequently, the founder of nmTeam agou joined the nm army. He called himself an \"autonomous nm robot\", and carried forward the nm career, so he was removed from the group chat at 14:07 on May 29, 2020.",
+        "4": "When nmTeam was about to be founded, we chose the Chinese expression \"Lemon\" (or \"Nano\") for nm.",
+        "5": "All members of our nmTeam are loyal fans of nm, as a basis of which we are working hard to carry forward the nm culture!",
+        "6": "Let us know if you have a heart of nm.",
+        "7": "As long as you have an nm heart, nmTeam welcomes you to join at any time. Please visit this page to learn more.",
+        "8": "Learn How to Join nmTeam > ",
+        "h0": "Unfortunately, we didn't even think about slogan.",
+        "h1": "Want to know the origin of nm?",
+        "h2": "Want to join us?",
+        "title": "About nmTeam",
+        "description": "Know the meaning and history of nm in this page."
+    },
+    "account": {
+        "loading": "Loading...",
+        "click_to_log": "Click to Login",
+        "unable_to_load": "Error"
+    },
+    "comes_soon": "This page is in production, so stay tuned! ",
+    "cookie": {
+        "cookieConfirmDialog": {
+            "header": "About Cookies",
+            "body": {
+                "0": "nmTeam website and services use cookies to store basic visitor information and user account information.",
+                "1": "All cookies are managed in accordance with <a href='/legal/privacy-policy.php'>the nmTeam Privacy Policy</a>."
+            },
+            "button": {
+                "accept": "Accept & Continue",
+                "customize": "Customize"
+            }
+        },
+        "cookiePage": {
+            "title": "About Cookies"
+        }
+    },
+    "footer": {
+        "cr": "Copyright nmTeam. All rights reserved.",
+        "email": "E-mail: ",
+        "language": "Select Language: ",
+        "sitemap": "Sitemap",
+        "status": "System Status",
+        "svca": "Network Service Protocol",
+        "svcb": "Pricary Policy",
+        "table": {
+            "about": {
+                "aboutUs": "About nmTeam",
+                "accessibility": "Accessibility",
+                "joinUs": "Join nmTeam",
+                "newsroom": "Newsroom",
+                "supportUs": "Sponsor nmTeam",
+                "title": "About"
+            },
+            "products": {
+                "library": "Products Library",
+                "nmBrowserStartPage": "nmBrowser StartPage",
+                "nmChat": "nmChat",
+                "title": "Products"
+            },
+            "service": {
+                "accountCenter": "nmTeam Account Center",
+                "support": "Support",
+                "systemStatus": "System Status",
+                "title": "Services"
+            }
+        }
+    },
+    "header": {
+        "about": "About",
+        "home": "Home",
+        "newsroom": "Newsroom",
+        "products": "Products",
+        "support": "Support"
+    },
+    "index": {
+        "connect_para": "You can get in touch with nmTeam in the following ways.",
+        "connect_us": "Contact Us",
+        "join_para": "If you have a heart of nm, you can join us today.",
+        "join_para_2": "Please visit this page to learn more.",
+        "join_us": "Join Us",
+        "join_us_link": "Learn How to Join nmTeam",
+        "more_products": "All Products",
+        "newslist": "nmTeam Latest News",
+        "newslist_loading": "Loading nmTeam news...",
+        "newslist_error": "An error occored while loading news.",
+        "newslist_more": "nmTeam Newsroom",
+        "retry": "Retry",
+        "nmteam_is_this_a": "Established on June 14, 2021, nmTeam is committed to providing people with very nm products and services. nmTeam now has agou as the CEO, and more nmServices will be launched one after another.",
+        "nmteam_is_this_b": "nmTeam may go bankrupt, but it will never deteriorate! ",
+        "nmteam_about_link": "View About Page",
+        "title": "",
+        "what_is_nmteam": "What is nmTeam?",
+        "what_we_does": "nmTeam makes nmProducts",
+        "what_we_does_ans": "nmTeam is committed to making nmProducts. Check out some of our products below. "
+    },
+    "join": {
+        "join_requirement_page": {
+            "title": "Welcome to join nmTeam!",
+            "description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
+            "intro": {
+                "0": "Do you know that nmTeam has a harmonious team atmosphere and free management arrangements?",
+                "1": "Joining nmTeam will be an easy and enjoyable process - your talents will be of great benefit to our latest products, and we can even create exclusive products for you! What's more, your hard work will be rewarded richly, your contribution to nmTeam can also get public praise and a lot of bonuses. After joining nmTeam, even if you don't contribute too much, you will not be criticized. So come and find your favorite job and join nmTeam immediately!",
+                "2": ""
+            },
+            "jobs": {
+                "common": {
+                    "nm_heart": "Having a heart of nm",
+                    "nm_heart_intro": "Since you are an nmer, you have to understand a little about nm. What do you think about the word \"nm\"?",
+                    "basic_morality": "Have a basic sense of team responsibility to ensure that the basic morality of the nmTeam creative environment and members is not undermined",
+                    "basic_morality_intro": "In some special cases, please understand, nmTeam members are by no means saints, please be tolerant anyway; even if it is unacceptable, please do not destroy nmTeam services and destroy nmTeam data files.",
+                    "friendly_wish": "Able to have friendly cooperation with other members"
+                },
+                "developer": {
+                    "title": "nmTeam Developer",
+                    "knowledge": "Basic knowledge of computers",
+                    "experience": "You should have at least basic software development experience, or desire to improve yourself by participating in nmTeam development",
+                    "experience_intro": "We are happy to see the improvement of nmTeam members after joining nmTeam, so don't worry about whether your current development level is up to the needs of nmTeam. Be bold, keep an aggressive mind, and see your progress It is the greatest joy for everyone in nmTeam.",
+                    "additional": "Of course, we welcome nmers who are proficient in using Git and have a good grasp of web development or app development to join us more, so please be sure to sign up."
+                },
+                "support": {
+                    "title": "Customer Support",
+                    "part_time": "Enjoy your free time",
+                    "part_time_intro": "nmTeam does not require you to devote time to providing services, only when you want to change your mood, you can view the help that nmTeam users need. Emergency services will be directly handled by nmTeam management, no worries.",
+                    "attitude": "Have a good attitude towards nmTeam customers",
+                    "attitude_intro": "nmTeam customers don't ask easy questions all the time, and I hope you can respond to your users' requests with peace of mind.",
+                    "bill": "Mental damage fee",
+                    "bill_intro": "Dealing with customer service can be a bit tiring at times. nmTeam will look into awarding bonuses to our service team members based on service as an incentive."
+                },
+                "writer": {
+                    "title": "Operation",
+                    "lan_level": "Have basic literary literacy, be able to write clear copy without language errors and punctuation errors",
+                    "lan_level_intro": "If you can do it well, we will treat you well.",
+                    "knowledge": "Have an in-depth understanding of nmTeam's product features and related planning, which can convey nmTeam's values ​​in a simple way and bring positive guidance",
+                    "english": "Mastering a certain foreign language is preferred"
+                }
+            },
+            "register": "Register",
+            "language_request": "We only recruit members who can communicate with each other fluently in Chinese now.",
+            "more": {
+                "resources": {
+                    "title": "Related information",
+                    "nmteam_member_rules": "nmTeam member work and management rules (Under development)"
+                },
+                "already_been_member": {
+                    "title": "Already a member of nmTeam",
+                    "panel": "nmTeam work panel (Under development)"
+                }
+            },
+            "publicity": "nmTeam joining rules are being announced and may be revised at any time. Please send feedback to nmTeam via email: support@nmteam.xyz"
+        },
+        "join_register_page": {
+            "title": "Apply to Join nmTeam",
+            "description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
+            "tip": "Sorry, the application for joining nmTeam has not been officially opened yet, please check again in two days."
+        }
+    },
+    "language": {
+        "page": {
+            "title": "Change Language",
+            "tip": "Browse nmTeam website in a language that you are familiar with. Some content may not be displayed in the language you selected.",
+            "auto": "Auto Select"
+        }
+    },
+    "page_update": "Page updated on: {month}/{day}/{year}",
+    "products": {
+        "title": "Products",
+        "description": "See nmTeam's wonderful nmProducts",
+        "noresult": "No nmProduct available in your country or region was found.",
+        "unavaliable": "This product does not exist or cannot be used in your country or region.",
+        "explain": "Explanation: Only display nmTeam products available in your country or region. To view nmTeam products available in other countries or regions, please change the language of the nmTeam website. Try to set the language to simplified Chinese to get the most results.",
+        "error": "Oops, Something went wrong.",
+        "notfound": "Oops, The product you are looking for does not exist or is unavaliable in your country or region."
+    },
+    "questionnaire": {
+        "title": "nmTeam Form",
+        "description": "Fill out the nmTeam form.",
+        "submit": "Submit",
+        "select_num_limit": "Please select {min} to {max} items.",
+        "select_sin_limit": "Please select {min} items.",
+        "select_min_limit": "Please select at least {n} items.",
+        "select_max_limit": "Please select at most {n} items.",
+        "limit": "This form can only be submitted after logging in to the nmTeam Account, and each account can submit a maximum of {t} times.",
+        "multiple": "Multiple Choices",
+        "must_input": "Please fill in this blank.",
+        "log_require": "You need to be logged in to your nmTeam account to fill out this form.",
+        "account": {
+            "title": "This form will be submitted with {name}",
+            "description": "nmTeam staff will see your account information.",
+            "error": "Some errors occurred and the login status could not be verified."
+        },
+        "result": {
+            "title_success": "Form submitted Successfully",
+            "info_success": "You have successfully submitted the form <b>{name}</b>.",
+            "title_error": "Form Submission Failed",
+            "info_error": "Failed to submit form <b>{name}</b>.<br><br>Error: {error}.",
+            "error_code": {
+                "LOG_VERIFY_ERROR": "User login status verification failed",
+                "EMPTY_ANSWER": "Mandatory questions are not filled in",
+                "SERVER_ERROR": "Some server error occurred",
+                "REACH_ACCOUNY_LIMIT": "Exceeded account submissions",
+                "REACH_IP_LIMIT": "This IP is submitted too frequently, please try again later"
+            }
+        },
+        "backstage": {
+            "analyze": {
+                "detail": "",
+                "keyword": "Key words",
+                "overview": "Overview",
+                "result_num": "Number of results",
+                "input_rate": "Fill rate",
+                "time": "Average time"
+            },
+            "data_type": {
+                "JSON": "JSON"
+            },
+            "tip": {
+                "not_log": "Sorry, you are not logged in to the nmTeam administrator account.",
+                "not_found": "This form was not found.",
+                "not_admin": "Sorry, you are not an administrator of nmTeam and do not have permission to access this page."
+            },
+            "question_type": {
+                "textarea": "multi-line input",
+                "single": "single choice",
+                "multiple": "multiple choice",
+                "input": "fill blank"
+            }
+        }
+    },
+    "sitemap": {
+        "title": "Sitemap",
+        "description": "View the nmTeam sitemap for quick directions to your favorite nmTeam website pages."
+    },
+    "status_page": {
+        "title": "nmTeam System Status",
+        "description": "Track the working status of each service of nmTeam.",
+        "redirecting": "Redirecting to the nmTeam system status standalone page..."
+    },
+    "supportus": {
+        "title": "Sponsor nmTeam",
+        "description": "Sponsor nmTeam to help us go further.",
+        "tks_sponsor": "Thanks to Our Sponsors",
+        "tks_other": "Thanks to Other nmTeam Contributors",
+        "links": {
+            "afdian": "AFDian",
+            "patreon": "Patreon"
+        },
+        "para": "nmTeam believes that its existence brings unique value to people.<br>If you agree with this, you may wish to sponsor nmTeam so that we can go further.<br>nmTeam will use these donation funds to For nmTeam's R&D and overhead, or to buy a cup of coffee.<br>No matter how you support nmTeam, we thank you really much. With your support, we will continue working hard.",
+        "table": {
+            "name": "Nickname",
+            "amount": "Amount",
+            "avatar": "Avatar",
+            "contribution": "Contribution"
+        },
+        "sponsors_info_note": "The names and avatars of nmTeam sponsors listed above are set by them and have nothing to do with nmTeam.<br>The above sponsorship ways will jump to third-party platforms, nmTeam is not responsible for its content."
+    },
+    "legal": {
+        "description": "View nmTeam Terms of Service.",
+        "pp": "Privacy Policy",
+        "nsp": "Network Service Protocol "
+    },
+    "support": {
+        "via_email_description": "Contact nmTeam support via email.",
+        "via_email": "Email support",
+        "support_email": "nmTeam support email:",
+        "email_tip": "nmTeam Support Email",
+        "description": "We are always here to help.",
+        "community_description": "Chat with nmTeam members, volunteers, and users about nmTeam product issues on the nmFun Support section.",
+        "community": "nmTeam Community"
+    }
 }

@@ -271,6 +271,16 @@
 		"description": "跟踪 nmTeam 各服务的工作状态。",
 		"redirecting": "正在重定向到 nmTeam 系统状态独立页面..."
 	},
+	"support": {
+		"title": "nmTeam 支持",
+		"description": "我们随时在此提供帮助。",
+		"via_email": "电子邮件支持",
+		"via_email_description": "通过电子邮件联系 nmTeam 支持。",
+		"support_email": "nmTeam 支持邮箱：",
+		"email_tip": "nmTeam 支持电子邮箱",
+		"community": "nmTeam 社区",
+		"community_description": "在 nmFun 支持板块与 nmTeam 成员、志愿者和用户交流 nmTeam 产品问题。"
+	},
 	"supportus": {
 		"title": "赞助 nmTeam",
 		"description": "赞助 nmTeam，帮助我们走得更远。",

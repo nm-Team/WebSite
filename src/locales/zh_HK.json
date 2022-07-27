@@ -1,249 +1,302 @@
 {
-	"pagebases": {
-		"official_website": "官方網站",
-		"site_intro": "nmTeam 憑藉非凡創意，為世界創造無與倫比的nm產品。",
-		"page_not_found": {
-			"title": "找不到頁面",
-			"img_title": "404 表明無法找到此頁面",
-			"home": "主頁"
-		}
-	},
-	"about": {
-		"0": "自稱「自主 nm 機械人」的 XYZ1024 可是 nm 的好手。有人在 Sakura Frp 群里說話的時候，他總是回復一句「*nm」，舉個例子：",
-		"1": "——Android 怎麼用 Mac 啊",
-		"2": "——用 nm",
-		"3": "受到熏陶的 nmTeam 創始人 agou 就這樣被騙進了 nm 大軍，成為了一名光榮的 nm 人。他背起了「自主 nm 機械人」這個光榮的稱號，扛起了 nm 這面光榮的大旗，結果在 2020 年 5 月 29 日 14 時 07 分被光榮地移出了群聊。",
-		"4": "決定創立 nmTeam 的時候，我們給 「nm」擬定了中文寓意：「檸檬」，又或者「納米」。",
-		"5": "咱們 nmTeam 的成員各個可都是 nm 的好手，所以我們有信心將 nm 文化發揚光大！",
-		"6": "那得先讓我看看你有沒有 nm 的潛質。",
-		"7": "只要你有一顆 nm 的心，nmTeam 隨時歡迎你的加入。請前往此頁面進一步了解申請加入 nmTeam 的條件。",
-		"8": "了解如何加入 nmTeam > ",
-		"h0": "然而我們連 Slogan 都沒有想好。",
-		"h1": "想知道 nm 這個詞兒是怎麼來的嗎？",
-		"h2": "你也想加入 nmTeam 了嗎？",
-		"title": "關於 nmTeam",
-		"description": "了解 nmTeam 的歷史與含義吧。"
-	},
-	"account": {
-		"loading": "加載中...",
-		"click_to_log": "點擊登錄",
-		"unable_to_load": "加載出錯"
-	},
-	"comes_soon": "此頁面正在製作中，敬請期待！",
-	"cookie": {
-		"cookieConfirmDialog": {
-			"header": "關於 Cookie",
-			"body": {
-				"0": "nmTeam 網站及服務使用 Cookie 存儲訪客的基本信息和用戶的賬號等信息。",
-				"1": "所有 Cookie 依照<a href='/legal/privacy-policy.php'>《nmTeam 隱私政策》</a>進行管理。"
-			},
-			"button": {
-				"accept": "接受並繼續",
-				"customize": "自定義"
-			}
-		},
-		"cookiePage": {
-			"title": "關於 Cookie"
-		}
-	},
-	"footer": {
-		"cr": "版權所有 nmTeam。保留所有權利。",
-		"email": "電子郵箱：",
-		"language": "切換語言：",
-		"sitemap": "站點地圖",
-		"status": "系統狀態",
-		"svca": "服務協議",
-		"svcb": "隱私政策",
-		"table": {
-			"about": {
-				"aboutUs": "關於 nmTeam",
-				"accessibility": "輔助功能",
-				"joinUs": "加入 nmTeam",
-				"newsroom": "Newsroom",
-				"supportUs": "贊助 nmTeam",
-				"title": "關於"
-			},
-			"products": {
-				"library": "產品庫",
-				"nmBrowserStartPage": "nmBrowser 啟動頁",
-				"nmChat": "nmChat",
-				"title": "產品"
-			},
-			"service": {
-				"accountCenter": "nmTeam Account Center",
-				"support": "支持",
-				"systemStatus": "系統狀態",
-				"title": "服務"
-			}
-		}
-	},
-	"header": {
-		"about": "關於",
-		"home": "主頁",
-		"newsroom": "Newsroom",
-		"products": "產品",
-		"support": "支持"
-	},
-	"index": {
-		"connect_para": "你可以通過下面的聯繫方式與 nmTeam 取得聯繫。",
-		"connect_us": "聯繫 nmTeam",
-		"join_para": "如果你有一顆 nm 的心，現在就可以申請加入我們。",
-		"join_para_2": "請前往此頁面進一步了解申請加入 nmTeam 的條件。",
-		"join_us": "加入 nmTeam",
-		"join_us_link": "了解如何加入 nmTeam",
-		"more_products": "查看產品頁面",
-		"newslist": "nmTeam 新聞",
-		"newslist_loading": "正在加載...",
-		"newslist_error": "加載新聞時出現問題。",
-		"newslist_more": "nmTeam Newsroom",
-		"retry": "重試",
-		"nmteam_is_this_a": "nmTeam 於 2021 年 6 月 14 日成立，致力於為人們提供十分 nm 的產品和服務。nmTeam 現由 agou 作為 CEO，將陸續推出更多 nmServices。",
-		"nmteam_is_this_b": "nmTeam 可能會倒閉，但永遠不會變質！",
-		"nmteam_about_link": "關於 nmTeam",
-		"title": "",
-		"what_is_nmteam": "nmTeam 是什麼？",
-		"what_we_does": "nmTeam 造就 nmProducts",
-		"what_we_does_ans": "nmTeam 致力於製作 nmProducts。在下方查看我們的一些產品。"
-	},
-	"join": {
-		"join_requirement_page": {
-			"title": "歡迎加入 nmTeam！",
-			"description": "加入 nmTeam，和我們一起發揚 nm 文化，共建 nm 生態。",
-			"intro": {
-				"0": "你知道嗎？nmTeam 擁有和諧的團隊氛圍和自由的管理安排。",
-				"1": "加入 nmTeam 將是一個簡單又愉快的過程——你的才能將對我們最新的產品大有裨益，我們甚至可以為你量身定製專屬產品！而且你的努力會有豐富的回報，你對 nmTeam 的貢獻還可以獲得公開表揚和不少的獎金；在加入 nmTeam 之後，就算你沒有太多貢獻，也不會受到批評。所以快來找到自己中意的位置，即刻加入 nmTeam！",
-				"2": ""
-			},
-			"jobs": {
-				"common": {
-					"nm_heart": "擁有一顆 nm 的心",
-					"nm_heart_intro": "既然作為 nm 人，總得懂點 nm 道理。你是如何看待 nm 這個單詞的？",
-					"basic_morality": "有基本的團隊責任感，能保證不破壞 nmTeam 創作環境和成員的基本道德要求",
-					"basic_morality_intro": "在一些特殊情況下請多多理解，nmTeam 成員絕非聖賢，無論如何還請多多包容；就算無法接受，也請不要毀壞 nmTeam 服務和銷毀 nmTeam 數據文件。",
-					"friendly_wish": "能與或希望與其他成員展開友好的交流合作"
-				},
-				"developer": {
-					"title": "nmTeam 開發",
-					"knowledge": "對電腦有基本的認知水平",
-					"experience": "有至少基本的軟件開發經驗，或渴望通過參與 nmTeam 開發提升自己",
-					"experience_intro": "我們樂於看到 nmTeam 成員在加入 nmTeam 後的提升，所以不要擔心自己目前的開發水平能否勝任 nmTeam 的需要。大膽闖一闖，保持一顆上進的心，看到你的進步就是 nmTeam 的大家最大的快樂。",
-					"additional": "當然，我們更歡迎熟練使用 Git，且對網頁開發或 app 開發掌握較好的 nm 人加入我們，所以請一定踴躍報名。"
-				},
-				"support": {
-					"title": "客戶支持",
-					"part_time": "享受空閑時間",
-					"part_time_intro": "nmTeam 不要求你專門為提供服務騰出時間，僅當您想換換心情時，即可查看 nmTeam 用戶需要的幫助。緊急服務將由 nmTeam 管理層直接負責，毋需擔心。",
-					"attitude": "以良好的態度面對 nmTeam 客戶",
-					"attitude_intro": "nmTeam 客戶並不是在所有時候都提出輕鬆的問題，希望您能以平和的心態回應用戶的訴求。",
-					"bill": "精神損失費",
-					"bill_intro": "處理客戶服務有時是一件讓人略感疲憊的事情。nmTeam 將研究根據服務情況為我們的服務團隊成員發放獎金，以資鼓勵。"
-				},
-				"writer": {
-					"title": "運營",
-					"lan_level": "有基本的文學素養，能寫出不含語病和標點符號錯誤，並且表意明確的文案",
-					"lan_level_intro": "若能做到妙筆生花，我們對你讚賞有加，加入我們你將穩坐沙發。",
-					"knowledge": "深入了解 nmTeam 的產品特性和相關規劃，能深入淺出地傳達 nmTeam 的價值觀，並帶來積極引導作用",
-					"english": "掌握一定的外語水平優先"
-				}
-			},
-			"register": "加入",
-			"language_request": "暫時只招募能互相通過中文流暢交流的成員。",
-			"more": {
-				"resources": {
-					"title": "相關資料",
-					"nmteam_member_rules": "nmTeam 成員工作和管理規範（制定中）"
-				},
-				"already_been_member": {
-					"title": "已經是 nmTeam 成員",
-					"panel": "nmTeam 工作面板（開發中）"
-				}
-			},
-			"publicity": "nmTeam 加入規則正在公示中，並可能隨時修改。請通過電子郵箱向 nmTeam 反饋：support@nmteam.xyz"
-		},
-		"join_register_page": {
-			"description": "加入 nmTeam，和我們一起發揚 nm 文化，共建 nm 生態。",
-			"title": "申請加入 nmTeam",
-			"tip": "抱歉，還未正式開放 nmTeam 加入申請，請過兩天再看看。"
-		}
-	},
-	"language": {
-		"page": {
-			"title": "切換語言",
-			"tip": "以您熟悉的語言瀏覽 nmTeam 網站。某些內容可能不會以您選定的語言顯示。",
-			"auto": "自動選擇"
-		}
-	},
-	"legal": {
-		"nsp": "網絡服務使用協議",
-		"pp": "隱私政策",
-		"description": "查看 nmTeam 服務條款。"
-	},
-	"page_update": "頁面更新日期：{year} 年 {month} 月 {day} 日",
-	"products": {
-		"title": "產品",
-		"description": "查看 nmTeam 的精彩產品。",
-		"noresult": "找不到在您的國家或地區可用的 nmTeam 產品。",
-		"unavaliable": "此產品不存在或無法在您的國家或地區使用。",
-		"explain": "說明：僅展示在您的國家或地區可用的 nmTeam 產品。要查看在其它國家或地區可用的 nmTeam 產品，請更改 nmTeam 網站的語言。",
-		"error": "發生了一些錯誤。",
-		"notfound": "未找到產品"
-	},
-	"questionnaire": {
-		"title": "nmTeam 表單",
-		"description": "填寫 nmTeam 表單。",
-		"submit": "提交",
-		"select_num_limit": "請選擇 {min} 至 {max} 項。",
-		"select_sin_limit": "請選擇 {min} 項。",
-		"select_min_limit": "請至少選擇 {n} 項。",
-		"select_max_limit": "請最多選擇 {n} 項。",
-		"limit": "此表單需登錄 nmTeam Account 後方可提交，且每賬號可最多提交 {t} 次。",
-		"multiple": "多選",
-		"must_input": "請填寫此項。",
-		"log_require": "需要登錄 nmTeam 賬號才可以填寫此表單。",
-		"account": {
-			"title": "將使用 {name} 提交此表單",
-			"description": "nmTeam 工作人員將看到您的賬號信息。",
-			"error": "發生了一些錯誤，無法驗證登錄狀態。"
-		},
-		"result": {
-			"title_success": "表單提交成功",
-			"info_success": "您已成功提交表單 <b>{name}</b>。",
-			"title_error": "表單提交失敗",
-			"info_error": "提交表單 <b>{name}</b> 失敗。<br><br>錯誤信息：{error}。",
-			"error_code": {
-				"LOG_VERIFY_ERROR": "用戶登錄狀態校驗失敗",
-				"EMPTY_ANSWER": "有必填問題未填寫",
-				"SERVER_ERROR": "出現了一些服務器錯誤",
-				"REACH_ACCOUNY_LIMIT": "超過了賬號提交次數",
-				"REACH_IP_LIMIT": "此 IP 的提交頻率太頻繁，請稍後再試"
-			}
-		}
-	},
-	"sitemap": {
-		"title": "站點地圖",
-		"description": "查看 nmTeam 站點地圖，快速定向您喜愛的 nmTeam 網站頁面。"
-	},
-	"status_page": {
-		"title": "nmTeam 系統狀態",
-		"description": "跟蹤 nmTeam 各服務的工作狀態。",
-		"redirecting": "正在重定向到 nmTeam 系統狀態獨立頁面..."
-	},
-	"supportus": {
-		"title": "贊助 nmTeam",
-		"description": "贊助 nmTeam，幫助我們走得更遠。",
-		"tks_sponsor": "鳴謝贊助者",
-		"tks_other": "鳴謝其他 nmTeam 貢獻者",
-		"links": {
-			"afdian": "愛發電",
-			"patreon": "Patreon"
-		},
-		"para": "nmTeam 堅信自己的存在為人們帶來了獨特的價值。<br>如果您也認同這一點，不妨贊助 nmTeam，讓我們能走的更遠。<br>nmTeam 會將這些捐助資金用於 nmTeam 的研發和日常開支，或者用於買一杯咖啡。<br>無論您通過何種方式支持 nmTeam，我們都對您表示衷心的感謝。有了您的一片心意，我們必定更加努力。",
-		"table": {
-			"name": "昵稱",
-			"amount": "金額",
-			"avatar": "頭像",
-			"contribution": "貢獻"
-		},
-		"sponsors_info_note": "以上所列的 nmTeam 贊助者的姓名和頭像為其自行設定，與 nmTeam 無關。<br>以上贊助渠道將跳轉到第三方平臺，nmTeam 不對其內容負責。"
-	}
+    "pagebases": {
+        "official_website": "官方網站",
+        "site_intro": "nmTeam 憑藉非凡創意，為世界創造無與倫比的nm產品。",
+        "page_not_found": {
+            "title": "找不到頁面",
+            "img_title": "404 表明無法找到此頁面",
+            "home": "主頁"
+        }
+    },
+    "about": {
+        "0": "自稱「自主 nm 機械人」的 XYZ1024 可是 nm 的好手。有人在 Sakura Frp 群里說話的時候，他總是回復一句「*nm」，舉個例子：",
+        "1": "——Android 怎麼用 Mac 啊",
+        "2": "——用 nm",
+        "3": "受到熏陶的 nmTeam 創始人 agou 就這樣被騙進了 nm 大軍，成為了一名光榮的 nm 人。他背起了「自主 nm 機械人」這個光榮的稱號，扛起了 nm 這面光榮的大旗，結果在 2020 年 5 月 29 日 14 時 07 分被光榮地移出了群聊。",
+        "4": "決定創立 nmTeam 的時候，我們給 「nm」擬定了中文寓意：「檸檬」，又或者「納米」。",
+        "5": "咱們 nmTeam 的成員各個可都是 nm 的好手，所以我們有信心將 nm 文化發揚光大！",
+        "6": "那得先讓我看看你有沒有 nm 的潛質。",
+        "7": "只要你有一顆 nm 的心，nmTeam 隨時歡迎你的加入。請前往此頁面進一步了解申請加入 nmTeam 的條件。",
+        "8": "了解如何加入 nmTeam > ",
+        "h0": "然而我們連 Slogan 都沒有想好。",
+        "h1": "想知道 nm 這個詞兒是怎麼來的嗎？",
+        "h2": "你也想加入 nmTeam 了嗎？",
+        "title": "關於 nmTeam",
+        "description": "了解 nmTeam 的歷史與含義吧。"
+    },
+    "account": {
+        "loading": "加載中...",
+        "click_to_log": "點擊登錄",
+        "unable_to_load": "加載出錯"
+    },
+    "comes_soon": "此頁面正在製作中，敬請期待！",
+    "cookie": {
+        "cookieConfirmDialog": {
+            "header": "關於 Cookie",
+            "body": {
+                "0": "nmTeam 網站及服務使用 Cookie 存儲訪客的基本信息和用戶的賬號等信息。",
+                "1": "所有 Cookie 依照<a href='/legal/privacy-policy.php'>《nmTeam 隱私政策》</a>進行管理。"
+            },
+            "button": {
+                "accept": "接受並繼續",
+                "customize": "自定義"
+            }
+        },
+        "cookiePage": {
+            "title": "關於 Cookie"
+        }
+    },
+    "footer": {
+        "cr": "版權所有 nmTeam。保留所有權利。",
+        "email": "電子郵箱：",
+        "language": "切換語言：",
+        "sitemap": "站點地圖",
+        "status": "系統狀態",
+        "svca": "服務協議",
+        "svcb": "隱私政策",
+        "table": {
+            "about": {
+                "aboutUs": "關於 nmTeam",
+                "accessibility": "輔助功能",
+                "joinUs": "加入 nmTeam",
+                "newsroom": "Newsroom",
+                "supportUs": "贊助 nmTeam",
+                "title": "關於"
+            },
+            "products": {
+                "library": "產品庫",
+                "nmBrowserStartPage": "nmBrowser 啟動頁",
+                "nmChat": "nmChat",
+                "title": "產品"
+            },
+            "service": {
+                "accountCenter": "nmTeam Account Center",
+                "support": "支持",
+                "systemStatus": "系統狀態",
+                "title": "服務"
+            }
+        }
+    },
+    "header": {
+        "about": "關於",
+        "home": "主頁",
+        "newsroom": "Newsroom",
+        "products": "產品",
+        "support": "支持"
+    },
+    "index": {
+        "connect_para": "你可以通過下面的聯繫方式與 nmTeam 取得聯繫。",
+        "connect_us": "聯繫 nmTeam",
+        "join_para": "如果你有一顆 nm 的心，現在就可以申請加入我們。",
+        "join_para_2": "請前往此頁面進一步了解申請加入 nmTeam 的條件。",
+        "join_us": "加入 nmTeam",
+        "join_us_link": "了解如何加入 nmTeam",
+        "more_products": "查看產品頁面",
+        "newslist": "nmTeam 新聞",
+        "newslist_loading": "正在加載...",
+        "newslist_error": "加載新聞時出現問題。",
+        "newslist_more": "nmTeam Newsroom",
+        "retry": "重試",
+        "nmteam_is_this_a": "nmTeam 於 2021 年 6 月 14 日成立，致力於為人們提供十分 nm 的產品和服務。nmTeam 現由 agou 作為 CEO，將陸續推出更多 nmServices。",
+        "nmteam_is_this_b": "nmTeam 可能會倒閉，但永遠不會變質！",
+        "nmteam_about_link": "關於 nmTeam",
+        "title": "",
+        "what_is_nmteam": "nmTeam 是什麼？",
+        "what_we_does": "nmTeam 造就 nmProducts",
+        "what_we_does_ans": "nmTeam 致力於製作 nmProducts。在下方查看我們的一些產品。"
+    },
+    "join": {
+        "join_requirement_page": {
+            "title": "歡迎加入 nmTeam！",
+            "description": "加入 nmTeam，和我們一起發揚 nm 文化，共建 nm 生態。",
+            "intro": {
+                "0": "你知道嗎？nmTeam 擁有和諧的團隊氛圍和自由的管理安排。",
+                "1": "加入 nmTeam 將是一個簡單又愉快的過程——你的才能將對我們最新的產品大有裨益，我們甚至可以為你量身定製專屬產品！而且你的努力會有豐富的回報，你對 nmTeam 的貢獻還可以獲得公開表揚和不少的獎金；在加入 nmTeam 之後，就算你沒有太多貢獻，也不會受到批評。所以快來找到自己中意的位置，即刻加入 nmTeam！",
+                "2": ""
+            },
+            "jobs": {
+                "common": {
+                    "nm_heart": "擁有一顆 nm 的心",
+                    "nm_heart_intro": "既然作為 nm 人，總得懂點 nm 道理。你是如何看待 nm 這個單詞的？",
+                    "basic_morality": "有基本的團隊責任感，能保證不破壞 nmTeam 創作環境和成員的基本道德要求",
+                    "basic_morality_intro": "在一些特殊情況下請多多理解，nmTeam 成員絕非聖賢，無論如何還請多多包容；就算無法接受，也請不要毀壞 nmTeam 服務和銷毀 nmTeam 數據文件。",
+                    "friendly_wish": "能與或希望與其他成員展開友好的交流合作"
+                },
+                "developer": {
+                    "title": "nmTeam 開發",
+                    "knowledge": "對電腦有基本的認知水平",
+                    "experience": "有至少基本的軟件開發經驗，或渴望通過參與 nmTeam 開發提升自己",
+                    "experience_intro": "我們樂於看到 nmTeam 成員在加入 nmTeam 後的提升，所以不要擔心自己目前的開發水平能否勝任 nmTeam 的需要。大膽闖一闖，保持一顆上進的心，看到你的進步就是 nmTeam 的大家最大的快樂。",
+                    "additional": "當然，我們更歡迎熟練使用 Git，且對網頁開發或 app 開發掌握較好的 nm 人加入我們，所以請一定踴躍報名。"
+                },
+                "support": {
+                    "title": "客戶支持",
+                    "part_time": "享受空閑時間",
+                    "part_time_intro": "nmTeam 不要求你專門為提供服務騰出時間，僅當您想換換心情時，即可查看 nmTeam 用戶需要的幫助。緊急服務將由 nmTeam 管理層直接負責，毋需擔心。",
+                    "attitude": "以良好的態度面對 nmTeam 客戶",
+                    "attitude_intro": "nmTeam 客戶並不是在所有時候都提出輕鬆的問題，希望您能以平和的心態回應用戶的訴求。",
+                    "bill": "精神損失費",
+                    "bill_intro": "處理客戶服務有時是一件讓人略感疲憊的事情。nmTeam 將研究根據服務情況為我們的服務團隊成員發放獎金，以資鼓勵。"
+                },
+                "writer": {
+                    "title": "運營",
+                    "lan_level": "有基本的文學素養，能寫出不含語病和標點符號錯誤，並且表意明確的文案",
+                    "lan_level_intro": "若能做到妙筆生花，我們對你讚賞有加，加入我們你將穩坐沙發。",
+                    "knowledge": "深入了解 nmTeam 的產品特性和相關規劃，能深入淺出地傳達 nmTeam 的價值觀，並帶來積極引導作用",
+                    "english": "掌握一定的外語水平優先"
+                }
+            },
+            "register": "加入",
+            "language_request": "暫時只招募能互相通過中文流暢交流的成員。",
+            "more": {
+                "resources": {
+                    "title": "相關資料",
+                    "nmteam_member_rules": "nmTeam 成員工作和管理規範（制定中）"
+                },
+                "already_been_member": {
+                    "title": "已經是 nmTeam 成員",
+                    "panel": "nmTeam 工作面板（開發中）"
+                }
+            },
+            "publicity": "nmTeam 加入規則正在公示中，並可能隨時修改。請通過電子郵箱向 nmTeam 反饋：support@nmteam.xyz"
+        },
+        "join_register_page": {
+            "description": "加入 nmTeam，和我們一起發揚 nm 文化，共建 nm 生態。",
+            "title": "申請加入 nmTeam",
+            "tip": "抱歉，還未正式開放 nmTeam 加入申請，請過兩天再看看。"
+        }
+    },
+    "language": {
+        "page": {
+            "title": "切換語言",
+            "tip": "以您熟悉的語言瀏覽 nmTeam 網站。某些內容可能不會以您選定的語言顯示。",
+            "auto": "自動選擇"
+        }
+    },
+    "legal": {
+        "nsp": "網絡服務使用協議",
+        "pp": "隱私政策",
+        "description": "查看 nmTeam 服務條款。"
+    },
+    "page_update": "頁面更新日期：{year} 年 {month} 月 {day} 日",
+    "products": {
+        "title": "產品",
+        "description": "查看 nmTeam 的精彩產品。",
+        "noresult": "找不到在您的國家或地區可用的 nmTeam 產品。",
+        "unavaliable": "此產品不存在或無法在您的國家或地區使用。",
+        "explain": "說明：僅展示在您的國家或地區可用的 nmTeam 產品。要查看在其它國家或地區可用的 nmTeam 產品，請更改 nmTeam 網站的語言。",
+        "error": "發生了一些錯誤。",
+        "notfound": "未找到產品"
+    },
+    "questionnaire": {
+        "title": "nmTeam 表單",
+        "description": "填寫 nmTeam 表單。",
+        "submit": "提交",
+        "select_num_limit": "請選擇 {min} 至 {max} 項。",
+        "select_sin_limit": "請選擇 {min} 項。",
+        "select_min_limit": "請至少選擇 {n} 項。",
+        "select_max_limit": "請最多選擇 {n} 項。",
+        "limit": "此表單需登錄 nmTeam Account 後方可提交，且每賬號可最多提交 {t} 次。",
+        "multiple": "多選",
+        "must_input": "請填寫此項。",
+        "log_require": "需要登錄 nmTeam 賬號才可以填寫此表單。",
+        "account": {
+            "title": "將使用 {name} 提交此表單",
+            "description": "nmTeam 工作人員將看到您的賬號信息。",
+            "error": "發生了一些錯誤，無法驗證登錄狀態。"
+        },
+        "result": {
+            "title_success": "表單提交成功",
+            "info_success": "您已成功提交表單 <b>{name}</b>。",
+            "title_error": "表單提交失敗",
+            "info_error": "提交表單 <b>{name}</b> 失敗。<br><br>錯誤信息：{error}。",
+            "error_code": {
+                "LOG_VERIFY_ERROR": "用戶登錄狀態校驗失敗",
+                "EMPTY_ANSWER": "有必填問題未填寫",
+                "SERVER_ERROR": "出現了一些服務器錯誤",
+                "REACH_ACCOUNY_LIMIT": "超過了賬號提交次數",
+                "REACH_IP_LIMIT": "此 IP 的提交頻率太頻繁，請稍後再試"
+            }
+        },
+        "backstage": {
+            "analyze": {
+                "detail": "詳情",
+                "input_rate": "填寫率",
+                "keyword": "關鍵詞",
+                "overview": "概覽",
+                "percent": "百分比",
+                "result_num": "結果數",
+                "time": "平均用時"
+            },
+            "data_type": {
+                "JSON": "JSON",
+                "analyze": "分析",
+                "origin": "源數據",
+                "preview": "源表單"
+            },
+            "gentime": "頁面生成時間：",
+            "link": "鏈接",
+            "name": "表單：",
+            "origin": {
+                "answer": "答案",
+                "id": "ID",
+                "ip": "IP",
+                "start_time": "開始填寫時間",
+                "submit_time": "提交時間",
+                "time": "耗時",
+                "uid": "UID"
+            },
+            "question_type": {
+                "chosen_answer": "選填",
+                "input": "填空",
+                "multiple": "多選",
+                "must_answer": "必填",
+                "single": "單項選擇",
+                "textarea": "多行輸入"
+            },
+            "tip": {
+                "not_admin": "抱歉，您不是 nmTeam 管理員，沒有權限訪問此頁面。",
+                "not_found": "未找到此表單。",
+                "not_log": "抱歉，您未登錄 nmTeam 管理員賬戶。"
+            },
+            "title": "nmTeam 表單分析數據"
+        }
+    },
+    "sitemap": {
+        "title": "站點地圖",
+        "description": "查看 nmTeam 站點地圖，快速定向您喜愛的 nmTeam 網站頁面。"
+    },
+    "status_page": {
+        "title": "nmTeam 系統狀態",
+        "description": "跟蹤 nmTeam 各服務的工作狀態。",
+        "redirecting": "正在重定向到 nmTeam 系統狀態獨立頁面..."
+    },
+    "supportus": {
+        "title": "贊助 nmTeam",
+        "description": "贊助 nmTeam，幫助我們走得更遠。",
+        "tks_sponsor": "鳴謝贊助者",
+        "tks_other": "鳴謝其他 nmTeam 貢獻者",
+        "links": {
+            "afdian": "愛發電",
+            "patreon": "Patreon"
+        },
+        "para": "nmTeam 堅信自己的存在為人們帶來了獨特的價值。<br>如果您也認同這一點，不妨贊助 nmTeam，讓我們能走的更遠。<br>nmTeam 會將這些捐助資金用於 nmTeam 的研發和日常開支，或者用於買一杯咖啡。<br>無論您通過何種方式支持 nmTeam，我們都對您表示衷心的感謝。有了您的一片心意，我們必定更加努力。",
+        "table": {
+            "name": "昵稱",
+            "amount": "金額",
+            "avatar": "頭像",
+            "contribution": "貢獻"
+        },
+        "sponsors_info_note": "以上所列的 nmTeam 贊助者的姓名和頭像為其自行設定，與 nmTeam 無關。<br>以上贊助渠道將跳轉到第三方平臺，nmTeam 不對其內容負責。"
+    },
+    "support": {
+        "community": "nmTeam 社區",
+        "community_description": "在 nmFun 支持板塊與 nmTeam 成員、志願者和用戶交流 nmTeam 產品問題。",
+        "description": "我們隨時在此提供幫助。",
+        "email_tip": "nmTeam 支持電子郵箱",
+        "support_email": "nmTeam 支持郵箱：",
+        "title": "nmTeam 支持",
+        "via_email": "電子郵件支持",
+        "via_email_description": "通過電子郵件聯繫 nmTeam 支持。"
+    }
 }
