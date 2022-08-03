@@ -21,7 +21,7 @@ try {
     // 处理主要区块
     pBSMain = productsJson.main;
     for (bls in pBSMain) {
-        products_detail_main.innerHTML += `<div class="detail-blocks" id="detail_blocks_` + bls + `" data-blocks-num="` + bls + `" data-blocks-selfid="` + pBSMain[bls]['id'] + `" data-theme="` + pBSMain[bls]['theme'] + `" ></div>`;
+        products_detail_main.innerHTML += `<div class="detail-blocks ${pBSMain[bls].class}" style="${pBSMain[bls].style}" id="detail_blocks_` + bls + `" data-blocks-num="` + bls + `" data-blocks-selfid="` + pBSMain[bls]['id'] + `" data-theme="` + pBSMain[bls]['theme'] + `" ></div>`;
         pMBSId = `detail_blocks_` + bls;
         pMain = pBSMain[bls].blockItems;
         generateBlock(pMBSId, pMain);
@@ -76,7 +76,7 @@ function generateBlock(pMBId, blockJson) {
                 document.getElementById(bLId).innerHTML = `<p class="h1">` + checkTip(attrList.h1, attrList) + `</p><p class="h2">` + checkTip(attrList.h2, attrList) + `</p>`;
                 break;
             case "single":
-                document.getElementById(bLId).innerHTML = `<div class="singleMain"><p class="word">` + checkTip(attrList.p, attrList) + `</p>` + (attrList.mediaType == "img" ? `<img class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" />` : (attrList.mediaType == "video" ? `<video class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" autoplay="autoplay" muted="muted" controls="false" controlslist="nodownload" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" ></video>` : "")) + `</div>`;
+                document.getElementById(bLId).innerHTML = `<div class="singleMain ${attrList.mediaType ? "" : "nomedia"}"><p class="word">` + checkTip(attrList.p, attrList) + `</p>` + (attrList.mediaType == "img" ? `<img class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" />` : (attrList.mediaType == "video" ? `<video class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" autoplay="autoplay" muted="muted" controls="false" controlslist="nodownload" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" ></video>` : "")) + `</div>`;
                 break;
             case "img":
                 document.getElementById(bLId).innerHTML = `` + (attrList.mediaType == "img" ? `<img class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" />` : (attrList.mediaType == "video" ? `<video class="img" style="` + attrList.mediaStyle + `" ` + attrList.specialAttr + ` src="` + attrList.media + `" ondragstart="return false;" autoplay="autoplay" muted="muted" controls="false" controlslist="nodownload" title="` + attrList.mediaTitle + `" alt="` + attrList.mediaTitle + `" ></video>` : "")) + `<p>` + checkTip(attrList.p, attrList) + `</p>`;

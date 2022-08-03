@@ -1,0 +1,451 @@
+{
+    "page": {
+        "productName": "nmBot Telegram 版",
+        "theme": "dark"
+    },
+    "header": {
+        "name": "<p style='line-height: 0; opacity: 0;'>nmBot</p>",
+        "slug": "Telegram 版",
+        "intro": "<p style='line-height: 0; opacity: 0;'></p>",
+        "icon": "https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png",
+        "background": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/background-image.webp",
+        "backgroundColor": "#83B28B",
+        "color": "#ffffffcc",
+        "height": "calc(100vh + 20px)",
+        "align": "bottom",
+        "buttons": [],
+        "custom": "<div style='position: absolute; top: 45%; left: 50%; width: 80%; height: 70%; background-image: url(https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/background-text.png); background-repeat: no-repeat; background-size: contain; background-position: center; transform: translate(-50%, -50%); z-index: 0'></div>"
+    },
+    "main": [
+        {
+            "id": "main_intro_0",
+            "class": "center",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "main_intro_text",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "<center style='font-size: 200%; margin-bottom: .35em'>nmBot,</center>",
+                        "h2": "<div style='font-size: 18px; opacity: 0.85; text-align: center; line-height: 1.8'>一款真正人性化的智能机器人<bs>。</bs></div>"
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "center",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "start",
+                                        "name": "开始使用 nmBot",
+                                        "javascript": "",
+                                        "href": "https://t.me/nmnmfunbot",
+                                        "towards": "out"
+                                    },
+                                    {
+                                        "id": "startpanel",
+                                        "name": "nmBot 面板",
+                                        "javascript": "",
+                                        "href": "https://nmbottelegram.nmnm.fun",
+                                        "towards": "out"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "subtitle",
+                    "id": "know_more_nm_know_more_you",
+                    "class": "center",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>更懂 nm<bs>，</bs></nobr> <nobr>更懂你<bs>。</bs></nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "nm_heart_builds_nmartchat",
+                    "class": "center",
+                    "theme": "",
+                    "attr": {
+                        "p": "得益于 nmTeam 在 nmBot 中倾注的 nm 心血，nmBot 对 nm 有着深刻的了解<bs>。</bs><br>流淌着 nm 之血的 nmBot，总能用 nm 又不失格调的妙语让人舒心<bs>。</bs><br>而这，就是 <b style='font-size: 200%; font-weight: 1000; -webkit-background-clip: text; background-clip: text; color: rgba(0,0,0,0); background-image: linear-gradient(90deg, rgba(255,230,63,1) 0%, rgba(255,233,91,1) 33%, rgba(255,239,160,1) 46%, rgba(255,212,34,1) 62%, rgba(234,205,81,1) 76%, rgba(255,213,38,1) 90%, rgba(255,205,0,1) 100%)'>nmartChat</b><bs>。</bs><br>nm，art，smart，于此结合，让你乐呵呵<bs>。</bs>"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "nmartChatView",
+            "style": "background-image: url(https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/background-image.webp); background-size: cover; background-color: rgba(0,0,0,0); ",
+            "blockItems": [
+                {
+                    "type": "img",
+                    "id": "chat_his",
+                    "class": "",
+                    "theme": "",
+                    "style": "background-color: rgba(0,0,0,0); ",
+                    "attr": {
+                        "p": "",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/nmartchatshow.png",
+                        "mediaStyle": "max-width: 660px",
+                        "mediaTitle": "nmartChat 对话",
+                        "align": "center"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "main_intro_1",
+            "class": "center",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "tens_of_features",
+                    "class": "center",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>内含数十类功能<bs>，</bs></nobr> <nobr>二十项指令[tip]<bs>，</bs><br></nobr> <nobr>是您的贴心管理<bs>。</bs></nobr>",
+                        "tip": [
+                            "nmBot 通过 Telegram 机器人和 nmBot 面板提供了大量功能。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "features_intro_text_0",
+                    "class": "center",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmBot 专为群组管理设计，实用的群组管理功能使 nmBot 毫不怯场，从容自在。[tip]",
+                        "tip": [
+                            "部分功能可能需要启用 nmBot 管理功能后才能设置。并非所有功能都始终在群组内可用。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_join_verify",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>入群验证</b><br>千人之群，始于 Captcha。<br>nmBot 通过人机验证有效屏蔽骚扰用户入群[tip]，更可以要求成员订阅频道，订阅者就是你的群成员[tip]；也能自动允许 Telegram 会员入群，自动拒绝非会员入群。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/feat_jv.png",
+                        "mediaStyle": "border-radius:6px;max-width:300px;",
+                        "mediaTitle": "",
+                        "tip": [
+                            "nmBot 可通过验证码等方式有效避免骚扰用户入群，但这些方法未必始终对骚扰用户生效。",
+                            "nmBot 允许设置“频道验证”（对部分群组或频道可能不生效），要求用户订阅群组指定的频道来完成验证。要设置“频道验证”，您必须将 nmBot 添加至目标频道，并参阅 nmBot 帮助文档来完成配置。nmBot 不保证用户完成入群验证后是否仍然订阅该频道。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_repeat",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>欢乐复读</b><br>三人成行，复读有型。<br>nmBot 可助力群内聊天热潮，为群员头脑风暴[tip]实力撑腰[tip]。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/feat_repeat.png",
+                        "mediaStyle": "border-radius:6px;max-width:300px;",
+                        "mediaTitle": "",
+                        "tip": [
+                            "nmBot 复读消息不代表其对消息内容的认同。",
+                            "nmBot 仅支持复读部分消息类型。受删除消息等操作影响时，nmBot 可能不会复读消息。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "function_reply",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>关键词回复</b><br>通过 nmBot 设置针对聊天内容触发的自动回复。<br>使用正则表达式，您可以精准匹配识别内容。nmBot 还能自动忽略管理员消息触发，删除源消息和回复消息，甚至禁言发消息的用户。关键词回复不仅可轻松撰写，还支持从其它机器人导入[tip]。",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/feat_rp.png",
+                        "mediaStyle": "border-radius:6px;max-width:300px;",
+                        "mediaTitle": "",
+                        "tip": [
+                            "nmBot 支持导入从“鲁小迅”导出的自动回复。部分“鲁小迅”自动回复功能可能不受支持。"
+                        ]
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "feat_button_container",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": ""
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "feat_button",
+                            "class": "center",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "learn_more_feature",
+                                        "name": "全部 nmBot 功能",
+                                        "javascript": "openChild('features_child')",
+                                        "href": "",
+                                        "towards": "plus"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "featuresView",
+            "style": "background-image: url(https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/background-image.webp); background-size: cover; background-color: rgba(0,0,0,0); ",
+            "blockItems": [
+                {
+                    "type": "img",
+                    "id": "fts",
+                    "class": "",
+                    "theme": "",
+                    "style": "background-color: rgba(0,0,0,0); opacity: .9; ",
+                    "attr": {
+                        "p": "",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/features.png",
+                        "mediaStyle": "max-width: 680px",
+                        "mediaTitle": "nmBot 功能速览",
+                        "align": "center"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "main_intro_2",
+            "theme": "light",
+            "class": "center",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "panel_title",
+                    "class": "center",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>掌声有请</nobr><br><nobr style='position: relative;'><span style='padding: 4px; color: #ffffff; background: #FBBE03; z-index: 1; position: relative;'>nmBot 面板</span><bs>。</bs></nobr>"
+                    }
+                },
+                {
+                    "type": "html",
+                    "id": "panel_showbox",
+                    "class": "frameimgstrans",
+                    "theme": "",
+                    "style": "height: 42vw; margin-top: 40px",
+                    "attr": {
+                        "innerHTML": "<style>.frameimgstrans{position: relative; overflow: hidden}.frameimgstrans div *{position: absolute; height: calc(100% - 50px); padding: 0 9.6%; user-select: none;}</style><img id='macimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/panel_mac.webp'><img id='iosimg' src='https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/panel_phone.webp'>",
+                        "script": "setInterval(() => { fip = $('.frameimgstrans')[0].getBoundingClientRect().top; macimg.style.right = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\"; iosimg.style.left = \"-\"+(Math.max(0, fip / window.outerHeight * 200-70))+\"%\";}, 10);"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "panel_intro_text_0",
+                    "class": "center",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmTeam 致力于让所有人都能以最简单的方式体会 nm 的乐趣。<br>因此，我们推出 <b>nmBot 面板</b>，以简单好用易上手的图形页面重新定义 Telegram 机器人如何配置。",
+                        "tip": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "main_intro_3",
+            "class": "center",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "more_intro",
+                    "class": "center",
+                    "attr": {
+                        "h1": "",
+                        "h2": "<nobr>多种语料<bs>，</bs><br></nobr> <nobr>让群聊不再单调<bs>。</bs></nobr>"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "more_intro_text_0",
+                    "class": "center",
+                    "theme": "",
+                    "attr": {
+                        "p": "nmBot 配备多项聊天功能，让您与 nmBot 自如聊天，连认出 userbot 都不在话下[tip]。",
+                        "tip": [
+                            "nmBot 会识别部分用户疑似通过 Telegram userbot 发出的消息，并根据情景做出智能的反应。<br>目前支持的 Telegram userbot：PagerMaid-Modify, PagerMaid-Pyro。 "
+                        ]
+                    }
+                },
+                {
+                    "type": "img",
+                    "id": "laugh_face",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "",
+                        "mediaType": "img",
+                        "media": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/laugh.svg",
+                        "mediaStyle": "height: 100px!important",
+                        "mediaTitle": "欢乐的脸庞",
+                        "align": "center"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "nmBot_truly_a_member_of_group",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "nmBot_truly_a_member_of_group_text",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "<center style='font-size: 200%; margin-bottom: .35em'>nmBot,</center>",
+                        "h2": "<div style='font-size: 30px; text-align: center; line-height: 1.8; color: #ffffff00; -webkit-background-clip: text; background-clip: text; background-image: linear-gradient(34deg, rgba(255,230,63,1) 0%, rgba(227,134,4,1) 18%, rgba(246,215,19,1) 43%, rgba(255,192,0,1) 62%, rgba(255,225,96,1) 76%, rgba(255,213,38,1) 90%, rgba(255,205,0,1) 100%);'>真正是您群组的一员<bs>！</bs></div>"
+                    },
+                    "blockItems": [
+                        {
+                            "type": "buttons",
+                            "id": "design_frame_p2",
+                            "class": "center",
+                            "theme": "",
+                            "attr": {
+                                "buttons": [
+                                    {
+                                        "id": "start",
+                                        "name": "开始使用 nmBot",
+                                        "javascript": "",
+                                        "href": "https://t.me/nmnmfunbot",
+                                        "towards": "out"
+                                    },
+                                    {
+                                        "id": "startpanel",
+                                        "name": "nmBot 面板",
+                                        "javascript": "",
+                                        "href": "https://nmbottelegram.nmnm.fun",
+                                        "towards": "out"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "nmBot_worth",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "nmBot_worth_text",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "<center style='font-size: 200%; margin-bottom: .35em'>nmBot,</center>",
+                        "h2": "<div style='font-size: 30px; text-align: center; line-height: 1.8; color: #ffffff00; -webkit-background-clip: text; background-clip: text; background-image: linear-gradient(34deg, rgba(255,230,63,1) 0%, rgba(227,134,4,1) 18%, rgba(246,215,19,1) 43%, rgba(255,192,0,1) 62%, rgba(255,225,96,1) 76%, rgba(255,213,38,1) 90%, rgba(255,205,0,1) 100%);'>值得陪群到老<bs>！</bs></div>"
+                    }
+                }
+            ]
+        }
+    ],
+    "footer": [
+        {
+            "icon": "M526.24195 1023.549242a116.629676 116.629676 0 0 1-77.452912-29.269996l-48.182917-42.779225a45.030763 45.030763 0 1 1 59.890915-67.546144l48.182916 42.779225a27.018458 27.018458 0 0 0 31.071227 3.152153 26.56815 26.56815 0 0 0 5.403691-42.328917l-99.067678-95.915525-193.632281 111.225984a118.430907 118.430907 0 0 1-161.660439-45.030763L16.944021 732.650513a118.430907 118.430907 0 0 1 45.030763-161.660439L346.569206 405.276867a118.430907 118.430907 0 0 1 161.660439 45.030763l99.067678 171.567206 301.706112 41.87861L599.191786 126.086136l-65.744914 180.123052a45.030763 45.030763 0 1 1-84.657834-31.071226l85.558449-233.70966A63.493376 63.493376 0 0 1 648.725625 31.521534l365.199488 632.68222a63.493376 63.493376 0 0 1-63.493376 94.564602l-360.246104-49.533839a81.505681 81.505681 0 0 1-59.440607-40.077379L430.326425 495.338393a28.369381 28.369381 0 0 0-38.726456-10.357076l-285.945345 163.911977a28.369381 28.369381 0 0 0-10.357076 38.726456l73.400144 126.986752a28.369381 28.369381 0 0 0 38.726456 10.357075L406.46012 710.585439a82.406296 82.406296 0 0 1 97.716756 12.158306l104.021063 100.418602a116.629676 116.629676 0 0 1-81.055374 200.837203z m45.030763-945.646022z",
+            "name": "nmBot 频道",
+            "intro": "订阅 nmBot 频道，获取最新的 nmBot 资讯。",
+            "button": "nmBot 频道",
+            "href": "https://t.me/nmbotchannel",
+            "javascript": "",
+            "type": "out",
+            "towards": "out"
+        }
+    ],
+    "child": {
+        "features_child": {
+            "theme": "dark",
+            "blockItems": [
+                {
+                    "type": "subtitle",
+                    "id": "features_child_h",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "h1": "",
+                        "h2": "nmBot Telegram 功能列表",
+                        "tip": []
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "features_child_content_tip",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "此列表中所列出的 nmBot 功能仅供参考。要了解最新的 nmBot 功能及详细使用方法和限制，请参阅 nmBot 帮助文档和 nmBot 公告。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "features_child_content_0",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>nmBot 面板</b><br>通过 nmBot 面板完成群组管理设置和个人信息设置。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "features_child_content_1",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>nmBot 群组管理功能</b><br><b>入群验证：</b>设置入群需要进行算数验证、订阅频道认证、拒绝新成员入群等选项。设置自动通过 Telegram 会员入群和自动拒绝非 Telegram 会员入群等额外助手选项。<br><b>群组管理指令：</b>使用标准 Telegram 指令禁言成员、踢出和封禁成员、警告成员、置顶消息、删除消息。支持使用额外参数自定义限制时间、警告次数等。支持配置群成员被移除所需的警告次数。<br><b>入群欢迎：</b>在新成员加入群组后提示预设的欢迎文本和按钮。<br><b>关键词回复：</b>在群成员触发关键词时，自动回复预设的回复内容。设置关键词回复时，支持匹配正则表达式，支持从多个回复内容中随机选取，支持设置行内按钮，支持设置自动删除触发消息、自动删除回复消息、显示关闭按钮、禁言触发者、忽略群组管理员等选项。<br><b>删除频道身份消息：</b>自动删除群组内以频道身份发送的消息。<br><b>删除会员专享贴纸：</b>自动删除群组内 Telegram 会员发送的会员专享贴纸。<br><b>解除频道消息置顶：</b>自动取消群组关联的 Telegram 频道发送的消息在讨论群中的置顶。<br><b>呼叫管理员：</b>群成员可通过 /admin, @admin, @管理 等方式使 nmBot 呼叫群组管理员，并为群组管理员提供一些快速操作（部分快速操作仍在开发中）。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "features_child_content_2",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>nmBot 群组娱乐功能</b><br><b>群组 nmartChat：</b>回复 nmBot 消息、在对话中 @ nmBot、在消息内容中包含 nmBot 或发送以 nm 开头的消息来与 nmBot 展开智能聊天。<br><b>会员身份验证：</b>发送 /pm 指令确认自己和他人的 Telegram 会员身份。<br><b>欢乐复读：</b>群组内短时间内有两人连续发送内容相同的部分类型相同时，nmBot 根据聊天内容自动分析，选择复制消息内容、转发消息或回复给某条消息。该功能支持在 Telegram 频道评论区使用。<br><b>同频气氛组：</b>群组关联的 Telegram 频道发送部分文字消息时，nmBot 将使用 nmartChat 在频道评论区智能回复消息内容。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "features_child_content_3",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>nmBot 个人设置功能</b><br><b>名片：</b>在 nmBot 中保存自己的名片信息，并在聊天中通过 /me 指令或 Telegram 行内机器人快速发送自己的名片。<br><b>私信 nmartChat：</b>在私信中与 nmBot 聊天。"
+                    }
+                },
+                {
+                    "type": "single",
+                    "id": "features_child_content_4",
+                    "class": "",
+                    "theme": "",
+                    "attr": {
+                        "p": "<b>nmartChat</b><br>nmBot 根据收到的消息内容，聪慧地自动回复文本和贴纸。详细参数请参阅 nmBot 帮助文档。"
+                    }
+                }
+            ]
+        }
+    }
+}

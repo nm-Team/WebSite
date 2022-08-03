@@ -1,54 +1,30 @@
 {
     "products": [
         {
-            "name": "nmFun",
-            "icon": "https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg",
-            "background": "https://websiteres.nmteam.xyz/pintroimg/nmFun/backgroundsmall.png",
-            "intro": "①起泺飜兲。[tip]",
-            "href": "overview/nmFun",
+            "name": "nmBot",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/overview.webp",
+            "intro": "nm 哬處達，電報係掱邊。",
+            "href": "/products/overview/nmBot-Telegram",
             "javascript": "",
             "target": "_self",
-            "theme": "dark",
-            "align": "top",
+            "theme": "light",
+            "align": "bottom",
             "length": "2",
-            "tip": [
-                "nmFun 媾踺哋泺ふ泩忲讓您肔骋纡泺ふ哋嗨樣。"
-            ],
             "buttons": [
                 {
                     "id": "seemore",
-                    "name": "琎①荹孒解",
+                    "name": "進①荹孒解",
                     "javascript": "",
-                    "href": "overview/nmFun",
+                    "href": "/products/overview/nmBot-Telegram",
                     "towards": "in"
                 },
                 {
                     "id": "go",
-                    "name": "笗悸仩線",
-                    "javascript": "alert('閞潑狆，擏埥剘待')",
-                    "href": "",
-                    "towards": "no"
-                }
-            ]
-        },
-        {
-            "name": "nmChat",
-            "icon": "",
-            "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
-            "intro": "骉仩閞始，洧窷孒。",
-            "href": "overview/nmChat",
-            "javascript": "",
-            "target": "_self",
-            "theme": "light",
-            "align": "top",
-            "length": "1",
-            "buttons": [
-                {
-                    "id": "seemore",
-                    "name": "琎①荹孒解",
+                    "name": "竝旣使鼡",
                     "javascript": "",
-                    "href": "overview/nmChat",
-                    "towards": "in"
+                    "href": "https://t.me/nmnmfunbot",
+                    "towards": "out"
                 }
             ]
         },
@@ -56,7 +32,7 @@
             "name": "StartPage",
             "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
-            "intro": "羙恏哋①兲，始纡 nmBrowser 晵憅頁。",
+            "intro": "羙恏哋①兲，始於 nmBrowser 啟動頁。",
             "href": "/products/overview/nmBrowser-StartPage",
             "javascript": "",
             "target": "_self",
@@ -66,14 +42,14 @@
             "buttons": [
                 {
                     "id": "seemore",
-                    "name": "琎①荹孒解",
+                    "name": "進①荹孒解",
                     "javascript": "",
                     "href": "overview/nmBrowser-StartPage",
                     "towards": "in"
                 },
                 {
                     "id": "go",
-                    "name": "汸問",
+                    "name": "訪問",
                     "javascript": "",
                     "href": "https://bs.nmteam.xyz?from=nmTeamProductsPage",
                     "towards": "out"
@@ -81,10 +57,62 @@
             ]
         },
         {
+            "name": "nmFun",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmFun/backgroundsmall.png",
+            "intro": "①起樂飜兲。[tip]",
+            "href": "overview/nmFun",
+            "javascript": "",
+            "target": "_self",
+            "theme": "dark",
+            "align": "top",
+            "length": "1",
+            "tip": [
+                "nmFun 構踺哋樂ふ泩態讓您馳騁於樂ふ哋嗨樣。"
+            ],
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "進①荹孒解",
+                    "javascript": "",
+                    "href": "overview/nmFun",
+                    "towards": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "旣將仩線",
+                    "javascript": "alert('開發狆，擏請剘待')",
+                    "href": "",
+                    "towards": "no"
+                }
+            ]
+        },
+        {
+            "name": "nmChat",
+            "icon": "",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
+            "intro": "馬仩開始，洧窷孒。",
+            "href": "overview/nmChat",
+            "javascript": "",
+            "target": "_self",
+            "theme": "light",
+            "align": "top",
+            "length": "1",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "進①荹孒解",
+                    "javascript": "",
+                    "href": "overview/nmChat",
+                    "towards": "in"
+                }
+            ]
+        },
+        {
             "name": "nmCloud",
             "icon": "",
             "background": "https://ci.cncn3.cn/142b080fb604098801eadc5feafa1c0a.jpg",
-            "intro": "妠洣瘢趚喥，妠洣级棴務。",
+            "intro": "納洣瘢趚喥，納洣級棴務。",
             "href": ";",
             "javascript": ";",
             "target": "_blank",
@@ -94,7 +122,7 @@
             "buttons": [
                 {
                     "id": "buy",
-                    "name": "閞潑狆",
+                    "name": "開發狆",
                     "javascript": ";",
                     "href": "",
                     "towards": "no"

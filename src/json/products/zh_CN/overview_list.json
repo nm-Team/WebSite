@@ -1,6 +1,62 @@
 {
     "products": [
         {
+            "name": "nmBot",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/overview.webp",
+            "intro": "nm 何处达，电报系手边。",
+            "href": "/products/overview/nmBot-Telegram",
+            "javascript": "",
+            "target": "_self",
+            "theme": "light",
+            "align": "bottom",
+            "length": "2",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "进一步了解",
+                    "javascript": "",
+                    "href": "/products/overview/nmBot-Telegram",
+                    "towards": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "立即使用",
+                    "javascript": "",
+                    "href": "https://t.me/nmnmfunbot",
+                    "towards": "out"
+                }
+            ]
+        },
+        {
+            "name": "StartPage",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
+            "intro": "美好的一天，始于 nmBrowser 启动页。",
+            "href": "/products/overview/nmBrowser-StartPage",
+            "javascript": "",
+            "target": "_self",
+            "theme": "dark",
+            "align": "bottom",
+            "length": "1",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "进一步了解",
+                    "javascript": "",
+                    "href": "overview/nmBrowser-StartPage",
+                    "towards": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "访问",
+                    "javascript": "",
+                    "href": "https://bs.nmteam.xyz?from=nmTeamProductsPage",
+                    "towards": "out"
+                }
+            ]
+        },
+        {
             "name": "nmFun",
             "icon": "https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmFun/backgroundsmall.png",
@@ -10,7 +66,7 @@
             "target": "_self",
             "theme": "dark",
             "align": "top",
-            "length": "2",
+            "length": "1",
             "tip": [
                 "nmFun 构建的乐子生态让您驰骋于乐子的海洋。"
             ],
@@ -49,34 +105,6 @@
                     "javascript": "",
                     "href": "overview/nmChat",
                     "towards": "in"
-                }
-            ]
-        },
-        {
-            "name": "StartPage",
-            "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
-            "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
-            "intro": "美好的一天，始于 nmBrowser 启动页。",
-            "href": "/products/overview/nmBrowser-StartPage",
-            "javascript": "",
-            "target": "_self",
-            "theme": "dark",
-            "align": "bottom",
-            "length": "1",
-            "buttons": [
-                {
-                    "id": "seemore",
-                    "name": "进一步了解",
-                    "javascript": "",
-                    "href": "overview/nmBrowser-StartPage",
-                    "towards": "in"
-                },
-                {
-                    "id": "go",
-                    "name": "访问",
-                    "javascript": "",
-                    "href": "https://bs.nmteam.xyz?from=nmTeamProductsPage",
-                    "towards": "out"
                 }
             ]
         },
