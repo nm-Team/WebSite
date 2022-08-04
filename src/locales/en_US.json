@@ -215,15 +215,19 @@
         },
         "backstage": {
             "analyze": {
-                "detail": "",
+                "detail": "Detail",
                 "keyword": "Key words",
                 "overview": "Overview",
                 "result_num": "Number of results",
                 "input_rate": "Fill rate",
-                "time": "Average time"
+                "time": "Average time",
+                "percent": "percentage"
             },
             "data_type": {
-                "JSON": "JSON"
+                "JSON": "JSON",
+                "origin": "Source Data",
+                "preview": "Source Form",
+                "analyze": "Analyze"
             },
             "tip": {
                 "not_log": "Sorry, you are not logged in to the nmTeam administrator account.",
@@ -234,8 +238,23 @@
                 "textarea": "multi-line input",
                 "single": "single choice",
                 "multiple": "multiple choice",
-                "input": "fill blank"
-            }
+                "input": "fill blank",
+                "chosen_answer": "Optional",
+                "must_answer": "Required"
+            },
+            "gentime": "Page generation time:",
+            "name": "Form: ",
+            "origin": {
+                "id": "ID",
+                "start_time": "Start filling time",
+                "ip": "IP",
+                "time": "Time consuming",
+                "answer": "Answer",
+                "uid": "UID",
+                "submit_time": "Submission time"
+            },
+            "link": "Link",
+            "title": "nmTeam form analysis data"
         }
     },
     "sitemap": {
@@ -277,6 +296,7 @@
         "email_tip": "nmTeam Support Email",
         "description": "We are always here to help.",
         "community_description": "Chat with nmTeam members, volunteers, and users about nmTeam product issues on the nmFun Support section.",
-        "community": "nmTeam Community"
+        "community": "nmTeam Community",
+        "title": "nmTeam Support"
     }
 }

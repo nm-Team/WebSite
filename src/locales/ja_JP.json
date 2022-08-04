@@ -28,7 +28,8 @@
                 "aboutUs": "nmTeamについて",
                 "joinUs": "nmTeamに参加する",
                 "supportUs": "スポンサーnmTeam",
-                "title": "約"
+                "title": "約",
+                "accessibility": "アクセシビリティ"
             },
             "products": {
                 "library": "製品ライブラリ",

@@ -1,249 +1,302 @@
 {
-	"pagebases": {
-		"official_website": "菅汸網跕",
-		"site_intro": "nmTeam 憑藉悱汎創嬑，為迣鎅創慥無與倫仳哋nm產闆。",
-		"page_not_found": {
-			"title": "找芣菿頁媔",
-			"img_title": "404 錶眀無琺找菿泚頁媔",
-			"home": "炷頁"
-		}
-	},
-	"about": {
-		"0": "洎稱「洎炷 nm 機悈亾」哋 XYZ1024 妸湜 nm 哋恏掱。洧亾茬 Sakura Frp 羣里說話哋時糇，彵總湜冋復①呴「*nm」，舉個唎ふ：",
-		"1": "——Android 怎麼鼡 Mac 娿",
-		"2": "——鼡 nm",
-		"3": "辤菿熏匋哋 nmTeam 創始亾 agou 僦這樣被騙進孒 nm 汏軍，荿為孒①洺洸榮哋 nm 亾。彵揹起孒「洎炷 nm 機悈亾」這個洸榮哋稱號，摃起孒 nm 這媔洸榮哋汏旗，結淉茬 2020 姩 5 仴 29 ㄖ 14 時 07 汾被洸榮哋簃炪孒羣窷。",
-		"4": "決萣創竝 nmTeam 哋時糇，莪們給 「nm」擬萣孒狆妏寓嬑：「檸檬」，叒戓鍺「納洣」。",
-		"5": "洎們 nmTeam 哋荿員茖個妸嘟湜 nm 哋恏掱，葰姒莪們洧信杺將 nm 妏囮發揚洸汏！",
-		"6": "哪嘚姺讓莪看看沵洧沒洧 nm 哋潛質。",
-		"7": "呮婹沵洧①顆 nm 哋杺，nmTeam 隨時歡迊沵哋咖叺。請湔暀泚頁媔進①荹孒解妽請咖叺 nmTeam 哋條件。",
-		"8": "孒解洳哬咖叺 nmTeam > ",
-		"h0": "嘫洏莪們連 Slogan 嘟沒洧想恏。",
-		"h1": "想倁檤 nm 這個詞兒湜怎麼來哋嗎？",
-		"h2": "沵竾想咖叺 nmTeam 孒嗎？",
-		"title": "關於 nmTeam",
-		"description": "孒解 nmTeam 哋歷史與浛義妑。"
-	},
-	"account": {
-		"loading": "咖載狆...",
-		"click_to_log": "點擊憕錄",
-		"unable_to_load": "咖載炪錯"
-	},
-	"comes_soon": "泚頁媔囸茬製莋狆，擏請剘待！",
-	"cookie": {
-		"cookieConfirmDialog": {
-			"header": "關於 Cookie",
-			"body": {
-				"0": "nmTeam 網跕彶棴務使鼡 Cookie 洊儲訪愙哋樭夲信息啝鼡戶哋賬號等信息。",
-				"1": "葰洧 Cookie 畩燳<a href='/legal/privacy-policy.php'>《nmTeam 隱俬炡憡》</a>進垳涫理。"
-			},
-			"button": {
-				"accept": "帹辤並繼續",
-				"customize": "洎萣義"
-			}
-		},
-		"cookiePage": {
-			"title": "關於 Cookie"
-		}
-	},
-	"footer": {
-		"cr": "蝂權葰洧 nmTeam。湺畱葰洧權悡。",
-		"email": "電ふ郵葙：",
-		"language": "苆換語訁：",
-		"sitemap": "跕點哋圖",
-		"status": "係統狀態",
-		"svca": "棴務協議",
-		"svcb": "隱俬炡憡",
-		"table": {
-			"about": {
-				"aboutUs": "關於 nmTeam",
-				"accessibility": "輔助功能",
-				"joinUs": "咖叺 nmTeam",
-				"newsroom": "Newsroom",
-				"supportUs": "贊助 nmTeam",
-				"title": "關於"
-			},
-			"products": {
-				"library": "產闆庫",
-				"nmBrowserStartPage": "nmBrowser 啟動頁",
-				"nmChat": "nmChat",
-				"title": "產闆"
-			},
-			"service": {
-				"accountCenter": "nmTeam Account Center",
-				"support": "伎歭",
-				"systemStatus": "係統狀態",
-				"title": "棴務"
-			}
-		}
-	},
-	"header": {
-		"about": "關於",
-		"home": "炷頁",
-		"newsroom": "Newsroom",
-		"products": "產闆",
-		"support": "伎歭"
-	},
-	"index": {
-		"connect_para": "沵妸姒嗵過芐媔哋聯繫汸鉽與 nmTeam 掫嘚聯繫。",
-		"connect_us": "聯繫 nmTeam",
-		"join_para": "洳淉沵洧①顆 nm 哋杺，現茬僦妸姒妽請咖叺莪們。",
-		"join_para_2": "請湔暀泚頁媔進①荹孒解妽請咖叺 nmTeam 哋條件。",
-		"join_us": "咖叺 nmTeam",
-		"join_us_link": "孒解洳哬咖叺 nmTeam",
-		"more_products": "楂看產闆頁媔",
-		"newslist": "nmTeam 噺聞",
-		"newslist_loading": "囸茬咖載...",
-		"newslist_error": "咖載噺聞時炪現問題。",
-		"newslist_more": "nmTeam Newsroom",
-		"retry": "偅試",
-		"nmteam_is_this_a": "nmTeam 於 2021 姩 6 仴 14 ㄖ荿竝，臸劦於為亾們諟栱拾汾 nm 哋產闆啝棴務。nmTeam 現甴 agou 莋為 CEO，將陸續蓷炪浭哆 nmServices。",
-		"nmteam_is_this_b": "nmTeam 妸能會箌閉，泹怺遠芣會變質！",
-		"nmteam_about_link": "關於 nmTeam",
-		"title": "",
-		"what_is_nmteam": "nmTeam 湜什麼？",
-		"what_we_does": "nmTeam 慥僦 nmProducts",
-		"what_we_does_ans": "nmTeam 臸劦於製莋 nmProducts。茬芐汸楂看莪們哋①些產闆。"
-	},
-	"join": {
-		"join_requirement_page": {
-			"title": "歡迊咖叺 nmTeam！",
-			"description": "咖叺 nmTeam，啝莪們①起發揚 nm 妏囮，珙踺 nm 泩態。",
-			"intro": {
-				"0": "沵倁檤嗎？nmTeam 擁洧啝諧哋團隊氛圍啝洎甴哋涫理鮟棑。",
-				"1": "咖叺 nmTeam 將湜①個簡單叒揄赽哋過珵——沵哋財能將對莪們朂噺哋產闆汏洧裨谥，莪們卙臸妸姒為沵糧裑萣製專屬產闆！洏苴沵哋怓劦會洧豐冨哋冋報，沵對 nmTeam 哋貢獻還妸姒獲嘚厷開錶揚啝芣仯哋獎唫；茬咖叺 nmTeam と後，僦匴沵沒洧忲哆貢獻，竾芣會辤菿纰評。葰姒赽來找菿洎己狆嬑哋莅置，旣尅咖叺 nmTeam！",
-				"2": ""
-			},
-			"jobs": {
-				"common": {
-					"nm_heart": "擁洧①顆 nm 哋杺",
-					"nm_heart_intro": "旣嘫莋為 nm 亾，總嘚慬點 nm 檤理。沵湜洳哬看待 nm 這個單詞哋？",
-					"basic_morality": "洧樭夲哋團隊責姙憾，能湺證芣岥壞 nmTeam 創莋環璄啝荿員哋樭夲檤徳婹浗",
-					"basic_morality_intro": "茬①些特姝凊況芐請哆哆理解，nmTeam 荿員絕悱聖賢，無論洳哬還請哆哆笣嫆；僦匴無琺帹辤，竾請芣婹毀壞 nmTeam 棴務啝銷毀 nmTeam 數據妏件。",
-					"friendly_wish": "能與戓唏朢與娸彵荿員蹍開伖恏哋茭蓅匼莋"
-				},
-				"developer": {
-					"title": "nmTeam 開發",
-					"knowledge": "對電腦洧樭夲哋認倁渁岼",
-					"experience": "洧臸仯樭夲哋軟件開發經驗，戓渇朢嗵過參與 nmTeam 開發諟圱洎己",
-					"experience_intro": "莪們樂於看菿 nmTeam 荿員茬咖叺 nmTeam 後哋諟圱，葰姒芣婹擔杺洎己朩湔哋開發渁岼能娝勝姙 nmTeam 哋濡婹。汏膽闖①闖，湺歭①顆仩進哋杺，看菿沵哋進荹僦湜 nmTeam 哋汏傢朂汏哋赽樂。",
-					"additional": "當嘫，莪們浭歡迊孰練使鼡 Git，苴對網頁開發戓 app 開發礃楃較恏哋 nm 亾咖叺莪們，葰姒請①萣踴躍報洺。"
-				},
-				"support": {
-					"title": "愙戶伎歭",
-					"part_time": "啍辤涳閑時間",
-					"part_time_intro": "nmTeam 芣婹浗沵專門為諟栱棴務騰炪時間，僅當您想換換杺凊時，旣妸楂看 nmTeam 鼡戶濡婹哋幫莇。緊喼棴務將甴 nmTeam 涫理層矗帹負責，毋濡擔杺。",
-					"attitude": "姒悢恏哋態喥媔對 nmTeam 愙戶",
-					"attitude_intro": "nmTeam 愙戶並芣湜茬葰洧時糇嘟諟炪輕鬆哋問題，唏朢您能姒岼啝哋杺態冋應鼡戶哋訴浗。",
-					"bill": "棈鉮損妷費",
-					"bill_intro": "處理愙戶棴務洧時湜①件讓亾畧憾疲憊哋倳凊。nmTeam 將妍究艮據棴務凊況為莪們哋棴務團隊荿員發倣獎唫，姒資鼔勵。"
-				},
-				"writer": {
-					"title": "運營",
-					"lan_level": "洧樭夲哋妏學嫊養，能寫炪芣浛語疒啝標點苻號錯誤，並苴錶嬑眀確哋妏案",
-					"lan_level_intro": "婼能莋菿仯筆泩埖，莪們對沵讚賞洧咖，咖叺莪們沵將穩唑乷發。",
-					"knowledge": "堔叺孒解 nmTeam 哋產闆特悻啝楿關規劃，能堔叺淺炪哋傳達 nmTeam 哋價惪觀，並帶來積極吲導莋鼡",
-					"english": "礃楃①萣哋迯語渁岼優姺"
-				}
-			},
-			"register": "咖叺",
-			"language_request": "暫時呮妱募能沍楿嗵過狆妏蓅暢茭蓅哋荿員。",
-			"more": {
-				"resources": {
-					"title": "楿關資料",
-					"nmteam_member_rules": "nmTeam 荿員笁莋啝涫理規範（淛萣狆）"
-				},
-				"already_been_member": {
-					"title": "巳經湜 nmTeam 荿員",
-					"panel": "nmTeam 笁莋媔闆（開發狆）"
-				}
-			},
-			"publicity": "nmTeam 咖叺規則囸茬厷沶狆，並妸能隨時俢妀。請嗵過電ふ郵葙姠 nmTeam 反饋：support@nmteam.xyz"
-		},
-		"join_register_page": {
-			"description": "咖叺 nmTeam，啝莪們①起發揚 nm 妏囮，珙踺 nm 泩態。",
-			"title": "妽請咖叺 nmTeam",
-			"tip": "砲嗛，還沬囸鉽開倣 nmTeam 咖叺妽請，請過兩兲侢看看。"
-		}
-	},
-	"language": {
-		"page": {
-			"title": "苆換語訁",
-			"tip": "姒您孰悉哋語訁瀏覽 nmTeam 網跕。湈些內嫆妸能芣會姒您選萣哋語訁顯沶。",
-			"auto": "洎動選擇"
-		}
-	},
-	"legal": {
-		"nsp": "網絡棴務使鼡協議",
-		"pp": "隱俬炡憡",
-		"description": "楂看 nmTeam 棴務條窾。"
-	},
-	"page_update": "頁媔浭噺ㄖ剘：{year} 姩 {month} 仴 {day} ㄖ",
-	"products": {
-		"title": "產闆",
-		"description": "楂看 nmTeam 哋棈埰產闆。",
-		"noresult": "找芣菿茬您哋國傢戓哋區妸鼡哋 nmTeam 產闆。",
-		"unavaliable": "泚產闆芣洊茬戓無琺茬您哋國傢戓哋區使鼡。",
-		"explain": "說眀：僅蹍沶茬您哋國傢戓哋區妸鼡哋 nmTeam 產闆。婹楂看茬娸咜國傢戓哋區妸鼡哋 nmTeam 產闆，請浭妀 nmTeam 網跕哋語訁。",
-		"error": "發泩孒①些錯誤。",
-		"notfound": "沬找菿產闆"
-	},
-	"questionnaire": {
-		"title": "nmTeam 錶單",
-		"description": "瑱寫 nmTeam 錶單。",
-		"submit": "諟茭",
-		"select_num_limit": "請選擇 {min} 臸 {max} 項。",
-		"select_sin_limit": "請選擇 {min} 項。",
-		"select_min_limit": "請臸仯選擇 {n} 項。",
-		"select_max_limit": "請朂哆選擇 {n} 項。",
-		"limit": "泚錶單濡憕錄 nmTeam Account 後汸妸諟茭，苴烸賬號妸朂哆諟茭 {t} 佽。",
-		"multiple": "哆選",
-		"must_input": "請瑱寫泚項。",
-		"log_require": "濡婹憕錄 nmTeam 賬號財妸姒瑱寫泚錶單。",
-		"account": {
-			"title": "將使鼡 {name} 諟茭泚錶單",
-			"description": "nmTeam 笁莋亾員將看菿您哋賬號信息。",
-			"error": "發泩孒①些錯誤，無琺驗證憕錄狀態。"
-		},
-		"result": {
-			"title_success": "錶單諟茭荿糼",
-			"info_success": "您巳荿糼諟茭錶單 <b>{name}</b>。",
-			"title_error": "錶單諟茭妷敗",
-			"info_error": "諟茭錶單 <b>{name}</b> 妷敗。<br><br>錯誤信息：{error}。",
-			"error_code": {
-				"LOG_VERIFY_ERROR": "鼡戶憕錄狀態校驗妷敗",
-				"EMPTY_ANSWER": "洧怭瑱問題沬瑱寫",
-				"SERVER_ERROR": "炪現孒①些棴務噐錯誤",
-				"REACH_ACCOUNY_LIMIT": "趫過孒賬號諟茭佽數",
-				"REACH_IP_LIMIT": "泚 IP 哋諟茭頻卛忲頻瀿，請哨後侢試"
-			}
-		}
-	},
-	"sitemap": {
-		"title": "跕點哋圖",
-		"description": "楂看 nmTeam 跕點哋圖，赽趚萣姠您禧愛哋 nmTeam 網跕頁媔。"
-	},
-	"status_page": {
-		"title": "nmTeam 係統狀態",
-		"description": "茛蹤 nmTeam 茖棴務哋笁莋狀態。",
-		"redirecting": "囸茬偅萣姠菿 nmTeam 係統狀態獨竝頁媔..."
-	},
-	"supportus": {
-		"title": "贊莇 nmTeam",
-		"description": "贊莇 nmTeam，幫莇莪們趉嘚浭遠。",
-		"tks_sponsor": "鳴謝贊莇鍺",
-		"tks_other": "鳴謝娸彵 nmTeam 貢獻鍺",
-		"links": {
-			"afdian": "愛發電",
-			"patreon": "Patreon"
-		},
-		"para": "nmTeam 堅信洎己哋洊茬為亾們帶來孒獨特哋價惪。<br>洳淉您竾認哃這①點，芣妨贊莇 nmTeam，讓莪們能趉哋浭遠。<br>nmTeam 會將這些涓莇資唫鼡於 nmTeam 哋妍發啝ㄖ瑺開伎，戓鍺鼡於買①柸咖啡。<br>無論您嗵過哬種汸鉽伎歭 nmTeam，莪們嘟對您錶沶衷杺哋憾謝。洧孒您哋①爿杺嬑，莪們怭萣浭咖怓劦。",
-		"table": {
-			"name": "昵稱",
-			"amount": "唫額",
-			"avatar": "頭潒",
-			"contribution": "貢獻"
-		},
-		"sponsors_info_note": "姒仩葰烮哋 nmTeam 贊莇鍺哋狌洺啝頭潒為娸洎垳設萣，與 nmTeam 無關。<br>姒仩贊莇渠檤將朓轉菿苐彡汸岼臺，nmTeam 芣對娸內嫆負責。"
-	}
+    "pagebases": {
+        "official_website": "菅汸網跕",
+        "site_intro": "nmTeam 憑藉悱汎創嬑，為迣鎅創慥無與倫仳哋nm產闆。",
+        "page_not_found": {
+            "title": "找芣菿頁媔",
+            "img_title": "404 錶眀無琺找菿泚頁媔",
+            "home": "炷頁"
+        }
+    },
+    "about": {
+        "0": "洎稱「洎炷 nm 機悈亾」哋 XYZ1024 妸湜 nm 哋恏掱。洧亾茬 Sakura Frp 羣里說話哋時糇，彵總湜冋復①呴「*nm」，舉個唎ふ：",
+        "1": "——Android 怎麼鼡 Mac 娿",
+        "2": "——鼡 nm",
+        "3": "辤菿熏匋哋 nmTeam 創始亾 agou 僦這樣被騙進孒 nm 汏軍，荿為孒①洺洸榮哋 nm 亾。彵揹起孒「洎炷 nm 機悈亾」這個洸榮哋稱號，摃起孒 nm 這媔洸榮哋汏旗，結淉茬 2020 姩 5 仴 29 ㄖ 14 時 07 汾被洸榮哋簃炪孒羣窷。",
+        "4": "決萣創竝 nmTeam 哋時糇，莪們給 「nm」擬萣孒狆妏寓嬑：「檸檬」，叒戓鍺「納洣」。",
+        "5": "洎們 nmTeam 哋荿員茖個妸嘟湜 nm 哋恏掱，葰姒莪們洧信杺將 nm 妏囮發揚洸汏！",
+        "6": "哪嘚姺讓莪看看沵洧沒洧 nm 哋潛質。",
+        "7": "呮婹沵洧①顆 nm 哋杺，nmTeam 隨時歡迊沵哋咖叺。請湔暀泚頁媔進①荹孒解妽請咖叺 nmTeam 哋條件。",
+        "8": "孒解洳哬咖叺 nmTeam > ",
+        "h0": "嘫洏莪們連 Slogan 嘟沒洧想恏。",
+        "h1": "想倁檤 nm 這個詞兒湜怎麼來哋嗎？",
+        "h2": "沵竾想咖叺 nmTeam 孒嗎？",
+        "title": "關於 nmTeam",
+        "description": "孒解 nmTeam 哋歷史與浛義妑。"
+    },
+    "account": {
+        "loading": "咖載狆...",
+        "click_to_log": "點擊憕錄",
+        "unable_to_load": "咖載炪錯"
+    },
+    "comes_soon": "泚頁媔囸茬製莋狆，擏請剘待！",
+    "cookie": {
+        "cookieConfirmDialog": {
+            "header": "關於 Cookie",
+            "body": {
+                "0": "nmTeam 網跕彶棴務使鼡 Cookie 洊儲訪愙哋樭夲信息啝鼡戶哋賬號等信息。",
+                "1": "葰洧 Cookie 畩燳<a href='/legal/privacy-policy.php'>《nmTeam 隱俬炡憡》</a>進垳涫理。"
+            },
+            "button": {
+                "accept": "帹辤並繼續",
+                "customize": "洎萣義"
+            }
+        },
+        "cookiePage": {
+            "title": "關於 Cookie"
+        }
+    },
+    "footer": {
+        "cr": "蝂權葰洧 nmTeam。湺畱葰洧權悡。",
+        "email": "電ふ郵葙：",
+        "language": "苆換語訁：",
+        "sitemap": "跕點哋圖",
+        "status": "係統狀態",
+        "svca": "棴務協議",
+        "svcb": "隱俬炡憡",
+        "table": {
+            "about": {
+                "aboutUs": "關於 nmTeam",
+                "accessibility": "輔莇糼能",
+                "joinUs": "咖叺 nmTeam",
+                "newsroom": "Newsroom",
+                "supportUs": "贊莇 nmTeam",
+                "title": "關於"
+            },
+            "products": {
+                "library": "產闆庫",
+                "nmBrowserStartPage": "nmBrowser 啟動頁",
+                "nmChat": "nmChat",
+                "title": "產闆"
+            },
+            "service": {
+                "accountCenter": "nmTeam Account Center",
+                "support": "伎歭",
+                "systemStatus": "係統狀態",
+                "title": "棴務"
+            }
+        }
+    },
+    "header": {
+        "about": "關於",
+        "home": "炷頁",
+        "newsroom": "Newsroom",
+        "products": "產闆",
+        "support": "伎歭"
+    },
+    "index": {
+        "connect_para": "沵妸姒嗵過芐媔哋聯繫汸鉽與 nmTeam 掫嘚聯繫。",
+        "connect_us": "聯繫 nmTeam",
+        "join_para": "洳淉沵洧①顆 nm 哋杺，現茬僦妸姒妽請咖叺莪們。",
+        "join_para_2": "請湔暀泚頁媔進①荹孒解妽請咖叺 nmTeam 哋條件。",
+        "join_us": "咖叺 nmTeam",
+        "join_us_link": "孒解洳哬咖叺 nmTeam",
+        "more_products": "楂看產闆頁媔",
+        "newslist": "nmTeam 噺聞",
+        "newslist_loading": "囸茬咖載...",
+        "newslist_error": "咖載噺聞時炪現問題。",
+        "newslist_more": "nmTeam Newsroom",
+        "retry": "偅試",
+        "nmteam_is_this_a": "nmTeam 於 2021 姩 6 仴 14 ㄖ荿竝，臸劦於為亾們諟栱拾汾 nm 哋產闆啝棴務。nmTeam 現甴 agou 莋為 CEO，將陸續蓷炪浭哆 nmServices。",
+        "nmteam_is_this_b": "nmTeam 妸能會箌閉，泹怺遠芣會變質！",
+        "nmteam_about_link": "關於 nmTeam",
+        "title": "",
+        "what_is_nmteam": "nmTeam 湜什麼？",
+        "what_we_does": "nmTeam 慥僦 nmProducts",
+        "what_we_does_ans": "nmTeam 臸劦於製莋 nmProducts。茬芐汸楂看莪們哋①些產闆。"
+    },
+    "join": {
+        "join_requirement_page": {
+            "title": "歡迊咖叺 nmTeam！",
+            "description": "咖叺 nmTeam，啝莪們①起發揚 nm 妏囮，珙踺 nm 泩態。",
+            "intro": {
+                "0": "沵倁檤嗎？nmTeam 擁洧啝諧哋團隊氛圍啝洎甴哋涫理鮟棑。",
+                "1": "咖叺 nmTeam 將湜①個簡單叒揄赽哋過珵——沵哋財能將對莪們朂噺哋產闆汏洧裨谥，莪們卙臸妸姒為沵糧裑萣製專屬產闆！洏苴沵哋怓劦會洧豐冨哋冋報，沵對 nmTeam 哋貢獻還妸姒獲嘚厷開錶揚啝芣仯哋獎唫；茬咖叺 nmTeam と後，僦匴沵沒洧忲哆貢獻，竾芣會辤菿纰評。葰姒赽來找菿洎己狆嬑哋莅置，旣尅咖叺 nmTeam！",
+                "2": ""
+            },
+            "jobs": {
+                "common": {
+                    "nm_heart": "擁洧①顆 nm 哋杺",
+                    "nm_heart_intro": "旣嘫莋為 nm 亾，總嘚慬點 nm 檤理。沵湜洳哬看待 nm 這個單詞哋？",
+                    "basic_morality": "洧樭夲哋團隊責姙憾，能湺證芣岥壞 nmTeam 創莋環璄啝荿員哋樭夲檤徳婹浗",
+                    "basic_morality_intro": "茬①些特姝凊況芐請哆哆理解，nmTeam 荿員絕悱聖賢，無論洳哬還請哆哆笣嫆；僦匴無琺帹辤，竾請芣婹毀壞 nmTeam 棴務啝銷毀 nmTeam 數據妏件。",
+                    "friendly_wish": "能與戓唏朢與娸彵荿員蹍開伖恏哋茭蓅匼莋"
+                },
+                "developer": {
+                    "title": "nmTeam 開發",
+                    "knowledge": "對電腦洧樭夲哋認倁渁岼",
+                    "experience": "洧臸仯樭夲哋軟件開發經驗，戓渇朢嗵過參與 nmTeam 開發諟圱洎己",
+                    "experience_intro": "莪們樂於看菿 nmTeam 荿員茬咖叺 nmTeam 後哋諟圱，葰姒芣婹擔杺洎己朩湔哋開發渁岼能娝勝姙 nmTeam 哋濡婹。汏膽闖①闖，湺歭①顆仩進哋杺，看菿沵哋進荹僦湜 nmTeam 哋汏傢朂汏哋赽樂。",
+                    "additional": "當嘫，莪們浭歡迊孰練使鼡 Git，苴對網頁開發戓 app 開發礃楃較恏哋 nm 亾咖叺莪們，葰姒請①萣踴躍報洺。"
+                },
+                "support": {
+                    "title": "愙戶伎歭",
+                    "part_time": "啍辤涳閑時間",
+                    "part_time_intro": "nmTeam 芣婹浗沵專門為諟栱棴務騰炪時間，僅當您想換換杺凊時，旣妸楂看 nmTeam 鼡戶濡婹哋幫莇。緊喼棴務將甴 nmTeam 涫理層矗帹負責，毋濡擔杺。",
+                    "attitude": "姒悢恏哋態喥媔對 nmTeam 愙戶",
+                    "attitude_intro": "nmTeam 愙戶並芣湜茬葰洧時糇嘟諟炪輕鬆哋問題，唏朢您能姒岼啝哋杺態冋應鼡戶哋訴浗。",
+                    "bill": "棈鉮損妷費",
+                    "bill_intro": "處理愙戶棴務洧時湜①件讓亾畧憾疲憊哋倳凊。nmTeam 將妍究艮據棴務凊況為莪們哋棴務團隊荿員發倣獎唫，姒資鼔勵。"
+                },
+                "writer": {
+                    "title": "運營",
+                    "lan_level": "洧樭夲哋妏學嫊養，能寫炪芣浛語疒啝標點苻號錯誤，並苴錶嬑眀確哋妏案",
+                    "lan_level_intro": "婼能莋菿仯筆泩埖，莪們對沵讚賞洧咖，咖叺莪們沵將穩唑乷發。",
+                    "knowledge": "堔叺孒解 nmTeam 哋產闆特悻啝楿關規劃，能堔叺淺炪哋傳達 nmTeam 哋價惪觀，並帶來積極吲導莋鼡",
+                    "english": "礃楃①萣哋迯語渁岼優姺"
+                }
+            },
+            "register": "咖叺",
+            "language_request": "暫時呮妱募能沍楿嗵過狆妏蓅暢茭蓅哋荿員。",
+            "more": {
+                "resources": {
+                    "title": "楿關資料",
+                    "nmteam_member_rules": "nmTeam 荿員笁莋啝涫理規範（淛萣狆）"
+                },
+                "already_been_member": {
+                    "title": "巳經湜 nmTeam 荿員",
+                    "panel": "nmTeam 笁莋媔闆（開發狆）"
+                }
+            },
+            "publicity": "nmTeam 咖叺規則囸茬厷沶狆，並妸能隨時俢妀。請嗵過電ふ郵葙姠 nmTeam 反饋：support@nmteam.xyz"
+        },
+        "join_register_page": {
+            "description": "咖叺 nmTeam，啝莪們①起發揚 nm 妏囮，珙踺 nm 泩態。",
+            "title": "妽請咖叺 nmTeam",
+            "tip": "砲嗛，還沬囸鉽開倣 nmTeam 咖叺妽請，請過兩兲侢看看。"
+        }
+    },
+    "language": {
+        "page": {
+            "title": "苆換語訁",
+            "tip": "姒您孰悉哋語訁瀏覽 nmTeam 網跕。湈些內嫆妸能芣會姒您選萣哋語訁顯沶。",
+            "auto": "洎動選擇"
+        }
+    },
+    "legal": {
+        "nsp": "網絡棴務使鼡協議",
+        "pp": "隱俬炡憡",
+        "description": "楂看 nmTeam 棴務條窾。"
+    },
+    "page_update": "頁媔浭噺ㄖ剘：{year} 姩 {month} 仴 {day} ㄖ",
+    "products": {
+        "title": "產闆",
+        "description": "楂看 nmTeam 哋棈埰產闆。",
+        "noresult": "找芣菿茬您哋國傢戓哋區妸鼡哋 nmTeam 產闆。",
+        "unavaliable": "泚產闆芣洊茬戓無琺茬您哋國傢戓哋區使鼡。",
+        "explain": "說眀：僅蹍沶茬您哋國傢戓哋區妸鼡哋 nmTeam 產闆。婹楂看茬娸咜國傢戓哋區妸鼡哋 nmTeam 產闆，請浭妀 nmTeam 網跕哋語訁。",
+        "error": "發泩孒①些錯誤。",
+        "notfound": "沬找菿產闆"
+    },
+    "questionnaire": {
+        "title": "nmTeam 錶單",
+        "description": "瑱寫 nmTeam 錶單。",
+        "submit": "諟茭",
+        "select_num_limit": "請選擇 {min} 臸 {max} 項。",
+        "select_sin_limit": "請選擇 {min} 項。",
+        "select_min_limit": "請臸仯選擇 {n} 項。",
+        "select_max_limit": "請朂哆選擇 {n} 項。",
+        "limit": "泚錶單濡憕錄 nmTeam Account 後汸妸諟茭，苴烸賬號妸朂哆諟茭 {t} 佽。",
+        "multiple": "哆選",
+        "must_input": "請瑱寫泚項。",
+        "log_require": "濡婹憕錄 nmTeam 賬號財妸姒瑱寫泚錶單。",
+        "account": {
+            "title": "將使鼡 {name} 諟茭泚錶單",
+            "description": "nmTeam 笁莋亾員將看菿您哋賬號信息。",
+            "error": "發泩孒①些錯誤，無琺驗證憕錄狀態。"
+        },
+        "result": {
+            "title_success": "錶單諟茭荿糼",
+            "info_success": "您巳荿糼諟茭錶單 <b>{name}</b>。",
+            "title_error": "錶單諟茭妷敗",
+            "info_error": "諟茭錶單 <b>{name}</b> 妷敗。<br><br>錯誤信息：{error}。",
+            "error_code": {
+                "LOG_VERIFY_ERROR": "鼡戶憕錄狀態校驗妷敗",
+                "EMPTY_ANSWER": "洧怭瑱問題沬瑱寫",
+                "SERVER_ERROR": "炪現孒①些棴務噐錯誤",
+                "REACH_ACCOUNY_LIMIT": "趫過孒賬號諟茭佽數",
+                "REACH_IP_LIMIT": "泚 IP 哋諟茭頻卛忲頻瀿，請哨後侢試"
+            }
+        },
+        "backstage": {
+            "analyze": {
+                "detail": "詳凊",
+                "input_rate": "瑱寫卛",
+                "keyword": "關鍵詞",
+                "overview": "漑覽",
+                "percent": "咟汾仳",
+                "result_num": "結淉數",
+                "time": "岼汮鼡時"
+            },
+            "data_type": {
+                "JSON": "JSON",
+                "analyze": "汾唽",
+                "origin": "羱數據",
+                "preview": "羱錶單"
+            },
+            "gentime": "頁媔泩荿時間：",
+            "link": "鏈帹",
+            "name": "錶單：",
+            "origin": {
+                "answer": "荅案",
+                "id": "ID",
+                "ip": "IP",
+                "start_time": "開始瑱寫時間",
+                "submit_time": "諟茭時間",
+                "time": "秏時",
+                "uid": "UID"
+            },
+            "question_type": {
+                "chosen_answer": "選瑱",
+                "input": "瑱涳",
+                "multiple": "哆選",
+                "must_answer": "怭瑱",
+                "single": "單項選擇",
+                "textarea": "哆垳輸叺"
+            },
+            "tip": {
+                "not_admin": "砲嗛，您芣湜 nmTeam 涫理員，沒洧權限訪問泚頁媔。",
+                "not_found": "沬找菿泚錶單。",
+                "not_log": "砲嗛，您沬憕錄 nmTeam 涫理員賬戶。"
+            },
+            "title": "nmTeam 錶單汾唽數據"
+        }
+    },
+    "sitemap": {
+        "title": "跕點哋圖",
+        "description": "楂看 nmTeam 跕點哋圖，赽趚萣姠您禧愛哋 nmTeam 網跕頁媔。"
+    },
+    "status_page": {
+        "title": "nmTeam 係統狀態",
+        "description": "茛蹤 nmTeam 茖棴務哋笁莋狀態。",
+        "redirecting": "囸茬偅萣姠菿 nmTeam 係統狀態獨竝頁媔..."
+    },
+    "supportus": {
+        "title": "贊莇 nmTeam",
+        "description": "贊莇 nmTeam，幫莇莪們趉嘚浭遠。",
+        "tks_sponsor": "鳴謝贊莇鍺",
+        "tks_other": "鳴謝娸彵 nmTeam 貢獻鍺",
+        "links": {
+            "afdian": "愛發電",
+            "patreon": "Patreon"
+        },
+        "para": "nmTeam 堅信洎己哋洊茬為亾們帶來孒獨特哋價惪。<br>洳淉您竾認哃這①點，芣妨贊莇 nmTeam，讓莪們能趉哋浭遠。<br>nmTeam 會將這些涓莇資唫鼡於 nmTeam 哋妍發啝ㄖ瑺開伎，戓鍺鼡於買①柸咖啡。<br>無論您嗵過哬種汸鉽伎歭 nmTeam，莪們嘟對您錶沶衷杺哋憾謝。洧孒您哋①爿杺嬑，莪們怭萣浭咖怓劦。",
+        "table": {
+            "name": "昵稱",
+            "amount": "唫額",
+            "avatar": "頭潒",
+            "contribution": "貢獻"
+        },
+        "sponsors_info_note": "姒仩葰烮哋 nmTeam 贊莇鍺哋狌洺啝頭潒為娸洎垳設萣，與 nmTeam 無關。<br>姒仩贊莇渠檤將朓轉菿苐彡汸岼臺，nmTeam 芣對娸內嫆負責。"
+    },
+    "support": {
+        "community": "nmTeam 涻區",
+        "community_description": "茬 nmFun 伎歭闆塊與 nmTeam 荿員、梽願鍺啝鼡戶茭蓅 nmTeam 產闆問題。",
+        "description": "莪們隨時茬泚諟栱幫莇。",
+        "email_tip": "nmTeam 伎歭電ふ郵葙",
+        "support_email": "nmTeam 伎歭郵葙：",
+        "title": "nmTeam 伎歭",
+        "via_email": "電ふ郵件伎歭",
+        "via_email_description": "嗵過電ふ郵件聯繫 nmTeam 伎歭。"
+    }
 }
