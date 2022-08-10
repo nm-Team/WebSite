@@ -343,8 +343,8 @@ a.contact{
     background-image: linear-gradient(#ffffff00, var(--index-card-swiper-background));
 }
 .lemonLine{
-    width: 80vw;
-    margin: 0 10vw;
+    width: 80%;
+    margin: 0 10%;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
