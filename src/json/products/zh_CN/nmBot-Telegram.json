@@ -424,7 +424,7 @@
                     "class": "",
                     "theme": "",
                     "attr": {
-                        "p": "<b>nmBot 群组娱乐功能</b><br><b>群组 nmartChat：</b>回复 nmBot 消息、在对话中 @ nmBot、在消息内容中包含 nmBot 或发送以 nm 开头的消息来与 nmBot 展开智能聊天。<br><b>会员身份验证：</b>发送 /pm 指令确认自己和他人的 Telegram 会员身份。<br><b>欢乐复读：</b>群组内短时间内有两人连续发送内容相同的部分类型相同时，nmBot 根据聊天内容自动分析，选择复制消息内容、转发消息或回复给某条消息。该功能支持在 Telegram 频道评论区使用。<br><b>同频气氛组：</b>群组关联的 Telegram 频道发送部分文字消息时，nmBot 将使用 nmartChat 在频道评论区智能回复消息内容。"
+                        "p": "<b>nmBot 群组娱乐功能</b><br><b>群组 nmartChat：</b>回复 nmBot 消息、在对话中 @ nmBot、在消息内容中包含 nmBot 或发送以 nm 开头的消息来与 nmBot 展开智能聊天。<br><b>会员身份验证：</b>发送 /pm 指令确认自己和他人的 Telegram 会员身份。<br><b>欢乐复读：</b>群组内短时间内有两人连续发送内容相同的部分类型相同时，nmBot 根据聊天内容自动分析，选择复制消息内容、转发消息或回复给某条消息。该功能支持在 Telegram 频道评论区使用。<br><b>同频气氛组：</b>群组关联的 Telegram 频道发送部分文字消息时，nmBot 将使用 nmartChat 在频道评论区智能回复消息内容。<br><b>banme：</b>群成员通过发送 /banme 有很大概率获得时长随机的禁言。"
                     }
                 },
                 {
