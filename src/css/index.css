@@ -12,6 +12,9 @@
         --index-card-swiper-button: #fff;
     }
 }
+body{
+    overflow-x: hidden;
+}
 .indexHeader{
     position: relative;
     left: 0px;
