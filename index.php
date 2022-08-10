@@ -35,13 +35,13 @@ setHeader();
 				<a href="/products/overview/nmBrowser-StartPage" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@128.png)">
 					<p>nmBrowser StartPage</p>
 				</a>
-				<a href="/products/overview/nmFun" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg)">
+				<a href="/products/overview/nmFun<?php echo lang == "zh_CN" || lang == "zh_HK" || lang == "hu_MA" ? "" : "?lang=zh_CN"; ?>" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg)">
 					<p>nmFun</p>
 				</a>
 				<a href="/products/overview/nmChat" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmTeam/logo@128.png)">
 					<p>nmChat</p>
 				</a>
-				<a href="javascript:" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png)">
+				<a href="/products/overview/nmBot-Telegram<?php echo lang == "zh_CN" || lang == "zh_HK" || lang == "hu_MA" ? "" : "?lang=zh_CN"; ?>" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png)">
 					<p>nmBot</p>
 				</a>
 			</div>
