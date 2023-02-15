@@ -52,6 +52,9 @@ body{
         color: white;
         background: #262626;
     }
+    *{
+        color-scheme: dark;
+    }
 }
 body{
     line-height: normal;
