@@ -188,9 +188,9 @@
         "explain": "說明：僅展示在您的國家或地區可用的 nmTeam 產品。要查看在其它國家或地區可用的 nmTeam 產品，請更改 nmTeam 網站的語言。",
         "error": "發生了一些錯誤。",
         "notfound": "未找到產品",
-        "target_detail_aria_label": "查看詳情",
-        "target_out_aria_label": "在新窗口打開鏈接",
-        "target_in_aria_label": "打開鏈接",
+        "target_detail_aria_label": "，查看詳情",
+        "target_out_aria_label": "，在新窗口打開鏈接",
+        "target_in_aria_label": "，打開鏈接",
         "target_turn_to_note": "轉到註腳"
     },
     "questionnaire": {
