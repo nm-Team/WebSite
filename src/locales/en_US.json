@@ -75,7 +75,8 @@
                 "systemStatus": "System Status",
                 "title": "Services"
             }
-        }
+        },
+        "language_selector_button_aria_label": ". Click to open the switch language page."
     },
     "header": {
         "about": "About",

@@ -45,7 +45,8 @@
             }
         },
         "language": "言語の切り替え：",
-        "sitemap": "サイトマップ"
+        "sitemap": "サイトマップ",
+        "language_selector_button_aria_label": "。クリックして言語切り替えページを開きます。"
     },
     "header": {
         "about": "恐らく",

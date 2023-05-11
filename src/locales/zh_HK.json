@@ -75,7 +75,8 @@
                 "systemStatus": "系統狀態",
                 "title": "服務"
             }
-        }
+        },
+        "language_selector_button_aria_label": "。點擊以打開切換語言頁面。"
     },
     "header": {
         "about": "關於",
