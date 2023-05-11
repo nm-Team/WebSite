@@ -226,7 +226,7 @@ function setFooter()
                                 margin: 6px 0px 0 0 !important;
                             }
                         </style>
-                        <p><a href="/status" target="_blank" title="Freshping Badge. <?php p("status_page.description"); ?>"><object>
+                        <p><a href="/status" target="_blank" title="Freshping Badge. <?php p("status_page.description"); ?>" style="display: inline-block;"><object style="display: inline-block;">
                                     <div class="freshping_badge"></div>
                                 </object></a></p>
                     </div>
