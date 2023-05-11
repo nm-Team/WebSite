@@ -103,7 +103,8 @@
         "title": "",
         "what_is_nmteam": "nmTeam 是什麼？",
         "what_we_does": "nmTeam 造就 nmProducts",
-        "what_we_does_ans": "nmTeam 致力於製作 nmProducts。在下方查看我們的一些產品。"
+        "what_we_does_ans": "nmTeam 致力於製作 nmProducts。在下方查看我們的一些產品。",
+        "newslist_date_aria_label": "文章發布日期"
     },
     "join": {
         "join_requirement_page": {

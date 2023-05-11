@@ -12,7 +12,7 @@ setHeader();
 ?>
 <script>
 	newsRoomLoadingI18n = '<?php p("index.newslist_loading"); ?>';
-	newsRoomTimeI18n = '<?php p("index.newslist_date_area_label"); ?>';
+	newsRoomTimeI18n = '<?php p("index.newslist_date_aria_label"); ?>';
 	newsRoomLoadFailedI18n = '<?php p("index.newslist_error"); ?>';
 	newsRoomRetryI18n = '<?php p("index.retry"); ?>';
 </script>

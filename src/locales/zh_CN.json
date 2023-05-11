@@ -104,7 +104,7 @@
         "what_is_nmteam": "nmTeam 是什么？",
         "what_we_does": "nmTeam 造就 nmProducts",
         "what_we_does_ans": "nmTeam 致力于制作 nmProducts。在下方查看我们的一些产品。",
-        "newslist_date_area_label": "文章发布日期"
+        "newslist_date_aria_label": "文章发布日期"
     },
     "join": {
         "join_requirement_page": {

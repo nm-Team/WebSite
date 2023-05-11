@@ -73,7 +73,8 @@
         "newslist_more": "nmTeamニュースルーム",
         "nmteam_about_link": "nmTeamについて",
         "retry": "リトライ",
-        "what_we_does": "nmTeamはnmProductsを作成します"
+        "what_we_does": "nmTeamはnmProductsを作成します",
+        "newslist_date_aria_label": "記事の公開日"
     },
     "language": {
         "page": {
