@@ -10,6 +10,9 @@ define("page_image", "");
 define("page_update", "");
 setHeader();
 ?>
+<script>
+	newsRoomTimeI18n = '<?php p("index.newslist_date_area_label"); ?>';
+</script>
 <div class="indexHeader">
 	<i></i>
 </div>
