@@ -190,7 +190,8 @@
         "notfound": "未找到產品",
         "target_detail_aria_label": "查看詳情",
         "target_out_aria_label": "在新窗口打開鏈接",
-        "target_in_aria_label": "打開鏈接"
+        "target_in_aria_label": "打開鏈接",
+        "target_turn_to_note": "轉到註腳"
     },
     "questionnaire": {
         "title": "nmTeam 表單",

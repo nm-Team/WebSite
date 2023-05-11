@@ -185,7 +185,8 @@
         "notfound": "Oops, The product you are looking for does not exist or is unavaliable in your country or region.",
         "target_detail_aria_label": "See detail",
         "target_out_aria_label": "Open link in new tab",
-        "target_in_aria_label": "Open link"
+        "target_in_aria_label": "Open link",
+        "target_turn_to_note": "Turn to footnote"
     },
     "questionnaire": {
         "title": "nmTeam Form",
