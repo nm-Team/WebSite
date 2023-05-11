@@ -75,7 +75,8 @@
                 "systemStatus": "系统状态",
                 "title": "服务"
             }
-        }
+        },
+        "language_selector_button_aria_label": "。点击以打开切换语言页面。"
     },
     "header": {
         "about": "关于",
