@@ -204,7 +204,10 @@
         "noresult": "お住まいの国または地域で利用可能なnmTeam製品はありません。",
         "notfound": "製品が見つかりません",
         "title": "製品",
-        "unavaliable": "この製品は存在しないか、お住まいの国ではご利用いただけません。"
+        "unavaliable": "この製品は存在しないか、お住まいの国ではご利用いただけません。",
+        "target_detail_aria_label": "詳細を確認する",
+        "target_out_aria_label": "リンクを新しいウィンドウで開きます",
+        "target_in_aria_label": "リンクを開く"
     },
     "questionnaire": {
         "account": {

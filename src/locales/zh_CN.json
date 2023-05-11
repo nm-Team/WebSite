@@ -187,7 +187,10 @@
         "unavaliable": "此产品不存在或无法在您的国家或地区使用。",
         "explain": "说明：仅展示在您的国家或地区可用的 nmTeam 产品。要查看在其它国家或地区可用的 nmTeam 产品，请更改 nmTeam 网站的语言。",
         "error": "发生了一些错误。",
-        "notfound": "未找到产品"
+        "notfound": "未找到产品",
+        "target_in_aria_label": "打开链接",
+        "target_out_aria_label": "在新窗口打开链接",
+        "target_detail_aria_label": "查看详情"
     },
     "questionnaire": {
         "title": "nmTeam 表单",
