@@ -11,11 +11,6 @@ function loadc(name) {
 	return xhr.status === okStatus ? xhr.responseText : null;
 }
 
-// 页面更新日期
-if (fcont.getAttribute("updatetime") && fcont.getAttribute("updatetime").length == 8) {
-	fcont.outerHTML = "<div class='updateDate'><span data-i18n='page_update'></span>" + fcont.getAttribute("updatetime").slice(0, 4) + "<span data-i18n='page_update_y'></span>" + fcont.getAttribute("updatetime").slice(4, 6) + "<span data-i18n='page_update_m'></span>" + fcont.getAttribute("updatetime").slice(6, 8) + "<span data-i18n='page_update_d'></span></div>" + fcont.outerHTML;
-}
-
 window.onscroll = function () { setHeader(); };
 setHeader();
 function setHeader() {
