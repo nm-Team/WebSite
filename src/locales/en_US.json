@@ -82,7 +82,11 @@
         "home": "Home",
         "newsroom": "Newsroom",
         "products": "Products",
-        "support": "Support"
+        "support": "Support",
+        "avatar_aria_label": "Avatar",
+        "title_button_aria_label": "nmTeam text. page title. Click to return to the home page of the website in widescreen view or to open the links menu.",
+        "title_icon_aria_label": "nmTeam Team icon consisting of a lemon and the text \"nm\".",
+        "account_box_aria_label": "Account management"
     },
     "index": {
         "connect_para": "You can get in touch with nmTeam in the following ways.",

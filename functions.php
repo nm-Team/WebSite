@@ -150,19 +150,19 @@ function setHeader()
         <div id="hcont">
             <div class="placeHolder"></div>
             <div class="header hidden" id="pageHeader">
-                <button class="left" onclick="headerClick();">
-                    <i class="logo"></i>
+                <button class="left" onclick="headerClick();" aria-label="<?php p("header.title_button_aria_label"); ?>">
+                    <i class="logo" aria-label="<?php p("header.title_icon_aria_label"); ?>"></i>
                     <p class="name">nmTeam</p>
                 </button>
                 <div class="right" onclick='if(window.innerWidth < 800) headerClick();'>
                     <div class="links">
-                        <a href="/"><?php p("header.home"); ?></a>
-                        <a href="/products/"><?php p("header.products"); ?></a>
-                        <a href="https://newsroom.nmteam.xyz" target="_blank"><?php p("header.newsroom"); ?></a>
-                        <a href="/aboutus"><?php p("header.about"); ?></a>
+                        <a href="/" aria-label="<?php p("header.home"); ?>"><?php p("header.home"); ?></a>
+                        <a href="/products/" aria-label="<?php p("header.products"); ?>"><?php p("header.products"); ?></a>
+                        <a href="https://newsroom.nmteam.xyz" target="_blank" aria-label="<?php p("header.newsroom"); ?>"><?php p("header.newsroom"); ?></a>
+                        <a href="/aboutus" aria-label="<?php p("header.about"); ?>"><?php p("header.about"); ?></a>
                     </div>
-                    <button class="accountBox" id="accountBox" tabindex="0">
-                        <i id="avatarBox"></i>
+                    <button class="accountBox" id="accountBox" tabindex="0" aria-label="<?php p("header.account_box_aria_label"); ?>">
+                        <i id="avatarBox" aria-label="<?php p("header.avatar_aria_label"); ?>"></i>
                         <p id="userName"><?php p("account.loading"); ?></p>
                     </button>
                 </div>

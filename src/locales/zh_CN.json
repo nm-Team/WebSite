@@ -82,7 +82,11 @@
         "home": "主页",
         "newsroom": "Newsroom",
         "products": "产品",
-        "support": "支持"
+        "support": "支持",
+        "title_button_aria_label": "nmTeam 文本。页面标题。点击在宽屏视图下回到网站主页或打开链接菜单。",
+        "title_icon_aria_label": "nmTeam 团队图标，由一个柠檬图案和文本“nm”组成。",
+        "avatar_aria_label": "头像",
+        "account_box_aria_label": "账号管理"
     },
     "index": {
         "connect_para": "你可以通过下面的联系方式与 nmTeam 取得联系。",
