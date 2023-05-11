@@ -1,6 +1,6 @@
-:root{
+:root {
     --jianbian: blur(25px);
-    --jianbian-color: rgba(255,255,255,0.72);
+    --jianbian-color: rgba(255, 255, 255, 0.72);
     --a-color: var(--text-yellow);
     --logolike-yellow-lighter: #EAD050;
     --logolike-yellow-darker: #E5A923;
@@ -21,16 +21,18 @@
     --index-button-border: rgb(41, 41, 41);
     --index-button-border-b: rgb(147 147 147 / 30%);
 }
-body{
+
+body {
     background: #fff;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
-@media (prefers-color-scheme: dark){
-    :root{
-        --jianbian-color: rgba(52,50,50,0.7);
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --jianbian-color: rgba(52, 50, 50, 0.7);
         --text-yellow: #EAD050;
         --text-deepbrown: #fff;
         --text-grey: #757575;
@@ -48,30 +50,35 @@ body{
         --index-button-border: rgb(196, 196, 196);
         --index-button-border-b: rgba(196, 196, 196, 0.5);
     }
-    body{
+
+    body {
         color: white;
         background: #262626;
     }
-    *{
+
+    * {
         color-scheme: dark;
     }
 }
-body{
+
+body {
     line-height: normal;
-    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,NotoSansHansRegular,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,Microsoft YaHei,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, NotoSansHansRegular, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
     margin: 0;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 /* @font-face {
     font-family: 'NotoSansHansRegular';
     src: url('https://websiteres.nmteam.xyz/nmwebsite/font/NotoSansSC.otf');
     src: local('NotoSansHans Regular'),
     local('NotoSansHans'),
 } */
-*:focus-visible{
+*:focus-visible {
     outline: 3px solid rgb(250 187 0 / 60%);
 }
-.title{
+
+.title {
     background: var(--logolike-yellow-lighter);
     position: relative;
     margin: -82px 0 18px 0;
@@ -80,49 +87,59 @@ body{
     color: #000;
     overflow-y: hidden;
 }
-.title.center{
+
+.title.center {
     text-align: center;
 }
-.title h1{
+
+.title h1 {
     margin: 0 0 10px 0;
     animation: main 0.5s;
 }
-.title.largepadding{
+
+.title.largepadding {
     padding: 130px calc(10% + 8px) 13px calc(10% + 8px);
 }
-.titleBack{
+
+.titleBack {
     display: block;
     position: absolute;
     top: 70px;
     left: 34px;
-    color: white!important;
+    color: white !important;
     margin: 0;
     z-index: 3;
 }
-.title small{
+
+.title small {
     font-size: 20px;
     font-weight: 300;
     animation: main 0.5s;
 }
-.main{
+
+.main {
     position: relative;
     margin: 0;
     padding: 5px 10%;
     animation: main 0.5s;
 }
-a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):link{
+
+a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):link {
     text-decoration: none;
     color: var(--a-color);
 }
-a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):hover{
+
+a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):hover {
     text-decoration: underline;
     color: var(--a-color);
 }
-a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):visited{
+
+a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):visited {
     color: var(--a-color);
     text-decoration: none;
 }
-.common-tip{
+
+.common-tip {
     display: block;
     backdrop-filter: var(--jianbian);
     -webkit-backdrop-filter: var(--jianbian);
@@ -131,7 +148,8 @@ a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):visited{
     margin-left: -8px;
     margin-right: -8px;
 }
-.account{
+
+.account {
     height: 35px;
     font-size: 18px;
     overflow: hidden;
@@ -139,13 +157,15 @@ a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):visited{
     white-space: nowrap;
     word-break: break-all;
 }
-.account img{
+
+.account img {
     height: 35px;
     width: 35px;
     border-radius: 50%;
     margin: 0 5px -8px 0;
 }
-.flex{
+
+.flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -154,23 +174,26 @@ a:not(.map-link):not(.header-link):not(.footer-a):not(.card-seemore):visited{
     -webkit-transition: height 0.4s;
     -o-transition: height 0.4s;
 }
-beta-tag{
+
+beta-tag {
     font-size: 15px;
     font-weight: bold;
     color: white;
     padding: 3px 6px;
     border-radius: 4px;
-    background-image: linear-gradient(141deg,#1fc8db 0%,#1fc8db 51%,#2cb5e8 75%);
+    background-image: linear-gradient(141deg, #1fc8db 0%, #1fc8db 51%, #2cb5e8 75%);
     text-shadow: 1px 1px 1px grey;
 }
-.spinner{
+
+.spinner {
     margin: 6px calc(50% - 25px) 20px calc(50% - 25px);
     width: 50px;
     height: 60px;
     text-align: center;
     font-size: 10px;
 }
-.spinner > div{
+
+.spinner>div {
     background-color: #0F75B6;
     height: 100%;
     width: 6px;
@@ -178,32 +201,41 @@ beta-tag{
     -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
     animation: stretchdelay 1.2s infinite ease-in-out;
 }
-.spinner .rect2{
+
+.spinner .rect2 {
     -webkit-animation-delay: -1.1s;
     animation-delay: -1.1s;
 }
-.spinner .rect3{
+
+.spinner .rect3 {
     -webkit-animation-delay: -1.0s;
     animation-delay: -1.0s;
 }
-.spinner .rect4{
+
+.spinner .rect4 {
     -webkit-animation-delay: -0.9s;
     animation-delay: -0.9s;
 }
-.spinner .rect5{
+
+.spinner .rect5 {
     -webkit-animation-delay: -0.8s;
     animation-delay: -0.8s;
 }
-.updateDate{
+
+.updateDate {
     margin: 20px 10%;
     font-size: 14px;
     font-weight: 300;
     color: var(--text-grey);
 }
-.mainBlock{
+
+.mainBlock {
     margin: 0 0 30px 0;
 }
-.main h1, .main h2, .main h3{
+
+.main h1,
+.main h2,
+.main h3 {
     position: relative;
     margin: 0;
     padding: 10px 10%;
@@ -211,22 +243,26 @@ beta-tag{
     text-align: center;
     color: var(--text-yellow);
 }
-.main h1{
+
+.main h1 {
     padding: 10px 10%;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     color: var(--text-yellow);
 }
-.main h2{
+
+.main h2 {
     padding: 10px 10%;
     font-size: 20px;
 }
-.main h3{
+
+.main h3 {
     padding: 10px 10%;
     font-size: 18px;
 }
-.mainBlock p{
+
+.mainBlock p {
     position: relative;
     margin: 0;
     padding: 0;
@@ -234,31 +270,37 @@ beta-tag{
     line-height: 1.6;
     text-align: left;
 }
-.mainBlock.center p{
+
+.mainBlock.center p {
     text-align: center;
 }
-.mainBlock.widepadding p{
+
+.mainBlock.widepadding p {
     padding: 1.5px 10%;
 }
-.indexMoreLink{
+
+.indexMoreLink {
     display: block;
     text-align: center;
     padding: 9px 0;
-    color: var(--text-yellow)!important;
-    text-decoration: none!important;
+    color: var(--text-yellow) !important;
+    text-decoration: none !important;
     border-radius: 2px;
 }
-.indexMoreLink:hover{
+
+.indexMoreLink:hover {
     opacity: 0.7;
 }
-.indexMoreLinks{
+
+.indexMoreLinks {
     display: flex;
     margin: 14px 0 5px 0;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
-.indexMoreLinks a:not(.tip){
+
+.indexMoreLinks a:not(.tip) {
     display: flex;
     flex-direction: row;
     outline: none;
@@ -267,24 +309,30 @@ beta-tag{
     border: 1.6px solid #ffffff00;
     border-color: var(--index-button-border-b);
     border-radius: 300px;
-    text-decoration: none!important;
-    color: var(--text)!important;
+    text-decoration: none !important;
+    color: var(--text) !important;
     background: var(--index-button-background);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     transition: all 0.33s;
 }
-.indexMoreLinks a:not(.tip):hover, .indexMoreLinks a:not(.tip):focus-visible{
+
+.indexMoreLinks a:not(.tip):hover,
+.indexMoreLinks a:not(.tip):focus-visible {
     background: var(--index-button-hover-background);
     border: 1.6px solid var(--index-button-border);
 }
-.indexMoreLinks a:not(.tip):not(*[data-button-type=no]):focus-visible, .indexMoreLinks a:not(.tip):not(*[data-button-type=no]):hover{
+
+.indexMoreLinks a:not(.tip):not(*[data-button-type=no]):focus-visible,
+.indexMoreLinks a:not(.tip):not(*[data-button-type=no]):hover {
     padding: 8px 11px;
 }
-.indexMoreLinks a:not(.tip) span{
+
+.indexMoreLinks a:not(.tip) span {
     font-weight: bold;
 }
-.indexMoreLinks a:not(.tip) .svg{
+
+.indexMoreLinks a:not(.tip) .svg {
     margin: 1.5px -2px 0 2px;
     width: 15px;
     height: 15px;
@@ -292,48 +340,60 @@ beta-tag{
     opacity: 0.8;
     transition: all 0.33s;
 }
-.indexMoreLinks a:not(.tip):focus-visible .svg, .indexMoreLinks a:not(.tip):hover .svg{
+
+.indexMoreLinks a:not(.tip):focus-visible .svg,
+.indexMoreLinks a:not(.tip):hover .svg {
     margin-left: 4px;
     opacity: 1;
 }
-@-webkit-keyframes stretchdelay{
 
-    0%, 40%, 100%{
+@-webkit-keyframes stretchdelay {
+
+    0%,
+    40%,
+    100% {
         -webkit-transform: scaleY(0.4)
     }
-    20%{
+
+    20% {
         -webkit-transform: scaleY(1.0)
     }
 }
-@keyframes stretchdelay{
 
-    0%, 40%, 100%{
+@keyframes stretchdelay {
+
+    0%,
+    40%,
+    100% {
         transform: scaleY(0.4);
         -webkit-transform: scaleY(0.4);
     }
-    20%{
+
+    20% {
         transform: scaleY(1.0);
         -webkit-transform: scaleY(1.0);
     }
 }
-@keyframes main{
-    0%{
+
+@keyframes main {
+    0% {
         position: relative;
         top: 50px;
         opacity: 0;
     }
-    99%{
+
+    99% {
         position: relative;
         top: 0px;
         opacity: 1;
     }
-    100%{
-    }
+
+    100% {}
 }
-.tabView{
-    
-}
-.tabHeader{
+
+.tabView {}
+
+.tabHeader {
     overflow: visible;
     overflow-x: auto;
     /* overflow-x: overlay; */
@@ -345,7 +405,8 @@ beta-tag{
     align-items: flex-end;
     scrollbar-width: thin;
 }
-.tabHeader button{
+
+.tabHeader button {
     border: none;
     outline: none;
     background: var(--grey1);
@@ -356,40 +417,48 @@ beta-tag{
     font-size: 16px;
     transition: padding 0.2s;
 }
-.tabHeader *:last-child{
+
+.tabHeader *:last-child {
     margin-right: 0;
 }
-.tabHeader button:hover, .tabHeader button:focus-visible{
+
+.tabHeader button:hover,
+.tabHeader button:focus-visible {
     padding-bottom: 12px;
     filter: brightness(0.94);
 }
-.tabHeader button[data-status=focus]{
+
+.tabHeader button[data-status=focus] {
     font-weight: bold;
     background: var(--logolike-yellow-lighter);
     color: #000;
     padding-bottom: 12px;
 }
-.tabContents{
+
+.tabContents {
     border: 1px solid var(--logolike-yellow-lighter);
     border-radius: 0 0 6px 6px;
     min-height: 100px;
     transition: all 0.3s;
 }
-.tabContents .content{
+
+.tabContents .content {
     display: none;
     visibility: hidden;
     /* max-height: 0; */
     padding: 0 10px;
     overflow: hidden;
 }
-.tabContents .content[data-status=focus]{
+
+.tabContents .content[data-status=focus] {
     display: block;
     visibility: visible;
     /* max-height: 80vh; */
     padding: 12px 20px;
     /* overflow: auto; */
 }
-.pageConfirmDialog{
+
+.pageConfirmDialog {
     visibility: hidden;
     position: fixed;
     z-index: 999;
@@ -397,7 +466,7 @@ beta-tag{
     right: -720px;
     width: min(400px, calc(100vw - 80px));
     max-height: calc(100vh - 120px);
-    padding: 16px 18px!important;
+    padding: 16px 18px !important;
     background-color: var(--jianbian-color);
     backdrop-filter: var(--jianbian);
     -webkit-backdrop-filter: var(--jianbian);
@@ -407,23 +476,27 @@ beta-tag{
     overflow-y: auto;
     transition: right 0.6s, visibility 0.8s;
 }
-.pageConfirmDialog[data-status=open]{
+
+.pageConfirmDialog[data-status=open] {
     visibility: visible;
     right: 20px;
 }
-.pageConfirmDialogHeader{
+
+.pageConfirmDialogHeader {
     font-size: 20px;
     font-weight: bold;
-    line-height: 1.4!important;
-    padding-bottom: 8px!important;
+    line-height: 1.4 !important;
+    padding-bottom: 8px !important;
 }
-.pageConfirmDialogBody{
+
+.pageConfirmDialogBody {
     font-size: 16px;
-    line-height: 1.7!important;
-    padding-bottom: 3px!important;
+    line-height: 1.7 !important;
+    padding-bottom: 3px !important;
 }
-.pageConfirmDialogFooter{
-    padding-top: 1px!important;
+
+.pageConfirmDialogFooter {
+    padding-top: 1px !important;
     display: flex;
     flex-wrap: wrap;
     text-align: end;
@@ -431,9 +504,10 @@ beta-tag{
     align-content: flex-end;
     align-items: flex-end;
 }
-.pageConfirmDialogFooter button{
+
+.pageConfirmDialogFooter button {
     color: var(--text-yellow);
-    padding: 3px 12px!important;
+    padding: 3px 12px !important;
     background: none;
     border: none;
     font-size: 16px;
@@ -441,10 +515,13 @@ beta-tag{
     cursor: pointer;
     border-radius: 2px;
 }
-.pageConfirmDialogFooter button:hover, .pageConfirmDialogFooter button:focus-visible{
+
+.pageConfirmDialogFooter button:hover,
+.pageConfirmDialogFooter button:focus-visible {
     background-color: #00000022;
 }
-.insiderTip{
+
+.insiderTip {
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -454,6 +531,7 @@ beta-tag{
     margin: 0;
     padding: 0;
 }
-.tabContents .indexMoreLinks{
+
+.tabContents .indexMoreLinks {
     justify-content: left;
 }

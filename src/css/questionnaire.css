@@ -1,19 +1,22 @@
-body{
+body {
     --must-answer: #ff0000;
     --input-border: #cccccc;
     --submit-button: #EAD050;
 }
+
 @media (prefers-color-scheme: dark) {
-    body{
+    body {
         --must-answer: #ff8080;
         --input-border: #616161;
         --submit-button: #EAD050;
     }
+
     .questionAnswers .input input {
         filter: invert(1) brightness(2.5);
     }
 }
-.questionnaireDescription{
+
+.questionnaireDescription {
     padding: 10px 0;
     text-align: center;
     font-size: 17px;
@@ -21,71 +24,87 @@ body{
     opacity: 0.8;
     line-height: 1.6;
 }
-.question{
+
+.question {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
 }
-.question[data-mention=true]{
+
+.question[data-mention=true] {
     animation: mention .4s;
 }
-@keyframes mention{
-    0%{
+
+@keyframes mention {
+    0% {
         transform: none;
     }
-    25%{
+
+    25% {
         transform: translateX(-10px);
     }
-    75%{
+
+    75% {
         transform: translateX(10px);
     }
-    100%{
+
+    100% {
         transform: none;
     }
 }
-.question *{
+
+.question * {
     margin: 0;
     padding: 0;
 }
-.question .questionTitle{
+
+.question .questionTitle {
     display: flex;
     flex-direction: row;
 }
-.question .questionTitle .mustAnswer{
+
+.question .questionTitle .mustAnswer {
     color: var(--must-answer);
     width: 14px;
     margin-left: -14px;
     flex-shrink: 0;
 }
-.question .questionTitle p{
+
+.question .questionTitle p {
     font-size: 17px;
     font-weight: bold;
     line-height: 1.6;
 }
-.question .questionTitle .tTip{
+
+.question .questionTitle .tTip {
     font-weight: bold;
     opacity: 0.6;
 }
-.question .questionDescription{
+
+.question .questionDescription {
     font-size: 15.5px;
     line-height: 1.62;
     opacity: 0.9;
     margin-top: 4px;
 }
-.question .questionDescription .dTip{
+
+.question .questionDescription .dTip {
     color: var(--must-answer);
 }
-.question .questionOptions{
+
+.question .questionOptions {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
 }
-.questionAnswers{
+
+.questionAnswers {
     display: flex;
     flex-direction: column;
     margin-top: 4px;
 }
-.questionAnswers .input{
+
+.questionAnswers .input {
     padding: 5px 0;
     font-size: 16px;
     display: flex;
@@ -93,11 +112,14 @@ body{
     flex-direction: row;
     align-items: center;
 }
-.questionAnswers .input input{
+
+.questionAnswers .input input {
     margin-right: 7px;
     flex-shrink: 0;
 }
-.questionAnswers input[data-type=text], .questionAnswers textarea{
+
+.questionAnswers input[data-type=text],
+.questionAnswers textarea {
     border: 2px solid var(--input-border);
     border-radius: 0px;
     margin: 3px 0 5px 0;
@@ -107,13 +129,15 @@ body{
     background: none;
     color: var(--text-color);
 }
-.submitDiv{
+
+.submitDiv {
     margin: 7px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.submitDiv button{
+
+.submitDiv button {
     padding: 10px 22px;
     font-size: 16px;
     font-weight: bold;

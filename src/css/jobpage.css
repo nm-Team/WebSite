@@ -1,16 +1,18 @@
-.joinTab h2{
+.joinTab h2 {
     font-size: 22px;
     font-weight: bold;
     text-align: left;
     padding: 10px 0 14px 0;
 }
-.joinTab .requirementName{
+
+.joinTab .requirementName {
     font-size: 19px;
     font-weight: bold;
     line-height: 1.8;
-    padding: 5px 0 1px 0!important;
+    padding: 5px 0 1px 0 !important;
 }
-.joinTab .detail{
+
+.joinTab .detail {
     position: relative;
     font-size: 15.4px;
     opacity: 0.8;

@@ -1,21 +1,24 @@
-:root{
+:root {
     --index-card-swiper-background: rgb(255, 255, 255);
     --index-card-swiper-shadow: rgba(168, 168, 168, 0.39);
     --index-card-swiper-button-background: rgba(0, 0, 0, 0.1);
     --index-card-swiper-button: #000;
-    }
-@media (prefers-color-scheme: dark){
-    :root{
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
         --index-card-swiper-background: rgb(43, 43, 43);
         --index-card-swiper-shadow: rgba(0, 0, 0, 0.219);
         --index-card-swiper-button-background: rgba(235, 235, 235, 0.267);
         --index-card-swiper-button: #fff;
     }
 }
-body{
+
+body {
     overflow-x: hidden;
 }
-.indexHeader{
+
+.indexHeader {
     position: relative;
     left: 0px;
     top: -82px;
@@ -32,7 +35,8 @@ body{
     background-repeat: no-repeat;
     animation: logoComing 2s;
 }
-.indexHeader i{
+
+.indexHeader i {
     position: absolute;
     left: 0;
     right: 0;
@@ -45,32 +49,39 @@ body{
     background-repeat: no-repeat;
     animation: nameComing 1s;
 }
-.body{
-    animation: indexmain 1.6s ;
+
+.body {
+    animation: indexmain 1.6s;
 }
-.nmProductsPreview{
+
+.nmProductsPreview {
     width: 100%;
     max-width: 600px;
     height: 220px;
     margin: 20px auto 10px auto;
 }
+
 @media (max-width: 600px) {
-    .nmProductsPreview{
+    .nmProductsPreview {
         width: auto;
         max-width: unset;
         height: 220px;
         margin: 20px -12% 10px -12%;
     }
 }
-.nmProductsPreview .swiper-button-prev::after, .nmProductsPreview .swiper-button-next::after{
+
+.nmProductsPreview .swiper-button-prev::after,
+.nmProductsPreview .swiper-button-next::after {
     font-size: 10px;
     color: var(--logolike-yellow-lighter);
     border-radius: 4px;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
     background: var(--logolike-yellow-lighter);
 }
-.nmProductsPreview .swiper-slide{
+
+.nmProductsPreview .swiper-slide {
     width: 200px;
     margin-top: 4px;
     height: 200px;
@@ -81,7 +92,8 @@ body{
     background-repeat: no-repeat;
     border-radius: 4px;
 }
-.nmProductsPreview .swiper-slide p{
+
+.nmProductsPreview .swiper-slide p {
     position: absolute;
     left: 0;
     right: 0;
@@ -91,11 +103,13 @@ body{
     line-height: 1.4;
     color: var(--text-color);
 }
-.contactContainer{
+
+.contactContainer {
     padding: 5px 10%;
     text-align: center;
 }
-a.contact{
+
+a.contact {
     display: inline-block;
     background-position-x: 6px;
     background-position-y: 50%;
@@ -107,28 +121,34 @@ a.contact{
     border-radius: 233px;
     box-shadow: #3333334f 1px 2px 4px;
     background-color: var(--teamLeader-color);
-    color: var(--text)!important;
+    color: var(--text) !important;
     background-color: #F8F8F8;
-    color: #000!important;
+    color: #000 !important;
     overflow: hidden;
     transition: all 1.2s;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
-.contact:hover, .contact:focus-visible{
+
+.contact:hover,
+.contact:focus-visible {
     max-width: 50vw;
 }
-.contact b{
+
+.contact b {
     padding-right: 5px;
     padding-left: 25px;
     opacity: 0;
     transition: opacity 0.1s 1.1s;
 }
-.contact:hover b, .contact:focus-visible b{
+
+.contact:hover b,
+.contact:focus-visible b {
     opacity: 1;
     transition: opacity 0s 0s;
 }
-@keyframes logoComing{
-    0%{
+
+@keyframes logoComing {
+    0% {
         background-position-y: 50%;
         background-size: auto 1000%;
         position: fixed;
@@ -137,7 +157,8 @@ a.contact{
         height: auto;
         z-index: 999;
     }
-    50%{
+
+    50% {
         background-position-x: center;
         background-position-y: 40%;
         background-size: auto 50%;
@@ -146,7 +167,8 @@ a.contact{
         bottom: 0;
         height: auto;
     }
-    60%{
+
+    60% {
         background-position-x: center;
         background-position-y: 40%;
         background-size: auto 50%;
@@ -155,7 +177,8 @@ a.contact{
         bottom: 0;
         height: auto;
     }
-    60.000000001%{
+
+    60.000000001% {
         background-position-x: center;
         background-position-y: 40%;
         background-size: auto 50%;
@@ -168,10 +191,11 @@ a.contact{
         /* margin-bottom: -28px; */
     }
 }
+
 @media (min-width: 700px) {
-        
-    @keyframes logoComing{
-        0%{
+
+    @keyframes logoComing {
+        0% {
             z-index: 999;
             background-position-y: 50%;
             background-size: auto 1000%;
@@ -180,7 +204,8 @@ a.contact{
             bottom: 0;
             height: auto;
         }
-        50%{
+
+        50% {
             background-position-x: center;
             background-position-y: 40%;
             background-size: auto 50%;
@@ -190,7 +215,8 @@ a.contact{
             height: auto;
             z-index: 999;
         }
-        60%{
+
+        60% {
             background-position-x: center;
             background-position-y: 40%;
             background-size: auto 50%;
@@ -200,7 +226,8 @@ a.contact{
             height: auto;
             z-index: 999;
         }
-        60.000000001%{
+
+        60.000000001% {
             background-position-x: center;
             background-position-y: 40%;
             background-size: auto 50%;
@@ -214,28 +241,34 @@ a.contact{
         }
     }
 }
-@keyframes nameComing{
-    0%{
+
+@keyframes nameComing {
+    0% {
         top: 73%;
         opacity: 0;
     }
-        90%{
+
+    90% {
         top: 73%;
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
-@keyframes indexmain{
-    0%{
+
+@keyframes indexmain {
+    0% {
         height: 0;
     }
-    2%{
+
+    2% {
         height: auto;
     }
 }
-.cardSwiper{
+
+.cardSwiper {
     display: block;
     position: relative;
     flex-grow: 0;
@@ -245,10 +278,12 @@ a.contact{
     /* height: 100vh; */
     overflow: hidden;
 }
-.cardSwiper .swiper-wrapper{
+
+.cardSwiper .swiper-wrapper {
     margin: 0 0vw;
 }
-.cardSwiper .swiper-slide{
+
+.cardSwiper .swiper-slide {
     width: min(262px, 80vw);
     margin: 10px 20px 10px 0;
     height: min(350px, 84vh);
@@ -257,11 +292,15 @@ a.contact{
     box-shadow: var(--index-card-swiper-shadow) 1px 1px 7px;
     transition: all 0.5s, outline 0s;
 }
-.cardSwiper .swiper-slide:hover, .cardSwiper .swiper-slide:focus-visible{
+
+.cardSwiper .swiper-slide:hover,
+.cardSwiper .swiper-slide:focus-visible {
     transform: translateY(-6px);
     box-shadow: var(--index-card-swiper-shadow) 1px 2px 12px;
 }
-.cardSwiper .swiper-button-prev, .cardSwiper .swiper-button-next{
+
+.cardSwiper .swiper-button-prev,
+.cardSwiper .swiper-button-next {
     /* top: calc(50% - 70px); */
     width: 21px;
     height: 21px;
@@ -272,50 +311,59 @@ a.contact{
     color: var(--index-card-swiper-button);
     transition: opacity 0.3s;
 }
-.cardSwiper .swiper-button-prev:after, .cardSwiper .swiper-button-next:after{
+
+.cardSwiper .swiper-button-prev:after,
+.cardSwiper .swiper-button-next:after {
     font-size: 17px;
 }
-.productsSwiper .swiper-wrapper .swiper-slide{
+
+.productsSwiper .swiper-wrapper .swiper-slide {
     background-repeat: no-repeat;
     background-position: center calc(50% - 36px);
     background-size: auto 56%;
 }
-.productsSwiper .swiper-wrapper .swiper-slide p{
+
+.productsSwiper .swiper-wrapper .swiper-slide p {
     margin: 0;
     padding: 0;
     position: absolute;
     bottom: 14%;
     left: 10px;
     right: 10px;
-    color: var(--text)!important;
+    color: var(--text) !important;
     font-size: 23px;
     font-weight: bold;
     text-align: center;
 }
-#newsSwiperItems center{
+
+#newsSwiperItems center {
     display: block;
     width: 100%;
     margin: 60px 0 20px 0;
     text-align: center;
 }
-#newsSwiperItems .swiper-slide, #newsSwiperItems .swiper-slide *{
+
+#newsSwiperItems .swiper-slide,
+#newsSwiperItems .swiper-slide * {
     position: relative;
     color: var(--text);
-    text-decoration: none!important;
+    text-decoration: none !important;
     text-decoration-color: #00000000;
     text-align: left;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
-#newsSwiperItems .swiper-slide h3{
+
+#newsSwiperItems .swiper-slide h3 {
     padding: 13px 20px 0 20px;
     margin: 0;
     font-weight: bold;
     font-size: 18px;
     flex-shrink: 0;
 }
-#newsSwiperItems .swiper-slide .time{
+
+#newsSwiperItems .swiper-slide .time {
     padding: 3px 20px 0px 20px;
     margin: 0;
     font-size: 14px;
@@ -324,20 +372,23 @@ a.contact{
     flex-direction: row;
     opacity: 0.6;
 }
-#newsSwiperItems .swiper-slide .time svg{
+
+#newsSwiperItems .swiper-slide .time svg {
     width: 12px;
     height: 12px;
     margin-right: 5px;
     fill: var(--text);
 }
-#newsSwiperItems .swiper-slide p{
+
+#newsSwiperItems .swiper-slide p {
     padding: 4px 20px 10px 20px;
     margin: 0;
     font-size: 14px;
     line-height: 1.4;
     flex-shrink: 1;
 }
-#newsSwiperItems .swiper-slide .cover{
+
+#newsSwiperItems .swiper-slide .cover {
     position: absolute;
     height: 30px;
     left: -2px;
@@ -345,7 +396,8 @@ a.contact{
     bottom: -2px;
     background-image: linear-gradient(#ffffff00, var(--index-card-swiper-background));
 }
-.lemonLine{
+
+.lemonLine {
     width: 80%;
     margin: 0 10%;
     -webkit-user-select: none;

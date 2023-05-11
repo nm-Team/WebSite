@@ -1,24 +1,28 @@
-body{
+body {
     --lan-border: rgb(197, 197, 197);
     --lan-active-border: rgb(209, 206, 0);
     --lan-text: #000;
     --lan-active-text: rgb(226, 185, 2);
 }
-@media (prefers-color-scheme: dark){
-    body{
+
+@media (prefers-color-scheme: dark) {
+    body {
         --lan-border: rgb(88, 88, 88);
         --lan-active-border: rgb(209, 206, 0);
         --lan-text: rgb(255, 255, 255);
         --lan-active-text: rgb(209, 206, 0);
     }
 }
-#lanList{
+
+#lanList {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
-#lanList .selection, #lanList::after{
+
+#lanList .selection,
+#lanList::after {
     width: 100%;
     padding: 20px 24px;
     font-size: 17px;
@@ -31,14 +35,17 @@ body{
     text-align: left;
     cursor: pointer;
 }
-#lanList .selection[data-active=true], #lanList .selection:hover{
+
+#lanList .selection[data-active=true],
+#lanList .selection:hover {
     padding: 19px 23px;
     border: 2px solid var(--lan-active-border);
     color: var(--lan-active-text);
     font-weight: bold;
 }
+
 @media (min-width:750px) {
-    #lanList .selection{
+    #lanList .selection {
         width: calc(50% - 3px);
     }
 }
