@@ -4,8 +4,8 @@ try {
     console.log("Get products JSON file. ");
     tipsNum = 0;
     if (productsJson.length == 0) {
-        products_overview_inner.innerHTML = "<div class='msg' data-i18n='products.noresult'>" + "</div>";
-        
+        products_overview_inner.innerHTML = "<div class='msg'>" + productI18n.noresult + "</div>";
+
     }
     for (i in productsJson) {
         sTipsNum = 0;
