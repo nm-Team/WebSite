@@ -33,7 +33,7 @@ setHeader();
 loadNews();
 
 function loadNews() {
-    $("#newsSwiperItems").html(`<center><span data-i18n="index.newslist_loading"><span></center>`);
+    $("#newsSwiperItems").html(`<center><span>${newsRoomLoadingI18n}<span></center>`);
 
     $.ajax("https://newsroom.nmteam.xyz/api/posts?showContent=false&pageSize=5&page=1", {
         type: "GET",
@@ -57,7 +57,7 @@ function loadNews() {
             cardSwiper[1].updateSlides();
         },
         error: function () {
-            $("#newsSwiperItems").html(`<center><span data-i18n="index.newslist_error"></span><div class="indexMoreLinks"><a href="javascript:" onclick="loadNews();" data-button-type="no"><span data-i18n="index.retry"></span></a></div></center>`);
+            $("#newsSwiperItems").html(`<center><span>${newsRoomLoadFailedI18n}</span><div class="indexMoreLinks"><a href="javascript:" onclick="loadNews();" data-button-type="no"><span>${newsRoomRetryI18n}</span></a></div></center>`);
 
         }
     });
