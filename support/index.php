@@ -20,6 +20,7 @@ setHeader();
 	<div class="tabView supportTab" id="supportTab">
 		<div class="tabHeader">
 			<button data-tab="email"><?php p("support.via_email"); ?></button>
+			<button data-tab="telegram"><?php p("support.via_telegram"); ?></button>
 			<!-- <button data-tab="community"><?php p("support.community"); ?></button> -->
 		</div>
 		<div class="tabContents">
@@ -27,6 +28,10 @@ setHeader();
 				<!-- <h2><?php p("support.via_email"); ?></h2> -->
 				<p><?php p("support.via_email_description"); ?></p>
 				<p><?php p("support.support_email"); ?><a href="mailto:support@nmteam.xyz">support@nmteam.xyz</a></p>
+			</div>
+			<div class="content" data-tab="telegram">
+				<p><?php p("support.via_telegram_description"); ?></p>
+				<p><?php p("support.support_telegram"); ?><a href="https://nmteamsupportbot.t.me">@nmteamsupportbot</a></p>
 			</div>
 			<div class="content" data-tab="community">
 			</div>
