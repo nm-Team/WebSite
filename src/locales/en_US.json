@@ -302,7 +302,7 @@
     "support": {
         "via_email_description": "Contact nmTeam support via email.",
         "via_email": "Email support",
-        "support_email": "nmTeam support email:",
+        "support_email": "nmTeam support email: ",
         "email_tip": "nmTeam Support Email",
         "description": "We are always here to help.",
         "community_description": "Chat with nmTeam members, volunteers, and users about nmTeam product issues on the nmFun Support section.",
