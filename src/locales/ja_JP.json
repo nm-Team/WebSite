@@ -307,6 +307,9 @@
         "support_email": "nmTeamサポートメール：",
         "title": "nmTeamのサポート",
         "via_email": "メールサポート",
-        "via_email_description": "電子メールでnmTeamサポートに連絡してください。"
+        "via_email_description": "電子メールでnmTeamサポートに連絡してください。",
+        "support_telegram": "サポートリンク:",
+        "via_telegram": "電報サポート",
+        "via_telegram_description": "サポートが必要な場合は、Telegram 経由でお問い合わせください。"
     }
 }

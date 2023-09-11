@@ -298,6 +298,9 @@
         "support_email": "nmTeam 伎歭郵葙：",
         "title": "nmTeam 伎歭",
         "via_email": "電ふ郵件伎歭",
-        "via_email_description": "嗵過電ふ郵件聯繫 nmTeam 伎歭。"
+        "via_email_description": "嗵過電ふ郵件聯繫 nmTeam 伎歭。",
+        "support_telegram": "伎歭嗹帹：",
+        "via_telegram": "Telegram 伎歭",
+        "via_telegram_description": "嗵過 Telegram 玙莪們聅係镬掫伎歭。"
     }
 }

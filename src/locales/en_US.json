@@ -307,6 +307,9 @@
         "description": "We are always here to help.",
         "community_description": "Chat with nmTeam members, volunteers, and users about nmTeam product issues on the nmFun Support section.",
         "community": "nmTeam Community",
-        "title": "nmTeam Support"
+        "title": "nmTeam Support",
+        "support_telegram": "Support link: ",
+        "via_telegram": "Telegram Support",
+        "via_telegram_description": "Contact us via Telegram for support."
     }
 }
