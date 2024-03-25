@@ -355,16 +355,32 @@ a.contact {
     overflow: hidden;
 }
 
+#newsSwiperItems .swiper-slide .newsImage {
+    width: 100%;
+    height: 1px;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #00000033;
+}
+
 #newsSwiperItems .swiper-slide h3 {
     padding: 13px 20px 0 20px;
     margin: 0;
     font-weight: bold;
     font-size: 18px;
     flex-shrink: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+
+
 }
 
 #newsSwiperItems .swiper-slide .time {
-    padding: 3px 20px 0px 20px;
+    padding: 3px 20px 10px 20px;
     margin: 0;
     font-size: 14px;
     line-height: 1.4;
@@ -390,11 +406,10 @@ a.contact {
 }
 
 #newsSwiperItems .swiper-slide .cover {
-    position: absolute;
-    height: 30px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
+    position: relative;
+    height: 90px;
+    top: -90px;
+    margin-bottom: -140px;
     background-image: linear-gradient(#ffffff00, var(--index-card-swiper-background));
 }
 
