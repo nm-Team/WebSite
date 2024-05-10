@@ -85,7 +85,7 @@ setHeader();
 		<h1><?php p("index.connect_us"); ?></h1>
 		<p><?php p("index.connect_para"); ?></p>
 		<div class="indexMoreLinks">
-			<a href="https://github.com/nm-Team" target="_blank"><b>GitHub&nbsp;</b>@nmTeam<svg class="svg" style="transform:scale(0.81)" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<a href="https://github.com/nm-Team" target="_blank"><b>GitHub&nbsp;</b>@nm-Team<svg class="svg" style="transform:scale(0.81)" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
 					<path d="M924.402464 1023.068211H0.679665V99.345412h461.861399v98.909208H99.596867v725.896389h725.896389V561.206811h98.909208z" p-id="3093"></path>
 					<path d="M930.805104 22.977336l69.965436 69.965436-453.492405 453.492404-69.965435-69.901489z" p-id="3094"></path>
 					<path d="M1022.464381 304.030081h-98.917201V99.345412H709.230573V0.428211h313.233808z"></path>
@@ -95,8 +95,13 @@ setHeader();
 					<path d="M930.805104 22.977336l69.965436 69.965436-453.492405 453.492404-69.965435-69.901489z" p-id="3094"></path>
 					<path d="M1022.464381 304.030081h-98.917201V99.345412H709.230573V0.428211h313.233808z"></path>
 				</svg></a>
+			<a href="https://twitter.com/nmnmfun" target="_blank"><b>X&nbsp;</b>@nmnmfun<svg class="svg" style="transform:scale(0.81)" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<path d="M924.402464 1023.068211H0.679665V99.345412h461.861399v98.909208H99.596867v725.896389h725.896389V561.206811h98.909208z" p-id="3093"></path>
+					<path d="M930.805104 22.977336l69.965436 69.965436-453.492405 453.492404-69.965435-69.901489z" p-id="3094"></path>
+					<path d="M1022.464381 304.030081h-98.917201V99.345412H709.230573V0.428211h313.233808z"></path>
+				</svg></a>
 		</div>
-		<h2><?php p("index.join_us"); ?></h2>
+		<h1><?php p("index.join_us"); ?></h1>
 		<p><?php p("index.join_para"); ?></p>
 		<p><?php p("index.join_para_2"); ?></p>
 		<div class="indexMoreLinks">
