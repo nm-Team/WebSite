@@ -21,7 +21,7 @@ function setHeader() {
 
 // 登录账户
 window.onload = function () {
-	accountBox.setAttribute("onclick", "window.location.href='" + logURL);
+	accountBox.setAttribute("onclick", "window.location.href='" + logURL + "'");
 }
 
 function headerClick() {
