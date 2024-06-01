@@ -29,6 +29,9 @@
         "click_to_log": "點擊登錄",
         "unable_to_load": "加載出錯"
     },
+    "account_v2": {
+        "manage": "管理帳號"
+    },
     "comes_soon": "此頁面正在製作中，敬請期待！",
     "cookie": {
         "cookieConfirmDialog": {

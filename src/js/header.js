@@ -21,26 +21,7 @@ function setHeader() {
 
 // 登录账户
 window.onload = function () {
-	if (enableAccount) {
-		returnWord = "";
-		getInfo(function () {
-			accountInfo = returnWord;
-			accountBox.setAttribute("onclick", "window.location.href='" + logURL + "?name=target.website&returnto=" + window.location.href + "&msg=msg.website'");
-			if (accountInfo == -1) {
-				userName.innerHTML = accountI18n.click_to_log;
-			}
-			else if (accountInfo == -2) {
-				userName.innerHTML = accountI18n.unable_to_load;
-			}
-			else {
-				avatarBox.setAttribute("style", "background-image:url(" + accountInfo['avatar'] + ")");
-				userName.innerHTML = accountInfo['nick'];
-				document.cookie = "sessionid=" + getCookie("sessionid") || getCookie("PHPSESSID") + ";path=/";
-				accountBox.setAttribute("onclick", "window.open('" + logURL + "/info?sessionid=" + getCookie("sessionid") + "')");
-			}
-		});
-	}
-	else userName.innerHTML = accountI18n.click_to_log;
+	accountBox.setAttribute("onclick", "window.location.href='" + logURL);
 }
 
 function headerClick() {

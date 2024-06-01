@@ -29,6 +29,9 @@
         "click_to_log": "点击登录",
         "unable_to_load": "加载出错"
     },
+    "account_v2": {
+        "manage": "管理账号"
+    },
     "comes_soon": "此页面正在制作中，敬请期待！",
     "cookie": {
         "cookieConfirmDialog": {

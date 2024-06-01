@@ -111,6 +111,9 @@
         "loading": "読み込んでいます...",
         "unable_to_load": "読み込みエラー"
     },
+    "account_v2": {
+        "manage": "アカウントの管理"
+    },
     "cookie": {
         "cookieConfirmDialog": {
             "body": {

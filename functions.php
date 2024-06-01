@@ -141,7 +141,6 @@ function setHeader()
             }
         </script>
         <script>
-            accountI18n = <?php echo json_encode(t("account")); ?>;
             language = "<?php echo lang; ?>";
         </script>
     </head>
@@ -251,7 +250,6 @@ function setFooter()
 
         <script src="/src/js/header.js"></script>
         <script src="/src/js/jquery.min.js"></script>
-        <script src="https://accounts.nmteam.xyz/src/js/getinfo.js"></script>
         <?php
         foreach (page_body_js as $key => $value) {
             echo "<script src='" . $value . "'></script>";
