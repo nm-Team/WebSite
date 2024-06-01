@@ -162,7 +162,7 @@ function setHeader()
                     </div>
                     <button class="accountBox" id="accountBox" tabindex="0" aria-label="<?php p("header.account_box_aria_label"); ?>">
                         <i id="avatarBox" aria-label="<?php p("header.avatar_aria_label"); ?>"></i>
-                        <p id="userName"><?php p("account.loading"); ?></p>
+                        <p id="userName"><?php p("account_v2.manage"); ?></p>
                     </button>
                 </div>
             </div>
