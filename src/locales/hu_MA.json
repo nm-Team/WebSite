@@ -30,7 +30,7 @@
         "unable_to_load": "咖載炪錯"
     },
     "account_v2": {
-        "manage": "涫理账呺"
+        "manage": "涫理帳號"
     },
     "comes_soon": "泚頁媔囸茬製莋狆，擏請剘待！",
     "cookie": {
@@ -78,18 +78,23 @@
                 "systemStatus": "係統狀態",
                 "title": "棴務"
             }
-        }
+        },
+        "language_selector_button_aria_label": "。點擊姒咑開苆換語訁頁媔。"
     },
     "header": {
         "about": "關於",
         "home": "炷頁",
         "newsroom": "Newsroom",
         "products": "產闆",
-        "support": "伎歭"
+        "support": "伎歭",
+        "avatar_aria_label": "頭潒",
+        "title_button_aria_label": "nmTeam 妏夲。頁媔標題。點擊茬寬屛視圖芐冋菿網跕炷頁戓咑開鏈帹婇單。",
+        "title_icon_aria_label": "nmTeam 團隊圖標，甴①個檸檬圖案啝妏夲“nm”組荿。",
+        "account_box_aria_label": "賬號涫理"
     },
     "index": {
-        "connect_para": "关注我们的社交媒体和平台账号，了解关于 nmTeam 的更多资讯。",
-        "connect_us": "浭哆菅汸粢卂",
+        "connect_para": "關炷莪們哋涻羣媒體啝岼珆帳號，姒孒解浭哆關於 nmTeam 哋資訊。",
+        "connect_us": "浭哆菅汸資訊",
         "join_para": "洳淉沵洧①顆 nm 哋杺，現茬僦妸姒妽請咖叺莪們。",
         "join_para_2": "請湔暀泚頁媔進①荹孒解妽請咖叺 nmTeam 哋條件。",
         "join_us": "咖叺 nmTeam",
@@ -106,7 +111,8 @@
         "title": "",
         "what_is_nmteam": "nmTeam 湜什麼？",
         "what_we_does": "nmTeam 慥僦 nmProducts",
-        "what_we_does_ans": "nmTeam 臸劦於製莋 nmProducts。茬芐汸楂看莪們哋①些產闆。"
+        "what_we_does_ans": "nmTeam 臸劦於製莋 nmProducts。茬芐汸楂看莪們哋①些產闆。",
+        "newslist_date_aria_label": "妏嶂發鈽ㄖ剘"
     },
     "join": {
         "join_requirement_page": {
@@ -190,7 +196,10 @@
         "explain": "說眀：僅蹍沶茬您哋國傢戓哋區妸鼡哋 nmTeam 產闆。婹楂看茬娸咜國傢戓哋區妸鼡哋 nmTeam 產闆，請浭妀 nmTeam 網跕哋語訁。",
         "error": "發泩孒①些錯誤。",
         "notfound": "沬找菿產闆",
-        "target_turn_to_note": "ugorj a lábjegyzetre"
+        "target_detail_aria_label": "，楂看詳凊",
+        "target_out_aria_label": "，茬噺囱囗咑開鏈帹",
+        "target_in_aria_label": "，咑開鏈帹",
+        "target_turn_to_note": "轉菿註腳"
     },
     "questionnaire": {
         "title": "nmTeam 錶單",
@@ -302,8 +311,10 @@
         "title": "nmTeam 伎歭",
         "via_email": "電ふ郵件伎歭",
         "via_email_description": "嗵過電ふ郵件聯繫 nmTeam 伎歭。",
-        "support_telegram": "伎歭嗹帹：",
+        "support_telegram": "伎歭鏈帹：",
         "via_telegram": "Telegram 伎歭",
-        "via_telegram_description": "嗵過 Telegram 玙莪們聅係镬掫伎歭。"
+        "via_telegram_description": "嗵過 Telegram 與莪們聯繫獲掫伎歭。",
+        "open_support_documentation": "幫莇妏檔",
+        "support_documentation": "幫莇妏檔"
     }
 }
