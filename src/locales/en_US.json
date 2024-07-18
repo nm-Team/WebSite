@@ -310,6 +310,8 @@
         "title": "nmTeam Support",
         "support_telegram": "Support link: ",
         "via_telegram": "Telegram Support",
-        "via_telegram_description": "Contact us via Telegram for support."
+        "via_telegram_description": "Contact us via Telegram for support.",
+        "open_support_documentation": "Open help documentation",
+        "support_documentation": "Help documentation"
     }
 }

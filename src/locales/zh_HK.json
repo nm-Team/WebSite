@@ -313,6 +313,8 @@
         "via_email_description": "通過電子郵件聯繫 nmTeam 支持。",
         "support_telegram": "支持鏈接：",
         "via_telegram": "Telegram 支持",
-        "via_telegram_description": "通過 Telegram 與我們聯繫獲取支持。"
+        "via_telegram_description": "通過 Telegram 與我們聯繫獲取支持。",
+        "open_support_documentation": "幫助文檔",
+        "support_documentation": "幫助文檔"
     }
 }
