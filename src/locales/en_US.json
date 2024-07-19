@@ -300,19 +300,8 @@
         "nsp": "Network Service Protocol "
     },
     "support": {
-        "via_email_description": "Contact nmTeam support via email.",
-        "via_email": "Email support",
-        "support_email": "nmTeam support email: ",
-        "email_tip": "nmTeam Support Email",
-        "description": "We are always here to help.",
-        "community_description": "Chat with nmTeam members, volunteers, and users about nmTeam product issues on the nmFun Support section.",
-        "community": "nmTeam Community",
-        "title": "nmTeam Support",
-        "support_telegram": "Support link: ",
-        "via_telegram": "Telegram Support",
-        "via_telegram_description": "Contact us via Telegram for support.",
-        "open_support_documentation": "Open help documentation",
-        "support_documentation": "Help documentation"
+        "description": "We're here to help.\n\nRedirecting to nmTeam support, please wait...",
+        "title": "nmTeam Support"
     },
     "account_v2": {
         "manage": "Manage account"

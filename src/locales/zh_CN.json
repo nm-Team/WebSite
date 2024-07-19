@@ -286,18 +286,7 @@
     },
     "support": {
         "title": "nmTeam 支持",
-        "description": "我们随时在此提供帮助。",
-        "via_email": "电子邮件支持",
-        "via_email_description": "通过电子邮件联系 nmTeam 支持。",
-        "support_email": "nmTeam 支持邮箱：",
-        "email_tip": "nmTeam 支持电子邮箱",
-        "community": "nmTeam 社区",
-        "community_description": "在 nmFun 支持板块与 nmTeam 成员、志愿者和用户交流 nmTeam 产品问题。",
-        "via_telegram": "Telegram 支持",
-        "via_telegram_description": "通过 Telegram 与我们联系获取支持。",
-        "support_telegram": "支持链接：",
-        "open_support_documentation": "打开帮助文档",
-        "support_documentation": "帮助文档"
+        "description": "我们随时在此提供帮助。\n\n正在转到 nmTeam 支持，请稍候..."
     },
     "supportus": {
         "title": "赞助 nmTeam",

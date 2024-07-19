@@ -303,18 +303,7 @@
         "title": "nmTeamシステムステータス"
     },
     "support": {
-        "community": "nmTeamコミュニティ",
-        "community_description": "nmFunサポートセクションでnmTeam製品の問題について、nmTeamメンバー、ボランティア、およびユーザーとチャットします。",
-        "description": "私たちはいつでもお手伝いします。",
-        "email_tip": "nmTeamサポートメール",
-        "support_email": "nmTeamサポートメール：",
-        "title": "nmTeamのサポート",
-        "via_email": "メールサポート",
-        "via_email_description": "電子メールでnmTeamサポートに連絡してください。",
-        "support_telegram": "サポートリンク:",
-        "via_telegram": "電報サポート",
-        "via_telegram_description": "サポートが必要な場合は、Telegram 経由でお問い合わせください。",
-        "open_support_documentation": "ヘルプドキュメント",
-        "support_documentation": "ヘルプドキュメント"
+        "description": "私たちがお手伝いします。\n\nnmTeam サポートにリダイレクトしています。お待ちください...",
+        "title": "nmTeamのサポート"
     }
 }
