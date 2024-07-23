@@ -157,6 +157,7 @@ function setHeader()
                     <div class="links">
                         <a href="/" aria-label="<?php p("header.home"); ?>"><?php p("header.home"); ?></a>
                         <a href="/products/" aria-label="<?php p("header.products"); ?>"><?php p("header.products"); ?></a>
+                        <a href="https://newsroom.nmteam.xyz" aria-label="<?php p("header.support"); ?>"><?php p("header.support"); ?></a>
                         <a href="https://newsroom.nmteam.xyz" target="_blank" aria-label="<?php p("header.newsroom"); ?>"><?php p("header.newsroom"); ?></a>
                         <a href="/aboutus" aria-label="<?php p("header.about"); ?>"><?php p("header.about"); ?></a>
                     </div>
