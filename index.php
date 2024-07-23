@@ -3,8 +3,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/functions.php");
 define("page_title", "");
 define("page_keywords", "nmTeam,主页,首页,Homepage");
 define("page_description", "nmTeam HomePage");
-define("page_head_css", array("/src/css/index.css", "/src/css/swiper-bundle.min.css"));
-define("page_head_js", array("/src/js/swiper-bundle.min.js"));
+define("page_head_css", array("/src/css/index.css"));
+define("page_head_js", array());
 define("page_body_js", array("/src/js/index.js"));
 define("page_image", "");
 define("page_update", "");
@@ -38,8 +38,11 @@ setHeader();
 		<p><?php p("index.what_we_does_ans"); ?></p>
 		<div class="swiper cardSwiper productsSwiper" data-grow>
 			<div class="swiper-wrapper">
-				<a href="/products/overview/nmBot-Telegram<?php echo lang == "zh_CN" || lang == "zh_HK" || lang == "hu_MA" ? "" : "?lang=zh_CN"; ?>" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png)">
+				<a href="/products/overview/nmBot-Telegram<?php echo lang == "zh_CN" || lang == "zh_HK" || lang == "hu_MA" ? "" : "?lang=zh_CN"; ?>" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBot/nmbot_next.jpg)">
 					<p>nmBot</p>
+				</a>
+				<a href="https://nmbot.nmnm.fun" target="_blank" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png)">
+					<p>nmBot Panel</p>
 				</a>
 				<a href="/products/overview/nmBrowser-StartPage" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@128.png)">
 					<p>nmBrowser StartPage</p>
@@ -47,12 +50,9 @@ setHeader();
 				<a href="/products/overview/nmFun<?php echo lang == "zh_CN" || lang == "zh_HK" || lang == "hu_MA" ? "" : "?lang=zh_CN"; ?>" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg)">
 					<p>nmFun</p>
 				</a>
-				<a href="/products/overview/nmChat" target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmTeam/logo@128.png)">
-					<p>nmChat</p>
-				</a>
 			</div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+			<!-- <div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div> -->
 		</div>
 		<div class="indexMoreLinks">
 			<a target="_blank" href="/products">
@@ -67,8 +67,8 @@ setHeader();
 		<h1><?php p("index.newslist"); ?></h1>
 		<div class="swiper cardSwiper newsSwiper" data-grow>
 			<div class="swiper-wrapper" id="newsSwiperItems">Loading...</div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+			<!-- <div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div> -->
 		</div>
 		<div class="indexMoreLinks">
 			<a target="_blank" href="https://newsroom.nmteam.xyz?ref=nmteam.xyz">

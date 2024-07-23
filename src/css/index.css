@@ -54,56 +54,6 @@ body {
     animation: indexmain 1.6s;
 }
 
-.nmProductsPreview {
-    width: 100%;
-    max-width: 600px;
-    height: 220px;
-    margin: 20px auto 10px auto;
-}
-
-@media (max-width: 600px) {
-    .nmProductsPreview {
-        width: auto;
-        max-width: unset;
-        height: 220px;
-        margin: 20px -12% 10px -12%;
-    }
-}
-
-.nmProductsPreview .swiper-button-prev::after,
-.nmProductsPreview .swiper-button-next::after {
-    font-size: 10px;
-    color: var(--logolike-yellow-lighter);
-    border-radius: 4px;
-}
-
-.swiper-pagination-bullet {
-    background: var(--logolike-yellow-lighter);
-}
-
-.nmProductsPreview .swiper-slide {
-    width: 200px;
-    margin-top: 4px;
-    height: 200px;
-    text-align: center;
-    background-position-x: 50%;
-    background-position-y: 2%;
-    background-size: 63%;
-    background-repeat: no-repeat;
-    border-radius: 4px;
-}
-
-.nmProductsPreview .swiper-slide p {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 72%;
-    font-size: 20px;
-    font-weight: 450;
-    line-height: 1.4;
-    color: var(--text-color);
-}
-
 .contactContainer {
     padding: 5px 10%;
     text-align: center;
@@ -269,23 +219,35 @@ a.contact {
 }
 
 .cardSwiper {
-    display: block;
+    display: flex;
     position: relative;
-    flex-grow: 0;
-    flex-shrink: 1;
-    margin: 0 -10vw;
-    padding: 10px 10vw;
-    /* height: 100vh; */
-    overflow: hidden;
+    justify-content: center;
 }
 
 .cardSwiper .swiper-wrapper {
-    margin: 0 0vw;
+    max-width: calc(100% + 20vw);
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 0 -10vw;
+    padding: 10px 10vw;
+    overflow: auto hidden;
+    scrollbar-width: none;
+}
+
+.cardSwiper .swiper-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .cardSwiper .swiper-slide {
+    position: relative;
+    flex-shrink: 0;
     width: min(262px, 80vw);
-    margin: 10px 20px 10px 0;
+    margin: 10px 10px 10px 10px;
     height: min(350px, 84vh);
     background: var(--index-card-swiper-background);
     border-radius: 10px;
@@ -301,7 +263,8 @@ a.contact {
 
 .cardSwiper .swiper-button-prev,
 .cardSwiper .swiper-button-next {
-    /* top: calc(50% - 70px); */
+    position: absolute;
+    top: calc(50% - 13px);
     width: 21px;
     height: 21px;
     margin: 0vw;

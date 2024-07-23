@@ -1,20 +1,3 @@
-var cardSwiper = new Swiper('.cardSwiper',
-    {
-        direction: 'horizontal',
-        loop: false,
-        slidesPerView: 'auto',
-        centeredSlides: false,
-        slidesOffsetAfter: 0,
-        pagination: { el: '.swiper-pagination', },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        navigation:
-            { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
-    });
-
-
 // header icon 
 
 function setHeader() {
@@ -56,7 +39,6 @@ function loadNews() {
                 });
             }
             $("#newsSwiperItems").html(newsHTML);
-            cardSwiper[1].updateSlides();
         },
         error: function () {
             $("#newsSwiperItems").html(`<center><span>${newsRoomLoadFailedI18n}</span><div class="indexMoreLinks"><a href="javascript:" onclick="loadNews();" data-button-type="no"><span>${newsRoomRetryI18n}</span></a></div></center>`);
