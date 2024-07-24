@@ -222,6 +222,9 @@ a.contact {
     display: flex;
     position: relative;
     justify-content: center;
+    overflow: hidden;
+    margin: 0 -10vw;
+    padding: 0 10vw;
 }
 
 .cardSwiper .swiper-wrapper {
