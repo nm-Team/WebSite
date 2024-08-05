@@ -53,7 +53,7 @@ setHeader();
 <div class="main mainBlock">
 	<p><?php p("supportus.para"); ?></p>
 	<div class="indexMoreLinks">
-		<a target="_blank" href="https://afdian.net/@nmTeam?ref=nmteam.xyz">
+		<a target="_blank" href="https://afdian.com/@nmTeam?ref=nmteam.xyz">
 			<span><?php p("supportus.links.afdian"); ?></span>
 			<svg class="svg" style="transform:scale(0.81)" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
 				<path d="M924.402464 1023.068211H0.679665V99.345412h461.861399v98.909208H99.596867v725.896389h725.896389V561.206811h98.909208z" p-id="3093"></path>
