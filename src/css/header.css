@@ -446,12 +446,16 @@ body {
 
     #fcont .footer-bottom {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     #fcont .footer-bottom .right {
         margin-top: 20px;
         text-align: center;
+    }
+
+    #fcont .footer-bottom .right i {
+        margin-inline-start: -3px;
     }
 }
 
