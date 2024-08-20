@@ -8,7 +8,7 @@ define("page_description", "products.nmbot_telegram.description");
 define("page_head_css", array("/src/css/products.css", "/src/css/products_detail.css"));
 define("page_head_js", array());
 define("page_body_js", array());
-define("page_image", "");
+define("page_image", "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro seo image.png");
 define("page_update", "");
 define("const_theme", "dark");
 define("disallow_hide_header", true);
