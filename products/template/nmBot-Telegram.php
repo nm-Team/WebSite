@@ -669,7 +669,7 @@ function pb($key)
             width: calc(100% - 20rem);
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
         }
 
