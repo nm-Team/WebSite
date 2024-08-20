@@ -94,50 +94,130 @@ function setHeader()
             {
                 "@context": "https://schema.org",
                 "@graph": [{
-                    "@type": "Organization",
-                    "@id": "https://nmteam.xyz",
-                    "name": "nmTeam",
-                    "url": "https://nmteam.xyz/",
-                    "sameAs": [],
-                    "logo": {
-                        "@type": "ImageObject",
-                        "@id": "https://nmteam.xyz/#logo",
-                        "inLanguage": "<?php echo str_replace("_", "-", lang); ?>",
-                        "url": "<?php echo $image; ?>",
-                        "width": 128,
-                        "height": 128,
-                        "caption": "nmTeam"
+                        "@type": "Organization",
+                        "@id": "https://nmteam.xyz",
+                        "name": "nmTeam",
+                        "alternateName": ["柠檬团队", "纳米团队"],
+                        "url": "https://nmteam.xyz/",
+                        "sameAs": [
+                            "https://x.com/nmnmfun",
+                            "https://t.me/nmteamnewsroom",
+                            "https://github.com/nm-Team"
+                        ],
+                        "logo": {
+                            "@type": "ImageObject",
+                            "@id": "https://websiteres.nmteam.xyz/producticon/nmTeam/logo@256.png",
+                            "inLanguage": "<?php echo str_replace('_', '-', lang); ?>",
+                            "url": "<?php echo $image; ?>",
+                            "width": 256,
+                            "height": 256,
+                            "caption": "nmTeam"
+                        },
+                        "image": {
+                            "@id": "https://websiteres.nmteam.xyz/producticon/nmTeam/logo@256.png"
+                        }
                     },
-                    "image": {
-                        "@id": "https://nmteam.xyz/#logo"
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://nmteam.xyz/#website",
+                        "url": "https://nmteam.xyz/",
+                        "name": "nmTeam <?php p('pagebases.official_website'); ?>",
+                        "description": "<?php echo $description; ?>",
+                        "publisher": {
+                            "@id": "https://nmteam.xyz/aboutus"
+                        },
+                        "inLanguage": "<?php echo str_replace('_', '-', lang); ?>"
+                    },
+                    {
+                        "@type": "ItemList",
+                        "itemListElement": [{
+                                "@type": "ListItem",
+                                "position": 1,
+                                "url": "https://nmteam.xyz/products/overview/nmBot-Telegram",
+                                "name": "<?php p('schema.nmbot_intro'); ?>"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "url": "https://newsroom.nmteam.xyz",
+                                "name": "nmTeam Newsroom"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "url": "https://nmbot.nmnm.fun",
+                                "name": "<?php p('schema.nmbot_panel'); ?>"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 4,
+                                "url": "https://nmteam.xyz/products",
+                                "name": "<?php p('schema.products'); ?>"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 5,
+                                "url": "https://support.nmteam.xyz",
+                                "name": "<?php p('schema.nmteam_support'); ?>"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://nmteam.xyz/products/overview/nmBot-Telegram",
+                        "url": "https://nmteam.xyz/products/overview/nmBot-Telegram",
+                        "name": "<?php p('schema.nmbot_intro'); ?>",
+                        "datePublished": "2024-08-20T16:00:00.000Z",
+                        "dateModified": "2024-08-20T16:00:00.000Z",
+                        "description": "<?php p('schema.nmbot_intro_description'); ?>",
+                        "inLanguage": "<?php echo str_replace('_', '-', lang); ?>",
+                        "author": "nmTeam"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://newsroom.nmteam.xyz",
+                        "url": "https://newsroom.nmteam.xyz",
+                        "name": "nmTeam Newsroom",
+                        "datePublished": "2024-08-20T16:00:00.000Z",
+                        "dateModified": "2024-08-20T16:00:00.000Z",
+                        "description": "<?php p('schema.newsroom_description'); ?>",
+                        "inLanguage": "<?php echo str_replace('_', '-', lang); ?>",
+                        "author": "nmTeam"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://nmbot.nmnm.fun",
+                        "url": "https://nmbot.nmnm.fun",
+                        "name": "<?php p('schema.nmbot_panel'); ?>",
+                        "datePublished": "2024-08-20T16:00:00.000Z",
+                        "dateModified": "2024-08-20T16:00:00.000Z",
+                        "description": "<?php p('schema.nmbot_panel_description'); ?>",
+                        "inLanguage": "<?php echo str_replace('_', '-', lang); ?>",
+                        "author": "nmTeam"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://nmteam.xyz/products",
+                        "url": "https://nmteam.xyz/products",
+                        "name": "<?php p('schema.products'); ?>",
+                        "datePublished": "2024-08-20T16:00:00.000Z",
+                        "dateModified": "2024-08-20T16:00:00.000Z",
+                        "description": "<?php p('schema.products_description'); ?>",
+                        "inLanguage": "<?php echo str_replace('_', '-', lang); ?>",
+                        "author": "nmTeam"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://support.nmteam.xyz",
+                        "url": "https://support.nmteam.xyz",
+                        "name": "<?php p('schema.nmteam_support'); ?>",
+                        "datePublished": "2024-08-20T16:00:00.000Z",
+                        "dateModified": "2024-08-20T16:00:00.000Z",
+                        "description": "<?php p('schema.nmteam_support_description'); ?>",
+                        "inLanguage": "<?php echo str_replace('_', '-', lang); ?>",
+                        "author": "nmTeam"
                     }
-                }, {
-                    "@type": "WebSite",
-                    "@id": "https://nmteam.xyz/#website",
-                    "url": "https://nmteam.xyz/",
-                    "name": "nmTeam <?php p("pagebases.official_website"); ?>",
-                    "description": "<?php echo $description; ?>",
-                    "publisher": {
-                        "@id": "https://nmteam.xyz/about"
-                    },
-                    "inLanguage": "<?php echo str_replace("_", "-", lang); ?>"
-                }, {
-                    "@type": "ImageObject",
-                    "@id": "<?php echo $image; ?>",
-                    "inLanguage": "<?php echo str_replace("_", "-", lang); ?>",
-                    "url": "<?php echo $image; ?>",
-                    "caption": "<?php echo $description; ?>"
-                }, {
-                    "@type": "WebPage",
-                    "@id": "https://nmteam.xyz",
-                    "url": "https://nmteam.xyz",
-                    "name": "nmTeam",
-                    "datePublished": "2022-02-31T11:45:14.000Z",
-                    "dateModified": "2022-02-31T11:45:14.000Z",
-                    "description": "<?php echo $description; ?> - nmTeam",
-                    "inLanguage": "<?php echo str_replace("_", "-", lang); ?>",
-                    "author": "nmTeam"
-                }]
+                ]
             }
         </script>
         <script>

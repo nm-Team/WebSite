@@ -8,6 +8,17 @@
             "home": "主页"
         }
     },
+    "schema": {
+        "nmbot_intro": "nmBot Telegram 介绍",
+        "nmbot_intro_description": "了解 nmBot 这款超强大的 Telegram 机器人。",
+        "nmbot_panel": "nmBot 面板",
+        "nmbot_panel_description": "打开 nmBot 面板管理您的 nmBot 设置。",
+        "newsroom_description": "在 nmTeam Newsroom 中查看最新的 nmTeam 新闻。",
+        "products": "产品",
+        "products_description": "了解 nmTeam 旗下产品。",
+        "nmteam_support": "nmTeam 支持",
+        "nmteam_support_description": "在 nmTeam 支持页面获取关于 nmTeam 产品的帮助。"
+    },
     "about": {
         "0": "自称“自主 nm 机器人”的 XYZ1024 可是 nm 的好手。有人在 Sakura Frp 群里说话的时候，他总是回复一句“*nm”，举个例子：",
         "1": "——Android 怎么用 Mac 啊",

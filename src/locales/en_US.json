@@ -8,6 +8,17 @@
             "home": "Home"
         }
     },
+    "schema": {
+        "nmbot_intro": "nmBot Telegram Introduction",
+        "nmbot_intro_description": "Learn nmBot, the super powerful Telegram bot.",
+        "nmbot_panel": "nmBot Panel",
+        "nmbot_panel_description": "Open the nmBot Panel to modify your settings on nmBot.",
+        "newsroom_description": "View the latest nmTeam news in nmTeam Newsroom.",
+        "products": "Products",
+        "products_description": "Learn about nmTeam's nmProducts.",
+        "nmteam_support": "nmTeam Support",
+        "nmteam_support_description": "Get help with nmTeam products and services from nmTeam Support."
+    },
     "about": {
         "0": "XYZ1024 (self-proclaimed \"self-learning robot\") is a senior nm person. When someone sends a message in the Sakura Frp official group chat, XYZ1024 often responds in the form of \"*nm\". E.g:",
         "1": "——How to use Mac with Android?",
@@ -86,7 +97,7 @@
         "support": "Support",
         "avatar_aria_label": "Avatar",
         "title_button_aria_label": "nmTeam text. page title. Click to return to the home page of the website in widescreen view or to open the links menu.",
-        "title_icon_aria_label": "nmTeam Team icon consisting of a lemon and the text \"nm\".",
+        "title_icon_aria_label": "nmTeam Team icon consisting of a lemon and the text nm.",
         "account_box_aria_label": "Account management"
     },
     "index": {
