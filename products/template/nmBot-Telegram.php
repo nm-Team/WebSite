@@ -135,13 +135,17 @@ function pb($key)
     }
 
     .nmbot-telegram .text-only-block-title {
-        margin: 10rem 20rem;
+        width: calc(100% - 40rem);
+        max-width: 1200rem;
+        margin: 10rem auto;
         line-height: 1.3;
         font-size: 40rem;
         font-weight: 500;
     }
 
     .nmbot-telegram .text-only-block-content {
+        max-width: 1200rem;
+        margin: 0 auto;
         font-size: 20rem;
         line-height: 1.5;
         padding: 0 30rem;
