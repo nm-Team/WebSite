@@ -21,6 +21,14 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
+     <link>https://nmteam.xyz/products/overview/nmBot-Telegram</link>
+     <title>nmBot Telegram - nmTeam - Official Website</title>
+     <description>nmBot Telegram - nmTeam - Official Website</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
      <link>https://nmteam.xyz/products/overview/nmFun</link>
      <title>nmFun - nmTeam - Official Website</title>
      <description>nmFun - nmTeam - Official Website</description>

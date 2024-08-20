@@ -1,5 +1,6 @@
 https://nmteam.xyz/
 https://nmteam.xyz/products/
+https://nmteam.xyz/products/overview/nmBot-Telegram
 https://nmteam.xyz/products/overview/nmFun?lan=zh_CN
 https://nmteam.xyz/products/overview/nmChat
 https://nmteam.xyz/products/overview/nmBrowser-StartPage
