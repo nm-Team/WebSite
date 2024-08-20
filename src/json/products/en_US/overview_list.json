@@ -1,6 +1,34 @@
 {
     "products": [
         {
+            "name": "nmBot",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/overview.webp",
+            "intro": "nm boost chat.",
+            "href": "/products/overview/nmBot-Telegram",
+            "javascript": "",
+            "target": "_self",
+            "theme": "light",
+            "align": "bottom",
+            "length": "2",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "Learn more",
+                    "javascript": "",
+                    "href": "/products/overview/nmBot-Telegram",
+                    "towards": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "Get started",
+                    "javascript": "",
+                    "href": "https://t.me/nmnmfunbot",
+                    "towards": "out"
+                }
+            ]
+        },
+        {
             "name": "nmChat",
             "icon": "",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
