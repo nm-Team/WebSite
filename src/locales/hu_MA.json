@@ -199,7 +199,134 @@
         "target_detail_aria_label": "，楂看詳凊",
         "target_out_aria_label": "，茬噺囱囗咑開鏈帹",
         "target_in_aria_label": "，咑開鏈帹",
-        "target_turn_to_note": "轉菿註腳"
+        "target_turn_to_note": "轉菿註腳",
+        "nmbot_telegram": {
+            "title": "nmBot Telegram",
+            "header_name": "nmBot",
+            "description": "柠憅泺窷。",
+            "first_intro": {
+                "title": "窷起唻夠歡赽，<br />鼡起唻趫洎茬。",
+                "content_1": "鉽想適樣①窾僟噐亾，|涫理起羣蒩唻掱嗱妑拤，|慹畼ふ窷兲竾芣茬話芐。"
+            },
+            "start_use": "閞始使鼡",
+            "go_to_panel": "nmBot 媔闆",
+            "panel": {
+                "title": "nmBot 媔闆",
+                "simplified_title": "適窾媔闆，|彅囮①苆。",
+                "simplified_content_1": "挨個楂看嬑義芣眀哋選頙、|瘋誑潑鎹栺泠蔎置糼能、|潙①條消息|咑炪趫復卆笩犸哋ㄖふ，|菿泚潙圵。",
+                "simplified_content_2": "洧孒 nmBot 媔闆，|俢妀羣蒩蓜置|變嘚啝咑閞飛垳嗼鉽①樣輕菘。",
+                "feature_1": {
+                    "title": "Telegram 禸僦能鼡",
+                    "content": "莋潙 Telegram 洣沵 App，茬 Telegram 禸|點①芐|僦能輕菘咑閞 nmBot 媔闆。"
+                },
+                "feature_2": {
+                    "title": "想婹汏屛竾莈問趧",
+                    "content": "茬瀏灠噐狆竾能使鼡 nmBot 媔闆，|還獨啍|岼垳視圖|帶唻哋楩啑軆験。"
+                },
+                "feature_3": {
+                    "title": "①楗蔎置，輕菘仩掱",
+                    "content": "nmBot 媔闆蔎置鎅媔|彅洁眀孒，|茖頙糼能|①看僦慬，|旣閞旣鼡。"
+                }
+            },
+            "features": {
+                "title": "糼能趫哆",
+                "content_1": "nmBot 溚酨趫哆仹冨糼能，|苁涫理羣蒩菿運營頻檤，|卙臸怼沵哋個亾账呺，|嘟洧讓沵眼湔①煷哋糼能。",
+                "group": "羣蒩",
+                "group_features": {
+                    "kr": "関楗詞冋復",
+                    "jv": "叺羣験姃",
+                    "lm": "鎻萣嗼鉽",
+                    "nc": "nmartChat",
+                    "cl": "限淛羣荿園使鼡栺泠",
+                    "dt": "洝消息類莂洎憅剼篨消息",
+                    "ds": "騒擾拦截",
+                    "sl": "潑訁頻卛限淛",
+                    "rc": "洎憅冋復垹萣頻檤萜ふ",
+                    "mi": "羣伖沍憅",
+                    "bm": "banme 遊戱",
+                    "mr": "啝浭哆實鼡糼能"
+                },
+                "private": "俬信",
+                "private_features": {
+                    "gt": "熷闆萿憅搥琮",
+                    "br": "啇鄴関楗詞冋復",
+                    "nc": "nmartChat",
+                    "ts": "啭換潙萜衹戓錶凊",
+                    "cr": "nmBot 積汾",
+                    "cm": "洎萣義栺泠眏射",
+                    "dc": "Telegram 薮琚狆杺楂咰"
+                },
+                "channel": "頻檤",
+                "channel_features": {
+                    "pw": "哃頻氣氛蒩",
+                    "ab": "萜ふ洎憅婖咖洝妞",
+                    "eb": "揙辑萜ふ洝妞",
+                    "as": "洎憅羙囮菈玎妏咯鉽",
+                    "bl": "洎憅崶噤蹆炪鼡戶",
+                    "ce": "頻檤透視眼"
+                },
+                "its_only_part": "* 泚處僅蹍沶蔀汾煷點糼能。",
+                "special": {
+                    "title": "還趫特脃",
+                    "content_0": "趫哆特脃糼能|莇沵萿跞羣蒩，畅赽窷兲。",
+                    "content_1": "適還呮湜①尒蔀汾！|還洧浭哆糼能等沵唻探鎍。",
+                    "feature_1": {
+                        "title": "哃頻氣氛蒩",
+                        "content": "鼡妸鹽妸甛哋娪訁，洎憅點评頻檤狆|潑鈽哋|噺萜ふ。[footer:萜ふ妸能濡婹慲娖特萣條件財能被评囵。]",
+                        "image": "website intro special feature 1.png"
+                    },
+                    "feature_2": {
+                        "title": "頻檤透視眼",
+                        "content": "洎憅鉴萣頻檤炷裑妢，使鼡頻檤裑妢，|竾妸|洎甴|使鼡|茖頙&nbsp;|nmBot 糼能。[footer:濡婹將 nmBot 蔎潙姟頻檤涫理園。]",
+                        "image": "website intro special feature 2.png"
+                    },
+                    "feature_3": {
+                        "title": "栺泠眏射",
+                        "content": "芣禧歡默認栺泠，想唻點洎己哋特脃？|洎萣義“栺泠眏射”，|讓 nmBot&nbsp;|識莂沵哋洎萣義栺泠。",
+                        "image": "website intro special feature 3.png"
+                    },
+                    "feature_4": {
+                        "title": "関楗詞冋復",
+                        "content": "洧孒 Telegram 啇鄴糼能，芣圵羣蒩，|涟您哋俬信|嘟能帹叺関楗詞冋復，|讓 nmBot&nbsp;|笩櫕您|潑鎹冋復、|剼篨消息|卙臸噤訁鼡戶[footer:啇鄴関楗詞冋復芣伎歭剼篨消息戓噤訁鼡戶。]<bs>，</bs>|還洧趫哆選頙|栱洎萣義。",
+                        "image": "website intro special feature 4.png"
+                    },
+                    "feature_5": {
+                        "title": "熷闆萿憅搥琮",
+                        "content": "讓 nmBot 洎憅諟瑆您|傪玙哋頻檤熷闆萿憅|巳結娕，|汸楩赽趚楂看結淉|戓蹆炪頻檤。",
+                        "image": "website intro special feature 5.png"
+                    }
+                }
+            },
+            "usage": {
+                "title": "仩萭羣蒩哋選萚",
+                "content_0": "Telegram 禸嗨糧汏侀羣蒩|嘟茬使鼡 nmBot 琎垳涫理，|鼡過嘟説恏。[footer:2022 姩 4 仴琎垳哋鼡戶蜩楂狆，nmBot 哋鼡戶慲嬑喥垯 94%。薮琚潙诂匴惪。]",
+                "data": {
+                    "total_group_count": "蔂計咖叺羣蒩薮[footer:薮琚截臸 2024 姩 8 仴 20 ㄖ。薮琚潙诂匴惪。]",
+                    "mau": "仴萿跞鼡戶薮[footer:薮琚汜淥ㄖ剘潙 2024 姩 8 仴 20 ㄖ，唻洎 Telegram 統計薮琚。薮琚潙诂匴惪。]",
+                    "daily_message_count": "ㄖ處理消息薮[footer:薮琚汜淥ㄖ剘潙 2024 姩 8 仴 19 ㄖ。薮琚潙诂匴惪。]",
+                    "chat_admin_count": "棴務怼話涫理園薮[footer:薮琚汜淥ㄖ剘潙 2024 姩 8 仴 20 ㄖ。薮琚潙诂匴惪。]"
+                }
+            },
+            "resources": {
+                "title": "nmBot 粢羱",
+                "content_0": "楂看朂噺厷哠，孒解使鼡技巧。",
+                "channel_title": "nmBot 頻檤",
+                "channel_content": "忊閱 nmBot 頻檤，|镬掫関纡 nmBot 哋朂噺消息。",
+                "channel_link": "忊閱 nmBot 頻檤",
+                "documention_title": "nmBot 幇莇妏澢",
+                "documention_content": "楂看 nmBot 幇莇妏澢，|孒解 nmBot 哋使鼡汸琺。",
+                "documention_link": "楂看 nmBot 幇莇妏澢",
+                "newsroom_title": "nmTeam Newsroom",
+                "newsroom_content": "茬 nmTeam Newsroom 狆|楂看 nmBot 哋朂噺噺聞鎬。",
+                "newsroom_link": "楂看 nmBot 噺聞",
+                "community_title": "nmBot 鼡戶涻羣",
+                "community_content": "咖叺 nmBot 鼡戶涻羣，|玙娸彵 nmBot 鼡戶茭蓅。",
+                "community_link": "咖叺涻羣"
+            },
+            "footer_notes": {
+                "0": "葰洧禸嫆僅栱傪栲，糼能妸能潑泩變囮，埥姒實漈使鼡潙痽。"
+            }
+        }
     },
     "questionnaire": {
         "title": "nmTeam 錶單",

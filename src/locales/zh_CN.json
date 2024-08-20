@@ -199,7 +199,134 @@
         "target_in_aria_label": "，打开链接",
         "target_out_aria_label": "，在新窗口打开链接",
         "target_detail_aria_label": "，查看详情",
-        "target_turn_to_note": "转到注脚"
+        "target_turn_to_note": "转到注脚",
+        "nmbot_telegram": {
+            "title": "nmBot Telegram",
+            "header_name": "nmBot",
+            "description": "柠动乐聊。",
+            "first_intro": {
+                "title": "聊起来够欢快，<br />用起来超自在。",
+                "content_1": "试想这样一款机器人，|管理起群组来手拿把掐，|热场子聊天也不在话下。"
+            },
+            "start_use": "开始使用",
+            "go_to_panel": "nmBot 面板",
+            "panel": {
+                "title": "nmBot 面板",
+                "simplified_title": "这款面板，|简化一切。",
+                "simplified_content_1": "挨个查看意义不明的选项、|疯狂发送指令设置功能、|为一条消息|打出超复杂代码的日子，|到此为止。",
+                "simplified_content_2": "有了 nmBot 面板，|修改群组配置|变得和打开飞行模式一样轻松。",
+                "feature_1": {
+                    "title": "Telegram 内就能用",
+                    "content": "作为 Telegram 迷你 App，在 Telegram 内|点一下|就能轻松打开 nmBot 面板。"
+                },
+                "feature_2": {
+                    "title": "想要大屏也没问题",
+                    "content": "在浏览器中也能使用 nmBot 面板，|还独享|平行视图|带来的便捷体验。"
+                },
+                "feature_3": {
+                    "title": "一键设置，轻松上手",
+                    "content": "nmBot 面板设置界面|简洁明了，|各项功能|一看就懂，|即开即用。"
+                }
+            },
+            "features": {
+                "title": "功能超多",
+                "content_1": "nmBot 搭载超多丰富功能，|从管理群组到运营频道，|甚至对你的个人账号，|都有让你眼前一亮的功能。",
+                "group": "群组",
+                "group_features": {
+                    "kr": "关键词回复",
+                    "jv": "入群验证",
+                    "lm": "锁定模式",
+                    "nc": "nmartChat",
+                    "cl": "限制群成员使用指令",
+                    "dt": "按消息类别自动删除消息",
+                    "ds": "骚扰拦截",
+                    "sl": "发言频率限制",
+                    "rc": "自动回复绑定频道帖子",
+                    "mi": "群友互动",
+                    "bm": "banme 游戏",
+                    "mr": "和更多实用功能"
+                },
+                "private": "私信",
+                "private_features": {
+                    "gt": "赠品活动追踪",
+                    "br": "商业关键词回复",
+                    "nc": "nmartChat",
+                    "ts": "转换为贴纸或表情",
+                    "cr": "nmBot 积分",
+                    "cm": "自定义指令映射",
+                    "dc": "Telegram 数据中心查询"
+                },
+                "channel": "频道",
+                "channel_features": {
+                    "pw": "同频气氛组",
+                    "ab": "帖子自动添加按钮",
+                    "eb": "编辑帖子按钮",
+                    "as": "自动美化拉丁文格式",
+                    "bl": "自动封禁退出用户",
+                    "ce": "频道透视眼"
+                },
+                "its_only_part": "* 此处仅展示部分亮点功能。",
+                "special": {
+                    "title": "还超特色",
+                    "content_0": "超多特色功能|助你活跃群组，畅快聊天。",
+                    "content_1": "这还只是一小部分！|还有更多功能等你来探索。",
+                    "feature_1": {
+                        "title": "同频气氛组",
+                        "content": "用可盐可甜的语言，自动点评频道中|发布的|新帖子。[footer:帖子可能需要满足特定条件才能被评论。]",
+                        "image": "website intro special feature 1.png"
+                    },
+                    "feature_2": {
+                        "title": "频道透视眼",
+                        "content": "自动鉴定频道主身份，使用频道身份，|也可|自由|使用|各项&nbsp;|nmBot 功能。[footer:需要将 nmBot 设为该频道管理员。]",
+                        "image": "website intro special feature 2.png"
+                    },
+                    "feature_3": {
+                        "title": "指令映射",
+                        "content": "不喜欢默认指令，想来点自己的特色？|自定义“指令映射”，|让 nmBot&nbsp;|识别你的自定义指令。",
+                        "image": "website intro special feature 3.png"
+                    },
+                    "feature_4": {
+                        "title": "关键词回复",
+                        "content": "有了 Telegram 商业功能，不止群组，|连您的私信|都能接入关键词回复，|让 nmBot&nbsp;|代替您|发送回复、|删除消息|甚至禁言用户[footer:商业关键词回复不支持删除消息或禁言用户。]<bs>，</bs>|还有超多选项|供自定义。",
+                        "image": "website intro special feature 4.png"
+                    },
+                    "feature_5": {
+                        "title": "赠品活动追踪",
+                        "content": "让 nmBot 自动提醒您|参与的频道赠品活动|已结束，|方便快速查看结果|或退出频道。",
+                        "image": "website intro special feature 5.png"
+                    }
+                }
+            },
+            "usage": {
+                "title": "上万群组的选择",
+                "content_0": "Telegram 内海量大型群组|都在使用 nmBot 进行管理，|用过都说好。[footer:2022 年 4 月进行的用户调查中，nmBot 的用户满意度达 94%。数据为估算值。]",
+                "data": {
+                    "total_group_count": "累计加入群组数[footer:数据截至 2024 年 8 月 20 日。数据为估算值。]",
+                    "mau": "月活跃用户数[footer:数据记录日期为 2024 年 8 月 20 日，来自 Telegram 统计数据。数据为估算值。]",
+                    "daily_message_count": "日处理消息数[footer:数据记录日期为 2024 年 8 月 19 日。数据为估算值。]",
+                    "chat_admin_count": "服务对话管理员数[footer:数据记录日期为 2024 年 8 月 20 日。数据为估算值。]"
+                }
+            },
+            "resources": {
+                "title": "nmBot 资源",
+                "content_0": "查看最新公告，了解使用技巧。",
+                "channel_title": "nmBot 频道",
+                "channel_content": "订阅 nmBot 频道，|获取关于 nmBot 的最新消息。",
+                "channel_link": "订阅 nmBot 频道",
+                "documention_title": "nmBot 帮助文档",
+                "documention_content": "查看 nmBot 帮助文档，|了解 nmBot 的使用方法。",
+                "documention_link": "查看 nmBot 帮助文档",
+                "newsroom_title": "nmTeam Newsroom",
+                "newsroom_content": "在 nmTeam Newsroom 中|查看 nmBot 的最新新闻稿。",
+                "newsroom_link": "查看 nmBot 新闻",
+                "community_title": "nmBot 用户社群",
+                "community_content": "加入 nmBot 用户社群，|与其他 nmBot 用户交流。",
+                "community_link": "加入社群"
+            },
+            "footer_notes": {
+                "0": "所有内容仅供参考，功能可能发生变化，请以实际使用为准。"
+            }
+        }
     },
     "questionnaire": {
         "title": "nmTeam 表单",
