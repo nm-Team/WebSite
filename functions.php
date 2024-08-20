@@ -40,7 +40,7 @@ function setHeader()
     $image = !empty(page_image) ? @page_image : "https://websiteres.nmteam.xyz/producticon/nmTeam/logo@128.png";
 ?>
     <!doctype html>
-    <html lang="<?php echo str_replace("_", "-", lang); ?>">
+    <html lang="<?php echo str_replace("_", "-", lang); ?>" <?php if (defined('const_theme')) echo ' data-theme="' . const_theme . '" data-theme-is-const="true"'; ?>>
 
     <head>
         <meta charset="utf-8" />
@@ -142,6 +142,32 @@ function setHeader()
         </script>
         <script>
             language = "<?php echo lang; ?>";
+        </script>
+        <script>
+            // set theme color
+            function setTheme(theme) {
+                // if theme is const return
+                if (document.documentElement.getAttribute("data-theme-is-const") == "true") {
+                    return;
+                }
+                // set theme
+                document.documentElement.setAttribute("data-theme", theme);
+            }
+            // get browser settings
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+
+            // listen to system theme change
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (e.matches) {
+                    setTheme('dark');
+                } else {
+                    setTheme('light');
+                }
+            });
         </script>
     </head>
 

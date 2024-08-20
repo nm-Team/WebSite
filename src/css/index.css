@@ -1,17 +1,15 @@
-:root {
+* {
     --index-card-swiper-background: rgb(255, 255, 255);
     --index-card-swiper-shadow: rgba(168, 168, 168, 0.39);
     --index-card-swiper-button-background: rgba(0, 0, 0, 0.1);
     --index-card-swiper-button: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --index-card-swiper-background: rgb(43, 43, 43);
-        --index-card-swiper-shadow: rgba(0, 0, 0, 0.219);
-        --index-card-swiper-button-background: rgba(235, 235, 235, 0.267);
-        --index-card-swiper-button: #fff;
-    }
+html[data-theme=dark] * {
+    --index-card-swiper-background: rgb(43, 43, 43) !important;
+    --index-card-swiper-shadow: rgba(0, 0, 0, 0.219) !important;
+    --index-card-swiper-button-background: rgba(235, 235, 235, 0.267) !important;
+    --index-card-swiper-button: #fff !important;
 }
 
 body {

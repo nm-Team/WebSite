@@ -5,13 +5,11 @@ body {
     --lan-active-text: rgb(226, 185, 2);
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        --lan-border: rgb(88, 88, 88);
-        --lan-active-border: rgb(209, 206, 0);
-        --lan-text: rgb(255, 255, 255);
-        --lan-active-text: rgb(209, 206, 0);
-    }
+html[data-theme=dark] body {
+    --lan-border: rgb(88, 88, 88);
+    --lan-active-border: rgb(209, 206, 0);
+    --lan-text: rgb(255, 255, 255);
+    --lan-active-text: rgb(209, 206, 0);
 }
 
 #lanList {

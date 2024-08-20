@@ -6,14 +6,12 @@ body {
     --products-footer-hover: rgb(44, 44, 44);
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        --products-footer-bgcolor: rgb(53, 53, 53);
-        --products-footer: rgb(141, 141, 141);
-        --products-footer-a: rgb(179, 179, 179);
-        --products-footer-text: rgb(184, 184, 184);
-        --products-footer-hover: rgb(230, 230, 230);
-    }
+html[data-theme=dark] body {
+    --products-footer-bgcolor: rgb(53, 53, 53);
+    --products-footer: rgb(141, 141, 141);
+    --products-footer-a: rgb(179, 179, 179);
+    --products-footer-text: rgb(184, 184, 184);
+    --products-footer-hover: rgb(230, 230, 230);
 }
 
 .light {

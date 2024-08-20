@@ -1,4 +1,4 @@
-:root {
+* {
     --jianbian: blur(25px);
     --jianbian-color: rgba(255, 255, 255, 0.72);
     --a-color: var(--text-yellow);
@@ -30,35 +30,33 @@ body {
     text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --jianbian-color: rgba(52, 50, 50, 0.7);
-        --text-yellow: #EAD050;
-        --text-deepbrown: #fff;
-        --text-grey: #757575;
-        --text-color: #fff;
-        --bgg: #262626;
-        --text: white;
-        --grey1: #3B3B3B;
-        --grey2: #333333;
-        --grey3: #666666;
-        --grey4: #515151;
-        --grey5: #d8d8d8;
-        --index-text-yellow: #f1d442;
-        --index-button-background: #20202099;
-        --index-button-hover-background: rgba(41, 41, 41, 0.705);
-        --index-button-border: rgb(196, 196, 196);
-        --index-button-border-b: rgba(196, 196, 196, 0.5);
-    }
+html[data-theme=dark] * {
+    --jianbian-color: rgba(52, 50, 50, 0.7);
+    --text-yellow: #EAD050;
+    --text-deepbrown: #fff;
+    --text-grey: #757575;
+    --text-color: #fff;
+    --bgg: #262626;
+    --text: white;
+    --grey1: #3B3B3B;
+    --grey2: #333333;
+    --grey3: #666666;
+    --grey4: #515151;
+    --grey5: #d8d8d8;
+    --index-text-yellow: #f1d442;
+    --index-button-background: #20202099;
+    --index-button-hover-background: rgba(41, 41, 41, 0.705);
+    --index-button-border: rgb(196, 196, 196);
+    --index-button-border-b: rgba(196, 196, 196, 0.5);
+}
 
-    body {
-        color: white;
-        background: #262626;
-    }
+html[data-theme=dark] body {
+    color: white;
+    background: #262626;
+}
 
-    * {
-        color-scheme: dark;
-    }
+html[data-theme=dark] * {
+    color-scheme: dark;
 }
 
 body {
