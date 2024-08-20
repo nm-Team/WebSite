@@ -195,7 +195,7 @@
         "nmbot_telegram": {
             "title": "nmBot Telegram",
             "header_name": "nmBot",
-            "description": "nm boots chat. ",
+            "description": "nm boots chat.",
             "first_intro": {
                 "title": "Funny while chatting. <br />Powerful when using.",
                 "content_1": "Imagine a robot like this: |it can manage groups with ease |and make chats live."
@@ -206,23 +206,23 @@
                 "title": "nmBot Panel",
                 "simplified_title": "The panel |simplifies everything.",
                 "simplified_content_1": "The days of checking |meaningless options |one by one, |sending commands |to set functions frantically, |and typing super-complex codes |for a message are over.",
-                "simplified_content_2": "With nmBot Panel, |modifying group configuration |becomes as easy as |turning on airplane mode. ",
+                "simplified_content_2": "With nmBot Panel, |modifying group configuration |becomes as easy as |turning on airplane mode.",
                 "feature_1": {
                     "title": "Simply start it in Telegram",
-                    "content": "As a Telegram mini App, |you can easily |open the nmBot panel |by clicking |in Telegram. "
+                    "content": "As a Telegram mini App, |you can easily |open the nmBot panel |by clicking |in Telegram."
                 },
                 "feature_2": {
                     "title": "Or if you want a large screen",
-                    "content": "You can also |use the nmBot panel |in the browser |and enjoy the convenient experience |brought by the exclusive |parallel view. "
+                    "content": "You can also |use the nmBot panel |in the browser |and enjoy the convenient experience |brought by the exclusive |parallel view."
                 },
                 "feature_3": {
                     "title": "One-click setting, easy to get started",
-                    "content": "The simple and clear |nmBot panel setting interface |makes all the functions |easy to understand. |Click, done. "
+                    "content": "The simple and clear |nmBot panel setting interface |makes all the functions |easy to understand. |Click, done."
                 }
             },
             "features": {
                 "title": "Functions are rich",
-                "content_1": "nmBot is equipped |with lots of functions, |from managing groups |to operating channels, |even for your |personal account, |there are functions |that will make you shine. ",
+                "content_1": "nmBot is equipped |with lots of functions, |from managing groups |to operating channels, |even for your |personal account, |there are functions |that will make you shine.",
                 "group": "Groups",
                 "group_features": {
                     "kr": "Keyword reply",
@@ -260,8 +260,8 @@
                 "its_only_part": "* Only some of the highlights are shown here.",
                 "special": {
                     "title": "And exclusive",
-                    "content_0": "Super exclusive features| help you activate the group and chat happily. ",
-                    "content_1": "This is just a small part!| There are more features |waiting for you to explore. ",
+                    "content_0": "Super exclusive features| help you activate the group and chat happily.",
+                    "content_1": "This is just a small part!| There are more features |waiting for you to explore.",
                     "feature_1": {
                         "title": "Proper Warm Up",
                         "content": "Use salty or sweet language |to automatically comment |on new posts |published in the channel. [footer:Posts may need to meet specific conditions before they can be commented on. ]",
@@ -274,17 +274,17 @@
                     },
                     "feature_3": {
                         "title": "Command Mapping",
-                        "content": "Don't like the default commands, |want to add your own ones? |Customize \"Command Mapping\" |to let nmBot recognize |your custom commands. ",
+                        "content": "Don't like the default commands, |want to add your own ones? |Customize \"Command Mapping\" |to let nmBot recognize |your custom commands.",
                         "image": "website intro special feature 3.png"
                     },
                     "feature_4": {
                         "title": "Keyword Reply",
-                        "content": "With Telegram Business, |not only groups, |but also your private messages |can be connected to keyword replies, |to let nmBot send replies, |delete messages, |and even ban users on your behalf[footer: Commercial keyword replies do not support deleting messages or banning users. ]. |And there are even more options |for customization. ",
+                        "content": "With Telegram Business, |not only groups, |but also your private messages |can be connected to keyword replies, |to let nmBot send replies, |delete messages, |and even ban users on your behalf[footer: Commercial keyword replies do not support deleting messages or banning users. ]. |And there are even more options |for customization.",
                         "image": "website intro special feature 4.png"
                     },
                     "feature_5": {
                         "title": "Giveaway Tracking",
-                        "content": "Let nmBot automatically remind you |that the giveaway activity |of the channel you participated in |has ended, so that |you can quickly view the results |or exit the channel. ",
+                        "content": "Let nmBot automatically remind you |that the giveaway activity |of the channel you participated in |has ended, so that |you can quickly view the results |or exit the channel.",
                         "image": "website intro special feature 5.png"
                     }
                 }
@@ -306,7 +306,7 @@
                 "channel_content": "Subscribe to the nmBot channel |to get the latest news about nmBot.",
                 "channel_link": "Subscribe to nmBot Channel",
                 "documention_title": "nmBot Help Document",
-                "documention_content": "View nmBot Help Document |and learn about the ways to use nmBot. ",
+                "documention_content": "View nmBot Help Document |and learn about the ways to use nmBot.",
                 "documention_link": "View the Document",
                 "newsroom_title": "nmTeam Newsroom",
                 "newsroom_content": "View the latest news releases |concerning nmBot in nmTeam Newsroom.",
@@ -316,7 +316,7 @@
                 "community_link": "Join the Community"
             },
             "footer_notes": {
-                "0": "All content is for reference only, functions may change, please refer to actual use. "
+                "0": "All content is for reference only, functions may change, please refer to actual use."
             }
         }
     },
