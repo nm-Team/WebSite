@@ -142,6 +142,8 @@ function setHeader()
         </script>
         <script>
             language = "<?php echo lang; ?>";
+            // disallow header
+            disallowHideHeader = <?php echo defined('disallow_hide_header') ? disallow_hide_header === true ? "true" : "false" : "false"; ?>;
         </script>
         <script>
             // set theme color

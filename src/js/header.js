@@ -14,7 +14,7 @@ function loadc(name) {
 window.onscroll = function () { setHeader(); };
 setHeader();
 function setHeader() {
-	if (window.scrollY < 80)
+	if (window.scrollY < 80 && disallowHideHeader !== true)
 		document.getElementById("pageHeader").className = "header hidden";
 	else document.getElementById("pageHeader").className = "header ";
 }

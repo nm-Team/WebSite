@@ -11,6 +11,7 @@ define("page_body_js", array());
 define("page_image", "");
 define("page_update", "");
 define("const_theme", "dark");
+define("disallow_hide_header", true);
 setHeader();
 
 define("file_url", "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/");
