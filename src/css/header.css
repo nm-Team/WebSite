@@ -50,7 +50,7 @@ html[data-theme=dark] body {
     opacity: 0;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     #hcont .header {
         display: flex;
         justify-content: space-between;
@@ -179,7 +179,7 @@ html[data-theme=dark] body {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     #hcont .header {
         display: flex;
         flex-direction: column;
@@ -419,7 +419,7 @@ html[data-theme=dark] body {
     filter: none !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     #fcont * {
         line-height: 2.1;
     }
@@ -508,7 +508,7 @@ html[data-theme=dark] body {
     word-break: break-all;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     #footer_selectLanguageButton {
         float: right;
     }
