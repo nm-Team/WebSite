@@ -304,8 +304,8 @@
                 "title": "The choice of |tens of |thousands of groups",
                 "content_0": "A large number |of large groups in Telegram| are all using nmBot |for management, |and all those who have used it| say it is good. [footer:In a user survey conducted in April 2022, nmBot's user satisfaction reached 94%. The data is an estimate. ]",
                 "data": {
-                    "total_group_count": "The Total Number of Groups Joined [footer:The data is as of August 20, 2024. The data is an estimate. ]",
-                    "mau": "Monthly Active Users [footer:The data was recorded on August 20, 2024, from Telegram statistics. The data is an estimate. ]",
+                    "total_group_count": "The Total Number of Groups Joined[footer:The data is as of August 20, 2024. The data is an estimate. ]",
+                    "mau": "Monthly Active Users[footer:The data was recorded on August 20, 2024, from Telegram statistics. The data is an estimate. ]",
                     "daily_message_count": "Daily Processed Message Count[footer:Data recorded on August 19, 2024. The data is an estimate. ]",
                     "chat_admin_count": "Number of Servicing Chat Administrators[footer:Data recorded on August 20, 2024. The data is an estimate. ]"
                 }
