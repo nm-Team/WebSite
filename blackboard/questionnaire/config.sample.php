@@ -19,3 +19,6 @@ define("usersystem", "https://api.nmteam.xyz/");
 // 用户系统 API
 define("rpc_token", "");
 // RPC Token
+
+// Password, temporarily used for view analyze
+define("questionnaire_password", "");

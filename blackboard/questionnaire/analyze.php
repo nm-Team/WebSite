@@ -21,17 +21,47 @@ define("page_image", "");
 define("page_update", "");
 setHeader();
 $ana_start = microtime(true);
-$redis = new CodyRedis(redis_host, redis_port, redis_pass);
-$session = new CodySession(addslashes($_COOKIE['sessionid']), $redis);
+// $redis = new CodyRedis(redis_host, redis_port, redis_pass);
+// $session = new CodySession(addslashes($_COOKIE['sessionid']), $redis);
 
-if (!isset($session->data['uid'])) {
-    $error_code = "not_log";
-} else {
-    $uid = $session->data['uid'];
-    if ($session->data['admin'] != "1") {
-        $error_code = "not_admin";
-    }
+// if (!isset($session->data['uid'])) {
+//     $error_code = "not_log";
+// } else {
+//     $uid = $session->data['uid'];
+//     if ($session->data['admin'] != "1") {
+//         $error_code = "not_admin";
+//     }
+// }
+
+// account system v1 has been deprecated
+// temporarily remove the account system check
+// change to check password
+?>
+<?php
+// check password
+if (!isset($_POST['questionnaire_password']) || $_POST['questionnaire_password'] != questionnaire_password) {
+?>
+    <script>
+        const password = prompt('Password: ');
+
+        // post password to server
+
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '';
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'questionnaire_password';
+        input.value = password;
+        form.appendChild(input);
+        document.body.appendChild(form);
+
+        form.submit();
+    </script>
+<?php
+    $error_code = "password_error";
 }
+
 ?>
 <script>
     questionnaireI18n = <?php echo json_encode(t("questionnaire")); ?>;
