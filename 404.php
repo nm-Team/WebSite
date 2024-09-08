@@ -15,7 +15,7 @@ setHeader();
 </div>
 <div class="main">
 	<p>
-		<center><img src="/src/img/notfound.png" style="width: 85%; max-width: 700px;" title="<?php p("pagebases.page_not_found.img_title"); ?>"></center>
+		<center><img src="/src/img/notfound.png" style="width: 85%; max-width: 700px;" alt="<?php p("pagebases.page_not_found.img_title"); ?>"></center>
 	</p>
 	<div>
 		<div class="indexMoreLinks">
