@@ -10,6 +10,12 @@ define("page_image", "");
 define("page_update", "20220303");
 setHeader();
 ?>
+<style>
+	.introImage {
+		margin: 30px auto;
+		max-width: 550px;
+	}
+</style>
 <div class="title center">
 	<h1><?php p("about.title"); ?></h1>
 </div>
@@ -23,7 +29,7 @@ setHeader();
 		<p><?php p("about.3"); ?></p>
 		<p><?php p("about.4"); ?></p>
 		<p><?php p("about.5"); ?></p>
-		<center><img src="https://websiteres.nmteam.xyz/nmwebsite/img/nmteam-about-small.png" width="70%"></center>
+		<center><img class="introImage" src="https://websiteres.nmteam.xyz/nmwebsite/img/nmteam-about-small.png" width="70%"></center>
 	</div>
 </div>
 <div class="main">
