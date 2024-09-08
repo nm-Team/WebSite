@@ -430,7 +430,8 @@
             "avatar": "Avatar",
             "contribution": "Contribution"
         },
-        "sponsors_info_note": "The names and avatars of nmTeam sponsors listed above are set by them and have nothing to do with nmTeam.<br>The above sponsorship ways will jump to third-party platforms, nmTeam is not responsible for its content."
+        "sponsors_info_note": "The names and avatars of nmTeam sponsors listed above are set by them and have nothing to do with nmTeam.<br>The above sponsorship ways will jump to third-party platforms, nmTeam is not responsible for its content.",
+        "tks_sponsor_part": "part"
     },
     "legal": {
         "description": "View nmTeam Terms of Service.",

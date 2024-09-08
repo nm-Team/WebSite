@@ -70,7 +70,7 @@ setHeader();
 			</svg>
 		</a>
 	</div>
-	<h2><?php p("supportus.tks_sponsor"); ?></h2>
+	<h2><?php p("supportus.tks_sponsor"); ?>(<?php p("supportus.tks_sponsor_part"); ?>)</h2>
 	<table class="sTab">
 		<thead>
 			<td><i style="background: none;"></i><?php p("supportus.table.name"); ?></td>

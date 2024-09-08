@@ -438,7 +438,8 @@
             "avatar": "頭像",
             "contribution": "貢獻"
         },
-        "sponsors_info_note": "以上所列的 nmTeam 贊助者的姓名和頭像為其自行設定，與 nmTeam 無關。<br>以上贊助渠道將跳轉到第三方平臺，nmTeam 不對其內容負責。"
+        "sponsors_info_note": "以上所列的 nmTeam 贊助者的姓名和頭像為其自行設定，與 nmTeam 無關。<br>以上贊助渠道將跳轉到第三方平臺，nmTeam 不對其內容負責。",
+        "tks_sponsor_part": "部分"
     },
     "support": {
         "description": "我們隨時在此提供協助。\n\n正在轉到 nmTeam 支持，請稍候...",
