@@ -444,5 +444,15 @@
     },
     "account_v2": {
         "manage": "Manage account"
+    },
+    "cookies": {
+        "title": "Cookies",
+        "description": "Manage cookie settings for the nmTeam website.",
+        "necessary_cookies_title": "Necessary Cookies",
+        "necessary_cookies_description": "We need these cookies to properly provide you with our website services. \nYou cannot deactivate necessary cookies.",
+        "optional_cookies_title": "Optional Cookies",
+        "optional_cookies_description": "Enabling these Cookies allows us to provide you with a better service.",
+        "cookies_on": "On",
+        "cookies_off": "Off"
     }
 }

@@ -444,5 +444,15 @@
     "support": {
         "description": "我們隨時在此提供協助。\n\n正在轉到 nmTeam 支持，請稍候...",
         "title": "nmTeam 支持"
+    },
+    "cookies": {
+        "title": "Cookies",
+        "description": "管理 nmTeam 網站的 Cookies 設定。",
+        "necessary_cookies_title": "必要的 Cookies",
+        "necessary_cookies_description": "我們需要這些 Cookies 來正常向您提供網站服務。\n您無法停用必要的 Cookies。",
+        "optional_cookies_title": "可選 Cookies",
+        "optional_cookies_description": "啟用這些 Cookies 讓我們為您提供更優質的服務。",
+        "cookies_on": "開",
+        "cookies_off": "關"
     }
 }

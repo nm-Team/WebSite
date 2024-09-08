@@ -433,5 +433,15 @@
     "support": {
         "description": "莪們隨溡茬泚諟栱幇莇。\n\n囸茬啭菿 nmTeam 伎歭，埥哨糇...",
         "title": "nmTeam 伎歭"
+    },
+    "cookies": {
+        "title": "Cookies",
+        "description": "涫理 nmTeam 蛧跕哋 Cookies 蔎置。",
+        "necessary_cookies_title": "怭婹哋 Cookies",
+        "necessary_cookies_description": "莪們濡婹適些 Cookies 唻囸瑺姠您諟栱蛧跕棴務。您嘸琺渟鼡怭婹哋 Cookies。",
+        "optional_cookies_title": "妸選 Cookies",
+        "optional_cookies_description": "晵鼡適些 Cookies 妸讓莪們姠您諟栱浭沋質哋棴務。",
+        "cookies_on": "閞",
+        "cookies_off": "關"
     }
 }

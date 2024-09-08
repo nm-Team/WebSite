@@ -306,5 +306,15 @@
     "support": {
         "description": "私たちがお手伝いします。\n\nnmTeam サポートにリダイレクトしています。お待ちください...",
         "title": "nmTeamのサポート"
+    },
+    "cookies": {
+        "title": "Cookies",
+        "description": "nmTeam Web サイトの Cookie 設定を管理します。",
+        "necessary_cookies_title": "必要なCookie",
+        "necessary_cookies_description": "当社の Web サイト サービスを適切に提供するには、これらの Cookie が必要です。\n必要な Cookie を無効にすることはできません。",
+        "optional_cookies_title": "オプションのクッキー",
+        "optional_cookies_description": "これらの Cookie を有効にすることで、より良いサービスを提供できるようになります。",
+        "cookies_on": "開ける",
+        "cookies_off": "近い"
     }
 }

@@ -320,8 +320,13 @@ function setFooter()
                     <div class="left">
                         <p><?php p("footer.cr"); ?><br /></p>
                         <p><a class="footer-a" href="/legal/network-service-protocol" target="_blank"><?php p("footer.svca"); ?></a>
-                            | <a class="footer-a" href="/legal/privacy-policy" target="_blank"><?php p("footer.svcb"); ?></a>
-                            | <a class="footer-a" href="/sitemap" target="_blank"><?php p("footer.sitemap"); ?></a></p>
+                            |
+                            <a class="footer-a" href="/legal/privacy-policy" target="_blank"><?php p("footer.svcb"); ?></a>
+                            |
+                            <a class="footer-a" href="/cookies" target="_blank">Cookies</a>
+                            |
+                            <a class="footer-a" href="/sitemap" target="_blank"><?php p("footer.sitemap"); ?></a>
+                        </p>
                         <p><span><?php p("footer.email"); ?></span><a class="footer-a" href="mailto:support@nmteam.xyz" target="_blank">support@nmteam.xyz</a>
                         </p>
                         <style>
@@ -352,7 +357,7 @@ function setFooter()
                         <p><?php p("cookie.cookieConfirmDialog.body.1"); ?></p>
                     </div>
                     <div class="pageConfirmDialogFooter">
-                        <!-- <button><?php p("cookie.cookieConfirmDialog.button.customize"); ?></button> -->
+                        <button onclick="window.location.href='/cookies'"><?php p("cookie.cookieConfirmDialog.button.customize"); ?></button>
                         <button onclick="localStorage.cookieTipv0Checked = 'true'; pageCookieConfirmDialog.setAttribute('data-status', 'close');"><?php p("cookie.cookieConfirmDialog.button.accept"); ?></button>
                     </div>
                 </div>

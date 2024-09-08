@@ -444,5 +444,15 @@
         },
         "sponsors_info_note": "以上所列的 nmTeam 赞助者的姓名和头像为其自行设定，与 nmTeam 无关。<br>以上赞助渠道将跳转到第三方平台，nmTeam 不对其内容负责。",
         "tks_sponsor_part": "部分"
+    },
+    "cookies": {
+        "title": "Cookies",
+        "description": "管理 nmTeam 网站的 Cookies 设置。",
+        "necessary_cookies_title": "必要的 Cookies",
+        "necessary_cookies_description": "我们需要这些 Cookies 来正常向您提供网站服务。您无法停用必要的 Cookies。",
+        "optional_cookies_title": "可选 Cookies",
+        "optional_cookies_description": "启用这些 Cookies 可让我们向您提供更优质的服务。",
+        "cookies_on": "开",
+        "cookies_off": "关"
     }
 }
