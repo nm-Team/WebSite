@@ -7,7 +7,7 @@ define("page_head_css", array("/src/css/jobpage.css"));
 define("page_head_js", array());
 define("page_body_js", array("/src/js/tab.js"));
 define("page_image", "");
-define("page_update", "20220331");
+define("page_update", "20240908");
 setHeader();
 ?>
 <div class="title center">
@@ -117,7 +117,7 @@ setHeader();
             </div>
         </div>
     </div>
-    <div class="mainBlock">
+    <!-- <div class="mainBlock">
         <div class="tabView joinTab" id="moreTab">
             <div class="tabHeader">
                 <button data-tab="resources"><?php p("join.join_requirement_page.more.resources.title"); ?></button>
@@ -136,7 +136,7 @@ setHeader();
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 <?php setFooter(); ?>
 <script>
