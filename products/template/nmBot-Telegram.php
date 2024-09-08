@@ -50,8 +50,6 @@ function pb($key)
 }
 ?>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ayahub/webfont-harmony-sans-sc@1.0.0/css/index.min.css" media="print" onload="this.media='all'" />
-
 <style>
     :root {
         font-size: min(0.25vw, 0.25vh, 1px);

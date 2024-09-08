@@ -61,13 +61,13 @@ html[data-theme=dark] * {
 
 body {
     line-height: normal;
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, NotoSansHansRegular, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
+    font-family: "HarmonyOS Sans SC", "HarmonyOS Sans", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, NotoSansHansRegular, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
     margin: 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 * {
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, NotoSansHansRegular, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
+    font-family: "HarmonyOS Sans SC", "HarmonyOS Sans", -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, NotoSansHansRegular, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
 }
 
 /* @font-face {

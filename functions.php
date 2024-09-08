@@ -69,6 +69,8 @@ function setHeader()
 
         <link rel="stylesheet" type="text/css" href="/src/css/common.css">
         <link rel="stylesheet" type="text/css" href="/src/css/header.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ayahub/webfont-harmony-sans-sc@1.0.0/css/index.min.css" media="print" onload="this.media='all'" />
+
         <?php
         foreach (page_head_css as $key => $value) {
             echo "<link rel='stylesheet' type='text/css' href='" . $value . "'>";
