@@ -349,7 +349,7 @@ beta-tag {
 }
 
 .indexMoreLinks a:not(.tip) .svg {
-    margin: 1.5px -2px 0 2px;
+    margin: 3px -2px 0 2px;
     width: 15px;
     height: 15px;
     fill: var(--text);
