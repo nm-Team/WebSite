@@ -263,7 +263,7 @@ function setHeader()
                     <i class="logo" aria-label="<?php p("header.title_icon_aria_label"); ?>"></i>
                     <p class="name">nmTeam</p>
                 </button>
-                <div class="right" onclick='if(window.innerWidth < 800) headerClick();'>
+                <div class="right" onclick='if(window.innerWidth < 700) headerClick();'>
                     <div class="links">
                         <a href="/" aria-label="<?php p("header.home"); ?>"><?php p("header.home"); ?></a>
                         <a href="/products/" aria-label="<?php p("header.products"); ?>"><?php p("header.products"); ?></a>
