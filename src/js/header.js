@@ -25,7 +25,7 @@ window.onload = function () {
 }
 
 function headerClick() {
-	if (window.innerWidth > 600) {
+	if (window.innerWidth > 700) {
 		window.location.href = "/";
 	}
 	else if (pageHeader.getAttribute("open") == "true") {
