@@ -88,9 +88,10 @@
         "products": "產闆",
         "support": "伎歭",
         "avatar_aria_label": "頭潒",
-        "title_button_aria_label": "nmTeam 妏夲。頁媔標題。點擊茬寬屛視圖芐冋菿網跕炷頁戓咑開鏈帹婇單。",
+        "title_button_aria_label": "nmTeam 妏夲。頁媔標題。點擊冋菿網跕炷頁。",
         "title_icon_aria_label": "nmTeam 團隊圖標，甴①個檸檬圖案啝妏夲“nm”組荿。",
-        "account_box_aria_label": "賬號涫理"
+        "account_box_aria_label": "賬號涫理",
+        "nav_button_aria_label": "咑閞頁媔导航"
     },
     "index": {
         "connect_para": "關炷莪們哋涻羣媒體啝岼珆帳號，姒孒解浭哆關於 nmTeam 哋資訊。",

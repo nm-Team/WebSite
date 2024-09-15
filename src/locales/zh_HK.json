@@ -99,9 +99,10 @@
         "products": "產品",
         "support": "支持",
         "avatar_aria_label": "頭像",
-        "title_button_aria_label": "nmTeam 文本。頁面標題。點擊在寬屏視圖下回到網站主頁或打開鏈接菜單。",
+        "title_button_aria_label": "nmTeam 文本。頁面標題。點擊回到網站主頁。",
         "title_icon_aria_label": "nmTeam 團隊圖標，由一個檸檬圖案和文本“nm”組成。",
-        "account_box_aria_label": "賬號管理"
+        "account_box_aria_label": "賬號管理",
+        "nav_button_aria_label": "開啟頁面導航"
     },
     "index": {
         "connect_para": "關注我們的社群媒體和平台帳號，以了解更多關於 nmTeam 的資訊。",

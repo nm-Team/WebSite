@@ -1167,6 +1167,10 @@ function pb($key)
         transform: translate(0, -120%);
     }
 
+    #pageHeader .menu-toggle[data-hide=true] {
+        transform: translate(0, -150%);
+    }
+
     .product-header[data-hide=false] {
         transform: translate(-50%, 0%);
     }
@@ -1194,7 +1198,7 @@ function pb($key)
     let lastScrollTop = undefined;
 
     function calcPageHeader() {
-        let pageHeaders = document.querySelectorAll("#pageHeader .left, #pageHeader .right");
+        let pageHeaders = document.querySelectorAll("#pageHeader .left, #pageHeader .right, #pageHeader .menu-toggle");
         let nmBotHeader = document.querySelector(".product-header");
         let windowHeight = window.innerHeight;
         let scrollTop = document.documentElement.scrollTop;

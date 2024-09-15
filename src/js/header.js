@@ -24,23 +24,19 @@ window.onload = function () {
 	accountBox.setAttribute("onclick", "window.location.href='" + logURL + "'");
 }
 
-function headerClick() {
-	if (window.innerWidth > 700) {
-		window.location.href = "/";
-	}
-	else if (pageHeader.getAttribute("open") == "true") {
-		pageHeader.removeAttribute("open");
+function openHeader(to) {
+	if (to === false || (to !== true && document.getElementById("pageHeader").getAttribute("open") == "true")) {
+		document.getElementById("pageHeader").removeAttribute("open");
 		document.body.style.overflow = "auto";
 	}
 	else {
-		pageHeader.setAttribute("open", "true");
+		document.getElementById("pageHeader").setAttribute("open", "true");
 		document.body.style.overflow = "hidden";
 	}
 }
 
 window.onresize = function () {
-	pageHeader.removeAttribute("open");
-	document.body.style.overflow = "auto";
+	openHeader(false);
 }
 
 // Cookie 提示 

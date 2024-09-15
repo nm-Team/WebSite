@@ -259,11 +259,11 @@ function setHeader()
         <div id="hcont">
             <div class="placeHolder"></div>
             <div class="header hidden" id="pageHeader">
-                <button class="left" onclick="headerClick();" aria-label="<?php p("header.title_button_aria_label"); ?>">
+                <a class="left" href="/" aria-label="<?php p("header.title_button_aria_label"); ?>">
                     <i class="logo" aria-label="<?php p("header.title_icon_aria_label"); ?>"></i>
                     <p class="name">nmTeam</p>
-                </button>
-                <div class="right" onclick='if(window.innerWidth < 700) headerClick();'>
+                </a>
+                <div class="right" onclick='openHeader(false);'>
                     <div class="links">
                         <a href="/" aria-label="<?php p("header.home"); ?>"><?php p("header.home"); ?></a>
                         <a href="/products/" aria-label="<?php p("header.products"); ?>"><?php p("header.products"); ?></a>
@@ -276,6 +276,11 @@ function setHeader()
                         <p id="userName"><?php p("account_v2.manage"); ?></p>
                     </button>
                 </div>
+                <button id="menu-toggle" class="menu-toggle" aria-controls="nav-menu" aria-expanded="false" data-nav-menu-extended="false" onclick="openHeader()" aria-label="<?php p("header.nav_button_aria_label"); ?>">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                </button>
             </div>
         </div>
     <?php

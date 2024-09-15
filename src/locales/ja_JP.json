@@ -55,9 +55,10 @@
         "products": "製品",
         "support": "待機する",
         "avatar_aria_label": "アバター",
-        "title_button_aria_label": "nmチームのテキスト。ページタイトル。クリックすると、ワイドスクリーン表示で Web サイトのホームページに戻るか、リンク メニューが開きます。",
+        "title_button_aria_label": "nmチームのテキスト。ページのタイトル。クリックすると、Web サイトのトップページに戻ります。",
         "title_icon_aria_label": "nmTeam レモンと「nm」の文字で構成されるチームアイコン。",
-        "account_box_aria_label": "アカウント管理"
+        "account_box_aria_label": "アカウント管理",
+        "nav_button_aria_label": "ページナビゲーションを開く"
     },
     "index": {
         "connect_para": "nmTeam について詳しく知るには、ソーシャル メディアとプラットフォームのアカウントをフォローしてください。",
