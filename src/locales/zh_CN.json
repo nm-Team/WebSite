@@ -455,5 +455,6 @@
         "optional_cookies_description": "启用这些 Cookies 可让我们向您提供更优质的服务。",
         "cookies_on": "开",
         "cookies_off": "关"
-    }
+    },
+    "skip_to_content": "跳到内容"
 }

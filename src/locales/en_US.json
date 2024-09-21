@@ -455,5 +455,6 @@
         "optional_cookies_description": "Enabling these Cookies allows us to provide you with a better service.",
         "cookies_on": "On",
         "cookies_off": "Off"
-    }
+    },
+    "skip_to_content": "Skip to content"
 }

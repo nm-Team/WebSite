@@ -256,6 +256,7 @@ function setHeader()
     </head>
 
     <body>
+        <a href="#main-content" class="skip-to-content" role="navigation" aria-label="<?php p("skip_to_content"); ?>"><?php p("skip_to_content"); ?></a>
         <div id="hcont">
             <div class="placeHolder"></div>
             <div class="header hidden" id="pageHeader">
@@ -283,6 +284,7 @@ function setHeader()
                 </button>
             </div>
         </div>
+        <span id="main-content"></span>
     <?php
 }
 

@@ -317,5 +317,6 @@
         "optional_cookies_description": "これらの Cookie を有効にすることで、より良いサービスを提供できるようになります。",
         "cookies_on": "開ける",
         "cookies_off": "近い"
-    }
+    },
+    "skip_to_content": "コンテンツにスキップ"
 }
