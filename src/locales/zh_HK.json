@@ -440,7 +440,12 @@
             "contribution": "貢獻"
         },
         "sponsors_info_note": "以上所列的 nmTeam 贊助者的姓名和頭像為其自行設定，與 nmTeam 無關。<br>以上贊助渠道將跳轉到第三方平臺，nmTeam 不對其內容負責。",
-        "tks_sponsor_part": "部分"
+        "tks_sponsor_part": "部分",
+        "copy_crypto_address": "拷貝位址",
+        "copy_crypto_address_success": "拷貝位址成功",
+        "crypto": "加密貨幣",
+        "crypto_address": "加密貨幣位址",
+        "crypto_only_accept_tron": "僅支援接收 TRON 資產"
     },
     "support": {
         "description": "我們隨時在此提供協助。\n\n正在轉到 nmTeam 支持，請稍候...",

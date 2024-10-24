@@ -106,7 +106,12 @@
             "contribution": "貢献"
         },
         "sponsors_info_note": "上記のnmTeamスポンサーの名前とアバターは独自に設定されており、nmTeamとは関係ありません。<br>上記のスポンサーシップチャンネルはサードパーティのプラットフォームにリダイレクトされ、nmTeamはそのコンテンツについて責任を負いません。 ",
-        "tks_sponsor_part": "一部"
+        "tks_sponsor_part": "一部",
+        "copy_crypto_address": "アドレスをコピーする",
+        "copy_crypto_address_success": "アドレスが正常にコピーされました",
+        "crypto": "暗号通貨",
+        "crypto_address": "暗号通貨アドレス",
+        "crypto_only_accept_tron": "TRON アセットの受信のみをサポートします"
     },
     "account": {
         "click_to_log": "クリックしてログイン",

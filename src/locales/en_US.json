@@ -432,7 +432,12 @@
             "contribution": "Contribution"
         },
         "sponsors_info_note": "The names and avatars of nmTeam sponsors listed above are set by them and have nothing to do with nmTeam.<br>The above sponsorship ways will jump to third-party platforms, nmTeam is not responsible for its content.",
-        "tks_sponsor_part": "part"
+        "tks_sponsor_part": "part",
+        "copy_crypto_address": "Copy address",
+        "copy_crypto_address_success": "Copy address successfully",
+        "crypto": "Cryptocurrency",
+        "crypto_address": "Cryptocurrency address",
+        "crypto_only_accept_tron": "Only supports receiving TRON assets"
     },
     "legal": {
         "description": "View nmTeam Terms of Service.",

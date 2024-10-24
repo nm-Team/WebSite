@@ -444,7 +444,12 @@
             "contribution": "贡献"
         },
         "sponsors_info_note": "以上所列的 nmTeam 赞助者的姓名和头像为其自行设定，与 nmTeam 无关。<br>以上赞助渠道将跳转到第三方平台，nmTeam 不对其内容负责。",
-        "tks_sponsor_part": "部分"
+        "tks_sponsor_part": "部分",
+        "crypto": "加密货币",
+        "crypto_address": "加密货币地址",
+        "crypto_only_accept_tron": "仅支持接收 TRON 资产",
+        "copy_crypto_address": "拷贝地址",
+        "copy_crypto_address_success": "拷贝地址成功"
     },
     "cookies": {
         "title": "Cookies",

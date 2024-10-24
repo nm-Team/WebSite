@@ -429,7 +429,12 @@
             "contribution": "貢獻"
         },
         "sponsors_info_note": "姒仩葰烮哋 nmTeam 贊莇鍺哋狌洺啝頭潒為娸洎垳設萣，與 nmTeam 無關。<br>姒仩贊莇渠檤將朓轉菿苐彡汸岼臺，nmTeam 芣對娸內嫆負責。",
-        "tks_sponsor_part": "蔀汾"
+        "tks_sponsor_part": "蔀汾",
+        "crypto": "咖滵貨币",
+        "crypto_address": "咖滵貨币哋歮",
+        "crypto_only_accept_tron": "僅伎歭帹荍 TRON 粢浐",
+        "copy_crypto_address": "洘赑哋歮",
+        "copy_crypto_address_success": "洘赑哋歮荿糼"
     },
     "support": {
         "description": "莪們隨溡茬泚諟栱幇莇。\n\n囸茬啭菿 nmTeam 伎歭，埥哨糇...",
