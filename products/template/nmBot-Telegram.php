@@ -1037,7 +1037,7 @@ function pb($key)
             <div class="title"><?php pb("products.nmbot_telegram.resources.newsroom_title"); ?></div>
             <div class="content"><?php pb("products.nmbot_telegram.resources.newsroom_content"); ?></div>
             <div class="link">
-                <a href="https://newsroom.nmteam.xyz/category/nmBot/?ref=nmBotIntro" target="_blank" rel="noopener noreferrer" class="link-a"><?php pb("products.nmbot_telegram.resources.newsroom_link"); ?></a>
+                <a href="https://newsroom.nmteam.xyz/tag/nmBot/?ref=nmBotIntro" target="_blank" rel="noopener noreferrer" class="link-a"><?php pb("products.nmbot_telegram.resources.newsroom_link"); ?></a>
             </div>
         </div>
         <div class="resource-item fade-in">
