@@ -115,7 +115,7 @@ setHeader();
 					<?php p("supportus.crypto_only_accept_tron"); ?>
 				</p>
 				<p>
-					<img src="/src/img/tron.jpg" alt="TRON" style="width: 300px;">
+					<img src="/src/img/tron.jpg" alt="TRON" style="width: 100%; max-width: 300px;">
 				</p>
 			</div>
 		</div>
