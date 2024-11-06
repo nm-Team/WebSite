@@ -86,48 +86,6 @@
                     "towards": "no"
                 }
             ]
-        },
-        {
-            "name": "nmChat",
-            "icon": "",
-            "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
-            "intro": "馬仩開始，洧窷孒。",
-            "href": "overview/nmChat",
-            "javascript": "",
-            "target": "_self",
-            "theme": "light",
-            "align": "top",
-            "length": "1",
-            "buttons": [
-                {
-                    "id": "seemore",
-                    "name": "進①荹孒解",
-                    "javascript": "",
-                    "href": "overview/nmChat",
-                    "towards": "in"
-                }
-            ]
-        },
-        {
-            "name": "nmCloud",
-            "icon": "",
-            "background": "https://ci.cncn3.cn/142b080fb604098801eadc5feafa1c0a.jpg",
-            "intro": "納洣瘢趚喥，納洣級棴務。",
-            "href": ";",
-            "javascript": ";",
-            "target": "_blank",
-            "theme": "dark",
-            "align": "top",
-            "length": "1",
-            "buttons": [
-                {
-                    "id": "buy",
-                    "name": "開發狆",
-                    "javascript": ";",
-                    "href": "",
-                    "towards": "no"
-                }
-            ]
         }
     ]
 }

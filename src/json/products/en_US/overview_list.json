@@ -29,27 +29,6 @@
             ]
         },
         {
-            "name": "nmChat",
-            "icon": "",
-            "background": "https://websiteres.nmteam.xyz/pintroimg/nmChat/backgroundsmall.png",
-            "intro": "Let's go chat. ",
-            "href": "overview/nmChat",
-            "javascript": "",
-            "target": "_self",
-            "theme": "light",
-            "align": "top",
-            "length": "1",
-            "buttons": [
-                {
-                    "id": "seemore",
-                    "name": "Learn more",
-                    "javascript": "",
-                    "href": "overview/nmChat",
-                    "towards": "in"
-                }
-            ]
-        },
-        {
             "name": "StartPage",
             "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
