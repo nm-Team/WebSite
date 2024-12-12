@@ -26,6 +26,7 @@
     "business_cooperation": {
         "content_0": "To contact us regarding business cooperation, please send an email to: ",
         "content_1": "We may use a different email address to respond to you.",
+        "copy_email": "Copy Address",
         "description": "Develop business cooperation with nmTeam.",
         "title": "Business Cooperation"
     },

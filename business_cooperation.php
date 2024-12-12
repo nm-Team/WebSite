@@ -9,6 +9,8 @@ define("page_body_js", array());
 define("page_image", "");
 define("page_update", "20241212");
 setHeader();
+
+$business_email_address = "business@nmteam.xyz";
 ?>
 <style>
 	.email-btn {
@@ -33,8 +35,23 @@ setHeader();
 <div class="main">
 	<div class="mainBlock">
 		<p><?php p("business_cooperation.content_0"); ?></p>
-		<button class="email-btn" onclick="window.location.href='mailto:business@nmteam.xyz'">business@nmteam.xyz</button>
+		<p>
+			<button class="email-btn" onclick="window.location.href='mailto:<?php echo $business_email_address; ?>'"><?php echo $business_email_address; ?></button>
+			&nbsp;&nbsp;<a href="javascript:" onclick="copyEmail()"><?php p("business_cooperation.copy_email"); ?></a>
+		</p>
 		<p><?php p("business_cooperation.content_1"); ?></p>
 	</div>
 </div>
+
+<script>
+	function copyEmail() {
+		var email = "<?php echo $business_email_address; ?>";
+		var tempInput = document.createElement("input");
+		tempInput.value = email;
+		document.body.appendChild(tempInput);
+		tempInput.select();
+		document.execCommand("copy");
+		document.body.removeChild(tempInput);
+	}
+</script>
 <?php setFooter(); ?>

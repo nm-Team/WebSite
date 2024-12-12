@@ -26,6 +26,7 @@
     "business_cooperation": {
         "content_0": "若要就商务合作事宜与我们取得联系，请发送邮件到：",
         "content_1": "我们可能会使用不同的邮件地址回复您。",
+        "copy_email": "拷贝地址",
         "description": "和 nmTeam 开展商务合作。",
         "title": "商务合作"
     },
