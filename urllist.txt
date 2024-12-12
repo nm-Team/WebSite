@@ -5,6 +5,7 @@ https://nmteam.xyz/products/overview/nmFun?lan=zh_CN
 https://nmteam.xyz/products/overview/nmChat
 https://nmteam.xyz/products/overview/nmBrowser-StartPage
 https://nmteam.xyz/aboutus
+https://nmteam.xyz/business_cooperation
 https://nmteam.xyz/status
 https://nmteam.xyz/support
 https://nmteam.xyz/join
