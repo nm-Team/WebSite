@@ -45,7 +45,6 @@ function setHeader()
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-dns-prefetch-control" content="on">
-        <link rel="dns-prefetch" href="https://api.nmteam.xyz" crossorigin>
         <title><?php echo $title; ?></title>
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
         <meta name='apple-mobile-web-app-capable' content='yes'>
