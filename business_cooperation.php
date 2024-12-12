@@ -20,6 +20,7 @@ $business_email_address = "business@nmteam.xyz";
 		font-size: 17px;
 		font-weight: bold;
 		text-align: center;
+		border: none;
 		border-radius: 4px;
 		color: #000;
 		background-color: #EAD050;
