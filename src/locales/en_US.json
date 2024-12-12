@@ -1,24 +1,4 @@
 {
-    "pagebases": {
-        "official_website": "Official Website",
-        "site_intro": "nmTeam is a team that makes nmProducts to the world with incredible thoughts.",
-        "page_not_found": {
-            "title": "Page Not Found",
-            "img_title": "The code 404 means that the page you are looking for is not found.",
-            "home": "Home"
-        }
-    },
-    "schema": {
-        "nmbot_intro": "nmBot Telegram Introduction",
-        "nmbot_intro_description": "Learn nmBot, the super powerful Telegram bot.",
-        "nmbot_panel": "nmBot Panel",
-        "nmbot_panel_description": "Open the nmBot Panel to modify your settings on nmBot.",
-        "newsroom_description": "View the latest nmTeam news in nmTeam Newsroom.",
-        "products": "Products",
-        "products_description": "Learn about nmTeam's nmProducts.",
-        "nmteam_support": "nmTeam Support",
-        "nmteam_support_description": "Get help with nmTeam products and services from nmTeam Support."
-    },
     "about": {
         "0": "XYZ1024 (self-proclaimed \"self-learning robot\") is a senior nm person. When someone sends a message in the Sakura Frp official group chat, XYZ1024 often responds in the form of \"*nm\". E.g:",
         "1": "——How to use Mac with Android?",
@@ -29,21 +9,23 @@
         "6": "Let us know if you have a heart of nm.",
         "7": "As long as you have an nm heart, nmTeam welcomes you to join at any time. Please visit this page to learn more.",
         "8": "Learn How to Join nmTeam > ",
+        "description": "Know the meaning and history of nm in this page.",
         "h0": "Unfortunately, we didn't even think about slogan.",
         "h1": "Want to know the origin of nm?",
         "h2": "Want to join us?",
-        "title": "About nmTeam",
-        "description": "Know the meaning and history of nm in this page."
+        "title": "About nmTeam"
     },
     "account": {
-        "loading": "Loading...",
         "click_to_log": "Click to Login",
+        "loading": "Loading...",
         "unable_to_load": "Error"
+    },
+    "account_v2": {
+        "manage": "Manage account"
     },
     "comes_soon": "This page is in production, so stay tuned! ",
     "cookie": {
         "cookieConfirmDialog": {
-            "header": "About Cookies",
             "body": {
                 "0": "nmTeam website and services use cookies to store basic visitor information and user account information.",
                 "1": "All cookies are managed in accordance with <a href='/legal/privacy-policy.php'>the nmTeam Privacy Policy</a>."
@@ -51,16 +33,28 @@
             "button": {
                 "accept": "Accept & Continue",
                 "customize": "Customize"
-            }
+            },
+            "header": "About Cookies"
         },
         "cookiePage": {
             "title": "About Cookies"
         }
     },
+    "cookies": {
+        "cookies_off": "Off",
+        "cookies_on": "On",
+        "description": "Manage cookie settings for the nmTeam website.",
+        "necessary_cookies_description": "We need these cookies to properly provide you with our website services. \nYou cannot deactivate necessary cookies.",
+        "necessary_cookies_title": "Necessary Cookies",
+        "optional_cookies_description": "Enabling these Cookies allows us to provide you with a better service.",
+        "optional_cookies_title": "Optional Cookies",
+        "title": "Cookies"
+    },
     "footer": {
         "cr": "Copyright nmTeam. All rights reserved.",
         "email": "E-mail: ",
         "language": "Select Language: ",
+        "language_selector_button_aria_label": ". Click to open the switch language page.",
         "sitemap": "Sitemap",
         "status": "System Status",
         "svca": "Network Service Protocol",
@@ -86,20 +80,19 @@
                 "systemStatus": "System Status",
                 "title": "Services"
             }
-        },
-        "language_selector_button_aria_label": ". Click to open the switch language page."
+        }
     },
     "header": {
         "about": "About",
+        "account_box_aria_label": "Account management",
+        "avatar_aria_label": "Avatar",
         "home": "Home",
+        "nav_button_aria_label": "Open page navigation",
         "newsroom": "Newsroom",
         "products": "Products",
         "support": "Support",
-        "avatar_aria_label": "Avatar",
         "title_button_aria_label": "nmTeam text. page title. Click to return to the home page.",
-        "title_icon_aria_label": "nmTeam Team icon consisting of a lemon and the text nm.",
-        "account_box_aria_label": "Account management",
-        "nav_button_aria_label": "Open page navigation"
+        "title_icon_aria_label": "nmTeam Team icon consisting of a lemon and the text nm."
     },
     "index": {
         "connect_para": "Follow our social media and platform accounts to learn more about nmTeam.",
@@ -110,22 +103,26 @@
         "join_us_link": "Learn How to Join nmTeam",
         "more_products": "All Products",
         "newslist": "nmTeam Latest News",
-        "newslist_loading": "Loading nmTeam news...",
+        "newslist_date_aria_label": "Article publication date",
         "newslist_error": "An error occored while loading news.",
+        "newslist_loading": "Loading nmTeam news...",
         "newslist_more": "nmTeam Newsroom",
-        "retry": "Retry",
+        "nmteam_about_link": "View About Page",
         "nmteam_is_this_a": "Established on June 14, 2021, nmTeam is committed to providing people with very nm products and services. nmTeam now has agou as the CEO, and more nmServices will be launched one after another.",
         "nmteam_is_this_b": "nmTeam may go bankrupt, but it will never deteriorate! ",
-        "nmteam_about_link": "View About Page",
+        "retry": "Retry",
         "title": "",
         "what_is_nmteam": "What is nmTeam?",
         "what_we_does": "nmTeam makes nmProducts",
-        "what_we_does_ans": "nmTeam is committed to making nmProducts. Check out some of our products below. ",
-        "newslist_date_aria_label": "Article publication date"
+        "what_we_does_ans": "nmTeam is committed to making nmProducts. Check out some of our products below. "
     },
     "join": {
+        "join_register_page": {
+            "description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
+            "tip": "Sorry, the application for joining nmTeam has not been officially opened yet, please check again in two days.",
+            "title": "Apply to Join nmTeam"
+        },
         "join_requirement_page": {
-            "title": "Welcome to join nmTeam!",
             "description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
             "intro": {
                 "0": "Do you know that nmTeam has a harmonious team atmosphere and free management arrangements?",
@@ -134,332 +131,335 @@
             },
             "jobs": {
                 "common": {
-                    "nm_heart": "Having a heart of nm",
-                    "nm_heart_intro": "Since you are an nmer, you have to understand a little about nm. What do you think about the word \"nm\"?",
                     "basic_morality": "Have a basic sense of team responsibility to ensure that the basic morality of the nmTeam creative environment and members is not undermined",
                     "basic_morality_intro": "In some special cases, please understand, nmTeam members are by no means saints, please be tolerant anyway; even if it is unacceptable, please do not destroy nmTeam services and destroy nmTeam data files.",
-                    "friendly_wish": "Able to have friendly cooperation with other members"
+                    "friendly_wish": "Able to have friendly cooperation with other members",
+                    "nm_heart": "Having a heart of nm",
+                    "nm_heart_intro": "Since you are an nmer, you have to understand a little about nm. What do you think about the word \"nm\"?"
                 },
                 "developer": {
-                    "title": "nmTeam Developer",
-                    "knowledge": "Basic knowledge of computers",
+                    "additional": "Of course, we welcome nmers who are proficient in using Git and have a good grasp of web development or app development to join us more, so please be sure to sign up.",
                     "experience": "You should have at least basic software development experience, or desire to improve yourself by participating in nmTeam development",
                     "experience_intro": "We are happy to see the improvement of nmTeam members after joining nmTeam, so don't worry about whether your current development level is up to the needs of nmTeam. Be bold, keep an aggressive mind, and see your progress It is the greatest joy for everyone in nmTeam.",
-                    "additional": "Of course, we welcome nmers who are proficient in using Git and have a good grasp of web development or app development to join us more, so please be sure to sign up."
+                    "knowledge": "Basic knowledge of computers",
+                    "title": "nmTeam Developer"
                 },
                 "support": {
-                    "title": "Customer Support",
-                    "part_time": "Enjoy your free time",
-                    "part_time_intro": "nmTeam does not require you to devote time to providing services, only when you want to change your mood, you can view the help that nmTeam users need. Emergency services will be directly handled by nmTeam management, no worries.",
                     "attitude": "Have a good attitude towards nmTeam customers",
                     "attitude_intro": "nmTeam customers don't ask easy questions all the time, and I hope you can respond to your users' requests with peace of mind.",
                     "bill": "Mental damage fee",
-                    "bill_intro": "Dealing with customer service can be a bit tiring at times. nmTeam will look into awarding bonuses to our service team members based on service as an incentive."
+                    "bill_intro": "Dealing with customer service can be a bit tiring at times. nmTeam will look into awarding bonuses to our service team members based on service as an incentive.",
+                    "part_time": "Enjoy your free time",
+                    "part_time_intro": "nmTeam does not require you to devote time to providing services, only when you want to change your mood, you can view the help that nmTeam users need. Emergency services will be directly handled by nmTeam management, no worries.",
+                    "title": "Customer Support"
                 },
                 "writer": {
-                    "title": "Operation",
+                    "english": "Mastering a certain foreign language is preferred",
+                    "knowledge": "Have an in-depth understanding of nmTeam's product features and related planning, which can convey nmTeam's values ​​in a simple way and bring positive guidance",
                     "lan_level": "Have basic literary literacy, be able to write clear copy without language errors and punctuation errors",
                     "lan_level_intro": "If you can do it well, we will treat you well.",
-                    "knowledge": "Have an in-depth understanding of nmTeam's product features and related planning, which can convey nmTeam's values ​​in a simple way and bring positive guidance",
-                    "english": "Mastering a certain foreign language is preferred"
+                    "title": "Operation"
                 }
             },
-            "register": "Register",
             "language_request": "We only recruit members who can communicate with each other fluently in Chinese now.",
             "more": {
-                "resources": {
-                    "title": "Related information",
-                    "nmteam_member_rules": "nmTeam member work and management rules (Under development)"
-                },
                 "already_been_member": {
-                    "title": "Already a member of nmTeam",
-                    "panel": "nmTeam work panel (Under development)"
+                    "panel": "nmTeam work panel (Under development)",
+                    "title": "Already a member of nmTeam"
+                },
+                "resources": {
+                    "nmteam_member_rules": "nmTeam member work and management rules (Under development)",
+                    "title": "Related information"
                 }
             },
-            "publicity": "nmTeam joining rules are being announced and may be revised at any time. Please send feedback to nmTeam via email: support@nmteam.xyz"
-        },
-        "join_register_page": {
-            "title": "Apply to Join nmTeam",
-            "description": "Join nmTeam to carry forward the nm culture with us and build the nm ecology together.",
-            "tip": "Sorry, the application for joining nmTeam has not been officially opened yet, please check again in two days."
+            "publicity": "nmTeam joining rules are being announced and may be revised at any time. Please send feedback to nmTeam via email: support@nmteam.xyz",
+            "register": "Register",
+            "title": "Welcome to join nmTeam!"
         }
     },
     "language": {
         "page": {
-            "title": "Change Language",
+            "auto": "Auto Select",
             "tip": "Browse nmTeam website in a language that you are familiar with. Some content may not be displayed in the language you selected.",
-            "auto": "Auto Select"
+            "title": "Change Language"
         }
     },
+    "legal": {
+        "description": "View nmTeam Terms of Service.",
+        "nsp": "Network Service Protocol ",
+        "pp": "Privacy Policy"
+    },
     "page_update": "Page updated on: {month}/{day}/{year}",
+    "pagebases": {
+        "official_website": "Official Website",
+        "page_not_found": {
+            "home": "Home",
+            "img_title": "The code 404 means that the page you are looking for is not found.",
+            "title": "Page Not Found"
+        },
+        "site_intro": "nmTeam is a team that makes nmProducts to the world with incredible thoughts."
+    },
     "products": {
-        "title": "Products",
         "description": "See nmTeam's wonderful nmProducts",
-        "noresult": "No nmProduct available in your country or region was found.",
-        "unavaliable": "This product does not exist or cannot be used in your country or region.",
-        "explain": "Explanation: Only display nmTeam products available in your country or region. To view nmTeam products available in other countries or regions, please change the language of the nmTeam website. Try to set the language to simplified Chinese to get the most results.",
         "error": "Oops, Something went wrong.",
-        "notfound": "Oops, The product you are looking for does not exist or is unavaliable in your country or region.",
-        "target_detail_aria_label": ", see detail",
-        "target_out_aria_label": ", open link in new tab",
-        "target_in_aria_label": ", open link",
-        "target_turn_to_note": "Turn to footnote",
+        "explain": "Explanation: Only display nmTeam products available in your country or region. To view nmTeam products available in other countries or regions, please change the language of the nmTeam website. Try to set the language to simplified Chinese to get the most results.",
         "nmbot_telegram": {
-            "title": "nmBot Telegram",
-            "header_name": "nmBot",
             "description": "nm boots chat.",
-            "first_intro": {
-                "title": "Funny while chatting. <br />Powerful when using.",
-                "content_1": "Imagine a robot like this: |it can manage groups with ease |and make chats live."
-            },
-            "start_use": "Get Started",
-            "go_to_panel": "nmBot Panel",
-            "panel": {
-                "title": "nmBot Panel",
-                "simplified_title": "The panel |simplifies everything.",
-                "simplified_content_1": "The days of checking |meaningless options |one by one, |sending commands |to set functions frantically, |and typing super-complex codes |for a message are over.",
-                "simplified_content_2": "With nmBot Panel, |modifying group configuration |becomes as easy as |turning on airplane mode.",
-                "feature_1": {
-                    "title": "Simply start it in Telegram",
-                    "content": "As a Telegram mini App, |you can easily |open the nmBot panel |by clicking |in Telegram."
-                },
-                "feature_2": {
-                    "title": "Or if you want a large screen",
-                    "content": "You can also |use the nmBot panel |in the browser |and enjoy the convenient experience |brought by the exclusive |parallel view."
-                },
-                "feature_3": {
-                    "title": "One-click setting, easy to get started",
-                    "content": "The simple and clear |nmBot panel setting interface |makes all the functions |easy to understand. |Click, done."
-                }
-            },
             "features": {
-                "title": "Functions are rich",
+                "channel": "Channels",
+                "channel_features": {
+                    "ab": "Automatic add buttons to posts",
+                    "as": "Automatically beautify Latin format",
+                    "bl": "Automatically block exiting users",
+                    "ce": "Channel perspective eye",
+                    "eb": "Edit post button",
+                    "pw": "Proper warm up"
+                },
                 "content_1": "nmBot is equipped |with lots of functions, |from managing groups |to operating channels, |even for your |personal account, |there are functions |that will make you shine.",
                 "group": "Groups",
                 "group_features": {
-                    "kr": "Keyword reply",
-                    "jv": "Group join verification",
-                    "lm": "Lockdown mode",
-                    "nc": "nmartChat",
-                    "cl": "Limit group members to use commands",
-                    "dt": "Automatically delete messages by category",
-                    "ds": "Spam blocking",
-                    "sl": "Speech frequency limit",
-                    "rc": "Automatically reply to bound channel posts",
-                    "mi": "Group member interaction",
                     "bm": "banme game",
-                    "mr": "And more practical functions"
-                },
-                "private": "Private Chats",
-                "private_features": {
-                    "gt": "Giveaway tracking",
-                    "br": "Business keyword reply",
+                    "cl": "Limit group members to use commands",
+                    "ds": "Spam blocking",
+                    "dt": "Automatically delete messages by category",
+                    "jv": "Group join verification",
+                    "kr": "Keyword reply",
+                    "lm": "Lockdown mode",
+                    "mi": "Group member interaction",
+                    "mr": "And more practical functions",
                     "nc": "nmartChat",
-                    "ts": "Convert to stickers or emojis",
-                    "cr": "nmBot credit",
-                    "cm": "Customized command mapping",
-                    "dc": "Telegram data center query"
-                },
-                "channel": "Channels",
-                "channel_features": {
-                    "pw": "Proper warm up",
-                    "ab": "Automatic add buttons to posts",
-                    "eb": "Edit post button",
-                    "as": "Automatically beautify Latin format",
-                    "bl": "Automatically block exiting users",
-                    "ce": "Channel perspective eye"
+                    "rc": "Automatically reply to bound channel posts",
+                    "sl": "Speech frequency limit"
                 },
                 "its_only_part": "* Only some of the highlights are shown here.",
+                "private": "Private Chats",
+                "private_features": {
+                    "br": "Business keyword reply",
+                    "cm": "Customized command mapping",
+                    "cr": "nmBot credit",
+                    "dc": "Telegram data center query",
+                    "gt": "Giveaway tracking",
+                    "nc": "nmartChat",
+                    "ts": "Convert to stickers or emojis"
+                },
                 "special": {
-                    "title": "And exclusive",
                     "content_0": "Super exclusive features| help you activate the group and chat happily.",
                     "content_1": "This is just a small part!| There are more features |waiting for you to explore.",
                     "feature_1": {
-                        "title": "Proper Warm Up",
                         "content": "Use salty or sweet language |to automatically comment |on new posts |published in the channel. [footer:Posts may need to meet specific conditions before they can be commented on. ]",
-                        "image": "website intro special feature 1.png"
+                        "image": "website intro special feature 1.png",
+                        "title": "Proper Warm Up"
                     },
                     "feature_2": {
-                        "title": "Channel Perspective Eye",
                         "content": "Automatically identify |the channel owner's identity. |When using channel identity, |you can still freely |use various nmBot functions. [footer: nmBot needs to be set as the administrator of the channel. ]",
-                        "image": "website intro special feature 2.png"
+                        "image": "website intro special feature 2.png",
+                        "title": "Channel Perspective Eye"
                     },
                     "feature_3": {
-                        "title": "Command Mapping",
                         "content": "Don't like the default commands, |want to add your own ones? |Customize \"Command Mapping\" |to let nmBot recognize |your custom commands.",
-                        "image": "website intro special feature 3.png"
+                        "image": "website intro special feature 3.png",
+                        "title": "Command Mapping"
                     },
                     "feature_4": {
-                        "title": "Keyword Reply",
                         "content": "With Telegram Business, |not only groups, |but also your private messages |can be connected to keyword replies, |to let nmBot send replies, |delete messages, |and even ban users on your behalf[footer: Commercial keyword replies do not support deleting messages or banning users. ]. |And there are even more options |for customization.",
-                        "image": "website intro special feature 4.png"
+                        "image": "website intro special feature 4.png",
+                        "title": "Keyword Reply"
                     },
                     "feature_5": {
-                        "title": "Giveaway Tracking",
                         "content": "Let nmBot automatically remind you |that the giveaway activity |of the channel you participated in |has ended, so that |you can quickly view the results |or exit the channel.",
-                        "image": "website intro special feature 5.png"
-                    }
-                }
+                        "image": "website intro special feature 5.png",
+                        "title": "Giveaway Tracking"
+                    },
+                    "title": "And exclusive"
+                },
+                "title": "Functions are rich"
             },
-            "usage": {
-                "title": "The choice of |tens of |thousands of groups",
-                "content_0": "A large number |of large groups in Telegram| are all using nmBot |for management, |and all those who have used it| say it is good. [footer:In a user survey conducted in April 2022, nmBot's user satisfaction reached 94%. The data is an estimate. ]",
-                "data": {
-                    "total_group_count": "The Total Number of Groups Joined[footer:The data is as of August 20, 2024. The data is an estimate. ]",
-                    "mau": "Monthly Active Users[footer:The data was recorded on August 20, 2024, from Telegram statistics. The data is an estimate. ]",
-                    "daily_message_count": "Daily Processed Message Count[footer:Data recorded on August 19, 2024. The data is an estimate. ]",
-                    "chat_admin_count": "Number of Servicing Chat Administrators[footer:Data recorded on August 20, 2024. The data is an estimate. ]"
-                }
-            },
-            "resources": {
-                "title": "nmBot Resources",
-                "content_0": "Check the latest announcements |and learn about usage tips.",
-                "channel_title": "nmBot Channel",
-                "channel_content": "Subscribe to the nmBot channel |to get the latest news about nmBot.",
-                "channel_link": "Subscribe to nmBot Channel",
-                "documention_title": "nmBot Help Document",
-                "documention_content": "View nmBot Help Document |and learn about the ways to use nmBot.",
-                "documention_link": "View the Document",
-                "newsroom_title": "nmTeam Newsroom",
-                "newsroom_content": "View the latest news releases |concerning nmBot in nmTeam Newsroom.",
-                "newsroom_link": "View nmBot News",
-                "community_title": "nmBot User Community",
-                "community_content": "Join the nmBot User Community |to communicate with other nmBot users.",
-                "community_link": "Join the Community"
+            "first_intro": {
+                "content_1": "Imagine a robot like this: |it can manage groups with ease |and make chats live.",
+                "title": "Funny while chatting. <br />Powerful when using."
             },
             "footer_notes": {
                 "0": "All content is for reference only, functions may change, please refer to actual use."
+            },
+            "go_to_panel": "nmBot Panel",
+            "header_name": "nmBot",
+            "panel": {
+                "feature_1": {
+                    "content": "As a Telegram mini App, |you can easily |open the nmBot panel |by clicking |in Telegram.",
+                    "title": "Simply start it in Telegram"
+                },
+                "feature_2": {
+                    "content": "You can also |use the nmBot panel |in the browser |and enjoy the convenient experience |brought by the exclusive |parallel view.",
+                    "title": "Or if you want a large screen"
+                },
+                "feature_3": {
+                    "content": "The simple and clear |nmBot panel setting interface |makes all the functions |easy to understand. |Click, done.",
+                    "title": "One-click setting, easy to get started"
+                },
+                "simplified_content_1": "The days of checking |meaningless options |one by one, |sending commands |to set functions frantically, |and typing super-complex codes |for a message are over.",
+                "simplified_content_2": "With nmBot Panel, |modifying group configuration |becomes as easy as |turning on airplane mode.",
+                "simplified_title": "The panel |simplifies everything.",
+                "title": "nmBot Panel"
+            },
+            "resources": {
+                "channel_content": "Subscribe to the nmBot channel |to get the latest news about nmBot.",
+                "channel_link": "Subscribe to nmBot Channel",
+                "channel_title": "nmBot Channel",
+                "community_content": "Join the nmBot User Community |to communicate with other nmBot users.",
+                "community_link": "Join the Community",
+                "community_title": "nmBot User Community",
+                "content_0": "Check the latest announcements |and learn about usage tips.",
+                "documention_content": "View nmBot Help Document |and learn about the ways to use nmBot.",
+                "documention_link": "View the Document",
+                "documention_title": "nmBot Help Document",
+                "newsroom_content": "View the latest news releases |concerning nmBot in nmTeam Newsroom.",
+                "newsroom_link": "View nmBot News",
+                "newsroom_title": "nmTeam Newsroom",
+                "title": "nmBot Resources"
+            },
+            "start_use": "Get Started",
+            "title": "nmBot Telegram",
+            "usage": {
+                "content_0": "A large number |of large groups in Telegram| are all using nmBot |for management, |and all those who have used it| say it is good. [footer:In a user survey conducted in April 2022, nmBot's user satisfaction reached 94%. The data is an estimate. ]",
+                "data": {
+                    "chat_admin_count": "Number of Servicing Chat Administrators[footer:Data recorded on August 20, 2024. The data is an estimate. ]",
+                    "daily_message_count": "Daily Processed Message Count[footer:Data recorded on August 19, 2024. The data is an estimate. ]",
+                    "mau": "Monthly Active Users[footer:The data was recorded on August 20, 2024, from Telegram statistics. The data is an estimate. ]",
+                    "total_group_count": "The Total Number of Groups Joined[footer:The data is as of August 20, 2024. The data is an estimate. ]"
+                },
+                "title": "The choice of |tens of |thousands of groups"
             }
-        }
+        },
+        "noresult": "No nmProduct available in your country or region was found.",
+        "notfound": "Oops, The product you are looking for does not exist or is unavaliable in your country or region.",
+        "target_detail_aria_label": ", see detail",
+        "target_in_aria_label": ", open link",
+        "target_out_aria_label": ", open link in new tab",
+        "target_turn_to_note": "Turn to footnote",
+        "title": "Products",
+        "unavaliable": "This product does not exist or cannot be used in your country or region."
     },
     "questionnaire": {
-        "title": "nmTeam Form",
-        "description": "Fill out the nmTeam form.",
-        "submit": "Submit",
-        "select_num_limit": "Please select {min} to {max} items.",
-        "select_sin_limit": "Please select {min} items.",
-        "select_min_limit": "Please select at least {n} items.",
-        "select_max_limit": "Please select at most {n} items.",
-        "limit": "This form can only be submitted after logging in to the nmTeam Account, and each account can submit a maximum of {t} times.",
-        "multiple": "Multiple Choices",
-        "must_input": "Please fill in this blank.",
-        "log_require": "You need to be logged in to your nmTeam account to fill out this form.",
         "account": {
-            "title": "This form will be submitted with {name}",
             "description": "nmTeam staff will see your account information.",
-            "error": "Some errors occurred and the login status could not be verified."
-        },
-        "result": {
-            "title_success": "Form submitted Successfully",
-            "info_success": "You have successfully submitted the form <b>{name}</b>.",
-            "title_error": "Form Submission Failed",
-            "info_error": "Failed to submit form <b>{name}</b>.<br><br>Error: {error}.",
-            "error_code": {
-                "LOG_VERIFY_ERROR": "User login status verification failed",
-                "EMPTY_ANSWER": "Mandatory questions are not filled in",
-                "SERVER_ERROR": "Some server error occurred",
-                "REACH_ACCOUNY_LIMIT": "Exceeded account submissions",
-                "REACH_IP_LIMIT": "This IP is submitted too frequently, please try again later"
-            }
+            "error": "Some errors occurred and the login status could not be verified.",
+            "title": "This form will be submitted with {name}"
         },
         "backstage": {
             "analyze": {
                 "detail": "Detail",
+                "input_rate": "Fill rate",
                 "keyword": "Key words",
                 "overview": "Overview",
+                "percent": "percentage",
                 "result_num": "Number of results",
-                "input_rate": "Fill rate",
-                "time": "Average time",
-                "percent": "percentage"
+                "time": "Average time"
             },
             "data_type": {
                 "JSON": "JSON",
+                "analyze": "Analyze",
                 "origin": "Source Data",
-                "preview": "Source Form",
-                "analyze": "Analyze"
-            },
-            "tip": {
-                "not_log": "Sorry, you are not logged in to the nmTeam administrator account.",
-                "not_found": "This form was not found.",
-                "not_admin": "Sorry, you are not an administrator of nmTeam and do not have permission to access this page."
-            },
-            "question_type": {
-                "textarea": "multi-line input",
-                "single": "single choice",
-                "multiple": "multiple choice",
-                "input": "fill blank",
-                "chosen_answer": "Optional",
-                "must_answer": "Required"
+                "preview": "Source Form"
             },
             "gentime": "Page generation time:",
+            "link": "Link",
             "name": "Form: ",
             "origin": {
-                "id": "ID",
-                "start_time": "Start filling time",
-                "ip": "IP",
-                "time": "Time consuming",
                 "answer": "Answer",
-                "uid": "UID",
-                "submit_time": "Submission time"
+                "id": "ID",
+                "ip": "IP",
+                "start_time": "Start filling time",
+                "submit_time": "Submission time",
+                "time": "Time consuming",
+                "uid": "UID"
             },
-            "link": "Link",
+            "question_type": {
+                "chosen_answer": "Optional",
+                "input": "fill blank",
+                "multiple": "multiple choice",
+                "must_answer": "Required",
+                "single": "single choice",
+                "textarea": "multi-line input"
+            },
+            "tip": {
+                "not_admin": "Sorry, you are not an administrator of nmTeam and do not have permission to access this page.",
+                "not_found": "This form was not found.",
+                "not_log": "Sorry, you are not logged in to the nmTeam administrator account."
+            },
             "title": "nmTeam form analysis data"
-        }
+        },
+        "description": "Fill out the nmTeam form.",
+        "limit": "This form can only be submitted after logging in to the nmTeam Account, and each account can submit a maximum of {t} times.",
+        "log_require": "You need to be logged in to your nmTeam account to fill out this form.",
+        "multiple": "Multiple Choices",
+        "must_input": "Please fill in this blank.",
+        "result": {
+            "error_code": {
+                "EMPTY_ANSWER": "Mandatory questions are not filled in",
+                "LOG_VERIFY_ERROR": "User login status verification failed",
+                "REACH_ACCOUNY_LIMIT": "Exceeded account submissions",
+                "REACH_IP_LIMIT": "This IP is submitted too frequently, please try again later",
+                "SERVER_ERROR": "Some server error occurred"
+            },
+            "info_error": "Failed to submit form <b>{name}</b>.<br><br>Error: {error}.",
+            "info_success": "You have successfully submitted the form <b>{name}</b>.",
+            "title_error": "Form Submission Failed",
+            "title_success": "Form submitted Successfully"
+        },
+        "select_max_limit": "Please select at most {n} items.",
+        "select_min_limit": "Please select at least {n} items.",
+        "select_num_limit": "Please select {min} to {max} items.",
+        "select_sin_limit": "Please select {min} items.",
+        "submit": "Submit",
+        "title": "nmTeam Form"
+    },
+    "schema": {
+        "newsroom_description": "View the latest nmTeam news in nmTeam Newsroom.",
+        "nmbot_intro": "nmBot Telegram Introduction",
+        "nmbot_intro_description": "Learn nmBot, the super powerful Telegram bot.",
+        "nmbot_panel": "nmBot Panel",
+        "nmbot_panel_description": "Open the nmBot Panel to modify your settings on nmBot.",
+        "nmteam_support": "nmTeam Support",
+        "nmteam_support_description": "Get help with nmTeam products and services from nmTeam Support.",
+        "products": "Products",
+        "products_description": "Learn about nmTeam's nmProducts."
     },
     "sitemap": {
-        "title": "Sitemap",
-        "description": "View the nmTeam sitemap for quick directions to your favorite nmTeam website pages."
+        "description": "View the nmTeam sitemap for quick directions to your favorite nmTeam website pages.",
+        "title": "Sitemap"
     },
+    "skip_to_content": "Skip to content",
     "status_page": {
-        "title": "nmTeam System Status",
         "description": "Track the working status of each service of nmTeam.",
-        "redirecting": "Redirecting to the nmTeam system status standalone page..."
-    },
-    "supportus": {
-        "title": "Sponsor nmTeam",
-        "description": "Sponsor nmTeam to help us go further.",
-        "tks_sponsor": "Thanks to Our Sponsors",
-        "tks_other": "Thanks to Other nmTeam Contributors",
-        "links": {
-            "afdian": "AFDian",
-            "patreon": "Patreon"
-        },
-        "para": "nmTeam believes that its existence brings unique value to people.<br>If you agree with this, you may wish to sponsor nmTeam so that we can go further.<br>nmTeam will use these donation funds to For nmTeam's R&D and overhead, or to buy a cup of coffee.<br>No matter how you support nmTeam, we thank you really much. With your support, we will continue working hard.",
-        "table": {
-            "name": "Nickname",
-            "amount": "Amount",
-            "avatar": "Avatar",
-            "contribution": "Contribution"
-        },
-        "sponsors_info_note": "The names and avatars of nmTeam sponsors listed above are set by them and have nothing to do with nmTeam.<br>The above sponsorship ways will jump to third-party platforms, nmTeam is not responsible for its content.",
-        "tks_sponsor_part": "part",
-        "copy_crypto_address": "Copy address",
-        "copy_crypto_address_success": "Copy address successfully",
-        "crypto": "Cryptocurrency",
-        "crypto_address": "Cryptocurrency address",
-        "crypto_only_accept_tron": "Only supports receiving TRON assets"
-    },
-    "legal": {
-        "description": "View nmTeam Terms of Service.",
-        "pp": "Privacy Policy",
-        "nsp": "Network Service Protocol "
+        "redirecting": "Redirecting to the nmTeam system status standalone page...",
+        "title": "nmTeam System Status"
     },
     "support": {
         "description": "We're here to help.\n\nRedirecting to nmTeam support, please wait...",
         "title": "nmTeam Support"
     },
-    "account_v2": {
-        "manage": "Manage account"
-    },
-    "cookies": {
-        "title": "Cookies",
-        "description": "Manage cookie settings for the nmTeam website.",
-        "necessary_cookies_title": "Necessary Cookies",
-        "necessary_cookies_description": "We need these cookies to properly provide you with our website services. \nYou cannot deactivate necessary cookies.",
-        "optional_cookies_title": "Optional Cookies",
-        "optional_cookies_description": "Enabling these Cookies allows us to provide you with a better service.",
-        "cookies_on": "On",
-        "cookies_off": "Off"
-    },
-    "skip_to_content": "Skip to content"
+    "supportus": {
+        "copy_crypto_address": "Copy address",
+        "copy_crypto_address_success": "Copy address successfully",
+        "crypto": "Cryptocurrency",
+        "crypto_address": "Cryptocurrency address",
+        "crypto_only_accept_tron": "Only supports receiving TRON assets",
+        "description": "Sponsor nmTeam to help us go further.",
+        "links": {
+            "afdian": "AFDian",
+            "patreon": "Patreon"
+        },
+        "para": "nmTeam believes that its existence brings unique value to people.<br>If you agree with this, you may wish to sponsor nmTeam so that we can go further.<br>nmTeam will use these donation funds to For nmTeam's R&D and overhead, or to buy a cup of coffee.<br>No matter how you support nmTeam, we thank you really much. With your support, we will continue working hard.",
+        "sponsors_info_note": "The names and avatars of nmTeam sponsors listed above are set by them and have nothing to do with nmTeam.<br>The above sponsorship ways will jump to third-party platforms, nmTeam is not responsible for its content.",
+        "table": {
+            "amount": "Amount",
+            "avatar": "Avatar",
+            "contribution": "Contribution",
+            "name": "Nickname"
+        },
+        "title": "Sponsor nmTeam",
+        "tks_other": "Thanks to Other nmTeam Contributors",
+        "tks_sponsor": "Thanks to Our Sponsors",
+        "tks_sponsor_part": "part"
+    }
 }

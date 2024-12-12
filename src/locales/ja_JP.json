@@ -9,109 +9,11 @@
         "6": "それでは、nmの可能性があるかどうかを見てみましょう。",
         "7": "あなたがnmの心を持っている限り、nmTeamはいつでもあなたが参加することを歓迎します。 \nnmTeamへの参加を申し込むための条件の詳細については、このページにアクセスしてください。",
         "8": "nmTeamに参加する方法を学ぶ>",
+        "description": "nmTeamの歴史と意味について学びます。",
         "h0": "しかし、私たちはスローガンについてさえ考えませんでした。",
         "h1": "nmという言葉がどのように由来するのか知りたいですか？",
-        "description": "nmTeamの歴史と意味について学びます。",
         "h2": "nmTeamにも参加しませんか？",
         "title": "nmTeamについて"
-    },
-    "comes_soon": "このページは制作中ですので、お楽しみに！ ",
-    "footer": {
-        "cr": "Copyright nmTeam。全著作権所有。",
-        "email": "E-mail: ",
-        "status": "サイトのステータス",
-        "svca": "サービス契約",
-        "svcb": "プライバシーポリシー",
-        "table": {
-            "about": {
-                "newsroom": "Newsroom (中国語と英語)",
-                "aboutUs": "nmTeamについて",
-                "joinUs": "nmTeamに参加する",
-                "supportUs": "スポンサーnmTeam",
-                "title": "約",
-                "accessibility": "アクセシビリティ"
-            },
-            "products": {
-                "library": "製品ライブラリ",
-                "nmBrowserStartPage": "nmBrowserスタートページ",
-                "nmChat": "nmChat",
-                "title": "製品"
-            },
-            "service": {
-                "accountCenter": "nmTeamアカウントセンター",
-                "support": "サポート",
-                "systemStatus": "システムステータス",
-                "title": "仕える"
-            }
-        },
-        "language": "言語の切り替え：",
-        "sitemap": "サイトマップ",
-        "language_selector_button_aria_label": "。クリックして言語切り替えページを開きます。"
-    },
-    "header": {
-        "about": "恐らく",
-        "home": "ホームページ",
-        "newsroom": "Newsroom",
-        "products": "製品",
-        "support": "待機する",
-        "avatar_aria_label": "アバター",
-        "title_button_aria_label": "nmチームのテキスト。ページのタイトル。クリックすると、Web サイトのトップページに戻ります。",
-        "title_icon_aria_label": "nmTeam レモンと「nm」の文字で構成されるチームアイコン。",
-        "account_box_aria_label": "アカウント管理",
-        "nav_button_aria_label": "ページナビゲーションを開く"
-    },
-    "index": {
-        "connect_para": "nmTeam について詳しく知るには、ソーシャル メディアとプラットフォームのアカウントをフォローしてください。",
-        "connect_us": "さらに詳しい公式情報",
-        "join_us": "nmTeamに参加する",
-        "more_products": "すべての製品",
-        "nmteam_is_this_a": "nmTeamは今、最高経営責任者（CEO）としてagouあり、そしてより多くのnmServicesが次々に発売されます。",
-        "nmteam_is_this_b": "nmTeamは破産する可能性がありますが、悪化することはありません。",
-        "title": "",
-        "what_is_nmteam": "nmTeamとは何ですか？",
-        "what_we_does_ans": "nmTeamは、nmProductsの作成に取り組んでいます。以下の当社の製品のいくつかをチェックしてください。",
-        "join_para": "あなたがnmの心を持っているなら、あなたは今私たちに参加するために申し込むことができます。",
-        "join_para_2": "nmTeamへの参加を申し込むための条件の詳細については、このページにアクセスしてください。",
-        "join_us_link": "nmTeamに参加する方法を学ぶ",
-        "newslist": "nmTeamニュース",
-        "newslist_error": "ニュースの読み込みに問題がありました。",
-        "newslist_loading": "読み込み中...",
-        "newslist_more": "nmTeamニュースルーム",
-        "nmteam_about_link": "nmTeamについて",
-        "retry": "リトライ",
-        "what_we_does": "nmTeamはnmProductsを作成します",
-        "newslist_date_aria_label": "記事の公開日"
-    },
-    "language": {
-        "page": {
-            "title": "言語の切り替え",
-            "tip": "おなじみの言語でnmTeam Webサイトを参照してください。一部のコンテンツは、選択した言語で表示されない場合があります。",
-            "auto": "自動を選択"
-        }
-    },
-    "supportus": {
-        "title": "スポンサーnmTeam",
-        "description": "私たちがさらに前進するのを助けるためにnmTeamを後援します。",
-        "tks_sponsor": "スポンサーに感謝します",
-        "tks_other": "他のnmTeamの貢献者に感謝します",
-        "links": {
-            "afdian": "愛の発電",
-            "patreon": "Patreon"
-        },
-        "para": "nmTeamは、その存在が人々に独自の価値をもたらすと信じています。<br>これに同意する場合は、nmTeamを後援して、さらに先に進むことができます。<br> nmTeamは、これらの寄付資金をFornmTeamに使用します。研究開発やオーバーヘッド、またはコーヒーを買うために。<br> nmTeamをどのようにサポートしても、心から感謝します。あなたのサポートにより、私たちはさらに一生懸命働きます。",
-        "table": {
-            "name": "ニックネーム",
-            "amount": "金額",
-            "avatar": "アバター",
-            "contribution": "貢献"
-        },
-        "sponsors_info_note": "上記のnmTeamスポンサーの名前とアバターは独自に設定されており、nmTeamとは関係ありません。<br>上記のスポンサーシップチャンネルはサードパーティのプラットフォームにリダイレクトされ、nmTeamはそのコンテンツについて責任を負いません。 ",
-        "tks_sponsor_part": "一部",
-        "copy_crypto_address": "アドレスをコピーする",
-        "copy_crypto_address_success": "アドレスが正常にコピーされました",
-        "crypto": "暗号通貨",
-        "crypto_address": "暗号通貨アドレス",
-        "crypto_only_accept_tron": "TRON アセットの受信のみをサポートします"
     },
     "account": {
         "click_to_log": "クリックしてログイン",
@@ -121,6 +23,7 @@
     "account_v2": {
         "manage": "アカウントの管理"
     },
+    "comes_soon": "このページは制作中ですので、お楽しみに！ ",
     "cookie": {
         "cookieConfirmDialog": {
             "body": {
@@ -136,6 +39,82 @@
         "cookiePage": {
             "title": "クッキーについて"
         }
+    },
+    "cookies": {
+        "cookies_off": "近い",
+        "cookies_on": "開ける",
+        "description": "nmTeam Web サイトの Cookie 設定を管理します。",
+        "necessary_cookies_description": "当社の Web サイト サービスを適切に提供するには、これらの Cookie が必要です。\n必要な Cookie を無効にすることはできません。",
+        "necessary_cookies_title": "必要なCookie",
+        "optional_cookies_description": "これらの Cookie を有効にすることで、より良いサービスを提供できるようになります。",
+        "optional_cookies_title": "オプションのクッキー",
+        "title": "Cookies"
+    },
+    "footer": {
+        "cr": "Copyright nmTeam。全著作権所有。",
+        "email": "E-mail: ",
+        "language": "言語の切り替え：",
+        "language_selector_button_aria_label": "。クリックして言語切り替えページを開きます。",
+        "sitemap": "サイトマップ",
+        "status": "サイトのステータス",
+        "svca": "サービス契約",
+        "svcb": "プライバシーポリシー",
+        "table": {
+            "about": {
+                "aboutUs": "nmTeamについて",
+                "accessibility": "アクセシビリティ",
+                "joinUs": "nmTeamに参加する",
+                "newsroom": "Newsroom (中国語と英語)",
+                "supportUs": "スポンサーnmTeam",
+                "title": "約"
+            },
+            "products": {
+                "library": "製品ライブラリ",
+                "nmBrowserStartPage": "nmBrowserスタートページ",
+                "nmChat": "nmChat",
+                "title": "製品"
+            },
+            "service": {
+                "accountCenter": "nmTeamアカウントセンター",
+                "support": "サポート",
+                "systemStatus": "システムステータス",
+                "title": "仕える"
+            }
+        }
+    },
+    "header": {
+        "about": "恐らく",
+        "account_box_aria_label": "アカウント管理",
+        "avatar_aria_label": "アバター",
+        "home": "ホームページ",
+        "nav_button_aria_label": "ページナビゲーションを開く",
+        "newsroom": "Newsroom",
+        "products": "製品",
+        "support": "待機する",
+        "title_button_aria_label": "nmチームのテキスト。ページのタイトル。クリックすると、Web サイトのトップページに戻ります。",
+        "title_icon_aria_label": "nmTeam レモンと「nm」の文字で構成されるチームアイコン。"
+    },
+    "index": {
+        "connect_para": "nmTeam について詳しく知るには、ソーシャル メディアとプラットフォームのアカウントをフォローしてください。",
+        "connect_us": "さらに詳しい公式情報",
+        "join_para": "あなたがnmの心を持っているなら、あなたは今私たちに参加するために申し込むことができます。",
+        "join_para_2": "nmTeamへの参加を申し込むための条件の詳細については、このページにアクセスしてください。",
+        "join_us": "nmTeamに参加する",
+        "join_us_link": "nmTeamに参加する方法を学ぶ",
+        "more_products": "すべての製品",
+        "newslist": "nmTeamニュース",
+        "newslist_date_aria_label": "記事の公開日",
+        "newslist_error": "ニュースの読み込みに問題がありました。",
+        "newslist_loading": "読み込み中...",
+        "newslist_more": "nmTeamニュースルーム",
+        "nmteam_about_link": "nmTeamについて",
+        "nmteam_is_this_a": "nmTeamは今、最高経営責任者（CEO）としてagouあり、そしてより多くのnmServicesが次々に発売されます。",
+        "nmteam_is_this_b": "nmTeamは破産する可能性がありますが、悪化することはありません。",
+        "retry": "リトライ",
+        "title": "",
+        "what_is_nmteam": "nmTeamとは何ですか？",
+        "what_we_does": "nmTeamはnmProductsを作成します",
+        "what_we_does_ans": "nmTeamは、nmProductsの作成に取り組んでいます。以下の当社の製品のいくつかをチェックしてください。"
     },
     "join": {
         "join_register_page": {
@@ -198,6 +177,13 @@
             "title": "nmTeamへようこそ！"
         }
     },
+    "language": {
+        "page": {
+            "auto": "自動を選択",
+            "tip": "おなじみの言語でnmTeam Webサイトを参照してください。一部のコンテンツは、選択した言語で表示されない場合があります。",
+            "title": "言語の切り替え"
+        }
+    },
     "legal": {
         "description": "nmTeamの利用規約を表示します。",
         "nsp": "インターネットサービス利用規約",
@@ -219,12 +205,12 @@
         "explain": "説明：お住まいの国で利用可能なnmTeam製品のみを表示してください。\n他の国で利用可能なnmTeam製品を表示するには、nmTeamWebサイトの言語を変更してください。",
         "noresult": "お住まいの国または地域で利用可能なnmTeam製品はありません。",
         "notfound": "製品が見つかりません",
-        "title": "製品",
-        "unavaliable": "この製品は存在しないか、お住まいの国ではご利用いただけません。",
         "target_detail_aria_label": "、詳細を確認する",
-        "target_out_aria_label": "、リンクを新しいウィンドウで開きます",
         "target_in_aria_label": "、リンクを開く",
-        "target_turn_to_note": "脚注に移動"
+        "target_out_aria_label": "、リンクを新しいウィンドウで開きます",
+        "target_turn_to_note": "脚注に移動",
+        "title": "製品",
+        "unavaliable": "この製品は存在しないか、お住まいの国ではご利用いただけません。"
     },
     "questionnaire": {
         "account": {
@@ -304,6 +290,7 @@
         "description": "nmTeamサイトマップをチェックして、お気に入りのnmTeamWebサイトページへの簡単な道順を確認してください。",
         "title": "サイトマップ"
     },
+    "skip_to_content": "コンテンツにスキップ",
     "status_page": {
         "description": "nmTeamの各サービスの動作ステータスを追跡します。",
         "redirecting": "nmTeamシステムステータススタンドアロンページにリダイレクトしています...",
@@ -313,15 +300,28 @@
         "description": "私たちがお手伝いします。\n\nnmTeam サポートにリダイレクトしています。お待ちください...",
         "title": "nmTeamのサポート"
     },
-    "cookies": {
-        "title": "Cookies",
-        "description": "nmTeam Web サイトの Cookie 設定を管理します。",
-        "necessary_cookies_title": "必要なCookie",
-        "necessary_cookies_description": "当社の Web サイト サービスを適切に提供するには、これらの Cookie が必要です。\n必要な Cookie を無効にすることはできません。",
-        "optional_cookies_title": "オプションのクッキー",
-        "optional_cookies_description": "これらの Cookie を有効にすることで、より良いサービスを提供できるようになります。",
-        "cookies_on": "開ける",
-        "cookies_off": "近い"
-    },
-    "skip_to_content": "コンテンツにスキップ"
+    "supportus": {
+        "copy_crypto_address": "アドレスをコピーする",
+        "copy_crypto_address_success": "アドレスが正常にコピーされました",
+        "crypto": "暗号通貨",
+        "crypto_address": "暗号通貨アドレス",
+        "crypto_only_accept_tron": "TRON アセットの受信のみをサポートします",
+        "description": "私たちがさらに前進するのを助けるためにnmTeamを後援します。",
+        "links": {
+            "afdian": "愛の発電",
+            "patreon": "Patreon"
+        },
+        "para": "nmTeamは、その存在が人々に独自の価値をもたらすと信じています。<br>これに同意する場合は、nmTeamを後援して、さらに先に進むことができます。<br> nmTeamは、これらの寄付資金をFornmTeamに使用します。研究開発やオーバーヘッド、またはコーヒーを買うために。<br> nmTeamをどのようにサポートしても、心から感謝します。あなたのサポートにより、私たちはさらに一生懸命働きます。",
+        "sponsors_info_note": "上記のnmTeamスポンサーの名前とアバターは独自に設定されており、nmTeamとは関係ありません。<br>上記のスポンサーシップチャンネルはサードパーティのプラットフォームにリダイレクトされ、nmTeamはそのコンテンツについて責任を負いません。 ",
+        "table": {
+            "amount": "金額",
+            "avatar": "アバター",
+            "contribution": "貢献",
+            "name": "ニックネーム"
+        },
+        "title": "スポンサーnmTeam",
+        "tks_other": "他のnmTeamの貢献者に感謝します",
+        "tks_sponsor": "スポンサーに感謝します",
+        "tks_sponsor_part": "一部"
+    }
 }
