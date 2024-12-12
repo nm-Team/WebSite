@@ -23,6 +23,12 @@
     "account_v2": {
         "manage": "Manage account"
     },
+    "business_cooperation": {
+        "content_0": "To contact us regarding business cooperation, please send an email to: ",
+        "content_1": "We may use a different email address to respond to you.",
+        "description": "Develop business cooperation with nmTeam.",
+        "title": "Business Cooperation"
+    },
     "comes_soon": "This page is in production, so stay tuned! ",
     "cookie": {
         "cookieConfirmDialog": {

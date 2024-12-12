@@ -23,6 +23,12 @@
     "account_v2": {
         "manage": "管理帳號"
     },
+    "business_cooperation": {
+        "content_0": "若要就商務合作事宜與我們取得聯繫，請發送電子郵件至：",
+        "content_1": "我們可能會使用不同的郵件地址回覆您。",
+        "description": "和 nmTeam 進行商務合作。",
+        "title": "商務合作"
+    },
     "comes_soon": "此頁面正在製作中，敬請期待！",
     "cookie": {
         "cookieConfirmDialog": {
