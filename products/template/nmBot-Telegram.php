@@ -4,7 +4,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . "/functions.php");
 define("page_title", t("products.nmbot_telegram.title"));
 define("page_keywords", "nmBot,Telegram,Telegram Bot,Telegram机器人,Telegram机器人开发,Telegram机器人开发教程,Telegram机器人教程,Telegram机器人API,Telegram机器人教程中文,Telegram机器人API中文");
-define("page_description", "products.nmbot_telegram.description");
+define("page_description", "products.nmbot_telegram.page_description");
 define("page_head_css", array("/src/css/products.css", "/src/css/products_detail.css"));
 define("page_head_js", array());
 define("page_body_js", array());

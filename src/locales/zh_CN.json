@@ -291,6 +291,7 @@
             },
             "go_to_panel": "nmBot 面板",
             "header_name": "nmBot",
+            "page_description": "了解 Telegram 上功能最强大的群组管理机器人之一。\nnmBot 搭载众多群组和频道管理功能，并通过各种娱乐功能为群组带来新体验，已获得上万群组的信赖。",
             "panel": {
                 "feature_1": {
                     "content": "作为 Telegram 迷你 App，在 Telegram 内|点一下|就能轻松打开 nmBot 面板。",

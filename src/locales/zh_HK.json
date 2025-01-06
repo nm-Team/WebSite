@@ -291,6 +291,7 @@
             },
             "go_to_panel": "nmBot 面板",
             "header_name": "nmBot",
+            "page_description": "了解 Telegram 上功能最強大的群組管理機器人之一。\nnmBot 搭載眾多群組和頻道管理功能，並透過各種娛樂功能為群組帶來新體驗，已獲得上萬群組的信賴。",
             "panel": {
                 "feature_1": {
                     "content": "作為 Telegram 迷你 App，在 Telegram 內|點一下|就能輕鬆打開 nmBot 面板。",

@@ -203,6 +203,9 @@
         "description": "nmTeamの優れた製品をチェックしてください。",
         "error": "何かがうまくいかなかった。",
         "explain": "説明：お住まいの国で利用可能なnmTeam製品のみを表示してください。\n他の国で利用可能なnmTeam製品を表示するには、nmTeamWebサイトの言語を変更してください。",
+        "nmbot_telegram": {
+            "page_description": "Telegram で最も強力なグループ管理ボットの 1 つについて学びましょう。"
+        },
         "noresult": "お住まいの国または地域で利用可能なnmTeam製品はありません。",
         "notfound": "製品が見つかりません",
         "target_detail_aria_label": "、詳細を確認する",

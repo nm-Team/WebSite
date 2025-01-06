@@ -291,6 +291,7 @@
             },
             "go_to_panel": "nmBot Panel",
             "header_name": "nmBot",
+            "page_description": "Get to know one of the most powerful group management bots on Telegram.\nnmBot is equipped with numerous group and channel management functions, brings new experiences to groups through various entertainment functions, and has been trusted by tens of thousands of groups.",
             "panel": {
                 "feature_1": {
                     "content": "As a Telegram mini App, |you can easily |open the nmBot panel |by clicking |in Telegram.",
