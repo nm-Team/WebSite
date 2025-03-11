@@ -230,16 +230,20 @@
                     "cl": "限制群組成員使用指令",
                     "ds": "騷擾攔截",
                     "dt": "按訊息類別自動刪除訊息",
+                    "jm": "p_入群請求通知消息",
                     "jv": "入群驗證",
                     "kr": "關鍵字回覆",
-                    "lm": "鎖定模式",
+                    "lm": "定時任務",
                     "mi": "群友互動",
-                    "mr": "和更多實用功能",
                     "nc": "nmartChat",
+                    "nl": "p_新成員權限限制",
+                    "pc": "p_nmBot 配置權限管理",
                     "rc": "自動回覆綁定頻道貼文",
-                    "sl": "發言頻率限制"
+                    "sl": "發言頻率限制",
+                    "z_mr": "和更多實用功能"
                 },
-                "its_only_part": "* 此處僅展示部分亮點功能。",
+                "its_only_part": "* 此處僅展示部分亮點功能。部分功能可能需滿足條件方可使用。",
+                "nmbot_plus": "nmBot+ 功能",
                 "private": "私訊",
                 "private_features": {
                     "br": "商業關鍵字回覆",
@@ -291,6 +295,36 @@
             },
             "go_to_panel": "nmBot 面板",
             "header_name": "nmBot",
+            "nmbot_plus": {
+                "content_0": "這款適用於群組|和用戶個人的高級訂閱|為 nmBot 帶來 |20 多項高級服務。|83% 的活躍群組|每月只需 0.4 美元|即可訂閱 nmBot+[footer:2024 年 11 月對活躍群組進行的統計表明該比例的群組可享受折合每月 0.4 美元每月的 nmBot+ 方案]，|讓這款訂閱|對更多人負擔得起。",
+                "feature_1": {
+                    "content": "群組所有者|可設定|管理員|對 nmBot 設置|的修改權限，|管理管理員|更輕鬆。",
+                    "image": "website intro plus feature 1.png",
+                    "title": "管理員權限控制"
+                },
+                "feature_2": {
+                    "content": "自定義|群組中|顯示的|機器人指令，|啟用功能|有的放矢。",
+                    "image": "website intro plus feature 2.png",
+                    "title": "自定義指令列表"
+                },
+                "feature_3": {
+                    "content": "更多可選操作時間、|自定義驗證文本、|入群次數限制、|自定義騷擾規則|等功能|幫助您管控入群用戶。",
+                    "image": "website intro plus feature 3.png",
+                    "title": "入群驗證"
+                },
+                "feature_4": {
+                    "content": "自定義呼叫詞|並在私信中接收提示。",
+                    "image": "website intro plus feature 4.png",
+                    "title": "呼叫群組管理員"
+                },
+                "feature_5": {
+                    "content": "<b>自定義騷擾規則</b>|讓群組擁有|自己的騷擾攔截邏輯；|<b>定時任務</b>|支持在群組中|定時發送消息；|還有|<b>超多限制解鎖</b>|使 nmBot 體驗更暢快。",
+                    "image": "website intro plus feature 5.png",
+                    "title": "更多權益"
+                },
+                "title": "nmBot+，<nobr>，</nobr><br>超優惠|進階服務。",
+                "view_full_benefits": "進一步了解 nmBot+ 權益"
+            },
             "page_description": "了解 Telegram 上功能最強大的群組管理機器人之一。\nnmBot 搭載眾多群組和頻道管理功能，並透過各種娛樂功能為群組帶來新體驗，已獲得上萬群組的信賴。",
             "panel": {
                 "feature_1": {

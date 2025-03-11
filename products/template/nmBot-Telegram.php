@@ -376,6 +376,15 @@ function pb($key)
         margin-top: -9rem;
         font-size: 11rem;
     }
+
+    nmbot-plus-icon {
+        width: 1em;
+        height: 1em;
+        background-image: url(https://websiteres.nmteam.xyz/nmBot/plus.svg);
+        background-size: cover;
+        display: inline-block;
+        margin: 0.2em 0.2em -0.2em 0.2em;
+    }
 </style>
 
 <div class="nmbot-telegram">
@@ -787,11 +796,15 @@ function pb($key)
                 <div class="features-list <?php if ($chat_type === "group") echo "active"; ?>" data-chat-type="<?php echo $chat_type; ?>">
                     <?php
                     $features_i18n = t("products.nmbot_telegram.features." . $chat_type . "_features"); // returns a object
-                    $features = array_values((array)$features_i18n);
-                    foreach ($features as $feature) { ?>
-                        <div class="feature"><?php echo $feature; ?></div>
+                    foreach ($features_i18n as $feature) { ?>
+                        <div class="feature">
+                            <?php if (preg_match('/^p_/', $feature)) { ?>
+                                <nmbot-plus-icon aria-label="<?php p('products.nmbot_telegram.features.nmbot_plus') ?>"></nmbot-plus-icon>
+                                <?php $feature = substr($feature, 2); ?>
+                            <?php } ?>
+                            <?php echo $feature; ?>
+                        </div>
                     <?php }
-
                     ?>
                 </div>
             <?php } ?>
@@ -853,8 +866,37 @@ function pb($key)
         <?php } ?>
     </div>
     <div class="text-only-block fade-in">
+        <div class="text-only-block-title">
+            <nmbot-plus-icon aria-hidden="true"></nmbot-plus-icon><?php pb("products.nmbot_telegram.nmbot_plus.title"); ?>
+        </div>
         <div class="text-only-block-content">
-            <p><?php pb("products.nmbot_telegram.features.special.content_1"); ?></p>
+            <p><?php pb("products.nmbot_telegram.nmbot_plus.content_0"); ?></p>
+        </div>
+    </div>
+    <div class="feature-detail-block">
+        <?php
+        for ($i = 1; $i <= 5; $i++) { ?>
+            <div class="feature-detail-block-item fade-in">
+                <div class="text">
+                    <div class="text-title">
+                        <?php pb("products.nmbot_telegram.nmbot_plus.feature_" . $i . ".title"); ?>
+                    </div>
+                    <div class="text-content">
+                        <?php pb("products.nmbot_telegram.nmbot_plus.feature_" . $i . ".content"); ?>
+                    </div>
+                </div>
+                <div class="image" style="background-image: url('<?php
+                                                                    echo file_url;
+                                                                    p("products.nmbot_telegram.nmbot_plus.feature_" . $i . ".image")
+                                                                    ?>');"></div>
+            </div>
+        <?php } ?>
+    </div>
+    <div class="text-only-block fade-in">
+        <div class="text-only-block-links">
+            <a href="https://support.nmteam.xyz/nmbot-telegram/plus/benefits/" target="_blank" rel="noopener noreferrer" class="link">
+                <?php pb("products.nmbot_telegram.nmbot_plus.view_full_benefits"); ?>
+            </a>
         </div>
     </div>
     <div class="empty-space"></div>

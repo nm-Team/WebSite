@@ -230,16 +230,20 @@
                     "cl": "Limit group members to use commands",
                     "ds": "Spam blocking",
                     "dt": "Automatically delete messages by category",
+                    "jm": "p_Group join request message",
                     "jv": "Group join verification",
                     "kr": "Keyword reply",
-                    "lm": "Lockdown mode",
+                    "lm": "Scheduled task",
                     "mi": "Group member interaction",
-                    "mr": "And more practical functions",
                     "nc": "nmartChat",
+                    "nl": "p_New member permission restrictions",
+                    "pc": "p_nmBot configuration permission management",
                     "rc": "Automatically reply to bound channel posts",
-                    "sl": "Speech frequency limit"
+                    "sl": "Speech frequency limit",
+                    "z_mr": "And more practical functions"
                 },
-                "its_only_part": "* Only some of the highlights are shown here.",
+                "its_only_part": "* Only some highlights are displayed here. Some functions may need to meet the conditions before they can be used.",
+                "nmbot_plus": "nmBot+ feature",
                 "private": "Private Chats",
                 "private_features": {
                     "br": "Business keyword reply",
@@ -291,6 +295,36 @@
             },
             "go_to_panel": "nmBot Panel",
             "header_name": "nmBot",
+            "nmbot_plus": {
+                "content_0": "This premium subscription |for groups and individual users |brings over 20 |premium services |to nmBot. |83% of active groups |can subscribe to nmBot+ |for only $0.4 per month[footer: The statistics of active groups in November 2024 show that groups in this proportion can enjoy nmBot+ equivalent to $0.4 per month], |making this subscription |affordable for more people.",
+                "feature_1": {
+                    "content": "Group owners can set administrators' modification permissions to nmBot settings, making it easier to manage administrators.",
+                    "image": "website intro plus feature 1.png",
+                    "title": "Administrator permissions control"
+                },
+                "feature_2": {
+                    "content": "Customize the bot commands displayed in the group to enable the functions in a targeted manner.",
+                    "image": "website intro plus feature 2.png",
+                    "title": "Customized command list"
+                },
+                "feature_3": {
+                    "content": "More optional operation time, |custom verification text, |limit join time, |custom spam rules and other functions |help you control group entry users.",
+                    "image": "website intro plus feature 3.png",
+                    "title": "Join verification"
+                },
+                "feature_4": {
+                    "content": "Customize the call words |and receive prompts in private messages.",
+                    "image": "website intro plus feature 4.png",
+                    "title": "Call group administrators"
+                },
+                "feature_5": {
+                    "content": "<b>Custom spam rules</b> allow the group |to have its own |spam interception logic; |<b>Scheduled tasks</b> support sending messages regularly |in the group; |and |<b>Several limit unlocking</b>| makes the nmBot experience |more comfortable.",
+                    "image": "website intro plus feature 5.png",
+                    "title": "More benefits"
+                },
+                "title": "nmBot, <nobr>，</nobr><br>super discount |advanced service.",
+                "view_full_benefits": "Learn more about nmBot+ benefits"
+            },
             "page_description": "Get to know one of the most powerful group management bots on Telegram.\nnmBot is equipped with numerous group and channel management functions, brings new experiences to groups through various entertainment functions, and has been trusted by tens of thousands of groups.",
             "panel": {
                 "feature_1": {

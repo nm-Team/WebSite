@@ -230,16 +230,20 @@
                     "cl": "限制群成员使用指令",
                     "ds": "骚扰拦截",
                     "dt": "按消息类别自动删除消息",
+                    "jm": "p_入群请求通知消息",
                     "jv": "入群验证",
                     "kr": "关键词回复",
-                    "lm": "锁定模式",
+                    "lm": "定时任务",
                     "mi": "群友互动",
-                    "mr": "和更多实用功能",
                     "nc": "nmartChat",
+                    "nl": "p_新成员权限限制",
+                    "pc": "p_nmBot 配置权限管理",
                     "rc": "自动回复绑定频道帖子",
-                    "sl": "发言频率限制"
+                    "sl": "发言频率限制",
+                    "z_mr": "和更多实用功能"
                 },
-                "its_only_part": "* 此处仅展示部分亮点功能。",
+                "its_only_part": "* 此处仅展示部分亮点功能。部分功能可能需满足条件方可使用。",
+                "nmbot_plus": "nmBot+ 功能",
                 "private": "私信",
                 "private_features": {
                     "br": "商业关键词回复",
@@ -291,6 +295,36 @@
             },
             "go_to_panel": "nmBot 面板",
             "header_name": "nmBot",
+            "nmbot_plus": {
+                "content_0": "这款适用于群组|和用户个人的高级订阅|为 nmBot 带来 |20 多项高级服务。|83% 的活跃群组|每月只需 0.4 美元|即可订阅 nmBot+[footer:2024 年 11 月对活跃群组进行的统计表明该比例的群组可享受折合每月 0.4 美元每月的 nmBot+ 方案]，|让这款订阅|对更多人负担得起。",
+                "feature_1": {
+                    "content": "群组所有者|可设定|管理员|对 nmBot 设置|的修改权限，|管理管理员|更轻松。",
+                    "image": "website intro plus feature 1.png",
+                    "title": "管理员权限控制"
+                },
+                "feature_2": {
+                    "content": "自定义|群组中|显示的|机器人指令，|启用功能|有的放矢。",
+                    "image": "website intro plus feature 2.png",
+                    "title": "自定义指令列表"
+                },
+                "feature_3": {
+                    "content": "更多可选操作时间、|自定义验证文本、|入群次数限制、|自定义骚扰规则|等功能|帮助您管控入群用户。",
+                    "image": "website intro plus feature 3.png",
+                    "title": "入群验证"
+                },
+                "feature_4": {
+                    "content": "自定义呼叫词|并在私信中接收提示。",
+                    "image": "website intro plus feature 4.png",
+                    "title": "呼叫群组管理员"
+                },
+                "feature_5": {
+                    "content": "<b>自定义骚扰规则</b>|让群组拥有|自己的骚扰拦截逻辑；|<b>定时任务</b>|支持在群组中|定时发送消息；|还有|<b>超多限制解锁</b>|使 nmBot 体验更畅快。",
+                    "image": "website intro plus feature 5.png",
+                    "title": "更多权益"
+                },
+                "title": "nmBot+<nobr>，</nobr><br>超优惠|进阶服务。",
+                "view_full_benefits": "进一步了解 nmBot+ 权益"
+            },
             "page_description": "了解 Telegram 上功能最强大的群组管理机器人之一。\nnmBot 搭载众多群组和频道管理功能，并通过各种娱乐功能为群组带来新体验，已获得上万群组的信赖。",
             "panel": {
                 "feature_1": {
