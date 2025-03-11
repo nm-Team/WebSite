@@ -969,7 +969,7 @@ function pb($key)
         </div>
         <div class="usage-data-block-item">
             <div class="text">
-                <div class="data" data-data="303208">0</div>
+                <div class="data" data-data="363566">0</div>
                 <div class="text-title">
                     <?php pb("products.nmbot_telegram.usage.data.mau"); ?>
                 </div>
