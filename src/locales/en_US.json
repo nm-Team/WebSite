@@ -296,7 +296,7 @@
             "go_to_panel": "nmBot Panel",
             "header_name": "nmBot",
             "nmbot_plus": {
-                "content_0": "This premium subscription |for groups and individual users |brings over 20 |premium services |to nmBot. |83% of active groups |can subscribe to nmBot+ |for only $0.4 per month[footer: The statistics of active groups in November 2024 show that groups in this proportion can enjoy nmBot+ equivalent to $0.4 per month], |making this subscription |affordable for more people.",
+                "content_0": "This premium subscription |for groups and individual users |brings over 20 |premium services |to nmBot. |83% of active groups |can subscribe to nmBot+ |for only $0.4 per month[footer: The statistics of active groups in November 2024 show that groups in this proportion can enjoy nmBot+ equivalent to $0.4 per month. ], |making this subscription |affordable for more people.",
                 "feature_1": {
                     "content": "Group owners can set administrators' modification permissions to nmBot settings, making it easier to manage administrators.",
                     "image": "website intro plus feature 1.png",
