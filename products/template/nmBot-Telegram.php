@@ -1491,7 +1491,7 @@ function pb($key)
         const windowHeight = window.innerHeight;
 
         // if intelligence visible
-        if (rect.top < (windowHeight / 2) && rect.bottom > (windowHeight / 2)) {
+        if (rect.top < (windowHeight / 2) && rect.bottom > (windowHeight / 2) && !haloEffect.haloMaskImageRegenerateInProgress) {
             haloIn.setAttribute('data-show', 'true');
         } else {
             haloIn.setAttribute('data-show', 'false');
