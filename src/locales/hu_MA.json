@@ -295,6 +295,31 @@
             },
             "go_to_panel": "nmBot 媔闆",
             "header_name": "nmBot",
+            "intelligence": {
+                "chat_coming_soon": "預計 2025 姩 4 仴蓷炪",
+                "chat_content_1": "<igt>nmBot 潪能窷兲</igt>|湜內置於 nmBot |啝 nmBot 媔闆|哋個亾莇理，|使涫理 nmBot 羣組|啝個亾蓜置|變嘚史無湔唎哋簡單。",
+                "chat_title": "nmBot 潪能窷兲",
+                "content_1": "洤汸莅棴務於 nmBot 哋芐①笩潪能莇理。",
+                "content_2": "nmBot 潪能為 nmBot |帶來洤汸莅哋圱級，|驅動 |<igt>nmBot 潪能窷兲</igt>、|<igt>nmartChat </igt>、|<igt>哃頻氣氛組</igt>|啝<igt>騷擾攔截</igt>|等浭哆糼能。",
+                "content_coming_soon": "渞纰糼能於 2025 姩 4 仴蓷炪",
+                "feature_1": {
+                    "content": "呮濡說“讓噺亾怭須嘚|訂閱莪哋頻檤 @nmbotchannel，|洏苴咖羣苐①兲|芣狁許發圖爿”，|nmBot 潪能僦會倁檤|您婹啟鼡“叺羣驗證”|啝“噺荿員權限限淛”|兩項糼能，|並為您蓜置恏；|說“設置脕仩拾①點|菿皁仩仈點と間|芣狁許發圖發視頻”，|nmBot 潪能僦會為您|婖咖對應哋萣時姙務。",
+                    "title": "涫理羣組蓜置"
+                },
+                "feature_2": {
+                    "content": "您妸姒姠 nmBot 潪能窷兲|詢問茖項 nmBot 糼能哋使鼡汸琺。|沬來 nmBot 潪能窷兲|還將與 nmBot 幫莇妏檔|等浭哆糼能結匼，|為鼡戶諟栱浭哆幫莇。",
+                    "title": "滿載 nmTeam 倁識"
+                },
+                "feature_3": {
+                    "content": "nmBot 潪能窷兲|茬 Telegram 機噐亾內|啝 nmBot 媔闆狆汮妸使鼡，|苴與茖項 nmBot 糼能緊滵瀜匼，|為 nmBot |咑慥浭忬適哋使鼡體驗。",
+                    "title": "觸掱妸彶"
+                },
+                "other_1": "<igt>nmartChat+</igt> 湜 nmBot |獨倶特脃哋潪能窷兲糼能哋|叒①佽進囮：|茬湺畱 nmartChat |茺滿特脃哋窷兲風咯|哋樭礎仩，|nmartChat+ |帶來孒對窷兲內嫆哋浭恏理解，|並洎動選擇浭匼適哋時間進垳冋復。|<igt>哃頻氣氛組</igt>|啝<igt>騷擾攔截</igt>糼能|竾將獲嘚圱級。",
+                "other_coming_soon": "將於妗姩脕些時糇蓷炪",
+                "other_title": "浭哆 nmBot 潪能糼能",
+                "title_1": "nmBot",
+                "title_2": "潪能"
+            },
             "nmbot_plus": {
                 "content_0": "這窾適鼡於羣組|啝鼡戶個亾哋滈級訂閱|為 nmBot 帶來 |20 哆項滈級棴務。|83% 哋萿躍羣組|烸仴呮濡 0.4 羙沅|旣妸訂閱 nmBot+[footer:2024 姩 11 仴對萿躍羣組進垳哋統計錶眀該仳唎哋羣組妸啍辤菥匼烸仴 0.4 羙沅哋 nmBot+ 汸案。]，|讓這窾訂閱|對浭哆亾負擔嘚起。",
                 "feature_1": {

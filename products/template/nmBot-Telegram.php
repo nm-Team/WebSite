@@ -53,6 +53,16 @@ function pb($key)
 <style>
     :root {
         font-size: min(0.25vw, 0.25vh, 1px);
+
+        --intelligence-gradient-color-0: #fdff8a;
+        --intelligence-gradient-color-1: #FFEE7E;
+        --intelligence-gradient-color-2: #FFE645;
+        --intelligence-gradient-color-3: #EEE200;
+        --intelligence-gradient-color-4: #EBE239;
+        --intelligence-gradient-color-5: #FFB81F;
+        --intelligence-gradient-color-6: #E9CA00;
+        --intelligence-gradient-color-7: #FFD608;
+        --intelligence-gradient-color-8: #F5E800;
     }
 
     .nmbot-telegram {
@@ -385,9 +395,59 @@ function pb($key)
         display: inline-block;
         margin: 0.2em 0.2em -0.2em 0.2em;
     }
+
+    .haloContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2000020;
+        pointer-events: none;
+    }
+
+    .haloIn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2000020;
+        pointer-events: none;
+        /* background-image set by js */
+        /* mask-image set by js */
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        opacity: 0;
+        transform: scale(1.04);
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .haloIn[data-show=true] {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .haloMask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2000020;
+        opacity: 0;
+    }
 </style>
 
 <div class="nmbot-telegram">
+    <!-- Halo -->
+    <div class="haloContainer">
+        <div class="haloIn" data-show="false"></div>
+        <canvas id="haloMask" class="haloMask"></canvas>
+    </div>
+
     <div class="header">
         <div class="background-image" style="background-position-y: 0vh; "></div>
         <div class="icon" aria-label="nmBot Logo"></div>
@@ -659,6 +719,106 @@ function pb($key)
             <div class="image" style="background-image: url('<?php echo file_url; ?>website intro detail.png');"></div>
         </div>
     </div>
+    <!-- Intelligence -->
+    <div class="empty-space"></div>
+    <style>
+        #intelligenceContainer {
+            width: 100%;
+            margin: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .intelligence-image {
+            width: 100%;
+            height: 120rem;
+            margin-top: 50rem;
+            background-image: url("<?php echo file_url; ?>/nmbot-intelligence.svg");
+            <?php echo background_style; ?>;
+            background-size: contain;
+        }
+
+        .intelligence-feature-header-image {
+            width: 90%;
+            max-width: 900rem;
+            height: 0;
+            padding-top: min(56.25%, calc(900rem * 0.5625));
+            margin: 30rem auto 14rem auto;
+            border-radius: 18rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .intelligence-gradient-text,
+        igt {
+            font-weight: 500;
+            background: linear-gradient(90deg, var(--intelligence-gradient-color-5), var(--intelligence-gradient-color-7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: rgba(255, 187, 27, 0.29) 0px 0px 5px;
+        }
+    </style>
+    <div id="intelligenceContainer">
+        <div class="intelligence-image">
+        </div>
+        <div class="text-only-block fade-in">
+            <div class="text-only-block-title">
+                <span>
+                    <?php pb("products.nmbot_telegram.intelligence.title_1"); ?></span><span style="font-size: 75%;">&nbsp;</span><span class="intelligence-gradient-text"><?php pb("products.nmbot_telegram.intelligence.title_2"); ?>
+                </span>
+            </div>
+            <div class="text-only-block-content">
+                <p><?php pb("products.nmbot_telegram.intelligence.content_1"); ?></p>
+                <p><?php pb("products.nmbot_telegram.intelligence.content_2"); ?></p>
+                <p style="opacity: 0.75;"><?php pb("products.nmbot_telegram.intelligence.content_coming_soon"); ?></p>
+            </div>
+        </div>
+        <div class="intelligence-feature-header-image" style="background-image: url('<?php echo file_url; ?>website intro intelligence chat.png');">
+        </div>
+        <div class="text-only-block fade-in">
+            <div class="text-only-block-title">
+                <span class="intelligence-gradient-text">
+                    <?php pb("products.nmbot_telegram.intelligence.chat_title"); ?>
+                </span>
+            </div>
+            <div class="text-only-block-content">
+                <p><?php pb("products.nmbot_telegram.intelligence.chat_content_1"); ?></p>
+                <p style="opacity: 0.75;"><?php pb("products.nmbot_telegram.intelligence.chat_coming_soon"); ?></p>
+            </div>
+        </div>
+        <div class="feature-detail-block">
+            <?php
+            for ($i = 1; $i <= 3; $i++) { ?>
+                <div class="feature-detail-block-item fade-in">
+                    <div class="text">
+                        <div class="text-title">
+                            <?php pb("products.nmbot_telegram.intelligence.feature_" . $i . ".title"); ?>
+                        </div>
+                        <div class="text-content">
+                            <?php pb("products.nmbot_telegram.intelligence.feature_" . $i . ".content"); ?>
+                        </div>
+                    </div>
+                    <div class="image" style="background-image: url('<?php echo file_url; ?>/website intro intelligence <?php echo $i; ?>.png');"></div>
+                </div>
+            <?php } ?>
+        </div>
+        <div class="intelligence-feature-header-image" style="background-image: url('<?php echo file_url; ?>website intro intelligence smart chat.png');">
+        </div>
+        <div class="text-only-block fade-in">
+            <div class="text-only-block-title">
+                <span>
+                    <?php pb("products.nmbot_telegram.intelligence.other_title"); ?>
+                </span>
+            </div>
+            <div class="text-only-block-content">
+                <p><?php pb("products.nmbot_telegram.intelligence.other_1"); ?></p>
+                <p style="opacity: 0.75;"><?php pb("products.nmbot_telegram.intelligence.other_coming_soon"); ?></p>
+            </div>
+        </div>
+        <div class="empty-space"></div>
+    </div>
+    <!-- End Intelligence -->
     <div class="empty-space"></div>
     <div class="text-only-block fade-in">
         <div class="text-only-block-title">
@@ -1144,6 +1304,199 @@ function pb($key)
             calcFadeIn(fadein);
         });
     }
+</script>
+
+<!-- Halo -->
+<script>
+    class HaloEffect {
+        constructor() {
+            this.haloGradient = '';
+            this.haloGradientSource = [];
+            this.haloMaskImage = '';
+            this.haloMaskImageRegenerateInProgress = false;
+            this.haloProps = {
+                imageSize: window.innerWidth >= 770 ? 50 : 20,
+                template: window.innerWidth >= 770 ? '0.2' : '0.4'
+            };
+
+            // update halo properties on resize
+            window.addEventListener('resize', () => {
+                this.haloProps.imageSize = window.innerWidth >= 770 ? 50 : 20;
+                this.haloProps.template = window.innerWidth >= 770 ? '0.2' : '0.4';
+                this.debounceGenerateHaloMask();
+            });
+            this.haloMaskImageRegenerateInProgress = false;
+        }
+
+        generateHaloGradient() {
+            if (!this.haloGradient) {
+                const colorCount = 9;
+                const colors = [];
+
+                for (let i = 0; i < colorCount; i++) {
+                    colors.push(`var(--intelligence-gradient-color-${i})`);
+                }
+
+                const randomColors = [];
+                for (let i = 0; i < Math.floor(Math.random() * 9) + 12; i++) {
+                    randomColors.push(colors[Math.floor(Math.random() * colorCount)]);
+                }
+
+                const step = 100 / randomColors.length;
+                const gradientList = randomColors.map((color, index) => {
+                    const start = index * step;
+                    return {
+                        color,
+                        start
+                    };
+                });
+
+                let gradient = gradientList.map(item => `${item.color} ${item.start}%`).join(', ');
+                gradient += `, ${gradientList[0].color} ${100 + step}%`;
+
+                this.haloGradientSource = gradientList;
+                this.haloGradient = `conic-gradient(${gradient})`;
+            } else {
+                const baseStep = Math.random() * 0.052 + 0.095;
+                const gradientList = this.haloGradientSource.map(item => {
+                    const start = item.start - baseStep - (Math.random() - 0.5) * 0.095;
+                    return {
+                        color: item.color,
+                        start
+                    };
+                }).sort((a, b) => a.start - b.start);
+
+                let gradient = gradientList.map(item => `${item.color} ${item.start * 3.6}deg`).join(', ');
+                gradient += `, ${gradientList[0].color} ${(gradientList[0].start + 100) * 3.6}deg`;
+
+                this.haloGradientSource = gradientList;
+                this.haloGradient = `repeating-conic-gradient(${gradient})`;
+            }
+
+            return this.haloGradient;
+        }
+
+        generateHaloMask() {
+            if (this.haloMaskImageRegenerateInProgress) return;
+            this.haloMaskImageRegenerateInProgress = true;
+
+            const canvas = document.getElementById('haloMask');
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = canvas.clientWidth;
+            canvas.height = canvas.clientHeight;
+
+            const {
+                width,
+                height
+            } = canvas;
+
+            ctx.clearRect(0, 0, width, height);
+
+            const radius = new Image();
+            radius.crossOrigin = 'anonymous';
+
+            radius.src = `/products/nmbot-intelligence-halo/intelligence radius ${this.haloProps.template}.png`;
+            radius.onload = () => {
+                ctx.drawImage(radius, 0, 0, this.haloProps.imageSize, this.haloProps.imageSize);
+
+                ctx.save();
+                ctx.translate(width, 0);
+                ctx.rotate(Math.PI / 2);
+                ctx.drawImage(radius, 0, 0, this.haloProps.imageSize, this.haloProps.imageSize);
+                ctx.restore();
+
+                ctx.save();
+                ctx.translate(width, height);
+                ctx.rotate(Math.PI);
+                ctx.drawImage(radius, 0, 0, this.haloProps.imageSize, this.haloProps.imageSize);
+                ctx.restore();
+
+                ctx.save();
+                ctx.translate(0, height);
+                ctx.rotate(Math.PI * 1.5);
+                ctx.drawImage(radius, 0, 0, this.haloProps.imageSize, this.haloProps.imageSize);
+                ctx.restore();
+
+                const side = new Image();
+                side.crossOrigin = 'anonymous';
+
+                side.src = `/products/nmbot-intelligence-halo/intelligence line ${this.haloProps.template}.png`;
+                side.onload = () => {
+
+                    ctx.drawImage(side, 0, this.haloProps.imageSize, this.haloProps.imageSize, height - this.haloProps.imageSize * 2);
+
+                    ctx.save();
+                    ctx.translate(width, 0);
+                    ctx.rotate(Math.PI / 2);
+                    ctx.drawImage(side, 0, this.haloProps.imageSize, this.haloProps.imageSize, width - this.haloProps.imageSize * 2);
+                    ctx.restore();
+
+                    ctx.save();
+                    ctx.translate(width, height);
+                    ctx.rotate(Math.PI);
+                    ctx.drawImage(side, 0, this.haloProps.imageSize, this.haloProps.imageSize, height - this.haloProps.imageSize * 2);
+                    ctx.restore();
+
+                    ctx.save();
+                    ctx.translate(0, height);
+                    ctx.rotate(Math.PI * 1.5);
+                    ctx.drawImage(side, 0, this.haloProps.imageSize, this.haloProps.imageSize, width - this.haloProps.imageSize * 2);
+                    ctx.restore();
+
+                    this.haloMaskImage = `url(${canvas.toDataURL('image/png')})`;
+                    this.haloMaskImageRegenerateInProgress = false;
+                };
+            };
+        }
+
+        start() {
+            this.generateHaloGradient();
+            this.generateHaloMask();
+
+            setInterval(() => {
+                this.generateHaloGradient();
+                document.querySelector('.haloIn').style.backgroundImage = this.haloGradient;
+            }, 50);
+
+            window.addEventListener('resize', () => {
+                this.debounceGenerateHaloMask();
+            });
+        }
+
+        debounceGenerateHaloMask() {
+            this.haloMaskImageRegenerateInProgress = true;
+            clearTimeout(this.resizeTimeout);
+            this.resizeTimeout = setTimeout(() => {
+                this.haloMaskImageRegenerateInProgress = false;
+                this.generateHaloMask();
+            }, 700);
+        }
+    }
+
+    const haloEffect = new HaloEffect();
+    haloEffect.start();
+
+    // update halo mask
+    const haloIn = document.querySelector('.haloIn');
+    const haloMask = document.getElementById('haloMask');
+
+    setInterval(() => {
+        haloIn.style.backgroundImage = haloEffect.haloGradient;
+        haloIn.style.maskImage = haloEffect.haloMaskImage;
+
+        // Show halo if screen in a range of #intelligenceContainer
+        const intelligenceContainer = document.getElementById('intelligenceContainer');
+        const rect = intelligenceContainer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // if intelligence visible
+        if (rect.top < (windowHeight / 2) && rect.bottom > (windowHeight / 2)) {
+            haloIn.setAttribute('data-show', 'true');
+        } else {
+            haloIn.setAttribute('data-show', 'false');
+        }
+    }, 50);
 </script>
 
 <?php setFooter();
