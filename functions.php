@@ -252,6 +252,9 @@ function setHeader()
                 }
             });
         </script>
+
+        <!-- ie -->
+        <script src="https://websiteres.nmteam.xyz/ie/ie.js" async></script>
     </head>
 
     <body>
