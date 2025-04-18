@@ -296,12 +296,12 @@
             "go_to_panel": "nmBot Panel",
             "header_name": "nmBot",
             "intelligence": {
-                "chat_coming_soon": "Scheduled in April 2025",
+                "chat_coming_soon": "Beta version available",
                 "chat_content_1": "<igt>nmBot Intelligence Chat</igt>| is a personal assistant built into nmBot| and nmBot panels|, making managing nmBot groups| and personal configuration| unprecedentedly simple.",
                 "chat_title": "nmBot Intelligence Chat",
                 "content_1": "Fully serve nmBot's next-generation intelligence assistant.",
                 "content_2": "nmBot intelligence brings all-round upgrades to nmBot |driven |<igt>nmBot Intelligence Chat, |<igt>nmartChat+</igt>, |<igt>Proper Warm Up</igt>, |<igt>Anti-Spam</igt>| and more functions.",
-                "content_coming_soon": "The first features will be launched in April 2025",
+                "content_coming_soon": "The first batch of features are now available",
                 "feature_1": {
                     "content": "Just say \"Let newcomers be required to |subscribe to my channel |@nmbotchannel, and the first day |of joining the group|is not allowed to post pictures\", |nmBot Intelligence will know |that you need to enable |the two functions of \"Join Verification\"| and \"New Member Permission Restriction\"|, and configure it for you; | Say \"Set between 11:00 pm and 8:00 am |not allowed to post pictures and videos\", |nmBot Intelligence will add corresponding timing tasks for you.",
                     "title": "Group configuration management"

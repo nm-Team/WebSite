@@ -296,12 +296,12 @@
             "go_to_panel": "nmBot 面板",
             "header_name": "nmBot",
             "intelligence": {
-                "chat_coming_soon": "预计 2025 年 4 月推出",
+                "chat_coming_soon": "Beta 版现已推出",
                 "chat_content_1": "<igt>nmBot 智能聊天</igt>|是内置于 nmBot |和 nmBot 面板|的个人助理，|使管理 nmBot 群组|和个人配置|变得史无前例地简单。",
                 "chat_title": "nmBot 智能聊天",
                 "content_1": "全方位服务于 nmBot 的下一代智能助理。",
                 "content_2": "nmBot 智能为 nmBot |带来全方位的升级，|驱动 |<igt>nmBot 智能聊天</igt>、|<igt>nmartChat+</igt>、|<igt>同频气氛组</igt>|和<igt>骚扰拦截</igt>|等更多功能。",
-                "content_coming_soon": "首批功能于 2025 年 4 月推出",
+                "content_coming_soon": "首批功能现已推出",
                 "feature_1": {
                     "content": "只需说“让新人必须得|订阅我的频道 @nmbotchannel，|而且加群第一天|不允许发图片”，|nmBot 智能就会知道|您要启用“入群验证”|和“新成员权限限制”|两项功能，|并为您配置好；|说“设置晚上十一点|到早上八点之间|不允许发图发视频”，|nmBot 智能就会为您|添加对应的定时任务。",
                     "title": "管理群组配置"
