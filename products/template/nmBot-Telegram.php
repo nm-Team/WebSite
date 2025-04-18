@@ -1228,10 +1228,10 @@ function pb($key)
         </div>
         <div class="resource-item fade-in">
             <div class="image" style="background-image: url('<?php echo file_url; ?>website intro doc.png');"></div>
-            <div class="title"><?php pb("products.nmbot_telegram.resources.documention_title"); ?></div>
-            <div class="content"><?php pb("products.nmbot_telegram.resources.documention_content"); ?></div>
+            <div class="title"><?php pb("products.nmbot_telegram.resources.documentation_title"); ?></div>
+            <div class="content"><?php pb("products.nmbot_telegram.resources.documentation_content"); ?></div>
             <div class="link">
-                <a href="https://support.nmteam.xyz/nmbot-telegram?ref=nmBotIntro" target="_blank" rel="noopener noreferrer" class="link-a"><?php pb("products.nmbot_telegram.resources.documention_link"); ?></a>
+                <a href="https://support.nmteam.xyz/nmbot-telegram?ref=nmBotIntro" target="_blank" rel="noopener noreferrer" class="link-a"><?php pb("products.nmbot_telegram.resources.documentation_link"); ?></a>
             </div>
         </div>
         <div class="resource-item fade-in">

@@ -35,7 +35,7 @@ try {
 }
 catch (err) {
     console.error(err);
-    products_detail_inner.innerHTML = "<div class='msg'>" + productI18n.unavaliable + "</div>";
+    products_detail_inner.innerHTML = "<div class='msg'>" + productI18n.unavailable + "</div>";
     document.title = productI18n.notfound + document.title;
 }
 

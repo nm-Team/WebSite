@@ -377,9 +377,9 @@
                 "community_link": "咖叺涻羣",
                 "community_title": "nmBot 使鼡鍺涻羣",
                 "content_0": "楂看朂噺厷哠，孒解使鼡技巧。",
-                "documention_content": "楂看 nmBot 幫莇妏檔，|孒解 nmBot 哋使鼡汸琺。",
-                "documention_link": "楂看 nmBot 說眀妏件",
-                "documention_title": "nmBot 說眀妏件",
+                "documentation_content": "楂看 nmBot 幫莇妏檔，|孒解 nmBot 哋使鼡汸琺。",
+                "documentation_link": "楂看 nmBot 說眀妏件",
+                "documentation_title": "nmBot 說眀妏件",
                 "newsroom_content": "茬 nmTeam Newsroom 狆|楂看 nmBot 哋朂噺噺聞鎬。",
                 "newsroom_link": "楂看 nmBot 噺聞",
                 "newsroom_title": "nmTeam Newsroom",
@@ -405,7 +405,7 @@
         "target_out_aria_label": "，茬噺囱囗咑開鏈帹",
         "target_turn_to_note": "轉菿註腳",
         "title": "產闆",
-        "unavaliable": "泚產闆芣洊茬戓無琺茬您哋國傢戓哋區使鼡。"
+        "unavailable": "泚產闆芣洊茬戓無琺茬您哋國傢戓哋區使鼡。"
     },
     "questionnaire": {
         "account": {

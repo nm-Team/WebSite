@@ -377,9 +377,9 @@
                 "community_link": "Join the Community",
                 "community_title": "nmBot User Community",
                 "content_0": "Check the latest announcements |and learn about usage tips.",
-                "documention_content": "View nmBot Help Document |and learn about the ways to use nmBot.",
-                "documention_link": "View the Document",
-                "documention_title": "nmBot Help Document",
+                "documentation_content": "View nmBot Help Document |and learn about the ways to use nmBot.",
+                "documentation_link": "View the Document",
+                "documentation_title": "nmBot Help Document",
                 "newsroom_content": "View the latest news releases |concerning nmBot in nmTeam Newsroom.",
                 "newsroom_link": "View nmBot News",
                 "newsroom_title": "nmTeam Newsroom",
@@ -399,13 +399,13 @@
             }
         },
         "noresult": "No nmProduct available in your country or region was found.",
-        "notfound": "Oops, The product you are looking for does not exist or is unavaliable in your country or region.",
+        "notfound": "Oops, The product you are looking for does not exist or is unavailable in your country or region.",
         "target_detail_aria_label": ", see detail",
         "target_in_aria_label": ", open link",
         "target_out_aria_label": ", open link in new tab",
         "target_turn_to_note": "Turn to footnote",
         "title": "Products",
-        "unavaliable": "This product does not exist or cannot be used in your country or region."
+        "unavailable": "This product does not exist or cannot be used in your country or region."
     },
     "questionnaire": {
         "account": {

@@ -213,7 +213,7 @@
         "target_out_aria_label": "、リンクを新しいウィンドウで開きます",
         "target_turn_to_note": "脚注に移動",
         "title": "製品",
-        "unavaliable": "この製品は存在しないか、お住まいの国ではご利用いただけません。"
+        "unavailable": "この製品は存在しないか、お住まいの国ではご利用いただけません。"
     },
     "questionnaire": {
         "account": {

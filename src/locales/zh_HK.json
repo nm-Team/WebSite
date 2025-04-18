@@ -377,9 +377,9 @@
                 "community_link": "加入社群",
                 "community_title": "nmBot 使用者社群",
                 "content_0": "查看最新公告，了解使用技巧。",
-                "documention_content": "查看 nmBot 幫助文檔，|了解 nmBot 的使用方法。",
-                "documention_link": "查看 nmBot 說明文件",
-                "documention_title": "nmBot 說明文件",
+                "documentation_content": "查看 nmBot 幫助文檔，|了解 nmBot 的使用方法。",
+                "documentation_link": "查看 nmBot 說明文件",
+                "documentation_title": "nmBot 說明文件",
                 "newsroom_content": "在 nmTeam Newsroom 中|查看 nmBot 的最新新聞稿。",
                 "newsroom_link": "查看 nmBot 新聞",
                 "newsroom_title": "nmTeam Newsroom",
@@ -405,7 +405,7 @@
         "target_out_aria_label": "，在新窗口打開鏈接",
         "target_turn_to_note": "轉到註腳",
         "title": "產品",
-        "unavaliable": "此產品不存在或無法在您的國家或地區使用。"
+        "unavailable": "此產品不存在或無法在您的國家或地區使用。"
     },
     "questionnaire": {
         "account": {
