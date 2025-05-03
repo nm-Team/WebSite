@@ -273,7 +273,7 @@
                         "title": "指令映射"
                     },
                     "feature_4": {
-                        "content": "有了 Telegram 商业功能，不止群组，|连您的私信|都能接入关键词回复，|让 nmBot&nbsp;|代替您|发送回复、|删除消息|甚至禁言用户[footer:商业关键词回复不支持删除消息或禁言用户。]<bs>，</bs>|还有超多选项|供自定义。",
+                        "content": "有了 Telegram 商业功能，不止群组，|连您的私信|都能接入关键词回复，|让 nmBot&nbsp;|代替您|发送回复、|删除消息|甚至禁言用户[footer:商业关键词回复不支持禁言用户。]<bs>，</bs>|还有超多选项|供自定义。",
                         "image": "website intro special feature 4.png",
                         "title": "关键词回复"
                     },

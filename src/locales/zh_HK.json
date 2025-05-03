@@ -273,7 +273,7 @@
                         "title": "指令映射"
                     },
                     "feature_4": {
-                        "content": "有了Telegram 商業功能，不止群組，|連您的私訊|都能接入關鍵字回复，|讓nmBot&nbsp;|代替您|發送回复、|刪除消息|甚至禁言用戶[footer:商業關鍵字回覆不支援刪除訊息或禁言用戶。]<bs>，</bs>還有超多選項|供自訂。",
+                        "content": "有了Telegram 商業功能，不止群組，|連您的私訊|都能接入關鍵字回复，|讓nmBot&nbsp;|代替您|發送回复、|刪除消息|甚至禁言用戶[footer:商業關鍵字回覆不支援禁言用戶。]<bs>，</bs>還有超多選項|供自訂。",
                         "image": "website intro special feature 4.png",
                         "title": "關鍵字回覆"
                     },
