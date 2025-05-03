@@ -1496,6 +1496,13 @@ function pb($key)
         } else {
             haloIn.setAttribute('data-show', 'false');
         }
+
+        // set page theme
+        if (rect.top < 25 && rect.bottom > 25) {
+            document.documentElement.setAttribute('data-theme', 'default');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
     }, 50);
 </script>
 
