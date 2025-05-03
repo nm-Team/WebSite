@@ -230,6 +230,13 @@ function pb($key)
         <?php echo background_style; ?>
     }
 
+    .nmbot-telegram .feature-detail-block.larger-image .feature-detail-block-item .image {
+        width: 410rem;
+        height: calc(410rem * 0.625);
+        margin-inline-start: 12rem;
+        margin-inline-end: 22rem;
+    }
+
     @media (max-width: 800px) {
         .nmbot-telegram .feature-detail-block-item {
             flex-direction: column-reverse;
@@ -684,7 +691,7 @@ function pb($key)
             <p><?php pb("products.nmbot_telegram.panel.simplified_content_2"); ?></p>
         </div>
     </div>
-    <div class="feature-detail-block">
+    <div class="feature-detail-block larger-image">
         <div class="feature-detail-block-item fade-in">
             <div class="text">
                 <div class="text-title">
@@ -787,7 +794,7 @@ function pb($key)
                 <p style="opacity: 0.75;"><?php pb("products.nmbot_telegram.intelligence.chat_coming_soon"); ?></p>
             </div>
         </div>
-        <div class="feature-detail-block">
+        <div class="feature-detail-block larger-image">
             <?php
             for ($i = 1; $i <= 3; $i++) { ?>
                 <div class="feature-detail-block-item fade-in">
@@ -1033,7 +1040,7 @@ function pb($key)
             <p><?php pb("products.nmbot_telegram.nmbot_plus.content_0"); ?></p>
         </div>
     </div>
-    <div class="feature-detail-block">
+    <div class="feature-detail-block larger-image">
         <?php
         for ($i = 1; $i <= 5; $i++) { ?>
             <div class="feature-detail-block-item fade-in">
