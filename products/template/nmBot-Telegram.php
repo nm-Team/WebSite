@@ -230,11 +230,13 @@ function pb($key)
         <?php echo background_style; ?>
     }
 
-    .nmbot-telegram .feature-detail-block.larger-image .feature-detail-block-item .image {
-        width: 410rem;
-        height: calc(410rem * 0.625);
-        margin-inline-start: 12rem;
-        margin-inline-end: 22rem;
+    @media (min-width: 800px) {
+        .nmbot-telegram .feature-detail-block.larger-image .feature-detail-block-item .image {
+            width: 410rem;
+            height: calc(410rem * 0.625);
+            margin-inline-start: 12rem;
+            margin-inline-end: 22rem;
+        }
     }
 
     @media (max-width: 800px) {
