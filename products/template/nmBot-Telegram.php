@@ -751,7 +751,7 @@ function pb($key)
             width: 90%;
             max-width: 900rem;
             height: 0;
-            padding-top: min(56.25%, calc(900rem * 0.5625));
+            padding-top: min(56.25%, calc(1000rem * 0.5625));
             margin: 30rem auto 14rem auto;
             border-radius: 18rem;
             background-size: cover;
