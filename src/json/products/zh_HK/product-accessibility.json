@@ -238,8 +238,8 @@
                                 "id": "seemore",
                                 "name": "向我們提意見",
                                 "javascript": "",
-                                "href": "/blackboard/questionnaire/product_accessibility_suggestion",
-                                "towards": "in"
+                                "href": "https://support.nmteam.xyz/contact-us/accessibility/",
+                                "towards": "out"
                             }
                         ]
                     }
