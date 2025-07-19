@@ -4,6 +4,19 @@ define('SEARCH_INDEX_URL', 'https://support.nmteam.xyz/search/search_index.json'
 header('Content-Type: application/json');
 
 /*
+    Search API Documentation:
+    
+    Parameters:
+    - query: Search query string (required, 2-255 characters)
+    - location_prefix: Filter results by location prefix (optional)
+    - use_regex: Enable regex mode for search terms (optional, default: false)
+    
+    Usage:
+    1. Normal search: search.php?query=nmTeam 支持
+    2. With location filter: search.php?query=产品&location_prefix=#_1
+    3. Regex search: search.php?query=nm\w+&use_regex=true
+    4. Multiple regex terms: search.php?query=nm\w+ 支持.*文档&use_regex=true
+    
     Search index format:
 {
   "config": {
@@ -36,55 +49,80 @@ $query = isset($_GET['query']) ? trim($_GET['query']) : '';
 
 $location_prefix = isset($_GET['location_prefix']) ? trim($_GET['location_prefix']) : '';
 
+// Get regex mode parameter (default: false for backward compatibility)
+$useRegex = isset($_GET['use_regex']) && $_GET['use_regex'] === 'true';
+
 // Validate query
 if (empty($query)) {
-    die(json_encode(['status' => 'error', 'message' => 'QUERY_EMPTY']));
+  die(json_encode(['status' => 'error', 'message' => 'QUERY_EMPTY']));
 }
 
 // Validate query length
 if (strlen($query) < 2 || strlen($query) > 255) {
-    die(json_encode(['status' => 'error', 'message' => 'QUERY_LENGTH_ERROR']));
+  die(json_encode(['status' => 'error', 'message' => 'QUERY_LENGTH_ERROR']));
 }
 
 // Fetch search index
 $searchIndex = @file_get_contents(SEARCH_INDEX_URL);
 
 if ($searchIndex === false) {
-    die(json_encode(['status' => 'error', 'message' => 'SEARCH_INDEX_FETCH_ERROR']));
+  die(json_encode(['status' => 'error', 'message' => 'SEARCH_INDEX_FETCH_ERROR']));
 }
 
 $searchIndex = json_decode($searchIndex, true);
 
 // Process search query, case-insensitive, divide by space
-$searchTerms = explode(' ', strtolower($query));
+$searchTerms = explode(' ', $query);
 $results = [];
+
+// Validate regex patterns if using regex mode
+if ($useRegex) {
+  foreach ($searchTerms as $term) {
+    if (@preg_match('/' . $term . '/ui', '') === false) {
+      die(json_encode(['status' => 'error', 'message' => 'INVALID_REGEX_PATTERN', 'invalid_term' => $term]));
+    }
+  }
+}
 
 // Search through documents
 foreach ($searchIndex['docs'] as $item) {
-    // Prefix
-    if (!empty($location_prefix) && stripos($item['location'], $location_prefix) === false) {
-        continue; // Skip this item if location prefix doesn't match
+  // Prefix
+  if (!empty($location_prefix) && stripos($item['location'], $location_prefix) === false) {
+    continue; // Skip this item if location prefix doesn't match
+  }
+
+  $allTermsMatch = true;
+
+  foreach ($searchTerms as $term) {
+    $titleMatch = false;
+    $textMatch = false;
+
+    if ($useRegex) {
+      // Use regex matching with case-insensitive and unicode flags
+      $titleMatch = preg_match('/' . $term . '/ui', $item['title']);
+      $textMatch = preg_match('/' . $term . '/ui', $item['text']);
+    } else {
+      // Use simple string matching (original behavior)
+      $titleMatch = stripos($item['title'], $term) !== false;
+      $textMatch = stripos($item['text'], $term) !== false;
     }
 
-    $allTermsMatch = true;
-
-    foreach ($searchTerms as $term) {
-        if (stripos($item['title'], $term) === false && stripos($item['text'], $term) === false) {
-            $allTermsMatch = false;
-            break; // No need to check other terms if one doesn't match
-        }
+    if (!$titleMatch && !$textMatch) {
+      $allTermsMatch = false;
+      break; // No need to check other terms if one doesn't match
     }
+  }
 
-    if ($allTermsMatch) {
-        $results[] = $item;
-    }
+  if ($allTermsMatch) {
+    $results[] = $item;
+  }
 }
 
 // Prepare response
 $response = [
-    'status' => 'success',
-    'query' => $query,
-    'results' => $results
+  'status' => 'success',
+  'query' => $query,
+  'results' => $results
 ];
 // Return JSON response
 echo json_encode($response);
