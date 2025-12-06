@@ -1,0 +1,13 @@
+# Custom i18n detection for nmTeam PHP templates
+languageIds:
+  - php
+
+# Detect p("key"), t("key"), pb("key") calls; {key} placeholder is provided by i18n Ally
+usageMatchRegex:
+  - "[^\\w\\d](?:p|t|pb)\\(['\"`]({key})['\"`]"
+
+# Accept dot-nested keys
+keyMatchRegex: "[A-Za-z0-9_.-]+"
+
+# Enable only this custom framework
+monopoly: true
