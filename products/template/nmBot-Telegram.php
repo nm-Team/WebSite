@@ -780,7 +780,6 @@ function pb($key)
             <div class="text-only-block-content">
                 <p><?php pb("products.nmbot_telegram.intelligence.content_1"); ?></p>
                 <p><?php pb("products.nmbot_telegram.intelligence.content_2"); ?></p>
-                <p style="opacity: 0.75;"><?php pb("products.nmbot_telegram.intelligence.content_coming_soon"); ?></p>
             </div>
         </div>
         <div class="intelligence-feature-header-image" style="background-image: url('<?php echo file_url; ?>website intro intelligence chat.png');">
@@ -822,7 +821,6 @@ function pb($key)
             </div>
             <div class="text-only-block-content">
                 <p><?php pb("products.nmbot_telegram.intelligence.other_1"); ?></p>
-                <p style="opacity: 0.75;"><?php pb("products.nmbot_telegram.intelligence.other_coming_soon"); ?></p>
             </div>
         </div>
         <div class="empty-space"></div>

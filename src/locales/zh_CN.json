@@ -297,25 +297,23 @@
             "header_name": "nmBot",
             "intelligence": {
                 "chat_coming_soon": "Beta 版现已推出",
-                "chat_content_1": "<igt>nmBot 智能聊天</igt>|是内置于 nmBot |和 nmBot 面板|的个人助理，|使管理 nmBot 群组|和个人配置|变得史无前例地简单。",
-                "chat_title": "nmBot 智能聊天",
+                "chat_content_1": "<igt>nmBot Copilot</igt> |是内置于 nmBot |和 nmBot 面板|的个人助理，|使管理 nmBot 群组|和个人配置|变得史无前例地简单。",
+                "chat_title": "nmBot Copilot",
                 "content_1": "全方位服务于 nmBot 的下一代智能助理。",
-                "content_2": "nmBot 智能为 nmBot |带来全方位的升级，|驱动 |<igt>nmBot 智能聊天</igt>、|<igt>nmartChat+</igt>、|<igt>同频气氛组</igt>|和<igt>骚扰拦截</igt>|等更多功能。",
-                "content_coming_soon": "首批功能现已推出",
+                "content_2": "nmBot 智能为 nmBot |带来全方位的升级，|驱动 |<igt>nmBot Copilot</igt>、|<igt>nmartChat+</igt>、|<igt>同频气氛组</igt>|和<igt>骚扰拦截</igt>|等更多功能。",
                 "feature_1": {
-                    "content": "只需说“让新人必须得|订阅我的频道 @nmbotchannel，|而且加群第一天|不允许发图片”，|nmBot 智能就会知道|您要启用“入群验证”|和“新成员权限限制”|两项功能，|并为您配置好；|说“设置晚上十一点|到早上八点之间|不允许发图发视频”，|nmBot 智能就会为您|添加对应的定时任务。",
+                    "content": "只需说“让新人必须得|订阅我的频道 @nmbotchannel，|而且加群第一天|不允许发图片”，|nmBot Copilot 就会知道|您要启用“入群验证”|和“新成员权限限制”|两项功能，|并为您配置好；|说“设置晚上十一点|到早上八点之间|不允许发图发视频”，|nmBot Copilot 就会为您|添加对应的定时任务。",
                     "title": "管理群组配置"
                 },
                 "feature_2": {
-                    "content": "您可以向 nmBot 智能聊天|询问各项 nmBot 功能的使用方法。|未来 nmBot 智能聊天|还将与 nmBot 帮助文档|等更多功能结合，|为用户提供更多帮助。",
+                    "content": "您可以向 nmBot Copilot |询问各项 nmBot 功能的使用方法。|未来 nmBot Copilot |还将与 nmBot 帮助文档|等更多功能结合，|为用户提供更多帮助。",
                     "title": "满载 nmTeam 知识"
                 },
                 "feature_3": {
-                    "content": "nmBot 智能聊天|在 Telegram 机器人内|和 nmBot 面板中均可使用，|且与各项 nmBot 功能紧密融合，|为 nmBot |打造更舒适的使用体验。",
+                    "content": "nmBot Copilot |在 Telegram 机器人内|和 nmBot 面板中均可使用，|且与各项 nmBot 功能紧密融合，|为 nmBot |打造更舒适的使用体验。",
                     "title": "触手可及"
                 },
-                "other_1": "<igt>nmartChat+</igt> 是 nmBot |独具特色的智能聊天功能的|又一次进化：|在保留 nmartChat |充满特色的聊天风格|的基础上，|nmartChat+ |带来了对聊天内容的更好理解，|并自动选择更合适的时间进行回复。|<igt>同频气氛组</igt>|和<igt>骚扰拦截</igt>功能|也将获得升级。",
-                "other_coming_soon": "将于今年晚些时候推出",
+                "other_1": "<igt>nmartChat+</igt> 是 nmBot |独具特色的智能聊天功能的|又一次进化：|在保留 nmartChat |充满特色的聊天风格|的基础上，|nmartChat+ |带来了对聊天内容的更好理解，|并自动选择更合适的时间进行回复。|<igt>同频气氛组</igt>功能|能更好地|联系上下文，|不仅能回复帖子，|还会智能参与|评论互动。|<igt>骚扰拦截</igt>功能|在保持|低误判率|的前提下，|将骚扰消息识别准确率|提升至约 5 倍[footer:于 2025 年 12 月 22 日使用预发布版本的 nmBot 智能骚扰拦截组件进行测试。测试数据表明，在 nmBot 智能骚扰拦截设为“最严格”时，nmBot 智能骚扰拦截功能的识别效果可达传统识别的 5.11 倍。实际效果因使用情况和设置而异。]。",
                 "other_title": "更多 nmBot |智能功能",
                 "title_1": "nmBot",
                 "title_2": "智能"

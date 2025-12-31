@@ -297,25 +297,23 @@
             "header_name": "nmBot",
             "intelligence": {
                 "chat_coming_soon": "Beta version available",
-                "chat_content_1": "<igt>nmBot Intelligence Chat</igt>| is a personal assistant built into nmBot| and nmBot panels|, making managing nmBot groups| and personal configuration| unprecedentedly simple.",
-                "chat_title": "nmBot Intelligence Chat",
+                "chat_content_1": "<igt>nmBot Copilot</igt>| is a personal assistant built into nmBot| and nmBot panels|, making managing nmBot groups| and personal configuration| unprecedentedly simple.",
+                "chat_title": "nmBot Copilot",
                 "content_1": "Fully serve nmBot's next-generation intelligence assistant.",
-                "content_2": "nmBot intelligence brings all-round upgrades to nmBot |driven |<igt>nmBot Intelligence Chat, |<igt>nmartChat+</igt>, |<igt>Proper Warm Up</igt>, |<igt>Anti-Spam</igt>| and more functions.",
-                "content_coming_soon": "The first batch of features are now available",
+                "content_2": "nmBot intelligence brings all-round upgrades to nmBot |driven |<igt>nmBot Copilot, |<igt>nmartChat+</igt>, |<igt>Proper Warm Up</igt>, |<igt>Anti-Spam</igt>| and more functions.",
                 "feature_1": {
-                    "content": "Just say \"Let newcomers be required to |subscribe to my channel |@nmbotchannel, and the first day |of joining the group|is not allowed to post pictures\", |nmBot Intelligence will know |that you need to enable |the two functions of \"Join Verification\"| and \"New Member Permission Restriction\"|, and configure it for you; | Say \"Set between 11:00 pm and 8:00 am |not allowed to post pictures and videos\", |nmBot Intelligence will add corresponding timing tasks for you.",
+                    "content": "Just say \"Let newcomers be required to |subscribe to my channel |@nmbotchannel, and the first day |of joining the group| is not allowed to post pictures\", |nmBot Copilot will know |that you need to enable |the two functions of \"Join Verification\"| and \"New Member Permission Restriction\"|, and configure it for you; | Say \"Set between 11:00 pm and 8:00 am |not allowed to post pictures and videos\", |nmBot Copilot will add corresponding scheduled tasks for you.",
                     "title": "Group configuration management"
                 },
                 "feature_2": {
-                    "content": "You can ask nmBot Intelligence Chat |how to use various nmBot functions. |In the future, nmBot smart chat| will also be combined with nmBot help document| and other functions to provide more help to users.",
+                    "content": "You can ask nmBot Copilot |how to use various nmBot functions. |In the future, nmBot smart chat| will also be combined with nmBot help document| and other functions to provide more help to users.",
                     "title": "Fully loaded with nmTeam knowledge"
                 },
                 "feature_3": {
-                    "content": "nmBot Intelligence Chat| is both available in the Telegram bot |and nmBot panel, and is closely integrated |with various nmBot functions |to create a more comfortable user experience for nmBot.",
+                    "content": "nmBot Copilot| is both available in the Telegram bot |and nmBot panel, and is closely integrated |with various nmBot functions |to create a more comfortable user experience for nmBot.",
                     "title": "At your fingertips"
                 },
-                "other_1": "<igt>nmartChat+</igt> is another evolution of nmBot |'s unique smart chat function: |on the basis of retaining nmartChat's |unique chat style|, |nmartChat+| brings a better understanding |of the chat content, |and automatically selects |a more appropriate time to reply. |<igt>Proper Warm Up</igt>| and <igt>Anti-Spam</igt> functions| will also be upgraded.",
-                "other_coming_soon": "Will be launched later this year",
+                "other_1": "<igt>nmartChat+</igt> is another evolution of nmBot |'s unique smart chat function: |on the basis of retaining nmartChat's |unique chat style|, |nmartChat+| brings a better understanding |of the chat content, |and automatically selects |a more appropriate time to reply. |<igt>Proper Warm Up</igt> function |can better | connect with the context, |not only reply to posts, |but also intelligently participate in |comment interactions. |<igt>Spam Interception</igt> function has improved recognition accuracy rate| to about 5 times [footer: Tested on December 22, 2025 using the pre-release version of nmBot intelligence spam interception component. Test data shows that when nmBot intelligence spam interception is set to \"most stringent\", the recognition effect of nmBot intelligence spam interception function can reach 5.11 times that of traditional recognition. Actual results vary based on usage and settings. ], while on the premise |of maintaining |a low false positive rate. ",
                 "other_title": "More |nmBot Intelligence |functions",
                 "title_1": "nmBot",
                 "title_2": "Intelligence"
