@@ -339,20 +339,6 @@ function setFooter()
                         </p>
                         <p><span><?php p("footer.email"); ?></span><a class="footer-a" href="mailto:support@nmteam.xyz" target="_blank">support@nmteam.xyz</a>
                         </p>
-                        <style>
-                            .freshping_badge {
-                                display: inline-block;
-                                width: 136px;
-                                height: 41px;
-                                background-image: url(https://statuspage.freshping.io/badge/1a22cbf2-da50-4d6e-a364-71e6b74a3717?0.24063971371569437);
-                                background-size: 136px;
-                                background-repeat: no-repeat;
-                                margin: 6px 0px 0 0 !important;
-                            }
-                        </style>
-                        <p><a href="/status" target="_blank" title="Freshping Badge. <?php p("status_page.description"); ?>" style="display: inline-block;"><object style="display: inline-block;">
-                                    <div class="freshping_badge"></div>
-                                </object></a></p>
                     </div>
                     <div class="right">
                         <i onclick="window.location.href='/'" style="background-image: url('https://websiteres.nmteam.xyz/producticon/nmTeam/logo@64.png'); filter: brightness(0); width: 60px; height: 60px; opacity: 0.16;"></i>
