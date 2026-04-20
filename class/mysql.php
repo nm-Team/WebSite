@@ -20,9 +20,9 @@ class CodyMySQL
 
         $this->mysql = new mysqli($host, $user, $pass, $database, $port);
         if (mysqli_connect_errno()) {
-            return false;
+            return;
         }
-        $this->mysql->set_charset('utf-8');
+        $this->mysql->set_charset('utf8mb4');
         $this->mysql->options(MYSQLI_OPT_INT_AND_FLOAT_NATIVE, true);
     }
 
@@ -56,21 +56,58 @@ class CodyMySQL
         return $ret;
     }
 
+    function escape($value)
+    {
+        return $this->mysql->real_escape_string((string)$value);
+    }
+
+    private function quoteIdentifier($identifier)
+    {
+        if (!is_string($identifier) || preg_match('/^[A-Za-z0-9_]+$/', $identifier) !== 1) {
+            return false;
+        }
+
+        return "`" . $identifier . "`";
+    }
+
     function insert($data, $table)
     {
-        $sql = "INSERT INTO `$table` (`";
-        $sql .= implode("`,`", array_keys($data));
-        $sql .= "`) VALUES ('";
-        $sql .= implode("','", array_values($data));
-        $sql .= "')";
+        $table_name = $this->quoteIdentifier($table);
+        if ($table_name === false || !is_array($data) || empty($data)) {
+            return false;
+        }
+
+        $columns = array();
+        $values = array();
+        foreach ($data as $key => $value) {
+            $column_name = $this->quoteIdentifier((string)$key);
+            if ($column_name === false) {
+                return false;
+            }
+
+            $columns[] = $column_name;
+            $values[] = "'" . $this->escape($value) . "'";
+        }
+
+        $sql = "INSERT INTO " . $table_name . " (" . implode(",", $columns) . ") VALUES (" . implode(",", $values) . ")";
         return $this->query($sql);
     }
 
     function update($data, $table, $where = "0")
     {
-        $sql = "UPDATE `" . $table . "` SET ";
+        $table_name = $this->quoteIdentifier($table);
+        if ($table_name === false || !is_array($data) || empty($data)) {
+            return false;
+        }
+
+        $sql = "UPDATE " . $table_name . " SET ";
         foreach ($data as $key => $value) {
-            $sql .= "`" . $key . "` = '" . $value . "',";
+            $column_name = $this->quoteIdentifier((string)$key);
+            if ($column_name === false) {
+                return false;
+            }
+
+            $sql .= $column_name . " = '" . $this->escape($value) . "',";
         }
         $sql = rtrim($sql, ',');
         $sql .= ' WHERE ' . $where;

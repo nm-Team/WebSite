@@ -1,42 +1,43 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . "/functions.php");
 require_once("./config.php");
+require_once(__DIR__ . "/security.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/class/mysql.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/class/redis.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/class/session.php");
-?><span style="display: none;"><?php
-                                $questionnaire_json = json_decode(file_get_contents("./json/" . addslashes($_GET['id']) . ".json"));
-                                ?></span>
-<?php if (!isset($questionnaire_json)) {
-    $questionnaire_json = array("title" => t("questionnaire.backstage.tip.not_found"), "description" => "");
-    $error_code = "not_found";
-}
-define("page_title", $questionnaire_json->title . " - " . t("questionnaire.backstage.title"));
-define("page_keywords", "");
-define("page_description", $questionnaire_json->description . t("questionnaire.description"));
-define("page_head_css", array("/src/css/questionnaire.css", "/src/css/questionnaire_backstage.css"));
-define("page_head_js", array("/src/js/chart.min.js"));
-define("page_body_js", array("/src/js/tab.js"));
-define("page_image", "");
-define("page_update", "");
-setHeader();
-$ana_start = microtime(true);
-// $redis = new CodyRedis(redis_host, redis_port, redis_pass);
-// $session = new CodySession(addslashes($_COOKIE['sessionid']), $redis);
+?><?php
+    $questionnaire_id = questionnaire_get_request_id();
+    $questionnaire_json = $questionnaire_id === null ? null : questionnaire_load_definition($questionnaire_id);
+    if ($questionnaire_json === null) {
+        $questionnaire_json = (object)array("title" => t("questionnaire.backstage.tip.not_found"), "description" => "");
+        $error_code = "not_found";
+    }
+    define("page_title", $questionnaire_json->title . " - " . t("questionnaire.backstage.title"));
+    define("page_keywords", "");
+    define("page_description", $questionnaire_json->description . t("questionnaire.description"));
+    define("page_head_css", array("/src/css/questionnaire.css", "/src/css/questionnaire_backstage.css"));
+    define("page_head_js", array("/src/js/chart.min.js"));
+    define("page_body_js", array("/src/js/tab.js"));
+    define("page_image", "");
+    define("page_update", "");
+    setHeader();
+    $ana_start = microtime(true);
+    // $redis = new CodyRedis(redis_host, redis_port, redis_pass);
+    // $session = new CodySession(addslashes($_COOKIE['sessionid']), $redis);
 
-// if (!isset($session->data['uid'])) {
-//     $error_code = "not_log";
-// } else {
-//     $uid = $session->data['uid'];
-//     if ($session->data['admin'] != "1") {
-//         $error_code = "not_admin";
-//     }
-// }
+    // if (!isset($session->data['uid'])) {
+    //     $error_code = "not_log";
+    // } else {
+    //     $uid = $session->data['uid'];
+    //     if ($session->data['admin'] != "1") {
+    //         $error_code = "not_admin";
+    //     }
+    // }
 
-// account system v1 has been deprecated
-// temporarily remove the account system check
-// change to check password
-?>
+    // account system v1 has been deprecated
+    // temporarily remove the account system check
+    // change to check password
+    ?>
 <?php
 // check password
 if (!isset($_POST['questionnaire_password']) || $_POST['questionnaire_password'] != questionnaire_password) {
@@ -83,15 +84,15 @@ if (isset($error_code)) {
 };
 
 $db = new CodyMySQL(mysql_host, mysql_port, mysql_user, mysql_pass, mysql_database);
-$sql = "SELECT * FROM `" . addslashes($_GET['id']) . "` WHERE 1";
+$sql = "SELECT * FROM `" . $questionnaire_id . "` WHERE 1";
 $data = $db->get($sql);
 // print_r($data);
 
 ?>
 <div class="mainBlock main">
-    <p><b><?php p("questionnaire.backstage.name"); ?></b><?php echo $questionnaire_json->title; ?></p>
+    <p><b><?php p("questionnaire.backstage.name"); ?></b><?php echo questionnaire_escape_html($questionnaire_json->title); ?></p>
     <br>
-    <p><a href="<?php echo 'https://' . $_SERVER['SERVER_NAME'] . '/blackboard/questionnaire/' . addslashes($_GET['id']); ?>"><?php p("questionnaire.backstage.link"); ?></a> </p>
+    <p><a href="<?php echo questionnaire_escape_html('https://' . $_SERVER['SERVER_NAME'] . '/blackboard/questionnaire/' . rawurlencode($questionnaire_id)); ?>"><?php p("questionnaire.backstage.link"); ?></a> </p>
     <br>
     <div class="tabView" id="sTab">
         <div class="tabHeader">
@@ -115,7 +116,7 @@ $data = $db->get($sql);
                                         foreach ($data as $d) {
                                             $t_sum += $d['submittime'] - $d['starttime'];
                                         }
-                                        echo (int)($t_sum / count($data));
+                                        echo count($data) > 0 ? (int)($t_sum / count($data)) : 0;
                                         ?>s</p>
                         <p class="otitle"><?php p("questionnaire.backstage.analyze.time"); ?></p>
                     </div>
@@ -200,16 +201,16 @@ $data = $db->get($sql);
                         <summary class="oSummary">
                             <?php
                             if ($questionnaire_json->requireLog == true) {
-                            ?><b><?php p("questionnaire.backstage.origin.uid"); ?>: </b><?php echo $d['uid']; ?>&Tab;
+                            ?><b><?php p("questionnaire.backstage.origin.uid"); ?>: </b><?php echo questionnaire_escape_html($d['uid']); ?>&Tab;
                             <?php
                             }
                             ?>
-                            <b><?php p("questionnaire.backstage.origin.id"); ?>: </b><?php echo $d['aid']; ?>&Tab;
-                            <b><?php p("questionnaire.backstage.origin.ip"); ?>: </b><?php echo $d['ip']; ?>
+                            <b><?php p("questionnaire.backstage.origin.id"); ?>: </b><?php echo questionnaire_escape_html($d['aid']); ?>&Tab;
+                            <b><?php p("questionnaire.backstage.origin.ip"); ?>: </b><?php echo questionnaire_escape_html($d['ip']); ?>
                             <br>
-                            <b><?php p("questionnaire.backstage.origin.submit_time"); ?>: </b><?php echo date("Y-m-d H:i:s", $d['submittime']); ?>&Tab;
+                            <b><?php p("questionnaire.backstage.origin.submit_time"); ?>: </b><?php echo questionnaire_escape_html(date("Y-m-d H:i:s", $d['submittime'])); ?>&Tab;
                             <!-- <b><?php p("questionnaire.backstage.origin.start_time"); ?>: </b><?php echo date("Y-m-d H:i:s", $d['starttime']); ?>&nbsp;&nbsp;&nbsp; -->
-                            <b><?php p("questionnaire.backstage.origin.time"); ?>: </b><?php echo ($d['submittime'] - $d['starttime']); ?>s
+                            <b><?php p("questionnaire.backstage.origin.time"); ?>: </b><?php echo questionnaire_escape_html(($d['submittime'] - $d['starttime'])); ?>s
                         </summary>
                         <div>
                             <?php
@@ -229,16 +230,16 @@ $data = $db->get($sql);
                                         switch ($question->type) {
                                             case "input":
                                             case "textarea":
-                                                echo "<p>" . $d["q_$index"] . "</p>";
+                                                echo "<p>" . questionnaire_escape_html($d["q_$index"]) . "</p>";
                                                 break;
                                             case "single":
                                                 foreach ($question->answers as $answer) {
-                                                    if (in_array($answer->value, (array)$d["q_$index"])) echo "<p>" . $answer->text . "</p>";
+                                                    if (in_array($answer->value, (array)$d["q_$index"])) echo "<p>" . questionnaire_escape_html($answer->text) . "</p>";
                                                 }
                                                 break;
                                             case "multiple":
                                                 foreach ($question->answers as $answer) {
-                                                    if ($d["q_$index"] && in_array($answer->value, json_decode($d["q_$index"]))) echo "<p>" . $answer->text . "</p>";
+                                                    if ($d["q_$index"] && in_array($answer->value, json_decode($d["q_$index"]))) echo "<p>" . questionnaire_escape_html($answer->text) . "</p>";
                                                 }
                                         }
                                         ?>
@@ -296,7 +297,11 @@ $data = $db->get($sql);
             </div>
             <div class="content" data-tab="j">
                 <h2><?php p("questionnaire.backstage.data_type.JSON"); ?></h2>
-                <pre><?php echo file_get_contents("./json/" . addslashes($_GET['id']) . ".json"); ?></pre>
+                <pre><?php
+                        $json_preview_path = questionnaire_get_json_path($questionnaire_id);
+                        $json_preview = $json_preview_path === null ? '' : file_get_contents($json_preview_path);
+                        echo questionnaire_escape_html($json_preview === false ? '' : $json_preview);
+                        ?></pre>
             </div>
         </div>
     </div>

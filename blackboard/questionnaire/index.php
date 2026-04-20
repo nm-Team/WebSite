@@ -1,7 +1,18 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . "/functions.php");
-$questionnaire_json = json_decode(file_get_contents("./json/" . addslashes($_GET['id']) . ".json"));
-if (!isset($questionnaire_json)) die(header("Location: /404"));
+require_once(__DIR__ . "/security.php");
+
+$questionnaire_id = questionnaire_get_request_id();
+if ($questionnaire_id === null) {
+    header("Location: /404");
+    exit;
+}
+
+$questionnaire_json = questionnaire_load_definition($questionnaire_id);
+if ($questionnaire_json === null) {
+    header("Location: /404");
+    exit;
+}
 define("page_title", $questionnaire_json->title . " - " . t("questionnaire.title"));
 define("page_keywords", "");
 define("page_description", $questionnaire_json->description . "questionnaire.description");
@@ -20,7 +31,7 @@ setHeader();
 <div class="title center">
     <h1><?php echo $questionnaire_json->title; ?></h1>
 </div>
-<form class="main" id="mainForm" method="POST" action="submit.php?id=<?php echo $_GET['id']; ?>" onsubmit="return false;">
+<form class="main" id="mainForm" method="POST" action="submit.php?id=<?php echo questionnaire_escape_html($questionnaire_id); ?>" onsubmit="return false;">
     <div class="questionnaireDescription">
         <?php echo $questionnaire_json->description; ?>
         <?php
