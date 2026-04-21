@@ -92,6 +92,14 @@
      <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
+<item>
+     <link>https://nmteam.xyz/supportus</link>
+     <title>Sponsor nmTeam - nmTeam - Official Website</title>
+     <description>Sponsor nmTeam.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
 </channel>
 </rss>
   
