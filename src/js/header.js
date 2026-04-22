@@ -69,7 +69,7 @@ function changeURLParam(name, value) {
 		var tmp = url.replace(unescape(name + '=' + r[2]), replaceText);
 		resultUrl = (tmp);
 	} else {
-		if (url.match('[\?]')) {
+		if (url.match('[?]')) {
 			resultUrl = url + '&' + replaceText;
 		}
 		else {
