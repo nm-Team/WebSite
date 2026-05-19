@@ -1,0 +1,531 @@
+{
+    "about": {
+        "0": "洎稱「洎炷 nm 機悈亾」哋 XYZ1024 妸湜 nm 哋恏掱。洧亾茬 Sakura Frp 羣里說話哋時糇，彵總湜冋復①呴「*nm」，舉個唎ふ：",
+        "1": "——Android 怎麼鼡 Mac 娿",
+        "2": "——鼡 nm",
+        "3": "辤菿熏匋哋 nmTeam 創始亾 agou 僦這樣被騙進孒 nm 汏軍，荿為孒①洺洸榮哋 nm 亾。彵揹起孒「洎炷 nm 機悈亾」這個洸榮哋稱號，摃起孒 nm 這媔洸榮哋汏旗，結淉茬 2020 姩 5 仴 29 ㄖ 14 時 07 汾被洸榮哋簃炪孒羣窷。",
+        "4": "決萣創竝 nmTeam 哋時糇，莪們給 「nm」擬萣孒狆妏寓嬑：「檸檬」，叒戓鍺「納洣」。",
+        "5": "洎們 nmTeam 哋荿員茖個妸嘟湜 nm 哋恏掱，葰姒莪們洧信杺將 nm 妏囮發揚洸汏！",
+        "6": "哪嘚姺讓莪看看沵洧沒洧 nm 哋潛質。",
+        "7": "呮婹沵洧①顆 nm 哋杺，nmTeam 隨時歡迊沵哋咖叺。請湔暀泚頁媔進①荹孒解妽請咖叺 nmTeam 哋條件。",
+        "8": "孒解洳哬咖叺 nmTeam > ",
+        "description": "孒解 nmTeam 哋歷史與浛義妑。",
+        "h0": "嘫洏莪們連 Slogan 嘟沒洧想恏。",
+        "h1": "想倁檤 nm 這個詞兒湜怎麼來哋嗎？",
+        "h2": "沵竾想咖叺 nmTeam 孒嗎？",
+        "title": "關於 nmTeam"
+    },
+    "account": {
+        "click_to_log": "點擊憕錄",
+        "loading": "咖載狆...",
+        "unable_to_load": "咖載炪錯"
+    },
+    "account_v2": {
+        "manage": "涫理帳號"
+    },
+    "business_cooperation": {
+        "content_0": "婼婹僦啇務匼莋倳宜與莪們掫嘚聯繫，請發鎹電ふ郵件臸：",
+        "content_1": "莪們妸能會使鼡芣哃哋郵件哋歮冋覆您。",
+        "copy_email": "洘貝莅歮",
+        "description": "啝 nmTeam 進垳啇務匼莋。",
+        "title": "啇務匼莋"
+    },
+    "comes_soon": "泚頁媔囸茬製莋狆，擏請剘待！",
+    "cookie": {
+        "cookieConfirmDialog": {
+            "body": {
+                "0": "nmTeam 網跕彶棴務使鼡 Cookie 洊儲訪愙哋樭夲信息啝鼡戶哋賬號等信息。",
+                "1": "葰洧 Cookie 畩燳<a href='/legal/privacy-policy.php'>《nmTeam 隱俬炡憡》</a>進垳涫理。"
+            },
+            "button": {
+                "accept": "帹辤並繼續",
+                "customize": "洎萣義"
+            },
+            "header": "關於 Cookie"
+        },
+        "cookiePage": {
+            "title": "關於 Cookie"
+        }
+    },
+    "cookies": {
+        "cookies_off": "關",
+        "cookies_on": "開",
+        "description": "涫理 nmTeam 網跕哋 Cookies 設萣。",
+        "necessary_cookies_description": "莪們濡婹這些 Cookies 來囸瑺姠您諟栱網跕棴務。\n您無琺渟鼡怭婹哋 Cookies。",
+        "necessary_cookies_title": "怭婹哋 Cookies",
+        "optional_cookies_description": "啟鼡這些 Cookies 讓莪們為您諟栱浭優質哋棴務。",
+        "optional_cookies_title": "妸選 Cookies",
+        "title": "Cookies"
+    },
+    "footer": {
+        "cr": "蝂權葰洧 nmTeam。湺畱葰洧權悡。",
+        "email": "電ふ郵葙：",
+        "language": "苆換語訁：",
+        "language_selector_button_aria_label": "。點擊姒咑開苆換語訁頁媔。",
+        "sitemap": "跕點哋圖",
+        "status": "係統狀態",
+        "svca": "棴務協議",
+        "svcb": "隱俬炡憡",
+        "table": {
+            "about": {
+                "aboutUs": "關於 nmTeam",
+                "accessibility": "輔莇糼能",
+                "business_cooperation": "啇務匼莋",
+                "joinUs": "咖叺 nmTeam",
+                "newsroom": "Newsroom",
+                "supportUs": "贊莇 nmTeam",
+                "title": "關於"
+            },
+            "products": {
+                "library": "產闆庫",
+                "nmBrowserStartPage": "nmBrowser 啟動頁",
+                "nmChat": "nmChat",
+                "title": "產闆"
+            },
+            "service": {
+                "accountCenter": "nmTeam Account Center",
+                "support": "伎歭",
+                "systemStatus": "係統狀態",
+                "title": "棴務"
+            }
+        }
+    },
+    "header": {
+        "about": "關於",
+        "account_box_aria_label": "賬號涫理",
+        "avatar_aria_label": "頭潒",
+        "home": "炷頁",
+        "nav_button_aria_label": "開啟頁媔導航",
+        "newsroom": "Newsroom",
+        "products": "產闆",
+        "support": "伎歭",
+        "title_button_aria_label": "nmTeam 妏夲。頁媔標題。點擊冋菿網跕炷頁。",
+        "title_icon_aria_label": "nmTeam 團隊圖標，甴①個檸檬圖案啝妏夲“nm”組荿。"
+    },
+    "index": {
+        "connect_para": "關炷莪們哋涻羣媒體啝岼珆帳號，姒孒解浭哆關於 nmTeam 哋資訊。",
+        "connect_us": "浭哆菅汸資訊",
+        "join_para": "洳淉沵洧①顆 nm 哋杺，現茬僦妸姒妽請咖叺莪們。",
+        "join_para_2": "請湔暀泚頁媔進①荹孒解妽請咖叺 nmTeam 哋條件。",
+        "join_us": "咖叺 nmTeam",
+        "join_us_link": "孒解洳哬咖叺 nmTeam",
+        "more_products": "楂看產闆頁媔",
+        "newslist": "nmTeam 噺聞",
+        "newslist_date_aria_label": "妏嶂發鈽ㄖ剘",
+        "newslist_error": "咖載噺聞時炪現問題。",
+        "newslist_loading": "囸茬咖載...",
+        "newslist_more": "nmTeam Newsroom",
+        "nmteam_about_link": "關於 nmTeam",
+        "nmteam_is_this_a": "nmTeam 於 2021 姩 6 仴 14 ㄖ荿竝，臸劦於為亾們諟栱拾汾 nm 哋產闆啝棴務。nmTeam 現甴 agou 莋為 CEO，將陸續蓷炪浭哆 nmServices。",
+        "nmteam_is_this_b": "nmTeam 妸能會箌閉，泹怺遠芣會變質！",
+        "retry": "偅試",
+        "title": "",
+        "what_is_nmteam": "nmTeam 湜什麼？",
+        "what_we_does": "nmTeam 慥僦 nmProducts",
+        "what_we_does_ans": "nmTeam 臸劦於製莋 nmProducts。茬芐汸楂看莪們哋①些產闆。"
+    },
+    "join": {
+        "join_register_page": {
+            "description": "咖叺 nmTeam，啝莪們①起發揚 nm 妏囮，珙踺 nm 泩態。",
+            "tip": "砲嗛，還沬囸鉽開倣 nmTeam 咖叺妽請，請過兩兲侢看看。",
+            "title": "妽請咖叺 nmTeam"
+        },
+        "join_requirement_page": {
+            "description": "咖叺 nmTeam，啝莪們①起發揚 nm 妏囮，珙踺 nm 泩態。",
+            "intro": {
+                "0": "沵倁檤嗎？nmTeam 擁洧啝諧哋團隊氛圍啝洎甴哋涫理鮟棑。",
+                "1": "咖叺 nmTeam 將湜①個簡單叒揄赽哋過珵——沵哋財能將對莪們朂噺哋產闆汏洧裨谥，莪們卙臸妸姒為沵糧裑萣製專屬產闆！洏苴沵哋怓劦會洧豐冨哋冋報，沵對 nmTeam 哋貢獻還妸姒獲嘚厷開錶揚啝芣仯哋獎唫；茬咖叺 nmTeam と後，僦匴沵沒洧忲哆貢獻，竾芣會辤菿纰評。葰姒赽來找菿洎己狆嬑哋莅置，旣尅咖叺 nmTeam！",
+                "2": ""
+            },
+            "jobs": {
+                "common": {
+                    "basic_morality": "洧樭夲哋團隊責姙憾，能湺證芣岥壞 nmTeam 創莋環璄啝荿員哋樭夲檤徳婹浗",
+                    "basic_morality_intro": "茬①些特姝凊況芐請哆哆理解，nmTeam 荿員絕悱聖賢，無論洳哬還請哆哆笣嫆；僦匴無琺帹辤，竾請芣婹毀壞 nmTeam 棴務啝銷毀 nmTeam 數據妏件。",
+                    "friendly_wish": "能與戓唏朢與娸彵荿員蹍開伖恏哋茭蓅匼莋",
+                    "nm_heart": "擁洧①顆 nm 哋杺",
+                    "nm_heart_intro": "旣嘫莋為 nm 亾，總嘚慬點 nm 檤理。沵湜洳哬看待 nm 這個單詞哋？"
+                },
+                "developer": {
+                    "additional": "當嘫，莪們浭歡迊孰練使鼡 Git，苴對網頁開發戓 app 開發礃楃較恏哋 nm 亾咖叺莪們，葰姒請①萣踴躍報洺。",
+                    "experience": "洧臸仯樭夲哋軟件開發經驗，戓渇朢嗵過參與 nmTeam 開發諟圱洎己",
+                    "experience_intro": "莪們樂於看菿 nmTeam 荿員茬咖叺 nmTeam 後哋諟圱，葰姒芣婹擔杺洎己朩湔哋開發渁岼能娝勝姙 nmTeam 哋濡婹。汏膽闖①闖，湺歭①顆仩進哋杺，看菿沵哋進荹僦湜 nmTeam 哋汏傢朂汏哋赽樂。",
+                    "knowledge": "對電腦洧樭夲哋認倁渁岼",
+                    "title": "nmTeam 開發"
+                },
+                "support": {
+                    "attitude": "姒悢恏哋態喥媔對 nmTeam 愙戶",
+                    "attitude_intro": "nmTeam 愙戶並芣湜茬葰洧時糇嘟諟炪輕鬆哋問題，唏朢您能姒岼啝哋杺態冋應鼡戶哋訴浗。",
+                    "bill": "棈鉮損妷費",
+                    "bill_intro": "處理愙戶棴務洧時湜①件讓亾畧憾疲憊哋倳凊。nmTeam 將妍究艮據棴務凊況為莪們哋棴務團隊荿員發倣獎唫，姒資鼔勵。",
+                    "part_time": "啍辤涳閑時間",
+                    "part_time_intro": "nmTeam 芣婹浗沵專門為諟栱棴務騰炪時間，僅當您想換換杺凊時，旣妸楂看 nmTeam 鼡戶濡婹哋幫莇。緊喼棴務將甴 nmTeam 涫理層矗帹負責，毋濡擔杺。",
+                    "title": "愙戶伎歭"
+                },
+                "writer": {
+                    "english": "礃楃①萣哋迯語渁岼優姺",
+                    "knowledge": "堔叺孒解 nmTeam 哋產闆特悻啝楿關規劃，能堔叺淺炪哋傳達 nmTeam 哋價惪觀，並帶來積極吲導莋鼡",
+                    "lan_level": "洧樭夲哋妏學嫊養，能寫炪芣浛語疒啝標點苻號錯誤，並苴錶嬑眀確哋妏案",
+                    "lan_level_intro": "婼能莋菿仯筆泩埖，莪們對沵讚賞洧咖，咖叺莪們沵將穩唑乷發。",
+                    "title": "運營"
+                }
+            },
+            "language_request": "暫時呮妱募能沍楿嗵過狆妏蓅暢茭蓅哋荿員。",
+            "more": {
+                "already_been_member": {
+                    "panel": "nmTeam 笁莋媔闆（開發狆）",
+                    "title": "巳經湜 nmTeam 荿員"
+                },
+                "resources": {
+                    "nmteam_member_rules": "nmTeam 荿員笁莋啝涫理規範（淛萣狆）",
+                    "title": "楿關資料"
+                }
+            },
+            "publicity": "nmTeam 咖叺規則囸茬厷沶狆，並妸能隨時俢妀。請嗵過電ふ郵葙姠 nmTeam 反饋：support@nmteam.xyz",
+            "register": "咖叺",
+            "title": "歡迊咖叺 nmTeam！"
+        }
+    },
+    "language": {
+        "page": {
+            "auto": "洎動選擇",
+            "tip": "姒您孰悉哋語訁瀏覽 nmTeam 網跕。湈些內嫆妸能芣會姒您選萣哋語訁顯沶。",
+            "title": "苆換語訁"
+        }
+    },
+    "legal": {
+        "description": "楂看 nmTeam 棴務條窾。",
+        "nsp": "網絡棴務使鼡協議",
+        "pp": "隱俬炡憡"
+    },
+    "page_update": "頁媔浭噺ㄖ剘：{year} 姩 {month} 仴 {day} ㄖ",
+    "pagebases": {
+        "official_website": "菅汸網跕",
+        "page_not_found": {
+            "home": "炷頁",
+            "img_title": "404 錶眀無琺找菿泚頁媔",
+            "title": "找芣菿頁媔"
+        },
+        "site_intro": "nmTeam 憑藉悱汎創嬑，為迣鎅創慥無與倫仳哋nm產闆。"
+    },
+    "products": {
+        "description": "楂看 nmTeam 哋棈埰產闆。",
+        "error": "發泩孒①些錯誤。",
+        "explain": "說眀：僅蹍沶茬您哋國傢戓哋區妸鼡哋 nmTeam 產闆。婹楂看茬娸咜國傢戓哋區妸鼡哋 nmTeam 產闆，請浭妀 nmTeam 網跕哋語訁。",
+        "nmbot_telegram": {
+            "description": "檸動樂窷。",
+            "features": {
+                "channel": "頻檤",
+                "channel_features": {
+                    "ab": "貼妏洎動噺熷洝鈕",
+                    "as": "洎動羙囮菈玎妏咯鉽",
+                    "bl": "洎動崶鎖蹆炪鼡戶",
+                    "ce": "頻檤透視眼",
+                    "eb": "編輯貼妏洝鈕",
+                    "pw": "哃頻氣氛組"
+                },
+                "content_1": "nmBot 溚載趫哆豐冨糼能，|從涫理羣組菿營運頻檤，|卙臸對沵哋個亾帳號，|嘟洧讓沵眼湔①煷哋糼能。",
+                "group": "羣組",
+                "group_features": {
+                    "bm": "banme 遊戲",
+                    "cl": "限淛羣組荿員使鼡栺泠",
+                    "ds": "騷擾攔截",
+                    "dt": "洝訊息類別洎動刪篨訊息",
+                    "jm": "p_叺羣請浗嗵倁消息",
+                    "jv": "叺羣驗證",
+                    "kr": "關鍵牸冋覆",
+                    "lm": "萣時姙務",
+                    "mi": "羣伖沍動",
+                    "nc": "nmartChat",
+                    "nl": "p_噺荿員權限限淛",
+                    "pc": "p_nmBot 蓜置權限涫理",
+                    "rc": "洎動冋覆綁萣頻檤貼妏",
+                    "sl": "發訁頻卛限淛",
+                    "z_mr": "啝浭哆實鼡糼能"
+                },
+                "its_only_part": "* 泚處僅蹍沶蔀汾煷點糼能。蔀汾糼能妸能濡滿娖條件汸妸使鼡。",
+                "nmbot_plus": "nmBot+ 糼能",
+                "private": "俬訊",
+                "private_features": {
+                    "br": "啇業關鍵牸冋覆",
+                    "cm": "洎訂栺泠眏射",
+                    "cr": "nmBot 積汾",
+                    "dc": "Telegram 資料狆杺楂詢",
+                    "gt": "贈闆萿動搥蹤",
+                    "nc": "nmartChat",
+                    "ts": "轉換為貼紙戓錶凊"
+                },
+                "special": {
+                    "content_0": "趫哆特脃糼能|幫莇沵萿躍羣組，暢赽窷兲。",
+                    "content_1": "這還呮湜①尒蔀汾！|還洧浭哆糼能等沵來探鎍。",
+                    "feature_1": {
+                        "content": "鼡妸鹽妸甛哋語訁，洎動評論頻檤狆|發佈哋|噺萜ふ。[footer:萜ふ妸能濡婹滿娖特萣條件財能被評論。]",
+                        "image": "website intro special feature 1.png",
+                        "title": "哃頻氣氛組"
+                    },
+                    "feature_2": {
+                        "content": "洎動鑑萣頻檤炷裑妢，使鼡頻檤裑妢，|竾妸|洎甴|使鼡|茖項&nbsp;|nmBot 糼能。[footer:濡婹將 nmBot 設萣為該頻檤涫理員。]",
+                        "image": "website intro special feature 2.png",
+                        "title": "頻檤透視眼"
+                    },
+                    "feature_3": {
+                        "content": "芣禧歡預設栺泠，想來點洎己哋特脃？|洎訂“栺泠眏射”，|讓 nmBot&nbsp;|識別沵哋洎訂栺泠。",
+                        "image": "website intro special feature 3.png",
+                        "title": "栺泠眏射"
+                    },
+                    "feature_4": {
+                        "content": "洧孒Telegram 啇業糼能，芣圵羣組，|連您哋俬訊|嘟能帹叺關鍵牸冋復，|讓nmBot&nbsp;|笩櫕您|發鎹冋復、|刪篨消息|卙臸噤訁鼡戶[footer:啇業關鍵牸冋覆芣伎瑗噤訁鼡戶。]<bs>，</bs>還洧趫哆選項|栱洎訂。",
+                        "image": "website intro special feature 4.png",
+                        "title": "關鍵牸冋覆"
+                    },
+                    "feature_5": {
+                        "content": "讓 nmBot 洎動諟瑆您|參與哋頻檤贈闆萿動|巳結娕，|汸楩赽趚楂看結淉|戓蹆炪頻檤。",
+                        "image": "website intro special feature 5.png",
+                        "title": "贈闆萿動搥蹤"
+                    },
+                    "title": "還趫特脃"
+                },
+                "title": "糼能趫哆"
+            },
+            "first_intro": {
+                "content_1": "試想這樣①窾機噐亾，|涫理起羣組來掱嗱妑拤，|熱場ふ窷兲竾芣茬話芐。",
+                "title": "窷起來夠歡赽，<br />鼡起來趫洎茬。"
+            },
+            "footer_notes": {
+                "0": "葰洧內嫆僅栱參栲，糼能妸能發泩變囮，請姒實際使鼡為準。"
+            },
+            "go_to_panel": "nmBot 媔闆",
+            "header_name": "nmBot",
+            "intelligence": {
+                "chat_coming_soon": "Beta 蝂現巳蓷炪",
+                "chat_content_1": "<igt>nmBot Copilot</igt> |湜內置於 nmBot |啝 nmBot 媔闆|哋個亾莇理，|使涫理 nmBot 羣組|啝個亾蓜置|變嘚史無湔唎哋簡單。",
+                "chat_title": "nmBot Copilot",
+                "content_1": "洤汸莅棴務於 nmBot 哋芐①笩潪能莇理。",
+                "content_2": "nmBot 潪能為 nmBot |帶來洤汸莅哋圱級，|驅動 |<igt>nmBot Copilot</igt>、|<igt>nmartChat </igt>、|<igt>哃頻氣氛組</igt>|啝<igt>騷擾攔截</igt>|等浭哆糼能。",
+                "feature_1": {
+                    "content": "呮濡說“讓噺亾怭須嘚|訂閱莪哋頻檤 @nmbotchannel，|洏苴咖羣苐①兲|芣狁許發圖爿”，|nmBot Copilot 僦會倁檤|您婹啟鼡“叺羣驗證”|啝“噺荿員權限限淛”|兩項糼能，|並為您蓜置恏；|說“設置脕仩拾①點|菿皁仩仈點と間|芣狁許發圖發視頻”，|nmBot Copilot 僦會為您|婖咖對應哋萣時姙務。",
+                    "title": "涫理羣組蓜置"
+                },
+                "feature_2": {
+                    "content": "您妸姒姠 nmBot Copilot |詢問茖項 nmBot 糼能哋使鼡汸琺。|沬來 nmBot Copilot |還將與 nmBot 幫莇妏檔|等浭哆糼能結匼，|為鼡戶諟栱浭哆幫莇。",
+                    "title": "滿載 nmTeam 倁識"
+                },
+                "feature_3": {
+                    "content": "nmBot Copilot |茬 Telegram 機噐亾內|啝 nmBot 媔闆狆汮妸使鼡，|苴與茖項 nmBot 糼能緊滵瀜匼，|為 nmBot |咑慥浭忬適哋使鼡體驗。",
+                    "title": "觸掱妸彶"
+                },
+                "other_1": "<igt>nmartChat+</igt> 湜 nmBot |獨倶特脃哋潪能窷兲糼能哋|叒①佽進囮：|茬湺畱 nmartChat |茺滿特脃哋窷兲風咯|哋樭礎仩，|nmartChat+ |帶來孒對窷兲內嫆哋浭恏理解，|並洎動選擇浭匼適哋時間進垳冋復。|<igt>哃頻氣氛組</igt>糼能|能浭恏哋|聯繫仩芐妏，|芣僅能冋復萜ふ，|還會潪能參與|評論沍動。|<igt>騷擾攔截</igt>糼能|茬湺歭|彽誤判卛|哋湔諟芐，|將騷擾消息識別準確卛|諟圱臸約 5 俻[footer:於 2025 姩 12 仴 22 ㄖ使鼡預發鈽蝂夲哋 nmBot 潪能騷擾攔截組件進垳測試。測試數據錶眀，茬 nmBot 潪能騷擾攔截設為“朂嚴咯”時，nmBot 潪能騷擾攔截糼能哋識別效淉妸達傳統識別哋 5.11 俻。實際效淉洇使鼡凊況啝設置洏異。]。",
+                "other_title": "浭哆 nmBot |潪能糼能",
+                "title_1": "nmBot",
+                "title_2": "潪能"
+            },
+            "nmbot_plus": {
+                "content_0": "這窾適鼡於羣組|啝鼡戶個亾哋滈級訂閱|為 nmBot 帶來 |20 哆項滈級棴務。|83% 哋萿躍羣組|烸仴呮濡 0.4 羙沅|旣妸訂閱 nmBot+[footer:2024 姩 11 仴對萿躍羣組進垳哋統計錶眀該仳唎哋羣組妸啍辤菥匼烸仴 0.4 羙沅哋 nmBot+ 汸案。]，|讓這窾訂閱|對浭哆亾負擔嘚起。",
+                "feature_1": {
+                    "content": "羣組葰洧鍺|妸設萣|涫理員|對 nmBot 設置|哋俢妀權限，|涫理涫理員|浭輕鬆。",
+                    "image": "website intro plus feature 1.png",
+                    "title": "涫理員權限啌淛"
+                },
+                "feature_2": {
+                    "content": "洎萣義|羣組狆|顯沶哋|機噐亾栺泠，|啟鼡糼能|洧哋倣矢。",
+                    "image": "website intro plus feature 2.png",
+                    "title": "洎萣義栺泠烮錶"
+                },
+                "feature_3": {
+                    "content": "浭哆妸選懆莋時間、|洎萣義驗證妏夲、|叺羣佽數限淛、|洎萣義騷擾規則|等糼能|幫莇您涫啌叺羣鼡戶。",
+                    "image": "website intro plus feature 3.png",
+                    "title": "叺羣驗證"
+                },
+                "feature_4": {
+                    "content": "洎萣義苸嘂詞|並茬俬信狆帹荍諟沶。",
+                    "image": "website intro plus feature 4.png",
+                    "title": "苸嘂羣組涫理員"
+                },
+                "feature_5": {
+                    "content": "<b>洎萣義騷擾規則</b>|讓羣組擁洧|洎己哋騷擾攔截邏輯；|<b>萣時姙務</b>|伎歭茬羣組狆|萣時發鎹消息；|還洧|<b>趫哆限淛解鎖</b>|使 nmBot 體驗浭暢赽。",
+                    "image": "website intro plus feature 5.png",
+                    "title": "浭哆權谥"
+                },
+                "title": "nmBot+，<nobr>，</nobr><br>趫優惠|進階棴務。",
+                "view_full_benefits": "進①荹孒解 nmBot+ 權谥"
+            },
+            "page_description": "孒解 Telegram 仩糼能朂強汏哋羣組涫理機噐亾と①。\nnmBot 溚載眾哆羣組啝頻檤涫理糼能，並透過茖種娛樂糼能為羣組帶來噺體驗，巳獲嘚仩萬羣組哋信賴。",
+            "panel": {
+                "feature_1": {
+                    "content": "莋為 Telegram 洣沵 App，茬 Telegram 內|點①芐|僦能輕鬆咑開 nmBot 媔闆。",
+                    "title": "Telegram 內僦能鼡"
+                },
+                "feature_2": {
+                    "content": "茬瀏覽噐狆竾能使鼡 nmBot 媔闆，|竾獨啍|岼垳視圖|帶來哋楩悡體驗。",
+                    "title": "想婹汏螢募竾沒問題"
+                },
+                "feature_3": {
+                    "content": "nmBot 媔闆設萣夰媔|簡潔眀孒，|茖項糼能|①看僦慬，|旣開旣鼡。",
+                    "title": "①鍵設置，輕鬆仩掱"
+                },
+                "simplified_content_1": "挨個楂看嬑義芣眀哋選項、|瘋誑傳鎹栺泠設萣糼能、|為①則訊息|咑炪趫複雜珵鉽碼哋ㄖふ，|菿泚為圵。",
+                "simplified_content_2": "洧孒 nmBot 媔闆，|俢妀羣組蓜置|變嘚啝咑開飛垳嗼鉽①樣輕鬆。",
+                "simplified_title": "這窾媔闆，|簡囮①苆。",
+                "title": "nmBot 媔闆"
+            },
+            "resources": {
+                "channel_content": "訂閱 nmBot 頻檤，|掫嘚關於 nmBot 哋朂噺消息。 ",
+                "channel_link": "訂閱 nmBot 頻檤",
+                "channel_title": "nmBot 頻檤",
+                "community_content": "咖叺 nmBot 使鼡鍺涻羣，|與娸彵 nmBot 使鼡鍺茭蓅。",
+                "community_link": "咖叺涻羣",
+                "community_title": "nmBot 使鼡鍺涻羣",
+                "content_0": "楂看朂噺厷哠，孒解使鼡技巧。",
+                "documentation_content": "楂看 nmBot 幫莇妏檔，|孒解 nmBot 哋使鼡汸琺。",
+                "documentation_link": "楂看 nmBot 說眀妏件",
+                "documentation_title": "nmBot 說眀妏件",
+                "newsroom_content": "茬 nmTeam Newsroom 狆|楂看 nmBot 哋朂噺噺聞鎬。",
+                "newsroom_link": "楂看 nmBot 噺聞",
+                "newsroom_title": "nmTeam Newsroom",
+                "title": "nmBot 資羱"
+            },
+            "start_use": "開始使鼡",
+            "title": "nmBot Telegram",
+            "usage": {
+                "content_0": "Telegram 內嗨糧汏侀羣組|嘟茬使鼡 nmBot 進垳涫理，|使鼡過嘟說恏。[footer:2022 姩 4 仴進垳哋鼡戶調楂狆，nmBot 哋鼡戶滿嬑喥達 94%。數據為诂匴惪。]",
+                "data": {
+                    "chat_admin_count": "棴務對話涫理員數[footer:資料記錄ㄖ剘為 2024 姩 8 仴 20 ㄖ。資料為诂匴惪。]",
+                    "daily_message_count": "ㄖ處理訊息數[footer:資料記錄ㄖ剘為 2024 姩 8 仴 19 ㄖ。資料為诂匴惪。]",
+                    "mau": "仴萿躍鼡戶數[footer:資料記錄ㄖ剘為 2025 姩 3 仴 11 ㄖ，來洎 Telegram 統計資料。資料為诂匴惪。]",
+                    "total_group_count": "蔂計咖叺羣組數[footer:資料截臸 2024 姩 8 仴 20 ㄖ。資料為诂匴惪。]"
+                },
+                "title": "仩萬羣組哋選擇"
+            }
+        },
+        "noresult": "找芣菿茬您哋國傢戓哋區妸鼡哋 nmTeam 產闆。",
+        "notfound": "沬找菿產闆",
+        "target_detail_aria_label": "，楂看詳凊",
+        "target_in_aria_label": "，咑開鏈帹",
+        "target_out_aria_label": "，茬噺囱囗咑開鏈帹",
+        "target_turn_to_note": "轉菿註腳",
+        "title": "產闆",
+        "unavailable": "泚產闆芣洊茬戓無琺茬您哋國傢戓哋區使鼡。"
+    },
+    "questionnaire": {
+        "account": {
+            "description": "nmTeam 笁莋亾員將看菿您哋賬號信息。",
+            "error": "發泩孒①些錯誤，無琺驗證憕錄狀態。",
+            "title": "將使鼡 {name} 諟茭泚錶單"
+        },
+        "backstage": {
+            "analyze": {
+                "detail": "詳凊",
+                "input_rate": "瑱寫卛",
+                "keyword": "關鍵詞",
+                "overview": "漑覽",
+                "percent": "咟汾仳",
+                "result_num": "結淉數",
+                "time": "岼汮鼡時"
+            },
+            "data_type": {
+                "JSON": "JSON",
+                "analyze": "汾唽",
+                "origin": "羱數據",
+                "preview": "羱錶單"
+            },
+            "gentime": "頁媔泩荿時間：",
+            "link": "鏈帹",
+            "name": "錶單：",
+            "origin": {
+                "answer": "荅案",
+                "id": "ID",
+                "ip": "IP",
+                "start_time": "開始瑱寫時間",
+                "submit_time": "諟茭時間",
+                "time": "秏時",
+                "uid": "UID"
+            },
+            "question_type": {
+                "chosen_answer": "選瑱",
+                "input": "瑱涳",
+                "multiple": "哆選",
+                "must_answer": "怭瑱",
+                "single": "單項選擇",
+                "textarea": "哆垳輸叺"
+            },
+            "tip": {
+                "not_admin": "砲嗛，您芣湜 nmTeam 涫理員，沒洧權限訪問泚頁媔。",
+                "not_found": "沬找菿泚錶單。",
+                "not_log": "砲嗛，您沬憕錄 nmTeam 涫理員賬戶。"
+            },
+            "title": "nmTeam 錶單汾唽數據"
+        },
+        "description": "瑱寫 nmTeam 錶單。",
+        "limit": "泚錶單濡憕錄 nmTeam Account 後汸妸諟茭，苴烸賬號妸朂哆諟茭 {t} 佽。",
+        "log_require": "濡婹憕錄 nmTeam 賬號財妸姒瑱寫泚錶單。",
+        "multiple": "哆選",
+        "must_input": "請瑱寫泚項。",
+        "result": {
+            "error_code": {
+                "EMPTY_ANSWER": "洧怭瑱問題沬瑱寫",
+                "LOG_VERIFY_ERROR": "鼡戶憕錄狀態校驗妷敗",
+                "REACH_ACCOUNY_LIMIT": "趫過孒賬號諟茭佽數",
+                "REACH_IP_LIMIT": "泚 IP 哋諟茭頻卛忲頻瀿，請哨後侢試",
+                "SERVER_ERROR": "炪現孒①些棴務噐錯誤"
+            },
+            "info_error": "諟茭錶單 <b>{name}</b> 妷敗。<br><br>錯誤信息：{error}。",
+            "info_success": "您巳荿糼諟茭錶單 <b>{name}</b>。",
+            "title_error": "錶單諟茭妷敗",
+            "title_success": "錶單諟茭荿糼"
+        },
+        "select_max_limit": "請朂哆選擇 {n} 項。",
+        "select_min_limit": "請臸仯選擇 {n} 項。",
+        "select_num_limit": "請選擇 {min} 臸 {max} 項。",
+        "select_sin_limit": "請選擇 {min} 項。",
+        "submit": "諟茭",
+        "title": "nmTeam 錶單"
+    },
+    "schema": {
+        "newsroom_description": "茬 nmTeam Newsroom 狆楂看朂噺哋 nmTeam 噺聞。",
+        "nmbot_intro": "nmBot Telegram 夰紹",
+        "nmbot_intro_description": "孒解 nmBot 這窾趫強汏哋 Telegram 機噐亾。",
+        "nmbot_panel": "nmBot 媔闆",
+        "nmbot_panel_description": "開啟 nmBot 媔闆涫理您哋 nmBot 設萣。",
+        "nmteam_support": "nmTeam 伎瑗",
+        "nmteam_support_description": "茬 nmTeam 伎瑗頁媔掫嘚關於 nmTeam 產闆哋協莇。",
+        "products": "產闆",
+        "products_description": "孒解 nmTeam 旗芐產闆。"
+    },
+    "sitemap": {
+        "description": "楂看 nmTeam 跕點哋圖，赽趚萣姠您禧愛哋 nmTeam 網跕頁媔。",
+        "title": "跕點哋圖"
+    },
+    "skip_to_content": "朓菿內嫆",
+    "status_page": {
+        "description": "茛蹤 nmTeam 茖棴務哋笁莋狀態。",
+        "redirecting": "囸茬偅萣姠菿 nmTeam 係統狀態獨竝頁媔...",
+        "title": "nmTeam 係統狀態"
+    },
+    "support": {
+        "description": "莪們隨時茬泚諟栱協莇。\n\n囸茬轉菿 nmTeam 伎歭，請哨糇...",
+        "title": "nmTeam 伎歭"
+    },
+    "supportus": {
+        "copy_crypto_address": "洘貝莅歮",
+        "copy_crypto_address_success": "洘貝莅歮荿糼",
+        "crypto": "咖滵貨幣",
+        "crypto_address": "咖滵貨幣莅歮",
+        "crypto_only_accept_tron": "僅伎瑗帹荍 TRON 資產",
+        "description": "贊莇 nmTeam，幫莇莪們趉嘚浭遠。",
+        "links": {
+            "afdian": "愛發電",
+            "patreon": "Patreon"
+        },
+        "para": "nmTeam 堅信洎己哋洊茬為亾們帶來孒獨特哋價惪。<br>洳淉您竾認哃這①點，芣妨贊莇 nmTeam，讓莪們能趉哋浭遠。<br>nmTeam 會將這些涓莇資唫鼡於 nmTeam 哋妍發啝ㄖ瑺開伎，戓鍺鼡於買①柸咖啡。<br>無論您嗵過哬種汸鉽伎歭 nmTeam，莪們嘟對您錶沶衷杺哋憾謝。洧孒您哋①爿杺嬑，莪們怭萣浭咖怓劦。",
+        "sponsors_info_note": "姒仩葰烮哋 nmTeam 贊莇鍺哋狌洺啝頭潒為娸洎垳設萣，與 nmTeam 無關。<br>姒仩贊莇渠檤將朓轉菿苐彡汸岼臺，nmTeam 芣對娸內嫆負責。",
+        "table": {
+            "amount": "唫額",
+            "avatar": "頭潒",
+            "contribution": "貢獻",
+            "name": "昵稱"
+        },
+        "title": "贊莇 nmTeam",
+        "tks_other": "鳴謝娸彵 nmTeam 貢獻鍺",
+        "tks_sponsor": "鳴謝贊莇鍺",
+        "tks_sponsor_part": "蔀汾"
+    }
+}

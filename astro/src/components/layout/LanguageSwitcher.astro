@@ -1,0 +1,29 @@
+---
+import { defaultLocale, publicLocales, type PublicLocale } from '@/i18n/locales';
+
+interface Props {
+  currentLocale: PublicLocale;
+  slug: string[];
+}
+
+const { currentLocale, slug } = Astro.props;
+
+function toPath(locale: PublicLocale) {
+  if (slug.length === 0) {
+    return `/${locale}/`;
+  }
+
+  return `/${locale}/${slug.join('/')}/`;
+}
+---
+<nav aria-label="Language switcher">
+  <ul>
+    {publicLocales.map((locale) => (
+      <li>
+        <a href={toPath(locale)} aria-current={currentLocale === locale ? 'page' : undefined}>
+          {locale === defaultLocale ? 'en' : locale}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

@@ -1,0 +1,31 @@
+---
+import Footer from '@/components/layout/Footer.astro';
+import Header from '@/components/layout/Header.astro';
+import LanguageRedirect from '@/components/layout/LanguageRedirect.astro';
+import LanguageSwitcher from '@/components/layout/LanguageSwitcher.astro';
+import { defaultLocale } from '@/i18n/locales';
+import { routeManifest } from '@/i18n/routes';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  return routeManifest.map((route) => ({
+    params: {
+      slug: route.slug.length === 0 ? undefined : route.slug.join('/'),
+    },
+  }));
+}
+
+const slugParam = Astro.params.slug;
+const slug = slugParam ? slugParam.split('/') : [];
+const title = slug.length === 0 ? 'Home' : slug.join('/');
+---
+<BaseLayout title={title} lang={defaultLocale}>
+  <Header />
+  <LanguageSwitcher currentLocale={defaultLocale} slug={slug} />
+  <main>
+    <h1>{title}</h1>
+    <p>Unprefixed route renders English fallback and may redirect for users.</p>
+  </main>
+  <Footer />
+  <LanguageRedirect />
+</BaseLayout>
