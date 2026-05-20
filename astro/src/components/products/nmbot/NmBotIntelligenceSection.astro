@@ -1,0 +1,53 @@
+---
+import NmBotFeatureBlock from './NmBotFeatureBlock.astro';
+import NmBotTextBlock from './NmBotTextBlock.astro';
+import { nmBotAsset, renderNmBotText, type NmBotTextContext } from './nmBotText';
+import type { PublicLocale } from '@/i18n/locales';
+
+interface Props {
+  locale: PublicLocale;
+  textContext: NmBotTextContext;
+}
+
+const { locale, textContext } = Astro.props;
+---
+<section id="intelligenceContainer" data-testid="nmbot-intelligence">
+  <div class="intelligence-image"></div>
+  <div class="text-only-block fade-in">
+    <div class="text-only-block-title">
+      <span set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.title_1', textContext)} /><span style="font-size: 75%;">&nbsp;</span><span class="intelligence-gradient-text" set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.title_2', textContext)} />
+    </div>
+    <div class="text-only-block-content">
+      <p set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.content_1', textContext)} />
+      <p set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.content_2', textContext)} />
+    </div>
+  </div>
+  <div class="intelligence-feature-header-image" style={`background-image: url("${nmBotAsset('website intro intelligence chat.png')}");`}></div>
+  <div class="text-only-block fade-in">
+    <div class="text-only-block-title">
+      <span class="intelligence-gradient-text" set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.chat_title', textContext)} />
+    </div>
+    <div class="text-only-block-content">
+      <p set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.chat_content_1', textContext)} />
+      <p style="opacity: 0.75;" set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.chat_coming_soon', textContext)} />
+    </div>
+  </div>
+  <NmBotFeatureBlock
+    locale={locale}
+    textContext={textContext}
+    largerImage
+    features={[1, 2, 3].map((index) => ({
+      titleKey: `products.nmbot_telegram.intelligence.feature_${index}.title`,
+      contentKey: `products.nmbot_telegram.intelligence.feature_${index}.content`,
+      image: `/website intro intelligence ${index}.png`,
+    }))}
+  />
+  <div class="intelligence-feature-header-image" style={`background-image: url("${nmBotAsset('website intro intelligence smart chat.png')}");`}></div>
+  <NmBotTextBlock
+    locale={locale}
+    textContext={textContext}
+    titleKey="products.nmbot_telegram.intelligence.other_title"
+    contentKeys={['products.nmbot_telegram.intelligence.other_1']}
+  />
+  <div class="empty-space"></div>
+</section>

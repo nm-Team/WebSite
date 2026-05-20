@@ -37,6 +37,8 @@ const currentLocale = lang as PublicLocale;
   bodyJs={route.pageBodyJs}
   image={route.pageImage}
   pageUpdate={route.pageUpdate}
+  constTheme={route.id === 'products-overview-nmbot-telegram' ? 'dark' : undefined}
+  disallowHideHeader={route.id === 'products-overview-nmbot-telegram'}
   lang={currentLocale}
 >
   <PageContent route={route} locale={currentLocale} />

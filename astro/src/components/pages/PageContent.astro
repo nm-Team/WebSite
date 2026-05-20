@@ -5,6 +5,7 @@ import CookiesPage from './CookiesPage.astro';
 import NetworkServiceProtocolPage from './NetworkServiceProtocolPage.astro';
 import PlaceholderPage from './PlaceholderPage.astro';
 import PrivacyPolicyPage from './PrivacyPolicyPage.astro';
+import NmBotPage from '@/components/products/nmbot/NmBotPage.astro';
 import ProductDetailPage from '@/components/products/ProductDetailPage.astro';
 import ProductOverviewPage from '@/components/products/ProductOverviewPage.astro';
 import type { PageProps } from './PageProps';
@@ -27,6 +28,7 @@ const pageComponents = {
 } as const;
 
 const kindComponents = {
+  'custom-product-page': NmBotPage,
   'generic-product-page': ProductDetailPage,
 } as const;
 

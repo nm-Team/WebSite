@@ -1,0 +1,31 @@
+---
+import NmBotImageBlock from './NmBotImageBlock.astro';
+import { nmBotAsset, renderNmBotText, type NmBotTextContext } from './nmBotText';
+import type { PublicLocale } from '@/i18n/locales';
+
+interface FeatureItem {
+  titleKey: string;
+  contentKey: string;
+  image: string;
+}
+
+interface Props {
+  locale: PublicLocale;
+  textContext: NmBotTextContext;
+  features: readonly FeatureItem[];
+  largerImage?: boolean;
+}
+
+const { locale, textContext, features, largerImage = false } = Astro.props;
+---
+<div class:list={['feature-detail-block', { 'larger-image': largerImage }]}>
+  {features.map((feature) => (
+    <div class="feature-detail-block-item fade-in">
+      <div class="text">
+        <div class="text-title" set:html={renderNmBotText(locale, feature.titleKey, textContext)} />
+        <div class="text-content" set:html={renderNmBotText(locale, feature.contentKey, textContext)} />
+      </div>
+      <NmBotImageBlock imageUrl={nmBotAsset(feature.image)} />
+    </div>
+  ))}
+</div>

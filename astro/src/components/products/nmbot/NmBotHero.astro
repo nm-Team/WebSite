@@ -1,0 +1,17 @@
+---
+import { nmBotAsset, renderNmBotText, type NmBotTextContext } from './nmBotText';
+import type { PublicLocale } from '@/i18n/locales';
+
+interface Props {
+  locale: PublicLocale;
+  textContext: NmBotTextContext;
+}
+
+const { locale, textContext } = Astro.props;
+---
+<section class="header" data-testid="nmbot-hero">
+  <div class="background-image" style={`background-image: url("${nmBotAsset('website intro header background.png')}");`} />
+  <div class="icon" aria-label="nmBot Logo" style={`background-image: url("${nmBotAsset('website intro header icon.png')}");`} />
+  <div class="name" aria-label="nmBot" style={`background-image: url("${nmBotAsset('website intro header name.png')}");`} />
+  <div class="description" set:html={renderNmBotText(locale, 'products.nmbot_telegram.description', textContext)} />
+</section>

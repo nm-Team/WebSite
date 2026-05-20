@@ -30,6 +30,8 @@ const { route } = Astro.props as Props;
   bodyJs={route.pageBodyJs}
   image={route.pageImage}
   pageUpdate={route.pageUpdate}
+  constTheme={route.id === 'products-overview-nmbot-telegram' ? 'dark' : undefined}
+  disallowHideHeader={route.id === 'products-overview-nmbot-telegram'}
   lang={defaultLocale}
   enableLanguageRedirect
 >

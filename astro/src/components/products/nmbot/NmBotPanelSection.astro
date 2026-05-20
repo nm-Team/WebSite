@@ -1,0 +1,49 @@
+---
+import NmBotFeatureBlock from './NmBotFeatureBlock.astro';
+import NmBotTextBlock from './NmBotTextBlock.astro';
+import { nmBotAsset, type NmBotTextContext } from './nmBotText';
+import type { PublicLocale } from '@/i18n/locales';
+
+interface Props {
+  locale: PublicLocale;
+  textContext: NmBotTextContext;
+}
+
+const { locale, textContext } = Astro.props;
+---
+<NmBotTextBlock locale={locale} textContext={textContext} titleKey="products.nmbot_telegram.panel.title" />
+<div class="panel-screenshot-image" aria-hidden="true">
+  <div class="mobile">
+    <div class="mobile-phone mobile-phone-left" style={`background-image: url("${nmBotAsset('website intro panel iphone 2.png')}");`}></div>
+    <div class="mobile-phone mobile-phone-center" style={`background-image: url("${nmBotAsset('website intro panel iphone 1.png')}");`}></div>
+    <div class="mobile-phone mobile-phone-right" style={`background-image: url("${nmBotAsset('website intro panel iphone 3.png')}");`}></div>
+  </div>
+</div>
+<NmBotTextBlock
+  locale={locale}
+  textContext={textContext}
+  titleKey="products.nmbot_telegram.panel.simplified_title"
+  contentKeys={['products.nmbot_telegram.panel.simplified_content_1', 'products.nmbot_telegram.panel.simplified_content_2']}
+/>
+<NmBotFeatureBlock
+  locale={locale}
+  textContext={textContext}
+  largerImage
+  features={[
+    {
+      titleKey: 'products.nmbot_telegram.panel.feature_1.title',
+      contentKey: 'products.nmbot_telegram.panel.feature_1.content',
+      image: 'website intro open in telegram.png',
+    },
+    {
+      titleKey: 'products.nmbot_telegram.panel.feature_2.title',
+      contentKey: 'products.nmbot_telegram.panel.feature_2.content',
+      image: 'website intro open in website.png',
+    },
+    {
+      titleKey: 'products.nmbot_telegram.panel.feature_3.title',
+      contentKey: 'products.nmbot_telegram.panel.feature_3.content',
+      image: 'website intro detail.png',
+    },
+  ]}
+/>

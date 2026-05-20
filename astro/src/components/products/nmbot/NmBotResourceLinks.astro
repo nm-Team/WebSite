@@ -1,0 +1,53 @@
+---
+import { nmBotAsset, renderNmBotText, type NmBotTextContext } from './nmBotText';
+import type { PublicLocale } from '@/i18n/locales';
+
+interface Props {
+  locale: PublicLocale;
+  textContext: NmBotTextContext;
+}
+
+const { locale, textContext } = Astro.props;
+const resources = [
+  {
+    image: 'website intro channel.png',
+    titleKey: 'products.nmbot_telegram.resources.channel_title',
+    contentKey: 'products.nmbot_telegram.resources.channel_content',
+    linkKey: 'products.nmbot_telegram.resources.channel_link',
+    href: 'https://t.me/nmbotchannel',
+  },
+  {
+    image: 'website intro doc.png',
+    titleKey: 'products.nmbot_telegram.resources.documentation_title',
+    contentKey: 'products.nmbot_telegram.resources.documentation_content',
+    linkKey: 'products.nmbot_telegram.resources.documentation_link',
+    href: 'https://support.nmteam.xyz/nmbot-telegram?ref=nmBotIntro',
+  },
+  {
+    image: 'website intro news.png',
+    titleKey: 'products.nmbot_telegram.resources.newsroom_title',
+    contentKey: 'products.nmbot_telegram.resources.newsroom_content',
+    linkKey: 'products.nmbot_telegram.resources.newsroom_link',
+    href: 'https://newsroom.nmteam.xyz/tag/nmBot/?ref=nmBotIntro',
+  },
+  {
+    image: 'website intro community.png',
+    titleKey: 'products.nmbot_telegram.resources.community_title',
+    contentKey: 'products.nmbot_telegram.resources.community_content',
+    linkKey: 'products.nmbot_telegram.resources.community_link',
+    href: 'https://t.me/nmteamchat/20055',
+  },
+] as const;
+---
+<div class="resources" data-testid="nmbot-resources">
+  {resources.map((resource) => (
+    <div class="resource-item fade-in">
+      <div class="image" style={`background-image: url("${nmBotAsset(resource.image)}");`}></div>
+      <div class="title" set:html={renderNmBotText(locale, resource.titleKey, textContext)} />
+      <div class="content" set:html={renderNmBotText(locale, resource.contentKey, textContext)} />
+      <div class="link">
+        <a href={resource.href} target="_blank" rel="noopener noreferrer" class="link-a" set:html={renderNmBotText(locale, resource.linkKey, textContext)} />
+      </div>
+    </div>
+  ))}
+</div>
