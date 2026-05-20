@@ -38,6 +38,7 @@ const currentLocale = lang as PublicLocale;
   image={route.pageImage}
   pageUpdate={route.pageUpdate}
   constTheme={route.id === 'products-overview-nmbot-telegram' ? 'dark' : undefined}
+  htmlData={route.id === 'products-overview-nmbot-telegram' ? { 'data-nmbot-page': 'true' } : undefined}
   disallowHideHeader={route.id === 'products-overview-nmbot-telegram'}
   lang={currentLocale}
 >

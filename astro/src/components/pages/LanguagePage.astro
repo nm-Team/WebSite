@@ -1,0 +1,52 @@
+---
+import { legacyLocaleNames, localeDataMap, publicLocales } from '@/i18n/locales';
+import { t } from '@/i18n/translate';
+import type { PageProps } from './PageProps';
+
+const { locale } = Astro.props as PageProps;
+---
+<div class="title largepadding">
+  <h1>{t(locale, 'language.page.title')}</h1>
+</div>
+<div class="main mainBlock">
+  <div id="lanList">
+    <button class="selection" data-lanid="auto" data-active="false" title={t(locale, 'language.page.auto')}>{t(locale, 'language.page.auto')}</button>
+    {publicLocales.map((publicLocale) => (
+      <button
+        class="selection"
+        data-lanid={publicLocale}
+        data-active={publicLocale === locale ? 'true' : 'false'}
+        title={legacyLocaleNames[localeDataMap[publicLocale]]}
+      >
+        {legacyLocaleNames[localeDataMap[publicLocale]]}
+      </button>
+    ))}
+  </div>
+  <p>{t(locale, 'language.page.tip')}</p>
+</div>
+<script is:inline>
+  (() => {
+    const params = new URLSearchParams(window.location.search);
+    const backCallURL = params.get("bks");
+    const isSafeBackUrl = (value) => {
+      if (!value) {
+        return false;
+      }
+      try {
+        const url = new URL(value, window.location.origin);
+        return url.origin === window.location.origin;
+      } catch {
+        return false;
+      }
+    };
+
+    document.querySelectorAll("#lanList .selection").forEach((selection) => {
+      selection.addEventListener("click", () => {
+        const lang = selection.getAttribute("data-lanid") || "auto";
+        document.cookie = `lang=${encodeURIComponent(lang)};path=/;max-age=99999999999`;
+        window.location.href = isSafeBackUrl(backCallURL) ? backCallURL : "/";
+      });
+    });
+  })();
+</script>
+

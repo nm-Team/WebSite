@@ -1,6 +1,8 @@
-:root {
+html[data-nmbot-page="true"] {
         font-size: min(0.25vw, 0.25vh, 1px);
+}
 
+.nmbot-telegram {
         --intelligence-gradient-color-0: #fdff8a;
         --intelligence-gradient-color-1: #FFEE7E;
         --intelligence-gradient-color-2: #FFE645;
@@ -328,22 +330,22 @@
         color: #ffffff !important;
     }
 
-    nobr {
+    .nmbot-telegram nobr {
         white-space: break-spaces;
         display: inline-block;
     }
 
-    bs {
+    .nmbot-telegram bs {
         font-weight: bolder;
     }
 
-    sup {
+    .nmbot-telegram sup {
         display: inline-block;
         margin-top: -9rem;
         font-size: 11rem;
     }
 
-    nmbot-plus-icon {
+    .nmbot-telegram nmbot-plus-icon {
         width: 1em;
         height: 1em;
         background-image: url(https://websiteres.nmteam.xyz/nmBot/plus.svg);
@@ -399,7 +401,7 @@
         opacity: 0;
     }
 
-.panel-screenshot-image {
+.nmbot-telegram .panel-screenshot-image {
             position: relative;
             width: 100%;
             /* for other phone's appearance animation */
@@ -407,7 +409,7 @@
             overflow: hidden;
         }
 
-        .panel-screenshot-image .mobile {
+        .nmbot-telegram .panel-screenshot-image .mobile {
             position: absolute;
             top: 0;
             width: 100%;
@@ -417,7 +419,7 @@
             align-items: center;
         }
 
-        .panel-screenshot-image .mobile .mobile-phone {
+        .nmbot-telegram .panel-screenshot-image .mobile .mobile-phone {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -427,29 +429,29 @@
             background-size: cover; background-position: center; background-repeat: no-repeat;
         }
 
-        .panel-screenshot-image .mobile .mobile-phone-left {
+        .nmbot-telegram .panel-screenshot-image .mobile .mobile-phone-left {
             z-index: 1;
             background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro panel iphone 2.png");
         }
 
-        .panel-screenshot-image .mobile .mobile-phone-center {
+        .nmbot-telegram .panel-screenshot-image .mobile .mobile-phone-center {
             z-index: 2;
             background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro panel iphone 1.png");
         }
 
-        .panel-screenshot-image .mobile .mobile-phone-right {
+        .nmbot-telegram .panel-screenshot-image .mobile .mobile-phone-right {
             z-index: 1;
             background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro panel iphone 3.png");
         }
 
-#intelligenceContainer {
+.nmbot-telegram #intelligenceContainer {
             width: 100%;
             margin: 0;
             background-color: #ffffff;
             color: #000000;
         }
 
-        .intelligence-image {
+        .nmbot-telegram .intelligence-image {
             width: 100%;
             height: 120rem;
             margin-top: 50rem;
@@ -458,7 +460,7 @@
             background-size: contain;
         }
 
-        .intelligence-feature-header-image {
+        .nmbot-telegram .intelligence-feature-header-image {
             width: 90%;
             max-width: 900rem;
             height: 0;
@@ -470,8 +472,8 @@
             background-repeat: no-repeat;
         }
 
-        .intelligence-gradient-text,
-        igt {
+        .nmbot-telegram .intelligence-gradient-text,
+        .nmbot-telegram igt {
             font-weight: 500;
             background: linear-gradient(90deg, var(--intelligence-gradient-color-5), var(--intelligence-gradient-color-7));
             -webkit-background-clip: text;
@@ -479,7 +481,7 @@
             text-shadow: rgba(255, 187, 27, 0.29) 0px 0px 5px;
         }
 
-.nmbot-features-list {
+.nmbot-telegram .nmbot-features-list {
             width: 90vw;
             max-width: 1200rem;
             display: flex;
@@ -487,7 +489,7 @@
             align-items: center;
         }
 
-        .nmbot-features-list .chat-type {
+        .nmbot-telegram .nmbot-features-list .chat-type {
             width: calc(100% - 20rem);
             display: flex;
             flex-direction: row;
@@ -495,7 +497,7 @@
             justify-content: center;
         }
 
-        .nmbot-features-list .chat-type-button {
+        .nmbot-telegram .nmbot-features-list .chat-type-button {
             width: calc(100% / 3);
             padding: 14rem 20rem;
             background: none;
@@ -507,12 +509,12 @@
             border-radius: 11px 11px 0 0;
         }
 
-        .nmbot-features-list .chat-type-button.active {
+        .nmbot-telegram .nmbot-features-list .chat-type-button.active {
             font-weight: 500;
             background-color: #0e0e0e;
         }
 
-        .nmbot-features-list .features-lists {
+        .nmbot-telegram .nmbot-features-list .features-lists {
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -522,7 +524,7 @@
             background-color: #0e0e0e;
         }
 
-        .nmbot-features-list .features-list {
+        .nmbot-telegram .nmbot-features-list .features-list {
             width: 100%;
             padding: 10rem 0;
             display: none;
@@ -531,11 +533,11 @@
             justify-content: flex-start;
         }
 
-        .nmbot-features-list .features-list.active {
+        .nmbot-telegram .nmbot-features-list .features-list.active {
             display: flex;
         }
 
-        .nmbot-features-list .feature {
+        .nmbot-telegram .nmbot-features-list .feature {
             display: flex;
             width: calc(100% - 40rem);
             padding: 6rem 20rem;
@@ -545,12 +547,12 @@
             font-weight: 400;
         }
 
-        .nmbot-features-list .feature::before {
+        .nmbot-telegram .nmbot-features-list .feature::before {
             content: "• ";
             font-weight: 600;
         }
 
-        .nmbot-features-list .its-only-part {
+        .nmbot-telegram .nmbot-features-list .its-only-part {
             width: calc(100% - 50rem);
             padding: 6rem 20rem;
             font-size: 15rem;
@@ -561,13 +563,13 @@
         }
 
         @media (min-width: 1020px) {
-            .nmbot-features-list .chat-type {
+            .nmbot-telegram .nmbot-features-list .chat-type {
                 width: 100%;
                 background-color: #0e0e0e;
                 border-radius: 15rem 15rem 0 0;
             }
 
-            .nmbot-features-list .chat-type-button {
+            .nmbot-telegram .nmbot-features-list .chat-type-button {
                 display: flex;
                 cursor: auto;
                 text-align: left;
@@ -575,19 +577,19 @@
                 font-weight: 500;
             }
 
-            .nmbot-features-list .chat-type-button::before {
+            .nmbot-telegram .nmbot-features-list .chat-type-button::before {
                 content: "• ";
                 color: #00000000;
                 font-size: 18rem;
             }
 
-            .nmbot-features-list .features-lists {
+            .nmbot-telegram .nmbot-features-list .features-lists {
                 width: 100%;
                 border-radius: 0 0 15rem 15rem;
                 display: flex;
             }
 
-            .nmbot-features-list .features-list {
+            .nmbot-telegram .nmbot-features-list .features-list {
                 display: flex;
                 padding: 4rem 0 10rem 0;
             }
@@ -642,7 +644,7 @@
             margin-bottom: 10rem;
         }
 
-.product-header {
+html[data-nmbot-page="true"] .product-header {
         position: absolute;
         top: 0;
         left: 50%;
@@ -658,20 +660,20 @@
         transition: all 0.4s;
     }
 
-    .product-header .product-name {
+    html[data-nmbot-page="true"] .product-header .product-name {
         font-size: 20rem;
         font-weight: 500;
         color: var(--header-name);
     }
 
-    .product-header .action-buttons {
+    html[data-nmbot-page="true"] .product-header .action-buttons {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
     }
 
-    .product-header .action-button {
+    html[data-nmbot-page="true"] .product-header .action-button {
         padding: 5rem 10rem !important;
         margin-left: 5rem !important;
         font-size: 14rem !important;
@@ -683,28 +685,28 @@
         text-decoration: none !important;
     }
 
-    .product-header .action-button.primary {
+    html[data-nmbot-page="true"] .product-header .action-button.primary {
         background-color: #ead050 !important;
         color: #000000 !important;
     }
 
-    #hcont #pageHeader {
+    html[data-nmbot-page="true"] #hcont #pageHeader {
         overflow: hidden;
     }
 
-    #hcont .header:not([open]) * {
+    html[data-nmbot-page="true"] #hcont .header:not([open]) * {
         transition: color 0.1s, visibility 0.1s 0.5s, opacity 0.1s, transform 0.4s !important;
     }
 
-    #pageHeader .left[data-hide=true],
-    #pageHeader .right[data-hide=true] {
+    html[data-nmbot-page="true"] #pageHeader .left[data-hide=true],
+    html[data-nmbot-page="true"] #pageHeader .right[data-hide=true] {
         transform: translate(0, -120%);
     }
 
-    #pageHeader .menu-toggle[data-hide=true] {
+    html[data-nmbot-page="true"] #pageHeader .menu-toggle[data-hide=true] {
         transform: translate(0, -150%);
     }
 
-    .product-header[data-hide=false] {
+    html[data-nmbot-page="true"] .product-header[data-hide=false] {
         transform: translate(-50%, 0%);
     }

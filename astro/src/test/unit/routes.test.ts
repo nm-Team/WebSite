@@ -25,6 +25,18 @@ describe('route manifest', () => {
     }
   });
 
+  it('covers phase-5 legacy routes', () => {
+    const requiredSources = [
+      '/index.php',
+      '/join/index.php',
+      '/join/forum.php',
+      '/language.php',
+      '/sitemap.php',
+    ];
+
+    expect(routeManifest.map((route) => route.sourcePhpPath)).toEqual(expect.arrayContaining(requiredSources));
+  });
+
   it('omits generic product detail locales when JSON data is unavailable', () => {
     const startPage = routeManifest.find((route) => route.productSlug === 'nmBrowser-StartPage');
     const accessibility = routeManifest.find((route) => route.productSlug === 'product-accessibility');

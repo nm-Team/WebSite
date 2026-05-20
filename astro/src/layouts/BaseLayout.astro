@@ -21,6 +21,7 @@ interface Props {
   constTheme?: string;
   disallowHideHeader?: boolean;
   enableLanguageRedirect?: boolean;
+  htmlData?: Record<string, string>;
 }
 
 const {
@@ -39,9 +40,13 @@ const {
   constTheme,
   disallowHideHeader = false,
   enableLanguageRedirect = false,
+  htmlData = {},
 } = Astro.props;
 
-const htmlAttributes = constTheme ? { 'data-theme': constTheme, 'data-theme-is-const': 'true' } : {};
+const htmlAttributes = {
+  ...htmlData,
+  ...(constTheme ? { 'data-theme': constTheme, 'data-theme-is-const': 'true' } : {}),
+};
 const clearLegacyLanParamScript = Astro.url.searchParams.has('lan') ? "changeURLParam('lan', '');" : '';
 ---
 <!doctype html>

@@ -2,12 +2,17 @@
 import AboutPage from './AboutPage.astro';
 import BusinessCooperationPage from './BusinessCooperationPage.astro';
 import CookiesPage from './CookiesPage.astro';
+import HomePage from './HomePage.astro';
+import JoinForumRedirectPage from './JoinForumRedirectPage.astro';
+import JoinPage from './JoinPage.astro';
+import LanguagePage from './LanguagePage.astro';
 import NetworkServiceProtocolPage from './NetworkServiceProtocolPage.astro';
 import PlaceholderPage from './PlaceholderPage.astro';
 import PrivacyPolicyPage from './PrivacyPolicyPage.astro';
 import NmBotPage from '@/components/products/nmbot/NmBotPage.astro';
 import ProductDetailPage from '@/components/products/ProductDetailPage.astro';
 import ProductOverviewPage from '@/components/products/ProductOverviewPage.astro';
+import SitemapPage from './SitemapPage.astro';
 import type { PageProps } from './PageProps';
 import StatusPage from './StatusPage.astro';
 import SupportPage from './SupportPage.astro';
@@ -16,7 +21,12 @@ import SupportUsPage from './SupportUsPage.astro';
 const props = Astro.props as PageProps;
 
 const pageComponents = {
+  home: HomePage,
   aboutus: AboutPage,
+  join: JoinPage,
+  'join-forum': JoinForumRedirectPage,
+  language: LanguagePage,
+  sitemap: SitemapPage,
   cookies: CookiesPage,
   'business-cooperation': BusinessCooperationPage,
   'legal-privacy-policy': PrivacyPolicyPage,

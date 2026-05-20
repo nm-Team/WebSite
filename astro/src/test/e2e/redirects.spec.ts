@@ -5,7 +5,11 @@ function escapeRegExp(value: string): string {
 }
 
 const phaseTwoRoutes = [
+  '/',
   '/aboutus/',
+  '/join/',
+  '/language/',
+  '/sitemap/',
   '/cookies/',
   '/business-cooperation/',
   '/legal/privacy-policy/',
@@ -81,4 +85,14 @@ test('unprefixed route keeps path when english context', async ({ page }) => {
   ]);
   await page.goto('/aboutus/');
   await expect(page).toHaveURL(/\/aboutus\/$/);
+});
+
+test('join forum redirects allowed job type to legacy questionnaire path', async ({ page }) => {
+  await page.goto('/join/forum/?jobType=writer');
+  await expect(page).toHaveURL(/\/blackboard\/questionnaire\/22_07_04_join_nmteam_writer$/);
+});
+
+test('join forum sanitizes unknown job type before redirecting', async ({ page }) => {
+  await page.goto('/join/forum/?jobType=../../bad');
+  await expect(page).toHaveURL(/\/blackboard\/questionnaire\/22_07_04_join_nmteam_developer$/);
 });

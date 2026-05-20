@@ -13,7 +13,7 @@ const languageIcon = `<svg t="1638693385062" class="icon" viewBox="0 0 1024 1024
 ---
 <button
   id="footer_selectLanguageButton"
-  onclick="window.location.href = window.location.origin + '/language.php?bks=' + escape(window.location.href);"
+  onclick="window.location.href = window.location.origin + '/language/?bks=' + encodeURIComponent(window.location.href);"
   aria-label={ariaLabel}
 >
   <i set:html={languageIcon}></i>

@@ -20,6 +20,8 @@ const arrowIcon =
     max-width: 600px;
     line-height: 2;
     margin: 0 auto 30px auto;
+    table-layout: fixed;
+    border-collapse: collapse;
     overflow-x: auto;
   }
 
@@ -27,10 +29,17 @@ const arrowIcon =
     font-weight: bold;
   }
 
-  .sTab td:not(td + td) {
+  .sTab td:first-child {
     padding: 5px 0;
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .sTab td:first-child span,
+  .sTab td:first-child b {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .sTab i {
@@ -48,6 +57,8 @@ const arrowIcon =
   .sTab td + td {
     text-align: end;
     min-width: 5em;
+    width: 8em;
+    white-space: nowrap;
   }
 </style>
 <div class="title center">
