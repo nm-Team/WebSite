@@ -1,0 +1,26 @@
+---
+import AboutPage from './AboutPage.astro';
+import BusinessCooperationPage from './BusinessCooperationPage.astro';
+import CookiesPage from './CookiesPage.astro';
+import NetworkServiceProtocolPage from './NetworkServiceProtocolPage.astro';
+import PlaceholderPage from './PlaceholderPage.astro';
+import PrivacyPolicyPage from './PrivacyPolicyPage.astro';
+import type { PageProps } from './PageProps';
+import StatusPage from './StatusPage.astro';
+import SupportPage from './SupportPage.astro';
+
+const props = Astro.props as PageProps;
+
+const pageComponents = {
+  aboutus: AboutPage,
+  cookies: CookiesPage,
+  'business-cooperation': BusinessCooperationPage,
+  'legal-privacy-policy': PrivacyPolicyPage,
+  'legal-network-service-protocol': NetworkServiceProtocolPage,
+  support: SupportPage,
+  status: StatusPage,
+} as const;
+
+const PageComponent = pageComponents[props.route.id as keyof typeof pageComponents] ?? PlaceholderPage;
+---
+<PageComponent {...props} />

@@ -1,6 +1,7 @@
 ---
 import { isPublicLocale, publicLocales, type PublicLocale } from '@/i18n/locales';
 import { routeManifest, type RouteEntry } from '@/i18n/routes';
+import PageContent from '@/components/pages/PageContent.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 export function getStaticPaths() {
@@ -26,7 +27,6 @@ if (!isPublicLocale(lang)) {
 }
 
 const currentLocale = lang as PublicLocale;
-const title = route.slug.length === 0 ? '' : route.slug.join('/');
 ---
 <BaseLayout
   titleKey={route.pageTitle}
@@ -39,8 +39,5 @@ const title = route.slug.length === 0 ? '' : route.slug.join('/');
   pageUpdate={route.pageUpdate}
   lang={currentLocale}
 >
-  <main>
-    <h1>{title || 'Home'}</h1>
-    <p>Prefixed routes never run automatic language redirect.</p>
-  </main>
+  <PageContent route={route} locale={currentLocale} />
 </BaseLayout>

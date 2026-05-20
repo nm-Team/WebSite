@@ -1,6 +1,7 @@
 ---
 import { defaultLocale } from '@/i18n/locales';
 import { routeManifest, type RouteEntry } from '@/i18n/routes';
+import PageContent from '@/components/pages/PageContent.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 export function getStaticPaths() {
@@ -17,7 +18,6 @@ interface Props {
 }
 
 const { route } = Astro.props as Props;
-const title = route.slug.length === 0 ? '' : route.slug.join('/');
 ---
 <BaseLayout
   titleKey={route.pageTitle}
@@ -31,8 +31,5 @@ const title = route.slug.length === 0 ? '' : route.slug.join('/');
   lang={defaultLocale}
   enableLanguageRedirect
 >
-  <main>
-    <h1>{title || 'Home'}</h1>
-    <p>Unprefixed route renders English fallback and may redirect for users.</p>
-  </main>
+  <PageContent route={route} locale={defaultLocale} />
 </BaseLayout>

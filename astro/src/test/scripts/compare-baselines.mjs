@@ -16,6 +16,100 @@ function normalizeHtml(content) {
     .trim();
 }
 
+function decodeEntities(value) {
+  return value
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
+}
+
+function extractAttr(tag, name) {
+  const match = tag.match(new RegExp(`${name}=["']([^"']*)["']`, 'i'));
+  return match?.[1] ?? '';
+}
+
+function extractFirst(content, pattern) {
+  return decodeEntities(content.match(pattern)?.[1]?.trim() ?? '');
+}
+
+function normalizeText(content) {
+  return decodeEntities(
+    content
+      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim(),
+  );
+}
+
+function extractMetadata(content) {
+  const alternateMatches = [...content.matchAll(/<link\b[^>]*rel=["']alternate["'][^>]*>/gi)];
+  const alternates = alternateMatches
+    .map((match) => ({
+      hreflang: extractAttr(match[0], 'hreflang'),
+      href: extractAttr(match[0], 'href'),
+    }))
+    .filter((alternate) => alternate.hreflang || alternate.href)
+    .sort((a, b) => `${a.hreflang}:${a.href}`.localeCompare(`${b.hreflang}:${b.href}`));
+
+  return {
+    title: extractFirst(content, /<title>([\s\S]*?)<\/title>/i),
+    description: extractFirst(content, /<meta\b[^>]*name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i),
+    htmlLang: extractFirst(content, /<html\b[^>]*lang=["']([^"']*)["'][^>]*>/i),
+    canonical: extractFirst(content, /<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']*)["'][^>]*>/i),
+    alternates,
+    headings: [...content.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/gi)].map((match) =>
+      normalizeText(match[1]),
+    ),
+    bodyText: normalizeText(content.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? content),
+  };
+}
+
+function compareHtml(phpRaw, astroRaw) {
+  const phpMetadata = extractMetadata(phpRaw);
+  const astroMetadata = extractMetadata(astroRaw);
+  const metadataFields = ['title', 'description', 'htmlLang'];
+  const fieldComparisons = Object.fromEntries(
+    metadataFields.map((field) => [field, phpMetadata[field] === astroMetadata[field]]),
+  );
+  const phpHasCanonical = phpMetadata.canonical.length > 0;
+  const phpHasAlternates = phpMetadata.alternates.length > 0;
+
+  return {
+    fields: {
+      ...fieldComparisons,
+      canonical: phpHasCanonical ? phpMetadata.canonical === astroMetadata.canonical : astroMetadata.canonical.length > 0,
+      alternates: phpHasAlternates
+        ? JSON.stringify(phpMetadata.alternates) === JSON.stringify(astroMetadata.alternates)
+        : astroMetadata.alternates.length > 0,
+      headings: JSON.stringify(phpMetadata.headings) === JSON.stringify(astroMetadata.headings),
+      bodyContainsPrimaryHeading: astroMetadata.headings.every((heading) => phpMetadata.bodyText.includes(heading)),
+    },
+    php: {
+      title: phpMetadata.title,
+      description: phpMetadata.description,
+      htmlLang: phpMetadata.htmlLang,
+      canonical: phpMetadata.canonical,
+      alternates: phpMetadata.alternates,
+      headings: phpMetadata.headings,
+      bodyHash: hashBuffer(Buffer.from(phpMetadata.bodyText)),
+    },
+    astro: {
+      title: astroMetadata.title,
+      description: astroMetadata.description,
+      htmlLang: astroMetadata.htmlLang,
+      canonical: astroMetadata.canonical,
+      alternates: astroMetadata.alternates,
+      headings: astroMetadata.headings,
+      bodyHash: hashBuffer(Buffer.from(astroMetadata.bodyText)),
+    },
+  };
+}
+
 function hashBuffer(buffer) {
   return crypto.createHash('sha256').update(buffer).digest('hex');
 }
@@ -66,12 +160,14 @@ async function compareOne(relativePath) {
     ]);
     const phpNormalized = normalizeHtml(phpRaw);
     const astroNormalized = normalizeHtml(astroRaw);
+    const structured = compareHtml(phpRaw, astroRaw);
     return {
       path: relativePath,
       type: 'html',
-      equal: phpNormalized === astroNormalized,
+      equal: Object.values(structured.fields).every(Boolean),
       phpHash: hashBuffer(Buffer.from(phpNormalized)),
       astroHash: hashBuffer(Buffer.from(astroNormalized)),
+      structured,
     };
   }
 

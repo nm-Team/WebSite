@@ -10,14 +10,18 @@ const sources = [
   { name: 'astro', baseUrl: 'http://127.0.0.1:4321' },
 ];
 
-const routeSlugs = [
-  [],
-  ['aboutus'],
-  ['cookies'],
-  ['business-cooperation'],
-  ['supportus'],
-  ['products'],
-  ['products', 'overview', 'nmBot-Telegram'],
+const routes = [
+  { slug: [], phpPath: '/' },
+  { slug: ['aboutus'], phpPath: '/aboutus/' },
+  { slug: ['cookies'], phpPath: '/cookies/' },
+  { slug: ['business-cooperation'], phpPath: '/business_cooperation.php' },
+  { slug: ['legal', 'privacy-policy'], phpPath: '/legal/privacy-policy.php' },
+  { slug: ['legal', 'network-service-protocol'], phpPath: '/legal/network-service-protocol.php' },
+  { slug: ['support'], phpPath: '/support/' },
+  { slug: ['status'], phpPath: '/status.php' },
+  { slug: ['supportus'], phpPath: '/supportus/' },
+  { slug: ['products'], phpPath: '/products/' },
+  { slug: ['products', 'overview', 'nmBot-Telegram'], phpPath: '/products/overview/nmBot-Telegram/' },
 ];
 
 const localeMap = {
@@ -36,13 +40,6 @@ const viewports = [
 const routeFilter = process.env.CAPTURE_ROUTE ?? '';
 const sourceFilter = process.env.CAPTURE_SOURCE ?? '';
 
-function slugToPath(slug) {
-  if (slug.length === 0) {
-    return '/';
-  }
-  return `/${slug.join('/')}/`;
-}
-
 function slugName(slug) {
   if (slug.length === 0) {
     return 'home';
@@ -50,11 +47,11 @@ function slugName(slug) {
   return slug.join('__');
 }
 
-function buildSourceUrl(sourceName, locale, slug) {
-  const rootPath = slugToPath(slug);
+function buildSourceUrl(sourceName, locale, route) {
+  const { slug, phpPath } = route;
   if (sourceName === 'php') {
     const legacyLocale = localeMap[locale];
-    const url = new URL(rootPath, 'http://127.0.0.1:8080');
+    const url = new URL(phpPath, 'http://127.0.0.1:8080');
     url.searchParams.set('lan', legacyLocale);
     return url.toString();
   }
@@ -75,12 +72,13 @@ async function captureSource(source, jsEnabled) {
   const browser = await chromium.launch();
   try {
     for (const locale of Object.keys(localeMap)) {
-      for (const slug of routeSlugs) {
+      for (const route of routes) {
+        const { slug } = route;
         const routeName = slugName(slug);
         if (routeFilter && routeName !== routeFilter) {
           continue;
         }
-        const url = buildSourceUrl(source.name, locale, slug);
+        const url = buildSourceUrl(source.name, locale, route);
 
         for (const viewport of viewports) {
           const context = await browser.newContext({

@@ -1,0 +1,28 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  sourcePath: string;
+}
+
+const { sourcePath } = Astro.props as Props;
+
+function readLegacyBody(relativePath: string): string {
+  const filePath = path.resolve(process.cwd(), '..', relativePath);
+  const content = fs.readFileSync(filePath, 'utf8');
+  const afterHeader = content.split('setHeader();')[1]?.replace(/^.*?\?>/s, '') ?? '';
+  return afterHeader.split('<?php setFooter(); ?>')[0]?.trim() ?? '';
+}
+
+const legacyHtml = readLegacyBody(sourcePath);
+---
+<Fragment set:html={legacyHtml} />
+<script is:inline>
+  document.querySelectorAll('#m [data-status]').forEach((element) => {
+    element.setAttribute('data-status', '');
+  });
+  document.querySelectorAll('#m [data-tab="chinese"]').forEach((element) => {
+    element.setAttribute('data-status', 'focus');
+  });
+</script>

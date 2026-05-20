@@ -1,6 +1,7 @@
 ---
-import type { PublicLocale } from '@/i18n/locales';
+import { publicLocales, type PublicLocale } from '@/i18n/locales';
 import { buildSeoMeta } from '@/utils/seo';
+import { SITE_URL } from '@/utils/seo';
 
 interface Props {
   locale: PublicLocale;
@@ -42,6 +43,17 @@ const seo = buildSeoMeta({
   currentUrl,
 });
 const languageScript = `language = ${JSON.stringify(locale)};`;
+const currentPath = new URL(currentUrl).pathname;
+const currentParts = currentPath.split('/').filter(Boolean);
+const hasLocalePrefix = publicLocales.includes(currentParts[0] as PublicLocale);
+const slugParts = hasLocalePrefix ? currentParts.slice(1) : currentParts;
+const slugPath = slugParts.length > 0 ? `${slugParts.join('/')}/` : '';
+const canonicalPath = `/${locale}/${slugPath}`;
+const canonicalUrl = new URL(canonicalPath, SITE_URL).toString();
+const alternateLinks = publicLocales.map((alternateLocale) => ({
+  locale: alternateLocale,
+  href: new URL(`/${alternateLocale}/${slugPath}`, SITE_URL).toString(),
+}));
 ---
 <meta charset="utf-8" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
@@ -53,6 +65,9 @@ const languageScript = `language = ${JSON.stringify(locale)};`;
 <meta name="keywords" content={seo.keywords} />
 <meta name="description" content={seo.description} />
 <meta http-equiv="content-language" content={seo.language} />
+<link rel="canonical" href={canonicalUrl} />
+{alternateLinks.map((alternate) => <link rel="alternate" hreflang={alternate.locale} href={alternate.href} />)}
+<link rel="alternate" hreflang="x-default" href={new URL(slugPath, SITE_URL).toString()} />
 
 <meta property="og:site_name" content="nmTeam" />
 <meta property="og:type" content="website" />

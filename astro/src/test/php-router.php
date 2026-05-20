@@ -11,6 +11,15 @@ if ($trimmed === '') {
 
 $segments = explode('/', $trimmed);
 
+$aliases = [
+    'business-cooperation' => 'business_cooperation.php',
+];
+
+if (array_key_exists($trimmed, $aliases)) {
+    require __DIR__ . '/../../..' . DIRECTORY_SEPARATOR . $aliases[$trimmed];
+    return;
+}
+
 if (count($segments) >= 3 && $segments[0] === 'products' && $segments[1] === 'overview') {
     $_GET['product'] = $segments[2];
     require __DIR__ . '/../../../products/overview.php';
