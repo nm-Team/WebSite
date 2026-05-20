@@ -54,7 +54,7 @@ const arrowIcon =
   <h1>{t(locale, 'supportus.title')}</h1>
 </div>
 <div class="main mainBlock">
-  <p>{t(locale, 'supportus.para')}</p>
+  <p set:html={t(locale, 'supportus.para')} />
   <br />
   <div class="tabView sponsorTab" id="sponsorTab">
     <div class="tabHeader">
@@ -131,7 +131,7 @@ const arrowIcon =
       }
     </tbody>
   </table>
-  <p class="updateDate" style="font-size: 14px;">{t(locale, 'supportus.sponsors_info_note')}</p>
+  <p class="updateDate" style="font-size: 14px;" set:html={t(locale, 'supportus.sponsors_info_note')} />
 </div>
 <script is:inline define:vars={{ copySuccess: t(locale, 'supportus.copy_crypto_address_success') }}>
   window.copyCryptoAddress = () => {
