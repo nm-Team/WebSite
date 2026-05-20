@@ -1,6 +1,7 @@
 ---
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher.astro';
 import type { PublicLocale } from '@/i18n/locales';
+import { localizeHtmlHrefs, toLocalizedHref } from '@/i18n/links';
 import { t } from '@/i18n/translate';
 
 interface Props {
@@ -9,6 +10,8 @@ interface Props {
 }
 
 const { locale, pageUpdate = '' } = Astro.props;
+const href = (path: string) => toLocalizedHref(locale, path);
+const html = (value: string) => localizeHtmlHrefs(locale, value);
 
 function formatPageUpdate(update: string): string {
   if (!/^\d{8}$/.test(update)) {
@@ -29,24 +32,24 @@ const updateText = formatPageUpdate(pageUpdate);
     <div class="footer-table">
       <div class="row">
         <div class="rowName">{t(locale, 'footer.table.products.title')}</div>
-        <a href="/products/">{t(locale, 'footer.table.products.library')}</a>
-        <a href="/products/overview/nmBot-Telegram">nmBot</a>
-        <a href="/products/overview/nmBrowser-StartPage">{t(locale, 'footer.table.products.nmBrowserStartPage')}</a>
+        <a href={href('/products/')}>{t(locale, 'footer.table.products.library')}</a>
+        <a href={href('/products/overview/nmBot-Telegram')}>nmBot</a>
+        <a href={href('/products/overview/nmBrowser-StartPage')}>{t(locale, 'footer.table.products.nmBrowserStartPage')}</a>
       </div>
       <div class="row">
         <div class="rowName">{t(locale, 'footer.table.service.title')}</div>
         <a href="https://accounts.nmteam.xyz" target="blank">{t(locale, 'footer.table.service.accountCenter')}</a>
-        <a href="/status" target="blank">{t(locale, 'footer.table.service.systemStatus')}</a>
-        <a href="/support">{t(locale, 'footer.table.service.support')}</a>
+        <a href={href('/status')} target="blank">{t(locale, 'footer.table.service.systemStatus')}</a>
+        <a href={href('/support')}>{t(locale, 'footer.table.service.support')}</a>
       </div>
       <div class="row">
         <div class="rowName">{t(locale, 'footer.table.about.title')}</div>
-        <a href="/aboutus">{t(locale, 'footer.table.about.aboutUs')}</a>
-        <a href="/business_cooperation">{t(locale, 'footer.table.about.business_cooperation')}</a>
-        <a href="/products/overview/product-accessibility">{t(locale, 'footer.table.about.accessibility')}</a>
+        <a href={href('/aboutus')}>{t(locale, 'footer.table.about.aboutUs')}</a>
+        <a href={href('/business_cooperation')}>{t(locale, 'footer.table.about.business_cooperation')}</a>
+        <a href={href('/products/overview/product-accessibility')}>{t(locale, 'footer.table.about.accessibility')}</a>
         <a href="https://newsroom.nmteam.xyz" target="blank">{t(locale, 'footer.table.about.newsroom')}</a>
-        <a href="/join/">{t(locale, 'footer.table.about.joinUs')}</a>
-        <a href="/supportus">{t(locale, 'footer.table.about.supportUs')}</a>
+        <a href={href('/join/')}>{t(locale, 'footer.table.about.joinUs')}</a>
+        <a href={href('/supportus')}>{t(locale, 'footer.table.about.supportUs')}</a>
       </div>
       <div class="row">
         <LanguageSwitcher currentLocale={locale} />
@@ -56,19 +59,19 @@ const updateText = formatPageUpdate(pageUpdate);
       <div class="left">
         <p>{t(locale, 'footer.cr')}<br /></p>
         <p>
-          <a class="footer-a" href="/legal/network-service-protocol" target="_blank">{t(locale, 'footer.svca')}</a>
+          <a class="footer-a" href={href('/legal/network-service-protocol')} target="_blank">{t(locale, 'footer.svca')}</a>
           |
-          <a class="footer-a" href="/legal/privacy-policy" target="_blank">{t(locale, 'footer.svcb')}</a>
+          <a class="footer-a" href={href('/legal/privacy-policy')} target="_blank">{t(locale, 'footer.svcb')}</a>
           |
-          <a class="footer-a" href="/cookies" target="_blank">Cookies</a>
+          <a class="footer-a" href={href('/cookies')} target="_blank">Cookies</a>
           |
-          <a class="footer-a" href="/sitemap" target="_blank">{t(locale, 'footer.sitemap')}</a>
+          <a class="footer-a" href={href('/sitemap')} target="_blank">{t(locale, 'footer.sitemap')}</a>
         </p>
         <p><span>{t(locale, 'footer.email')}</span><a class="footer-a" href="mailto:support@nmteam.xyz" target="_blank">support@nmteam.xyz</a></p>
       </div>
       <div class="right">
         <i
-          onclick="window.location.href='/'"
+          onclick={`window.location.href='${href('/')}'`}
           style="background-image: url('https://websiteres.nmteam.xyz/producticon/nmTeam/logo@64.png'); filter: brightness(0); width: 60px; height: 60px; opacity: 0.16;"
         >
         </i>
@@ -79,11 +82,11 @@ const updateText = formatPageUpdate(pageUpdate);
     <div class="pageConfirmDialog" id="pageCookieConfirmDialog">
       <div class="pageConfirmDialogHeader">{t(locale, 'cookie.cookieConfirmDialog.header')}</div>
       <div class="pageConfirmDialogBody">
-        <p set:html={t(locale, 'cookie.cookieConfirmDialog.body.0')}></p>
-        <p set:html={t(locale, 'cookie.cookieConfirmDialog.body.1')}></p>
+        <p set:html={html(t(locale, 'cookie.cookieConfirmDialog.body.0'))}></p>
+        <p set:html={html(t(locale, 'cookie.cookieConfirmDialog.body.1'))}></p>
       </div>
       <div class="pageConfirmDialogFooter">
-        <button onclick="window.location.href='/cookies'">{t(locale, 'cookie.cookieConfirmDialog.button.customize')}</button>
+        <button onclick={`window.location.href='${href('/cookies')}'`}>{t(locale, 'cookie.cookieConfirmDialog.button.customize')}</button>
         <button onclick="localStorage.cookieTipv0Checked = 'true'; pageCookieConfirmDialog.setAttribute('data-status', 'close');">
           {t(locale, 'cookie.cookieConfirmDialog.button.accept')}
         </button>

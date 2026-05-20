@@ -87,6 +87,25 @@ test('unprefixed route keeps path when english context', async ({ page }) => {
   await expect(page).toHaveURL(/\/aboutus\/$/);
 });
 
+test('unprefixed route redirects from saved zh-CN cookie before rendering English content', async ({ page }) => {
+  await page.context().addCookies([
+    {
+      name: 'lang',
+      value: 'zh-CN',
+      domain: '127.0.0.1',
+      path: '/',
+    },
+  ]);
+  await page.goto('/aboutus/');
+  await expect(page).toHaveURL(/\/zh-CN\/aboutus\/$/);
+});
+
+test('language switch rewrites prefixed back URL to selected locale', async ({ page }) => {
+  await page.goto('/en/language/?bks=http%3A%2F%2F127.0.0.1%3A4321%2Fen%2Faboutus%2F');
+  await page.locator('[data-lanid="zh-CN"]').click();
+  await expect(page).toHaveURL(/\/zh-CN\/aboutus\/$/);
+});
+
 test('join forum redirects allowed job type to legacy questionnaire path', async ({ page }) => {
   await page.goto('/join/forum/?jobType=writer');
   await expect(page).toHaveURL(/\/blackboard\/questionnaire\/22_07_04_join_nmteam_writer$/);

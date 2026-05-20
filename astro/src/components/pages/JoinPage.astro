@@ -1,8 +1,10 @@
 ---
+import { toLocalizedHref } from '@/i18n/links';
 import { t } from '@/i18n/translate';
 import type { PageProps } from './PageProps';
 
 const { locale } = Astro.props as PageProps;
+const href = (path: string) => toLocalizedHref(locale, path);
 const jobs = ['developer', 'support', 'writer'] as const;
 const commonItems = [
   ['nm_heart', 'nm_heart_intro'],
@@ -65,7 +67,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
               </>
             ))}
             <div class="indexMoreLinks">
-              <a target="_self" href={`/join/forum?jobType=${job}`}>
+              <a target="_self" href={href(`/join/forum?jobType=${job}`)}>
                 <span>{t(locale, 'join.join_requirement_page.register')}</span>
                 <Fragment set:html={arrowIcon} />
               </a>

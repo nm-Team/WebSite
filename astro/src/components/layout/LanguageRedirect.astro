@@ -1,5 +1,7 @@
 ---
 const redirectScript = `(() => {
+  const root = document.documentElement;
+  root.setAttribute('data-language-redirect', 'pending');
   const locales = ${JSON.stringify(['en', 'zh-CN', 'zh-HK', 'ja-JP', 'zh-x-mars'])};
   const aliases = {
     en_US: 'en',
@@ -11,8 +13,12 @@ const redirectScript = `(() => {
     ja: 'ja-JP',
   };
 
+  const finish = () => root.removeAttribute('data-language-redirect');
   const first = location.pathname.split('/').filter(Boolean)[0];
-  if (locales.includes(first)) return;
+  if (locales.includes(first)) {
+    finish();
+    return;
+  }
 
   const normalize = (value) => {
     if (!value) return '';
@@ -33,11 +39,19 @@ const redirectScript = `(() => {
   const detected = (navigator.languages || [navigator.language]).map(normalize).find(Boolean);
 
   const target = requested || saved || detected || 'en';
-  if (target === 'en') return;
+  if (target === 'en') {
+    finish();
+    return;
+  }
 
   document.cookie = 'lang=' + encodeURIComponent(target) + ';path=/;max-age=999999999';
   location.replace('/' + target + location.pathname + location.search + location.hash);
 })();`;
 
 ---
+<style is:inline>
+  html[data-language-redirect="pending"] body {
+    visibility: hidden;
+  }
+</style>
 <script is:inline set:html={redirectScript}></script>

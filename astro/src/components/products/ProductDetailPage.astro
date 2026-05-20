@@ -2,6 +2,7 @@
 import { getProductDetail } from '@/data/products/loader';
 import { renderProductDetail } from '@/data/products/render';
 import type { PublicLocale } from '@/i18n/locales';
+import { toLocalizedHref } from '@/i18n/links';
 import type { RouteEntry } from '@/i18n/routes';
 
 interface Props {
@@ -16,7 +17,7 @@ if (!route.productSlug) {
 
 const productSlug = route.productSlug;
 const product = getProductDetail(locale, productSlug);
-const rendered = renderProductDetail(product);
+const rendered = renderProductDetail(product, (path) => toLocalizedHref(locale, path));
 ---
 <div
   class:list={['products-detail', 'products-page', product.page.theme]}
