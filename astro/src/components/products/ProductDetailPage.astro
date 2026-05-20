@@ -1,0 +1,35 @@
+---
+import { getProductDetail } from '@/data/products/loader';
+import { renderProductDetail } from '@/data/products/render';
+import type { PublicLocale } from '@/i18n/locales';
+import type { RouteEntry } from '@/i18n/routes';
+
+interface Props {
+  locale: PublicLocale;
+  route: RouteEntry;
+}
+
+const { locale, route } = Astro.props;
+if (!route.productSlug) {
+  throw new Error(`Product detail route ${route.id} is missing productSlug.`);
+}
+
+const productSlug = route.productSlug;
+const product = getProductDetail(locale, productSlug);
+const rendered = renderProductDetail(product);
+---
+<div
+  class:list={['products-detail', 'products-page', product.page.theme]}
+  id="products_detail_inner"
+  data-product-name={product.page.productName}
+  data-theme={product.page.theme}
+>
+  <Fragment set:html={rendered.headerHtml} />
+  <Fragment set:html={rendered.mainHtml} />
+</div>
+<div class="products_footer">
+  <div id="products_footer_explain_by_javascript" set:html={rendered.footnotesHtml}></div>
+</div>
+<div id="products_child_inner"></div>
+<Fragment set:html={rendered.childHtml} />
+<script is:inline set:html={rendered.scriptsHtml}></script>

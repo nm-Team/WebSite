@@ -5,12 +5,14 @@ import PageContent from '@/components/pages/PageContent.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 export function getStaticPaths() {
-  return routeManifest.map((route) => ({
-    params: {
-      slug: route.slug.length === 0 ? undefined : route.slug.join('/'),
-    },
-    props: { route },
-  }));
+  return routeManifest
+    .filter((route) => route.supportedLocales.includes(defaultLocale))
+    .map((route) => ({
+      params: {
+        slug: route.slug.length === 0 ? undefined : route.slug.join('/'),
+      },
+      props: { route },
+    }));
 }
 
 interface Props {

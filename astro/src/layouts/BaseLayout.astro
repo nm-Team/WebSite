@@ -63,11 +63,11 @@ const clearLegacyLanParamScript = Astro.url.searchParams.has('lan') ? "changeURL
   </head>
   <body>
     <Header locale={lang} disallowHideHeader={disallowHideHeader} />
+    <script is:inline src="/src/js/header.js"></script>
+    <script is:inline src="/src/js/jquery.min.js"></script>
     <slot />
     <Footer locale={lang} pageUpdate={pageUpdate} />
     {enableLanguageRedirect && <LanguageRedirect />}
-    <script is:inline src="/src/js/header.js"></script>
-    <script is:inline src="/src/js/jquery.min.js"></script>
     {bodyJs.map((src) => <script is:inline src={src}></script>)}
     {clearLegacyLanParamScript && <script is:inline set:html={clearLegacyLanParamScript}></script>}
   </body>

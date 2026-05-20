@@ -6,7 +6,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 
 export function getStaticPaths() {
   return publicLocales.flatMap((lang) =>
-    routeManifest.map((route) => ({
+    routeManifest.filter((route) => route.supportedLocales.includes(lang)).map((route) => ({
       params: {
         lang,
         slug: route.slug.length === 0 ? undefined : route.slug.join('/'),

@@ -1,11 +1,14 @@
+import { getGenericProductSlugs, getProductDetailLocales } from '@/data/products/loader';
+import { getSponsorData } from '@/data/sponsor';
 import type { PublicLocale } from '@/i18n/locales';
 import { publicLocales } from '@/i18n/locales';
 
 export type RouteEntry = {
   id: string;
   slug: string[];
-  kind: 'static-page' | 'listing-page' | 'custom-product-page' | 'redirect-page';
+  kind: 'static-page' | 'listing-page' | 'generic-product-page' | 'custom-product-page' | 'redirect-page';
   sourcePhpPath: string;
+  productSlug?: string;
   pageTitle?: string;
   pageKeywords?: string;
   pageDescription?: string;
@@ -100,7 +103,7 @@ export const routeManifest: RouteEntry[] = [
     pageHeadJs: [],
     pageBodyJs: ['/src/js/tab.js'],
     pageImage: '',
-    pageUpdate: '',
+    pageUpdate: getSponsorData().update,
     supportedLocales: publicLocales,
     renderMode: 'static',
     expectedRedirect: 'root-may-redirect',
@@ -183,13 +186,31 @@ export const routeManifest: RouteEntry[] = [
     pageDescription: 'products.description',
     pageHeadCss: ['/src/css/products.css', '/src/css/products_overview.css'],
     pageHeadJs: [],
-    pageBodyJs: ['/src/js/products.js', '/src/js/products_overview.js'],
+    pageBodyJs: [],
     pageImage: '',
     pageUpdate: '',
     supportedLocales: publicLocales,
     renderMode: 'static',
     expectedRedirect: 'root-may-redirect',
   },
+  ...getGenericProductSlugs().map((productSlug): RouteEntry => ({
+    id: `products-overview-${productSlug}`,
+    slug: ['products', 'overview', productSlug],
+    kind: 'generic-product-page',
+    sourcePhpPath: '/products/overview.php',
+    productSlug,
+    pageTitle: 'products.title',
+    pageKeywords: '',
+    pageDescription: 'products.description',
+    pageHeadCss: ['/src/css/products.css', '/src/css/products_detail.css'],
+    pageHeadJs: [],
+    pageBodyJs: [],
+    pageImage: '',
+    pageUpdate: '',
+    supportedLocales: getProductDetailLocales(productSlug),
+    renderMode: 'static',
+    expectedRedirect: 'root-may-redirect',
+  })),
   {
     id: 'products-overview-nmbot-telegram',
     slug: ['products', 'overview', 'nmBot-Telegram'],

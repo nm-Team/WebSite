@@ -20,7 +20,16 @@ describe('route manifest', () => {
       expect(route.sourcePhpPath.endsWith('.php')).toBe(true);
       expect(route.renderMode).toBe('static');
       expect(route.expectedRedirect).toBe('root-may-redirect');
-      expect(route.supportedLocales).toEqual(publicLocales);
+      expect(route.supportedLocales.length).toBeGreaterThan(0);
+      expect(route.supportedLocales.every((locale) => publicLocales.includes(locale))).toBe(true);
     }
+  });
+
+  it('omits generic product detail locales when JSON data is unavailable', () => {
+    const startPage = routeManifest.find((route) => route.productSlug === 'nmBrowser-StartPage');
+    const accessibility = routeManifest.find((route) => route.productSlug === 'product-accessibility');
+
+    expect(startPage?.supportedLocales).toEqual(['en', 'zh-CN', 'zh-HK', 'zh-x-mars']);
+    expect(accessibility?.supportedLocales).toEqual(['en', 'zh-CN', 'zh-HK', 'zh-x-mars']);
   });
 });
