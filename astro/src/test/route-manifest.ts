@@ -1,8 +1,8 @@
-import { publicLocales } from '@/i18n/locales';
+import type { PublicLocale } from '@/i18n/locales';
 import { routeManifest, toPrefixedPath, toRootPath } from '@/i18n/routes';
 
 export const comparisonMatrix = {
-  locales: publicLocales,
+  locales: ['en', 'zh-CN', 'zh-HK', 'ja-JP', 'zh-x-mars'] as const satisfies readonly PublicLocale[],
   viewports: [
     { width: 390, height: 844 },
     { width: 768, height: 1024 },
@@ -13,7 +13,7 @@ export const comparisonMatrix = {
 export function enumerateComparableRoutes() {
   return routeManifest.flatMap((route) => {
     const rootPath = toRootPath(route.slug);
-    const localizedPaths = publicLocales.map((locale) => toPrefixedPath(locale, route.slug));
+    const localizedPaths = route.supportedLocales.map((locale) => toPrefixedPath(locale, route.slug));
     return [rootPath, ...localizedPaths];
   });
 }
