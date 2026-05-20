@@ -1,3 +1,52 @@
-<header>
-  <a href="/">nmTeam</a>
-</header>
+---
+import type { PublicLocale } from '@/i18n/locales';
+import { t } from '@/i18n/translate';
+
+interface Props {
+  locale: PublicLocale;
+  disallowHideHeader?: boolean;
+}
+
+const { locale, disallowHideHeader = false } = Astro.props;
+const disallowHideHeaderScript = `disallowHideHeader = ${disallowHideHeader ? 'true' : 'false'};`;
+---
+<script is:inline set:html={disallowHideHeaderScript}></script>
+<a href="#main-content" class="skip-to-content" role="navigation" aria-label={t(locale, 'skip_to_content')}>
+  {t(locale, 'skip_to_content')}
+</a>
+<div id="hcont">
+  <div class="placeHolder"></div>
+  <div class="header hidden" id="pageHeader">
+    <a class="left" href="/" aria-label={t(locale, 'header.title_button_aria_label')}>
+      <i class="logo" aria-label={t(locale, 'header.title_icon_aria_label')}></i>
+      <p class="name">nmTeam</p>
+    </a>
+    <div class="right" onclick="openHeader(false);">
+      <div class="links">
+        <a href="/" aria-label={t(locale, 'header.home')}>{t(locale, 'header.home')}</a>
+        <a href="/products/" aria-label={t(locale, 'header.products')}>{t(locale, 'header.products')}</a>
+        <a href="https://support.nmteam.xyz" aria-label={t(locale, 'header.support')}>{t(locale, 'header.support')}</a>
+        <a href="https://newsroom.nmteam.xyz" target="_blank" aria-label={t(locale, 'header.newsroom')}>{t(locale, 'header.newsroom')}</a>
+        <a href="/aboutus" aria-label={t(locale, 'header.about')}>{t(locale, 'header.about')}</a>
+      </div>
+      <button class="accountBox" id="accountBox" tabindex="0" aria-label={t(locale, 'header.account_box_aria_label')}>
+        <i id="avatarBox" aria-label={t(locale, 'header.avatar_aria_label')}></i>
+        <p id="userName">{t(locale, 'account_v2.manage')}</p>
+      </button>
+    </div>
+    <button
+      id="menu-toggle"
+      class="menu-toggle"
+      aria-controls="nav-menu"
+      aria-expanded="false"
+      data-nav-menu-extended="false"
+      onclick="openHeader()"
+      aria-label={t(locale, 'header.nav_button_aria_label')}
+    >
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
+    </button>
+  </div>
+</div>
+<span id="main-content"></span>

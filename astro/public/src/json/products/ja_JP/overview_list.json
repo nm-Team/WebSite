@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "name": "StartPage",
+            "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
+            "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
+            "intro": "Good day from StartPage.",
+            "href": "/products/overview/nmBrowser-StartPage&lan=en_US",
+            "javascript": "",
+            "target": "_self",
+            "theme": "dark",
+            "align": "bottom",
+            "length": "3",
+            "buttons": [
+                {
+                    "id": "seemore",
+                    "name": "Learn more (English)",
+                    "javascript": "",
+                    "href": "overview/nmBrowser-StartPage&lan=en_US",
+                    "towards": "in"
+                },
+                {
+                    "id": "go",
+                    "name": "Try now",
+                    "javascript": "",
+                    "href": "https://bs.nmteam.xyz?from=nmTeamProductsPage",
+                    "towards": "out"
+                }
+            ]
+        }
+    ]
+}

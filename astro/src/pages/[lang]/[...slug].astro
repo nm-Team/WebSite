@@ -1,9 +1,6 @@
 ---
-import Footer from '@/components/layout/Footer.astro';
-import Header from '@/components/layout/Header.astro';
-import LanguageSwitcher from '@/components/layout/LanguageSwitcher.astro';
 import { isPublicLocale, publicLocales, type PublicLocale } from '@/i18n/locales';
-import { routeManifest } from '@/i18n/routes';
+import { routeManifest, type RouteEntry } from '@/i18n/routes';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 export function getStaticPaths() {
@@ -13,25 +10,37 @@ export function getStaticPaths() {
         lang,
         slug: route.slug.length === 0 ? undefined : route.slug.join('/'),
       },
+      props: { route },
     })),
   );
 }
 
+interface Props {
+  route: RouteEntry;
+}
+
+const { route } = Astro.props as Props;
 const lang = Astro.params.lang ?? '';
-const slugParam = Astro.params.slug;
-const slug = slugParam ? slugParam.split('/') : [];
 if (!isPublicLocale(lang)) {
   throw new Error(`Unsupported locale: ${lang}`);
 }
 
-const title = slug.length === 0 ? `${lang} Home` : `${lang} / ${slug.join('/')}`;
+const currentLocale = lang as PublicLocale;
+const title = route.slug.length === 0 ? '' : route.slug.join('/');
 ---
-<BaseLayout title={title} lang={lang}>
-  <Header />
-  <LanguageSwitcher currentLocale={lang as PublicLocale} slug={slug} />
+<BaseLayout
+  titleKey={route.pageTitle}
+  keywordsKey={route.pageKeywords}
+  descriptionKey={route.pageDescription}
+  headCss={route.pageHeadCss}
+  headJs={route.pageHeadJs}
+  bodyJs={route.pageBodyJs}
+  image={route.pageImage}
+  pageUpdate={route.pageUpdate}
+  lang={currentLocale}
+>
   <main>
-    <h1>{title}</h1>
+    <h1>{title || 'Home'}</h1>
     <p>Prefixed routes never run automatic language redirect.</p>
   </main>
-  <Footer />
 </BaseLayout>

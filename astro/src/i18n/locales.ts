@@ -14,6 +14,14 @@ export const localeDataMap: Record<PublicLocale, LegacyLocale> = {
   'zh-x-mars': 'hu_MA',
 };
 
+export const legacyLocaleNames: Record<LegacyLocale, string> = {
+  zh_CN: '中文（简体）',
+  zh_HK: '中文（繁体）',
+  en_US: 'English',
+  ja_JP: '日本語',
+  hu_MA: '焱暒妏',
+};
+
 const aliases: Record<string, PublicLocale> = {
   en_US: 'en',
   en: 'en',

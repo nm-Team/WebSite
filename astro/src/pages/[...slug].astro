@@ -1,10 +1,6 @@
 ---
-import Footer from '@/components/layout/Footer.astro';
-import Header from '@/components/layout/Header.astro';
-import LanguageRedirect from '@/components/layout/LanguageRedirect.astro';
-import LanguageSwitcher from '@/components/layout/LanguageSwitcher.astro';
 import { defaultLocale } from '@/i18n/locales';
-import { routeManifest } from '@/i18n/routes';
+import { routeManifest, type RouteEntry } from '@/i18n/routes';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 export function getStaticPaths() {
@@ -12,20 +8,31 @@ export function getStaticPaths() {
     params: {
       slug: route.slug.length === 0 ? undefined : route.slug.join('/'),
     },
+    props: { route },
   }));
 }
 
-const slugParam = Astro.params.slug;
-const slug = slugParam ? slugParam.split('/') : [];
-const title = slug.length === 0 ? 'Home' : slug.join('/');
+interface Props {
+  route: RouteEntry;
+}
+
+const { route } = Astro.props as Props;
+const title = route.slug.length === 0 ? '' : route.slug.join('/');
 ---
-<BaseLayout title={title} lang={defaultLocale}>
-  <Header />
-  <LanguageSwitcher currentLocale={defaultLocale} slug={slug} />
+<BaseLayout
+  titleKey={route.pageTitle}
+  keywordsKey={route.pageKeywords}
+  descriptionKey={route.pageDescription}
+  headCss={route.pageHeadCss}
+  headJs={route.pageHeadJs}
+  bodyJs={route.pageBodyJs}
+  image={route.pageImage}
+  pageUpdate={route.pageUpdate}
+  lang={defaultLocale}
+  enableLanguageRedirect
+>
   <main>
-    <h1>{title}</h1>
+    <h1>{title || 'Home'}</h1>
     <p>Unprefixed route renders English fallback and may redirect for users.</p>
   </main>
-  <Footer />
-  <LanguageRedirect />
 </BaseLayout>

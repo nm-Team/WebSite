@@ -1,0 +1,531 @@
+{
+    "about": {
+        "0": "自称“自主 nm 机器人”的 XYZ1024 可是 nm 的好手。有人在 Sakura Frp 群里说话的时候，他总是回复一句“*nm”，举个例子：",
+        "1": "——Android 怎么用 Mac 啊",
+        "2": "——用 nm",
+        "3": "受到熏陶的 nmTeam 创始人 agou 就这样被骗进了 nm 大军，成为了一名光荣的 nm 人。他背起了“自主 nm 机器人”这个光荣的称号，扛起了 nm 这面光荣的大旗，结果在 2020 年 5 月 29 日 14 时 07 分被光荣地移出了群聊。",
+        "4": "决定创立 nmTeam 的时候，我们给 “nm”拟定了中文寓意：“柠檬”，又或者“纳米”。",
+        "5": "咱们 nmTeam 的成员各个可都是 nm 的好手，所以我们有信心将 nm 文化发扬光大！",
+        "6": "那得先让我看看你有没有 nm 的潜质。",
+        "7": "只要你有一颗 nm 的心，nmTeam 随时欢迎你的加入。请前往此页面进一步了解申请加入 nmTeam 的条件。",
+        "8": "了解如何加入 nmTeam > ",
+        "description": "了解 nmTeam 的历史与含义吧。",
+        "h0": "然而我们连 Slogan 都没有想好。",
+        "h1": "想知道 nm 这个词儿是怎么来的吗？",
+        "h2": "你也想加入 nmTeam 了吗？",
+        "title": "关于 nmTeam"
+    },
+    "account": {
+        "click_to_log": "点击登录",
+        "loading": "加载中...",
+        "unable_to_load": "加载出错"
+    },
+    "account_v2": {
+        "manage": "管理账号"
+    },
+    "business_cooperation": {
+        "content_0": "若要就商务合作事宜与我们取得联系，请发送邮件到：",
+        "content_1": "我们可能会使用不同的邮件地址回复您。",
+        "copy_email": "拷贝地址",
+        "description": "和 nmTeam 开展商务合作。",
+        "title": "商务合作"
+    },
+    "comes_soon": "此页面正在制作中，敬请期待！",
+    "cookie": {
+        "cookieConfirmDialog": {
+            "body": {
+                "0": "nmTeam 网站及服务使用 Cookie 存储访客的基本信息和用户的账号等信息。",
+                "1": "所有 Cookie 依照<a href='/legal/privacy-policy.php'>《nmTeam 隐私政策》</a>进行管理。"
+            },
+            "button": {
+                "accept": "接受并继续",
+                "customize": "自定义"
+            },
+            "header": "关于 Cookie"
+        },
+        "cookiePage": {
+            "title": "关于 Cookie"
+        }
+    },
+    "cookies": {
+        "cookies_off": "关",
+        "cookies_on": "开",
+        "description": "管理 nmTeam 网站的 Cookies 设置。",
+        "necessary_cookies_description": "我们需要这些 Cookies 来正常向您提供网站服务。您无法停用必要的 Cookies。",
+        "necessary_cookies_title": "必要的 Cookies",
+        "optional_cookies_description": "启用这些 Cookies 可让我们向您提供更优质的服务。",
+        "optional_cookies_title": "可选 Cookies",
+        "title": "Cookies"
+    },
+    "footer": {
+        "cr": "版权所有 nmTeam。保留所有权利。",
+        "email": "电子邮箱：",
+        "language": "切换语言：",
+        "language_selector_button_aria_label": "。点击以打开切换语言页面。",
+        "sitemap": "站点地图",
+        "status": "系统状态",
+        "svca": "服务协议",
+        "svcb": "隐私政策",
+        "table": {
+            "about": {
+                "aboutUs": "关于 nmTeam",
+                "accessibility": "辅助功能",
+                "business_cooperation": "商务合作",
+                "joinUs": "加入 nmTeam",
+                "newsroom": "Newsroom",
+                "supportUs": "赞助 nmTeam",
+                "title": "关于"
+            },
+            "products": {
+                "library": "产品库",
+                "nmBrowserStartPage": "nmBrowser 启动页",
+                "nmChat": "nmChat",
+                "title": "产品"
+            },
+            "service": {
+                "accountCenter": "nmTeam Account Center",
+                "support": "支持",
+                "systemStatus": "系统状态",
+                "title": "服务"
+            }
+        }
+    },
+    "header": {
+        "about": "关于",
+        "account_box_aria_label": "账号管理",
+        "avatar_aria_label": "头像",
+        "home": "主页",
+        "nav_button_aria_label": "打开页面导航",
+        "newsroom": "Newsroom",
+        "products": "产品",
+        "support": "支持",
+        "title_button_aria_label": "nmTeam 文本。页面标题。点击回到网站主页。",
+        "title_icon_aria_label": "nmTeam 团队图标，由一个柠檬图案和文本“nm”组成。"
+    },
+    "index": {
+        "connect_para": "关注我们的社交媒体和平台账号，了解关于 nmTeam 的更多资讯。",
+        "connect_us": "更多官方资讯",
+        "join_para": "如果你有一颗 nm 的心，现在就可以申请加入我们。",
+        "join_para_2": "请前往此页面进一步了解申请加入 nmTeam 的条件。",
+        "join_us": "加入 nmTeam",
+        "join_us_link": "了解如何加入 nmTeam",
+        "more_products": "查看产品页面",
+        "newslist": "nmTeam 新闻",
+        "newslist_date_aria_label": "文章发布日期",
+        "newslist_error": "加载新闻时出现问题。",
+        "newslist_loading": "正在加载...",
+        "newslist_more": "nmTeam Newsroom",
+        "nmteam_about_link": "关于 nmTeam",
+        "nmteam_is_this_a": "nmTeam 于 2021 年 6 月 14 日成立，致力于为人们提供十分 nm 的产品和服务。nmTeam 现由 agou 作为 CEO，将陆续推出更多 nmServices。",
+        "nmteam_is_this_b": "nmTeam 可能会倒闭，但永远不会变质！",
+        "retry": "重试",
+        "title": "",
+        "what_is_nmteam": "nmTeam 是什么？",
+        "what_we_does": "nmTeam 造就 nmProducts",
+        "what_we_does_ans": "nmTeam 致力于制作 nmProducts。在下方查看我们的一些产品。"
+    },
+    "join": {
+        "join_register_page": {
+            "description": "加入 nmTeam，和我们一起发扬 nm 文化，共建 nm 生态。",
+            "tip": "抱歉，还未正式开放 nmTeam 加入申请，请过两天再看看。",
+            "title": "申请加入 nmTeam"
+        },
+        "join_requirement_page": {
+            "description": "加入 nmTeam，和我们一起发扬 nm 文化，共建 nm 生态。",
+            "intro": {
+                "0": "你知道吗？nmTeam 拥有和谐的团队氛围和自由的管理安排。",
+                "1": "加入 nmTeam 将是一个简单又愉快的过程——你的才能将对我们最新的产品大有裨益，我们甚至可以为你量身定制专属产品！而且你的努力会有丰富的回报，你对 nmTeam 的贡献还可以获得公开表扬和不少的奖金；在加入 nmTeam 之后，就算你没有太多贡献，也不会受到批评。所以快来找到自己中意的位置，即刻加入 nmTeam！",
+                "2": ""
+            },
+            "jobs": {
+                "common": {
+                    "basic_morality": "有基本的团队责任感，能保证不破坏 nmTeam 创作环境和成员的基本道德要求",
+                    "basic_morality_intro": "在一些特殊情况下请多多理解，nmTeam 成员绝非圣贤，无论如何还请多多包容；就算无法接受，也请不要毁坏 nmTeam 服务和销毁 nmTeam 数据文件。",
+                    "friendly_wish": "能与或希望与其他成员展开友好的交流合作",
+                    "nm_heart": "拥有一颗 nm 的心",
+                    "nm_heart_intro": "既然作为 nm 人，总得懂点 nm 道理。你是如何看待 nm 这个单词的？"
+                },
+                "developer": {
+                    "additional": "当然，我们更欢迎熟练使用 Git，且对网页开发或 app 开发掌握较好的 nm 人加入我们，所以请一定踊跃报名。",
+                    "experience": "有至少基本的软件开发经验，或渴望通过参与 nmTeam 开发提升自己",
+                    "experience_intro": "我们乐于看到 nmTeam 成员在加入 nmTeam 后的提升，所以不要担心自己目前的开发水平能否胜任 nmTeam 的需要。大胆闯一闯，保持一颗上进的心，看到你的进步就是 nmTeam 的大家最大的快乐。",
+                    "knowledge": "对电脑有基本的认知水平",
+                    "title": "nmTeam 开发"
+                },
+                "support": {
+                    "attitude": "以良好的态度面对 nmTeam 客户",
+                    "attitude_intro": "nmTeam 客户并不是在所有时候都提出轻松的问题，希望您能以平和的心态回应用户的诉求。",
+                    "bill": "精神损失费",
+                    "bill_intro": "处理客户服务有时是一件让人略感疲惫的事情。nmTeam 将研究根据服务情况为我们的服务团队成员发放奖金，以资鼓励。",
+                    "part_time": "享受空闲时间",
+                    "part_time_intro": "nmTeam 不要求你专门为提供服务腾出时间，仅当您想换换心情时，即可查看 nmTeam 用户需要的帮助。紧急服务将由 nmTeam 管理层直接负责，毋需担心。",
+                    "title": "客户支持"
+                },
+                "writer": {
+                    "english": "掌握一定的外语水平优先",
+                    "knowledge": "深入了解 nmTeam 的产品特性和相关规划，能深入浅出地传达 nmTeam 的价值观，并带来积极引导作用",
+                    "lan_level": "有基本的文学素养，能写出不含语病和标点符号错误，并且表意明确的文案",
+                    "lan_level_intro": "若能做到妙笔生花，我们对你赞赏有加，加入我们你将稳坐沙发。",
+                    "title": "运营"
+                }
+            },
+            "language_request": "暂时只招募能互相通过中文流畅交流的成员。",
+            "more": {
+                "already_been_member": {
+                    "panel": "nmTeam 工作面板（开发中）",
+                    "title": "已经是 nmTeam 成员"
+                },
+                "resources": {
+                    "nmteam_member_rules": "nmTeam 成员工作和管理规范（制定中）",
+                    "title": "相关资料"
+                }
+            },
+            "publicity": "nmTeam 加入规则正在公示中，并可能随时修改。请通过电子邮箱向 nmTeam 反馈：support@nmteam.xyz",
+            "register": "加入",
+            "title": "欢迎加入 nmTeam！"
+        }
+    },
+    "language": {
+        "page": {
+            "auto": "自动选择",
+            "tip": "以您熟悉的语言浏览 nmTeam 网站。某些内容可能不会以您选定的语言显示。",
+            "title": "切换语言"
+        }
+    },
+    "legal": {
+        "description": "查看 nmTeam 服务条款。",
+        "nsp": "网络服务使用协议",
+        "pp": "隐私政策"
+    },
+    "page_update": "页面更新日期：{year} 年 {month} 月 {day} 日",
+    "pagebases": {
+        "official_website": "官方网站",
+        "page_not_found": {
+            "home": "主页",
+            "img_title": "404 表明无法找到此页面",
+            "title": "找不到页面"
+        },
+        "site_intro": "nmTeam 凭借非凡创意，为世界创造无与伦比的nm产品。"
+    },
+    "products": {
+        "description": "查看 nmTeam 的精彩产品。",
+        "error": "发生了一些错误。",
+        "explain": "说明：仅展示在您的国家或地区可用的 nmTeam 产品。要查看在其它国家或地区可用的 nmTeam 产品，请更改 nmTeam 网站的语言。",
+        "nmbot_telegram": {
+            "description": "柠动乐聊。",
+            "features": {
+                "channel": "频道",
+                "channel_features": {
+                    "ab": "帖子自动添加按钮",
+                    "as": "自动美化拉丁文格式",
+                    "bl": "自动封禁退出用户",
+                    "ce": "频道透视眼",
+                    "eb": "编辑帖子按钮",
+                    "pw": "同频气氛组"
+                },
+                "content_1": "nmBot 搭载超多丰富功能，|从管理群组到运营频道，|甚至对你的个人账号，|都有让你眼前一亮的功能。",
+                "group": "群组",
+                "group_features": {
+                    "bm": "banme 游戏",
+                    "cl": "限制群成员使用指令",
+                    "ds": "骚扰拦截",
+                    "dt": "按消息类别自动删除消息",
+                    "jm": "p_入群请求通知消息",
+                    "jv": "入群验证",
+                    "kr": "关键词回复",
+                    "lm": "定时任务",
+                    "mi": "群友互动",
+                    "nc": "nmartChat",
+                    "nl": "p_新成员权限限制",
+                    "pc": "p_nmBot 配置权限管理",
+                    "rc": "自动回复绑定频道帖子",
+                    "sl": "发言频率限制",
+                    "z_mr": "和更多实用功能"
+                },
+                "its_only_part": "* 此处仅展示部分亮点功能。部分功能可能需满足条件方可使用。",
+                "nmbot_plus": "nmBot+ 功能",
+                "private": "私信",
+                "private_features": {
+                    "br": "商业关键词回复",
+                    "cm": "自定义指令映射",
+                    "cr": "nmBot 积分",
+                    "dc": "Telegram 数据中心查询",
+                    "gt": "赠品活动追踪",
+                    "nc": "nmartChat",
+                    "ts": "转换为贴纸或表情"
+                },
+                "special": {
+                    "content_0": "超多特色功能|助你活跃群组，畅快聊天。",
+                    "content_1": "这还只是一小部分！|还有更多功能等你来探索。",
+                    "feature_1": {
+                        "content": "用可盐可甜的语言，自动点评频道中|发布的|新帖子。[footer:帖子可能需要满足特定条件才能被评论。]",
+                        "image": "website intro special feature 1.png",
+                        "title": "同频气氛组"
+                    },
+                    "feature_2": {
+                        "content": "自动鉴定频道主身份，使用频道身份，|也可|自由|使用|各项&nbsp;|nmBot 功能。[footer:需要将 nmBot 设为该频道管理员。]",
+                        "image": "website intro special feature 2.png",
+                        "title": "频道透视眼"
+                    },
+                    "feature_3": {
+                        "content": "不喜欢默认指令，想来点自己的特色？|自定义“指令映射”，|让 nmBot&nbsp;|识别你的自定义指令。",
+                        "image": "website intro special feature 3.png",
+                        "title": "指令映射"
+                    },
+                    "feature_4": {
+                        "content": "有了 Telegram 商业功能，不止群组，|连您的私信|都能接入关键词回复，|让 nmBot&nbsp;|代替您|发送回复、|删除消息|甚至禁言用户[footer:商业关键词回复不支持禁言用户。]<bs>，</bs>|还有超多选项|供自定义。",
+                        "image": "website intro special feature 4.png",
+                        "title": "关键词回复"
+                    },
+                    "feature_5": {
+                        "content": "让 nmBot 自动提醒您|参与的频道赠品活动|已结束，|方便快速查看结果|或退出频道。",
+                        "image": "website intro special feature 5.png",
+                        "title": "赠品活动追踪"
+                    },
+                    "title": "还超特色"
+                },
+                "title": "功能超多"
+            },
+            "first_intro": {
+                "content_1": "试想这样一款机器人，|管理起群组来手拿把掐，|热场子聊天也不在话下。",
+                "title": "聊起来够欢快，<br />用起来超自在。"
+            },
+            "footer_notes": {
+                "0": "所有内容仅供参考，功能可能发生变化，请以实际使用为准。"
+            },
+            "go_to_panel": "nmBot 面板",
+            "header_name": "nmBot",
+            "intelligence": {
+                "chat_coming_soon": "Beta 版现已推出",
+                "chat_content_1": "<igt>nmBot Copilot</igt> |是内置于 nmBot |和 nmBot 面板|的个人助理，|使管理 nmBot 群组|和个人配置|变得史无前例地简单。",
+                "chat_title": "nmBot Copilot",
+                "content_1": "全方位服务于 nmBot 的下一代智能助理。",
+                "content_2": "nmBot 智能为 nmBot |带来全方位的升级，|驱动 |<igt>nmBot Copilot</igt>、|<igt>nmartChat+</igt>、|<igt>同频气氛组</igt>|和<igt>骚扰拦截</igt>|等更多功能。",
+                "feature_1": {
+                    "content": "只需说“让新人必须得|订阅我的频道 @nmbotchannel，|而且加群第一天|不允许发图片”，|nmBot Copilot 就会知道|您要启用“入群验证”|和“新成员权限限制”|两项功能，|并为您配置好；|说“设置晚上十一点|到早上八点之间|不允许发图发视频”，|nmBot Copilot 就会为您|添加对应的定时任务。",
+                    "title": "管理群组配置"
+                },
+                "feature_2": {
+                    "content": "您可以向 nmBot Copilot |询问各项 nmBot 功能的使用方法。|未来 nmBot Copilot |还将与 nmBot 帮助文档|等更多功能结合，|为用户提供更多帮助。",
+                    "title": "满载 nmTeam 知识"
+                },
+                "feature_3": {
+                    "content": "nmBot Copilot |在 Telegram 机器人内|和 nmBot 面板中均可使用，|且与各项 nmBot 功能紧密融合，|为 nmBot |打造更舒适的使用体验。",
+                    "title": "触手可及"
+                },
+                "other_1": "<igt>nmartChat+</igt> 是 nmBot |独具特色的智能聊天功能的|又一次进化：|在保留 nmartChat |充满特色的聊天风格|的基础上，|nmartChat+ |带来了对聊天内容的更好理解，|并自动选择更合适的时间进行回复。|<igt>同频气氛组</igt>功能|能更好地|联系上下文，|不仅能回复帖子，|还会智能参与|评论互动。|<igt>骚扰拦截</igt>功能|在保持|低误判率|的前提下，|将骚扰消息识别准确率|提升至约 5 倍[footer:于 2025 年 12 月 22 日使用预发布版本的 nmBot 智能骚扰拦截组件进行测试。测试数据表明，在 nmBot 智能骚扰拦截设为“最严格”时，nmBot 智能骚扰拦截功能的识别效果可达传统识别的 5.11 倍。实际效果因使用情况和设置而异。]。",
+                "other_title": "更多 nmBot |智能功能",
+                "title_1": "nmBot",
+                "title_2": "智能"
+            },
+            "nmbot_plus": {
+                "content_0": "这款适用于群组|和用户个人的高级订阅|为 nmBot 带来 |20 多项高级服务。|83% 的活跃群组|每月只需 0.4 美元|即可订阅 nmBot+[footer:2024 年 11 月对活跃群组进行的统计表明该比例的群组可享受折合每月 0.4 美元的 nmBot+ 方案。]，|让这款订阅|对更多人负担得起。",
+                "feature_1": {
+                    "content": "群组所有者|可设定|管理员|对 nmBot 设置|的修改权限，|管理管理员|更轻松。",
+                    "image": "website intro plus feature 1.png",
+                    "title": "管理员权限控制"
+                },
+                "feature_2": {
+                    "content": "自定义|群组中|显示的|机器人指令，|启用功能|有的放矢。",
+                    "image": "website intro plus feature 2.png",
+                    "title": "自定义指令列表"
+                },
+                "feature_3": {
+                    "content": "更多可选操作时间、|自定义验证文本、|入群次数限制、|自定义骚扰规则|等功能|帮助您管控入群用户。",
+                    "image": "website intro plus feature 3.png",
+                    "title": "入群验证"
+                },
+                "feature_4": {
+                    "content": "自定义呼叫词|并在私信中接收提示。",
+                    "image": "website intro plus feature 4.png",
+                    "title": "呼叫群组管理员"
+                },
+                "feature_5": {
+                    "content": "<b>自定义骚扰规则</b>|让群组拥有|自己的骚扰拦截逻辑；|<b>定时任务</b>|支持在群组中|定时发送消息；|还有|<b>超多限制解锁</b>|使 nmBot 体验更畅快。",
+                    "image": "website intro plus feature 5.png",
+                    "title": "更多权益"
+                },
+                "title": "nmBot+<nobr>，</nobr><br>超优惠|进阶服务。",
+                "view_full_benefits": "进一步了解 nmBot+ 权益"
+            },
+            "page_description": "了解 Telegram 上功能最强大的群组管理机器人之一。\nnmBot 搭载众多群组和频道管理功能，并通过各种娱乐功能为群组带来新体验，已获得上万群组的信赖。",
+            "panel": {
+                "feature_1": {
+                    "content": "作为 Telegram 迷你 App，在 Telegram 内|点一下|就能轻松打开 nmBot 面板。",
+                    "title": "Telegram 内就能用"
+                },
+                "feature_2": {
+                    "content": "在浏览器中也能使用 nmBot 面板，|还独享|平行视图|带来的便捷体验。",
+                    "title": "想要大屏也没问题"
+                },
+                "feature_3": {
+                    "content": "nmBot 面板设置界面|简洁明了，|各项功能|一看就懂，|即开即用。",
+                    "title": "一键设置，轻松上手"
+                },
+                "simplified_content_1": "挨个查看意义不明的选项、|疯狂发送指令设置功能、|为一条消息|打出超复杂代码的日子，|到此为止。",
+                "simplified_content_2": "有了 nmBot 面板，|修改群组配置|变得和打开飞行模式一样轻松。",
+                "simplified_title": "这款面板，|简化一切。",
+                "title": "nmBot 面板"
+            },
+            "resources": {
+                "channel_content": "订阅 nmBot 频道，|获取关于 nmBot 的最新消息。",
+                "channel_link": "订阅 nmBot 频道",
+                "channel_title": "nmBot 频道",
+                "community_content": "加入 nmBot 用户社群，|与其他 nmBot 用户交流。",
+                "community_link": "加入社群",
+                "community_title": "nmBot 用户社群",
+                "content_0": "查看最新公告，了解使用技巧。",
+                "documentation_content": "查看 nmBot 帮助文档，|了解 nmBot 的使用方法。",
+                "documentation_link": "查看 nmBot 帮助文档",
+                "documentation_title": "nmBot 帮助文档",
+                "newsroom_content": "在 nmTeam Newsroom 中|查看 nmBot 的最新新闻稿。",
+                "newsroom_link": "查看 nmBot 新闻",
+                "newsroom_title": "nmTeam Newsroom",
+                "title": "nmBot 资源"
+            },
+            "start_use": "开始使用",
+            "title": "nmBot Telegram",
+            "usage": {
+                "content_0": "Telegram 内海量大型群组|都在使用 nmBot 进行管理，|用过都说好。[footer:2022 年 4 月进行的用户调查中，nmBot 的用户满意度达 94%。数据为估算值。]",
+                "data": {
+                    "chat_admin_count": "服务对话管理员数[footer:数据记录日期为 2024 年 8 月 20 日。数据为估算值。]",
+                    "daily_message_count": "日处理消息数[footer:数据记录日期为 2024 年 8 月 19 日。数据为估算值。]",
+                    "mau": "月活跃用户数[footer:数据记录日期为 2025 年 3 月 11 日，来自 Telegram 统计数据。数据为估算值。]",
+                    "total_group_count": "累计加入群组数[footer:数据截至 2024 年 8 月 20 日。数据为估算值。]"
+                },
+                "title": "上万群组的选择"
+            }
+        },
+        "noresult": "找不到在您的国家或地区可用的 nmTeam 产品。",
+        "notfound": "未找到产品",
+        "target_detail_aria_label": "，查看详情",
+        "target_in_aria_label": "，打开链接",
+        "target_out_aria_label": "，在新窗口打开链接",
+        "target_turn_to_note": "转到注脚",
+        "title": "产品",
+        "unavailable": "此产品不存在或无法在您的国家或地区使用。"
+    },
+    "questionnaire": {
+        "account": {
+            "description": "nmTeam 工作人员将看到您的账号信息。",
+            "error": "发生了一些错误，无法验证登录状态。",
+            "title": "将使用 {name} 提交此表单"
+        },
+        "backstage": {
+            "analyze": {
+                "detail": "详情",
+                "input_rate": "填写率",
+                "keyword": "关键词",
+                "overview": "概览",
+                "percent": "百分比",
+                "result_num": "结果数",
+                "time": "平均用时"
+            },
+            "data_type": {
+                "JSON": "JSON",
+                "analyze": "分析",
+                "origin": "源数据",
+                "preview": "源表单"
+            },
+            "gentime": "页面生成时间：",
+            "link": "链接",
+            "name": "表单：",
+            "origin": {
+                "answer": "答案",
+                "id": "ID",
+                "ip": "IP",
+                "start_time": "开始填写时间",
+                "submit_time": "提交时间",
+                "time": "耗时",
+                "uid": "UID"
+            },
+            "question_type": {
+                "chosen_answer": "选填",
+                "input": "填空",
+                "multiple": "多选",
+                "must_answer": "必填",
+                "single": "单项选择",
+                "textarea": "多行输入"
+            },
+            "tip": {
+                "not_admin": "抱歉，您不是 nmTeam 管理员，没有权限访问此页面。",
+                "not_found": "未找到此表单。",
+                "not_log": "抱歉，您未登录 nmTeam 管理员账户。"
+            },
+            "title": "nmTeam 表单分析数据"
+        },
+        "description": "填写 nmTeam 表单。",
+        "limit": "此表单需登录 nmTeam Account 后方可提交，且每账号可最多提交 {t} 次。",
+        "log_require": "需要登录 nmTeam 账号才可以填写此表单。",
+        "multiple": "多选",
+        "must_input": "请填写此项。",
+        "result": {
+            "error_code": {
+                "EMPTY_ANSWER": "有必填问题未填写",
+                "LOG_VERIFY_ERROR": "用户登录状态校验失败",
+                "REACH_ACCOUNY_LIMIT": "超过了账号提交次数",
+                "REACH_IP_LIMIT": "此 IP 的提交频率太频繁，请稍后再试",
+                "SERVER_ERROR": "出现了一些服务器错误"
+            },
+            "info_error": "提交表单 <b>{name}</b> 失败。<br><br>错误信息：{error}。",
+            "info_success": "您已成功提交表单 <b>{name}</b>。",
+            "title_error": "表单提交失败",
+            "title_success": "表单提交成功"
+        },
+        "select_max_limit": "请最多选择 {n} 项。",
+        "select_min_limit": "请至少选择 {n} 项。",
+        "select_num_limit": "请选择 {min} 至 {max} 项。",
+        "select_sin_limit": "请选择 {min} 项。",
+        "submit": "提交",
+        "title": "nmTeam 表单"
+    },
+    "schema": {
+        "newsroom_description": "在 nmTeam Newsroom 中查看最新的 nmTeam 新闻。",
+        "nmbot_intro": "nmBot Telegram 介绍",
+        "nmbot_intro_description": "了解 nmBot 这款超强大的 Telegram 机器人。",
+        "nmbot_panel": "nmBot 面板",
+        "nmbot_panel_description": "打开 nmBot 面板管理您的 nmBot 设置。",
+        "nmteam_support": "nmTeam 支持",
+        "nmteam_support_description": "在 nmTeam 支持页面获取关于 nmTeam 产品的帮助。",
+        "products": "产品",
+        "products_description": "了解 nmTeam 旗下产品。"
+    },
+    "sitemap": {
+        "description": "查看 nmTeam 站点地图，快速定向您喜爱的 nmTeam 网站页面。",
+        "title": "站点地图"
+    },
+    "skip_to_content": "跳到内容",
+    "status_page": {
+        "description": "跟踪 nmTeam 各服务的工作状态。",
+        "redirecting": "正在重定向到 nmTeam 系统状态独立页面...",
+        "title": "nmTeam 系统状态"
+    },
+    "support": {
+        "description": "我们随时在此提供帮助。\n\n正在转到 nmTeam 支持，请稍候...",
+        "title": "nmTeam 支持"
+    },
+    "supportus": {
+        "copy_crypto_address": "拷贝地址",
+        "copy_crypto_address_success": "拷贝地址成功",
+        "crypto": "加密货币",
+        "crypto_address": "加密货币地址",
+        "crypto_only_accept_tron": "仅支持接收 TRON 资产",
+        "description": "赞助 nmTeam，帮助我们走得更远。",
+        "links": {
+            "afdian": "爱发电",
+            "patreon": "Patreon"
+        },
+        "para": "nmTeam 坚信自己的存在为人们带来了独特的价值。<br>如果您也认同这一点，不妨赞助 nmTeam，让我们能走的更远。<br>nmTeam 会将这些捐助资金用于 nmTeam 的研发和日常开支，或者用于买一杯咖啡。<br>无论您通过何种方式支持 nmTeam，我们都对您表示衷心的感谢。有了您的一片心意，我们必定更加努力。",
+        "sponsors_info_note": "以上所列的 nmTeam 赞助者的姓名和头像为其自行设定，与 nmTeam 无关。<br>以上赞助渠道将跳转到第三方平台，nmTeam 不对其内容负责。",
+        "table": {
+            "amount": "金额",
+            "avatar": "头像",
+            "contribution": "贡献",
+            "name": "昵称"
+        },
+        "title": "赞助 nmTeam",
+        "tks_other": "鸣谢其他 nmTeam 贡献者",
+        "tks_sponsor": "鸣谢赞助者",
+        "tks_sponsor_part": "部分"
+    }
+}

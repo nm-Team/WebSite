@@ -1,10 +1,112 @@
 ---
+import type { PublicLocale } from '@/i18n/locales';
+import { buildSeoMeta } from '@/utils/seo';
+
 interface Props {
-  title: string;
-  description?: string;
+  locale: PublicLocale;
+  pageTitleKey?: string;
+  pageTitle?: string;
+  pageKeywordsKey?: string;
+  pageKeywords?: string;
+  pageDescriptionKey?: string;
+  pageDescription?: string;
+  image?: string;
+  currentUrl: string;
+  headCss?: readonly string[];
+  headJs?: readonly string[];
 }
 
-const { title, description = '' } = Astro.props;
+const {
+  locale,
+  pageTitleKey,
+  pageTitle,
+  pageKeywordsKey,
+  pageKeywords,
+  pageDescriptionKey,
+  pageDescription,
+  image,
+  currentUrl,
+  headCss = [],
+  headJs = [],
+} = Astro.props;
+
+const seo = buildSeoMeta({
+  locale,
+  pageTitleKey,
+  pageTitle,
+  pageKeywordsKey,
+  pageKeywords,
+  pageDescriptionKey,
+  pageDescription,
+  image,
+  currentUrl,
+});
+const languageScript = `language = ${JSON.stringify(locale)};`;
 ---
-<title>{title}</title>
-<meta name="description" content={description} />
+<meta charset="utf-8" />
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<title>{seo.title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="keywords" content={seo.keywords} />
+<meta name="description" content={seo.description} />
+<meta http-equiv="content-language" content={seo.language} />
+
+<meta property="og:site_name" content="nmTeam" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content={seo.image} />
+<meta property="og:description" content={seo.description} />
+<meta property="og:title" content={seo.title} />
+<meta property="og:url" content={currentUrl} />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={seo.title} />
+<meta name="twitter:description" content={seo.description} />
+<meta name="twitter:image" content={seo.image} />
+
+<link rel="stylesheet" type="text/css" href="/src/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/src/css/header.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@ayahub/webfont-harmony-sans-sc@1.0.0/css/index.min.css"
+  media="print"
+  onload="this.setAttribute('media', 'all')"
+/>
+{headCss.map((href) => <link rel="stylesheet" type="text/css" href={href} />)}
+
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8202YMVF5B"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-8202YMVF5B');
+</script>
+<script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5779459433500433" crossorigin="anonymous"></script>
+{headJs.map((src) => <script is:inline src={src}></script>)}
+<script is:inline type="application/ld+json" set:html={seo.jsonLd}></script>
+<script is:inline set:html={languageScript}></script>
+<script is:inline>
+  function setTheme(theme) {
+    if (document.documentElement.getAttribute('data-theme-is-const') == 'true') {
+      return;
+    }
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    if (event.matches) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  });
+</script>
+<script is:inline src="https://websiteres.nmteam.xyz/ie/ie.js" async></script>
