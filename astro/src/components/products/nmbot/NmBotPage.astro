@@ -140,7 +140,79 @@ const clientScript = `
           list.classList.toggle("active", list.getAttribute("data-chat-type") === button.getAttribute("data-chat-type"));
         });
         updateAllFadeIn();
+        renumberFooterNotesByVisualOrder();
       });
+    });
+  }
+
+  function renumberFooterNotesByVisualOrder() {
+    const notesContainer = document.querySelector(".nmbot-telegram .footer-notes");
+    if (!notesContainer) return;
+
+    const allSupLinks = Array.from(document.querySelectorAll(".nmbot-telegram .footer-note-sup"))
+      .filter((item) => item instanceof HTMLAnchorElement);
+    const visibleSupLinks = allSupLinks.filter((item) => item.offsetParent !== null);
+    if (visibleSupLinks.length === 0) return;
+
+    const sortedVisibleSupLinks = visibleSupLinks
+      .slice()
+      .sort((a, b) => {
+        const rectA = a.getBoundingClientRect();
+        const rectB = b.getBoundingClientRect();
+        const topDiff = rectA.top - rectB.top;
+        if (Math.abs(topDiff) > 2) return topDiff;
+        return rectA.left - rectB.left;
+      });
+
+    const oldToNewId = new Map();
+    let nextId = 1;
+    sortedVisibleSupLinks.forEach((item) => {
+      const matched = item.id.match(/^footer-note-sup-(\\d+)$/);
+      if (!matched) return;
+      const oldId = Number(matched[1]);
+      if (!oldToNewId.has(oldId)) {
+        oldToNewId.set(oldId, nextId);
+        nextId += 1;
+      }
+    });
+
+    if (oldToNewId.size === 0) return;
+
+    allSupLinks.forEach((item) => {
+      const matched = item.id.match(/^footer-note-sup-(\\d+)$/);
+      if (!matched) return;
+      const oldId = Number(matched[1]);
+      const newId = oldToNewId.get(oldId);
+      if (!newId) return;
+      item.id = "footer-note-sup-" + newId;
+      item.href = "#footer-note-" + newId;
+      item.textContent = String(newId);
+    });
+
+    const footerNotes = Array.from(notesContainer.querySelectorAll(".footer-note[id^='footer-note-']"))
+      .filter((item) => item instanceof HTMLElement);
+    const mappedNotes = [];
+    footerNotes.forEach((item) => {
+      const matched = item.id.match(/^footer-note-(\\d+)$/);
+      if (!matched) return;
+      const oldId = Number(matched[1]);
+      const newId = oldToNewId.get(oldId);
+      if (!newId) {
+        item.style.display = "none";
+        return;
+      }
+      item.style.display = "";
+      item.id = "footer-note-" + newId;
+      const backLink = item.querySelector("a");
+      if (backLink) {
+        backLink.href = "#footer-note-sup-" + newId;
+        backLink.textContent = newId + ".";
+      }
+      mappedNotes.push({ item, newId });
+    });
+
+    mappedNotes.sort((a, b) => a.newId - b.newId).forEach((entry) => {
+      notesContainer.appendChild(entry.item);
     });
   }
 
@@ -352,6 +424,7 @@ const clientScript = `
   window.addEventListener("resize", calcPanelScreenshotImage);
   window.addEventListener("scroll", calcDataBlock);
   window.addEventListener("resize", calcDataBlock);
+  window.addEventListener("resize", renumberFooterNotesByVisualOrder);
   fadeIns.forEach((fadein) => {
     window.addEventListener("scroll", () => calcFadeIn(fadein));
     window.addEventListener("resize", () => calcFadeIn(fadein));
@@ -364,6 +437,7 @@ const clientScript = `
   calcPanelScreenshotImage();
   calcDataBlock();
   updateAllFadeIn();
+  renumberFooterNotesByVisualOrder();
 })();
 `;
 ---
