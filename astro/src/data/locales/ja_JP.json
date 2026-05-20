@@ -189,7 +189,7 @@
         "nsp": "インターネットサービス利用規約",
         "pp": "プライバシーポリシー"
     },
-    "page_update": "ページ更新日：{年}年{月}月{日}日",
+    "page_update": "ページ更新日：{year} 年 {month} 月 {day} 日",
     "pagebases": {
         "official_website": "公式ウェブサイト",
         "page_not_found": {
