@@ -14,9 +14,9 @@ const routes = [
   { slug: [], phpPath: '/' },
   { slug: ['aboutus'], phpPath: '/aboutus/' },
   { slug: ['cookies'], phpPath: '/cookies/' },
-  { slug: ['business-cooperation'], phpPath: '/business_cooperation.php' },
-  { slug: ['legal', 'privacy-policy'], phpPath: '/legal/privacy-policy.php' },
-  { slug: ['legal', 'network-service-protocol'], phpPath: '/legal/network-service-protocol.php' },
+  { slug: ['business-cooperation'], phpPath: '/business-cooperation/' },
+  { slug: ['legal', 'privacy-policy'], phpPath: '/legal/privacy-policy/' },
+  { slug: ['legal', 'network-service-protocol'], phpPath: '/legal/network-service-protocol/' },
   { slug: ['support'], phpPath: '/support/' },
   { slug: ['status'], phpPath: '/status.php' },
   { slug: ['supportus'], phpPath: '/supportus/' },
@@ -85,10 +85,17 @@ async function captureSource(source, jsEnabled) {
             viewport: { width: viewport.width, height: viewport.height },
             javaScriptEnabled: jsEnabled,
           });
+          if (jsEnabled) {
+            await context.addInitScript(() => {
+              window.localStorage.setItem('cookieTipv0Checked', 'true');
+              window.localStorage.cookieTipv0Checked = 'true';
+            });
+          }
 
           try {
             const page = await context.newPage();
-            await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
+            await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+            await page.waitForTimeout(800);
 
             const outputDir = path.join(
               outputRoot,

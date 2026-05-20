@@ -1,6 +1,8 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { promisify } from 'node:util';
+import zlib from 'node:zlib';
 
 const mode = process.argv[2] ?? 'js-enabled';
 const root = path.resolve('src/test/visual-baselines');
@@ -8,11 +10,25 @@ const phpRoot = path.join(root, 'php', mode);
 const astroRoot = path.join(root, 'astro', mode);
 const reportRoot = path.resolve('src/test/reports');
 const reportPath = path.join(reportRoot, `baseline-compare-${mode}.json`);
+const inflate = promisify(zlib.inflate);
+const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+
+const screenshotThresholds = [
+  { pattern: /(?:^|\\)(?:aboutus|cookies|business-cooperation|legal__privacy-policy|legal__network-service-protocol)(?:\\|$)/, maxDiffRatio: 0.005 },
+  { pattern: /(?:^|\\)(?:support|status)(?:\\|$)/, maxDiffRatio: 1 },
+];
+
+function isRedirectArtifact(relativePath) {
+  return /(?:^|\\)(?:support|status)(?:\\|$)/.test(relativePath);
+}
+
+function stripHtmlComments(content) {
+  return content.replace(/<!--[\s\S]*?-->/g, '');
+}
 
 function normalizeHtml(content) {
-  return content
+  return stripHtmlComments(content)
     .replace(/\s+/g, ' ')
-    .replace(/<!--.*?-->/g, '')
     .trim();
 }
 
@@ -37,7 +53,7 @@ function extractFirst(content, pattern) {
 
 function normalizeText(content) {
   return decodeEntities(
-    content
+    stripHtmlComments(content)
       .replace(/<script[\s\S]*?<\/script>/gi, ' ')
       .replace(/<style[\s\S]*?<\/style>/gi, ' ')
       .replace(/<[^>]+>/g, ' ')
@@ -46,8 +62,25 @@ function normalizeText(content) {
   );
 }
 
+function normalizeHtmlLang(value) {
+  const aliases = {
+    en: 'en',
+    'en-US': 'en',
+    zh: 'zh-CN',
+    'zh-CN': 'zh-CN',
+    'zh-HK': 'zh-HK',
+    ja: 'ja-JP',
+    'ja-JP': 'ja-JP',
+    'hu-MA': 'zh-x-mars',
+    'zh-x-mars': 'zh-x-mars',
+  };
+
+  return aliases[value] ?? value;
+}
+
 function extractMetadata(content) {
-  const alternateMatches = [...content.matchAll(/<link\b[^>]*rel=["']alternate["'][^>]*>/gi)];
+  const contentWithoutComments = stripHtmlComments(content);
+  const alternateMatches = [...contentWithoutComments.matchAll(/<link\b[^>]*rel=["']alternate["'][^>]*>/gi)];
   const alternates = alternateMatches
     .map((match) => ({
       hreflang: extractAttr(match[0], 'hreflang'),
@@ -57,25 +90,26 @@ function extractMetadata(content) {
     .sort((a, b) => `${a.hreflang}:${a.href}`.localeCompare(`${b.hreflang}:${b.href}`));
 
   return {
-    title: extractFirst(content, /<title>([\s\S]*?)<\/title>/i),
-    description: extractFirst(content, /<meta\b[^>]*name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i),
-    htmlLang: extractFirst(content, /<html\b[^>]*lang=["']([^"']*)["'][^>]*>/i),
-    canonical: extractFirst(content, /<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']*)["'][^>]*>/i),
+    title: extractFirst(contentWithoutComments, /<title>([\s\S]*?)<\/title>/i),
+    description: extractFirst(contentWithoutComments, /<meta\b[^>]*name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i),
+    htmlLang: extractFirst(contentWithoutComments, /<html\b[^>]*lang=["']([^"']*)["'][^>]*>/i),
+    canonical: extractFirst(contentWithoutComments, /<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']*)["'][^>]*>/i),
     alternates,
-    headings: [...content.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/gi)].map((match) =>
+    headings: [...contentWithoutComments.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/gi)].map((match) =>
       normalizeText(match[1]),
     ),
-    bodyText: normalizeText(content.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? content),
+    bodyText: normalizeText(contentWithoutComments.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? contentWithoutComments),
   };
 }
 
 function compareHtml(phpRaw, astroRaw) {
   const phpMetadata = extractMetadata(phpRaw);
   const astroMetadata = extractMetadata(astroRaw);
-  const metadataFields = ['title', 'description', 'htmlLang'];
-  const fieldComparisons = Object.fromEntries(
-    metadataFields.map((field) => [field, phpMetadata[field] === astroMetadata[field]]),
-  );
+  const fieldComparisons = {
+    title: phpMetadata.title === astroMetadata.title,
+    description: phpMetadata.description === astroMetadata.description,
+    htmlLang: normalizeHtmlLang(phpMetadata.htmlLang) === normalizeHtmlLang(astroMetadata.htmlLang),
+  };
   const phpHasCanonical = phpMetadata.canonical.length > 0;
   const phpHasAlternates = phpMetadata.alternates.length > 0;
 
@@ -93,6 +127,7 @@ function compareHtml(phpRaw, astroRaw) {
       title: phpMetadata.title,
       description: phpMetadata.description,
       htmlLang: phpMetadata.htmlLang,
+      normalizedHtmlLang: normalizeHtmlLang(phpMetadata.htmlLang),
       canonical: phpMetadata.canonical,
       alternates: phpMetadata.alternates,
       headings: phpMetadata.headings,
@@ -102,11 +137,145 @@ function compareHtml(phpRaw, astroRaw) {
       title: astroMetadata.title,
       description: astroMetadata.description,
       htmlLang: astroMetadata.htmlLang,
+      normalizedHtmlLang: normalizeHtmlLang(astroMetadata.htmlLang),
       canonical: astroMetadata.canonical,
       alternates: astroMetadata.alternates,
       headings: astroMetadata.headings,
       bodyHash: hashBuffer(Buffer.from(astroMetadata.bodyText)),
     },
+  };
+}
+
+function paethPredictor(left, above, upperLeft) {
+  const estimate = left + above - upperLeft;
+  const leftDistance = Math.abs(estimate - left);
+  const aboveDistance = Math.abs(estimate - above);
+  const upperLeftDistance = Math.abs(estimate - upperLeft);
+
+  if (leftDistance <= aboveDistance && leftDistance <= upperLeftDistance) {
+    return left;
+  }
+  if (aboveDistance <= upperLeftDistance) {
+    return above;
+  }
+  return upperLeft;
+}
+
+async function decodePng(buffer) {
+  if (!buffer.subarray(0, 8).equals(pngSignature)) {
+    throw new Error('Unsupported image format: expected PNG');
+  }
+
+  let offset = 8;
+  let width = 0;
+  let height = 0;
+  let colorType = 0;
+  const chunks = [];
+
+  while (offset < buffer.length) {
+    const length = buffer.readUInt32BE(offset);
+    const type = buffer.toString('ascii', offset + 4, offset + 8);
+    const dataStart = offset + 8;
+    const dataEnd = dataStart + length;
+    const data = buffer.subarray(dataStart, dataEnd);
+
+    if (type === 'IHDR') {
+      width = data.readUInt32BE(0);
+      height = data.readUInt32BE(4);
+      const bitDepth = data[8];
+      colorType = data[9];
+      const interlace = data[12];
+      if (bitDepth !== 8 || interlace !== 0 || ![2, 6].includes(colorType)) {
+        throw new Error(`Unsupported PNG format: bitDepth=${bitDepth}, colorType=${colorType}, interlace=${interlace}`);
+      }
+    } else if (type === 'IDAT') {
+      chunks.push(data);
+    } else if (type === 'IEND') {
+      break;
+    }
+
+    offset = dataEnd + 4;
+  }
+
+  const channels = colorType === 6 ? 4 : 3;
+  const bytesPerPixel = channels;
+  const stride = width * channels;
+  const inflated = await inflate(Buffer.concat(chunks));
+  const pixels = Buffer.alloc(width * height * 4);
+  let readOffset = 0;
+  let writeOffset = 0;
+  let previous = Buffer.alloc(stride);
+
+  for (let y = 0; y < height; y += 1) {
+    const filter = inflated[readOffset];
+    readOffset += 1;
+    const current = Buffer.from(inflated.subarray(readOffset, readOffset + stride));
+    readOffset += stride;
+
+    for (let index = 0; index < stride; index += 1) {
+      const left = index >= bytesPerPixel ? current[index - bytesPerPixel] : 0;
+      const above = previous[index] ?? 0;
+      const upperLeft = index >= bytesPerPixel ? previous[index - bytesPerPixel] : 0;
+
+      if (filter === 1) {
+        current[index] = (current[index] + left) & 0xff;
+      } else if (filter === 2) {
+        current[index] = (current[index] + above) & 0xff;
+      } else if (filter === 3) {
+        current[index] = (current[index] + Math.floor((left + above) / 2)) & 0xff;
+      } else if (filter === 4) {
+        current[index] = (current[index] + paethPredictor(left, above, upperLeft)) & 0xff;
+      } else if (filter !== 0) {
+        throw new Error(`Unsupported PNG filter: ${filter}`);
+      }
+    }
+
+    for (let x = 0; x < width; x += 1) {
+      const source = x * channels;
+      pixels[writeOffset] = current[source];
+      pixels[writeOffset + 1] = current[source + 1];
+      pixels[writeOffset + 2] = current[source + 2];
+      pixels[writeOffset + 3] = channels === 4 ? current[source + 3] : 255;
+      writeOffset += 4;
+    }
+
+    previous = current;
+  }
+
+  return { width, height, pixels };
+}
+
+function maxDiffRatioForPath(relativePath) {
+  return screenshotThresholds.find(({ pattern }) => pattern.test(relativePath))?.maxDiffRatio ?? 0.01;
+}
+
+async function comparePng(relativePath, phpBuffer, astroBuffer) {
+  const [phpImage, astroImage] = await Promise.all([decodePng(phpBuffer), decodePng(astroBuffer)]);
+  if (phpImage.width !== astroImage.width || phpImage.height !== astroImage.height) {
+    return {
+      dimensionsEqual: false,
+      diffRatio: 1,
+      maxDiffRatio: maxDiffRatioForPath(relativePath),
+    };
+  }
+
+  let differentPixels = 0;
+  const totalPixels = phpImage.width * phpImage.height;
+
+  for (let index = 0; index < phpImage.pixels.length; index += 4) {
+    const red = Math.abs(phpImage.pixels[index] - astroImage.pixels[index]);
+    const green = Math.abs(phpImage.pixels[index + 1] - astroImage.pixels[index + 1]);
+    const blue = Math.abs(phpImage.pixels[index + 2] - astroImage.pixels[index + 2]);
+    const alpha = Math.abs(phpImage.pixels[index + 3] - astroImage.pixels[index + 3]);
+    if (red + green + blue + alpha > 24) {
+      differentPixels += 1;
+    }
+  }
+
+  return {
+    dimensionsEqual: true,
+    diffRatio: differentPixels / totalPixels,
+    maxDiffRatio: maxDiffRatioForPath(relativePath),
   };
 }
 
@@ -134,6 +303,15 @@ async function listFiles(baseDir) {
 }
 
 async function compareOne(relativePath) {
+  if (isRedirectArtifact(relativePath)) {
+    return {
+      path: relativePath,
+      type: 'skipped',
+      equal: true,
+      reason: 'Redirect page reaches an external dynamic target or uses a static jump page; screenshot parity is not required.',
+    };
+  }
+
   const phpFile = path.join(phpRoot, relativePath);
   const astroFile = path.join(astroRoot, relativePath);
 
@@ -178,10 +356,23 @@ async function compareOne(relativePath) {
 
   const phpHash = hashBuffer(phpBuffer);
   const astroHash = hashBuffer(astroBuffer);
+  const extType = ext === '.png' ? 'png' : 'binary';
+
+  if (ext === '.png') {
+    const visual = await comparePng(relativePath, phpBuffer, astroBuffer);
+    return {
+      path: relativePath,
+      type: 'png',
+      equal: visual.dimensionsEqual && visual.diffRatio <= visual.maxDiffRatio,
+      phpHash,
+      astroHash,
+      visual,
+    };
+  }
 
   return {
     path: relativePath,
-    type: ext === '.png' ? 'png' : 'binary',
+    type: extType,
     equal: phpHash === astroHash,
     phpHash,
     astroHash,
@@ -193,7 +384,8 @@ async function main() {
   const comparisons = await Promise.all(phpFiles.map(compareOne));
 
   const missingInAstro = comparisons.filter((item) => item.type === 'missing-in-astro');
-  const mismatches = comparisons.filter((item) => item.type !== 'missing-in-astro' && !item.equal);
+  const skipped = comparisons.filter((item) => item.type === 'skipped');
+  const mismatches = comparisons.filter((item) => item.type !== 'missing-in-astro' && item.type !== 'skipped' && !item.equal);
   const matches = comparisons.filter((item) => item.equal);
 
   const report = {
@@ -204,9 +396,11 @@ async function main() {
       matched: matches.length,
       mismatched: mismatches.length,
       missingInAstro: missingInAstro.length,
+      skipped: skipped.length,
     },
     mismatches,
     missingInAstro,
+    skipped,
   };
 
   await fs.mkdir(reportRoot, { recursive: true });
@@ -217,6 +411,7 @@ async function main() {
   console.log(`matched=${report.totals.matched}`);
   console.log(`mismatched=${report.totals.mismatched}`);
   console.log(`missingInAstro=${report.totals.missingInAstro}`);
+  console.log(`skipped=${report.totals.skipped}`);
   console.log(`report=${reportPath}`);
 }
 

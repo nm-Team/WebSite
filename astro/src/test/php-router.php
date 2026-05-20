@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+ini_set('display_errors', '0');
+error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE & ~E_DEPRECATED);
+
 $projectRoot = realpath(__DIR__ . '/../../..');
 if ($projectRoot === false) {
     http_response_code(500);
