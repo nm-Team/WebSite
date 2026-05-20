@@ -115,3 +115,33 @@ test('join forum sanitizes unknown job type before redirecting', async ({ page }
   await page.goto('/join/forum/?jobType=../../bad');
   await expect(page).toHaveURL(/\/blackboard\/questionnaire\/22_07_04_join_nmteam_developer$/);
 });
+
+const phpRedirectCases = [
+  { from: '/aboutus.php', to: '/aboutus/' },
+  { from: '/products/template/nmBot-Telegram.php', to: '/products/template/nmBot-Telegram/' },
+  { from: '/zh-CN/legal/privacy-policy.php', to: '/zh-CN/legal/privacy-policy/' },
+  { from: '/zh-CN/products/index.php', to: '/zh-CN/products/' },
+  { from: '/business_cooperation.php', to: '/business-cooperation/' },
+  { from: '/zh-CN/business_cooperation.php', to: '/zh-CN/business-cooperation/' },
+];
+
+for (const { from, to } of phpRedirectCases) {
+  test(`legacy php route ${from} redirects to ${to}`, async ({ page }) => {
+    await page.goto(from);
+    await expect(page).toHaveURL(new RegExp(`${escapeRegExp(to)}$`));
+  });
+}
+
+const phpExternalRedirectCases = [
+  { from: '/support/index.php', to: 'https://support.nmteam.xyz' },
+  { from: '/status.php', to: 'https://status.nmteam.xyz' },
+  { from: '/zh-CN/support/index.php', to: 'https://support.nmteam.xyz' },
+  { from: '/zh-CN/status.php', to: 'https://status.nmteam.xyz' },
+];
+
+for (const { from, to } of phpExternalRedirectCases) {
+  test(`legacy php jump page ${from} redirects to ${to}`, async ({ page }) => {
+    await page.goto(from);
+    await expect(page).toHaveURL(new RegExp(`^${escapeRegExp(to)}`));
+  });
+}

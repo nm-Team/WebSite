@@ -1,13 +1,22 @@
-/index.php / 301
-/aboutus.php /aboutus/ 301
-/join/index.php /join/ 301
-/join/forum.php /join/forum/ 301
-/language.php /language/ 301
-/sitemap.php /sitemap/ 301
-/cookies.php /cookies/ 301
-/business_cooperation.php /business-cooperation/ 301
-/business_cooperation /business-cooperation/ 301
-/legal/privacy-policy.php /legal/privacy-policy/ 301
-/legal/network-service-protocol.php /legal/network-service-protocol/ 301
+# External jump pages
 /support/index.php https://support.nmteam.xyz 302
+/:lang/support/index.php https://support.nmteam.xyz 302
 /status.php https://status.nmteam.xyz 302
+/:lang/status.php https://status.nmteam.xyz 302
+
+# Legacy naming exceptions
+/business_cooperation /business-cooperation/ 301
+/business_cooperation.php /business-cooperation/ 301
+/:lang/business_cooperation.php /:lang/business-cooperation/ 301
+
+# Directory index exceptions
+/index.php / 301
+/:lang/index.php /:lang/ 301
+/join/index.php /join/ 301
+/:lang/join/index.php /:lang/join/ 301
+/products/index.php /products/ 301
+/:lang/products/index.php /:lang/products/ 301
+
+# Generic legacy PHP fallback
+/:lang/:path*.php /:lang/:path*/ 301
+/:path*.php /:path*/ 301
