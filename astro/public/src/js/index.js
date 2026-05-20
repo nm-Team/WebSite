@@ -25,7 +25,7 @@ function loadNews() {
         crossDomain: true,
         datatype: "jsonp",
         success: function (data) {
-            newsHTML = ``;
+            let newsHTML = ``;
             if (data['status'] == 200) {
                 data['data'].forEach(function (value) {
                     // catch the first image [1]: https://newsroom.nmteam.xyz/usr/uploads/2024/03/132030924.png

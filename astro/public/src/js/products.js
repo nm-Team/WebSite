@@ -31,7 +31,7 @@ function checkTip(w, json) {
 }
 
 function setButton(json) {
-    btshtml = '';
+    let btshtml = '';
     for (j in json) {
         btshtml += `<a data-button-id="` + json[j]['id'] + `" data-button-type="` + json[j]['towards'] + `" target="` + (json[j]['towards'] == "out" ? "_blank" : "_self") + `" ` + (json[j]['javascript'] ? ` href="javascript:" onclick="` + json[j]['javascript'] + `" ondragstart="return false;" ` : `href="` + json[j]['href'] + `"`) + ` title="` + json[j]['name'].replace(/\[tip\]/g, "") + `"><span>` + checkTip(json[j]['name'], json[j]) + `</span>` + svgList[json[j]['towards']] + `</a>`;
     }

@@ -72,7 +72,7 @@ $(document).ready(function () {
         returnWord = "";
         try {
             getInfo(function () {
-                accountInfo = returnWord;
+                var accountInfo = returnWord;
                 if (accountInfo == -1 || accountInfo == -2) {
                     $("#mainForm").html("");
                     $("#logRequireDiv").css("display", "block");

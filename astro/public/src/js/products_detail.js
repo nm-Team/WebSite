@@ -42,7 +42,7 @@ catch (err) {
 // 定时操作
 setInterval(() => {
     // 标题下的图片block在电脑上向上移动
-    for (imgAfterTitle in $('.detail-block[data-block-type="subtitle"]')) {
+    for (let imgAfterTitle in $('.detail-block[data-block-type="subtitle"]')) {
         try {
             if ($('.detail-block[data-block-type="subtitle"]')[imgAfterTitle].nextElementSibling.getAttribute("data-block-type") == "single")
                 $('.detail-block[data-block-type="subtitle"]')[imgAfterTitle].nextElementSibling.getElementsByClassName("img")[0].style.marginTop = "-" + window.getComputedStyle($('.detail-block[data-block-type="subtitle"]')[imgAfterTitle]).height;
@@ -51,7 +51,7 @@ setInterval(() => {
 }, 10);
 
 function openChild(childName) {
-    new_element = document.createElement("div");
+    const new_element = document.createElement("div");
     new_element.setAttribute("id", "detail_child_" + childName);
     new_element.setAttribute("class", "products-page detail-childframe " + productsJson.child[childName]['theme']);
     new_element.setAttribute("data-theme", productsJson.child[childName]['theme']);
@@ -63,12 +63,12 @@ function openChild(childName) {
 }
 
 function generateBlock(pMBId, blockJson) {
-    for (bl in blockJson) {
+    for (let bl in blockJson) {
         // 生成信息
         console.log("Generating " + totalBlockNum + " " + JSON.stringify(blockJson[bl]));
         document.getElementById(pMBId).innerHTML += `<div class="detail-block ` + blockJson[bl]['class'] + ` " id="detail_block_` + totalBlockNum + `_` + blockJson[bl]['type'] + "_" + blockJson[bl]['id'] + `" data-block-num="` + totalBlockNum + `" data-block-type="` + blockJson[bl]['type'] + `" data-block-selfid="` + blockJson[bl]['id'] + `" data-theme="` + blockJson[bl]['theme'] + `" style="` + blockJson[bl]['style'] + `"></div>`;
-        bLId = `detail_block_` + totalBlockNum + `_` + blockJson[bl]['type'] + "_" + blockJson[bl]['id'];
-        attrList = blockJson[bl]['attr'];
+        let bLId = `detail_block_` + totalBlockNum + `_` + blockJson[bl]['type'] + "_" + blockJson[bl]['id'];
+        let attrList = blockJson[bl]['attr'];
         sTipsNum = 0;
         // 根据类别进一步处理
         switch (blockJson[bl]['type']) {
@@ -85,7 +85,7 @@ function generateBlock(pMBId, blockJson) {
                 document.getElementById(bLId).innerHTML = `<object class="opes">` + setButton(attrList.buttons) + `</object>`;
                 break;
             default:
-                cacheHTML = document.createElement("div");
+                const cacheHTML = document.createElement("div");
                 cacheHTML.innerHTML = attrList.innerHTML;
                 document.getElementById(bLId).appendChild(cacheHTML);
         }

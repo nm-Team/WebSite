@@ -1,5 +1,9 @@
 import { expect, test } from '@playwright/test';
 
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 const phaseTwoRoutes = [
   '/aboutus/',
   '/cookies/',
@@ -19,13 +23,13 @@ for (const route of phaseTwoRoutes) {
     const page = await context.newPage();
     await page.goto(route);
     await expect(page.locator('body')).toContainText(/nmTeam|Cookies|Business|Privacy|Service|Support|Status/);
-    await expect(page).toHaveURL(new RegExp(`${route.replace(/\//g, '\\/')}$`));
+    await expect(page).toHaveURL(new RegExp(`${escapeRegExp(route)}$`));
     await context.close();
   });
 
   test(`unprefixed ${route} redirects zh-CN query to prefixed route`, async ({ page }) => {
     await page.goto(`${route}?lang=zh-CN`);
-    await expect(page).toHaveURL(new RegExp(`/zh-CN${route.replace(/\//g, '\\/')}(?:\\?lang=zh-CN)?$`));
+    await expect(page).toHaveURL(new RegExp(`/zh-CN${escapeRegExp(route)}(?:\\?lang=zh-CN)?$`));
   });
 
   test(`prefixed ${route} should not auto redirect`, async ({ page }) => {
@@ -38,7 +42,7 @@ for (const route of phaseTwoRoutes) {
       },
     ]);
     await page.goto(`/en${route}`);
-    await expect(page).toHaveURL(new RegExp(`/en${route.replace(/\//g, '\\/')}$`));
+    await expect(page).toHaveURL(new RegExp(`/en${escapeRegExp(route)}$`));
   });
 }
 
@@ -48,7 +52,7 @@ for (const route of phaseTwoJumpRoutes) {
     const page = await context.newPage();
     await page.goto(route);
     await expect(page.locator('body')).toContainText(/Support|Status|nmTeam/);
-    await expect(page).toHaveURL(new RegExp(`${route.replace(/\//g, '\\/')}$`));
+    await expect(page).toHaveURL(new RegExp(`${escapeRegExp(route)}$`));
     await context.close();
   });
 }
