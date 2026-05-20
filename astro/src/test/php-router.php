@@ -1,11 +1,56 @@
 <?php
 declare(strict_types=1);
 
+$projectRoot = realpath(__DIR__ . '/../../..');
+if ($projectRoot === false) {
+    http_response_code(500);
+    echo 'Router bootstrap failed: project root not found.';
+    return;
+}
+
+$_SERVER['DOCUMENT_ROOT'] = $projectRoot;
+
 $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 $trimmed = trim($uri, '/');
+$requestPath = str_replace('/', DIRECTORY_SEPARATOR, ltrim($uri, '/'));
+$staticCandidate = $projectRoot . DIRECTORY_SEPARATOR . $requestPath;
+
+if ($requestPath !== '' && is_file($staticCandidate)) {
+    $resolvedStatic = realpath($staticCandidate);
+    if ($resolvedStatic === false || !str_starts_with($resolvedStatic, $projectRoot . DIRECTORY_SEPARATOR)) {
+        http_response_code(403);
+        echo 'Forbidden';
+        return;
+    }
+    $extension = strtolower(pathinfo($staticCandidate, PATHINFO_EXTENSION));
+    $mimeTypes = [
+        'css' => 'text/css; charset=UTF-8',
+        'js' => 'application/javascript; charset=UTF-8',
+        'json' => 'application/json; charset=UTF-8',
+        'svg' => 'image/svg+xml',
+        'png' => 'image/png',
+        'jpg' => 'image/jpeg',
+        'jpeg' => 'image/jpeg',
+        'gif' => 'image/gif',
+        'webp' => 'image/webp',
+        'ico' => 'image/x-icon',
+        'woff' => 'font/woff',
+        'woff2' => 'font/woff2',
+        'ttf' => 'font/ttf',
+        'otf' => 'font/otf',
+        'txt' => 'text/plain; charset=UTF-8',
+        'xml' => 'application/xml; charset=UTF-8',
+        'pdf' => 'application/pdf',
+    ];
+    if (array_key_exists($extension, $mimeTypes)) {
+        header('Content-Type: ' . $mimeTypes[$extension]);
+    }
+    readfile($resolvedStatic);
+    return;
+}
 
 if ($trimmed === '') {
-    require __DIR__ . '/../../../index.php';
+    require $projectRoot . DIRECTORY_SEPARATOR . 'index.php';
     return;
 }
 
@@ -16,17 +61,17 @@ $aliases = [
 ];
 
 if (array_key_exists($trimmed, $aliases)) {
-    require __DIR__ . '/../../..' . DIRECTORY_SEPARATOR . $aliases[$trimmed];
+    require $projectRoot . DIRECTORY_SEPARATOR . $aliases[$trimmed];
     return;
 }
 
 if (count($segments) >= 3 && $segments[0] === 'products' && $segments[1] === 'overview') {
     $_GET['product'] = $segments[2];
-    require __DIR__ . '/../../../products/overview.php';
+    require $projectRoot . DIRECTORY_SEPARATOR . 'products' . DIRECTORY_SEPARATOR . 'overview.php';
     return;
 }
 
-$candidate = __DIR__ . '/../../..' . DIRECTORY_SEPARATOR . $trimmed;
+$candidate = $projectRoot . DIRECTORY_SEPARATOR . $trimmed;
 
 if (is_dir($candidate)) {
     $index = $candidate . DIRECTORY_SEPARATOR . 'index.php';
@@ -46,4 +91,4 @@ if (is_file($candidate)) {
 }
 
 http_response_code(404);
-require __DIR__ . '/../../../404.php';
+require $projectRoot . DIRECTORY_SEPARATOR . '404.php';
