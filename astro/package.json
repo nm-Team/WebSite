@@ -18,7 +18,9 @@
     "baseline:capture:js": "node src/test/scripts/capture-baselines.mjs js-enabled",
     "baseline:capture:nojs": "node src/test/scripts/capture-baselines.mjs js-disabled",
     "baseline:capture:js:auto": "node src/test/scripts/run-capture-with-servers.mjs js-enabled",
-    "baseline:capture:nojs:auto": "node src/test/scripts/run-capture-with-servers.mjs js-disabled"
+    "baseline:capture:nojs:auto": "node src/test/scripts/run-capture-with-servers.mjs js-disabled",
+    "baseline:compare:js": "node src/test/scripts/compare-baselines.mjs js-enabled",
+    "baseline:compare:nojs": "node src/test/scripts/compare-baselines.mjs js-disabled"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
