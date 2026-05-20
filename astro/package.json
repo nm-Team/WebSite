@@ -5,8 +5,9 @@
   "type": "module",
   "packageManager": "pnpm@10.10.0",
   "scripts": {
+    "sync:locales": "node scripts/sync-locales.mjs",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "pnpm sync:locales && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run",
