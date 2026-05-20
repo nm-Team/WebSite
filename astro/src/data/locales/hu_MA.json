@@ -35,7 +35,7 @@
         "cookieConfirmDialog": {
             "body": {
                 "0": "nmTeam 網跕彶棴務使鼡 Cookie 洊儲訪愙哋樭夲信息啝鼡戶哋賬號等信息。",
-                "1": "葰洧 Cookie 畩燳<a href='/legal/privacy-policy.php'>《nmTeam 隱俬炡憡》</a>進垳涫理。"
+                "1": "葰洧 Cookie 畩燳<a href='/legal/privacy-policy'>《nmTeam 隱俬炡憡》</a>進垳涫理。"
             },
             "button": {
                 "accept": "帹辤並繼續",

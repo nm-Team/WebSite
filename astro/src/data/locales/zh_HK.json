@@ -35,7 +35,7 @@
         "cookieConfirmDialog": {
             "body": {
                 "0": "nmTeam 網站及服務使用 Cookie 存儲訪客的基本信息和用戶的賬號等信息。",
-                "1": "所有 Cookie 依照<a href='/legal/privacy-policy.php'>《nmTeam 隱私政策》</a>進行管理。"
+                "1": "所有 Cookie 依照<a href='/legal/privacy-policy'>《nmTeam 隱私政策》</a>進行管理。"
             },
             "button": {
                 "accept": "接受並繼續",

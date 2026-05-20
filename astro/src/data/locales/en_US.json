@@ -35,7 +35,7 @@
         "cookieConfirmDialog": {
             "body": {
                 "0": "nmTeam website and services use cookies to store basic visitor information and user account information.",
-                "1": "All cookies are managed in accordance with <a href='/legal/privacy-policy.php'>the nmTeam Privacy Policy</a>."
+                "1": "All cookies are managed in accordance with <a href='/legal/privacy-policy'>the nmTeam Privacy Policy</a>."
             },
             "button": {
                 "accept": "Accept & Continue",

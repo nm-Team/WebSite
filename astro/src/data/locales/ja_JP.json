@@ -28,7 +28,7 @@
         "cookieConfirmDialog": {
             "body": {
                 "0": "nmTeamのWebサイトとサービスは、Cookieを使用して基本的な訪問者情報とユーザーアカウント情報を保存します。",
-                "1": "すべてのCookieは、<ahref='/legal/privacy-policy.php'>nmTeamプライバシーポリシー</a>に従って管理されます。"
+                "1": "すべてのCookieは、<ahref='/legal/privacy-policy'>nmTeamプライバシーポリシー</a>に従って管理されます。"
             },
             "button": {
                 "accept": "受け入れて続行します",
