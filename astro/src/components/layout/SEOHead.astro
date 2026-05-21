@@ -50,10 +50,12 @@ const slugParts = hasLocalePrefix ? currentParts.slice(1) : currentParts;
 const slugPath = slugParts.length > 0 ? `${slugParts.join('/')}/` : '';
 const canonicalPath = `/${locale}/${slugPath}`;
 const canonicalUrl = new URL(canonicalPath, SITE_URL).toString();
-const alternateLinks = publicLocales.map((alternateLocale) => ({
-  locale: alternateLocale,
-  href: new URL(`/${alternateLocale}/${slugPath}`, SITE_URL).toString(),
-}));
+const alternateLinks = publicLocales
+  .filter((l) => l !== 'zh-x-mars')
+  .map((alternateLocale) => ({
+    locale: alternateLocale,
+    href: new URL(`/${alternateLocale}/${slugPath}`, SITE_URL).toString(),
+  }));
 ---
 <meta charset="utf-8" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
