@@ -1,72 +1,80 @@
 {
     "about": {
-        "0": "「自律型nmロボット」であると主張するXYZ1024は、nmの優れた手です。誰かがSakuraFrpグループで話すとき、彼は常に「* nm」で応答します。次に例を示します。",
-        "1": "-AndroidでMacを使用する方法",
-        "2": "-nmを使用します",
-        "3": "このようにして、育てられたnmTeamの創設者であるagouは、nm軍に騙され、輝かしいnmの人物になりました。彼は「自律型nmロボット」という輝かしい称号を持ち、nmの輝かしい旗を掲げた結果、2020年5月29日の14:07にグループチャットから名誉を奪われました。",
-        "4": "nmTeamを作成することを決定したとき、「nm」の中国語の意味である「レモン」または「ナノ」を作成しました。",
-        "5": "nmTeamのメンバーは全員nmが得意なので、nm文化を引き継ぐことに自信を持っています。",
-        "6": "それでは、nmの可能性があるかどうかを見てみましょう。",
-        "7": "あなたがnmの心を持っている限り、nmTeamはいつでもあなたが参加することを歓迎します。 \nnmTeamへの参加を申し込むための条件の詳細については、このページにアクセスしてください。",
-        "8": "nmTeamに参加する方法を学ぶ>",
-        "description": "nmTeamの歴史と意味について学びます。",
-        "h0": "しかし、私たちはスローガンについてさえ考えませんでした。",
-        "h1": "nmという言葉がどのように由来するのか知りたいですか？",
-        "h2": "nmTeamにも参加しませんか？",
+        "0": "自称「自律型nmロボット」のXYZ1024はnmの達人です。Sakura Frpのグループで誰かが発言すると、彼はいつも「*nm」と返します。例：",
+        "1": "——AndroidでMacを使うには？",
+        "2": "——nmを使え。",
+        "3": "その後、nmTeamの創設者agouがnm軍に加わりました。彼は自らを「自律型nmロボット」と称し、nm事業を推進した結果、2020年5月29日14時07分にグループチャットから削除されました。",
+        "4": "nmTeamを設立するにあたり、私たちは「nm」の中国語の意味として「レモン」または「ナノ」を選びました。",
+        "5": "nmTeamのメンバーは全員nmの忠実なファンであり、これを基盤としてnm文化を広めるために日々努力しています！",
+        "6": "nmの心を持っているかどうか、ぜひ教えてください。",
+        "7": "nmの心さえあれば、nmTeamはいつでも仲間を歓迎します。詳細はこちらのページをご覧ください。",
+        "8": "nmTeamへの参加方法を見る > ",
+        "description": "nmTeamの意味と歴史を知るページです。",
+        "h0": "残念ながら、スローガンすら考えていませんでした。",
+        "h1": "nmの起源を知りたいですか？",
+        "h2": "nmTeamに参加しませんか？",
         "title": "nmTeamについて"
     },
     "account": {
         "click_to_log": "クリックしてログイン",
-        "loading": "読み込んでいます...",
-        "unable_to_load": "読み込みエラー"
+        "loading": "読み込み中...",
+        "unable_to_load": "エラー"
     },
     "account_v2": {
-        "manage": "アカウントの管理"
+        "manage": "アカウント管理"
     },
-    "comes_soon": "このページは制作中ですので、お楽しみに！ ",
+    "business_cooperation": {
+        "content_0": "ビジネス協力に関するお問い合わせは、以下のメールアドレスまでご連絡ください：",
+        "content_1": "返信には別のメールアドレスを使用する場合があります。",
+        "copy_email": "アドレスをコピー",
+        "description": "nmTeamとのビジネス協力を展開します。",
+        "title": "ビジネス協力"
+    },
+    "comes_soon": "このページは制作中です。お楽しみに！",
     "cookie": {
         "cookieConfirmDialog": {
             "body": {
-                "0": "nmTeamのWebサイトとサービスは、Cookieを使用して基本的な訪問者情報とユーザーアカウント情報を保存します。",
-                "1": "すべてのCookieは、<ahref='/legal/privacy-policy.php'>nmTeamプライバシーポリシー</a>に従って管理されます。"
+                "0": "nmTeamのウェブサイトとサービスは、Cookieを使用して基本的な訪問者情報とユーザーアカウント情報を保存します。",
+                "1": "すべてのCookieは、<a href='/legal/privacy-policy'>nmTeamプライバシーポリシー</a>に従って管理されます。"
             },
             "button": {
-                "accept": "受け入れて続行します",
+                "accept": "同意して続行",
                 "customize": "カスタマイズ"
             },
-            "header": "クッキーについて"
+            "header": "Cookieについて"
         },
         "cookiePage": {
-            "title": "クッキーについて"
+            "title": "Cookieについて"
         }
     },
     "cookies": {
-        "cookies_off": "近い",
-        "cookies_on": "開ける",
-        "description": "nmTeam Web サイトの Cookie 設定を管理します。",
-        "necessary_cookies_description": "当社の Web サイト サービスを適切に提供するには、これらの Cookie が必要です。\n必要な Cookie を無効にすることはできません。",
+        "cookies_off": "オフ",
+        "cookies_on": "オン",
+        "description": "nmTeamウェブサイトのCookie設定を管理します。",
+        "necessary_cookies_description": "当社のウェブサイトサービスを正常に提供するには、これらのCookieが必要です。\n必要なCookieを無効にすることはできません。",
         "necessary_cookies_title": "必要なCookie",
-        "optional_cookies_description": "これらの Cookie を有効にすることで、より良いサービスを提供できるようになります。",
-        "optional_cookies_title": "オプションのクッキー",
+        "optional_cookies_description": "これらのCookieを有効にすると、より良いサービスを提供できます。",
+        "optional_cookies_title": "オプションCookie",
         "title": "Cookies"
     },
     "footer": {
-        "cr": "Copyright nmTeam。全著作権所有。",
-        "email": "E-mail: ",
-        "language": "言語の切り替え：",
+        "cr": "Copyright nmTeam. All rights reserved.",
+        "email": "Eメール：",
+        "language": "言語選択：",
         "language_selector_button_aria_label": "。クリックして言語切り替えページを開きます。",
         "sitemap": "サイトマップ",
-        "status": "サイトのステータス",
-        "svca": "サービス契約",
+        "status": "システムステータス",
+        "svca": "サービス規約",
         "svcb": "プライバシーポリシー",
         "table": {
             "about": {
                 "aboutUs": "nmTeamについて",
                 "accessibility": "アクセシビリティ",
-                "joinUs": "nmTeamに参加する",
-                "newsroom": "Newsroom (中国語と英語)",
-                "supportUs": "スポンサーnmTeam",
-                "title": "約"
+                "business_cooperation": "ビジネス協力",
+                "joinUs": "nmTeamに参加",
+                "newsroom": "Newsroom",
+                "supportUs": "nmTeamを支援",
+                "title": "概要"
             },
             "products": {
                 "library": "製品ライブラリ",
@@ -78,253 +86,446 @@
                 "accountCenter": "nmTeamアカウントセンター",
                 "support": "サポート",
                 "systemStatus": "システムステータス",
-                "title": "仕える"
+                "title": "サービス"
             }
         }
     },
     "header": {
-        "about": "恐らく",
+        "about": "概要",
         "account_box_aria_label": "アカウント管理",
         "avatar_aria_label": "アバター",
-        "home": "ホームページ",
+        "home": "ホーム",
         "nav_button_aria_label": "ページナビゲーションを開く",
         "newsroom": "Newsroom",
         "products": "製品",
-        "support": "待機する",
-        "title_button_aria_label": "nmチームのテキスト。ページのタイトル。クリックすると、Web サイトのトップページに戻ります。",
-        "title_icon_aria_label": "nmTeam レモンと「nm」の文字で構成されるチームアイコン。"
+        "support": "サポート",
+        "title_button_aria_label": "nmTeam テキスト。ページタイトル。クリックするとホームページに戻ります。",
+        "title_icon_aria_label": "nmTeam チームアイコン。レモンと「nm」の文字で構成されています。"
     },
     "index": {
-        "connect_para": "nmTeam について詳しく知るには、ソーシャル メディアとプラットフォームのアカウントをフォローしてください。",
-        "connect_us": "さらに詳しい公式情報",
-        "join_para": "あなたがnmの心を持っているなら、あなたは今私たちに参加するために申し込むことができます。",
-        "join_para_2": "nmTeamへの参加を申し込むための条件の詳細については、このページにアクセスしてください。",
-        "join_us": "nmTeamに参加する",
-        "join_us_link": "nmTeamに参加する方法を学ぶ",
+        "connect_para": "nmTeamのソーシャルメディアやプラットフォームアカウントをフォローして、最新情報をチェックしましょう。",
+        "connect_us": "その他の公式情報",
+        "join_para": "nmの心があれば、今すぐ参加できます。",
+        "join_para_2": "詳細はこちらのページをご覧ください。",
+        "join_us": "参加する",
+        "join_us_link": "nmTeamへの参加方法を見る",
         "more_products": "すべての製品",
-        "newslist": "nmTeamニュース",
+        "newslist": "nmTeam最新ニュース",
         "newslist_date_aria_label": "記事の公開日",
-        "newslist_error": "ニュースの読み込みに問題がありました。",
-        "newslist_loading": "読み込み中...",
-        "newslist_more": "nmTeamニュースルーム",
-        "nmteam_about_link": "nmTeamについて",
-        "nmteam_is_this_a": "nmTeamは今、最高経営責任者（CEO）としてagouあり、そしてより多くのnmServicesが次々に発売されます。",
-        "nmteam_is_this_b": "nmTeamは破産する可能性がありますが、悪化することはありません。",
+        "newslist_error": "ニュースの読み込み中にエラーが発生しました。",
+        "newslist_loading": "nmTeamニュースを読み込み中...",
+        "newslist_more": "nmTeam Newsroom",
+        "nmteam_about_link": "概要ページを見る",
+        "nmteam_is_this_a": "2021年6月14日に設立されたnmTeamは、非常にnmな製品とサービスの提供に取り組んでいます。現在、agouがCEOを務め、今後も続々と新しいnmServicesをリリースしていきます。",
+        "nmteam_is_this_b": "nmTeamは倒産するかもしれませんが、決して劣化しません！",
         "retry": "リトライ",
         "title": "",
-        "what_is_nmteam": "nmTeamとは何ですか？",
-        "what_we_does": "nmTeamはnmProductsを作成します",
-        "what_we_does_ans": "nmTeamは、nmProductsの作成に取り組んでいます。以下の当社の製品のいくつかをチェックしてください。"
+        "what_is_nmteam": "nmTeamとは？",
+        "what_we_does": "nmTeamはnmProductsを作ります",
+        "what_we_does_ans": "nmTeamはnmProductsの制作に取り組んでいます。以下で当社の製品をご覧ください。"
     },
     "join": {
         "join_register_page": {
-            "description": "nmTeamに参加し、nm文化を発展させ、nmエコロジーを私たちと一緒に構築してください。",
-            "tip": "申し訳ありませんが、nmTeamへの参加申し込みはまだ正式に開かれていません。2日後にもう一度確認してください。",
-            "title": "nmTeamへの参加を申し込む"
+            "description": "nmTeamに参加して、共にnm文化を広め、nmエコシステムを築きましょう。",
+            "tip": "申し訳ありません。nmTeamへの参加申請はまだ正式に開始されていません。数日後にもう一度ご確認ください。",
+            "title": "nmTeamへの参加を申請"
         },
         "join_requirement_page": {
-            "description": "nmTeamに参加し、nm文化を発展させ、nmエコロジーを私たちと一緒に構築してください。",
+            "description": "nmTeamに参加して、共にnm文化を広め、nmエコシステムを築きましょう。",
             "intro": {
-                "0": "あなたは知っていますか？ \nnmTeamは、調和のとれたチームの雰囲気と無料の管理体制を備えています。",
-                "1": "nmTeamへの参加は、簡単で楽しいプロセスになります。あなたの才能は、最新の製品に大きく貢献します。また、あなただけの製品を作成することもできます。\nそして、あなたの努力は豊かに報われ、nmTeamへのあなたの貢献はまた、公的な認識と多くのボーナスを受け取ることができます; nmTeamに参加した後、あなたがあまり貢献しなくても、あなたは批判されません。\nだから、あなたのニッチを見つけて、今日nmTeamに参加してください！",
+                "0": "ご存知ですか？nmTeamには調和のとれたチームの雰囲気と自由な管理体制があります。",
+                "1": "nmTeamへの参加は簡単で楽しいプロセスです。あなたの才能は最新の製品に大いに貢献し、あなただけの専用製品を作ることもできます！さらに、あなたの努力は豊かに報われ、nmTeamへの貢献は公に称賛され、多くのボーナスも獲得できます。nmTeamに参加した後は、貢献が少なくても批判されることはありません。さあ、あなたにぴったりの役割を見つけて、今すぐnmTeamに参加しましょう！",
                 "2": ""
             },
             "jobs": {
                 "common": {
-                    "basic_morality": "nmTeamの創造的な環境とそのメンバーの基本的な倫理的要件が損なわれないようにするためのチームの責任の基本的な感覚を持っている",
-                    "basic_morality_intro": "特別な場合には、nmTeamメンバーは決して聖人ではないことを理解してください。いかなる場合でも寛容にしてください。受け入れられない場合でも、nmTeamサービスを破棄したりnmTeamデータファイルを破棄したりしないでください。",
-                    "friendly_wish": "他のメンバーとのコミュニケーションや友好的な交流や協力を希望することができる",
-                    "nm_heart": "nmの心を持っている",
-                    "nm_heart_intro": "nmの人として、あなたは常にいくつかのnmの原則を理解する必要があります。 \nnmという言葉についてどう思いますか？"
+                    "basic_morality": "チームに対する基本的な責任感を持ち、nmTeamの創造的環境とメンバーの基本的な倫理を損なわないこと",
+                    "basic_morality_intro": "特別な場合にはご理解ください。nmTeamメンバーは決して聖人ではありません。どうか寛容にお願いします。受け入れがたい場合でも、nmTeamのサービスやデータファイルを破壊しないでください。",
+                    "friendly_wish": "他のメンバーと友好的に協力できること",
+                    "nm_heart": "nmの心を持っていること",
+                    "nm_heart_intro": "nmerである以上、nmについて少しは理解しているはずです。「nm」という言葉についてどう思いますか？"
                 },
                 "developer": {
-                    "additional": "もちろん、Gitの使い方に堪能で、ウェブ開発やアプリ開発に精通しているnmの方のご参加をお待ちしておりますので、ぜひご登録ください。",
-                    "experience": "少なくとも基本的なソフトウェア開発の経験があるか、nmTeam開発に参加して自分自身を向上させたいと考えている",
-                    "experience_intro": "nmTeamに参加した後、nmTeamメンバーの成長を期待しているので、現在の開発レベルがnmTeamのニーズに合っているかどうかを心配する必要はありません。\n大胆になり、やる気のある心を保ち、あなたの進歩がnmTeamのすべての人にとって最大の幸せであることを確認してください。",
-                    "knowledge": "コンピュータの基礎知識",
-                    "title": "nmTeam開発"
+                    "additional": "もちろん、Gitを熟练に使い、Web開発やアプリ開発に精通したnmerの参加をより歓迎しますので、ぜひご応募ください。",
+                    "experience": "少なくとも基本的なソフトウェア開発経験があるか、nmTeamの開発に参加して自己成長を望んでいること",
+                    "experience_intro": "nmTeamメンバーが参加後に成長するのを見るのは私たちの喜びです。現在の開発レベルがnmTeamのニーズに十分かどうかを心配する必要はありません。大胆に挑戦し、向上心を持ち続けてください。あなたの進歩こそがnmTeam全員にとって最大の喜びです。",
+                    "knowledge": "コンピューターの基礎知識",
+                    "title": "nmTeam開発者"
                 },
                 "support": {
-                    "attitude": "nmTeamの顧客を良い態度で扱います",
-                    "attitude_intro": "nmTeamのお客様はいつも簡単な質問をするわけではありませんので、安心してユーザーの要望に応えていただければ幸いです。",
-                    "bill": "精神的損傷料金",
-                    "bill_intro": "カスタマーサービスに対処することは時々少し疲れることがあります。 \nnmTeamは、インセンティブとしてのサービスに基づいて、サービスチームメンバーにボーナスを与えることを検討します。",
-                    "part_time": "自由な時間をお楽しみください",
-                    "part_time_intro": "nmTeamでは、サービスに時間を割く必要はありません。気分を変えたいときにnmTeamユーザーが必要とするヘルプを確認してください。\n緊急サービスはnmTeam管理の直接の責任下にあり、心配する必要はありません。",
-                    "title": "顧客サポート"
+                    "attitude": "nmTeamの顧客に対して良好な態度で接すること",
+                    "attitude_intro": "nmTeamの顧客がいつも簡単な質問をするとは限りません。落ち着いてユーザーの要望に応えていただければ幸いです。",
+                    "bill": "精神的損害手当",
+                    "bill_intro": "カスタマーサポートは時に疲れることもあります。nmTeamはサービスに応じてサポートチームメンバーにボーナスを支給することを検討し、励みとします。",
+                    "part_time": "自由な時間を楽しむ",
+                    "part_time_intro": "nmTeamはサービスのために専用の時間を割くことを要求しません。気分転換したいときに、nmTeamユーザーが必要とするヘルプを確認してください。緊急対応はnmTeam管理者が直接担当するのでご安心ください。",
+                    "title": "カスタマーサポート"
                 },
                 "writer": {
-                    "english": "ある程度の外国語が望ましい",
-                    "knowledge": "nmTeamの製品機能と関連する計画を深く理解することで、nmTeamの価値を簡単な言葉で伝え、前向きなガイダンスをもたらすことができます",
-                    "lan_level": "基本的な文学的リテラシーを持ち、言語エラーや句読点エラーなしで明確なコピーを書くことができる",
-                    "lan_level_intro": "あなたが素晴らしい仕事をすることができるならば、私たちはあなたに感謝します、私たちに加わってください、そしてあなたはソファにしっかりと座ります。",
-                    "title": "手術"
+                    "english": "外国語の能力がある方が望ましい",
+                    "knowledge": "nmTeamの製品機能や関連計画を深く理解し、nmTeamの価値観を分かりやすく伝え、ポジティブなガイダンスを提供できること",
+                    "lan_level": "基本的な文章力があり、文法や句読点の誤りがなく、明確な文章を作成できること",
+                    "lan_level_intro": "素晴らしい文章が書けるなら、私たちはあなたを高く評価します。ぜひ参加してください。",
+                    "title": "運営"
                 }
             },
-            "language_request": "当面は、中国語が流暢にコミュニケーションできるメンバーのみを募集します。",
+            "language_request": "現在は中国語で円滑にコミュニケーションできるメンバーのみを募集しています。",
             "more": {
                 "already_been_member": {
                     "panel": "nmTeamワークパネル（開発中）",
                     "title": "すでにnmTeamメンバー"
                 },
                 "resources": {
-                    "nmteam_member_rules": "nmTeamメンバーの作業と管理の仕様（開発中）",
+                    "nmteam_member_rules": "nmTeamメンバー業務・管理規則（策定中）",
                     "title": "関連情報"
                 }
             },
-            "publicity": "nmTeamの参加ルールは発表されており、いつでも変更される可能性があります。\nメールでnmTeamにフィードバックを送ってください：support@nmteam.xyz",
-            "register": "参加する",
+            "publicity": "nmTeam参加ルールは公示中であり、予告なく変更される場合があります。ご意見はメールでお寄せください：support@nmteam.xyz",
+            "register": "登録",
             "title": "nmTeamへようこそ！"
         }
     },
     "language": {
         "page": {
-            "auto": "自動を選択",
-            "tip": "おなじみの言語でnmTeam Webサイトを参照してください。一部のコンテンツは、選択した言語で表示されない場合があります。",
-            "title": "言語の切り替え"
+            "auto": "自動選択",
+            "tip": "慣れ親しんだ言語でnmTeamウェブサイトをご覧ください。一部のコンテンツは選択した言語で表示されない場合があります。",
+            "title": "言語の変更"
         }
     },
     "legal": {
-        "description": "nmTeamの利用規約を表示します。",
-        "nsp": "インターネットサービス利用規約",
+        "description": "nmTeam利用規約を表示します。",
+        "nsp": "サービス規約",
         "pp": "プライバシーポリシー"
     },
-    "page_update": "ページ更新日：{年}年{月}月{日}日",
+    "page_update": "ページ更新日：{year}年{month}月{day}日",
     "pagebases": {
         "official_website": "公式ウェブサイト",
         "page_not_found": {
-            "home": "家",
-            "img_title": "404は、ページが見つからなかったことを意味します",
+            "home": "ホーム",
+            "img_title": "コード404は、お探しのページが見つからないことを意味します。",
             "title": "ページが見つかりません"
         },
-        "site_intro": "nmTeamは、並外れた創造性で世界に向けて比類のないnm製品を作成します。"
+        "site_intro": "nmTeamは、驚くべき発想で世界にnmProductsを提供するチームです。"
     },
     "products": {
-        "description": "nmTeamの優れた製品をチェックしてください。",
-        "error": "何かがうまくいかなかった。",
-        "explain": "説明：お住まいの国で利用可能なnmTeam製品のみを表示してください。\n他の国で利用可能なnmTeam製品を表示するには、nmTeamWebサイトの言語を変更してください。",
+        "description": "nmTeamの素晴らしいnmProductsを見る",
+        "error": "問題が発生しました。",
+        "explain": "説明：お住まいの国または地域で利用可能なnmTeam製品のみを表示しています。他の国や地域で利用可能なnmTeam製品を表示するには、nmTeamウェブサイトの言語を変更してください。最も多くの結果を得るには、簡体字中国語に設定してみてください。",
         "nmbot_telegram": {
-            "page_description": "Telegram で最も強力なグループ管理ボットの 1 つについて学びましょう。"
+            "description": "nmでチャットを楽しく。",
+            "features": {
+                "channel": "チャンネル",
+                "channel_features": {
+                    "ab": "投稿への自動ボタン追加",
+                    "as": "ラテン文字フォーマットの自動整形",
+                    "bl": "退出ユーザーの自動ブロック",
+                    "ce": "チャンネル透視眼",
+                    "eb": "投稿編集ボタン",
+                    "pw": "おすすめコメント"
+                },
+                "content_1": "nmBotは|多数の機能を搭載しており、|グループ管理から|チャンネル運営、|さらには個人アカウント向けまで、|あなたを輝かせる|機能が満載です。",
+                "group": "グループ",
+                "group_features": {
+                    "bm": "banmeゲーム",
+                    "cl": "グループメンバーのコマンド使用制限",
+                    "ds": "スパムブロック",
+                    "dt": "メッセージカテゴリ別自動削除",
+                    "jm": "p_グループ参加リクエスト通知",
+                    "jv": "グループ参加認証",
+                    "kr": "キーワード返信",
+                    "lm": "スケジュールタスク",
+                    "mi": "グループメンバー交流",
+                    "nc": "nmartChat",
+                    "nl": "p_新規メンバー権限制限",
+                    "pc": "p_nmBot設定権限管理",
+                    "rc": "連携チャンネル投稿への自動返信",
+                    "sl": "発言頻度制限",
+                    "z_mr": "その他便利な機能"
+                },
+                "its_only_part": "* ここでは主な機能の一部のみを紹介しています。一部の機能は条件を満たす必要があります。",
+                "nmbot_plus": "nmBot+機能",
+                "private": "プライベートチャット",
+                "private_features": {
+                    "br": "ビジネスキーワード返信",
+                    "cm": "カスタムコマンドマッピング",
+                    "cr": "nmBotクレジット",
+                    "dc": "Telegramデータセンター照会",
+                    "gt": "プレゼント追跡",
+                    "nc": "nmartChat",
+                    "ts": "スタンプ・絵文字に変換"
+                },
+                "special": {
+                    "content_0": "超個性的な機能で|グループを盛り上げ、楽しくチャットしましょう。",
+                    "content_1": "これはほんの一部です！|さらに多くの機能が|あなたの発見を待っています。",
+                    "feature_1": {
+                        "content": "甘口辛口どちらも対応する言葉で、|チャンネルに投稿された|新しい投稿に|自動でコメントします。[footer:投稿が特定の条件を満たす必要がある場合があります。]",
+                        "image": "website intro special feature 1.png",
+                        "title": "おすすめコメント"
+                    },
+                    "feature_2": {
+                        "content": "チャンネルオーナーの身分を|自動識別。|チャンネル身分を使っても|自由に|各種nmBot機能を|利用できます。[footer:nmBotをチャンネルの管理者に設定する必要があります。]",
+                        "image": "website intro special feature 2.png",
+                        "title": "チャンネル透視眼"
+                    },
+                    "feature_3": {
+                        "content": "デフォルトのコマンドに飽きたら、|自分だけのコマンドを追加しませんか？|「コマンドマッピング」を|カスタマイズして、|nmBotにあなた専用の|コマンドを認識させましょう。",
+                        "image": "website intro special feature 3.png",
+                        "title": "コマンドマッピング"
+                    },
+                    "feature_4": {
+                        "content": "Telegram Businessを使えば、|グループだけでなく、|プライベートメッセージでも|キーワード返信に接続し、|nmBotがあなたに代わって|返信を送信したり、|メッセージを削除したり、|ユーザーをブロックしたりできます[footer:ビジネスキーワード返信はユーザーブロックに対応していません。]。|さらに多くのカスタマイズ|オプションも用意されています。",
+                        "image": "website intro special feature 4.png",
+                        "title": "キーワード返信"
+                    },
+                    "feature_5": {
+                        "content": "参加したチャンネルの|プレゼント企画が終了したら、|nmBotが自動でお知らせ。|結果をすぐに確認したり、|チャンネルを退出したりできます。",
+                        "image": "website intro special feature 5.png",
+                        "title": "プレゼント追跡"
+                    },
+                    "title": "しかも超個性的"
+                },
+                "title": "機能が豊富"
+            },
+            "first_intro": {
+                "content_1": "こんなロボットを想像してみてください：|グループ管理を手軽にこなし、|チャットを盛り上げることもできる。",
+                "title": "チャットは楽しく、<br />使うときはパワフルに。"
+            },
+            "footer_notes": {
+                "0": "すべての内容は参考情報です。機能は変更される可能性があります。実際の使用状況をご確認ください。"
+            },
+            "go_to_panel": "nmBotパネル",
+            "header_name": "nmBot",
+            "intelligence": {
+                "chat_coming_soon": "ベータ版提供中",
+                "chat_content_1": "<igt>nmBot Copilot</igt>は、|nmBotおよびnmBotパネルに|組み込まれたパーソナルアシスタントで、|nmBotグループの管理と|個人設定を|かつてないほど簡単にします。",
+                "chat_title": "nmBot Copilot",
+                "content_1": "nmBotの次世代インテリジェントアシスタントを全面的にサポート。",
+                "content_2": "nmBot Intelligenceは|<igt>nmBot Copilot</igt>、|<igt>nmartChat+</igt>、|<igt>おすすめコメント</igt>、|<igt>スパム遮断</igt>などの|機能を駆動し、|nmBotを全面的にアップグレードします。",
+                "feature_1": {
+                    "content": "「新規メンバーは|チャンネル@nmbotchannelの|購読を必須にして、|参加初日は|画像の投稿を禁止」|と言うだけで、|nmBot Copilotは|「参加認証」と|「新規メンバー権限制限」の|2つの機能を有効にして|設定する必要があると理解し、|自動で設定します。|「午後11時から午前8時までは|画像と動画の投稿を禁止」と言えば、|nmBot Copilotが対応する|スケジュールタスクを追加します。",
+                    "title": "グループ設定管理"
+                },
+                "feature_2": {
+                    "content": "nmBot Copilotに|nmBotの各機能の使い方を|質問できます。|将来的には、|nmBot Copilotは|nmBotヘルプドキュメントや|その他の機能と連携し、|ユーザーにより多くの支援を提供します。",
+                    "title": "nmTeamの知識を満載"
+                },
+                "feature_3": {
+                    "content": "nmBot Copilotは|Telegramボット内でも|nmBotパネルでも利用でき、|nmBotの各機能と|緊密に統合されて、|より快適な|ユーザー体験を実現します。",
+                    "title": "いつでも手元に"
+                },
+                "other_1": "<igt>nmartChat+</igt>は、nmBot独自の|スマートチャット機能の|さらなる進化です：|nmartChatの|ユニークなチャットスタイルを|維持しつつ、|nmartChat+は|チャット内容への理解を深め、|より適切なタイミングで|自動返信します。|<igt>おすすめコメント</igt>機能は|文脈をよりよく把握し、|投稿への返信だけでなく、|コメントでの交流にも|インテリジェントに参加します。|<igt>スパム遮断</igt>機能は|低い誤検出率を|維持したまま、|認識精度を|約5倍に向上させました[footer:2025年12月22日にプレリリース版のnmBot Intelligenceスパム遮断コンポーネントでテスト。テストデータによると、nmBot Intelligenceスパム遮断を「最も厳格」に設定した場合、認識効果は従来の5.11倍に達します。実際の効果は使用状況や設定によって異なります。]。",
+                "other_title": "さらに|nmBot Intelligenceの|機能",
+                "title_1": "nmBot",
+                "title_2": "Intelligence"
+            },
+            "nmbot_plus": {
+                "content_0": "グループと個人ユーザー向けの|このプレミアムサブスクリプションは|nmBotに20以上の|プレミアムサービスを提供します。|アクティブグループの83%は|月額わずか0.4ドルで|nmBot+を購読できます[footer:2024年11月のアクティブグループ統計によると、この割合のグループが月額0.4ドル相当のnmBot+を利用できます。]。|より多くの方に手頃な|サブスクリプションです。",
+                "feature_1": {
+                    "content": "グループオーナーは管理者のnmBot設定変更権限を設定でき、管理者管理がより簡単になります。",
+                    "image": "website intro plus feature 1.png",
+                    "title": "管理者権限制御"
+                },
+                "feature_2": {
+                    "content": "グループに表示される|ボットコマンドをカスタマイズし、|目的に合わせて|機能を有効化できます。",
+                    "image": "website intro plus feature 2.png",
+                    "title": "カスタムコマンドリスト"
+                },
+                "feature_3": {
+                    "content": "より多くの操作時間オプション、|カスタム認証テキスト、|参加時間制限、|カスタムスパムルールなどの|機能で|グループ参加ユーザーを管理できます。",
+                    "image": "website intro plus feature 3.png",
+                    "title": "参加認証"
+                },
+                "feature_4": {
+                    "content": "呼び出しワードを|カスタマイズし、|プライベートメッセージで|通知を受け取れます。",
+                    "image": "website intro plus feature 4.png",
+                    "title": "グループ管理者の呼び出し"
+                },
+                "feature_5": {
+                    "content": "<b>カスタムスパムルール</b>で|グループ独自の|スパム遮断ロジックを実現；|<b>スケジュールタスク</b>は|グループ内での|定期メッセージ送信に対応；|さらに|<b>多数の制限制限解除</b>により|nmBotの体験が|より快適に。",
+                    "image": "website intro plus feature 5.png",
+                    "title": "さらなる特典"
+                },
+                "title": "nmBot+<nobr>、</nobr><br>超お得な|プレミアムサービス。",
+                "view_full_benefits": "nmBot+特典の詳細を見る"
+            },
+            "page_description": "Telegramで最も強力なグループ管理ボットの1つ、nmBotをご紹介します。\nnmBotは多数のグループおよびチャンネル管理機能を搭載し、さまざまなエンターテイメント機能を通じてグループに新しい体験をもたらし、数万のグループから信頼されています。",
+            "panel": {
+                "feature_1": {
+                    "content": "Telegramミニアプリとして、|Telegram内で|タップするだけで|nmBotパネルを|簡単に開けます。",
+                    "title": "Telegramで簡単起動"
+                },
+                "feature_2": {
+                    "content": "ブラウザでも|nmBotパネルを使用でき、|専用の|並列ビューによる|便利な体験を|お楽しみいただけます。",
+                    "title": "大画面でもお好みで"
+                },
+                "feature_3": {
+                    "content": "シンプルで明確な|nmBotパネル設定画面で、|すべての機能が|直感的に理解できます。|クリックするだけ。",
+                    "title": "ワンクリック設定、かんたん操作"
+                },
+                "simplified_content_1": "意味不明なオプションを|一つずつ確認したり、|コマンドを必死に送信して|設定したり、|メッセージのために|超複雑なコードを入力する|日々は終わりました。",
+                "simplified_content_2": "nmBotパネルがあれば、|グループ設定の変更が|機内モードをオンにするのと|同じくらい簡単になります。",
+                "simplified_title": "このパネルが、|すべてをシンプルに。",
+                "title": "nmBotパネル"
+            },
+            "resources": {
+                "channel_content": "nmBotチャンネルを購読して、|nmBotの最新情報を入手しましょう。",
+                "channel_link": "nmBotチャンネルを購読",
+                "channel_title": "nmBotチャンネル",
+                "community_content": "nmBotユーザーコミュニティに参加して、|他のnmBotユーザーと交流しましょう。",
+                "community_link": "コミュニティに参加",
+                "community_title": "nmBotユーザーコミュニティ",
+                "content_0": "最新のお知らせを確認し、活用のヒントを学びましょう。",
+                "documentation_content": "nmBotヘルプドキュメントを参照して、|nmBotの使い方を学びましょう。",
+                "documentation_link": "ドキュメントを見る",
+                "documentation_title": "nmBotヘルプドキュメント",
+                "newsroom_content": "nmTeam Newsroomで|nmBotに関する最新ニュースリリースを|ご覧ください。",
+                "newsroom_link": "nmBotニュースを見る",
+                "newsroom_title": "nmTeam Newsroom",
+                "title": "nmBotリソース"
+            },
+            "start_use": "使い始める",
+            "title": "nmBot Telegram",
+            "usage": {
+                "content_0": "Telegramの多くの|大規模グループが|nmBotを使って|管理しており、|使った人はみんな|良いと言っています。[footer:2022年4月に行われたユーザー調査では、nmBotのユーザー満足度は94%に達しました。データは推定値です。]",
+                "data": {
+                    "chat_admin_count": "サービス提供中のチャット管理者数[footer:2024年8月20日時点のデータ。推定値です。]",
+                    "daily_message_count": "1日の処理メッセージ数[footer:2024年8月19日時点のデータ。推定値です。]",
+                    "mau": "月間アクティブユーザー数[footer:2025年3月11日時点、Telegram統計によるデータ。推定値です。]",
+                    "total_group_count": "累計参加グループ数[footer:2024年8月20日時点のデータ。推定値です。]"
+                },
+                "title": "数万のグループが|選んだ選択肢"
+            }
         },
-        "noresult": "お住まいの国または地域で利用可能なnmTeam製品はありません。",
-        "notfound": "製品が見つかりません",
-        "target_detail_aria_label": "、詳細を確認する",
+        "noresult": "お住まいの国または地域で利用可能なnmTeam製品は見つかりませんでした。",
+        "notfound": "お探しの製品は存在しないか、お住まいの国または地域では利用できません。",
+        "target_detail_aria_label": "、詳細を見る",
         "target_in_aria_label": "、リンクを開く",
-        "target_out_aria_label": "、リンクを新しいウィンドウで開きます",
-        "target_turn_to_note": "脚注に移動",
+        "target_out_aria_label": "、新しいタブでリンクを開く",
+        "target_turn_to_note": "脚注へ移動",
         "title": "製品",
-        "unavailable": "この製品は存在しないか、お住まいの国ではご利用いただけません。"
+        "unavailable": "この製品は存在しないか、お住まいの国または地域では使用できません。"
     },
     "questionnaire": {
         "account": {
-            "description": "nmTeamのスタッフがあなたのアカウント情報を確認します。",
-            "error": "何か問題が発生し、ログインステータスを確認できませんでした。",
+            "description": "nmTeamスタッフがあなたのアカウント情報を確認します。",
+            "error": "エラーが発生し、ログイン状態を確認できませんでした。",
             "title": "このフォームは{name}で送信されます"
         },
         "backstage": {
             "analyze": {
                 "detail": "詳細",
-                "input_rate": "充填率",
+                "input_rate": "記入率",
                 "keyword": "キーワード",
                 "overview": "概要",
                 "percent": "パーセンテージ",
-                "result_num": "結果の数",
-                "time": "平均時間"
+                "result_num": "結果数",
+                "time": "平均所要時間"
             },
             "data_type": {
                 "JSON": "JSON",
-                "analyze": "分析する",
+                "analyze": "分析",
                 "origin": "ソースデータ",
                 "preview": "ソースフォーム"
             },
             "gentime": "ページ生成時間：",
             "link": "リンク",
-            "name": "形：",
+            "name": "フォーム：",
             "origin": {
-                "answer": "答え",
+                "answer": "回答",
                 "id": "ID",
                 "ip": "IP",
-                "start_time": "充填開始時間",
-                "submit_time": "提出時間",
-                "time": "時間がかかる",
+                "start_time": "記入開始時間",
+                "submit_time": "送信時間",
+                "time": "所要時間",
                 "uid": "UID"
             },
             "question_type": {
-                "chosen_answer": "オプション",
-                "input": "空欄を埋める",
-                "multiple": "複数の選択肢",
+                "chosen_answer": "任意",
+                "input": "記入式",
+                "multiple": "複数選択",
                 "must_answer": "必須",
-                "single": "単一の選択肢",
+                "single": "単一選択",
                 "textarea": "複数行入力"
             },
             "tip": {
-                "not_admin": "申し訳ありませんが、あなたはnmTeamの管理者ではなく、このページにアクセスする権限がありません。",
+                "not_admin": "申し訳ありません。あなたはnmTeamの管理者ではないため、このページにアクセスする権限がありません。",
                 "not_found": "このフォームは見つかりませんでした。",
-                "not_log": "申し訳ありませんが、nmTeam管理者アカウントにログインしていません。"
+                "not_log": "申し訳ありません。nmTeam管理者アカウントにログインしていません。"
             },
             "title": "nmTeamフォーム分析データ"
         },
         "description": "nmTeamフォームに記入します。",
-        "limit": "このフォームは、nmTeamアカウントにログインした後にのみ送信でき、各アカウントは最大{t}回送信できます。",
-        "log_require": "このフォームに入力するには、nmTeamアカウントにログインする必要があります。",
-        "multiple": "複数の選択肢",
-        "must_input": "これを完了してください。",
+        "limit": "このフォームはnmTeamアカウントにログイン後にのみ送信でき、各アカウント最大{t}回まで送信できます。",
+        "log_require": "このフォームに記入するには、nmTeamアカウントにログインする必要があります。",
+        "multiple": "複数選択",
+        "must_input": "この項目を入力してください。",
         "result": {
             "error_code": {
-                "EMPTY_ANSWER": "記入されていない必須の質問があります",
-                "LOG_VERIFY_ERROR": "ユーザーログインステータスの確認に失敗しました",
-                "REACH_ACCOUNY_LIMIT": "アカウントの提出数を超えました",
-                "REACH_IP_LIMIT": "このIPは頻繁に送信されます。しばらくしてからもう一度お試しください",
-                "SERVER_ERROR": "いくつかのサーバーエラーが発生しました"
+                "EMPTY_ANSWER": "必須項目が未記入です",
+                "LOG_VERIFY_ERROR": "ユーザーログイン状態の検証に失敗しました",
+                "REACH_ACCOUNY_LIMIT": "アカウントの送信回数を超えました",
+                "REACH_IP_LIMIT": "このIPからの送信頻度が高すぎます。しばらく経ってからもう一度お試しください",
+                "SERVER_ERROR": "サーバーエラーが発生しました"
             },
-            "info_error": "フォーム<b>{name}</b>の送信に失敗しました。 \n<br> <br>エラーメッセージ：{エラー}。",
-            "info_success": "フォーム<b>{name}</b>が正常に送信されました。",
-            "title_error": "フォームの送信に失敗しました",
-            "title_success": "フォームが正常に送信されました"
+            "info_error": "フォーム <b>{name}</b> の送信に失敗しました。<br><br>エラー：{error}。",
+            "info_success": "フォーム <b>{name}</b> を正常に送信しました。",
+            "title_error": "フォーム送信失敗",
+            "title_success": "フォーム送信成功"
         },
-        "select_max_limit": "最大{n}個のアイテムを選択してください。",
-        "select_min_limit": "少なくとも{n}個のアイテムを選択してください。",
-        "select_num_limit": "{min}から{max}の項目を選択してください。",
-        "select_sin_limit": "{min}項目を選択してください。",
-        "submit": "参加する",
+        "select_max_limit": "最大{n}個まで選択してください。",
+        "select_min_limit": "少なくとも{n}個選択してください。",
+        "select_num_limit": "{min}〜{max}個選択してください。",
+        "select_sin_limit": "{min}個選択してください。",
+        "submit": "送信",
         "title": "nmTeamフォーム"
     },
+    "schema": {
+        "newsroom_description": "nmTeam Newsroomで最新のnmTeamニュースをご覧ください。",
+        "nmbot_intro": "nmBot Telegram紹介",
+        "nmbot_intro_description": "超強力なTelegramボット、nmBotについて紹介します。",
+        "nmbot_panel": "nmBotパネル",
+        "nmbot_panel_description": "nmBotパネルを開いてnmBotの設定を管理します。",
+        "nmteam_support": "nmTeamサポート",
+        "nmteam_support_description": "nmTeamサポートでnmTeam製品に関するヘルプを入手します。",
+        "products": "製品",
+        "products_description": "nmTeamのnmProductsについてご紹介します。"
+    },
     "sitemap": {
-        "description": "nmTeamサイトマップをチェックして、お気に入りのnmTeamWebサイトページへの簡単な道順を確認してください。",
+        "description": "nmTeamサイトマップを表示して、お気に入りのnmTeamウェブサイトページへ素早くアクセスしましょう。",
         "title": "サイトマップ"
     },
     "skip_to_content": "コンテンツにスキップ",
     "status_page": {
-        "description": "nmTeamの各サービスの動作ステータスを追跡します。",
-        "redirecting": "nmTeamシステムステータススタンドアロンページにリダイレクトしています...",
+        "description": "nmTeamの各サービスの稼働状況を確認します。",
+        "redirecting": "nmTeamシステムステータス専用ページにリダイレクトしています...",
         "title": "nmTeamシステムステータス"
     },
     "support": {
-        "description": "私たちがお手伝いします。\n\nnmTeam サポートにリダイレクトしています。お待ちください...",
-        "title": "nmTeamのサポート"
+        "description": "いつでもお手伝いします。\n\nnmTeamサポートにリダイレクトしています。お待ちください...",
+        "title": "nmTeamサポート"
     },
     "supportus": {
-        "copy_crypto_address": "アドレスをコピーする",
-        "copy_crypto_address_success": "アドレスが正常にコピーされました",
+        "copy_crypto_address": "アドレスをコピー",
+        "copy_crypto_address_success": "アドレスをコピーしました",
         "crypto": "暗号通貨",
         "crypto_address": "暗号通貨アドレス",
-        "crypto_only_accept_tron": "TRON アセットの受信のみをサポートします",
-        "description": "私たちがさらに前進するのを助けるためにnmTeamを後援します。",
+        "crypto_only_accept_tron": "TRON資産の受信のみ対応",
+        "description": "nmTeamを支援して、私たちのさらなる前進をサポートしてください。",
         "links": {
-            "afdian": "愛の発電",
+            "afdian": "AFDian",
             "patreon": "Patreon"
         },
-        "para": "nmTeamは、その存在が人々に独自の価値をもたらすと信じています。<br>これに同意する場合は、nmTeamを後援して、さらに先に進むことができます。<br> nmTeamは、これらの寄付資金をFornmTeamに使用します。研究開発やオーバーヘッド、またはコーヒーを買うために。<br> nmTeamをどのようにサポートしても、心から感謝します。あなたのサポートにより、私たちはさらに一生懸命働きます。",
-        "sponsors_info_note": "上記のnmTeamスポンサーの名前とアバターは独自に設定されており、nmTeamとは関係ありません。<br>上記のスポンサーシップチャンネルはサードパーティのプラットフォームにリダイレクトされ、nmTeamはそのコンテンツについて責任を負いません。 ",
+        "para": "nmTeamは、その存在が人々に独自の価値をもたらすと信じています。<br>もしそれに共感されるなら、ぜひnmTeamを支援してください。皆様の支援が私たちをより遠くへ導きます。<br>nmTeamはこれらの寄付金を研究開発や運営費、またはコーヒー代に充てさせていただきます。<br>どのような形でのご支援であれ、心より感謝申し上げます。皆様の応援があれば、私たちはこれからも努力を続けていきます。",
+        "sponsors_info_note": "上記のnmTeamスポンサーの名前とアバターはスポンサー自身が設定したものであり、nmTeamとは関係ありません。<br>上記の支援方法はサードパーティのプラットフォームに移動します。nmTeamはその内容について責任を負いません。",
         "table": {
             "amount": "金額",
             "avatar": "アバター",
             "contribution": "貢献",
             "name": "ニックネーム"
         },
-        "title": "スポンサーnmTeam",
-        "tks_other": "他のnmTeamの貢献者に感謝します",
-        "tks_sponsor": "スポンサーに感謝します",
+        "title": "nmTeamを支援",
+        "tks_other": "その他のnmTeam貢献者に感謝",
+        "tks_sponsor": "スポンサーに感謝",
         "tks_sponsor_part": "一部"
     }
 }
