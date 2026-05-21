@@ -7,9 +7,10 @@
 # Retired dynamic PHP pages
 /blackboard/questionnaire/index.php /questionnaire-ended/ 301
 /:lang/blackboard/questionnaire/index.php /:lang/questionnaire-ended/ 301
-/blackboard/questionnaire/* /questionnaire-ended/ 200
-/:lang/blackboard/questionnaire/* /:lang/questionnaire-ended/ 200
-/blackboard/support_doc_search/search.php /questionnaire-ended/ 200
+/blackboard/questionnaire/* /questionnaire-ended/ 301
+/:lang/blackboard/questionnaire/* /:lang/questionnaire-ended/ 301
+/blackboard/support_doc_search/search.php /questionnaire-ended/ 301
+/:lang/blackboard/support_doc_search/search.php /:lang/questionnaire-ended/ 301
 
 # Legacy naming exceptions
 /business_cooperation /business-cooperation/ 301
