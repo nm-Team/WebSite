@@ -14,38 +14,37 @@ const redirectScript = `(() => {
   };
 
   const finish = () => root.removeAttribute('data-language-redirect');
-  const first = location.pathname.split('/').filter(Boolean)[0];
-  if (locales.includes(first)) {
+
+  try {
+    const first = location.pathname.split('/').filter(Boolean)[0];
+    if (locales.includes(first)) return;
+
+    const normalize = (value) => {
+      if (!value) return '';
+      const normalized = aliases[value] || aliases[value.replace('-', '_')] || value;
+      if (locales.includes(normalized)) return normalized;
+      if (normalized.toLowerCase().startsWith('zh-hk')) return 'zh-HK';
+      if (normalized.toLowerCase().startsWith('zh')) return 'zh-CN';
+      if (normalized.toLowerCase().startsWith('ja')) return 'ja-JP';
+      if (normalized.toLowerCase().startsWith('en')) return 'en';
+      return '';
+    };
+
+    const params = new URLSearchParams(location.search);
+    const requested = normalize(params.get('lang') || params.get('lan'));
+    const cookieMatch = document.cookie.match(/(?:^|;\\s*)lang=([^;]*)/);
+    const cookie = cookieMatch ? decodeURIComponent(cookieMatch[1]) : '';
+    const saved = cookie === 'auto' ? '' : normalize(cookie);
+    const detected = (navigator.languages || [navigator.language]).map(normalize).find(Boolean);
+
+    const target = requested || saved || detected || 'en';
+    if (target === 'en') return;
+
+    document.cookie = 'lang=' + encodeURIComponent(target) + ';path=/;max-age=999999999';
+    location.replace('/' + target + location.pathname + location.search + location.hash);
+  } finally {
     finish();
-    return;
   }
-
-  const normalize = (value) => {
-    if (!value) return '';
-    const normalized = aliases[value] || aliases[value.replace('-', '_')] || value;
-    if (locales.includes(normalized)) return normalized;
-    if (normalized.toLowerCase().startsWith('zh-hk')) return 'zh-HK';
-    if (normalized.toLowerCase().startsWith('zh')) return 'zh-CN';
-    if (normalized.toLowerCase().startsWith('ja')) return 'ja-JP';
-    if (normalized.toLowerCase().startsWith('en')) return 'en';
-    return '';
-  };
-
-  const params = new URLSearchParams(location.search);
-  const requested = normalize(params.get('lang') || params.get('lan'));
-  const cookieMatch = document.cookie.match(/(?:^|;\\s*)lang=([^;]*)/);
-  const cookie = cookieMatch ? decodeURIComponent(cookieMatch[1]) : '';
-  const saved = cookie === 'auto' ? '' : normalize(cookie);
-  const detected = (navigator.languages || [navigator.language]).map(normalize).find(Boolean);
-
-  const target = requested || saved || detected || 'en';
-  if (target === 'en') {
-    finish();
-    return;
-  }
-
-  document.cookie = 'lang=' + encodeURIComponent(target) + ';path=/;max-age=999999999';
-  location.replace('/' + target + location.pathname + location.search + location.hash);
 })();`;
 
 ---
