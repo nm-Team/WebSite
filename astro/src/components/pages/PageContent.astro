@@ -16,6 +16,7 @@ import SitemapPage from './SitemapPage.astro';
 import type { PageProps } from './PageProps';
 import StatusPage from './StatusPage.astro';
 import SupportPage from './SupportPage.astro';
+import ProductOverviewRedirectPage from './ProductOverviewRedirectPage.astro';
 import SupportUsPage from './SupportUsPage.astro';
 
 const props = Astro.props as PageProps;
@@ -29,6 +30,7 @@ const pageComponents = {
   sitemap: SitemapPage,
   cookies: CookiesPage,
   'business-cooperation': BusinessCooperationPage,
+  'products-overview-redirect': ProductOverviewRedirectPage,
   'legal-privacy-policy': PrivacyPolicyPage,
   'legal-network-service-protocol': NetworkServiceProtocolPage,
   products: ProductOverviewPage,

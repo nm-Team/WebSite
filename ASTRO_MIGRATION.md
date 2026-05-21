@@ -191,6 +191,38 @@ Implementation notes:
 - Do not use this script on `/en/...`, `/zh-CN/...`, `/zh-HK/...`, `/ja-JP/...`, or `/zh-x-mars/...`.
 - The root page should mark itself as canonical only if the SEO decision is to keep root English URLs canonical. Otherwise canonicalize English to `/en/...` and leave root as compatibility fallback.
 
+### Legacy URL redirects (`_redirects`)
+
+Current `.htaccess` rewrites `/products/overview/{product}` to `products/overview.php?product={product}`. After migration the pattern reverses: the clean URL is canonical and legacy query-parameter URLs must redirect.
+
+Required `_redirects` entries:
+
+```text
+/products/overview.php?product=:product  /products/overview/:product  301
+/products/overview?product=:product      /products/overview/:product  301
+```
+
+The `/products/overview/:product` pattern applies to all languages, so redirects must also handle prefixed variants:
+
+```text
+/en/products/overview.php?product=:product      /en/products/overview/:product      301
+/en/products/overview?product=:product          /en/products/overview/:product      301
+/zh-CN/products/overview.php?product=:product   /zh-CN/products/overview/:product   301
+/zh-CN/products/overview?product=:product       /zh-CN/products/overview/:product   301
+/zh-HK/products/overview.php?product=:product   /zh-HK/products/overview/:product   301
+/zh-HK/products/overview?product=:product       /zh-HK/products/overview/:product   301
+/ja-JP/products/overview.php?product=:product   /ja-JP/products/overview/:product   301
+/ja-JP/products/overview?product=:product       /ja-JP/products/overview/:product   301
+/zh-x-mars/products/overview.php?product=:product /zh-x-mars/products/overview/:product 301
+/zh-x-mars/products/overview?product=:product   /zh-x-mars/products/overview/:product 301
+```
+
+Notes:
+- Cloudflare Pages `_redirects` supports splats and placeholders; validate the exact syntax before deploying.
+- If Cloudflare Pages does not support query parameter matching in `_redirects`, handle these via a Cloudflare Worker or a static redirect page that reads the `product` query parameter client-side.
+- Test that redirects work for both `.php?product=` and `?product=` variants.
+- Existing `.htaccess` rewrite (query-param ← clean URL) is removed after cutover.
+
 ## Feasibility Assessment
 
 | Topic | Assessment | Notes |
@@ -573,7 +605,7 @@ Automated checks should verify:
 - No generated route links to old `.php` URLs unless it is an intentional legacy/dynamic route.
 - Product media URLs resolve or are explicitly allowed external URLs.
 - Remote assets used by nmBot are still reachable.
-- `_redirects` covers old `.php`, underscore, and product overview paths.
+- `_redirects` covers old `.php`, underscore, and product overview legacy query-parameter paths (`/products/overview(.php)?product=` → `/products/overview/{product}`).
 
 ### Sitemap and crawler checks
 

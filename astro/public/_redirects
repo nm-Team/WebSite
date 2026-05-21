@@ -18,5 +18,8 @@
 /:lang/products/index.php /:lang/products/ 301
 
 # Generic legacy PHP fallback
+# NOTE: covers /products/overview.php?product=xxx → /products/overview/?product=xxx
+#       the redirect page at /products/overview/ then extracts ?product= and
+#       does a client-side redirect to /products/overview/xxx/
 /:lang/:path*.php /:lang/:path*/ 301
 /:path*.php /:path*/ 301
