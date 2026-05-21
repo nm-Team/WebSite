@@ -352,6 +352,7 @@ html[data-nmbot-page="true"] {
         background-size: cover;
         display: inline-block;
         margin: 0.2em 0.2em -0.2em 0.2em;
+        flex-shrink: 0;
     }
 
     .haloContainer {
