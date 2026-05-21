@@ -455,6 +455,7 @@
             "title": "nmTeam 表单分析数据"
         },
         "description": "填写 nmTeam 表单。",
+        "ended": "当前表单已结束",
         "limit": "此表单需登录 nmTeam Account 后方可提交，且每账号可最多提交 {t} 次。",
         "log_require": "需要登录 nmTeam 账号才可以填写此表单。",
         "multiple": "多选",

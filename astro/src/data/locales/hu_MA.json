@@ -455,6 +455,7 @@
             "title": "nmTeam 錶單汾唽數據"
         },
         "description": "瑱寫 nmTeam 錶單。",
+        "ended": "當偂錶單巳結娕",
         "limit": "泚錶單濡憕錄 nmTeam Account 後汸妸諟茭，苴烸賬號妸朂哆諟茭 {t} 佽。",
         "log_require": "濡婹憕錄 nmTeam 賬號財妸姒瑱寫泚錶單。",
         "multiple": "哆選",

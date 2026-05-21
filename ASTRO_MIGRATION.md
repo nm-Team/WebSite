@@ -27,7 +27,7 @@ Recommended direction:
 | Product overview route | `.htaccess` rewrites `/products/overview/{product}` to `products/overview.php?product={product}`. |
 | Product data | Product listing and generic product detail pages read `src/json/products/{legacyLocale}/...`. |
 | nmBot page | `products/template/nmBot-Telegram.php` is custom PHP using locale keys under `products.nmbot_telegram` plus remote image assets. |
-| Dynamic systems | `blackboard/questionnaire/*` and `blackboard/support_doc_search/search.php` require runtime PHP behavior. |
+| Dynamic systems | `blackboard/questionnaire/*` and `blackboard/support_doc_search/search.php` are retired and now show a static ended notice page. |
 | Build tooling | No root `package.json` or lockfile exists today; `pnpm` is appropriate for the new Astro project. |
 
 ## Language URL Model
@@ -230,7 +230,7 @@ Notes:
 | Astro static migration | Feasible | Public pages can be generated statically. |
 | Root English fallback with client redirect | Feasible | Works for a static deployment; exact server-side PHP language negotiation is not preserved. |
 | Cloudflare Pages without Functions | Feasible with constraints | Static pages, assets, redirects, and rewrites are fine. Runtime PHP features need another home. |
-| Dynamic PHP removal | Not part of this migration | Questionnaire, session, MySQL, Redis, and support search require a separate decision. |
+| Dynamic PHP removal | Applied for questionnaire/support search | Questionnaire and support search are retired; runtime session/MySQL/Redis paths are no longer used by those entries. |
 | nmBot page migration | Feasible but high risk | Needs visual and content parity baselines before refactoring. |
 | SEO | Feasible | Requires canonical/hreflang decisions, sitemap validation, and crawler tests with JS disabled. |
 | Timeline | 6-10 weeks | Depends mostly on nmBot parity and how strict visual comparison is. |
@@ -442,7 +442,7 @@ Pages/routes:
 
 Notes:
 
-- `join/forum.php` currently redirects to `/blackboard/questionnaire/22_07_04_join_nmteam_{jobType}`. If questionnaires remain PHP, this route should remain a redirect to the PHP service.
+- `join/forum.php` now redirects to `/questionnaire-ended/` because the legacy questionnaire flow has been retired.
 - `language.php` should become either a static language selection page or be folded into `LanguageSwitcher`.
 - Replace `sitemap.php` with generated sitemap output, then verify all root and prefixed routes.
 

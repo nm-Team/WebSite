@@ -106,14 +106,14 @@ test('language switch rewrites prefixed back URL to selected locale', async ({ p
   await expect(page).toHaveURL(/\/zh-CN\/aboutus\/$/);
 });
 
-test('join forum redirects allowed job type to legacy questionnaire path', async ({ page }) => {
+test('join forum redirects to retired questionnaire notice page', async ({ page }) => {
   await page.goto('/join/forum/?jobType=writer');
-  await expect(page).toHaveURL(/\/blackboard\/questionnaire\/22_07_04_join_nmteam_writer$/);
+  await expect(page).toHaveURL(/\/questionnaire-ended\/$/);
 });
 
-test('join forum sanitizes unknown job type before redirecting', async ({ page }) => {
+test('join forum redirects to retired questionnaire notice page for unknown job type too', async ({ page }) => {
   await page.goto('/join/forum/?jobType=../../bad');
-  await expect(page).toHaveURL(/\/blackboard\/questionnaire\/22_07_04_join_nmteam_developer$/);
+  await expect(page).toHaveURL(/\/questionnaire-ended\/$/);
 });
 
 const phpRedirectCases = [

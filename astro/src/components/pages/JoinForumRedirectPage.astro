@@ -10,16 +10,12 @@ const { locale } = Astro.props as PageProps;
 <div class="main">
   <div class="mainBlock center widepadding">
     <p>{t(locale, 'join.join_register_page.description')}</p>
-    <p><a id="joinForumFallback" href="/blackboard/questionnaire/22_07_04_join_nmteam_developer">Continue</a></p>
+    <p><a id="joinForumFallback" href="/questionnaire-ended/">Continue</a></p>
   </div>
 </div>
 <script is:inline>
   (() => {
-    const allowedJobTypes = new Set(["developer", "support", "writer"]);
-    const params = new URLSearchParams(window.location.search);
-    const requestedJobType = params.get("jobType") || "developer";
-    const jobType = allowedJobTypes.has(requestedJobType) ? requestedJobType : "developer";
-    const target = `/blackboard/questionnaire/22_07_04_join_nmteam_${jobType}`;
+    const target = "/questionnaire-ended/";
     const fallback = document.getElementById("joinForumFallback");
     if (fallback) {
       fallback.setAttribute("href", target);
@@ -27,4 +23,3 @@ const { locale } = Astro.props as PageProps;
     window.location.replace(target);
   })();
 </script>
-

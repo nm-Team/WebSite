@@ -73,6 +73,12 @@ describe('_redirects rules', () => {
         continue;
       }
 
+      if (source === '/blackboard/questionnaire/index.php') {
+        expect(hasRule(rules, source, '/questionnaire-ended/', 301)).toBe(true);
+        expect(hasRule(rules, `/:lang${source}`, '/:lang/questionnaire-ended/', 301)).toBe(true);
+        continue;
+      }
+
       const expectedRoot = toExpectedRootPathFromPhp(source);
       const expectedPrefixed = expectedRoot === '/' ? '/:lang/' : `/:lang${expectedRoot}`;
       const isDirectoryIndex = source.endsWith('/index.php');

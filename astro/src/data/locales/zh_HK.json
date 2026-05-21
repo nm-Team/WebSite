@@ -455,6 +455,7 @@
             "title": "nmTeam 表單分析數據"
         },
         "description": "填寫 nmTeam 表單。",
+        "ended": "當前表單已結束",
         "limit": "此表單需登錄 nmTeam Account 後方可提交，且每賬號可最多提交 {t} 次。",
         "log_require": "需要登錄 nmTeam 賬號才可以填寫此表單。",
         "multiple": "多選",

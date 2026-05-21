@@ -455,6 +455,7 @@
             "title": "nmTeam form analysis data"
         },
         "description": "Fill out the nmTeam form.",
+        "ended": "This form is no longer accepting responses.",
         "limit": "This form can only be submitted after logging in to the nmTeam Account, and each account can submit a maximum of {t} times.",
         "log_require": "You need to be logged in to your nmTeam account to fill out this form.",
         "multiple": "Multiple Choices",
