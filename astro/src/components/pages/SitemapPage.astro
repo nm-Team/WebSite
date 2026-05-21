@@ -1,7 +1,9 @@
 ---
 import { getSitemapEntries } from '@/utils/site-map';
+import type { PageProps } from './PageProps';
 
-const entries = getSitemapEntries();
+const { locale } = Astro.props as PageProps;
+const entries = getSitemapEntries().filter((entry) => entry.locale === locale);
 ---
 <style>
   .item h2 {
