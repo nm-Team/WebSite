@@ -255,8 +255,8 @@
                     "ts": "Convert to stickers or emojis"
                 },
                 "special": {
-                    "content_0": "Super exclusive features| help you activate the group and chat happily.",
-                    "content_1": "This is just a small part!| There are more features |waiting for you to explore.",
+                    "content_0": "Super exclusive features |help you activate the group and chat happily.",
+                    "content_1": "This is just a small part! |There are more features |waiting for you to explore.",
                     "feature_1": {
                         "content": "Use salty or sweet language |to automatically comment |on new posts |published in the channel. [footer:Posts may need to meet specific conditions before they can be commented on. ]",
                         "image": "website intro special feature 1.png",
@@ -297,23 +297,23 @@
             "header_name": "nmBot",
             "intelligence": {
                 "chat_coming_soon": "Beta version available",
-                "chat_content_1": "<igt>nmBot Copilot</igt>| is a personal assistant built into nmBot| and nmBot panels|, making managing nmBot groups| and personal configuration| unprecedentedly simple.",
+                "chat_content_1": "<igt>nmBot Copilot</igt> |is a personal assistant built into nmBot |and nmBot panels, |making managing nmBot groups |and personal configuration |unprecedentedly simple.",
                 "chat_title": "nmBot Copilot",
                 "content_1": "Fully serve nmBot's next-generation intelligence assistant.",
-                "content_2": "nmBot intelligence brings all-round upgrades to nmBot |driven |<igt>nmBot Copilot, |<igt>nmartChat+</igt>, |<igt>Proper Warm Up</igt>, |<igt>Anti-Spam</igt>| and more functions.",
+                "content_2": "nmBot intelligence brings all-round |upgrades to nmBot |driven |<igt>nmBot Copilot, |<igt>nmartChat+</igt>, |<igt>Proper Warm Up</igt>, |<igt>Anti-Spam</igt> |and more functions.",
                 "feature_1": {
-                    "content": "Just say \"Let newcomers be required to |subscribe to my channel |@nmbotchannel, and the first day |of joining the group| is not allowed to post pictures\", |nmBot Copilot will know |that you need to enable |the two functions of \"Join Verification\"| and \"New Member Permission Restriction\"|, and configure it for you; | Say \"Set between 11:00 pm and 8:00 am |not allowed to post pictures and videos\", |nmBot Copilot will add corresponding scheduled tasks for you.",
+                    "content": "Just say \"Let newcomers be required to |subscribe to my channel |@nmbotchannel, and the first day |of joining the group |is not allowed to post pictures\", |nmBot Copilot will know |that you need to enable |the two functions of \"Join Verification\" |and \"New Member Permission Restriction\", |and configure it for you;  |Say \"Set between 11:00 pm and 8:00 am |not allowed to post pictures and videos\", |nmBot Copilot will add corresponding scheduled tasks for you.",
                     "title": "Group configuration management"
                 },
                 "feature_2": {
-                    "content": "You can ask nmBot Copilot |how to use various nmBot functions. |In the future, nmBot smart chat| will also be combined with nmBot help document| and other functions to provide more help to users.",
+                    "content": "You can ask nmBot Copilot |how to use various nmBot functions. |In the future, nmBot smart chat |will also be combined with nmBot Help Document |and other functions to provide more help to users.",
                     "title": "Fully loaded with nmTeam knowledge"
                 },
                 "feature_3": {
-                    "content": "nmBot Copilot| is both available in the Telegram bot |and nmBot panel, and is closely integrated |with various nmBot functions |to create a more comfortable user experience for nmBot.",
+                    "content": "nmBot Copilot |is both available in the Telegram bot |and nmBot panel, and is closely integrated |with various nmBot functions |to create a more comfortable user experience for nmBot.",
                     "title": "At your fingertips"
                 },
-                "other_1": "<igt>nmartChat+</igt> is another evolution of nmBot |'s unique smart chat function: |on the basis of retaining nmartChat's |unique chat style|, |nmartChat+| brings a better understanding |of the chat content, |and automatically selects |a more appropriate time to reply. |<igt>Proper Warm Up</igt> function |can better | connect with the context, |not only reply to posts, |but also intelligently participate in |comment interactions. |<igt>Spam Interception</igt> function has improved recognition accuracy rate| to about 5 times [footer: Tested on December 22, 2025 using the pre-release version of nmBot intelligence spam interception component. Test data shows that when nmBot intelligence spam interception is set to \"most stringent\", the recognition effect of nmBot intelligence spam interception function can reach 5.11 times that of traditional recognition. Actual results vary based on usage and settings. ], while on the premise |of maintaining |a low false positive rate. ",
+                "other_1": "<igt>nmartChat+</igt> is another evolution of nmBot |'s unique smart chat function: |on the basis of retaining nmartChat's |unique chat style, ||nmartChat+ |brings a better understanding |of the chat content, |and automatically selects |a more appropriate time to reply. |<igt>Proper Warm Up</igt> function |can better  |connect with the context, |not only reply to posts, |but also intelligently participate in |comment interactions. |<igt>Spam Interception</igt> function has improved recognition accuracy rate |to about 5 times[footer: Tested on December 22, 2025 using the pre-release version of nmBot intelligence spam interception component. Test data shows that when nmBot intelligence spam interception is set to \"most stringent\", the recognition effect of nmBot intelligence spam interception function can reach 5.11 times that of traditional recognition. Actual results vary based on usage and settings. ], while on the premise |of maintaining |a low false positive rate. ",
                 "other_title": "More |nmBot Intelligence |functions",
                 "title_1": "nmBot",
                 "title_2": "Intelligence"
@@ -341,11 +341,11 @@
                     "title": "Call group administrators"
                 },
                 "feature_5": {
-                    "content": "<b>Custom spam rules</b> allow the group |to have its own |spam interception logic; |<b>Scheduled tasks</b> support sending messages regularly |in the group; |and |<b>Several limit unlocking</b>| makes the nmBot experience |more comfortable.",
+                    "content": "<b>Custom spam rules</b> allow the group |to have its own |spam interception logic; |<b>Scheduled tasks</b> support sending messages regularly |in the group; |and |<b>Several limit unlocking</b> |makes the nmBot experience |more comfortable.",
                     "image": "website intro plus feature 5.png",
                     "title": "More benefits"
                 },
-                "title": "nmBot, <nobr>，</nobr><br>super discount |advanced service.",
+                "title": "nmBot+<nobr>，</nobr><br>super discount |advanced service.",
                 "view_full_benefits": "Learn more about nmBot+ benefits"
             },
             "page_description": "Get to know one of the most powerful group management bots on Telegram.\nnmBot is equipped with numerous group and channel management functions, brings new experiences to groups through various entertainment functions, and has been trusted by tens of thousands of groups.",
@@ -386,7 +386,7 @@
             "start_use": "Get Started",
             "title": "nmBot Telegram",
             "usage": {
-                "content_0": "A large number |of large groups in Telegram| are all using nmBot |for management, |and all those who have used it| say it is good. [footer:In a user survey conducted in April 2022, nmBot's user satisfaction reached 94%. The data is an estimate. ]",
+                "content_0": "A large number |of large groups in Telegram |are all using nmBot |for management, |and all those who have used it |say it is good. [footer:In a user survey conducted in April 2022, nmBot's user satisfaction reached 94%. The data is an estimate. ]",
                 "data": {
                     "chat_admin_count": "Number of Servicing Chat Administrators[footer:Data recorded on August 20, 2024. The data is an estimate. ]",
                     "daily_message_count": "Daily Processed Message Count[footer:Data recorded on August 19, 2024. The data is an estimate. ]",
