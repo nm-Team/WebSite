@@ -1,5 +1,5 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
+import { join, resolve } from 'node:path';
 
 import { type LegacyLocale, localeDataMap, type PublicLocale, publicLocales } from '@/i18n/locales';
 
@@ -11,8 +11,7 @@ import {
 } from './schema';
 
 const astroRoot = process.cwd().endsWith('astro') ? process.cwd() : resolve(process.cwd(), 'astro');
-const repoRoot = dirname(astroRoot);
-const productsRoot = join(repoRoot, 'src', 'json', 'products');
+const productsRoot = join(astroRoot, 'src', 'data', 'products');
 
 function readJsonFile(filePath: string): unknown {
   try {

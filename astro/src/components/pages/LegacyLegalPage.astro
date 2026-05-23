@@ -3,21 +3,25 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 interface Props {
-  sourcePath: string;
+  contentFile: 'network-service-protocol.html' | 'privacy-policy.html';
 }
 
-const { sourcePath } = Astro.props as Props;
+const { contentFile } = Astro.props as Props;
 
-function readLegacyBody(relativePath: string): string {
-  const filePath = path.resolve(process.cwd(), '..', relativePath);
-  const content = fs.readFileSync(filePath, 'utf8');
-  const afterHeader = content.split('setHeader();')[1]?.replace(/^.*?\?>/s, '') ?? '';
-  return afterHeader.split('<?php setFooter(); ?>')[0]?.trim() ?? '';
+function readLegalBody(fileName: Props['contentFile']): string {
+  const legalDataRoot = path.resolve(process.cwd(), 'src', 'data', 'legal');
+  const filePath = path.resolve(legalDataRoot, fileName);
+
+  if (!filePath.startsWith(`${legalDataRoot}${path.sep}`)) {
+    throw new Error(`Refusing to read legal content outside ${legalDataRoot}.`);
+  }
+
+  return fs.readFileSync(filePath, 'utf8').trim();
 }
 
-const legacyHtml = readLegacyBody(sourcePath);
+const legalHtml = readLegalBody(contentFile);
 ---
-<Fragment set:html={legacyHtml} />
+<Fragment set:html={legalHtml} />
 <script is:inline>
   document.querySelectorAll('#m [data-status]').forEach((element) => {
     element.setAttribute('data-status', '');

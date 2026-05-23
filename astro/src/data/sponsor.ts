@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
+import { join, resolve } from 'node:path';
 
 export interface SponsorEntry {
   name: string;
@@ -20,7 +20,7 @@ export interface SponsorData {
 }
 
 const astroRoot = process.cwd().endsWith('astro') ? process.cwd() : resolve(process.cwd(), 'astro');
-const sponsorPath = join(dirname(astroRoot), 'src', 'json', 'sponsor.json');
+const sponsorPath = join(astroRoot, 'src', 'data', 'sponsor.json');
 
 function assertObject(value: unknown, path: string): asserts value is Record<string, unknown> {
   if (typeof value !== 'object' || value === null || Array.isArray(value)) {
