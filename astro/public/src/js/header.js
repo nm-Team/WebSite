@@ -2,15 +2,6 @@ logURL = "https://accounts.nmteam.xyz";
 enableAccount = true;
 
 // 这是在每一页上都会执行的 js
-function loadc(name) {
-	let xhr = new XMLHttpRequest(),
-		okStatus = document.location.protocol === "file:" ? 0 : 200;
-	xhr.open('GET', name, false);
-	xhr.overrideMimeType("text/html;charset=utf-8");//默认为utf-8
-	xhr.send(null);
-	return xhr.status === okStatus ? xhr.responseText : null;
-}
-
 window.onscroll = function () { setHeader(); };
 setHeader();
 function setHeader() {
