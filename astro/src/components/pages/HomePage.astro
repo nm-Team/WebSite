@@ -67,7 +67,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
       <div class="swiper-wrapper" id="newsSwiperItems">{t(locale, 'index.newslist_loading')}</div>
     </div>
     <div class="indexMoreLinks">
-      <a target="_blank" href="https://newsroom.nmteam.xyz?ref=nmteam.xyz">
+      <a target="_blank" rel="noopener noreferrer" href="https://newsroom.nmteam.xyz?ref=nmteam.xyz">
         <span>{t(locale, 'index.newslist_more')}</span>
         <Fragment set:html={externalIcon} />
       </a>
