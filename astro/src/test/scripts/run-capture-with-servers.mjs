@@ -66,9 +66,13 @@ async function main() {
     phpLogPath,
     repoCwd,
   );
+  const astroCommand = process.platform === 'win32' ? 'cmd.exe' : 'pnpm';
+  const astroArgs = process.platform === 'win32'
+    ? ['/c', 'pnpm baseline:astro']
+    : ['baseline:astro'];
   const astro = spawnWithLog(
-    'cmd.exe',
-    ['/c', 'pnpm baseline:astro'],
+    astroCommand,
+    astroArgs,
     astroLogPath,
     astroCwd,
   );
