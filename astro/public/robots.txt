@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: 404
-Disallow: functions
+Disallow: /404
+Disallow: /functions
 Sitemap: https://nmteam.xyz/sitemap.xml
