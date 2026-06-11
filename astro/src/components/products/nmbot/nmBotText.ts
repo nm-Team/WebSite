@@ -100,7 +100,7 @@ export function stripNmBotHelperMarkup(value: string): string {
     .replace(/<\/?bs>/g, '')
     .replace(/<\/?nobr>/g, '')
     .replace(/<br\s*\/?>/gi, '\n')
-    .replace(/<[^>]+>/g, '')
+    .replace(/[<>]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
