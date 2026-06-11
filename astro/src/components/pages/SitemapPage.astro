@@ -1,0 +1,27 @@
+---
+import { getSitemapEntries } from '@/utils/site-map';
+import type { PageProps } from './PageProps';
+
+const { locale } = Astro.props as PageProps;
+const entries = getSitemapEntries().filter((entry) => entry.locale === locale);
+---
+<style>
+  .item h2 {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+</style>
+<div class="title center">
+  <h1>nmTeam Sitemap</h1>
+</div>
+<div class="main" id="smapBox">
+  {entries.map((entry) => (
+    <div class="item">
+      <h2><a href={entry.path} title={entry.title}>{entry.title}</a></h2>
+      {entry.description && <p class="desc">{entry.description}</p>}
+      <p class="link">{entry.url}</p>
+    </div>
+  ))}
+</div>
+

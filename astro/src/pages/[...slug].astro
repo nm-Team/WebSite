@@ -1,0 +1,53 @@
+---
+import { defaultLocale } from '@/i18n/locales';
+import { routeManifest, type RouteEntry } from '@/i18n/routes';
+import PageContent from '@/components/pages/PageContent.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getProductDetail } from '@/data/products/loader';
+import { t } from '@/i18n/translate';
+
+export function getStaticPaths() {
+  return routeManifest
+    .filter((route) => route.supportedLocales.includes(defaultLocale))
+    .map((route) => ({
+      params: {
+        slug: route.slug.length === 0 ? undefined : route.slug.join('/'),
+      },
+      props: { route },
+    }));
+}
+
+interface Props {
+  route: RouteEntry;
+}
+
+const { route } = Astro.props as Props;
+
+let pageTitle: string | undefined;
+let pageTitleKey: string | undefined = route.pageTitle;
+
+if (route.kind === 'generic-product-page' && route.productSlug) {
+  const product = getProductDetail(defaultLocale, route.productSlug);
+  const categoryTitle = t(defaultLocale, 'products.title');
+  pageTitle = `${product.page.productName} - ${categoryTitle}`;
+  pageTitleKey = undefined;
+}
+---
+<BaseLayout
+  titleKey={pageTitleKey}
+  title={pageTitle}
+  keywordsKey={route.pageKeywords}
+  descriptionKey={route.pageDescription}
+  headCss={route.pageHeadCss}
+  headJs={route.pageHeadJs}
+  bodyJs={route.pageBodyJs}
+  image={route.pageImage}
+  pageUpdate={route.pageUpdate}
+  constTheme={route.id === 'products-overview-nmbot-telegram' ? 'dark' : undefined}
+  htmlData={route.id === 'products-overview-nmbot-telegram' ? { 'data-nmbot-page': 'true' } : undefined}
+  disallowHideHeader={route.id === 'products-overview-nmbot-telegram'}
+  lang={defaultLocale}
+  enableLanguageRedirect
+>
+  <PageContent route={route} locale={defaultLocale} />
+</BaseLayout>

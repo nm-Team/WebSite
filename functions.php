@@ -5,8 +5,10 @@ define("start_time", getmicrotime());
 define("languageList", array("zh_CN" => "中文（简体）", "zh_HK" => "中文（繁体）", "en_US" => "English", "ja_JP" => "日本語", "hu_MA" => "焱暒妏"));
 
 // 检查语言cookie
-if ($_GET['lan'] != '' && $_COOKIE['lang'] != 'auto') {
-    $lang = $_GET['lan'];
+$requestLang = $_GET['lan'] ?? '';
+$cookieLang = $_COOKIE['lang'] ?? null;
+if ($requestLang !== '' && $cookieLang !== 'auto') {
+    $lang = $requestLang;
 } else if (!isset($_COOKIE['lang']) || $_COOKIE['lang'] == 'auto') {
     preg_match('/^([a-z\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
     $lang = str_replace("-", "_", $matches[1], $lanUnderlineCount);
@@ -24,7 +26,7 @@ if (languageList[$lang] == null) {
 if (!array_key_exists($lang, languageList)) {
     $lang = 'en_US';
 }
-setcookie('lang', ($_COOKIE['lang'] == "auto" ? "auto" : $lang), time() + 999999999, '/');
+setcookie('lang', (($cookieLang ?? '') == "auto" ? "auto" : $lang), time() + 999999999, '/');
 
 i18nInit($lang);
 define("lang", $lang);
@@ -387,8 +389,12 @@ function t($id)
 {
     $search_para = explode(".", $id);
     foreach (lang_search_list as $key => $value) {
-        $searched_text = lang_json[$value];
+        $searched_text = lang_json[$value] ?? null;
         foreach ($search_para as $key2 => $value2) {
+            if (!is_array($searched_text) || !array_key_exists($value2, $searched_text)) {
+                $searched_text = null;
+                break;
+            }
             $searched_text = $searched_text[$value2];
         }
         if ($searched_text != null) {

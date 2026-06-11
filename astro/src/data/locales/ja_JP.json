@@ -1,0 +1,331 @@
+{
+    "about": {
+        "0": "「自律型nmロボット」であると主張するXYZ1024は、nmの優れた手です。誰かがSakuraFrpグループで話すとき、彼は常に「* nm」で応答します。次に例を示します。",
+        "1": "-AndroidでMacを使用する方法",
+        "2": "-nmを使用します",
+        "3": "このようにして、育てられたnmTeamの創設者であるagouは、nm軍に騙され、輝かしいnmの人物になりました。彼は「自律型nmロボット」という輝かしい称号を持ち、nmの輝かしい旗を掲げた結果、2020年5月29日の14:07にグループチャットから名誉を奪われました。",
+        "4": "nmTeamを作成することを決定したとき、「nm」の中国語の意味である「レモン」または「ナノ」を作成しました。",
+        "5": "nmTeamのメンバーは全員nmが得意なので、nm文化を引き継ぐことに自信を持っています。",
+        "6": "それでは、nmの可能性があるかどうかを見てみましょう。",
+        "7": "あなたがnmの心を持っている限り、nmTeamはいつでもあなたが参加することを歓迎します。 \nnmTeamへの参加を申し込むための条件の詳細については、このページにアクセスしてください。",
+        "8": "nmTeamに参加する方法を学ぶ>",
+        "description": "nmTeamの歴史と意味について学びます。",
+        "h0": "しかし、私たちはスローガンについてさえ考えませんでした。",
+        "h1": "nmという言葉がどのように由来するのか知りたいですか？",
+        "h2": "nmTeamにも参加しませんか？",
+        "title": "nmTeamについて"
+    },
+    "account": {
+        "click_to_log": "クリックしてログイン",
+        "loading": "読み込んでいます...",
+        "unable_to_load": "読み込みエラー"
+    },
+    "account_v2": {
+        "manage": "アカウントの管理"
+    },
+    "comes_soon": "このページは制作中ですので、お楽しみに！ ",
+    "cookie": {
+        "cookieConfirmDialog": {
+            "body": {
+                "0": "nmTeamのWebサイトとサービスは、Cookieを使用して基本的な訪問者情報とユーザーアカウント情報を保存します。",
+                "1": "すべてのCookieは、<ahref='/legal/privacy-policy'>nmTeamプライバシーポリシー</a>に従って管理されます。"
+            },
+            "button": {
+                "accept": "受け入れて続行します",
+                "customize": "カスタマイズ"
+            },
+            "header": "クッキーについて"
+        },
+        "cookiePage": {
+            "title": "クッキーについて"
+        }
+    },
+    "cookies": {
+        "cookies_off": "近い",
+        "cookies_on": "開ける",
+        "description": "nmTeam Web サイトの Cookie 設定を管理します。",
+        "necessary_cookies_description": "当社の Web サイト サービスを適切に提供するには、これらの Cookie が必要です。\n必要な Cookie を無効にすることはできません。",
+        "necessary_cookies_title": "必要なCookie",
+        "optional_cookies_description": "これらの Cookie を有効にすることで、より良いサービスを提供できるようになります。",
+        "optional_cookies_title": "オプションのクッキー",
+        "title": "Cookies"
+    },
+    "footer": {
+        "cr": "Copyright nmTeam。全著作権所有。",
+        "email": "E-mail: ",
+        "language": "言語の切り替え：",
+        "language_selector_button_aria_label": "。クリックして言語切り替えページを開きます。",
+        "sitemap": "サイトマップ",
+        "status": "サイトのステータス",
+        "svca": "サービス契約",
+        "svcb": "プライバシーポリシー",
+        "table": {
+            "about": {
+                "aboutUs": "nmTeamについて",
+                "accessibility": "アクセシビリティ",
+                "joinUs": "nmTeamに参加する",
+                "newsroom": "Newsroom (中国語と英語)",
+                "supportUs": "スポンサーnmTeam",
+                "title": "約"
+            },
+            "products": {
+                "library": "製品ライブラリ",
+                "nmBrowserStartPage": "nmBrowserスタートページ",
+                "nmChat": "nmChat",
+                "title": "製品"
+            },
+            "service": {
+                "accountCenter": "nmTeamアカウントセンター",
+                "support": "サポート",
+                "systemStatus": "システムステータス",
+                "title": "仕える"
+            }
+        }
+    },
+    "header": {
+        "about": "恐らく",
+        "account_box_aria_label": "アカウント管理",
+        "avatar_aria_label": "アバター",
+        "home": "ホームページ",
+        "nav_button_aria_label": "ページナビゲーションを開く",
+        "newsroom": "Newsroom",
+        "products": "製品",
+        "support": "待機する",
+        "title_button_aria_label": "nmチームのテキスト。ページのタイトル。クリックすると、Web サイトのトップページに戻ります。",
+        "title_icon_aria_label": "nmTeam レモンと「nm」の文字で構成されるチームアイコン。"
+    },
+    "index": {
+        "connect_para": "nmTeam について詳しく知るには、ソーシャル メディアとプラットフォームのアカウントをフォローしてください。",
+        "connect_us": "さらに詳しい公式情報",
+        "join_para": "あなたがnmの心を持っているなら、あなたは今私たちに参加するために申し込むことができます。",
+        "join_para_2": "nmTeamへの参加を申し込むための条件の詳細については、このページにアクセスしてください。",
+        "join_us": "nmTeamに参加する",
+        "join_us_link": "nmTeamに参加する方法を学ぶ",
+        "more_products": "すべての製品",
+        "newslist": "nmTeamニュース",
+        "newslist_date_aria_label": "記事の公開日",
+        "newslist_error": "ニュースの読み込みに問題がありました。",
+        "newslist_loading": "読み込み中...",
+        "newslist_more": "nmTeamニュースルーム",
+        "nmteam_about_link": "nmTeamについて",
+        "nmteam_is_this_a": "nmTeamは今、最高経営責任者（CEO）としてagouあり、そしてより多くのnmServicesが次々に発売されます。",
+        "nmteam_is_this_b": "nmTeamは破産する可能性がありますが、悪化することはありません。",
+        "retry": "リトライ",
+        "title": "",
+        "what_is_nmteam": "nmTeamとは何ですか？",
+        "what_we_does": "nmTeamはnmProductsを作成します",
+        "what_we_does_ans": "nmTeamは、nmProductsの作成に取り組んでいます。以下の当社の製品のいくつかをチェックしてください。"
+    },
+    "join": {
+        "join_register_page": {
+            "description": "nmTeamに参加し、nm文化を発展させ、nmエコロジーを私たちと一緒に構築してください。",
+            "tip": "申し訳ありませんが、nmTeamへの参加申し込みはまだ正式に開かれていません。2日後にもう一度確認してください。",
+            "title": "nmTeamへの参加を申し込む"
+        },
+        "join_requirement_page": {
+            "description": "nmTeamに参加し、nm文化を発展させ、nmエコロジーを私たちと一緒に構築してください。",
+            "intro": {
+                "0": "あなたは知っていますか？ \nnmTeamは、調和のとれたチームの雰囲気と無料の管理体制を備えています。",
+                "1": "nmTeamへの参加は、簡単で楽しいプロセスになります。あなたの才能は、最新の製品に大きく貢献します。また、あなただけの製品を作成することもできます。\nそして、あなたの努力は豊かに報われ、nmTeamへのあなたの貢献はまた、公的な認識と多くのボーナスを受け取ることができます; nmTeamに参加した後、あなたがあまり貢献しなくても、あなたは批判されません。\nだから、あなたのニッチを見つけて、今日nmTeamに参加してください！",
+                "2": ""
+            },
+            "jobs": {
+                "common": {
+                    "basic_morality": "nmTeamの創造的な環境とそのメンバーの基本的な倫理的要件が損なわれないようにするためのチームの責任の基本的な感覚を持っている",
+                    "basic_morality_intro": "特別な場合には、nmTeamメンバーは決して聖人ではないことを理解してください。いかなる場合でも寛容にしてください。受け入れられない場合でも、nmTeamサービスを破棄したりnmTeamデータファイルを破棄したりしないでください。",
+                    "friendly_wish": "他のメンバーとのコミュニケーションや友好的な交流や協力を希望することができる",
+                    "nm_heart": "nmの心を持っている",
+                    "nm_heart_intro": "nmの人として、あなたは常にいくつかのnmの原則を理解する必要があります。 \nnmという言葉についてどう思いますか？"
+                },
+                "developer": {
+                    "additional": "もちろん、Gitの使い方に堪能で、ウェブ開発やアプリ開発に精通しているnmの方のご参加をお待ちしておりますので、ぜひご登録ください。",
+                    "experience": "少なくとも基本的なソフトウェア開発の経験があるか、nmTeam開発に参加して自分自身を向上させたいと考えている",
+                    "experience_intro": "nmTeamに参加した後、nmTeamメンバーの成長を期待しているので、現在の開発レベルがnmTeamのニーズに合っているかどうかを心配する必要はありません。\n大胆になり、やる気のある心を保ち、あなたの進歩がnmTeamのすべての人にとって最大の幸せであることを確認してください。",
+                    "knowledge": "コンピュータの基礎知識",
+                    "title": "nmTeam開発"
+                },
+                "support": {
+                    "attitude": "nmTeamの顧客を良い態度で扱います",
+                    "attitude_intro": "nmTeamのお客様はいつも簡単な質問をするわけではありませんので、安心してユーザーの要望に応えていただければ幸いです。",
+                    "bill": "精神的損傷料金",
+                    "bill_intro": "カスタマーサービスに対処することは時々少し疲れることがあります。 \nnmTeamは、インセンティブとしてのサービスに基づいて、サービスチームメンバーにボーナスを与えることを検討します。",
+                    "part_time": "自由な時間をお楽しみください",
+                    "part_time_intro": "nmTeamでは、サービスに時間を割く必要はありません。気分を変えたいときにnmTeamユーザーが必要とするヘルプを確認してください。\n緊急サービスはnmTeam管理の直接の責任下にあり、心配する必要はありません。",
+                    "title": "顧客サポート"
+                },
+                "writer": {
+                    "english": "ある程度の外国語が望ましい",
+                    "knowledge": "nmTeamの製品機能と関連する計画を深く理解することで、nmTeamの価値を簡単な言葉で伝え、前向きなガイダンスをもたらすことができます",
+                    "lan_level": "基本的な文学的リテラシーを持ち、言語エラーや句読点エラーなしで明確なコピーを書くことができる",
+                    "lan_level_intro": "あなたが素晴らしい仕事をすることができるならば、私たちはあなたに感謝します、私たちに加わってください、そしてあなたはソファにしっかりと座ります。",
+                    "title": "手術"
+                }
+            },
+            "language_request": "当面は、中国語が流暢にコミュニケーションできるメンバーのみを募集します。",
+            "more": {
+                "already_been_member": {
+                    "panel": "nmTeamワークパネル（開発中）",
+                    "title": "すでにnmTeamメンバー"
+                },
+                "resources": {
+                    "nmteam_member_rules": "nmTeamメンバーの作業と管理の仕様（開発中）",
+                    "title": "関連情報"
+                }
+            },
+            "publicity": "nmTeamの参加ルールは発表されており、いつでも変更される可能性があります。\nメールでnmTeamにフィードバックを送ってください：support@nmteam.xyz",
+            "register": "参加する",
+            "title": "nmTeamへようこそ！"
+        }
+    },
+    "language": {
+        "page": {
+            "auto": "自動を選択",
+            "tip": "おなじみの言語でnmTeam Webサイトを参照してください。一部のコンテンツは、選択した言語で表示されない場合があります。",
+            "title": "言語の切り替え"
+        }
+    },
+    "legal": {
+        "description": "nmTeamの利用規約を表示します。",
+        "nsp": "インターネットサービス利用規約",
+        "pp": "プライバシーポリシー"
+    },
+    "page_update": "ページ更新日：{year} 年 {month} 月 {day} 日",
+    "pagebases": {
+        "official_website": "公式ウェブサイト",
+        "page_not_found": {
+            "home": "家",
+            "img_title": "404は、ページが見つからなかったことを意味します",
+            "title": "ページが見つかりません"
+        },
+        "site_intro": "nmTeamは、並外れた創造性で世界に向けて比類のないnm製品を作成します。"
+    },
+    "products": {
+        "description": "nmTeamの優れた製品をチェックしてください。",
+        "error": "何かがうまくいかなかった。",
+        "explain": "説明：お住まいの国で利用可能なnmTeam製品のみを表示してください。\n他の国で利用可能なnmTeam製品を表示するには、nmTeamWebサイトの言語を変更してください。",
+        "nmbot_telegram": {
+            "page_description": "Telegram で最も強力なグループ管理ボットの 1 つについて学びましょう。"
+        },
+        "noresult": "お住まいの国または地域で利用可能なnmTeam製品はありません。",
+        "notfound": "製品が見つかりません",
+        "target_detail_aria_label": "、詳細を確認する",
+        "target_in_aria_label": "、リンクを開く",
+        "target_out_aria_label": "、リンクを新しいウィンドウで開きます",
+        "target_turn_to_note": "脚注に移動",
+        "title": "製品",
+        "unavailable": "この製品は存在しないか、お住まいの国ではご利用いただけません。"
+    },
+    "questionnaire": {
+        "account": {
+            "description": "nmTeamのスタッフがあなたのアカウント情報を確認します。",
+            "error": "何か問題が発生し、ログインステータスを確認できませんでした。",
+            "title": "このフォームは{name}で送信されます"
+        },
+        "backstage": {
+            "analyze": {
+                "detail": "詳細",
+                "input_rate": "充填率",
+                "keyword": "キーワード",
+                "overview": "概要",
+                "percent": "パーセンテージ",
+                "result_num": "結果の数",
+                "time": "平均時間"
+            },
+            "data_type": {
+                "JSON": "JSON",
+                "analyze": "分析する",
+                "origin": "ソースデータ",
+                "preview": "ソースフォーム"
+            },
+            "gentime": "ページ生成時間：",
+            "link": "リンク",
+            "name": "形：",
+            "origin": {
+                "answer": "答え",
+                "id": "ID",
+                "ip": "IP",
+                "start_time": "充填開始時間",
+                "submit_time": "提出時間",
+                "time": "時間がかかる",
+                "uid": "UID"
+            },
+            "question_type": {
+                "chosen_answer": "オプション",
+                "input": "空欄を埋める",
+                "multiple": "複数の選択肢",
+                "must_answer": "必須",
+                "single": "単一の選択肢",
+                "textarea": "複数行入力"
+            },
+            "tip": {
+                "not_admin": "申し訳ありませんが、あなたはnmTeamの管理者ではなく、このページにアクセスする権限がありません。",
+                "not_found": "このフォームは見つかりませんでした。",
+                "not_log": "申し訳ありませんが、nmTeam管理者アカウントにログインしていません。"
+            },
+            "title": "nmTeamフォーム分析データ"
+        },
+        "description": "nmTeamフォームに記入します。",
+        "ended": "このフォームの受付は終了しました。",
+        "limit": "このフォームは、nmTeamアカウントにログインした後にのみ送信でき、各アカウントは最大{t}回送信できます。",
+        "log_require": "このフォームに入力するには、nmTeamアカウントにログインする必要があります。",
+        "multiple": "複数の選択肢",
+        "must_input": "これを完了してください。",
+        "result": {
+            "error_code": {
+                "EMPTY_ANSWER": "記入されていない必須の質問があります",
+                "LOG_VERIFY_ERROR": "ユーザーログインステータスの確認に失敗しました",
+                "REACH_ACCOUNY_LIMIT": "アカウントの提出数を超えました",
+                "REACH_IP_LIMIT": "このIPは頻繁に送信されます。しばらくしてからもう一度お試しください",
+                "SERVER_ERROR": "いくつかのサーバーエラーが発生しました"
+            },
+            "info_error": "フォーム<b>{name}</b>の送信に失敗しました。 \n<br> <br>エラーメッセージ：{エラー}。",
+            "info_success": "フォーム<b>{name}</b>が正常に送信されました。",
+            "title_error": "フォームの送信に失敗しました",
+            "title_success": "フォームが正常に送信されました"
+        },
+        "select_max_limit": "最大{n}個のアイテムを選択してください。",
+        "select_min_limit": "少なくとも{n}個のアイテムを選択してください。",
+        "select_num_limit": "{min}から{max}の項目を選択してください。",
+        "select_sin_limit": "{min}項目を選択してください。",
+        "submit": "参加する",
+        "title": "nmTeamフォーム"
+    },
+    "sitemap": {
+        "description": "nmTeamサイトマップをチェックして、お気に入りのnmTeamWebサイトページへの簡単な道順を確認してください。",
+        "title": "サイトマップ"
+    },
+    "skip_to_content": "コンテンツにスキップ",
+    "status_page": {
+        "description": "nmTeamの各サービスの動作ステータスを追跡します。",
+        "redirecting": "nmTeamシステムステータススタンドアロンページにリダイレクトしています...",
+        "title": "nmTeamシステムステータス"
+    },
+    "support": {
+        "description": "私たちがお手伝いします。\n\nnmTeam サポートにリダイレクトしています。お待ちください...",
+        "title": "nmTeamのサポート"
+    },
+    "supportus": {
+        "copy_crypto_address": "アドレスをコピーする",
+        "copy_crypto_address_success": "アドレスが正常にコピーされました",
+        "crypto": "暗号通貨",
+        "crypto_address": "暗号通貨アドレス",
+        "crypto_only_accept_tron": "TRON アセットの受信のみをサポートします",
+        "description": "私たちがさらに前進するのを助けるためにnmTeamを後援します。",
+        "links": {
+            "afdian": "愛の発電",
+            "patreon": "Patreon"
+        },
+        "para": "nmTeamは、その存在が人々に独自の価値をもたらすと信じています。<br>これに同意する場合は、nmTeamを後援して、さらに先に進むことができます。<br> nmTeamは、これらの寄付資金をFornmTeamに使用します。研究開発やオーバーヘッド、またはコーヒーを買うために。<br> nmTeamをどのようにサポートしても、心から感謝します。あなたのサポートにより、私たちはさらに一生懸命働きます。",
+        "sponsors_info_note": "上記のnmTeamスポンサーの名前とアバターは独自に設定されており、nmTeamとは関係ありません。<br>上記のスポンサーシップチャンネルはサードパーティのプラットフォームにリダイレクトされ、nmTeamはそのコンテンツについて責任を負いません。 ",
+        "table": {
+            "amount": "金額",
+            "avatar": "アバター",
+            "contribution": "貢献",
+            "name": "ニックネーム"
+        },
+        "title": "スポンサーnmTeam",
+        "tks_other": "他のnmTeamの貢献者に感謝します",
+        "tks_sponsor": "スポンサーに感謝します",
+        "tks_sponsor_part": "一部"
+    }
+}

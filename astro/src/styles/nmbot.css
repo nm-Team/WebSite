@@ -1,0 +1,713 @@
+html[data-nmbot-page="true"] {
+        font-size: min(0.25vw, 0.25vh, 1px);
+}
+
+.nmbot-telegram {
+        --intelligence-gradient-color-0: #fdff8a;
+        --intelligence-gradient-color-1: #FFEE7E;
+        --intelligence-gradient-color-2: #FFE645;
+        --intelligence-gradient-color-3: #EEE200;
+        --intelligence-gradient-color-4: #EBE239;
+        --intelligence-gradient-color-5: #FFB81F;
+        --intelligence-gradient-color-6: #E9CA00;
+        --intelligence-gradient-color-7: #FFD608;
+        --intelligence-gradient-color-8: #F5E800;
+    }
+
+    .nmbot-telegram {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -80rem;
+        background-color: #1a1a1a;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    .nmbot-telegram * {
+        font-family: "HarmonyOS Sans SC", "HarmonyOS Sans", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .nmbot-telegram .header {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: #000000;
+    }
+
+    .nmbot-telegram .header .background-image {
+        width: 100%;
+        height: 100vh;
+        background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro header background.png");
+        background-size: 175vh !important;
+        background-size: cover; background-position: center; background-repeat: no-repeat;
+    }
+
+    .nmbot-telegram .header .icon {
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(60vw, 30vh, 200rem);
+        height: min(60vw, 30vh, 200rem);
+        background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro header icon.png");
+        background-size: cover; background-position: center; background-repeat: no-repeat;
+    }
+
+    .nmbot-telegram .header .name {
+        position: absolute;
+        top: 72%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(60vw, 30vh, 200rem);
+        height: calc(min(60vw, 30vh, 200rem) * 0.285);
+        background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro header name.png");
+        background-size: cover; background-position: center; background-repeat: no-repeat;
+    }
+
+    .nmbot-telegram .header .description {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+        font-size: min(4vw, 4vh, 26rem);
+        padding: 20rem 0;
+        opacity: 0;
+    }
+
+    .nmbot-telegram .fade-in {
+        opacity: 0;
+    }
+
+    .nmbot-telegram .text-only-block {
+        width: 100%;
+        padding: 20rem 0;
+        text-align: center;
+    }
+
+    .nmbot-telegram .text-only-block-title {
+        width: calc(100% - 40rem);
+        max-width: 1200rem;
+        margin: 10rem auto;
+        line-height: 1.3;
+        font-size: 40rem;
+        font-weight: 500;
+    }
+
+    .nmbot-telegram .text-only-block-content {
+        max-width: 1200rem;
+        margin: 0 auto;
+        font-size: 20rem;
+        line-height: 1.5;
+        padding: 0 30rem;
+    }
+
+    .nmbot-telegram .text-only-block-links {
+        margin: 20rem 0;
+    }
+
+    .nmbot-telegram .text-only-block-links .link {
+        display: inline-block;
+        margin: 4px;
+        padding: 10rem 20rem;
+        background-color: #222222;
+        color: #ffffff !important;
+        font-size: 18rem;
+        font-weight: 500;
+        border-radius: 50rem;
+        text-decoration: none !important;
+        border: 2rem solid #ffffff;
+        transition: color 0.4s, background-color 0.4s;
+    }
+
+    .nmbot-telegram .text-only-block-links .link:hover,
+    .nmbot-telegram .text-only-block-links .link:focus-visible {
+        background-color: #ffffff;
+        color: #222222 !important;
+    }
+
+    .nmbot-telegram .feature-detail-block {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 1090rem;
+        margin: auto;
+        text-align: start;
+    }
+
+    .nmbot-telegram .feature-detail-block-item {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 20rem 0;
+    }
+
+    .nmbot-telegram .feature-detail-block-item .text {
+        width: 50%;
+        padding: 13rem 20rem 13rem 50rem;
+        flex-grow: 1;
+    }
+
+    .nmbot-telegram .feature-detail-block-item .text-title {
+        font-size: 22rem;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        line-height: 1.5;
+    }
+
+    .nmbot-telegram .feature-detail-block-item .text-content {
+        font-size: 19rem;
+        line-height: 1.7;
+    }
+
+    .nmbot-telegram .feature-detail-block-item .image {
+        width: 320rem;
+        height: 200rem;
+        margin-inline-start: 20rem;
+        margin-inline-end: 50rem;
+        flex-shrink: 0;
+        background-color: #333333;
+        border-radius: 15rem;
+        background-size: cover; background-position: center; background-repeat: no-repeat;
+    }
+
+    @media (min-width: 800px) {
+        .nmbot-telegram .feature-detail-block.larger-image .feature-detail-block-item .image {
+            width: 410rem;
+            height: calc(410rem * 0.625);
+            margin-inline-start: 12rem;
+            margin-inline-end: 22rem;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .nmbot-telegram .feature-detail-block-item {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin: 10rem 0;
+        }
+
+        .nmbot-telegram .feature-detail-block-item .text {
+            width: 80vw;
+            padding: 13rem 20rem 13rem 20rem;
+        }
+
+        .nmbot-telegram .feature-detail-block-item .text-title {
+            font-size: 18rem;
+            margin-bottom: 2rem;
+        }
+
+        .nmbot-telegram .feature-detail-block-item .text-content {
+            font-size: 16rem;
+        }
+
+        .nmbot-telegram .feature-detail-block-item .image {
+            width: 85vw;
+            height: calc(85vw * 0.625);
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+            margin-bottom: 10rem;
+        }
+    }
+
+    .nmbot-telegram .empty-space {
+        height: 100rem;
+    }
+
+    .nmbot-telegram .resources {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        max-width: 1090rem;
+        margin: auto;
+        text-align: center;
+    }
+
+    .nmbot-telegram .resource-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: calc(50% - 40rem);
+        padding: 20rem;
+        text-align: center;
+    }
+
+    @media (max-width: 800px) {
+        .nmbot-telegram .resource-item {
+            width: calc(100% - 40rem);
+        }
+    }
+
+    .nmbot-telegram .resource-item .image {
+        width: 240rem;
+        height: 150rem;
+        margin-bottom: 20rem;
+        background-color: #333333;
+        border-radius: 15rem;
+        background-size: cover; background-position: center; background-repeat: no-repeat;
+    }
+
+    .nmbot-telegram .resource-item .title {
+        /* overrides default */
+        background: none;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        overflow: initial;
+        font-size: 22rem;
+        font-weight: 500;
+        margin-bottom: 13rem;
+    }
+
+    .nmbot-telegram .resource-item .content {
+        font-size: 18rem;
+        line-height: 1.5;
+        margin-bottom: 10rem;
+    }
+
+    .nmbot-telegram .resource-item .link {
+        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nmbot-telegram .resource-item .link-a {
+        display: inline-block;
+        padding: 10rem 20rem;
+        background-color: #222222;
+        color: #ffffff !important;
+        font-size: 18rem;
+        font-weight: 500;
+        border-radius: 50rem;
+        text-decoration: none !important;
+        border: 2rem solid #ffffff;
+        transition: color 0.4s, background-color 0.4s;
+    }
+
+    .nmbot-telegram .resource-item .link-a:hover,
+    .nmbot-telegram .resource-item .link-a:focus-visible {
+        background-color: #ffffff;
+        color: #222222 !important;
+    }
+
+    .nmbot-telegram .footer-note-sup {
+        color: #999999 !important;
+    }
+
+    .nmbot-telegram .footer-notes {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: auto;
+        padding: 20rem 0;
+    }
+
+    .nmbot-telegram .footer-note {
+        color: #999999;
+        font-size: 14rem;
+        line-height: 1.5;
+        margin: 5rem 0;
+        text-align: start;
+    }
+
+    .nmbot-telegram .footer-note a {
+        color: #ffffff !important;
+    }
+
+    .nmbot-telegram nobr {
+        white-space: break-spaces;
+        display: inline-block;
+    }
+
+    .nmbot-telegram bs {
+        font-weight: bolder;
+    }
+
+    .nmbot-telegram sup {
+        display: inline-block;
+        margin-top: -9rem;
+        font-size: 11rem;
+    }
+
+    .nmbot-telegram nmbot-plus-icon {
+        width: 1em;
+        height: 1em;
+        background-image: url(https://websiteres.nmteam.xyz/nmBot/plus.svg);
+        background-size: cover;
+        display: inline-block;
+        margin: 0.2em 0.2em -0.2em 0.2em;
+        flex-shrink: 0;
+    }
+
+    .haloContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2000020;
+        pointer-events: none;
+    }
+
+    .haloIn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2000020;
+        pointer-events: none;
+        /* background-image set by js */
+        /* mask-image set by js */
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        opacity: 0;
+        transform: scale(1.04);
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .haloIn[data-show=true] {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .haloMask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2000020;
+        opacity: 0;
+    }
+
+.nmbot-telegram .panel-screenshot-image {
+            position: relative;
+            width: 100%;
+            /* for other phone's appearance animation */
+            height: 250vh;
+            overflow: hidden;
+        }
+
+        .nmbot-telegram .panel-screenshot-image .mobile {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nmbot-telegram .panel-screenshot-image .mobile .mobile-phone {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(80vw, 360px);
+            height: 0;
+            padding-top: calc(min(80vw, 360px) * 2);
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+        }
+
+        .nmbot-telegram .panel-screenshot-image .mobile .mobile-phone-left {
+            z-index: 1;
+            background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro panel iphone 2.png");
+        }
+
+        .nmbot-telegram .panel-screenshot-image .mobile .mobile-phone-center {
+            z-index: 2;
+            background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro panel iphone 1.png");
+        }
+
+        .nmbot-telegram .panel-screenshot-image .mobile .mobile-phone-right {
+            z-index: 1;
+            background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro panel iphone 3.png");
+        }
+
+.nmbot-telegram #intelligenceContainer {
+            width: 100%;
+            margin: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .nmbot-telegram .intelligence-image {
+            width: 100%;
+            height: 120rem;
+            margin-top: 50rem;
+            background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2//nmbot-intelligence.svg");
+            background-size: cover; background-position: center; background-repeat: no-repeat;;
+            background-size: contain;
+        }
+
+        .nmbot-telegram .intelligence-feature-header-image {
+            width: 90%;
+            max-width: 900rem;
+            height: 0;
+            padding-top: min(56.25%, calc(1000rem * 0.5625));
+            margin: 30rem auto 14rem auto;
+            border-radius: 18rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .nmbot-telegram .intelligence-gradient-text,
+        .nmbot-telegram igt {
+            font-weight: 500;
+            background: linear-gradient(90deg, var(--intelligence-gradient-color-5), var(--intelligence-gradient-color-7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: rgba(255, 187, 27, 0.29) 0px 0px 5px;
+        }
+
+.nmbot-telegram .nmbot-features-list {
+            width: 90vw;
+            max-width: 1200rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nmbot-telegram .nmbot-features-list .chat-type {
+            width: calc(100% - 20rem);
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .nmbot-telegram .nmbot-features-list .chat-type-button {
+            width: calc(100% / 3);
+            padding: 14rem 20rem;
+            background: none;
+            color: #ffffff;
+            font-size: 18rem;
+            font-weight: 300;
+            cursor: pointer;
+            border: none;
+            border-radius: 11px 11px 0 0;
+        }
+
+        .nmbot-telegram .nmbot-features-list .chat-type-button.active {
+            font-weight: 500;
+            background-color: #0e0e0e;
+        }
+
+        .nmbot-telegram .nmbot-features-list .features-lists {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            border-radius: 9rem 9rem 15rem 15rem;
+            background-color: #0e0e0e;
+        }
+
+        .nmbot-telegram .nmbot-features-list .features-list {
+            width: 100%;
+            padding: 10rem 0;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .nmbot-telegram .nmbot-features-list .features-list.active {
+            display: flex;
+        }
+
+        .nmbot-telegram .nmbot-features-list .feature {
+            display: flex;
+            width: calc(100% - 40rem);
+            padding: 6rem 20rem;
+            font-size: 18rem;
+            line-height: 1.5;
+            text-align: start;
+            font-weight: 400;
+        }
+
+        .nmbot-telegram .nmbot-features-list .feature::before {
+            content: "• ";
+            font-weight: 600;
+        }
+
+        .nmbot-telegram .nmbot-features-list .its-only-part {
+            width: calc(100% - 50rem);
+            padding: 6rem 20rem;
+            font-size: 15rem;
+            line-height: 1.5;
+            text-align: start;
+            font-weight: 300;
+            color: #999999;
+        }
+
+        @media (min-width: 1020px) {
+            .nmbot-telegram .nmbot-features-list .chat-type {
+                width: 100%;
+                background-color: #0e0e0e;
+                border-radius: 15rem 15rem 0 0;
+            }
+
+            .nmbot-telegram .nmbot-features-list .chat-type-button {
+                display: flex;
+                cursor: auto;
+                text-align: left;
+                font-size: 23rem;
+                font-weight: 500;
+            }
+
+            .nmbot-telegram .nmbot-features-list .chat-type-button::before {
+                content: "• ";
+                color: #00000000;
+                font-size: 18rem;
+            }
+
+            .nmbot-telegram .nmbot-features-list .features-lists {
+                width: 100%;
+                border-radius: 0 0 15rem 15rem;
+                display: flex;
+            }
+
+            .nmbot-telegram .nmbot-features-list .features-list {
+                display: flex;
+                padding: 4rem 0 10rem 0;
+            }
+        }
+
+.nmbot-telegram .usage-data-block {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            width: 100%;
+            max-width: 1090rem;
+            margin: auto;
+            text-align: center;
+        }
+
+        .nmbot-telegram .usage-data-block-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: calc(50% - 40rem);
+            padding: 20rem;
+            text-align: center;
+            transition: transform 0.4s, opacity 0.4s;
+        }
+
+        @media (max-width: 800px) {
+            .nmbot-telegram .usage-data-block-item {
+                width: calc(100% - 40rem);
+            }
+        }
+
+        .nmbot-telegram .usage-data-block-item .data {
+            /* overrides default */
+            background: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            color: inherit;
+            overflow: initial;
+            font-size: 80rem;
+            font-weight: 500;
+            margin-bottom: 13rem;
+        }
+
+        .nmbot-telegram .usage-data-block-item .text-title {
+            font-size: 18rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 10rem;
+        }
+
+html[data-nmbot-page="true"] .product-header {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 120%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(80vw);
+        height: 100%;
+        max-width: 990rem;
+        margin: auto;
+        transition: all 0.4s;
+    }
+
+    html[data-nmbot-page="true"] .product-header .product-name {
+        font-size: 20rem;
+        font-weight: 500;
+        color: var(--header-name);
+    }
+
+    html[data-nmbot-page="true"] .product-header .action-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    html[data-nmbot-page="true"] .product-header .action-button {
+        padding: 5rem 10rem !important;
+        margin-left: 5rem !important;
+        font-size: 14rem !important;
+        font-weight: 400 !important;
+        color: var(--header-a) !important;
+        border: none !important;
+        border-radius: 500rem !important;
+        cursor: pointer !important;
+        text-decoration: none !important;
+    }
+
+    html[data-nmbot-page="true"] .product-header .action-button.primary {
+        background-color: #ead050 !important;
+        color: #000000 !important;
+    }
+
+    html[data-nmbot-page="true"] #hcont #pageHeader {
+        overflow: hidden;
+    }
+
+    html[data-nmbot-page="true"] #hcont .header:not([open]) * {
+        transition: color 0.1s, visibility 0.1s 0.5s, opacity 0.1s, transform 0.4s !important;
+    }
+
+    html[data-nmbot-page="true"] #pageHeader .left[data-hide=true],
+    html[data-nmbot-page="true"] #pageHeader .right[data-hide=true] {
+        transform: translate(0, -120%);
+    }
+
+    html[data-nmbot-page="true"] #pageHeader .menu-toggle[data-hide=true] {
+        transform: translate(0, -150%);
+    }
+
+    html[data-nmbot-page="true"] .product-header[data-hide=false] {
+        transform: translate(-50%, 0%);
+    }

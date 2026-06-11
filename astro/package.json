@@ -1,0 +1,43 @@
+{
+  "name": "website-astro-migration",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.10.0",
+  "scripts": {
+    "sync:locales": "node scripts/sync-locales.mjs",
+    "dev": "astro dev",
+    "build": "pnpm sync:locales && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "lint": "eslint . --max-warnings=0 --ignore-pattern dist",
+    "baseline:php": "php -S 127.0.0.1:8080 src/test/php-router.php",
+    "baseline:astro": "astro preview --host 127.0.0.1 --port 4321",
+    "baseline:capture:js": "node src/test/scripts/capture-baselines.mjs js-enabled",
+    "baseline:capture:nojs": "node src/test/scripts/capture-baselines.mjs js-disabled",
+    "baseline:capture:js:auto": "node src/test/scripts/run-capture-with-servers.mjs js-enabled",
+    "baseline:capture:nojs:auto": "node src/test/scripts/run-capture-with-servers.mjs js-disabled",
+    "baseline:compare:js": "node src/test/scripts/compare-baselines.mjs js-enabled",
+    "baseline:compare:nojs": "node src/test/scripts/compare-baselines.mjs js-disabled"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.1.6",
+    "@eslint/js": "^9.39.4",
+    "@playwright/test": "^1.54.1",
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^8.43.0",
+    "astro": "^5.13.5",
+    "astro-eslint-parser": "^1.4.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-astro": "^1.7.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,17 @@
+---
+import { t } from '@/i18n/translate';
+import type { PageProps } from './PageProps';
+
+const { locale } = Astro.props as PageProps;
+---
+<div class="title center">
+  <h1>{t(locale, 'support.title')}</h1>
+</div>
+<div class="main">
+  <div class="mainBlock center widepadding">
+    {t(locale, 'support.description').split('\n').map((line) => <p>{line}</p>)}
+  </div>
+</div>
+<script is:inline>
+  window.location.href = "https://support.nmteam.xyz";
+</script>

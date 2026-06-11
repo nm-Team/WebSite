@@ -1,0 +1,18 @@
+---
+const targetPath = '/business-cooperation/';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${targetPath}`} />
+    <link rel="canonical" href={targetPath} />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <script is:inline define:vars={{ targetPath }}>
+      window.location.replace(targetPath);
+    </script>
+    <a href={targetPath}>Redirecting...</a>
+  </body>
+</html>
