@@ -25,9 +25,31 @@
 /products/index.php /products/ 301
 /:lang/products/index.php /:lang/products/ 301
 
+# Legacy page routes
+/aboutus.php /aboutus/ 301
+/:lang/aboutus.php /:lang/aboutus/ 301
+/cookies.php /cookies/ 301
+/:lang/cookies.php /:lang/cookies/ 301
+/language.php /language/ 301
+/:lang/language.php /:lang/language/ 301
+/sitemap.php /sitemap/ 301
+/:lang/sitemap.php /:lang/sitemap/ 301
+/supportus.php /supportus/ 301
+/:lang/supportus.php /:lang/supportus/ 301
+/legal/privacy-policy.php /legal/privacy-policy/ 301
+/:lang/legal/privacy-policy.php /:lang/legal/privacy-policy/ 301
+/legal/network-service-protocol.php /legal/network-service-protocol/ 301
+/:lang/legal/network-service-protocol.php /:lang/legal/network-service-protocol/ 301
+
+# Legacy custom flows
+/join/forum.php /questionnaire-ended/ 301
+/:lang/join/forum.php /:lang/questionnaire-ended/ 301
+/products/overview.php /products/overview/ 301
+/:lang/products/overview.php /:lang/products/overview/ 301
+/products/template/nmBot-Telegram.php /products/overview/nmBot-Telegram/ 301
+/:lang/products/template/nmBot-Telegram.php /:lang/products/overview/nmBot-Telegram/ 301
+
 # Generic legacy PHP fallback
-# NOTE: covers /products/overview.php?product=xxx → /products/overview/?product=xxx
-#       the redirect page at /products/overview/ then extracts ?product= and
-#       does a client-side redirect to /products/overview/xxx/
-/:lang/:path*.php /:lang/:path*/ 301
-/:path*.php /:path*/ 301
+# NOTE: Cloudflare splats must be referenced as :splat in destinations.
+/:lang/*.php /:lang/:splat/ 301
+/*.php /:splat/ 301
