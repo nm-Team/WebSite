@@ -1,5 +1,6 @@
 name: Telegram Bot
 on: push
+permissions: {}
 jobs:
   send_message:
     name: Send Message
