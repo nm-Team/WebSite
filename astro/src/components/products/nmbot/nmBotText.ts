@@ -69,7 +69,7 @@ export function getNmBotRecord(locale: PublicLocale, key: string): Record<string
 }
 
 export function nmBotAsset(path: string): string {
-  return `${nmBotAssetBaseUrl}${path}`;
+  return `${nmBotAssetBaseUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
 }
 
 export function renderNmBotText(locale: PublicLocale, key: string, context: NmBotTextContext): string {
