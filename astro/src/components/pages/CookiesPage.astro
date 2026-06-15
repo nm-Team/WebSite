@@ -38,12 +38,14 @@ const { locale } = Astro.props as PageProps;
   </div>
 </div>
 <script is:inline>
-  window.onload = $('.operationCookiesSwitchButton').change(function () {
-    if ($(this).prop('checked')) {
-      setCookie('operationCookies', 'true', 36500000);
-    } else {
-      setCookie('operationCookies', 'false', 36500000);
-    }
+  $(function () {
+    $('.operationCookiesSwitchButton').change(function () {
+      if ($(this).prop('checked')) {
+        setCookie('operationCookies', 'true', 36500000);
+      } else {
+        setCookie('operationCookies', 'false', 36500000);
+      }
+    });
   });
 </script>
 <script is:inline>
