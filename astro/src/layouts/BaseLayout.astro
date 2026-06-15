@@ -47,7 +47,7 @@ const htmlAttributes = {
   ...htmlData,
   ...(constTheme ? { 'data-theme': constTheme, 'data-theme-is-const': 'true' } : {}),
 };
-const clearLegacyLanParamScript = Astro.url.searchParams.has('lan') ? "changeURLParam('lan', '');" : '';
+const clearLegacyLanParamScript = Astro.url.searchParams.has('lan') ? "const url = new URL(window.location.href); url.searchParams.delete('lan'); window.history.replaceState({}, '', url.toString());" : '';
 ---
 <!doctype html>
 <html lang={lang} {...htmlAttributes}>
