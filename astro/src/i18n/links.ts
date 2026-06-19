@@ -1,4 +1,4 @@
-import { publicLocales, type PublicLocale } from '@/i18n/locales';
+import { type PublicLocale, publicLocales } from '@/i18n/locales';
 
 const localizableSchemes = /^(?:[a-z][a-z\d+.-]*:|\/\/)/i;
 

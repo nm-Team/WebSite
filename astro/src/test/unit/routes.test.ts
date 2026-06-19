@@ -14,18 +14,16 @@ describe('route manifest', () => {
     expect(toPrefixedPath('en', [])).toBe('/en/');
   });
 
-  it('contains phase-0 required metadata', () => {
+  it('contains required route metadata', () => {
     for (const route of routeManifest) {
       expect(route.id.length).toBeGreaterThan(0);
       expect(route.sourcePhpPath.endsWith('.php')).toBe(true);
-      expect(route.renderMode).toBe('static');
-      expect(route.expectedRedirect).toBe('root-may-redirect');
       expect(route.supportedLocales.length).toBeGreaterThan(0);
       expect(route.supportedLocales.every((locale) => publicLocales.includes(locale))).toBe(true);
     }
   });
 
-  it('covers phase-5 legacy routes', () => {
+  it('covers legacy PHP entry points', () => {
     const requiredSources = [
       '/index.php',
       '/join/index.php',
@@ -37,11 +35,11 @@ describe('route manifest', () => {
     expect(routeManifest.map((route) => route.sourcePhpPath)).toEqual(expect.arrayContaining(requiredSources));
   });
 
-  it('omits generic product detail locales when JSON data is unavailable', () => {
+  it('exposes generic product detail routes for every locale with data', () => {
     const startPage = routeManifest.find((route) => route.productSlug === 'nmBrowser-StartPage');
     const accessibility = routeManifest.find((route) => route.productSlug === 'product-accessibility');
 
-    expect(startPage?.supportedLocales).toEqual(['en', 'zh-CN', 'zh-HK', 'zh-x-mars']);
-    expect(accessibility?.supportedLocales).toEqual(['en', 'zh-CN', 'zh-HK', 'zh-x-mars']);
+    expect(startPage?.supportedLocales).toEqual(publicLocales);
+    expect(accessibility?.supportedLocales).toEqual(publicLocales);
   });
 });

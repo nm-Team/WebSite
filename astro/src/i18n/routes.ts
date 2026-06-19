@@ -18,8 +18,6 @@ export type RouteEntry = {
   pageImage?: string;
   pageUpdate?: string;
   supportedLocales: readonly PublicLocale[];
-  renderMode: 'static' | 'dynamic';
-  expectedRedirect: 'root-may-redirect' | 'prefixed-no-redirect';
 };
 
 export const routeManifest: RouteEntry[] = [
@@ -37,8 +35,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'aboutus',
@@ -54,8 +50,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '20240909',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'join',
@@ -71,8 +65,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '20240908',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'join-forum',
@@ -88,8 +80,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'questionnaire-ended',
@@ -105,8 +95,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'language',
@@ -122,8 +110,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'sitemap',
@@ -139,8 +125,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'cookies',
@@ -156,8 +140,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '20240908',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'business-cooperation',
@@ -173,8 +155,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '20241212',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'supportus',
@@ -190,8 +170,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: getSponsorData().update,
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'legal-privacy-policy',
@@ -207,8 +185,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '20220303',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'legal-network-service-protocol',
@@ -224,8 +200,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '20220303',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'support',
@@ -241,8 +215,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '20240718',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'status',
@@ -258,8 +230,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'products',
@@ -275,8 +245,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   {
     id: 'products-overview-redirect',
@@ -292,8 +260,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
   ...getGenericProductSlugs().map((productSlug): RouteEntry => ({
     id: `products-overview-${productSlug}`,
@@ -310,8 +276,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: '',
     pageUpdate: '',
     supportedLocales: getProductDetailLocales(productSlug),
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   })),
   {
     id: 'products-overview-nmbot-telegram',
@@ -328,8 +292,6 @@ export const routeManifest: RouteEntry[] = [
     pageImage: 'https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro seo image.png',
     pageUpdate: '',
     supportedLocales: publicLocales,
-    renderMode: 'static',
-    expectedRedirect: 'root-may-redirect',
   },
 ];
 

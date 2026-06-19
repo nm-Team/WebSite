@@ -6,5 +6,3 @@ playwright-report/
 test-results/
 *.log
 public/src/locales/*.json
-src/test/visual-baselines/*
-!src/test/visual-baselines/README.md

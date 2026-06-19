@@ -1,5 +1,5 @@
 {
-  "name": "website-astro-migration",
+  "name": "website-astro",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -13,15 +13,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "lint": "eslint . --max-warnings=0 --ignore-pattern dist",
-    "baseline:php": "php -S 127.0.0.1:8080 src/test/php-router.php",
-    "baseline:astro": "astro preview --host 127.0.0.1 --port 4321",
-    "baseline:capture:js": "node src/test/scripts/capture-baselines.mjs js-enabled",
-    "baseline:capture:nojs": "node src/test/scripts/capture-baselines.mjs js-disabled",
-    "baseline:capture:js:auto": "node src/test/scripts/run-capture-with-servers.mjs js-enabled",
-    "baseline:capture:nojs:auto": "node src/test/scripts/run-capture-with-servers.mjs js-disabled",
-    "baseline:compare:js": "node src/test/scripts/compare-baselines.mjs js-enabled",
-    "baseline:compare:nojs": "node src/test/scripts/compare-baselines.mjs js-disabled"
+    "lint": "eslint . --max-warnings=0 --ignore-pattern dist"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

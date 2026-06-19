@@ -4,7 +4,7 @@ function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-const phaseTwoRoutes = [
+const staticRoutes = [
   '/',
   '/aboutus/',
   '/join/',
@@ -16,12 +16,12 @@ const phaseTwoRoutes = [
   '/legal/network-service-protocol/',
 ];
 
-const phaseTwoJumpRoutes = [
+const jumpRoutes = [
   '/support/',
   '/status/',
 ];
 
-for (const route of phaseTwoRoutes) {
+for (const route of staticRoutes) {
   test(`unprefixed ${route} keeps English content without JavaScript`, async ({ browser }) => {
     const context = await browser.newContext({ javaScriptEnabled: false });
     const page = await context.newPage();
@@ -50,7 +50,7 @@ for (const route of phaseTwoRoutes) {
   });
 }
 
-for (const route of phaseTwoJumpRoutes) {
+for (const route of jumpRoutes) {
   test(`jump page ${route} keeps English fallback without JavaScript`, async ({ browser }) => {
     const context = await browser.newContext({ javaScriptEnabled: false });
     const page = await context.newPage();
@@ -116,32 +116,38 @@ test('join forum redirects to retired questionnaire notice page for unknown job 
   await expect(page).toHaveURL(/\/questionnaire-ended\/$/);
 });
 
-const phpRedirectCases = [
-  { from: '/aboutus.php', to: '/aboutus/' },
-  { from: '/products/template/nmBot-Telegram.php', to: '/products/template/nmBot-Telegram/' },
-  { from: '/zh-CN/legal/privacy-policy.php', to: '/zh-CN/legal/privacy-policy/' },
-  { from: '/zh-CN/products/index.php', to: '/zh-CN/products/' },
-  { from: '/business_cooperation.php', to: '/business-cooperation/' },
-  { from: '/zh-CN/business_cooperation.php', to: '/zh-CN/business-cooperation/' },
-];
+const deployedBaseUrl = process.env.PLAYWRIGHT_DEPLOYED_BASE_URL ?? '';
 
-for (const { from, to } of phpRedirectCases) {
-  test(`legacy php route ${from} redirects to ${to}`, async ({ page }) => {
-    await page.goto(from);
-    await expect(page).toHaveURL(new RegExp(`${escapeRegExp(to)}$`));
-  });
-}
+test.describe('deployed platform redirects', () => {
+  test.skip(!deployedBaseUrl, 'Set PLAYWRIGHT_DEPLOYED_BASE_URL to test Cloudflare redirect rules.');
 
-const phpExternalRedirectCases = [
-  { from: '/support/index.php', to: 'https://support.nmteam.xyz' },
-  { from: '/status.php', to: 'https://status.nmteam.xyz' },
-  { from: '/zh-CN/support/index.php', to: 'https://support.nmteam.xyz' },
-  { from: '/zh-CN/status.php', to: 'https://status.nmteam.xyz' },
-];
+  const phpRedirectCases = [
+    { from: '/aboutus.php', to: '/aboutus/' },
+    { from: '/products/template/nmBot-Telegram.php', to: '/products/template/nmBot-Telegram/' },
+    { from: '/zh-CN/legal/privacy-policy.php', to: '/zh-CN/legal/privacy-policy/' },
+    { from: '/zh-CN/products/index.php', to: '/zh-CN/products/' },
+    { from: '/business_cooperation.php', to: '/business-cooperation/' },
+    { from: '/zh-CN/business_cooperation.php', to: '/zh-CN/business-cooperation/' },
+  ];
 
-for (const { from, to } of phpExternalRedirectCases) {
-  test(`legacy php jump page ${from} redirects to ${to}`, async ({ page }) => {
-    await page.goto(from);
-    await expect(page).toHaveURL(new RegExp(`^${escapeRegExp(to)}`));
-  });
-}
+  for (const { from, to } of phpRedirectCases) {
+    test(`legacy php route ${from} redirects to ${to}`, async ({ page }) => {
+      await page.goto(new URL(from, deployedBaseUrl).toString());
+      await expect(page).toHaveURL(new RegExp(`${escapeRegExp(to)}$`));
+    });
+  }
+
+  const phpExternalRedirectCases = [
+    { from: '/support/index.php', to: 'https://support.nmteam.xyz' },
+    { from: '/status.php', to: 'https://status.nmteam.xyz' },
+    { from: '/zh-CN/support/index.php', to: 'https://support.nmteam.xyz' },
+    { from: '/zh-CN/status.php', to: 'https://status.nmteam.xyz' },
+  ];
+
+  for (const { from, to } of phpExternalRedirectCases) {
+    test(`legacy php jump page ${from} redirects to ${to}`, async ({ page }) => {
+      await page.goto(new URL(from, deployedBaseUrl).toString());
+      await expect(page).toHaveURL(new RegExp(`^${escapeRegExp(to)}`));
+    });
+  }
+});
