@@ -1,0 +1,32 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  contentFile: 'network-service-protocol.html' | 'privacy-policy.html';
+}
+
+const { contentFile } = Astro.props as Props;
+
+function readLegalBody(fileName: Props['contentFile']): string {
+  const legalDataRoot = path.resolve(process.cwd(), 'src', 'data', 'legal');
+  const filePath = path.resolve(legalDataRoot, fileName);
+
+  if (!filePath.startsWith(`${legalDataRoot}${path.sep}`)) {
+    throw new Error(`Refusing to read legal content outside ${legalDataRoot}.`);
+  }
+
+  return fs.readFileSync(filePath, 'utf8').trim();
+}
+
+const legalHtml = readLegalBody(contentFile);
+---
+<Fragment set:html={legalHtml} />
+<script is:inline>
+  document.querySelectorAll('#m [data-status]').forEach((element) => {
+    element.setAttribute('data-status', '');
+  });
+  document.querySelectorAll('#m [data-tab="chinese"]').forEach((element) => {
+    element.setAttribute('data-status', 'focus');
+  });
+</script>

@@ -35,7 +35,7 @@
         "cookieConfirmDialog": {
             "body": {
                 "0": "nmTeam 网站及服务使用 Cookie 存储访客的基本信息和用户的账号等信息。",
-                "1": "所有 Cookie 依照<a href='/legal/privacy-policy.php'>《nmTeam 隐私政策》</a>进行管理。"
+                "1": "所有 Cookie 依照<a href='/legal/privacy-policy'>《nmTeam 隐私政策》</a>进行管理。"
             },
             "button": {
                 "accept": "接受并继续",
@@ -455,6 +455,7 @@
             "title": "nmTeam 表单分析数据"
         },
         "description": "填写 nmTeam 表单。",
+        "ended": "当前表单已结束",
         "limit": "此表单需登录 nmTeam Account 后方可提交，且每账号可最多提交 {t} 次。",
         "log_require": "需要登录 nmTeam 账号才可以填写此表单。",
         "multiple": "多选",

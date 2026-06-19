@@ -1,0 +1,10 @@
+---
+interface Props {
+  imageUrl: string;
+  className?: string;
+  label?: string;
+}
+
+const { imageUrl, className = '', label = '' } = Astro.props;
+---
+<div class:list={['image', className]} style={`background-image: url("${imageUrl}");`} aria-label={label || undefined}></div>

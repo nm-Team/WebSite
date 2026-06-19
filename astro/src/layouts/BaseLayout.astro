@@ -1,0 +1,79 @@
+---
+import Footer from '@/components/layout/Footer.astro';
+import Header from '@/components/layout/Header.astro';
+import LanguageRedirect from '@/components/layout/LanguageRedirect.astro';
+import SEOHead from '@/components/layout/SEOHead.astro';
+import type { PublicLocale } from '@/i18n/locales';
+
+interface Props {
+  lang: PublicLocale;
+  title?: string;
+  titleKey?: string;
+  keywords?: string;
+  keywordsKey?: string;
+  description?: string;
+  descriptionKey?: string;
+  headCss?: readonly string[];
+  headJs?: readonly string[];
+  bodyJs?: readonly string[];
+  image?: string;
+  pageUpdate?: string;
+  constTheme?: string;
+  disallowHideHeader?: boolean;
+  enableLanguageRedirect?: boolean;
+  htmlData?: Record<string, string>;
+}
+
+const {
+  lang,
+  title,
+  titleKey,
+  keywords,
+  keywordsKey,
+  description,
+  descriptionKey,
+  headCss = [],
+  headJs = [],
+  bodyJs = [],
+  image,
+  pageUpdate = '',
+  constTheme,
+  disallowHideHeader = false,
+  enableLanguageRedirect = false,
+  htmlData = {},
+} = Astro.props;
+
+const htmlAttributes = {
+  ...htmlData,
+  ...(constTheme ? { 'data-theme': constTheme, 'data-theme-is-const': 'true' } : {}),
+};
+const clearLegacyLanParamScript = Astro.url.searchParams.has('lan') ? "const url = new URL(window.location.href); url.searchParams.delete('lan'); window.history.replaceState({}, '', url.toString());" : '';
+---
+<!doctype html>
+<html lang={lang} {...htmlAttributes}>
+  <head>
+    {enableLanguageRedirect && <LanguageRedirect />}
+    <SEOHead
+      locale={lang}
+      pageTitle={title}
+      pageTitleKey={titleKey}
+      pageKeywords={keywords}
+      pageKeywordsKey={keywordsKey}
+      pageDescription={description}
+      pageDescriptionKey={descriptionKey}
+      image={image}
+      currentUrl={Astro.url.href}
+      headCss={headCss}
+      headJs={headJs}
+    />
+  </head>
+  <body>
+    <Header locale={lang} disallowHideHeader={disallowHideHeader} />
+    <script is:inline src="/src/js/header.js"></script>
+    <script is:inline src="/src/js/jquery.min.js"></script>
+    <slot />
+    <Footer locale={lang} pageUpdate={pageUpdate} />
+    {bodyJs.map((src) => <script is:inline src={src}></script>)}
+    {clearLegacyLanParamScript && <script is:inline set:html={clearLegacyLanParamScript}></script>}
+  </body>
+</html>

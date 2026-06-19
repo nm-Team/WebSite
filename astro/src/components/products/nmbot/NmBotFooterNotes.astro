@@ -1,0 +1,20 @@
+---
+import { renderNmBotText, type NmBotTextContext } from './nmBotText';
+import type { PublicLocale } from '@/i18n/locales';
+
+interface Props {
+  locale: PublicLocale;
+  textContext: NmBotTextContext;
+}
+
+const { locale, textContext } = Astro.props;
+---
+<div class="footer-notes" data-testid="nmbot-footer-notes">
+  <div class="footer-note" set:html={renderNmBotText(locale, 'products.nmbot_telegram.footer_notes.0', textContext)} />
+  {textContext.footerNotes.map((note) => (
+    <div class="footer-note" id={`footer-note-${note.id}`}>
+      <a href={`#footer-note-sup-${note.id}`}>{note.id}.</a>
+      <Fragment set:html={` ${note.html}`} />
+    </div>
+  ))}
+</div>

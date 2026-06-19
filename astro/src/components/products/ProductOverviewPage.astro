@@ -1,0 +1,25 @@
+---
+import { getProductOverview } from '@/data/products/loader';
+import { renderProductOverviewCard } from '@/data/products/render';
+import type { PublicLocale } from '@/i18n/locales';
+import { toLocalizedHref } from '@/i18n/links';
+import { t } from '@/i18n/translate';
+
+interface Props {
+  locale: PublicLocale;
+}
+
+const { locale } = Astro.props;
+const overview = getProductOverview(locale);
+const href = (path: string) => toLocalizedHref(locale, path);
+---
+<div class="title center">
+  <h1><span>{t(locale, 'products.title')}</span></h1>
+</div>
+<div class="products-overview products-page" id="products_overview_inner">
+  {overview.products.length === 0 ? <div class="msg">{t(locale, 'products.noresult')}</div> : overview.products.map((product) => <Fragment set:html={renderProductOverviewCard(product, href)} />)}
+</div>
+<div class="products_footer">
+  <div id="products_footer_explain_by_javascript"></div>
+  <p>{t(locale, 'products.explain')}</p>
+</div>

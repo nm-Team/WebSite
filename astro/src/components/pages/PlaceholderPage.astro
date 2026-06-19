@@ -1,0 +1,9 @@
+---
+import type { PageProps } from './PageProps';
+
+const { route } = Astro.props as PageProps;
+const title = route.slug.length === 0 ? 'Home' : route.slug.join('/');
+---
+<main>
+  <center><h1>{title}</h1></center>
+</main>

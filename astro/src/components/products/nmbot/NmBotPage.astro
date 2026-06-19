@@ -1,0 +1,571 @@
+---
+import NmBotFeatureBlock from './NmBotFeatureBlock.astro';
+import NmBotFooterNotes from './NmBotFooterNotes.astro';
+import NmBotHero from './NmBotHero.astro';
+import NmBotIntelligenceSection from './NmBotIntelligenceSection.astro';
+import NmBotPanelSection from './NmBotPanelSection.astro';
+import NmBotResourceLinks from './NmBotResourceLinks.astro';
+import NmBotTextBlock from './NmBotTextBlock.astro';
+import { getNmBotRecord, renderNmBotText, renderNmBotTextValue, type NmBotTextContext } from './nmBotText';
+import '@/styles/nmbot.css';
+import type { PublicLocale } from '@/i18n/locales';
+import type { RouteEntry } from '@/i18n/routes';
+
+interface Props {
+  locale: PublicLocale;
+  route: RouteEntry;
+}
+
+const { locale } = Astro.props;
+const textContext: NmBotTextContext = { footerNotes: [] };
+const headerTextContext: NmBotTextContext = { footerNotes: [] };
+const chatTypes = ['group', 'channel', 'private'] as const;
+const usageData = [
+  ['14650', 'products.nmbot_telegram.usage.data.total_group_count'],
+  ['363566', 'products.nmbot_telegram.usage.data.mau'],
+  ['1088123', 'products.nmbot_telegram.usage.data.daily_message_count'],
+  ['32723', 'products.nmbot_telegram.usage.data.chat_admin_count'],
+] as const;
+
+const nmBotHeaderHTML = `
+  <div class="product-name">${renderNmBotText(locale, 'products.nmbot_telegram.header_name', headerTextContext)}</div>
+  <div class="action-buttons">
+    <a href="https://nmbot.nmnm.fun?ref=nmBotHeader" target="_blank" rel="noopener noreferrer" class="action-button">${renderNmBotText(locale, 'products.nmbot_telegram.go_to_panel', headerTextContext)}</a>
+    <a href="https://t.me/nmnmfunbot" target="_blank" rel="noopener noreferrer" class="action-button primary">${renderNmBotText(locale, 'products.nmbot_telegram.start_use', headerTextContext)}</a>
+  </div>
+`;
+
+const clientScript = `
+(() => {
+  function calcBackgroundPositionY() {
+    const background = document.querySelector(".nmbot-telegram .header .background-image");
+    const description = document.querySelector(".nmbot-telegram .header .description");
+    if (!background || !description) return;
+    const scrollY = window.scrollY;
+    background.style.backgroundPositionY = scrollY / 4 + "px";
+    description.style.opacity = (scrollY - window.innerHeight) / window.innerHeight + 1;
+    description.style.bottom = 0.05 * (scrollY - window.innerHeight) + 0.05 * window.innerHeight + "px";
+  }
+
+  function calcPanelScreenshotImage() {
+    const element = document.querySelector(".panel-screenshot-image");
+    const mobile = document.querySelector(".panel-screenshot-image .mobile");
+    const images = document.querySelectorAll(".panel-screenshot-image .mobile .mobile-phone");
+    if (!element || !mobile || images.length === 0) return;
+    const rect = element.getBoundingClientRect();
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const scrollPercent = (windowHeight - rect.top) / windowHeight;
+    const imageWidth = Math.min(windowWidth * 0.8, 360);
+    const imageHeight = imageWidth * 2;
+    const animationStartPercent = 0.9;
+    const animationEndPercent = 2.5;
+    let scaleTargetX = 1;
+    let scaleTargetY = 1;
+
+    if (windowWidth < imageWidth * 3) {
+      scaleTargetX = windowWidth / (imageWidth * 3);
+    }
+    if (windowHeight * 0.9 < imageHeight) {
+      scaleTargetY = windowHeight / imageHeight * 0.9;
+    }
+
+    if (scaleTargetY < 1) {
+      mobile.style.transform = "scale(" + scaleTargetY + ")";
+    } else {
+      mobile.style.transform = "scale(1)";
+    }
+
+    if (scrollPercent < animationStartPercent) {
+      mobile.style.position = "absolute";
+      mobile.style.top = "0";
+      mobile.style.bottom = "auto";
+      images.forEach((image) => {
+        if (!image.className.includes("mobile-phone-center")) {
+          image.style.opacity = "0";
+        }
+      });
+      return;
+    }
+
+    const animationPercent = Math.min(1, (scrollPercent - animationStartPercent) / (animationEndPercent - animationStartPercent));
+    const animationExtraPercent = Math.max(0, scrollPercent - animationEndPercent);
+    const scalePercent = scaleTargetX < scaleTargetY
+      ? scaleTargetY - (scaleTargetY - scaleTargetX) * animationPercent
+      : scaleTargetY;
+    mobile.style.transform = "scale(" + scalePercent + ")";
+
+    const targetOffset = imageWidth + 10;
+    const offset = targetOffset * animationPercent;
+    images.forEach((image) => {
+      image.style.opacity = "1";
+      if (image.className.includes("mobile-phone-left")) {
+        image.style.left = "calc(50% - " + offset + "px)";
+      } else if (image.className.includes("mobile-phone-right")) {
+        image.style.left = "calc(50% + " + offset + "px)";
+      }
+    });
+
+    if (animationPercent === 1) {
+      mobile.style.position = "absolute";
+      mobile.style.top = "auto";
+      mobile.style.bottom = "0";
+      if (scalePercent < 1 && animationExtraPercent > 0) {
+        let maxOffset = Math.max(0, (windowHeight - imageHeight * scalePercent) / 2 - 100);
+        if (maxOffset < 90) maxOffset = 0;
+        if (animationExtraPercent > maxOffset / windowHeight) {
+          mobile.style.position = "absolute";
+          mobile.style.top = "auto";
+          mobile.style.bottom = -maxOffset + "px";
+        } else {
+          mobile.style.position = "fixed";
+          mobile.style.top = Math.min(0.1 * windowHeight, maxOffset) + "px";
+        }
+      }
+    } else {
+      mobile.style.position = "fixed";
+      mobile.style.top = (1 - animationStartPercent) * 100 + "vh";
+      mobile.style.bottom = "auto";
+    }
+  }
+
+  function initFeaturesList() {
+    const chatTypeButtons = document.querySelectorAll(".nmbot-features-list .chat-type-button");
+    const featuresLists = document.querySelectorAll(".nmbot-features-list .features-list");
+    chatTypeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        chatTypeButtons.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+        featuresLists.forEach((list) => {
+          list.classList.toggle("active", list.getAttribute("data-chat-type") === button.getAttribute("data-chat-type"));
+        });
+        updateAllFadeIn();
+        renumberFooterNotesByVisualOrder();
+      });
+    });
+  }
+
+  function renumberFooterNotesByVisualOrder() {
+    const notesContainer = document.querySelector(".nmbot-telegram .footer-notes");
+    if (!notesContainer) return;
+
+    const allSupLinks = Array.from(document.querySelectorAll(".nmbot-telegram .footer-note-sup"))
+      .filter((item) => item instanceof HTMLAnchorElement);
+    const visibleSupLinks = allSupLinks.filter((item) => item.offsetParent !== null);
+    if (visibleSupLinks.length === 0) return;
+
+    const sortedVisibleSupLinks = visibleSupLinks
+      .slice()
+      .sort((a, b) => {
+        const rectA = a.getBoundingClientRect();
+        const rectB = b.getBoundingClientRect();
+        const topDiff = rectA.top - rectB.top;
+        if (Math.abs(topDiff) > 2) return topDiff;
+        return rectA.left - rectB.left;
+      });
+
+    const oldToNewId = new Map();
+    let nextId = 1;
+    sortedVisibleSupLinks.forEach((item) => {
+      const matched = item.id.match(/^footer-note-sup-(\\d+)$/);
+      if (!matched) return;
+      const oldId = Number(matched[1]);
+      if (!oldToNewId.has(oldId)) {
+        oldToNewId.set(oldId, nextId);
+        nextId += 1;
+      }
+    });
+
+    if (oldToNewId.size === 0) return;
+
+    allSupLinks.forEach((item) => {
+      const matched = item.id.match(/^footer-note-sup-(\\d+)$/);
+      if (!matched) return;
+      const oldId = Number(matched[1]);
+      const newId = oldToNewId.get(oldId);
+      if (!newId) return;
+      item.id = "footer-note-sup-" + newId;
+      item.href = "#footer-note-" + newId;
+      item.textContent = String(newId);
+    });
+
+    const footerNotes = Array.from(notesContainer.querySelectorAll(".footer-note[id^='footer-note-']"))
+      .filter((item) => item instanceof HTMLElement);
+    const mappedNotes = [];
+    footerNotes.forEach((item) => {
+      const matched = item.id.match(/^footer-note-(\\d+)$/);
+      if (!matched) return;
+      const oldId = Number(matched[1]);
+      const newId = oldToNewId.get(oldId);
+      if (!newId) {
+        item.style.display = "none";
+        return;
+      }
+      item.style.display = "";
+      item.id = "footer-note-" + newId;
+      const backLink = item.querySelector("a");
+      if (backLink) {
+        backLink.href = "#footer-note-sup-" + newId;
+        backLink.textContent = newId + ".";
+      }
+      mappedNotes.push({ item, newId });
+    });
+
+    mappedNotes.sort((a, b) => a.newId - b.newId).forEach((entry) => {
+      notesContainer.appendChild(entry.item);
+    });
+  }
+
+  const usageAnimationStatus = [];
+  document.querySelectorAll(".nmbot-telegram .usage-data-block-item").forEach(() => usageAnimationStatus.push(false));
+
+  function calcDataBlock() {
+    const dataBlocks = document.querySelectorAll(".nmbot-telegram .usage-data-block-item");
+    dataBlocks.forEach((block, index) => {
+      const dataElement = block.querySelector(".data");
+      const data = Number(dataElement?.getAttribute("data-data") || "0");
+      const rect = block.getBoundingClientRect();
+      const scrollPercent = (window.innerHeight - rect.top) / window.innerHeight;
+      if (scrollPercent > 0.4) {
+        if (usageAnimationStatus[index]) return;
+        if (dataElement) dataElement.innerText = "0";
+        block.style.opacity = "1";
+        block.style.transform = "translateY(0)";
+        const start = performance.now();
+        const duration = 1500;
+        usageAnimationStatus[index] = true;
+        const interval = window.setInterval(() => {
+          let percent = (performance.now() - start) / duration;
+          if (percent >= 1) {
+            percent = 1;
+            clearInterval(interval);
+            usageAnimationStatus[index] = "ended";
+          }
+          if (dataElement) dataElement.innerText = String(Math.floor(data * percent));
+        }, 10);
+      } else {
+        block.style.opacity = "0";
+        block.style.transform = "translateY(1rem)";
+        usageAnimationStatus[index] = false;
+      }
+    });
+  }
+
+  function calcFadeIn(element) {
+    const rect = element.getBoundingClientRect();
+    const scrollPercent = (window.innerHeight - rect.top) / window.innerHeight;
+    const maxTranslateY = 24;
+    if (scrollPercent > 0.06 && scrollPercent < 0.36) {
+      const animationPercent = (scrollPercent - 0.06) / 0.30;
+      element.style.opacity = animationPercent;
+      element.style.transform = "translateY(" + ((1 - animationPercent) * maxTranslateY) + "rem)";
+    } else if (scrollPercent >= 0.36) {
+      element.style.opacity = "1";
+      element.style.transform = "translateY(0em)";
+    } else {
+      element.style.opacity = "0";
+      element.style.transform = "translateY(" + maxTranslateY + "rem)";
+    }
+  }
+
+  const fadeIns = document.querySelectorAll(".fade-in");
+  function updateAllFadeIn() {
+    fadeIns.forEach((fadein) => calcFadeIn(fadein));
+  }
+
+  class HaloEffect {
+    constructor() {
+      this.haloGradient = "";
+      this.haloGradientSource = [];
+      this.haloMaskImage = "";
+      this.haloMaskImageRegenerateInProgress = false;
+      this.haloProps = {
+        imageSize: window.innerWidth >= 770 ? 50 : 20,
+        template: window.innerWidth >= 770 ? "0.2" : "0.4",
+      };
+      window.addEventListener("resize", () => {
+        this.haloProps.imageSize = window.innerWidth >= 770 ? 50 : 20;
+        this.haloProps.template = window.innerWidth >= 770 ? "0.2" : "0.4";
+        this.debounceGenerateHaloMask();
+      });
+    }
+
+    generateHaloGradient() {
+      if (!this.haloGradient) {
+        const colorCount = 9;
+        const colors = [];
+        for (let i = 0; i < colorCount; i += 1) colors.push("var(--intelligence-gradient-color-" + i + ")");
+        const randomColors = [];
+        for (let i = 0; i < Math.floor(Math.random() * 9) + 12; i += 1) {
+          randomColors.push(colors[Math.floor(Math.random() * colorCount)]);
+        }
+        const step = 100 / randomColors.length;
+        const gradientList = randomColors.map((color, index) => ({ color, start: index * step }));
+        let gradient = gradientList.map((item) => item.color + " " + item.start + "%").join(", ");
+        gradient += ", " + gradientList[0].color + " " + (100 + step) + "%";
+        this.haloGradientSource = gradientList;
+        this.haloGradient = "conic-gradient(" + gradient + ")";
+      } else {
+        const baseStep = Math.random() * 0.052 + 0.095;
+        const gradientList = this.haloGradientSource.map((item) => ({
+          color: item.color,
+          start: item.start - baseStep - (Math.random() - 0.5) * 0.095,
+        })).sort((a, b) => a.start - b.start);
+        let gradient = gradientList.map((item) => item.color + " " + item.start * 3.6 + "deg").join(", ");
+        gradient += ", " + gradientList[0].color + " " + (gradientList[0].start + 100) * 3.6 + "deg";
+        this.haloGradientSource = gradientList;
+        this.haloGradient = "repeating-conic-gradient(" + gradient + ")";
+      }
+      return this.haloGradient;
+    }
+
+    generateHaloMask() {
+      if (this.haloMaskImageRegenerateInProgress) return;
+      const canvas = document.getElementById("haloMask");
+      if (!(canvas instanceof HTMLCanvasElement)) return;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      this.haloMaskImageRegenerateInProgress = true;
+      canvas.width = canvas.clientWidth;
+      canvas.height = canvas.clientHeight;
+      const { width, height } = canvas;
+      ctx.clearRect(0, 0, width, height);
+      const radius = new Image();
+      radius.crossOrigin = "anonymous";
+      radius.src = "/products/nmbot-intelligence-halo/intelligence radius " + this.haloProps.template + ".png";
+      radius.onload = () => {
+        ctx.drawImage(radius, 0, 0, this.haloProps.imageSize, this.haloProps.imageSize);
+        ctx.save(); ctx.translate(width, 0); ctx.rotate(Math.PI / 2); ctx.drawImage(radius, 0, 0, this.haloProps.imageSize, this.haloProps.imageSize); ctx.restore();
+        ctx.save(); ctx.translate(width, height); ctx.rotate(Math.PI); ctx.drawImage(radius, 0, 0, this.haloProps.imageSize, this.haloProps.imageSize); ctx.restore();
+        ctx.save(); ctx.translate(0, height); ctx.rotate(Math.PI * 1.5); ctx.drawImage(radius, 0, 0, this.haloProps.imageSize, this.haloProps.imageSize); ctx.restore();
+        const side = new Image();
+        side.crossOrigin = "anonymous";
+        side.src = "/products/nmbot-intelligence-halo/intelligence line " + this.haloProps.template + ".png";
+        side.onload = () => {
+          ctx.drawImage(side, 0, this.haloProps.imageSize, this.haloProps.imageSize, height - this.haloProps.imageSize * 2);
+          ctx.save(); ctx.translate(width, 0); ctx.rotate(Math.PI / 2); ctx.drawImage(side, 0, this.haloProps.imageSize, this.haloProps.imageSize, width - this.haloProps.imageSize * 2); ctx.restore();
+          ctx.save(); ctx.translate(width, height); ctx.rotate(Math.PI); ctx.drawImage(side, 0, this.haloProps.imageSize, this.haloProps.imageSize, height - this.haloProps.imageSize * 2); ctx.restore();
+          ctx.save(); ctx.translate(0, height); ctx.rotate(Math.PI * 1.5); ctx.drawImage(side, 0, this.haloProps.imageSize, this.haloProps.imageSize, width - this.haloProps.imageSize * 2); ctx.restore();
+          this.haloMaskImage = "url(" + canvas.toDataURL("image/png") + ")";
+          this.haloMaskImageRegenerateInProgress = false;
+        };
+      };
+    }
+
+    start() {
+      this.generateHaloGradient();
+      this.generateHaloMask();
+      setInterval(() => {
+        this.generateHaloGradient();
+        const halo = document.querySelector(".haloIn");
+        if (halo) halo.style.backgroundImage = this.haloGradient;
+      }, 50);
+      window.addEventListener("resize", () => this.debounceGenerateHaloMask());
+    }
+
+    debounceGenerateHaloMask() {
+      this.haloMaskImageRegenerateInProgress = true;
+      clearTimeout(this.resizeTimeout);
+      this.resizeTimeout = setTimeout(() => {
+        this.haloMaskImageRegenerateInProgress = false;
+        this.generateHaloMask();
+      }, 700);
+    }
+  }
+
+  function initHalo() {
+    const haloIn = document.querySelector(".haloIn");
+    const intelligenceContainer = document.getElementById("intelligenceContainer");
+    if (!haloIn || !intelligenceContainer) return;
+    const haloEffect = new HaloEffect();
+    haloEffect.start();
+    setInterval(() => {
+      haloIn.style.backgroundImage = haloEffect.haloGradient;
+      haloIn.style.maskImage = haloEffect.haloMaskImage;
+      haloIn.style.webkitMaskImage = haloEffect.haloMaskImage;
+      const rect = intelligenceContainer.getBoundingClientRect();
+      const visible = rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2 && !haloEffect.haloMaskImageRegenerateInProgress;
+      haloIn.setAttribute("data-show", visible ? "true" : "false");
+      document.documentElement.setAttribute("data-theme", rect.top < 25 && rect.bottom > 25 ? "default" : "dark");
+    }, 50);
+  }
+
+  function initProductHeader() {
+    const pageHeader = document.querySelector("#pageHeader");
+    if (!pageHeader || pageHeader.querySelector(".product-header")) return;
+    const header = document.createElement("div");
+    header.className = "product-header";
+    header.innerHTML = ${JSON.stringify(nmBotHeaderHTML)};
+    pageHeader.appendChild(header);
+    let lastScrollTop;
+    function calcPageHeader() {
+      const pageHeaders = document.querySelectorAll("#pageHeader .left, #pageHeader .right, #pageHeader .menu-toggle");
+      const nmBotHeader = document.querySelector(".product-header");
+      if (!nmBotHeader) return;
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollPercent = scrollTop / window.innerHeight;
+      if (scrollPercent > 1 && (!lastScrollTop || scrollTop - lastScrollTop > 1)) {
+        pageHeaders.forEach((item) => item.setAttribute("data-hide", "true"));
+        nmBotHeader.setAttribute("data-hide", "false");
+      } else if (scrollPercent < 1 || (lastScrollTop && scrollTop - lastScrollTop < -1)) {
+        pageHeaders.forEach((item) => item.setAttribute("data-hide", "false"));
+        nmBotHeader.setAttribute("data-hide", "true");
+      }
+      lastScrollTop = scrollTop;
+    }
+    window.addEventListener("scroll", calcPageHeader);
+    window.addEventListener("resize", calcPageHeader);
+    calcPageHeader();
+  }
+
+  window.addEventListener("scroll", calcBackgroundPositionY);
+  window.addEventListener("resize", calcBackgroundPositionY);
+  window.addEventListener("scroll", calcPanelScreenshotImage);
+  window.addEventListener("resize", calcPanelScreenshotImage);
+  window.addEventListener("scroll", calcDataBlock);
+  window.addEventListener("resize", calcDataBlock);
+  window.addEventListener("resize", renumberFooterNotesByVisualOrder);
+  fadeIns.forEach((fadein) => {
+    window.addEventListener("scroll", () => calcFadeIn(fadein));
+    window.addEventListener("resize", () => calcFadeIn(fadein));
+  });
+
+  initFeaturesList();
+  initHalo();
+  initProductHeader();
+  calcBackgroundPositionY();
+  calcPanelScreenshotImage();
+  calcDataBlock();
+  updateAllFadeIn();
+  renumberFooterNotesByVisualOrder();
+})();
+`;
+---
+<div class="nmbot-telegram">
+  <div class="haloContainer">
+    <div class="haloIn" data-show="false"></div>
+    <canvas id="haloMask" class="haloMask"></canvas>
+  </div>
+
+  <NmBotHero locale={locale} textContext={textContext} />
+
+  <NmBotTextBlock
+    locale={locale}
+    textContext={textContext}
+    titleKey="products.nmbot_telegram.first_intro.title"
+    contentKeys={['products.nmbot_telegram.first_intro.content_1']}
+    links={[
+      { href: 'https://t.me/nmnmfunbot', labelKey: 'products.nmbot_telegram.start_use' },
+      { href: 'https://nmbot.nmnm.fun?ref=nmBotIntro', labelKey: 'products.nmbot_telegram.go_to_panel' },
+    ]}
+  />
+
+  <div class="empty-space"></div>
+  <NmBotPanelSection locale={locale} textContext={textContext} />
+
+  <div class="empty-space"></div>
+  <NmBotIntelligenceSection locale={locale} textContext={textContext} />
+
+  <div class="empty-space"></div>
+  <NmBotTextBlock
+    locale={locale}
+    textContext={textContext}
+    titleKey="products.nmbot_telegram.features.title"
+    contentKeys={['products.nmbot_telegram.features.content_1']}
+  />
+  <div class="nmbot-features-list fade-in">
+    <div class="chat-type">
+      {chatTypes.map((chatType) => (
+        <button class:list={['chat-type-button', { active: chatType === 'group' }]} data-chat-type={chatType} set:html={renderNmBotText(locale, `products.nmbot_telegram.features.${chatType}`, textContext)} />
+      ))}
+    </div>
+    <div class="features-lists">
+      {chatTypes.map((chatType) => (
+        <div class:list={['features-list', { active: chatType === 'group' }]} data-chat-type={chatType}>
+          {Object.values(getNmBotRecord(locale, `products.nmbot_telegram.features.${chatType}_features`)).map((feature) => {
+            const isPlusFeature = feature.startsWith('p_');
+            const text = isPlusFeature ? feature.slice(2) : feature;
+            return (
+              <div class="feature">
+                {isPlusFeature && <nmbot-plus-icon aria-label={renderNmBotText(locale, 'products.nmbot_telegram.features.nmbot_plus', textContext)}></nmbot-plus-icon>}
+                <Fragment set:html={renderNmBotTextValue(text, textContext)} />
+              </div>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+    <div class="its-only-part" set:html={renderNmBotText(locale, 'products.nmbot_telegram.features.its_only_part', textContext)} />
+  </div>
+
+  <NmBotTextBlock
+    locale={locale}
+    textContext={textContext}
+    titleKey="products.nmbot_telegram.features.special.title"
+    contentKeys={['products.nmbot_telegram.features.special.content_0']}
+  />
+  <NmBotFeatureBlock
+    locale={locale}
+    textContext={textContext}
+    features={[1, 2, 3, 4, 5].map((index) => ({
+      titleKey: `products.nmbot_telegram.features.special.feature_${index}.title`,
+      contentKey: `products.nmbot_telegram.features.special.feature_${index}.content`,
+      image: getNmBotRecord(locale, `products.nmbot_telegram.features.special.feature_${index}`).image,
+    }))}
+  />
+
+  <NmBotTextBlock
+    locale={locale}
+    textContext={textContext}
+    titleKey="products.nmbot_telegram.nmbot_plus.title"
+    contentKeys={['products.nmbot_telegram.nmbot_plus.content_0']}
+    className="nmbot-plus-heading"
+  />
+  <NmBotFeatureBlock
+    locale={locale}
+    textContext={textContext}
+    largerImage
+    features={[1, 2, 3, 4, 5].map((index) => ({
+      titleKey: `products.nmbot_telegram.nmbot_plus.feature_${index}.title`,
+      contentKey: `products.nmbot_telegram.nmbot_plus.feature_${index}.content`,
+      image: getNmBotRecord(locale, `products.nmbot_telegram.nmbot_plus.feature_${index}`).image,
+    }))}
+  />
+  <NmBotTextBlock
+    locale={locale}
+    textContext={textContext}
+    links={[{ href: 'https://support.nmteam.xyz/nmbot-telegram/plus/benefits/', labelKey: 'products.nmbot_telegram.nmbot_plus.view_full_benefits' }]}
+  />
+
+  <div class="empty-space"></div>
+  <NmBotTextBlock
+    locale={locale}
+    textContext={textContext}
+    titleKey="products.nmbot_telegram.usage.title"
+    contentKeys={['products.nmbot_telegram.usage.content_0']}
+  />
+  <div class="usage-data-block">
+    {usageData.map(([value, labelKey]) => (
+      <div class="usage-data-block-item">
+        <div class="text">
+          <div class="data" data-data={value}>0</div>
+          <div class="text-title" set:html={renderNmBotText(locale, labelKey, textContext)} />
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="empty-space"></div>
+  <NmBotTextBlock
+    locale={locale}
+    textContext={textContext}
+    titleKey="products.nmbot_telegram.resources.title"
+    contentKeys={['products.nmbot_telegram.resources.content_0']}
+  />
+  <NmBotResourceLinks locale={locale} textContext={textContext} />
+
+  <div class="empty-space"></div>
+  <NmBotFooterNotes locale={locale} textContext={textContext} />
+</div>
+
+<script is:inline set:html={clientScript}></script>

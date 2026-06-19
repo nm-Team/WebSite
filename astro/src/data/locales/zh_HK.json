@@ -35,7 +35,7 @@
         "cookieConfirmDialog": {
             "body": {
                 "0": "nmTeam 網站及服務使用 Cookie 存儲訪客的基本信息和用戶的賬號等信息。",
-                "1": "所有 Cookie 依照<a href='/legal/privacy-policy.php'>《nmTeam 隱私政策》</a>進行管理。"
+                "1": "所有 Cookie 依照<a href='/legal/privacy-policy'>《nmTeam 隱私政策》</a>進行管理。"
             },
             "button": {
                 "accept": "接受並繼續",
@@ -345,7 +345,7 @@
                     "image": "website intro plus feature 5.png",
                     "title": "更多權益"
                 },
-                "title": "<nmbot-plus-icon></nmbot-plus-icon>nmBot+，<nobr>，</nobr><br>超優惠|進階服務。",
+                "title": "nmBot+，<nobr>，</nobr><br>超優惠|進階服務。",
                 "view_full_benefits": "進一步了解 nmBot+ 權益"
             },
             "page_description": "了解 Telegram 上功能最強大的群組管理機器人之一。\nnmBot 搭載眾多群組和頻道管理功能，並透過各種娛樂功能為群組帶來新體驗，已獲得上萬群組的信賴。",
@@ -455,6 +455,7 @@
             "title": "nmTeam 表單分析數據"
         },
         "description": "填寫 nmTeam 表單。",
+        "ended": "當前表單已結束",
         "limit": "此表單需登錄 nmTeam Account 後方可提交，且每賬號可最多提交 {t} 次。",
         "log_require": "需要登錄 nmTeam 賬號才可以填寫此表單。",
         "multiple": "多選",

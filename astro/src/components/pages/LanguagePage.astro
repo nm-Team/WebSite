@@ -1,0 +1,76 @@
+---
+import { legacyLocaleNames, localeDataMap, publicLocales } from '@/i18n/locales';
+import { toLocalizedHref } from '@/i18n/links';
+import { t } from '@/i18n/translate';
+import type { PageProps } from './PageProps';
+
+const { locale } = Astro.props as PageProps;
+const fallbackPath = toLocalizedHref(locale, '/');
+const localeList = [...publicLocales];
+---
+<div class="title largepadding">
+  <h1>{t(locale, 'language.page.title')}</h1>
+</div>
+<div class="main mainBlock">
+  <div id="lanList">
+    <button class="selection" data-lanid="auto" data-active="false" title={t(locale, 'language.page.auto')}>{t(locale, 'language.page.auto')}</button>
+    {publicLocales.map((publicLocale) => (
+      <button
+        class="selection"
+        data-lanid={publicLocale}
+        data-active={publicLocale === locale ? 'true' : 'false'}
+        title={legacyLocaleNames[localeDataMap[publicLocale]]}
+      >
+        {legacyLocaleNames[localeDataMap[publicLocale]]}
+      </button>
+    ))}
+  </div>
+  <p>{t(locale, 'language.page.tip')}</p>
+</div>
+<script is:inline define:vars={{ fallbackPath, localeList }}>
+  (() => {
+    const locales = localeList;
+    const params = new URLSearchParams(window.location.search);
+    const backCallURL = params.get("bks");
+    const isSafeBackUrl = (value) => {
+      if (!value) {
+        return false;
+      }
+      try {
+        const url = new URL(value, window.location.origin);
+        return url.origin === window.location.origin;
+      } catch {
+        return false;
+      }
+    };
+    const removeLocalePrefix = (pathname) => {
+      const segments = pathname.split("/").filter(Boolean);
+      if (!locales.includes(segments[0])) {
+        return pathname || "/";
+      }
+
+      const unprefixedSegments = segments.slice(1);
+      return unprefixedSegments.length === 0 ? "/" : `/${unprefixedSegments.join("/")}/`;
+    };
+    const buildBackUrl = (lang) => {
+      const fallback = new URL(fallbackPath, window.location.origin);
+      const original = isSafeBackUrl(backCallURL) ? new URL(backCallURL, window.location.origin) : fallback;
+      const unprefixedPath = removeLocalePrefix(original.pathname);
+
+      if (lang === "auto") {
+        return `${unprefixedPath}${original.search}${original.hash}`;
+      }
+
+      const localizedPath = unprefixedPath === "/" ? `/${lang}/` : `/${lang}${unprefixedPath}`;
+      return `${localizedPath}${original.search}${original.hash}`;
+    };
+
+    document.querySelectorAll("#lanList .selection").forEach((selection) => {
+      selection.addEventListener("click", () => {
+        const lang = selection.getAttribute("data-lanid") || "auto";
+        document.cookie = `lang=${encodeURIComponent(lang)};path=/;max-age=99999999999`;
+        window.location.href = buildBackUrl(lang);
+      });
+    });
+  })();
+</script>

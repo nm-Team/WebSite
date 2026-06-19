@@ -1,0 +1,35 @@
+---
+import { renderNmBotText, type NmBotTextContext } from './nmBotText';
+import type { PublicLocale } from '@/i18n/locales';
+
+interface LinkItem {
+  href: string;
+  labelKey: string;
+}
+
+interface Props {
+  locale: PublicLocale;
+  textContext: NmBotTextContext;
+  titleKey?: string;
+  contentKeys?: readonly string[];
+  links?: readonly LinkItem[];
+  className?: string;
+}
+
+const { locale, textContext, titleKey, contentKeys = [], links = [], className = '' } = Astro.props;
+---
+<div class:list={['text-only-block', 'fade-in', className]}>
+  {titleKey && <div class="text-only-block-title" set:html={renderNmBotText(locale, titleKey, textContext)} />}
+  {contentKeys.length > 0 && (
+    <div class="text-only-block-content">
+      {contentKeys.map((key) => <p set:html={renderNmBotText(locale, key, textContext)} />)}
+    </div>
+  )}
+  {links.length > 0 && (
+    <div class="text-only-block-links">
+      {links.map((link) => (
+        <a href={link.href} target="_blank" rel="noopener noreferrer" class="link" set:html={renderNmBotText(locale, link.labelKey, textContext)} />
+      ))}
+    </div>
+  )}
+</div>
