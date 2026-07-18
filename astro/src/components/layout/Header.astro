@@ -6,9 +6,10 @@ import { t } from '@/i18n/translate';
 interface Props {
   locale: PublicLocale;
   disallowHideHeader?: boolean;
+  hideHeaderTitle?: boolean;
 }
 
-const { locale, disallowHideHeader = false } = Astro.props;
+const { locale, disallowHideHeader = false, hideHeaderTitle = false } = Astro.props;
 const disallowHideHeaderScript = `disallowHideHeader = ${disallowHideHeader ? 'true' : 'false'};`;
 const href = (path: string) => toLocalizedHref(locale, path);
 ---
@@ -18,7 +19,7 @@ const href = (path: string) => toLocalizedHref(locale, path);
 </a>
 <div id="hcont">
   <div class="placeHolder"></div>
-  <div class="header hidden" id="pageHeader">
+  <div class:list={['header', 'hidden', { hidetitle: hideHeaderTitle }]} id="pageHeader">
     <a class="left" href={href('/')} aria-label={t(locale, 'header.title_button_aria_label')}>
       <i class="logo" aria-label={t(locale, 'header.title_icon_aria_label')}></i>
       <p class="name">nmTeam</p>

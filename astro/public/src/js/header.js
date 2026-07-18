@@ -5,9 +5,10 @@ enableAccount = true;
 window.onscroll = function () { setHeader(); };
 setHeader();
 function setHeader() {
+	// Only toggle "hidden" so page-specific classes like "hidetitle" survive.
 	if (window.scrollY < 80 && disallowHideHeader !== true)
-		document.getElementById("pageHeader").className = "header hidden";
-	else document.getElementById("pageHeader").className = "header ";
+		document.getElementById("pageHeader").classList.add("hidden");
+	else document.getElementById("pageHeader").classList.remove("hidden");
 }
 
 // 登录账户

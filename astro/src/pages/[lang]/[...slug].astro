@@ -53,6 +53,7 @@ if (route.kind === 'generic-product-page' && route.productSlug) {
   constTheme={route.id === 'products-overview-nmbot-telegram' ? 'dark' : undefined}
   htmlData={route.id === 'products-overview-nmbot-telegram' ? { 'data-nmbot-page': 'true' } : undefined}
   disallowHideHeader={route.id === 'products-overview-nmbot-telegram'}
+  hideHeaderTitle={route.id === 'home'}
   lang={currentLocale}
 >
   <PageContent route={route} locale={currentLocale} />
