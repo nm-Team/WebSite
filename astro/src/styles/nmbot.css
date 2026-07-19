@@ -648,17 +648,31 @@ html[data-nmbot-page="true"] {
 html[data-nmbot-page="true"] .product-header {
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translate(-50%, 120%);
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        transform: translate(0, 120%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        box-sizing: border-box;
+        transition: transform 0.4s;
+        pointer-events: none;
+    }
+
+    html[data-nmbot-page="true"] .product-header .product-header-inner {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: calc(80vw);
-        height: 100%;
+        width: 100%;
         max-width: 990rem;
-        margin: auto;
-        transition: all 0.4s;
+    }
+
+    html[data-nmbot-page="true"] .product-header[data-hide=false] {
+        pointer-events: auto;
     }
 
     html[data-nmbot-page="true"] .product-header .product-name {
@@ -695,19 +709,20 @@ html[data-nmbot-page="true"] .product-header {
         overflow: hidden;
     }
 
-    html[data-nmbot-page="true"] #hcont .header:not([open]) * {
-        transition: color 0.1s, visibility 0.1s 0.5s, opacity 0.1s, transform 0.4s !important;
+    html[data-nmbot-page="true"] #hcont .header:not([open]) .left,
+    html[data-nmbot-page="true"] #hcont .header:not([open]) .right,
+    html[data-nmbot-page="true"] #hcont .header:not([open]) .menu-toggle,
+    html[data-nmbot-page="true"] #hcont .header:not([open]) .product-header {
+        transition: transform 0.4s !important;
     }
 
     html[data-nmbot-page="true"] #pageHeader .left[data-hide=true],
-    html[data-nmbot-page="true"] #pageHeader .right[data-hide=true] {
-        transform: translate(0, -120%);
-    }
-
+    html[data-nmbot-page="true"] #pageHeader .right[data-hide=true],
     html[data-nmbot-page="true"] #pageHeader .menu-toggle[data-hide=true] {
-        transform: translate(0, -150%);
+        transform: translate(0, -200%);
+        pointer-events: none;
     }
 
     html[data-nmbot-page="true"] .product-header[data-hide=false] {
-        transform: translate(-50%, 0%);
+        transform: translate(0, 0%);
     }

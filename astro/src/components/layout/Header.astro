@@ -7,9 +7,10 @@ interface Props {
   locale: PublicLocale;
   disallowHideHeader?: boolean;
   hideHeaderTitle?: boolean;
+  productHeaderHtml?: string;
 }
 
-const { locale, disallowHideHeader = false, hideHeaderTitle = false } = Astro.props;
+const { locale, disallowHideHeader = false, hideHeaderTitle = false, productHeaderHtml } = Astro.props;
 const disallowHideHeaderScript = `disallowHideHeader = ${disallowHideHeader ? 'true' : 'false'};`;
 const href = (path: string) => toLocalizedHref(locale, path);
 ---
@@ -20,11 +21,11 @@ const href = (path: string) => toLocalizedHref(locale, path);
 <div id="hcont">
   <div class="placeHolder"></div>
   <div class:list={['header', 'hidden', { hidetitle: hideHeaderTitle }]} id="pageHeader">
-    <a class="left" href={href('/')} aria-label={t(locale, 'header.title_button_aria_label')}>
+    <a class="left" href={href('/')} aria-label={t(locale, 'header.title_button_aria_label')} data-hide={productHeaderHtml ? 'true' : undefined}>
       <i class="logo" aria-label={t(locale, 'header.title_icon_aria_label')}></i>
       <p class="name">nmTeam</p>
     </a>
-    <div class="right" onclick="openHeader(false);">
+    <div class="right" onclick="openHeader(false);" data-hide={productHeaderHtml ? 'true' : undefined}>
       <div class="links">
         <a href={href('/')} aria-label={t(locale, 'header.home')}>{t(locale, 'header.home')}</a>
         <a href={href('/products/')} aria-label={t(locale, 'header.products')}>{t(locale, 'header.products')}</a>
@@ -45,11 +46,13 @@ const href = (path: string) => toLocalizedHref(locale, path);
       data-nav-menu-extended="false"
       onclick="openHeader()"
       aria-label={t(locale, 'header.nav_button_aria_label')}
+      data-hide={productHeaderHtml ? 'true' : undefined}
     >
       <span class="bar bar-1"></span>
       <span class="bar bar-2"></span>
       <span class="bar bar-3"></span>
     </button>
+    {productHeaderHtml && <div class="product-header" data-hide="true" set:html={productHeaderHtml} />}
   </div>
 </div>
 <span id="main-content"></span>
