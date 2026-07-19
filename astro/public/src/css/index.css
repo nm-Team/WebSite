@@ -322,6 +322,7 @@ a.contact {
 }
 
 #newsSwiperItems .swiper-slide .newsImage {
+    position: relative;
     width: calc(100% + 2px);
     margin: -1px;
     height: 1px;
@@ -332,6 +333,17 @@ a.contact {
     background-color: #00000018;
     border-radius: var(--radius-l) var(--radius-l) 0 0;
     transition: transform 0.9s var(--ease-out);
+}
+
+#newsSwiperItems .swiper-slide .newsImage::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90px;
+    background-image: linear-gradient(#ffffff00, var(--index-card-swiper-background));
+    pointer-events: none;
 }
 
 #newsSwiperItems .swiper-slide:hover .newsImage,
@@ -380,12 +392,7 @@ a.contact {
 }
 
 #newsSwiperItems .swiper-slide .cover {
-    position: relative;
-    height: 90px;
-    top: -90px;
-    margin-bottom: -140px;
-    background-image: linear-gradient(#ffffff00, var(--index-card-swiper-background));
-    pointer-events: none;
+    display: none;
 }
 
 .lemonLine {
