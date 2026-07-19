@@ -586,6 +586,7 @@ beta-tag {
     padding-top: 1px !important;
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
     text-align: end;
     justify-content: end;
     align-content: flex-end;
