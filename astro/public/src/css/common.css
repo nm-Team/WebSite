@@ -130,17 +130,17 @@ body {
 
 .title {
     background:
+        linear-gradient(color-mix(in srgb, var(--bgg) 0%, transparent) 55%, var(--bgg) 100%),
         radial-gradient(52% 90% at 88% 0%, var(--title-glow-1) 0%, color-mix(in srgb, var(--title-glow-1) 0%, transparent) 66%),
         radial-gradient(56% 95% at 6% 8%, var(--title-glow-2) 0%, color-mix(in srgb, var(--title-glow-2) 0%, transparent) 62%),
         radial-gradient(70% 70% at 50% 125%, var(--title-glow-3) 0%, color-mix(in srgb, var(--title-glow-3) 0%, transparent) 60%);
     background-color: var(--brand-soft);
     position: relative;
     margin: -82px 0 18px 0;
-    padding: 138px 34px 30px 34px;
+    padding: 138px 34px 48px 34px;
     text-align: left;
     color: var(--text-color);
     overflow-y: hidden;
-    border-bottom: 1px solid var(--hairline);
 }
 
 .title.center {
@@ -157,7 +157,7 @@ body {
 }
 
 .title.largepadding {
-    padding: 138px calc(10% + 8px) 30px calc(10% + 8px);
+    padding: 138px calc(10% + 8px) 48px calc(10% + 8px);
 }
 
 .titleBack {
