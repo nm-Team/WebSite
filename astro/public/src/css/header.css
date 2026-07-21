@@ -59,15 +59,28 @@ html[data-theme=dark] body {
     height: 78px;
 }
 
-/* Single, delay-free transition set for every header state change. */
-#hcont .header,
-#hcont .header .left,
-#hcont .header .right,
-#hcont .header .links a,
-#hcont .header .accountBox,
-#hcont .header .menu-toggle,
-#hcont .header .menu-toggle .bar {
-    transition: background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), backdrop-filter 0.3s var(--ease-out), -webkit-backdrop-filter 0.3s var(--ease-out), color 0.2s, opacity 0.25s, transform 0.45s var(--ease-out), filter 0.3s, visibility 0.3s;
+/* Mobile open/close restores the pre-redesign choreography:
+   0.7s height expansion, staggered color/visibility delays and the
+   scale+blur entrance for the menu panel. */
+#hcont .header {
+    transition: background-color 0.1s, backdrop-filter 0.05s 0.05s, -webkit-backdrop-filter 0.05s 0.05s, height 0.7s, overflow-y 0s 0.7s;
+}
+
+#hcont .header:not([open]).hidden {
+    transition: background-color 0.1s 0.5s, backdrop-filter 0.05s 0.55s, -webkit-backdrop-filter 0.05s 0.55s, height 0.7s, overflow-y 0s 0.7s;
+}
+
+#hcont .header:not([open]).hidden *:not(.right, .menu-toggle, .menu-toggle .bar) {
+    transition: color 0.1s 0.5s, visibility 0.1s 0.5s, transform 0.7s !important;
+}
+
+#hcont .header:not([open]).hidden .left,
+#hcont .header:not([open]).hidden .left * {
+    transition: color 0.1s 0.2s, visibility 0.1s 0.5s, opacity 0.1s 0.5s, transform 0.7s !important;
+}
+
+#hcont .header:not([open]) *:not(.right, .menu-toggle, .menu-toggle .bar) {
+    transition: color 0.1s, visibility 0.1s 0.5s, opacity 0.1s, transform 0.7s !important;
 }
 
 #hcont .header.hidetitle:not([open]) .left {
@@ -238,14 +251,15 @@ html[data-theme=dark] body {
         background-color: var(--jianbian-color);
         border-bottom: 1px solid var(--hairline);
         color: var(--header-text);
-        transition: background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), backdrop-filter 0.3s var(--ease-out), -webkit-backdrop-filter 0.3s var(--ease-out), height 0.5s var(--ease-out), overflow-y 0s 0.5s;
     }
 
     #hcont .header[open] {
         height: 100vh;
         height: 100dvh;
+    }
+
+    #hcont .header[open] .right {
         overflow-y: auto;
-        transition: background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), backdrop-filter 0.3s var(--ease-out), -webkit-backdrop-filter 0.3s var(--ease-out), height 0.5s var(--ease-out), overflow-y 0s;
     }
 
     #hcont .header.hidden:not([open]) {
@@ -272,12 +286,13 @@ html[data-theme=dark] body {
         background: none;
         color: var(--header-a);
         font-weight: normal;
+        transition: all 0.7s;
         text-decoration: none;
         transform-origin: left top;
     }
 
     #hcont .header[open] .left {
-        transform: scale(1.15) translate(10px, 22px);
+        transform: scale(1.2) translate(-1.6px, 8px);
     }
 
     #hcont .header .left .logo {
@@ -291,8 +306,7 @@ html[data-theme=dark] body {
     #hcont .header .left .name {
         display: inline-block;
         font-size: 20px;
-        font-weight: 800;
-        letter-spacing: -0.02em;
+        font-weight: 600;
         color: var(--header-name);
     }
 
@@ -308,23 +322,25 @@ html[data-theme=dark] body {
         border-radius: 50%;
         direction: ltr;
         cursor: pointer;
+        transition: all 0.7s;
     }
 
     #hcont .header[open] .menu-toggle {
-        top: 18px;
+        top: 20px;
     }
 
     #hcont .header .menu-toggle .bar {
         position: absolute;
         display: block;
         top: 0;
-        left: calc(50% - 10px);
+        left: 50%;
         pointer-events: none;
-        width: 20px;
-        height: 2px;
+        transform: translate(-50%, 0);
+        width: 30%;
+        height: 1px;
         border-radius: 2px;
         background: var(--header-name);
-        transform-origin: center;
+        transition: all 0.5s !important;
     }
 
     #hcont .header .menu-toggle .bar-1 {
@@ -341,7 +357,8 @@ html[data-theme=dark] body {
 
     #hcont .header[open] .menu-toggle .bar-1 {
         top: 50%;
-        transform: rotate(45deg);
+        left: 35%;
+        transform: rotate(45deg) translate(0, 0);
     }
 
     #hcont .header[open] .menu-toggle .bar-2 {
@@ -351,22 +368,23 @@ html[data-theme=dark] body {
 
     #hcont .header[open] .menu-toggle .bar-3 {
         top: 50%;
-        transform: rotate(-45deg);
+        left: 35%;
+        transform: rotate(-45deg) translate(0, 0);
     }
 
     #hcont .header .right {
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        margin-top: 40px;
+        margin-top: 34px;
         padding: 0 4px 30px;
         width: 100%;
         box-sizing: border-box;
         flex-grow: 1;
         flex-shrink: 1;
         visibility: hidden;
-        transform: translateY(-3%);
-        filter: blur(6px);
+        transform: translateY(-5%) scale(0.995, 0.94);
+        filter: blur(4px);
         opacity: 0;
         transition: transform 0.2s, opacity 0.2s, filter 0.2s, visibility 0.2s !important;
     }
@@ -376,13 +394,12 @@ html[data-theme=dark] body {
         transform: none;
         filter: none;
         opacity: 1;
-        transition: transform 0.5s 0.12s var(--ease-out), opacity 0.5s 0.12s, filter 0.5s 0.12s, visibility 0.5s 0.12s !important;
+        transition: transform 0.52s 0.18s, opacity 0.52s 0.18s, filter 0.52s 0.18s, visibility 0.52s 0.18s !important;
     }
 
     #hcont .header .right * {
-        font-size: 30px;
-        font-weight: 700;
-        letter-spacing: -0.02em;
+        font-size: 25.2px;
+        font-weight: 600;
         color: var(--header-text);
         text-decoration: none;
         text-align: start;
@@ -393,13 +410,14 @@ html[data-theme=dark] body {
         flex-direction: column;
         flex-wrap: nowrap;
         align-self: stretch;
+        margin-left: 42px;
     }
 
     #hcont .header .right .links a {
         display: block;
-        padding: 12px 18px;
+        padding: 10px 8px;
         word-break: keep-all;
-        border-radius: var(--radius-m);
+        border-radius: 3px;
     }
 
     #hcont .header .right .links a:hover,
@@ -414,12 +432,11 @@ html[data-theme=dark] body {
         display: flex;
         width: 100%;
         box-sizing: border-box;
+        position: relative;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        gap: 14px;
-        margin: 10px 0 0;
-        padding: 12px 18px;
+        margin: 10px 0;
         border: none;
         background: none;
         align-self: stretch;
@@ -427,12 +444,14 @@ html[data-theme=dark] body {
     }
 
     #hcont .header .right .accountBox i {
+        position: absolute;
+        top: 1px;
+        left: 10px;
         display: inline-block;
-        flex-shrink: 0;
-        width: 34px;
-        height: 34px;
+        width: 30px;
+        height: 30px;
         background-image: url(https://static.hdslb.com/images/akari.jpg);
-        background-size: 34px 34px;
+        background-size: 30px 30px;
         border-radius: 50%;
     }
 
@@ -442,6 +461,7 @@ html[data-theme=dark] body {
         text-overflow: ellipsis;
         white-space: nowrap;
         word-break: break-all;
+        margin: 0 0 0 50px;
     }
 }
 
