@@ -332,11 +332,70 @@ beta-tag {
 
 .mainBlock p {
     position: relative;
-    margin: 0;
+    margin: 0 0 0.9em 0;
     padding: 0;
     font-size: 17px;
     line-height: 1.75;
     text-align: left;
+    color: var(--text);
+}
+
+.mainBlock p:last-child {
+    margin-bottom: 0;
+}
+
+.mainBlock center,
+.main mainBlock > center {
+    display: block;
+    max-width: 640px;
+    margin: 0 auto 0.9em auto;
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: var(--text);
+    text-align: center;
+}
+
+.mainBlock h2 {
+    margin: 26px 0 10px 0;
+    padding: 0;
+    font-size: clamp(20px, 2.6vw, 23px);
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-color);
+    letter-spacing: -0.015em;
+}
+
+.tabContents .content h2,
+.tabContents .content h3 {
+    padding: 10px 0 8px 0;
+    text-align: left;
+    color: var(--text);
+    letter-spacing: -0.015em;
+}
+
+.tabContents .content li {
+    display: block;
+    position: relative;
+    padding-left: 1.15em;
+    margin-bottom: 0.45em;
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--text);
+}
+
+.tabContents .content li::before {
+    content: "";
+    position: absolute;
+    left: 0.2em;
+    top: 0.72em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text-yellow);
+}
+
+.mainBlock img {
+    border-radius: var(--radius-m);
 }
 
 .mainBlock.center p {
@@ -720,6 +779,67 @@ beta-tag {
 .select-radio-box input:checked~.select-switch .select-label-off {
     opacity: 0.5;
     right: -20px;
+}
+
+#smapBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+#smapBox .item {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-s);
+    padding: 18px 20px;
+    transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out), border-color 0.3s;
+}
+
+#smapBox .item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-m);
+    border-color: rgba(23, 21, 15, 0.18);
+}
+
+html[data-theme=dark] #smapBox .item:hover {
+    border-color: rgba(245, 243, 237, 0.2);
+}
+
+#smapBox .item h2 {
+    margin: 0 0 6px 0;
+    padding: 0;
+    font-size: 17.5px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: -0.01em;
+}
+
+#smapBox .item h2 a {
+    color: var(--text) !important;
+}
+
+#smapBox .item h2 a:hover {
+    color: var(--text-yellow) !important;
+    text-decoration: none !important;
+}
+
+#smapBox .item .desc {
+    margin: 0 0 10px 0;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--text-grey);
+}
+
+#smapBox .item .link {
+    margin: 0;
+    font-size: 12.5px;
+    color: var(--text-yellow);
+    opacity: 0.85;
+    overflow-wrap: anywhere;
 }
 
 @media (prefers-reduced-motion: reduce) {

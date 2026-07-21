@@ -77,19 +77,21 @@ bs {
     text-decoration: none !important;
     color: var(--products-box-text) !important;
     background: var(--products-box-link-background);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    transition: all 0.33s;
+    -webkit-backdrop-filter: blur(20px) saturate(1.6);
+    backdrop-filter: blur(20px) saturate(1.6);
+    transition: background 0.3s, border-color 0.3s, padding 0.3s, transform 0.45s var(--ease-out), outline 0s;
 }
 
 .detail-block .opes a:not(.tip) {
     border-color: var(--products-box-link-border-b);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 .products-page .opes a:not(.tip):hover,
 .products-page .opes a:not(.tip):focus-visible {
     background: var(--products-box-link-hover-background);
     border: 1.6px solid var(--products-box-link-border);
+    transform: translateY(-1px);
 }
 
 .products-page .opes a:not(.tip):not(*[data-button-type=no]):focus-visible,

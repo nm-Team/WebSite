@@ -21,16 +21,30 @@ const arrowIcon =
     line-height: 2;
     margin: 0 auto 30px auto;
     table-layout: fixed;
-    border-collapse: collapse;
-    overflow-x: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-s);
+    color: var(--text);
+  }
+
+  .sTab tr + tr td {
+    border-top: 1px solid var(--hairline);
+  }
+
+  .sTab td {
+    padding: 10px 16px;
   }
 
   .sTab thead {
-    font-weight: bold;
+    font-weight: 700;
+    background: var(--surface-2);
   }
 
   .sTab td:first-child {
-    padding: 5px 0;
     display: flex;
     align-items: center;
     min-width: 0;
@@ -51,7 +65,7 @@ const arrowIcon =
     background-image: url(https://static.hdslb.com/images/akari.jpg);
     background-size: 30px 30px;
     border-radius: 20px;
-    margin-right: 4px;
+    margin-right: 8px;
   }
 
   .sTab td + td {
@@ -59,6 +73,7 @@ const arrowIcon =
     min-width: 5em;
     width: 8em;
     white-space: nowrap;
+    color: var(--text-grey);
   }
 </style>
 <div class="title center">
@@ -106,7 +121,7 @@ const arrowIcon =
           {t(locale, 'supportus.crypto_only_accept_tron')}
         </p>
         <p>
-          <img src="/src/img/tron.jpg" alt="TRON" style="width: 100%; max-width: 300px;" />
+          <img src="/src/img/tron.jpg" alt="TRON" style="width: 100%; max-width: 300px; border-radius: var(--radius-m);" />
         </p>
       </div>
     </div>
