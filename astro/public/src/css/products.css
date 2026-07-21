@@ -1,17 +1,20 @@
 body {
-    --products-footer-bgcolor: rgb(238, 238, 238);
-    --products-footer: rgb(107, 107, 107);
-    --products-footer-a: rgb(77, 77, 77);
-    --products-footer-text: rgb(109, 109, 109);
-    --products-footer-hover: rgb(44, 44, 44);
+    --products-footer: var(--text-grey);
+    --products-footer-a: var(--text-deepbrown);
+    --products-footer-text: var(--text-grey);
+    --products-footer-hover: var(--text-color);
 }
 
-html[data-theme=dark] body {
-    --products-footer-bgcolor: rgb(53, 53, 53);
-    --products-footer: rgb(141, 141, 141);
-    --products-footer-a: rgb(179, 179, 179);
-    --products-footer-text: rgb(184, 184, 184);
-    --products-footer-hover: rgb(230, 230, 230);
+.products_footer {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding: 16px 10% 33px 10%;
+    color: var(--products-footer);
+    background-color: var(--surface-2);
+    border-top: 1px solid var(--hairline);
+    font-size: 13px;
 }
 
 .light {

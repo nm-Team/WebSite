@@ -29,6 +29,7 @@
     display: block;
     position: relative;
     outline: none;
+    box-sizing: border-box;
     width: calc(100% - 12px);
     height: 360px;
     margin: 6px;
