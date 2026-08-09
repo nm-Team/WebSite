@@ -192,13 +192,20 @@ function nmFlyBack(f, generation) {
     // Commit the translated start state before returning to the hero position.
     void f.source.offsetHeight;
 
+    // Animate to an explicit transform with the same function-list shape as
+    // the start state. Assigning the empty base would REMOVE the inline
+    // property, and iOS WebKit does not start a transition on property
+    // removal — the wordmark snapped to full size instead of growing.
+    var endTransform = f.base || "translate(0px, 0px) scale(1)";
     requestAnimationFrame(function () {
         if (generation !== nmAnimationGeneration || f.source.style.visibility === "hidden") return;
         f.source.style.transition = "transform " + nmFlightDuration + "ms " + nmFlightEase;
-        f.source.style.transform = f.base;
+        f.source.style.transform = endTransform;
         setTimeout(function () {
             if (generation !== nmAnimationGeneration || f.source.style.visibility === "hidden") return;
             f.source.style.transition = "";
+            // Settle back to the pure stylesheet state (identity == none).
+            if (!f.base) f.source.style.transform = "";
         }, nmFlightDuration + 60);
     });
 }
