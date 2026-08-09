@@ -20,7 +20,9 @@ var nmFlyers = [
     {
         source: document.querySelector(".indexHeaderName"),
         target: document.querySelector("#pageHeader .left .name"),
-        base: "translate(-50%, 0)",
+        // The wordmark is centered by text-align, not a transform (see
+        // .indexHeaderName), so its resting transform is empty.
+        base: "",
         scaleByFont: true,
         clone: null
     }
