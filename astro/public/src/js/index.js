@@ -173,17 +173,25 @@ function nmFlyBack(f, generation) {
     var naturalAnchor = f.scaleByFont ? nmGlyphRect(f.source) : naturalBox;
     var fromBox = f.target.getBoundingClientRect();
     var fromAnchor = f.scaleByFont ? nmGlyphRect(f.target) : fromBox;
+    var from, scale;
     if (nmKillClone(f)) {
+        // The airborne clone's rect is a transformed BOX rect, so the start
+        // scale must be derived box-to-box. Mixing it with the wordmark's
+        // ink width (the box is full-width) inflates the scale and flashes
+        // the title at several times its size.
         fromBox = f.lastCloneRect;
-        fromAnchor = fromBox;
+        from = nmRectCenter(fromBox);
+        scale = naturalBox.width > 0 ? fromBox.width / naturalBox.width : 1;
+    } else {
+        from = nmRectCenter(fromAnchor);
+        scale = nmUniformScale(f, naturalAnchor, fromAnchor);
     }
 
-    var from = nmRectCenter(fromAnchor);
     var natural = nmRectCenter(naturalAnchor);
     var d = {
         dx: from.x - natural.x,
         dy: from.y - natural.y,
-        scale: nmUniformScale(f, naturalAnchor, fromAnchor)
+        scale: scale
     };
     f.source.style.transform = f.base +
         " translate(" + d.dx.toFixed(2) + "px, " + d.dy.toFixed(2) + "px) scale(" + d.scale.toFixed(4) + ")";
