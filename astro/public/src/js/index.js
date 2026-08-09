@@ -4,6 +4,9 @@ var nmHero = document.querySelector(".indexHeader");
 var nmReduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 var nmFlightDuration = 560;
 var nmFlightEase = "cubic-bezier(0.22, 1, 0.36, 1)";
+var nmHandoffDuration = 280;
+var nmHandoffEase = "cubic-bezier(0.33, 1, 0.68, 1)";
+var nmAnimationGeneration = 0;
 var nmMorphed = null;
 
 var nmFlyers = [
@@ -22,6 +25,16 @@ var nmFlyers = [
         clone: null
     }
 ];
+
+// Reuse the inline hero artwork so the final handoff never waits on the
+// header's remote logo asset.
+var nmLogoFlyer = nmFlyers[0];
+if (nmLogoFlyer.source && nmLogoFlyer.target) {
+    var nmHeroLogoImage = window.getComputedStyle(nmLogoFlyer.source).backgroundImage;
+    if (nmHeroLogoImage && nmHeroLogoImage !== "none") {
+        nmLogoFlyer.target.style.backgroundImage = nmHeroLogoImage;
+    }
+}
 
 // Uniform scale: font-size ratio for text (exact glyph match), box ratio otherwise.
 function nmUniformScale(f, fromRect, toRect) {
@@ -48,7 +61,7 @@ function nmRectCenter(rect) {
 }
 
 // Fly a fixed-position clone of the hero element onto its header counterpart.
-function nmFlyForward(f, onDone) {
+function nmFlyForward(f, generation, onDone) {
     if (!f.source || !f.target) { onDone(); return; }
     // Cancel any still-running entrance animation and flush, so every
     // measurement below reflects the element's natural position.
@@ -87,6 +100,7 @@ function nmFlyForward(f, onDone) {
     clone.style.transform = "none";
     clone.style.transformOrigin = "center";
     clone.style.transition = "none";
+    clone.style.opacity = "1";
     clone.style.zIndex = "999";
     clone.style.pointerEvents = "none";
     document.body.appendChild(clone);
@@ -94,29 +108,34 @@ function nmFlyForward(f, onDone) {
 
     f.source.style.visibility = "hidden";
 
+    // Commit the start state before the next frame applies the destination.
+    void clone.offsetHeight;
+
     requestAnimationFrame(function () {
-        if (!f.clone) return;
+        if (generation !== nmAnimationGeneration || f.clone !== clone) return;
         clone.style.transition = "transform " + nmFlightDuration + "ms " + nmFlightEase;
         clone.style.transform = "translate(" + d.dx.toFixed(2) + "px, " + d.dy.toFixed(2) + "px)" +
             " scale(" + d.scale.toFixed(4) + ")";
     });
 
     var finished = false;
+    var fallback;
     var finish = function () {
         if (finished) return;
         finished = true;
         onDone();
     };
     clone.addEventListener("transitionend", function onEnd(ev) {
-        if (ev.propertyName !== "transform") return;
+        if (ev.target !== clone || ev.propertyName !== "transform") return;
         clone.removeEventListener("transitionend", onEnd);
+        clearTimeout(fallback);
         finish();
     });
-    setTimeout(finish, nmFlightDuration + 160);
+    fallback = setTimeout(finish, nmFlightDuration + 160);
 }
 
 // Fly the original element back into the hero by transitioning its transform to base.
-function nmFlyBack(f) {
+function nmFlyBack(f, generation) {
     if (!f.source || !f.target) return;
     f.source.style.animation = "none";
     f.source.style.transition = "none";
@@ -142,12 +161,15 @@ function nmFlyBack(f) {
         " translate(" + d.dx.toFixed(2) + "px, " + d.dy.toFixed(2) + "px) scale(" + d.scale.toFixed(4) + ")";
     f.source.style.visibility = "visible";
 
+    // Commit the translated start state before returning to the hero position.
+    void f.source.offsetHeight;
+
     requestAnimationFrame(function () {
-        if (f.source.style.visibility === "hidden") return;
+        if (generation !== nmAnimationGeneration || f.source.style.visibility === "hidden") return;
         f.source.style.transition = "transform " + nmFlightDuration + "ms " + nmFlightEase;
         f.source.style.transform = f.base;
         setTimeout(function () {
-            if (f.source.style.visibility === "hidden") return;
+            if (generation !== nmAnimationGeneration || f.source.style.visibility === "hidden") return;
             f.source.style.transition = "";
         }, nmFlightDuration + 60);
     });
@@ -162,9 +184,45 @@ function nmKillClone(f) {
     return true;
 }
 
+// Fade only the overlay clone; the fully opaque header stays visible beneath it.
+function nmFadeCloneIntoHeader(f, generation) {
+    var clone = f.clone;
+    if (!clone) return;
+
+    clone.style.transition = "none";
+    clone.style.opacity = "1";
+    void clone.offsetHeight;
+
+    requestAnimationFrame(function () {
+        if (generation !== nmAnimationGeneration || !nmMorphed || f.clone !== clone) return;
+
+        var finished = false;
+        var fallback;
+        var finish = function () {
+            if (finished) return;
+            finished = true;
+            clearTimeout(fallback);
+            clone.removeEventListener("transitionend", onEnd);
+            if (generation !== nmAnimationGeneration || f.clone !== clone) return;
+            clone.remove();
+            f.clone = null;
+        };
+        var onEnd = function (ev) {
+            if (ev.target !== clone || ev.propertyName !== "opacity") return;
+            finish();
+        };
+
+        clone.addEventListener("transitionend", onEnd);
+        clone.style.transition = "opacity " + nmHandoffDuration + "ms " + nmHandoffEase;
+        clone.style.opacity = "0";
+        fallback = setTimeout(finish, nmHandoffDuration + 160);
+    });
+}
+
 function nmApplyState(morphed) {
     if (nmMorphed === morphed) return;
     var el = document.getElementById("pageHeader");
+    var generation = ++nmAnimationGeneration;
 
     // Snap without animation on first run or when reduced motion is preferred.
     if (nmMorphed === null || nmReduceMotion) {
@@ -183,27 +241,30 @@ function nmApplyState(morphed) {
         el.classList.remove("hidden");
         var remaining = nmFlyers.length;
         nmFlyers.forEach(function (f) {
-            nmFlyForward(f, function () {
+            nmFlyForward(f, generation, function () {
+                if (generation !== nmAnimationGeneration) return;
                 remaining -= 1;
                 if (remaining > 0 || !nmMorphed) return;
-                // Hard swap in one frame: reveal the real header title instantly
-                // underneath the opaque clones, then remove them right away.
+                // Reveal the real header at full opacity, then blend away only
+                // the overlay clones so the composite never becomes transparent.
                 var left = el.querySelector(".left");
-                if (left) left.style.transition = "none";
+                if (left) left.style.setProperty("transition", "none", "important");
                 el.classList.remove("hidetitle");
                 if (left) {
                     void left.offsetHeight;
-                    left.style.transition = "";
                 }
+                if (left) left.style.removeProperty("transition");
                 nmFlyers.forEach(function (g) {
-                    if (g.clone) { g.clone.remove(); g.clone = null; }
+                    nmFadeCloneIntoHeader(g, generation);
                 });
             });
         });
     } else {
         el.classList.add("hidetitle");
         el.classList.add("hidden");
-        nmFlyers.forEach(nmFlyBack);
+        nmFlyers.forEach(function (f) {
+            nmFlyBack(f, generation);
+        });
     }
 }
 
