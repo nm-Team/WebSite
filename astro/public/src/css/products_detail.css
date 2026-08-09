@@ -39,7 +39,7 @@
     background-position-y: center;
     background-size: cover;
     background-repeat: no-repeat;
-    animation: productHeaderIn 1.2s var(--ease-out);
+    animation: productHeaderIn 1.2s var(--motion-ease-out);
 }
 
 @keyframes productHeaderIn {

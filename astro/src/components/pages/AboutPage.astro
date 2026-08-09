@@ -39,18 +39,18 @@ const aboutIntro = (nmBotHref: string): Record<PublicLocale, string[]> => ({
   .introImage {
     margin: 30px auto;
     max-width: 550px;
-    border-radius: var(--radius-l);
-    box-shadow: var(--shadow-m);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
   }
 </style>
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1>{t(locale, 'about.title')}</h1>
 </div>
-<div class="main">
-  <div class="mainBlock">
+<div class="page-content">
+  <div class="page-section">
     {aboutIntro(href('/products/overview/nmBot-Telegram/'))[locale].map((paragraph) => <p set:html={paragraph} />)}
   </div>
-  <div class="mainBlock">
+  <div class="page-section">
     <h1>{t(locale, 'about.h1')}</h1>
     {[0, 1, 2, 3, 4, 5].map((index) => <p>{t(locale, `about.${index}`)}</p>)}
     <center>
@@ -58,11 +58,11 @@ const aboutIntro = (nmBotHref: string): Record<PublicLocale, string[]> => ({
     </center>
   </div>
 </div>
-<div class="main">
-  <div class="mainBlock" id="join">
+<div class="page-content">
+  <div class="page-section" id="join">
     <h1>{t(locale, 'about.h2')}</h1>
     <p>{t(locale, 'about.6')}</p>
     <p>{t(locale, 'about.7')}</p>
-    <a href={href('/join/')} class="indexMoreLink">{t(locale, 'about.8')}</a>
+    <a href={href('/join/')} class="action-link">{t(locale, 'about.8')}</a>
   </div>
 </div>

@@ -17,21 +17,21 @@ const businessEmailAddress = 'business@nmteam.xyz';
     border: none;
     border-radius: 999px;
     color: #1c1a12;
-    background: var(--brand);
-    box-shadow: var(--shadow-s);
+    background: var(--color-brand);
+    box-shadow: var(--shadow-sm);
     text-decoration: none;
     cursor: pointer;
     user-select: all;
     -webkit-user-select: all;
     -moz-user-select: all;
-    transition: background 0.25s, transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
+    transition: background 0.25s, transform 0.45s var(--motion-ease-out), box-shadow 0.45s var(--motion-ease-out);
   }
 
   .email-btn:hover,
   .email-btn:focus-visible {
-    background: var(--logolike-yellow-lighter);
+    background: var(--color-brand-hover);
     transform: translateY(-1px);
-    box-shadow: var(--shadow-m);
+    box-shadow: var(--shadow-md);
   }
 
   .email-btn:active {
@@ -39,11 +39,11 @@ const businessEmailAddress = 'business@nmteam.xyz';
     transition-duration: 0.12s;
   }
 </style>
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1>{t(locale, 'business_cooperation.title')}</h1>
 </div>
-<div class="main">
-  <div class="mainBlock">
+<div class="page-content">
+  <div class="page-section">
     <p>{t(locale, 'business_cooperation.content_0')}</p>
     <p>
       <button class="email-btn" onclick={`window.location.href='mailto:${businessEmailAddress}'`}>{businessEmailAddress}</button>

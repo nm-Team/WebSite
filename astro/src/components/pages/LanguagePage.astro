@@ -8,10 +8,10 @@ const { locale } = Astro.props as PageProps;
 const fallbackPath = toLocalizedHref(locale, '/');
 const localeList = [...publicLocales];
 ---
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1>{t(locale, 'language.page.title')}</h1>
 </div>
-<div class="main mainBlock">
+<div class="page-content page-section">
   <div id="lanList">
     <button class="selection" data-lanid="auto" data-active="false" title={t(locale, 'language.page.auto')}>{t(locale, 'language.page.auto')}</button>
     {publicLocales.map((publicLocale) => (

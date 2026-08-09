@@ -339,7 +339,7 @@ function loadNews() {
             $("#newsSwiperItems").html(newsHTML);
         },
         error: function () {
-            $("#newsSwiperItems").html(`<center><span>${newsRoomLoadFailedI18n}</span><div class="indexMoreLinks"><a href="javascript:" onclick="loadNews();" data-button-type="no"><span>${newsRoomRetryI18n}</span></a></div></center>`);
+            $("#newsSwiperItems").html(`<center><span>${newsRoomLoadFailedI18n}</span><div class="action-links"><a href="javascript:" onclick="loadNews();" data-button-type="no"><span>${newsRoomRetryI18n}</span></a></div></center>`);
 
         }
     });

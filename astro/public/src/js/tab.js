@@ -1,8 +1,13 @@
-$(".tabHeader button").on("click", function(){
-    focusTab($(this).parent().parent(),$(this).attr("data-tab"));
-})
+$('.tabs__list button').on('click', function () {
+  const tabId = $(this).attr('data-tab');
+  if (typeof tabId !== 'string') {
+    return;
+  }
 
-function focusTab(ele, tabid) {
-    ele.find("*").attr("data-status", "");
-    ele.find("*[data-tab=" + tabid + "]").attr("data-status", "focus");
+  focusTab($(this).closest('.tabs'), tabId);
+});
+
+function focusTab($tabs, tabId) {
+  $tabs.find('*').attr('data-status', '');
+  $tabs.find(`[data-tab="${CSS.escape(tabId)}"]`).attr('data-status', 'focus');
 }

@@ -22,7 +22,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    animation: main 0.5s;
+    animation: fade-slide-up 0.5s;
 }
 
 .products-overview .box {
@@ -35,11 +35,11 @@
     margin: 6px;
     background: var(--products-box-background);
     border: 1px solid rgba(127, 121, 104, 0.16);
-    border-radius: var(--radius-l);
+    border-radius: var(--radius-lg);
     box-shadow: var(--products-box-shadow);
     overflow: hidden;
     flex-grow: 1;
-    transition: transform 0.55s var(--ease-out), box-shadow 0.55s var(--ease-out), border-color 0.3s, outline 0s;
+    transition: transform 0.55s var(--motion-ease-out), box-shadow 0.55s var(--motion-ease-out), border-color 0.3s, outline 0s;
 }
 
 .products-overview .box.x2,
@@ -91,7 +91,7 @@
     background-position-y: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: transform 0.9s var(--ease-out);
+    transition: transform 0.9s var(--motion-ease-out);
 }
 
 .products-overview .box:hover .background,

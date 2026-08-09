@@ -4,11 +4,11 @@ import type { PageProps } from './PageProps';
 
 const { locale } = Astro.props as PageProps;
 ---
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1>{t(locale, 'support.title')}</h1>
 </div>
-<div class="main">
-  <div class="mainBlock center widepadding">
+<div class="page-content">
+  <div class="page-section page-section--centered page-section--indented">
     {t(locale, 'support.description').split('\n').map((line) => <p>{line}</p>)}
   </div>
 </div>

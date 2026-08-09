@@ -13,7 +13,7 @@ const { locale } = Astro.props;
 const overview = getProductOverview(locale);
 const href = (path: string) => toLocalizedHref(locale, path);
 ---
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1><span>{t(locale, 'products.title')}</span></h1>
 </div>
 <div class="products-overview products-page" id="products_overview_inner">

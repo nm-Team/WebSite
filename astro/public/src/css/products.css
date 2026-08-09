@@ -1,8 +1,8 @@
 body {
-    --products-footer: var(--text-grey);
-    --products-footer-a: var(--text-deepbrown);
-    --products-footer-text: var(--text-grey);
-    --products-footer-hover: var(--text-color);
+    --products-footer: var(--color-text-muted);
+    --products-footer-a: var(--color-text-secondary);
+    --products-footer-text: var(--color-text-muted);
+    --products-footer-hover: var(--color-text-primary);
 }
 
 .products_footer {
@@ -12,8 +12,8 @@ body {
     margin-bottom: -20px;
     padding: 16px 10% 33px 10%;
     color: var(--products-footer);
-    background-color: var(--surface-2);
-    border-top: 1px solid var(--hairline);
+    background-color: var(--color-surface-secondary);
+    border-top: 1px solid var(--color-border-subtle);
     font-size: 13px;
 }
 
@@ -82,7 +82,7 @@ bs {
     background: var(--products-box-link-background);
     -webkit-backdrop-filter: blur(20px) saturate(1.6);
     backdrop-filter: blur(20px) saturate(1.6);
-    transition: background 0.3s, border-color 0.3s, padding 0.3s, transform 0.45s var(--ease-out), outline 0s;
+    transition: background 0.3s, border-color 0.3s, padding 0.3s, transform 0.45s var(--motion-ease-out), outline 0s;
 }
 
 .detail-block .opes a:not(.tip) {

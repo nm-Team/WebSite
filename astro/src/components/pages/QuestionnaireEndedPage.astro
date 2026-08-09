@@ -5,11 +5,11 @@ import type { PageProps } from './PageProps';
 const { locale } = Astro.props as PageProps;
 const endedText = t(locale, 'questionnaire.ended');
 ---
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1>{endedText}</h1>
 </div>
-<div class="main">
-  <div class="mainBlock center widepadding">
+<div class="page-content">
+  <div class="page-section page-section--centered page-section--indented">
     <p>{endedText}</p>
   </div>
 </div>

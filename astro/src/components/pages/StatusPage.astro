@@ -4,10 +4,10 @@ import type { PageProps } from './PageProps';
 
 const { locale } = Astro.props as PageProps;
 ---
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1>{t(locale, 'status_page.title')}</h1>
 </div>
-<div class="main">
+<div class="page-content">
   <p>
     <center>{t(locale, 'status_page.redirecting')}</center>
   </p>
