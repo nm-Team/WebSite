@@ -36,14 +36,17 @@ if (nmLogoFlyer.source && nmLogoFlyer.target) {
     }
 }
 
-// Uniform scale: font-size ratio for text (exact glyph match), box ratio otherwise.
-function nmUniformScale(f, fromRect, toRect) {
+// Uniform scale: ink-width ratio for text (the header wordmark may use a
+// different weight/tracking than the hero, so font-size alone does not
+// guarantee a matching landing width), box ratio otherwise.
+function nmUniformScale(f, fromAnchor, toAnchor) {
     if (f.scaleByFont) {
+        if (fromAnchor.width > 0 && toAnchor.width > 0) return toAnchor.width / fromAnchor.width;
         var s = parseFloat(window.getComputedStyle(f.source).fontSize);
         var t = parseFloat(window.getComputedStyle(f.target).fontSize);
         if (s > 0 && t > 0) return t / s;
     }
-    return fromRect.height > 0 ? toRect.height / fromRect.height : 1;
+    return fromAnchor.height > 0 ? toAnchor.height / fromAnchor.height : 1;
 }
 
 // Ink bounds of an element's text, for baseline-accurate alignment of the wordmark.
@@ -60,6 +63,21 @@ function nmRectCenter(rect) {
     return { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
 }
 
+// The mobile menu keeps transitioning .left for 0.7s after it closes
+// (scale(1.2) translate(...) snapping back). A target rect measured during
+// that window is stale by the time the flight lands, so cancel the leftover
+// transition before reading any target geometry. While the menu is open the
+// transform is the legitimate resting state and must be kept.
+function nmSettleBrandTransition(f) {
+    var header = document.getElementById("pageHeader");
+    if (!header || header.hasAttribute("open") || !f.target || !f.target.closest) return;
+    var brand = f.target.closest(".left");
+    if (!brand) return;
+    brand.style.setProperty("transition", "none", "important");
+    void brand.offsetHeight;
+    brand.style.removeProperty("transition");
+}
+
 // Fly a fixed-position clone of the hero element onto its header counterpart.
 function nmFlyForward(f, generation, onDone) {
     if (!f.source || !f.target) { onDone(); return; }
@@ -69,14 +87,15 @@ function nmFlyForward(f, generation, onDone) {
     f.source.style.transition = "none";
     f.source.style.transform = "";
     void f.source.offsetHeight;
-    var fromBox, fromAnchor;
-    if (nmKillClone(f)) {
-        fromBox = f.lastCloneRect;
-        fromAnchor = fromBox;
-    } else {
-        fromBox = f.source.getBoundingClientRect();
-        fromAnchor = f.scaleByFont ? nmGlyphRect(f.source) : fromBox;
-    }
+    nmSettleBrandTransition(f);
+
+    // If a previous flight is still airborne, its current rendered rect is
+    // the visual starting point; the fresh clone reproduces it below with an
+    // initial transform on top of the source's natural geometry.
+    var interrupted = nmKillClone(f);
+
+    var fromBox = f.source.getBoundingClientRect();
+    var fromAnchor = f.scaleByFont ? nmGlyphRect(f.source) : fromBox;
     var toBox = f.target.getBoundingClientRect();
     var toAnchor = f.scaleByFont ? nmGlyphRect(f.target) : toBox;
 
@@ -85,7 +104,7 @@ function nmFlyForward(f, generation, onDone) {
     var d = {
         dx: to.x - from.x,
         dy: to.y - from.y,
-        scale: nmUniformScale(f, fromBox, toBox)
+        scale: nmUniformScale(f, fromAnchor, toAnchor)
     };
 
     var clone = f.source.cloneNode(true);
@@ -103,6 +122,12 @@ function nmFlyForward(f, generation, onDone) {
     clone.style.opacity = "1";
     clone.style.zIndex = "999";
     clone.style.pointerEvents = "none";
+    if (interrupted) {
+        var cur = nmRectCenter(f.lastCloneRect);
+        var startScale = fromBox.width > 0 ? f.lastCloneRect.width / fromBox.width : 1;
+        clone.style.transform = "translate(" + (cur.x - from.x).toFixed(2) + "px, " +
+            (cur.y - from.y).toFixed(2) + "px) scale(" + startScale.toFixed(4) + ")";
+    }
     document.body.appendChild(clone);
     f.clone = clone;
 
@@ -141,6 +166,7 @@ function nmFlyBack(f, generation) {
     f.source.style.transition = "none";
     f.source.style.transform = "";
     void f.source.offsetHeight;
+    nmSettleBrandTransition(f);
     var naturalBox = f.source.getBoundingClientRect();
     var naturalAnchor = f.scaleByFont ? nmGlyphRect(f.source) : naturalBox;
     var fromBox = f.target.getBoundingClientRect();
@@ -155,7 +181,7 @@ function nmFlyBack(f, generation) {
     var d = {
         dx: from.x - natural.x,
         dy: from.y - natural.y,
-        scale: nmUniformScale(f, naturalBox, fromBox)
+        scale: nmUniformScale(f, naturalAnchor, fromAnchor)
     };
     f.source.style.transform = f.base +
         " translate(" + d.dx.toFixed(2) + "px, " + d.dy.toFixed(2) + "px) scale(" + d.scale.toFixed(4) + ")";
