@@ -59,24 +59,39 @@ html[data-theme=dark] body {
     height: 78px;
 }
 
-/* Mobile open/close restores the pre-redesign choreography:
-   0.7s height expansion, staggered color/visibility delays and the
-   scale+blur entrance for the menu panel. */
+/* Mobile open/close restores the pre-redesign choreography without delaying
+   scroll-driven transitions into the transparent header state. */
 #hcont .header {
     transition: background-color 0.1s, backdrop-filter 0.05s 0.05s, -webkit-backdrop-filter 0.05s 0.05s, height 0.7s, overflow-y 0s 0.7s;
 }
 
 #hcont .header:not([open]).hidden {
-    transition: background-color 0.1s 0.5s, backdrop-filter 0.05s 0.55s, -webkit-backdrop-filter 0.05s 0.55s, height 0.7s, overflow-y 0s 0.7s;
+    transition: background-color 0.1s, backdrop-filter 0.05s, -webkit-backdrop-filter 0.05s, height 0.7s, overflow-y 0s 0.7s;
 }
 
 #hcont .header:not([open]).hidden *:not(.right, .menu-toggle, .menu-toggle .bar) {
-    transition: color 0.1s 0.5s, visibility 0.1s 0.5s, transform 0.7s !important;
+    transition: color 0.1s, visibility 0.1s, transform 0.7s !important;
 }
 
 #hcont .header:not([open]).hidden .left,
 #hcont .header:not([open]).hidden .left * {
-    transition: color 0.1s 0.2s, visibility 0.1s 0.5s, opacity 0.1s 0.5s, transform 0.7s !important;
+    transition: color 0.1s, visibility 0.1s, opacity 0.1s, transform 0.7s !important;
+}
+
+/* Preserve the legacy stagger only while the mobile menu is closing. */
+@media (max-width: 699.99999px) {
+    #hcont .header[data-closing]:not([open]).hidden {
+        transition: background-color 0.1s 0.5s, backdrop-filter 0.05s 0.55s, -webkit-backdrop-filter 0.05s 0.55s, height 0.7s, overflow-y 0s 0.7s;
+    }
+
+    #hcont .header[data-closing]:not([open]).hidden *:not(.right, .menu-toggle, .menu-toggle .bar) {
+        transition: color 0.1s 0.5s, visibility 0.1s 0.5s, transform 0.7s !important;
+    }
+
+    #hcont .header[data-closing]:not([open]).hidden .left,
+    #hcont .header[data-closing]:not([open]).hidden .left * {
+        transition: color 0.1s 0.2s, visibility 0.1s 0.5s, opacity 0.1s 0.5s, transform 0.7s !important;
+    }
 }
 
 #hcont .header:not([open]) *:not(.right, .menu-toggle, .menu-toggle .bar) {

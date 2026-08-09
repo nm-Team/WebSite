@@ -16,16 +16,37 @@ window.onload = function () {
 	accountBox.setAttribute("onclick", "window.location.href='" + logURL + "'");
 }
 
+let headerCloseTimerId;
+function clearHeaderClosingState(pageHeader) {
+	clearTimeout(headerCloseTimerId);
+	pageHeader.removeAttribute("data-closing");
+}
+
 function openHeader(to) {
-	if (to === false || (to !== true && document.getElementById("pageHeader").getAttribute("open") == "true")) {
-		document.getElementById("pageHeader").removeAttribute("open");
+	const pageHeader = document.getElementById("pageHeader");
+	const isOpen = pageHeader.getAttribute("open") === "true";
+	if (to === false || (to !== true && isOpen)) {
+		if (isOpen) {
+			clearHeaderClosingState(pageHeader);
+			pageHeader.setAttribute("data-closing", "true");
+			headerCloseTimerId = setTimeout(function () {
+				pageHeader.removeAttribute("data-closing");
+			}, 700);
+		}
+		pageHeader.removeAttribute("open");
 		document.body.style.overflow = "auto";
 	}
 	else {
-		document.getElementById("pageHeader").setAttribute("open", "true");
+		clearHeaderClosingState(pageHeader);
+		pageHeader.setAttribute("open", "true");
 		document.body.style.overflow = "hidden";
 	}
 }
+
+window.addEventListener("scroll", function () {
+	const pageHeader = document.getElementById("pageHeader");
+	if (pageHeader.hasAttribute("data-closing")) clearHeaderClosingState(pageHeader);
+}, { passive: true });
 
 window.onresize = function () {
 	openHeader(false);
