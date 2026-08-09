@@ -582,7 +582,7 @@ html[data-theme=dark] body {
     }
 
     #fcont .footer-table {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 22px 16px;
         margin-bottom: 26px;
     }
