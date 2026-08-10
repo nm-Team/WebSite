@@ -121,17 +121,6 @@ bs {
     opacity: 1;
 }
 
-.products_footer {
-    position: relative;
-    display: block;
-    margin-top: 20px;
-    margin-bottom: -20px;
-    padding: 16px 10% 33px 10%;
-    color: var(--products-footer);
-    background-color: var(--products-footer-bgcolor);
-    font-size: 13px;
-}
-
 .products_footer * {
     margin: 0;
     margin-top: -60px;
