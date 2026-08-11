@@ -80,20 +80,32 @@ function nmSettleBrandTransition(f) {
     brand.style.removeProperty("transition");
 }
 
+// Cancel a still-running fly-back animation on a hero element.
+function nmCancelSourceMotion(f) {
+    if (!f.sourceMotion) return;
+    f.sourceMotion.cancel();
+    f.sourceMotion = null;
+}
+
 // Fly a fixed-position clone of the hero element onto its header counterpart.
+// Motion runs through the Web Animations API: transform/opacity animations
+// are compositor-driven on mobile Safari with a timeline independent of
+// style resolution, so the flight plays to completion even while the browser
+// toolbar collapses/expands mid-scroll — a CSS transition started during
+// that window can be truncated and jump to its end state early.
 function nmFlyForward(f, generation, onDone) {
     if (!f.source || !f.target) { onDone(); return; }
-    // Cancel any still-running entrance animation and flush, so every
+    // Cancel any still-running entrance/fly-back animation, so every
     // measurement below reflects the element's natural position.
+    nmCancelSourceMotion(f);
     f.source.style.animation = "none";
     f.source.style.transition = "none";
     f.source.style.transform = "";
-    void f.source.offsetHeight;
     nmSettleBrandTransition(f);
 
     // If a previous flight is still airborne, its current rendered rect is
     // the visual starting point; the fresh clone reproduces it below with an
-    // initial transform on top of the source's natural geometry.
+    // initial keyframe on top of the source's natural geometry.
     var interrupted = nmKillClone(f);
 
     var fromBox = f.source.getBoundingClientRect();
@@ -103,11 +115,16 @@ function nmFlyForward(f, generation, onDone) {
 
     var from = nmRectCenter(fromAnchor);
     var to = nmRectCenter(toAnchor);
-    var d = {
-        dx: to.x - from.x,
-        dy: to.y - from.y,
-        scale: nmUniformScale(f, fromAnchor, toAnchor)
-    };
+    var startTransform = "translate(0px, 0px) scale(1)";
+    if (interrupted) {
+        var cur = nmRectCenter(f.lastCloneRect);
+        var startScale = fromBox.width > 0 ? f.lastCloneRect.width / fromBox.width : 1;
+        startTransform = "translate(" + (cur.x - from.x).toFixed(2) + "px, " +
+            (cur.y - from.y).toFixed(2) + "px) scale(" + startScale.toFixed(4) + ")";
+    }
+    var endTransform = "translate(" + (to.x - from.x).toFixed(2) + "px, " +
+        (to.y - from.y).toFixed(2) + "px) scale(" +
+        nmUniformScale(f, fromAnchor, toAnchor).toFixed(4) + ")";
 
     var clone = f.source.cloneNode(true);
     clone.setAttribute("aria-hidden", "true");
@@ -124,50 +141,38 @@ function nmFlyForward(f, generation, onDone) {
     clone.style.opacity = "1";
     clone.style.zIndex = "999";
     clone.style.pointerEvents = "none";
-    if (interrupted) {
-        var cur = nmRectCenter(f.lastCloneRect);
-        var startScale = fromBox.width > 0 ? f.lastCloneRect.width / fromBox.width : 1;
-        clone.style.transform = "translate(" + (cur.x - from.x).toFixed(2) + "px, " +
-            (cur.y - from.y).toFixed(2) + "px) scale(" + startScale.toFixed(4) + ")";
-    }
     document.body.appendChild(clone);
     f.clone = clone;
 
     f.source.style.visibility = "hidden";
 
-    // Commit the start state before the next frame applies the destination.
-    void clone.offsetHeight;
-
-    requestAnimationFrame(function () {
+    // fill: "forwards" holds the landing pose until the handoff fade removes
+    // the clone. The finished promise always settles — unlike transitionend,
+    // it cannot be lost to a mid-flight style recalculation.
+    var motion = clone.animate([
+        { transform: startTransform },
+        { transform: endTransform }
+    ], {
+        duration: nmFlightDuration,
+        easing: nmFlightEase,
+        fill: "forwards"
+    });
+    f.cloneMotion = motion;
+    motion.finished.then(function () {
         if (generation !== nmAnimationGeneration || f.clone !== clone) return;
-        clone.style.transition = "transform " + nmFlightDuration + "ms " + nmFlightEase;
-        clone.style.transform = "translate(" + d.dx.toFixed(2) + "px, " + d.dy.toFixed(2) + "px)" +
-            " scale(" + d.scale.toFixed(4) + ")";
-    });
-
-    var finished = false;
-    var fallback;
-    var finish = function () {
-        if (finished) return;
-        finished = true;
         onDone();
-    };
-    clone.addEventListener("transitionend", function onEnd(ev) {
-        if (ev.target !== clone || ev.propertyName !== "transform") return;
-        clone.removeEventListener("transitionend", onEnd);
-        clearTimeout(fallback);
-        finish();
+    }).catch(function () {
+        // Canceled: a newer generation interrupted this flight.
     });
-    fallback = setTimeout(finish, nmFlightDuration + 160);
 }
 
-// Fly the original element back into the hero by transitioning its transform to base.
+// Fly the original element back into the hero by animating its transform to base.
 function nmFlyBack(f, generation) {
     if (!f.source || !f.target) return;
+    nmCancelSourceMotion(f);
     f.source.style.animation = "none";
     f.source.style.transition = "none";
     f.source.style.transform = "";
-    void f.source.offsetHeight;
     nmSettleBrandTransition(f);
     var naturalBox = f.source.getBoundingClientRect();
     var naturalAnchor = f.scaleByFont ? nmGlyphRect(f.source) : naturalBox;
@@ -188,40 +193,41 @@ function nmFlyBack(f, generation) {
     }
 
     var natural = nmRectCenter(naturalAnchor);
-    var d = {
-        dx: from.x - natural.x,
-        dy: from.y - natural.y,
-        scale: scale
-    };
-    f.source.style.transform = f.base +
-        " translate(" + d.dx.toFixed(2) + "px, " + d.dy.toFixed(2) + "px) scale(" + d.scale.toFixed(4) + ")";
+    var startTransform = f.base +
+        " translate(" + (from.x - natural.x).toFixed(2) + "px, " +
+        (from.y - natural.y).toFixed(2) + "px) scale(" + scale.toFixed(4) + ")";
     f.source.style.visibility = "visible";
 
-    // Commit the translated start state before returning to the hero position.
-    void f.source.offsetHeight;
-
     // Animate to an explicit transform with the same function-list shape as
-    // the start state. Assigning the empty base would REMOVE the inline
-    // property, and iOS WebKit does not start a transition on property
-    // removal — the wordmark snapped to full size instead of growing.
-    var endTransform = f.base || "translate(0px, 0px) scale(1)";
-    requestAnimationFrame(function () {
-        if (generation !== nmAnimationGeneration || f.source.style.visibility === "hidden") return;
-        f.source.style.transition = "transform " + nmFlightDuration + "ms " + nmFlightEase;
-        f.source.style.transform = endTransform;
-        setTimeout(function () {
-            if (generation !== nmAnimationGeneration || f.source.style.visibility === "hidden") return;
-            f.source.style.transition = "";
-            // Settle back to the pure stylesheet state (identity == none).
-            if (!f.base) f.source.style.transform = "";
-        }, nmFlightDuration + 60);
+    // the start state. The final keyframe equals the stylesheet resting
+    // state, so the element settles without a snap when the animation ends
+    // — including on iOS WebKit, which does not start a transition on
+    // property removal.
+    var motion = f.source.animate([
+        { transform: startTransform },
+        { transform: f.base || "translate(0px, 0px) scale(1)" }
+    ], {
+        duration: nmFlightDuration,
+        easing: nmFlightEase
+    });
+    f.sourceMotion = motion;
+    motion.finished.then(function () {
+        if (generation !== nmAnimationGeneration || f.sourceMotion !== motion) return;
+        f.sourceMotion = null;
+        f.source.style.transition = "";
+    }).catch(function () {
+        // Canceled: a forward flight interrupted the return.
     });
 }
 
 // Remove a live flight clone, remembering its current rendered rect for seamless retargeting.
 function nmKillClone(f) {
     if (!f.clone) return false;
+    // Measured while the flight animation is still attached, so the rect
+    // reflects the clone's current mid-air pose.
     f.lastCloneRect = f.clone.getBoundingClientRect();
+    if (f.cloneMotion) f.cloneMotion.cancel();
+    f.cloneMotion = null;
     f.clone.remove();
     f.clone = null;
     return true;
@@ -232,33 +238,23 @@ function nmFadeCloneIntoHeader(f, generation) {
     var clone = f.clone;
     if (!clone) return;
 
-    clone.style.transition = "none";
-    clone.style.opacity = "1";
-    void clone.offsetHeight;
-
-    requestAnimationFrame(function () {
-        if (generation !== nmAnimationGeneration || !nmMorphed || f.clone !== clone) return;
-
-        var finished = false;
-        var fallback;
-        var finish = function () {
-            if (finished) return;
-            finished = true;
-            clearTimeout(fallback);
-            clone.removeEventListener("transitionend", onEnd);
-            if (generation !== nmAnimationGeneration || f.clone !== clone) return;
-            clone.remove();
-            f.clone = null;
-        };
-        var onEnd = function (ev) {
-            if (ev.target !== clone || ev.propertyName !== "opacity") return;
-            finish();
-        };
-
-        clone.addEventListener("transitionend", onEnd);
-        clone.style.transition = "opacity " + nmHandoffDuration + "ms " + nmHandoffEase;
-        clone.style.opacity = "0";
-        fallback = setTimeout(finish, nmHandoffDuration + 160);
+    // The landed flight animation keeps its fill and holds the clone's pose;
+    // only the opacity fades here.
+    var motion = clone.animate([
+        { opacity: 1 },
+        { opacity: 0 }
+    ], {
+        duration: nmHandoffDuration,
+        easing: nmHandoffEase,
+        fill: "forwards"
+    });
+    motion.finished.then(function () {
+        if (generation !== nmAnimationGeneration || f.clone !== clone) return;
+        clone.remove();
+        f.clone = null;
+        f.cloneMotion = null;
+    }).catch(function () {
+        // Canceled: a newer generation interrupted the handoff.
     });
 }
 
@@ -314,7 +310,14 @@ function nmApplyState(morphed) {
 function setHeader() {
     if (!nmHero) return;
     var heroH = nmHero.getBoundingClientRect().height;
-    nmApplyState(window.scrollY > Math.max(heroH * 0.5, 120));
+    var threshold = Math.max(heroH * 0.5, 120);
+    // Hysteresis around the trigger point: mobile Safari nudges scrollY and
+    // fires extra scroll/resize events while its toolbar collapses or expands
+    // (a viewport height change), which used to flip the state back and forth
+    // mid-flight near the threshold and cut the animation short.
+    nmApplyState(nmMorphed === true
+        ? window.scrollY > threshold - 36
+        : window.scrollY > threshold);
 }
 
 window.onscroll = setHeader;
