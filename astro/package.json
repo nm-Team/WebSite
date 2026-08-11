@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "sync:locales": "node scripts/sync-locales.mjs",
     "dev": "astro dev",
@@ -22,7 +25,7 @@
     "@playwright/test": "^1.54.1",
     "@typescript-eslint/eslint-plugin": "^8.43.0",
     "@typescript-eslint/parser": "^8.43.0",
-    "astro": "^5.13.5",
+    "astro": "^7.1.1",
     "astro-eslint-parser": "^1.4.0",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
