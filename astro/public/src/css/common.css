@@ -228,6 +228,17 @@ a:not(.footer-link):visited {
     letter-spacing: 0;
 }
 
+.page-section .page-section-heading {
+    margin: 0;
+    padding: 10px 10%;
+    font-size: clamp(26px, 3.4vw, 34px);
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color-text-accent);
+    letter-spacing: 0;
+}
+
 .tabs__panels .tabs__panel h2,
 .tabs__panels .tabs__panel h3 {
     padding: 10px 0 8px;

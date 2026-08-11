@@ -167,14 +167,14 @@
     justify-content: center;
 }
 
-.detail-block[data-block-type=subtitle] .h1 {
+.detail-block[data-block-type=subtitle] .subtitle-eyebrow {
     font-size: 19px;
     font-weight: 600;
     opacity: 0.62;
     margin-bottom: 3px;
 }
 
-.detail-block[data-block-type=subtitle] .h2 {
+.detail-block[data-block-type=subtitle] .subtitle-heading {
     font-size: 30px;
     font-weight: 800;
     line-height: 1.31;

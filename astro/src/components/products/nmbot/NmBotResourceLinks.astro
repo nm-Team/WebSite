@@ -43,7 +43,7 @@ const resources = [
   {resources.map((resource) => (
     <div class="resource-item fade-in">
       <div class="image" style={`background-image: url("${nmBotAsset(resource.image)}");`}></div>
-      <div class="title" set:html={renderNmBotText(locale, resource.titleKey, textContext)} />
+      <h3 class="title" set:html={renderNmBotText(locale, resource.titleKey, textContext)} />
       <div class="content" set:html={renderNmBotText(locale, resource.contentKey, textContext)} />
       <div class="link">
         <a href={resource.href} target="_blank" rel="noopener noreferrer" class="link-a" set:html={renderNmBotText(locale, resource.linkKey, textContext)} />

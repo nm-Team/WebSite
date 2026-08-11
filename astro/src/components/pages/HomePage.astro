@@ -20,14 +20,15 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
   window.newsRoomLoadFailedI18n = newsRoomLoadFailedI18n;
   window.newsRoomRetryI18n = newsRoomRetryI18n;
 </script>
+<h1 class="indexHeaderTitle">nmTeam</h1>
 <div class="indexHeader">
   <div class="indexHeaderBg" aria-hidden="true"></div>
   <div class="indexHeaderLogo" aria-hidden="true"></div>
-  <div class="indexHeaderName">nmTeam</div>
+  <div class="indexHeaderName" aria-hidden="true">nmTeam</div>
 </div>
 <div class="page-content">
   <div class="page-section page-section--centered page-section--indented">
-    <h1>{t(locale, 'index.what_is_nmteam')}</h1>
+    <h2 class="page-section-heading">{t(locale, 'index.what_is_nmteam')}</h2>
     <p>{t(locale, 'index.nmteam_is_this_a')}</p>
     <p>{t(locale, 'index.nmteam_is_this_b')}</p>
     <div class="action-links">
@@ -38,7 +39,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
     </div>
   </div>
   <div class="page-section page-section--centered page-section--indented">
-    <h1>{t(locale, 'index.what_we_does')}</h1>
+    <h2 class="page-section-heading">{t(locale, 'index.what_we_does')}</h2>
     <p>{t(locale, 'index.what_we_does_ans')}</p>
     <div class="swiper cardSwiper productsSwiper" data-grow>
       <div class="swiper-wrapper">
@@ -61,7 +62,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
     </div>
   </div>
   <div class="page-section page-section--centered page-section--indented">
-    <h1>{t(locale, 'index.newslist')}</h1>
+    <h2 class="page-section-heading">{t(locale, 'index.newslist')}</h2>
     <div class="swiper cardSwiper newsSwiper" data-grow>
       <div class="swiper-wrapper" id="newsSwiperItems">{t(locale, 'index.newslist_loading')}</div>
     </div>
@@ -73,14 +74,14 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
     </div>
   </div>
   <div class="page-section page-section--centered page-section--indented">
-    <h1>{t(locale, 'index.connect_us')}</h1>
+    <h2 class="page-section-heading">{t(locale, 'index.connect_us')}</h2>
     <p>{t(locale, 'index.connect_para')}</p>
     <div class="action-links">
       <a href="https://github.com/nm-Team" target="_blank"><b>GitHub&nbsp;</b>@nm-Team<Fragment set:html={externalIcon} /></a>
       <a href="https://t.me/nmteamnewsroom" target="_blank"><b>Telegram&nbsp;</b>@nmteamnewsroom<Fragment set:html={externalIcon} /></a>
       <a href="https://twitter.com/nmnmfun" target="_blank"><b>X&nbsp;</b>@nmnmfun<Fragment set:html={externalIcon} /></a>
     </div>
-    <h1>{t(locale, 'index.join_us')}</h1>
+    <h2 class="page-section-heading">{t(locale, 'index.join_us')}</h2>
     <p>{t(locale, 'index.join_para')}</p>
     <p>{t(locale, 'index.join_para_2')}</p>
     <div class="action-links">
