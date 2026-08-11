@@ -28,13 +28,18 @@ describe('phase 3 product and sponsor data', () => {
     expect(JSON.stringify(detail)).toContain('https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/mac.png');
   });
 
-  it('loads sponsor data at build time', () => {
+  it('loads valid sponsor data at build time', () => {
     const sponsorData = getSponsorData();
 
-    expect(sponsorData.update).toBe('20241020');
-    expect(sponsorData.sponsor[0]).toMatchObject({
-      name: '爱发电用户_8cd7b',
-      amount: '888.88',
-    });
+    expect(sponsorData.update).toMatch(/^\d{8}$/);
+    expect(sponsorData.sponsor.length).toBeGreaterThan(0);
+
+    for (const sponsor of sponsorData.sponsor) {
+      expect(sponsor.name.trim()).not.toBe('');
+      expect(sponsor.avatar).toMatch(/^https:\/\//);
+      expect(sponsor.amount).toMatch(/^\d+\.\d{2}$/);
+    }
+
+    expect(new Set(sponsorData.sponsor.map(({ name }) => name)).size).toBe(sponsorData.sponsor.length);
   });
 });
