@@ -93,3 +93,48 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
   </div>
 </div>
 <img src="https://websiteres.nmteam.xyz/nmwebsite/index/nmTeam_Website_Lemon_Line_Img.png" class="lemonLine" ondragstart="return false;" oncontextmenu="return false;" alt="Lemon Production Line" />
+<script is:inline>
+  // Replay the saved scroll position now that the whole page is parsed
+  // (native restoration is disabled in homeScrollRestore.js), then reveal
+  // the page (see the data-nm-home-restore rule in index.css). The reveal
+  // waits for document.fonts.ready: the webfont stylesheet loads
+  // asynchronously and the font swap grows the document by several hundred
+  // pixels, which would clamp the replayed scroll. Heights are otherwise
+  // CSS-reserved (hero, news swiper, lemon line image), so once fonts are
+  // in the saved target is reachable and the first painted frame is already
+  // at it. The timeout bounds the wait if the font CDN hangs, and the load
+  // handler re-applies the position in case async content still shifts.
+  try {
+    var nmHomeScrollSaved = parseInt(sessionStorage.getItem('nmHomeScrollY'), 10);
+    if (nmHomeScrollSaved > 0) {
+      var nmHomeScrollDone = false;
+      var nmHomeScrollReveal = function () {
+        document.documentElement.removeAttribute('data-nm-home-restore');
+        // Flush styles so the inherited visibility flip applies while header
+        // transitions are still suppressed, then re-enable them.
+        void document.body.offsetHeight;
+        document.documentElement.removeAttribute('data-nm-home-no-transition');
+      };
+      var nmHomeScrollFinish = function () {
+        if (nmHomeScrollDone) return;
+        nmHomeScrollDone = true;
+        window.scrollTo(0, nmHomeScrollSaved);
+        nmHomeScrollReveal();
+      };
+      window.scrollTo(0, nmHomeScrollSaved);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(nmHomeScrollFinish, nmHomeScrollFinish);
+        setTimeout(nmHomeScrollFinish, 1500);
+      } else {
+        nmHomeScrollFinish();
+      }
+      window.addEventListener('load', function () { window.scrollTo(0, nmHomeScrollSaved); });
+    } else {
+      document.documentElement.removeAttribute('data-nm-home-restore');
+      document.documentElement.removeAttribute('data-nm-home-no-transition');
+    }
+  } catch {
+    document.documentElement.removeAttribute('data-nm-home-restore');
+    document.documentElement.removeAttribute('data-nm-home-no-transition');
+  }
+</script>

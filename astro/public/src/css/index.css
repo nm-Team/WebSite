@@ -24,6 +24,23 @@ body {
     overflow-x: hidden;
 }
 
+/* Set by homeScrollRestore.js when a saved scroll position is replayed:
+   keep the page hidden until the inline script at the end of the home page
+   has scrolled to it, so the first painted frame is already in place. */
+html[data-nm-home-restore="pending"] body {
+    visibility: hidden;
+}
+
+/* While pending, the header already reaches its final (scrolled) state
+   before the page is revealed; suppress its staggered show transitions
+   (visibility has a 0.5s delay, and it also delays the inherited visibility
+   flip when the page is revealed) or the links would lag behind the reveal.
+   The selectors must out-specify header.css's !important transition rules. */
+html[data-nm-home-no-transition] #hcont #pageHeader,
+html[data-nm-home-no-transition] #hcont #pageHeader * {
+    transition: none !important;
+}
+
 /* ============ Hero ============ */
 .indexHeader {
     position: relative;
@@ -166,20 +183,6 @@ body {
     .indexHeaderBg,
     .indexHeaderLogo {
         animation: none !important;
-    }
-}
-
-.body {
-    animation: indexmain 1.6s;
-}
-
-@keyframes indexmain {
-    0% {
-        height: 0;
-    }
-
-    2% {
-        height: auto;
     }
 }
 
@@ -326,6 +329,14 @@ a.contact {
     text-align: center;
 }
 
+/* Reserve the loaded slides' height (slide height + 20px slide margins +
+   28px wrapper padding) while the newsroom AJAX request is in flight, so the
+   document does not grow mid-page and the browser can restore the previous
+   scroll position on the first attempt. */
+.newsSwiper {
+    min-height: calc(min(360px, 84vh) + 48px);
+}
+
 #newsSwiperItems .swiper-slide,
 #newsSwiperItems .swiper-slide * {
     position: relative;
@@ -415,6 +426,8 @@ a.contact {
 .lemonLine {
     display: block;
     width: min(80%, 900px);
+    aspect-ratio: 1296 / 393;
+    height: auto;
     margin: 24px auto 0;
     -webkit-user-select: none;
     -moz-user-select: none;
