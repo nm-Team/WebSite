@@ -1,19 +1,29 @@
-# nmTeam Official HomePage
-You can visit the site at [https://nmteam.xyz](https://nmteam.xyz?ref=nmTeam_GitHub_HomePage).
+# nmTeam Official Website
 
-![Website Screenshot][screenshot]
+The nmTeam website is a static [Astro](https://astro.build/) application. Visit the production site at [nmteam.xyz](https://nmteam.xyz?ref=nmTeam_GitHub_HomePage).
+
+![Website screenshot][screenshot]
 
 [screenshot]: https://websiteres.nmteam.xyz/github/nmTeam_Website_ScreenShot.png
 
-## Rewrite rules
-```nginx
-location ~ ^/products/overview/(?<product>[^/]+)$ {
-    rewrite ^ /products/overview.php?product=$product last;
-}
-location ~ ^/blackboard/questionnaire/(?<id>[^/]+)$ {
-    rewrite ^ /blackboard/questionnaire/index.php?id=$id last;
-}
-location / {
-    try_files $uri $uri/ $uri.php?$args;
-}
+## Development
+
+The application lives in [`astro/`](astro/).
+
+```shell
+cd astro
+pnpm install --frozen-lockfile
+pnpm dev
 ```
+
+Run the validation suite from the same directory:
+
+```shell
+pnpm check
+pnpm test
+pnpm lint
+pnpm build
+pnpm test:e2e
+```
+
+Legacy PHP URLs remain compatible through the static redirect rules in [`astro/public/_redirects`](astro/public/_redirects).
