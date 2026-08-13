@@ -22,7 +22,7 @@ const { locale, textContext, features, largerImage = false } = Astro.props;
   {features.map((feature) => (
     <div class="feature-detail-block-item fade-in">
       <div class="text">
-        <div class="text-title" set:html={renderNmBotText(locale, feature.titleKey, textContext)} />
+        <h3 class="text-title" set:html={renderNmBotText(locale, feature.titleKey, textContext)} />
         <div class="text-content" set:html={renderNmBotText(locale, feature.contentKey, textContext)} />
       </div>
       <NmBotImageBlock imageUrl={nmBotAsset(feature.image)} />

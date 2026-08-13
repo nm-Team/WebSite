@@ -18,7 +18,6 @@ interface Props {
 
 const { locale } = Astro.props;
 const textContext: NmBotTextContext = { footerNotes: [] };
-const headerTextContext: NmBotTextContext = { footerNotes: [] };
 const chatTypes = ['group', 'channel', 'private'] as const;
 const usageData = [
   ['14650', 'products.nmbot_telegram.usage.data.total_group_count'],
@@ -26,14 +25,6 @@ const usageData = [
   ['1088123', 'products.nmbot_telegram.usage.data.daily_message_count'],
   ['32723', 'products.nmbot_telegram.usage.data.chat_admin_count'],
 ] as const;
-
-const nmBotHeaderHTML = `
-  <div class="product-name">${renderNmBotText(locale, 'products.nmbot_telegram.header_name', headerTextContext)}</div>
-  <div class="action-buttons">
-    <a href="https://nmbot.nmnm.fun?ref=nmBotHeader" target="_blank" rel="noopener noreferrer" class="action-button">${renderNmBotText(locale, 'products.nmbot_telegram.go_to_panel', headerTextContext)}</a>
-    <a href="https://t.me/nmnmfunbot" target="_blank" rel="noopener noreferrer" class="action-button primary">${renderNmBotText(locale, 'products.nmbot_telegram.start_use', headerTextContext)}</a>
-  </div>
-`;
 
 const clientScript = `
 (() => {
@@ -391,17 +382,11 @@ const clientScript = `
   }
 
   function initProductHeader() {
-    const pageHeader = document.querySelector("#pageHeader");
-    if (!pageHeader || pageHeader.querySelector(".product-header")) return;
-    const header = document.createElement("div");
-    header.className = "product-header";
-    header.innerHTML = ${JSON.stringify(nmBotHeaderHTML)};
-    pageHeader.appendChild(header);
+    const nmBotHeader = document.querySelector("#pageHeader .product-header");
+    if (!nmBotHeader) return;
+    const pageHeaders = document.querySelectorAll("#pageHeader .left, #pageHeader .right, #pageHeader .menu-toggle");
     let lastScrollTop;
     function calcPageHeader() {
-      const pageHeaders = document.querySelectorAll("#pageHeader .left, #pageHeader .right, #pageHeader .menu-toggle");
-      const nmBotHeader = document.querySelector(".product-header");
-      if (!nmBotHeader) return;
       const scrollTop = document.documentElement.scrollTop;
       const scrollPercent = scrollTop / window.innerHeight;
       if (scrollPercent > 1 && (!lastScrollTop || scrollTop - lastScrollTop > 1)) {

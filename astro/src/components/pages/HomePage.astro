@@ -20,23 +20,26 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
   window.newsRoomLoadFailedI18n = newsRoomLoadFailedI18n;
   window.newsRoomRetryI18n = newsRoomRetryI18n;
 </script>
+<h1 class="indexHeaderTitle">nmTeam</h1>
 <div class="indexHeader">
-  <i></i>
+  <div class="indexHeaderBg" aria-hidden="true"></div>
+  <div class="indexHeaderLogo" aria-hidden="true"></div>
+  <div class="indexHeaderName" aria-hidden="true">nmTeam</div>
 </div>
-<div class="main">
-  <div class="mainBlock center widepadding">
-    <h1>{t(locale, 'index.what_is_nmteam')}</h1>
+<div class="page-content">
+  <div class="page-section page-section--centered page-section--indented">
+    <h2 class="page-section-heading">{t(locale, 'index.what_is_nmteam')}</h2>
     <p>{t(locale, 'index.nmteam_is_this_a')}</p>
     <p>{t(locale, 'index.nmteam_is_this_b')}</p>
-    <div class="indexMoreLinks">
+    <div class="action-links">
       <a target="_blank" href={href('/aboutus')}>
         <span>{t(locale, 'index.nmteam_about_link')}</span>
         <Fragment set:html={arrowIcon} />
       </a>
     </div>
   </div>
-  <div class="mainBlock center widepadding">
-    <h1>{t(locale, 'index.what_we_does')}</h1>
+  <div class="page-section page-section--centered page-section--indented">
+    <h2 class="page-section-heading">{t(locale, 'index.what_we_does')}</h2>
     <p>{t(locale, 'index.what_we_does_ans')}</p>
     <div class="swiper cardSwiper productsSwiper" data-grow>
       <div class="swiper-wrapper">
@@ -49,42 +52,39 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
         <a href={href('/products/overview/nmBrowser-StartPage')} target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@128.png)">
           <p>nmBrowser StartPage</p>
         </a>
-        <a href={href('/products/overview/nmFun')} target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmFun/logo.svg)">
-          <p>nmFun</p>
-        </a>
       </div>
     </div>
-    <div class="indexMoreLinks">
+    <div class="action-links">
       <a target="_blank" href={href('/products')}>
         <span>{t(locale, 'index.more_products')}</span>
         <Fragment set:html={arrowIcon} />
       </a>
     </div>
   </div>
-  <div class="mainBlock center widepadding">
-    <h1>{t(locale, 'index.newslist')}</h1>
+  <div class="page-section page-section--centered page-section--indented">
+    <h2 class="page-section-heading">{t(locale, 'index.newslist')}</h2>
     <div class="swiper cardSwiper newsSwiper" data-grow>
       <div class="swiper-wrapper" id="newsSwiperItems">{t(locale, 'index.newslist_loading')}</div>
     </div>
-    <div class="indexMoreLinks">
+    <div class="action-links">
       <a target="_blank" rel="noopener noreferrer" href="https://newsroom.nmteam.xyz?ref=nmteam.xyz">
         <span>{t(locale, 'index.newslist_more')}</span>
         <Fragment set:html={externalIcon} />
       </a>
     </div>
   </div>
-  <div class="mainBlock center widepadding">
-    <h1>{t(locale, 'index.connect_us')}</h1>
+  <div class="page-section page-section--centered page-section--indented">
+    <h2 class="page-section-heading">{t(locale, 'index.connect_us')}</h2>
     <p>{t(locale, 'index.connect_para')}</p>
-    <div class="indexMoreLinks">
+    <div class="action-links">
       <a href="https://github.com/nm-Team" target="_blank"><b>GitHub&nbsp;</b>@nm-Team<Fragment set:html={externalIcon} /></a>
       <a href="https://t.me/nmteamnewsroom" target="_blank"><b>Telegram&nbsp;</b>@nmteamnewsroom<Fragment set:html={externalIcon} /></a>
       <a href="https://twitter.com/nmnmfun" target="_blank"><b>X&nbsp;</b>@nmnmfun<Fragment set:html={externalIcon} /></a>
     </div>
-    <h1>{t(locale, 'index.join_us')}</h1>
+    <h2 class="page-section-heading">{t(locale, 'index.join_us')}</h2>
     <p>{t(locale, 'index.join_para')}</p>
     <p>{t(locale, 'index.join_para_2')}</p>
-    <div class="indexMoreLinks">
+    <div class="action-links">
       <a target="_blank" href={href('/join')}>
         <span>{t(locale, 'index.join_us_link')}</span>
         <Fragment set:html={arrowIcon} />
@@ -93,3 +93,48 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
   </div>
 </div>
 <img src="https://websiteres.nmteam.xyz/nmwebsite/index/nmTeam_Website_Lemon_Line_Img.png" class="lemonLine" ondragstart="return false;" oncontextmenu="return false;" alt="Lemon Production Line" />
+<script is:inline>
+  // Replay the saved scroll position now that the whole page is parsed
+  // (native restoration is disabled in homeScrollRestore.js), then reveal
+  // the page (see the data-nm-home-restore rule in index.css). The reveal
+  // waits for document.fonts.ready: the webfont stylesheet loads
+  // asynchronously and the font swap grows the document by several hundred
+  // pixels, which would clamp the replayed scroll. Heights are otherwise
+  // CSS-reserved (hero, news swiper, lemon line image), so once fonts are
+  // in the saved target is reachable and the first painted frame is already
+  // at it. The timeout bounds the wait if the font CDN hangs, and the load
+  // handler re-applies the position in case async content still shifts.
+  try {
+    var nmHomeScrollSaved = parseInt(sessionStorage.getItem('nmHomeScrollY'), 10);
+    if (nmHomeScrollSaved > 0) {
+      var nmHomeScrollDone = false;
+      var nmHomeScrollReveal = function () {
+        document.documentElement.removeAttribute('data-nm-home-restore');
+        // Flush styles so the inherited visibility flip applies while header
+        // transitions are still suppressed, then re-enable them.
+        void document.body.offsetHeight;
+        document.documentElement.removeAttribute('data-nm-home-no-transition');
+      };
+      var nmHomeScrollFinish = function () {
+        if (nmHomeScrollDone) return;
+        nmHomeScrollDone = true;
+        window.scrollTo(0, nmHomeScrollSaved);
+        nmHomeScrollReveal();
+      };
+      window.scrollTo(0, nmHomeScrollSaved);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(nmHomeScrollFinish, nmHomeScrollFinish);
+        setTimeout(nmHomeScrollFinish, 1500);
+      } else {
+        nmHomeScrollFinish();
+      }
+      window.addEventListener('load', function () { window.scrollTo(0, nmHomeScrollSaved); });
+    } else {
+      document.documentElement.removeAttribute('data-nm-home-restore');
+      document.documentElement.removeAttribute('data-nm-home-no-transition');
+    }
+  } catch {
+    document.documentElement.removeAttribute('data-nm-home-restore');
+    document.documentElement.removeAttribute('data-nm-home-no-transition');
+  }
+</script>

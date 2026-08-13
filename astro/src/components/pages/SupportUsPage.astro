@@ -21,16 +21,30 @@ const arrowIcon =
     line-height: 2;
     margin: 0 auto 30px auto;
     table-layout: fixed;
-    border-collapse: collapse;
-    overflow-x: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-text-primary);
+  }
+
+  .sTab tr + tr td {
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .sTab td {
+    padding: 10px 16px;
   }
 
   .sTab thead {
-    font-weight: bold;
+    font-weight: 700;
+    background: var(--color-surface-secondary);
   }
 
   .sTab td:first-child {
-    padding: 5px 0;
     display: flex;
     align-items: center;
     min-width: 0;
@@ -51,7 +65,7 @@ const arrowIcon =
     background-image: url(https://static.hdslb.com/images/akari.jpg);
     background-size: 30px 30px;
     border-radius: 20px;
-    margin-right: 4px;
+    margin-right: 8px;
   }
 
   .sTab td + td {
@@ -59,43 +73,44 @@ const arrowIcon =
     min-width: 5em;
     width: 8em;
     white-space: nowrap;
+    color: var(--color-text-muted);
   }
 </style>
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1>{t(locale, 'supportus.title')}</h1>
 </div>
-<div class="main mainBlock">
+<div class="page-content page-section">
   <p set:html={t(locale, 'supportus.para')} />
   <br />
-  <div class="tabView sponsorTab" id="sponsorTab">
-    <div class="tabHeader">
+  <div class="tabs sponsorTab" id="sponsorTab">
+    <div class="tabs__list">
       <button data-tab="afdian">{t(locale, 'supportus.links.afdian')}</button>
       <button data-tab="patreon">{t(locale, 'supportus.links.patreon')}</button>
       <button data-tab="crypto">{t(locale, 'supportus.crypto')}</button>
     </div>
-    <div class="tabContents">
-      <div class="content" data-tab="afdian">
-        <div class="indexMoreLinks">
+    <div class="tabs__panels">
+      <div class="tabs__panel" data-tab="afdian">
+        <div class="action-links">
           <a target="_blank" href="https://afdian.com/@nmTeam?ref=nmteam.xyz">
             <span>{t(locale, 'supportus.links.afdian')}</span>
             <Fragment set:html={externalLinkIcon} />
           </a>
         </div>
       </div>
-      <div class="content" data-tab="patreon">
-        <div class="indexMoreLinks">
+      <div class="tabs__panel" data-tab="patreon">
+        <div class="action-links">
           <a target="_blank" href="https://www.patreon.com/nmteam?ref=nmteam.xyz">
             <span>{t(locale, 'supportus.links.patreon')}</span>
             <Fragment set:html={externalLinkIcon} />
           </a>
         </div>
       </div>
-      <div class="content" data-tab="crypto">
+      <div class="tabs__panel" data-tab="crypto">
         <p>
           {t(locale, 'supportus.crypto_address')}:
           <span class="address" style="user-select: all; -webkit-user-select: all;">TWvJ6bghs8XM38VHDvUV9unJGZzbnmTeam</span>
         </p>
-        <div class="indexMoreLinks">
+        <div class="action-links">
           <a target="_self" href="#" onclick="copyCryptoAddress()">
             <span>{t(locale, 'supportus.copy_crypto_address')}</span>
             <Fragment set:html={arrowIcon} />
@@ -106,7 +121,7 @@ const arrowIcon =
           {t(locale, 'supportus.crypto_only_accept_tron')}
         </p>
         <p>
-          <img src="/src/img/tron.jpg" alt="TRON" style="width: 100%; max-width: 300px;" />
+          <img src="/src/img/tron.jpg" alt="TRON" style="width: 100%; max-width: 300px; border-radius: var(--radius-md);" />
         </p>
       </div>
     </div>
@@ -142,12 +157,12 @@ const arrowIcon =
       }
     </tbody>
   </table>
-  <p class="updateDate" style="font-size: 14px;" set:html={t(locale, 'supportus.sponsors_info_note')} />
+  <p class="page-updated-at" style="font-size: 14px;" set:html={t(locale, 'supportus.sponsors_info_note')} />
 </div>
 <script is:inline define:vars={{ copySuccess: t(locale, 'supportus.copy_crypto_address_success') }}>
   window.copyCryptoAddress = () => {
     const el = document.createElement('textarea');
-    el.value = document.querySelector('.content[data-tab="crypto"] span.address').innerText;
+    el.value = document.querySelector('.tabs__panel[data-tab="crypto"] span.address').innerText;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');

@@ -20,6 +20,8 @@ interface Props {
   pageUpdate?: string;
   constTheme?: string;
   disallowHideHeader?: boolean;
+  hideHeaderTitle?: boolean;
+  productHeaderHtml?: string;
   enableLanguageRedirect?: boolean;
   htmlData?: Record<string, string>;
 }
@@ -39,6 +41,8 @@ const {
   pageUpdate = '',
   constTheme,
   disallowHideHeader = false,
+  hideHeaderTitle = false,
+  productHeaderHtml,
   enableLanguageRedirect = false,
   htmlData = {},
 } = Astro.props;
@@ -68,7 +72,7 @@ const clearLegacyLanParamScript = Astro.url.searchParams.has('lan') ? "const url
     />
   </head>
   <body>
-    <Header locale={lang} disallowHideHeader={disallowHideHeader} />
+    <Header locale={lang} disallowHideHeader={disallowHideHeader} hideHeaderTitle={hideHeaderTitle} productHeaderHtml={productHeaderHtml} />
     <script is:inline src="/src/js/header.js"></script>
     <script is:inline src="/src/js/jquery.min.js"></script>
     <slot />

@@ -12,17 +12,17 @@ const lang = 'en';
   pageUpdate="19700101"
   lang={lang}
 >
-  <div class="title center">
+  <div class="page-title page-title--centered">
     <h1>Oops!</h1>
   </div>
-  <div class="main">
+  <div class="page-content">
     <p>
       <center>
-        <img src="/src/img/notfound.png" style="width: 85%; max-width: 700px;" alt={t(lang, 'pagebases.page_not_found.img_title')} />
+        <img src="/src/img/notfound.png" style="width: 85%; max-width: 700px; border-radius: var(--radius-md);" alt={t(lang, 'pagebases.page_not_found.img_title')} />
       </center>
     </p>
     <div>
-      <div class="indexMoreLinks">
+      <div class="action-links">
         <a target="_self" href="/">
           <span>{t(lang, 'pagebases.page_not_found.home')}</span>
           <svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">

@@ -4,6 +4,7 @@ import { routeManifest, type RouteEntry } from '@/i18n/routes';
 import PageContent from '@/components/pages/PageContent.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getProductDetail } from '@/data/products/loader';
+import { buildNmBotProductHeaderHtml } from '@/components/products/nmbot/productHeader';
 import { t } from '@/i18n/translate';
 
 export function getStaticPaths() {
@@ -53,6 +54,8 @@ if (route.kind === 'generic-product-page' && route.productSlug) {
   constTheme={route.id === 'products-overview-nmbot-telegram' ? 'dark' : undefined}
   htmlData={route.id === 'products-overview-nmbot-telegram' ? { 'data-nmbot-page': 'true' } : undefined}
   disallowHideHeader={route.id === 'products-overview-nmbot-telegram'}
+  hideHeaderTitle={route.id === 'home'}
+  productHeaderHtml={route.id === 'products-overview-nmbot-telegram' ? buildNmBotProductHeaderHtml(currentLocale) : undefined}
   lang={currentLocale}
 >
   <PageContent route={route} locale={currentLocale} />

@@ -26,7 +26,7 @@ function formatPageUpdate(update: string): string {
 
 const updateText = formatPageUpdate(pageUpdate);
 ---
-{updateText && <div class="updateDate">{updateText}</div>}
+{updateText && <div class="page-updated-at">{updateText}</div>}
 <div id="fcont">
   <div class="footer-body">
     <div class="footer-table">
@@ -59,15 +59,15 @@ const updateText = formatPageUpdate(pageUpdate);
       <div class="left">
         <p>{t(locale, 'footer.cr')}<br /></p>
         <p>
-          <a class="footer-a" href={href('/legal/network-service-protocol')} target="_blank" rel="noopener noreferrer">{t(locale, 'footer.svca')}</a>
+          <a class="footer-link" href={href('/legal/network-service-protocol')} target="_blank" rel="noopener noreferrer">{t(locale, 'footer.svca')}</a>
           |
-          <a class="footer-a" href={href('/legal/privacy-policy')} target="_blank" rel="noopener noreferrer">{t(locale, 'footer.svcb')}</a>
+          <a class="footer-link" href={href('/legal/privacy-policy')} target="_blank" rel="noopener noreferrer">{t(locale, 'footer.svcb')}</a>
           |
-          <a class="footer-a" href={href('/cookies')} target="_blank" rel="noopener noreferrer">Cookies</a>
+          <a class="footer-link" href={href('/cookies')} target="_blank" rel="noopener noreferrer">Cookies</a>
           |
-          <a class="footer-a" href={href('/sitemap')} target="_blank" rel="noopener noreferrer">{t(locale, 'footer.sitemap')}</a>
+          <a class="footer-link" href={href('/sitemap')} target="_blank" rel="noopener noreferrer">{t(locale, 'footer.sitemap')}</a>
         </p>
-        <p><span>{t(locale, 'footer.email')}</span><a class="footer-a" href="mailto:support@nmteam.xyz" target="_blank" rel="noopener noreferrer">support@nmteam.xyz</a></p>
+        <p><span>{t(locale, 'footer.email')}</span><a class="footer-link" href="mailto:support@nmteam.xyz" target="_blank" rel="noopener noreferrer">support@nmteam.xyz</a></p>
       </div>
       <div class="right">
         <i
@@ -79,13 +79,13 @@ const updateText = formatPageUpdate(pageUpdate);
     </div>
   </div>
   <div class="pageDialogs">
-    <div class="pageConfirmDialog" id="pageCookieConfirmDialog">
-      <div class="pageConfirmDialogHeader">{t(locale, 'cookie.cookieConfirmDialog.header')}</div>
-      <div class="pageConfirmDialogBody">
+    <div class="cookie-consent" id="pageCookieConfirmDialog">
+      <div class="cookie-consent__header">{t(locale, 'cookie.cookieConfirmDialog.header')}</div>
+      <div class="cookie-consent__body">
         <p set:html={html(t(locale, 'cookie.cookieConfirmDialog.body.0'))}></p>
         <p set:html={html(t(locale, 'cookie.cookieConfirmDialog.body.1'))}></p>
       </div>
-      <div class="pageConfirmDialogFooter">
+      <div class="cookie-consent__footer">
         <button onclick={`window.location.href='${href('/cookies')}'`}>{t(locale, 'cookie.cookieConfirmDialog.button.customize')}</button>
         <button onclick="localStorage.cookieTipv0Checked = 'true'; pageCookieConfirmDialog.setAttribute('data-status', 'close');">
           {t(locale, 'cookie.cookieConfirmDialog.button.accept')}

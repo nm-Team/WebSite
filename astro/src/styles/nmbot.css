@@ -59,6 +59,8 @@ html[data-nmbot-page="true"] {
 
     .nmbot-telegram .header .name {
         position: absolute;
+        margin: 0;
+        padding: 0;
         top: 72%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -66,6 +68,18 @@ html[data-nmbot-page="true"] {
         height: calc(min(60vw, 30vh, 200rem) * 0.285);
         background-image: url("https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/v2/website intro header name.png");
         background-size: cover; background-position: center; background-repeat: no-repeat;
+    }
+
+    .nmbot-telegram .heading-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
     }
 
     .nmbot-telegram .header .description {
@@ -159,7 +173,7 @@ html[data-nmbot-page="true"] {
     .nmbot-telegram .feature-detail-block-item .text-title {
         font-size: 22rem;
         font-weight: 500;
-        margin-bottom: 3rem;
+        margin: 0 0 3rem;
         line-height: 1.5;
     }
 
@@ -648,21 +662,38 @@ html[data-nmbot-page="true"] {
 html[data-nmbot-page="true"] .product-header {
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translate(-50%, 120%);
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        transform: translate(0, 120%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        transition: transform 0.4s;
+        pointer-events: none;
+    }
+
+    html[data-nmbot-page="true"] #hcont .product-header {
+        padding: 0 10%;
+    }
+
+    html[data-nmbot-page="true"] .product-header .product-header-inner {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: calc(80vw);
-        height: 100%;
-        max-width: 990rem;
-        margin: auto;
-        transition: all 0.4s;
+        width: 100%;
+        max-width: 990px;
+    }
+
+    html[data-nmbot-page="true"] .product-header[data-hide=false] {
+        pointer-events: auto;
     }
 
     html[data-nmbot-page="true"] .product-header .product-name {
-        font-size: 20rem;
+        font-size: 20px;
         font-weight: 500;
         color: var(--header-name);
     }
@@ -675,13 +706,13 @@ html[data-nmbot-page="true"] .product-header {
     }
 
     html[data-nmbot-page="true"] .product-header .action-button {
-        padding: 5rem 10rem !important;
-        margin-left: 5rem !important;
-        font-size: 14rem !important;
+        padding: 5px 10px !important;
+        margin-left: 5px !important;
+        font-size: 14px !important;
         font-weight: 400 !important;
         color: var(--header-a) !important;
         border: none !important;
-        border-radius: 500rem !important;
+        border-radius: 500px !important;
         cursor: pointer !important;
         text-decoration: none !important;
     }
@@ -695,19 +726,20 @@ html[data-nmbot-page="true"] .product-header {
         overflow: hidden;
     }
 
-    html[data-nmbot-page="true"] #hcont .header:not([open]) * {
-        transition: color 0.1s, visibility 0.1s 0.5s, opacity 0.1s, transform 0.4s !important;
+    html[data-nmbot-page="true"] #hcont .header:not([open]) .left,
+    html[data-nmbot-page="true"] #hcont .header:not([open]) .right,
+    html[data-nmbot-page="true"] #hcont .header:not([open]) .menu-toggle,
+    html[data-nmbot-page="true"] #hcont .header:not([open]) .product-header {
+        transition: transform 0.4s !important;
     }
 
     html[data-nmbot-page="true"] #pageHeader .left[data-hide=true],
-    html[data-nmbot-page="true"] #pageHeader .right[data-hide=true] {
-        transform: translate(0, -120%);
-    }
-
+    html[data-nmbot-page="true"] #pageHeader .right[data-hide=true],
     html[data-nmbot-page="true"] #pageHeader .menu-toggle[data-hide=true] {
-        transform: translate(0, -150%);
+        transform: translate(0, -200%);
+        pointer-events: none;
     }
 
     html[data-nmbot-page="true"] .product-header[data-hide=false] {
-        transform: translate(-50%, 0%);
+        transform: translate(0, 0%);
     }

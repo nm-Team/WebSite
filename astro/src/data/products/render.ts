@@ -134,7 +134,7 @@ function renderBlock(block: ProductDetailBlock, state: TipState, scripts: string
   let innerHtml = '';
   switch (block.type) {
   case 'subtitle':
-    innerHtml = `<p class="h1">${withTips(block.attr.h1, block.attr, state, `${block.id}.h1`)}</p><p class="h2">${withTips(block.attr.h2, block.attr, state, `${block.id}.h2`)}</p>`;
+    innerHtml = `<p class="subtitle-eyebrow">${withTips(block.attr.h1, block.attr, state, `${block.id}.h1`)}</p><h2 class="subtitle-heading">${withTips(block.attr.h2, block.attr, state, `${block.id}.h2`)}</h2>`;
     break;
   case 'single':
     innerHtml = `<div class="singleMain ${block.attr.mediaType ? '' : 'nomedia'}"><p class="word">${withTips(block.attr.p, block.attr, state, `${block.id}.p`)}</p>${renderMedia(block.attr)}</div>`;
@@ -182,7 +182,7 @@ export function renderProductDetail(data: ProductDetailData, transformHref: Href
   const headerHtml = `<div class="product-header" data-align="${escapeAttribute(header.align)}" style="${escapeAttribute(headerStyle)}">
     <div class="background" style="background-image:url(${escapeAttribute(header.background)})"></div>
     <div class="content"><i class="main-icon" style="background-image:url(${escapeAttribute(header.icon)})"></i>
-    <p class="productName" style="${escapeAttribute(headerColorStyle)}">${withTips(header.name, {}, state, 'header.name')}</p><p class="productSlug" style="${escapeAttribute(headerColorStyle)}">${withTips(header.slug, {}, state, 'header.slug')}</p><p class="productIntro" style="${escapeAttribute(headerColorStyle)}">${withTips(header.intro, {}, state, 'header.intro')}</p>
+    <h1 class="productName" style="${escapeAttribute(headerColorStyle)}">${withTips(header.name, {}, state, 'header.name')}</h1><p class="productSlug" style="${escapeAttribute(headerColorStyle)}">${withTips(header.slug, {}, state, 'header.slug')}</p><p class="productIntro" style="${escapeAttribute(headerColorStyle)}">${withTips(header.intro, {}, state, 'header.intro')}</p>
     <object><div class="opes">${headerButtons}</div></object></div>${reviewLegacyHtml(header.custom, 'header.custom')}</div><div class="products-main" id="products_detail_main">`;
 
   const mainSections = data.main.map((section, index) => renderSection(section, index, state, scripts, blockIndex, transformHref)).join('');

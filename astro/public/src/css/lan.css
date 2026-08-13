@@ -1,49 +1,50 @@
-body {
-    --lan-border: rgb(197, 197, 197);
-    --lan-active-border: rgb(209, 206, 0);
-    --lan-text: #000;
-    --lan-active-text: rgb(226, 185, 2);
-}
-
-html[data-theme=dark] body {
-    --lan-border: rgb(88, 88, 88);
-    --lan-active-border: rgb(209, 206, 0);
-    --lan-text: rgb(255, 255, 255);
-    --lan-active-text: rgb(209, 206, 0);
-}
-
 #lanList {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 860px;
+    margin: 0 auto;
 }
 
-#lanList .selection,
-#lanList::after {
+@media (min-width: 750px) {
+    #lanList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#lanList .selection {
     width: 100%;
-    padding: 20px 24px;
-    font-size: 17px;
-    font-weight: 300;
-    margin: 4px 0;
-    background: none;
-    border-radius: 3px;
-    border: 1px solid var(--lan-border);
-    color: var(--lan-text);
+    padding: 16px 20px;
+    font-size: 16.5px;
+    font-weight: 500;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-text-primary);
     text-align: left;
     cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.45s var(--motion-ease-out), transform 0.45s var(--motion-ease-out), background 0.3s, color 0.3s, outline 0s;
 }
 
-#lanList .selection[data-active=true],
-#lanList .selection:hover {
-    padding: 19px 23px;
-    border: 2px solid var(--lan-active-border);
-    color: var(--lan-active-text);
-    font-weight: bold;
+#lanList .selection:hover,
+#lanList .selection:focus-visible {
+    border-color: var(--color-brand);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-@media (min-width:750px) {
-    #lanList .selection {
-        width: calc(50% - 3px);
-    }
+#lanList .selection[data-active=true] {
+    border-color: var(--color-brand);
+    background: var(--color-brand-subtle);
+    color: var(--color-text-accent);
+    font-weight: 700;
+}
+
+.page-section #lanList + p {
+    max-width: 860px;
+    margin: 18px auto 0 auto;
+    font-size: 14.5px;
+    color: var(--color-text-muted);
+    text-align: center;
 }

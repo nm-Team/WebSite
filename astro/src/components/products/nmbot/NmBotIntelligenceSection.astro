@@ -14,9 +14,9 @@ const { locale, textContext } = Astro.props;
 <section id="intelligenceContainer" data-testid="nmbot-intelligence">
   <div class="intelligence-image"></div>
   <div class="text-only-block fade-in">
-    <div class="text-only-block-title">
+    <h2 class="text-only-block-title">
       <span set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.title_1', textContext)} /><span style="font-size: 75%;">&nbsp;</span><span class="intelligence-gradient-text" set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.title_2', textContext)} />
-    </div>
+    </h2>
     <div class="text-only-block-content">
       <p set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.content_1', textContext)} />
       <p set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.content_2', textContext)} />
@@ -24,9 +24,9 @@ const { locale, textContext } = Astro.props;
   </div>
   <div class="intelligence-feature-header-image" style={`background-image: url("${nmBotAsset('website intro intelligence chat.png')}");`}></div>
   <div class="text-only-block fade-in">
-    <div class="text-only-block-title">
+    <h2 class="text-only-block-title">
       <span class="intelligence-gradient-text" set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.chat_title', textContext)} />
-    </div>
+    </h2>
     <div class="text-only-block-content">
       <p set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.chat_content_1', textContext)} />
       <p style="opacity: 0.75;" set:html={renderNmBotText(locale, 'products.nmbot_telegram.intelligence.chat_coming_soon', textContext)} />

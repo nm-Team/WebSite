@@ -9,17 +9,17 @@ const { locale } = Astro.props as PageProps;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
-  }
-
-  .cookieSettingBox label {
-    margin-inline-end: 15px;
+    gap: 12px;
+    margin: 24px 0 8px 0;
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--color-text-primary);
   }
 </style>
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1>{t(locale, 'cookies.title')}</h1>
 </div>
-<div class="main mainBlock">
+<div class="page-content page-section">
   <center>{t(locale, 'cookies.description')}</center>
   <h2>{t(locale, 'cookies.necessary_cookies_title')}</h2>
   <center>{t(locale, 'cookies.necessary_cookies_description')}</center>
@@ -27,12 +27,12 @@ const { locale } = Astro.props as PageProps;
   <center>{t(locale, 'cookies.optional_cookies_description')}</center>
   <div class="cookieSettingBox">
     <label for="operationCookiesSwitchButton">{t(locale, 'cookies.optional_cookies_title')}</label>
-    <div class="select-radio-box">
+    <div class="toggle">
       <input type="checkbox" id="operationCookiesSwitchButton" class="operationCookiesSwitchButton" checked />
-      <div class="select-switch">
-        <div class="select-cursor"></div>
-        <div class="select-label select-label-on">{t(locale, 'cookies.cookies_on')}</div>
-        <div class="select-label select-label-off">{t(locale, 'cookies.cookies_off')}</div>
+      <div class="toggle__track">
+        <div class="toggle__thumb"></div>
+        <div class="toggle__label toggle__label--on">{t(locale, 'cookies.cookies_on')}</div>
+        <div class="toggle__label toggle__label--off">{t(locale, 'cookies.cookies_off')}</div>
       </div>
     </div>
   </div>

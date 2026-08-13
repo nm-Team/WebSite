@@ -19,7 +19,7 @@ interface Props {
 const { locale, textContext, titleKey, contentKeys = [], links = [], className = '' } = Astro.props;
 ---
 <div class:list={['text-only-block', 'fade-in', className]}>
-  {titleKey && <div class="text-only-block-title" set:html={renderNmBotText(locale, titleKey, textContext)} />}
+  {titleKey && <h2 class="text-only-block-title" set:html={renderNmBotText(locale, titleKey, textContext)} />}
   {contentKeys.length > 0 && (
     <div class="text-only-block-content">
       {contentKeys.map((key) => <p set:html={renderNmBotText(locale, key, textContext)} />)}

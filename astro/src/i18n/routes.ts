@@ -30,7 +30,7 @@ export const routeManifest: RouteEntry[] = [
     pageKeywords: 'nmTeam,主页,首页,Homepage',
     pageDescription: 'nmTeam HomePage',
     pageHeadCss: ['/src/css/index.css'],
-    pageHeadJs: [],
+    pageHeadJs: ['/src/js/homeScrollRestore.js'],
     pageBodyJs: ['/src/js/index.js'],
     pageImage: '',
     pageUpdate: '',

@@ -1,17 +1,20 @@
 body {
-    --products-footer-bgcolor: rgb(238, 238, 238);
-    --products-footer: rgb(107, 107, 107);
-    --products-footer-a: rgb(77, 77, 77);
-    --products-footer-text: rgb(109, 109, 109);
-    --products-footer-hover: rgb(44, 44, 44);
+    --products-footer: var(--color-text-muted);
+    --products-footer-a: var(--color-text-secondary);
+    --products-footer-text: var(--color-text-muted);
+    --products-footer-hover: var(--color-text-primary);
 }
 
-html[data-theme=dark] body {
-    --products-footer-bgcolor: rgb(53, 53, 53);
-    --products-footer: rgb(141, 141, 141);
-    --products-footer-a: rgb(179, 179, 179);
-    --products-footer-text: rgb(184, 184, 184);
-    --products-footer-hover: rgb(230, 230, 230);
+.products_footer {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding: 16px 10% 33px 10%;
+    color: var(--products-footer);
+    background-color: var(--color-surface-secondary);
+    border-top: 1px solid var(--color-border-subtle);
+    font-size: 13px;
 }
 
 .light {
@@ -77,19 +80,21 @@ bs {
     text-decoration: none !important;
     color: var(--products-box-text) !important;
     background: var(--products-box-link-background);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    transition: all 0.33s;
+    -webkit-backdrop-filter: blur(20px) saturate(1.6);
+    backdrop-filter: blur(20px) saturate(1.6);
+    transition: background 0.3s, border-color 0.3s, padding 0.3s, transform 0.45s var(--motion-ease-out), outline 0s;
 }
 
 .detail-block .opes a:not(.tip) {
     border-color: var(--products-box-link-border-b);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 .products-page .opes a:not(.tip):hover,
 .products-page .opes a:not(.tip):focus-visible {
     background: var(--products-box-link-hover-background);
     border: 1.6px solid var(--products-box-link-border);
+    transform: translateY(-1px);
 }
 
 .products-page .opes a:not(.tip):not(*[data-button-type=no]):focus-visible,
@@ -114,17 +119,6 @@ bs {
 .products-page .opes a:not(.tip):hover .svg {
     margin-left: 4px;
     opacity: 1;
-}
-
-.products_footer {
-    position: relative;
-    display: block;
-    margin-top: 20px;
-    margin-bottom: -20px;
-    padding: 16px 10% 33px 10%;
-    color: var(--products-footer);
-    background-color: var(--products-footer-bgcolor);
-    font-size: 13px;
 }
 
 .products_footer * {

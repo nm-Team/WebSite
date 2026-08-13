@@ -5,23 +5,15 @@ import type { PageProps } from './PageProps';
 const { locale } = Astro.props as PageProps;
 const entries = getSitemapEntries().filter((entry) => entry.locale === locale);
 ---
-<style>
-  .item h2 {
-    text-align: left;
-    padding-left: 0;
-    padding-right: 0;
-  }
-</style>
-<div class="title center">
+<div class="page-title page-title--centered">
   <h1>nmTeam Sitemap</h1>
 </div>
-<div class="main" id="smapBox">
+<div class="page-content sitemap-grid" id="smapBox">
   {entries.map((entry) => (
-    <div class="item">
+    <div class="sitemap-card">
       <h2><a href={entry.path} title={entry.title}>{entry.title}</a></h2>
-      {entry.description && <p class="desc">{entry.description}</p>}
-      <p class="link">{entry.url}</p>
+      {entry.description && <p class="sitemap-card__description">{entry.description}</p>}
+      <p class="sitemap-card__url">{entry.url}</p>
     </div>
   ))}
 </div>
-
