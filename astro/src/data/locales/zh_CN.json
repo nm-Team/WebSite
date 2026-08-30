@@ -506,11 +506,6 @@
         "title": "nmTeam 支持"
     },
     "supportus": {
-        "copy_crypto_address": "拷贝地址",
-        "copy_crypto_address_success": "拷贝地址成功",
-        "crypto": "加密货币",
-        "crypto_address": "加密货币地址",
-        "crypto_only_accept_tron": "仅支持接收 TRON 资产",
         "description": "赞助 nmTeam，帮助我们走得更远。",
         "links": {
             "afdian": "爱发电",

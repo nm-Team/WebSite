@@ -506,11 +506,6 @@
         "title": "nmTeam Support"
     },
     "supportus": {
-        "copy_crypto_address": "Copy address",
-        "copy_crypto_address_success": "Copy address successfully",
-        "crypto": "Cryptocurrency",
-        "crypto_address": "Cryptocurrency address",
-        "crypto_only_accept_tron": "Only supports receiving TRON assets",
         "description": "Sponsor nmTeam to help us go further.",
         "links": {
             "afdian": "AFDian",

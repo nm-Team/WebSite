@@ -305,11 +305,6 @@
         "title": "nmTeamのサポート"
     },
     "supportus": {
-        "copy_crypto_address": "アドレスをコピーする",
-        "copy_crypto_address_success": "アドレスが正常にコピーされました",
-        "crypto": "暗号通貨",
-        "crypto_address": "暗号通貨アドレス",
-        "crypto_only_accept_tron": "TRON アセットの受信のみをサポートします",
         "description": "私たちがさらに前進するのを助けるためにnmTeamを後援します。",
         "links": {
             "afdian": "愛の発電",

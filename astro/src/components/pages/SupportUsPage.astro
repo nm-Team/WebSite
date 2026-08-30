@@ -11,8 +11,6 @@ const { locale } = Astro.props;
 const sponsorData = getSponsorData();
 const externalLinkIcon =
   '<svg class="svg" style="transform:scale(0.81)" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M924.402464 1023.068211H0.679665V99.345412h461.861399v98.909208H99.596867v725.896389h725.896389V561.206811h98.909208z" p-id="3093"></path><path d="M930.805104 22.977336l69.965436 69.965436-453.492405 453.492404-69.965435-69.901489z" p-id="3094"></path><path d="M1022.464381 304.030081h-98.917201V99.345412H709.230573V0.428211h313.233808z"></path></svg>';
-const arrowIcon =
-  '<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M761.056 532.128c0.512-0.992 1.344-1.824 1.792-2.848 8.8-18.304 5.92-40.704-9.664-55.424L399.936 139.744c-19.264-18.208-49.632-17.344-67.872 1.888-18.208 19.264-17.376 49.632 1.888 67.872l316.96 299.84-315.712 304.288c-19.072 18.4-19.648 48.768-1.248 67.872 9.408 9.792 21.984 14.688 34.56 14.688 12 0 24-4.48 33.312-13.44l350.048-337.376c0.672-0.672 0.928-1.6 1.6-2.304 0.512-0.48 1.056-0.832 1.568-1.344C757.76 538.88 759.2 535.392 761.056 532.128z" p-id="2301"></path></svg>';
 ---
 <style>
   .sTab {
@@ -86,7 +84,6 @@ const arrowIcon =
     <div class="tabs__list">
       <button data-tab="afdian">{t(locale, 'supportus.links.afdian')}</button>
       <button data-tab="patreon">{t(locale, 'supportus.links.patreon')}</button>
-      <button data-tab="crypto">{t(locale, 'supportus.crypto')}</button>
     </div>
     <div class="tabs__panels">
       <div class="tabs__panel" data-tab="afdian">
@@ -104,25 +101,6 @@ const arrowIcon =
             <Fragment set:html={externalLinkIcon} />
           </a>
         </div>
-      </div>
-      <div class="tabs__panel" data-tab="crypto">
-        <p>
-          {t(locale, 'supportus.crypto_address')}:
-          <span class="address" style="user-select: all; -webkit-user-select: all;">TWvJ6bghs8XM38VHDvUV9unJGZzbnmTeam</span>
-        </p>
-        <div class="action-links">
-          <a target="_self" href="#" onclick="copyCryptoAddress()">
-            <span>{t(locale, 'supportus.copy_crypto_address')}</span>
-            <Fragment set:html={arrowIcon} />
-          </a>
-        </div>
-        <p>
-          <br />
-          {t(locale, 'supportus.crypto_only_accept_tron')}
-        </p>
-        <p>
-          <img src="/src/img/tron.jpg" alt="TRON" style="width: 100%; max-width: 300px; border-radius: var(--radius-md);" />
-        </p>
       </div>
     </div>
   </div>
@@ -159,16 +137,7 @@ const arrowIcon =
   </table>
   <p class="page-updated-at" style="font-size: 14px;" set:html={t(locale, 'supportus.sponsors_info_note')} />
 </div>
-<script is:inline define:vars={{ copySuccess: t(locale, 'supportus.copy_crypto_address_success') }}>
-  window.copyCryptoAddress = () => {
-    const el = document.createElement('textarea');
-    el.value = document.querySelector('.tabs__panel[data-tab="crypto"] span.address').innerText;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    alert(copySuccess);
-  };
+<script is:inline>
   document.querySelectorAll('#sponsorTab *').forEach((element) => {
     element.setAttribute('data-status', '');
   });
