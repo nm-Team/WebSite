@@ -9,10 +9,10 @@ body {
     position: relative;
     display: block;
     margin-top: 20px;
-    margin-bottom: -20px;
+    margin-bottom: -48px;
     padding: 16px 10% 33px 10%;
     color: var(--products-footer);
-    background-color: var(--color-surface-secondary);
+    background-color: var(--footer-bgcolor);
     border-top: 1px solid var(--color-border-subtle);
     font-size: 13px;
 }
