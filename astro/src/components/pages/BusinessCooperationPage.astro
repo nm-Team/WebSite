@@ -38,6 +38,17 @@ const businessEmailAddress = 'business@nmteam.xyz';
     transform: translateY(0) scale(0.97);
     transition-duration: 0.12s;
   }
+
+  .copy-email-status {
+    display: inline-block;
+    min-height: 1.5em;
+    margin-left: 8px;
+    color: var(--color-text-secondary);
+  }
+
+  .copy-email-status[data-status='error'] {
+    color: #b42318;
+  }
 </style>
 <div class="page-title page-title--centered">
   <h1>{t(locale, 'business_cooperation.title')}</h1>
@@ -47,18 +58,40 @@ const businessEmailAddress = 'business@nmteam.xyz';
     <p>{t(locale, 'business_cooperation.content_0')}</p>
     <p>
       <button class="email-btn" onclick={`window.location.href='mailto:${businessEmailAddress}'`}>{businessEmailAddress}</button>
-      &nbsp;&nbsp;<a href="javascript:" onclick="copyEmail()">{t(locale, 'business_cooperation.copy_email')}</a>
+      &nbsp;&nbsp;<a id="copyEmailLink" href="#copy-email-status" onclick="copyEmail(event)">{t(locale, 'business_cooperation.copy_email')}</a>
+      <span id="copyEmailStatus" class="copy-email-status" role="status" aria-live="polite"></span>
     </p>
     <p>{t(locale, 'business_cooperation.content_1')}</p>
   </div>
 </div>
-<script is:inline define:vars={{ businessEmailAddress }}>
-  window.copyEmail = function () {
-    var tempInput = document.createElement('input');
-    tempInput.value = businessEmailAddress;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
+<script is:inline define:vars={{ businessEmailAddress, copyEmailSuccessI18n: t(locale, 'business_cooperation.copy_success'), copyEmailFailureI18n: t(locale, 'business_cooperation.copy_failure') }}>
+  window.copyEmail = async function (event) {
+    event.preventDefault();
+    var status = document.getElementById('copyEmailStatus');
+    var copied = false;
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(businessEmailAddress);
+        copied = true;
+      } else {
+        var tempInput = document.createElement('input');
+        tempInput.value = businessEmailAddress;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        copied = document.execCommand('copy');
+        document.body.removeChild(tempInput);
+      }
+    } catch (error) {
+      console.warn('Unable to copy business email address.', error);
+    }
+
+    if (!status) return;
+    status.textContent = copied ? copyEmailSuccessI18n : copyEmailFailureI18n;
+    status.dataset.status = copied ? 'success' : 'error';
+    window.setTimeout(function () {
+      status.textContent = '';
+      status.removeAttribute('data-status');
+    }, 2_000);
   };
 </script>

@@ -23,6 +23,10 @@
     "account_v2": {
         "manage": "アカウントの管理"
     },
+    "business_cooperation": {
+        "copy_success": "アドレスをコピーしました",
+        "copy_failure": "コピーに失敗しました。手動でコピーしてください"
+    },
     "comes_soon": "このページは制作中ですので、お楽しみに！ ",
     "cookie": {
         "cookieConfirmDialog": {
