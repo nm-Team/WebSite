@@ -61,7 +61,51 @@ window.onresize = function () {
 	openHeader(false);
 }
 
-// Cookie 提示 
-if (localStorage.cookieTipv0Checked != "true") setTimeout(() => {
-	pageCookieConfirmDialog.setAttribute("data-status", "open");
-}, 3000);
+let cookieDialogPreviousFocus = null;
+
+function openCookieDialog() {
+	const dialog = document.getElementById("pageCookieConfirmDialog");
+	if (!dialog) return;
+	const activeElement = document.activeElement;
+	cookieDialogPreviousFocus = activeElement instanceof HTMLElement ? activeElement : null;
+	dialog.setAttribute("data-status", "open");
+	requestAnimationFrame(() => {
+		const firstAction = dialog.querySelector("button");
+		if (firstAction instanceof HTMLElement) firstAction.focus();
+	});
+}
+
+function closeCookieDialog() {
+	const dialog = document.getElementById("pageCookieConfirmDialog");
+	if (!dialog) return;
+	dialog.setAttribute("data-status", "close");
+	if (cookieDialogPreviousFocus?.isConnected) cookieDialogPreviousFocus.focus();
+	cookieDialogPreviousFocus = null;
+}
+
+window.acceptCookieConsent = function () {
+	localStorage.cookieTipv0Checked = "true";
+	closeCookieDialog();
+};
+
+document.addEventListener("keydown", function (event) {
+	const dialog = document.getElementById("pageCookieConfirmDialog");
+	if (!dialog || dialog.getAttribute("data-status") !== "open" || event.key !== "Tab") return;
+
+	const focusable = Array.from(dialog.querySelectorAll("button, a[href], [tabindex]:not([tabindex='-1'])"))
+		.filter((element) => element instanceof HTMLElement && !element.hasAttribute("disabled"));
+	if (focusable.length === 0) return;
+
+	const first = focusable[0];
+	const last = focusable[focusable.length - 1];
+	if (event.shiftKey && document.activeElement === first) {
+		event.preventDefault();
+		last.focus();
+	} else if (!event.shiftKey && document.activeElement === last) {
+		event.preventDefault();
+		first.focus();
+	}
+});
+
+// Cookie prompt
+if (localStorage.cookieTipv0Checked !== "true") setTimeout(openCookieDialog, 3000);

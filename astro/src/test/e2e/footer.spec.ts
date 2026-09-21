@@ -74,3 +74,20 @@ test('keeps product footnotes visually continuous with the site footer', async (
   expect(layout.background).toBe(layout.footerBackground);
   expect(Math.abs(layout.gap)).toBeLessThanOrEqual(1);
 });
+
+test('exposes cookie consent as a focused dialog', async ({ page }) => {
+  await page.goto('/zh-CN/aboutus/');
+
+  const dialog = page.locator('#pageCookieConfirmDialog');
+  await expect(dialog).toHaveAttribute('role', 'dialog');
+  await expect(dialog).toHaveAttribute('aria-modal', 'true');
+  await expect(dialog).toHaveAttribute('aria-labelledby', 'cookie-consent-title');
+  await expect(dialog).toHaveAttribute('aria-describedby', 'cookie-consent-description');
+  await expect(dialog).toHaveAttribute('data-status', 'open', { timeout: 5_000 });
+  await expect.poll(() => page.evaluate(() => document.activeElement?.textContent?.trim())).toBe('自定义');
+
+  await page.keyboard.press('Tab');
+  await expect.poll(() => page.evaluate(() => document.activeElement?.textContent?.trim())).toBe('接受并继续');
+  await page.keyboard.press('Tab');
+  await expect.poll(() => page.evaluate(() => document.activeElement?.textContent?.trim())).toBe('自定义');
+});

@@ -79,15 +79,23 @@ const updateText = formatPageUpdate(pageUpdate);
     </div>
   </div>
   <div class="pageDialogs">
-    <div class="cookie-consent" id="pageCookieConfirmDialog">
-      <div class="cookie-consent__header">{t(locale, 'cookie.cookieConfirmDialog.header')}</div>
-      <div class="cookie-consent__body">
+    <div
+      class="cookie-consent"
+      id="pageCookieConfirmDialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cookie-consent-title"
+      aria-describedby="cookie-consent-description"
+      tabindex="-1"
+    >
+      <div class="cookie-consent__header" id="cookie-consent-title">{t(locale, 'cookie.cookieConfirmDialog.header')}</div>
+      <div class="cookie-consent__body" id="cookie-consent-description">
         <p set:html={html(t(locale, 'cookie.cookieConfirmDialog.body.0'))}></p>
         <p set:html={html(t(locale, 'cookie.cookieConfirmDialog.body.1'))}></p>
       </div>
       <div class="cookie-consent__footer">
-        <button onclick={`window.location.href='${href('/cookies')}'`}>{t(locale, 'cookie.cookieConfirmDialog.button.customize')}</button>
-        <button onclick="localStorage.cookieTipv0Checked = 'true'; pageCookieConfirmDialog.setAttribute('data-status', 'close');">
+        <button type="button" onclick={`window.location.href='${href('/cookies')}'`}>{t(locale, 'cookie.cookieConfirmDialog.button.customize')}</button>
+        <button type="button" onclick="acceptCookieConsent()">
           {t(locale, 'cookie.cookieConfirmDialog.button.accept')}
         </button>
       </div>
