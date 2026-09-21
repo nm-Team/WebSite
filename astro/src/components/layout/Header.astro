@@ -30,7 +30,7 @@ const href = (path: string) => toLocalizedHref(locale, path);
         <a href={href('/')} aria-label={t(locale, 'header.home')}>{t(locale, 'header.home')}</a>
         <a href={href('/products/')} aria-label={t(locale, 'header.products')}>{t(locale, 'header.products')}</a>
         <a href="https://support.nmteam.xyz" aria-label={t(locale, 'header.support')}>{t(locale, 'header.support')}</a>
-        <a href="https://newsroom.nmteam.xyz" target="_blank" aria-label={t(locale, 'header.newsroom')}>{t(locale, 'header.newsroom')}</a>
+        <a href="https://newsroom.nmteam.xyz" target="_blank" rel="noopener noreferrer" aria-label={t(locale, 'header.newsroom')}>{t(locale, 'header.newsroom')}</a>
         <a href={href('/aboutus')} aria-label={t(locale, 'header.about')}>{t(locale, 'header.about')}</a>
       </div>
       <button class="accountBox" id="accountBox" tabindex="0" aria-label={t(locale, 'header.account_box_aria_label')}>

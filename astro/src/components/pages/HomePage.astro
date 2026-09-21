@@ -32,7 +32,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
     <p>{t(locale, 'index.nmteam_is_this_a')}</p>
     <p>{t(locale, 'index.nmteam_is_this_b')}</p>
     <div class="action-links">
-      <a target="_blank" href={href('/aboutus')}>
+      <a target="_blank" rel="noopener noreferrer" href={href('/aboutus')}>
         <span>{t(locale, 'index.nmteam_about_link')}</span>
         <Fragment set:html={arrowIcon} />
       </a>
@@ -46,7 +46,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
         <a href={href('/products/overview/nmBot-Telegram')} target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBot/nmbot_next.jpg)">
           <p>nmBot</p>
         </a>
-        <a href="https://nmbot.nmnm.fun" target="_blank" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png)">
+        <a href="https://nmbot.nmnm.fun" target="_blank" rel="noopener noreferrer" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png)">
           <p>nmBot Panel</p>
         </a>
         <a href={href('/products/overview/nmBrowser-StartPage')} target="_self" class="swiper-slide" style="background-image: url(https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@128.png)">
@@ -55,7 +55,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
       </div>
     </div>
     <div class="action-links">
-      <a target="_blank" href={href('/products')}>
+      <a target="_blank" rel="noopener noreferrer" href={href('/products')}>
         <span>{t(locale, 'index.more_products')}</span>
         <Fragment set:html={arrowIcon} />
       </a>
@@ -77,15 +77,15 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
     <h2 class="page-section-heading">{t(locale, 'index.connect_us')}</h2>
     <p>{t(locale, 'index.connect_para')}</p>
     <div class="action-links">
-      <a href="https://github.com/nm-Team" target="_blank"><b>GitHub&nbsp;</b>@nm-Team<Fragment set:html={externalIcon} /></a>
-      <a href="https://t.me/nmteamnewsroom" target="_blank"><b>Telegram&nbsp;</b>@nmteamnewsroom<Fragment set:html={externalIcon} /></a>
-      <a href="https://twitter.com/nmnmfun" target="_blank"><b>X&nbsp;</b>@nmnmfun<Fragment set:html={externalIcon} /></a>
+      <a href="https://github.com/nm-Team" target="_blank" rel="noopener noreferrer"><b>GitHub&nbsp;</b>@nm-Team<Fragment set:html={externalIcon} /></a>
+      <a href="https://t.me/nmteamnewsroom" target="_blank" rel="noopener noreferrer"><b>Telegram&nbsp;</b>@nmteamnewsroom<Fragment set:html={externalIcon} /></a>
+      <a href="https://twitter.com/nmnmfun" target="_blank" rel="noopener noreferrer"><b>X&nbsp;</b>@nmnmfun<Fragment set:html={externalIcon} /></a>
     </div>
     <h2 class="page-section-heading">{t(locale, 'index.join_us')}</h2>
     <p>{t(locale, 'index.join_para')}</p>
     <p>{t(locale, 'index.join_para_2')}</p>
     <div class="action-links">
-      <a target="_blank" href={href('/join')}>
+      <a target="_blank" rel="noopener noreferrer" href={href('/join')}>
         <span>{t(locale, 'index.join_us_link')}</span>
         <Fragment set:html={arrowIcon} />
       </a>

@@ -88,7 +88,7 @@ const externalLinkIcon =
     <div class="tabs__panels">
       <div class="tabs__panel" data-tab="afdian">
         <div class="action-links">
-          <a target="_blank" href="https://afdian.com/@nmTeam?ref=nmteam.xyz">
+          <a target="_blank" rel="noopener noreferrer" href="https://afdian.com/@nmTeam?ref=nmteam.xyz">
             <span>{t(locale, 'supportus.links.afdian')}</span>
             <Fragment set:html={externalLinkIcon} />
           </a>
@@ -96,7 +96,7 @@ const externalLinkIcon =
       </div>
       <div class="tabs__panel" data-tab="patreon">
         <div class="action-links">
-          <a target="_blank" href="https://www.patreon.com/nmteam?ref=nmteam.xyz">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.patreon.com/nmteam?ref=nmteam.xyz">
             <span>{t(locale, 'supportus.links.patreon')}</span>
             <Fragment set:html={externalLinkIcon} />
           </a>
