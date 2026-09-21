@@ -54,7 +54,7 @@ const aboutIntro = (nmBotHref: string): Record<PublicLocale, string[]> => ({
     <h2 class="page-section-heading">{t(locale, 'about.h1')}</h2>
     {[0, 1, 2, 3, 4, 5].map((index) => <p>{t(locale, `about.${index}`)}</p>)}
     <center>
-      <img class="introImage" src="https://websiteres.nmteam.xyz/nmwebsite/img/nmteam-about-small.png" width="70%" />
+      <img class="introImage" src="https://websiteres.nmteam.xyz/nmwebsite/img/nmteam-about-small.png" width="70%" aria-hidden="true" />
     </center>
   </div>
 </div>
