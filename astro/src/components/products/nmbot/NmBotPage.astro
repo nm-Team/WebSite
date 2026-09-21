@@ -125,10 +125,18 @@ const clientScript = `
     const featuresLists = document.querySelectorAll(".nmbot-features-list .features-list");
     chatTypeButtons.forEach((button) => {
       button.addEventListener("click", () => {
+        const selectedType = button.getAttribute("data-chat-type");
         chatTypeButtons.forEach((item) => item.classList.remove("active"));
         button.classList.add("active");
+        chatTypeButtons.forEach((item) => {
+          const selected = item === button;
+          item.setAttribute("aria-selected", selected ? "true" : "false");
+          item.setAttribute("tabindex", selected ? "0" : "-1");
+        });
         featuresLists.forEach((list) => {
-          list.classList.toggle("active", list.getAttribute("data-chat-type") === button.getAttribute("data-chat-type"));
+          const selected = list.getAttribute("data-chat-type") === selectedType;
+          list.classList.toggle("active", selected);
+          list.toggleAttribute("hidden", !selected);
         });
         updateAllFadeIn();
         renumberFooterNotesByVisualOrder();
@@ -459,14 +467,31 @@ const clientScript = `
     contentKeys={['products.nmbot_telegram.features.content_1']}
   />
   <div class="nmbot-features-list fade-in">
-    <div class="chat-type">
+    <div class="chat-type" role="tablist" aria-label={renderNmBotText(locale, 'products.nmbot_telegram.features.title', textContext)}>
       {chatTypes.map((chatType) => (
-        <button class:list={['chat-type-button', { active: chatType === 'group' }]} data-chat-type={chatType} set:html={renderNmBotText(locale, `products.nmbot_telegram.features.${chatType}`, textContext)} />
+        <button
+          class:list={['chat-type-button', { active: chatType === 'group' }]}
+          id={`nmbot-feature-tab-${chatType}`}
+          type="button"
+          role="tab"
+          aria-controls={`nmbot-feature-panel-${chatType}`}
+          aria-selected={chatType === 'group' ? 'true' : 'false'}
+          tabindex={chatType === 'group' ? '0' : '-1'}
+          data-chat-type={chatType}
+          set:html={renderNmBotText(locale, `products.nmbot_telegram.features.${chatType}`, textContext)}
+        />
       ))}
     </div>
     <div class="features-lists">
       {chatTypes.map((chatType) => (
-        <div class:list={['features-list', { active: chatType === 'group' }]} data-chat-type={chatType}>
+        <div
+          class:list={['features-list', { active: chatType === 'group' }]}
+          id={`nmbot-feature-panel-${chatType}`}
+          role="tabpanel"
+          aria-labelledby={`nmbot-feature-tab-${chatType}`}
+          hidden={chatType !== 'group'}
+          data-chat-type={chatType}
+        >
           {Object.values(getNmBotRecord(locale, `products.nmbot_telegram.features.${chatType}_features`)).map((feature) => {
             const isPlusFeature = feature.startsWith('p_');
             const text = isPlusFeature ? feature.slice(2) : feature;

@@ -70,4 +70,20 @@ test.describe('nmBot custom landing page', () => {
       expect(insets.actionButtonFontSize).toBe(14);
     }
   });
+
+  test('keeps feature tabs and panels accessible when switching chat types', async ({ page }) => {
+    const tabs = page.getByRole('tab');
+    await expect(tabs).toHaveCount(3);
+    await expect(tabs.nth(0)).toHaveAttribute('aria-selected', 'true');
+    await expect(page.locator('#nmbot-feature-panel-group')).toBeVisible();
+    await expect(page.locator('#nmbot-feature-panel-channel')).toBeHidden();
+
+    await tabs.nth(1).click();
+
+    await expect(tabs.nth(0)).toHaveAttribute('aria-selected', 'false');
+    await expect(tabs.nth(1)).toHaveAttribute('aria-selected', 'true');
+    await expect(tabs.nth(1)).toHaveAttribute('tabindex', '0');
+    await expect(page.locator('#nmbot-feature-panel-group')).toBeHidden();
+    await expect(page.locator('#nmbot-feature-panel-channel')).toBeVisible();
+  });
 });
