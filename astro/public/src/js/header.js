@@ -22,6 +22,13 @@ function clearHeaderClosingState(pageHeader) {
 	pageHeader.removeAttribute("data-closing");
 }
 
+function setMenuExpanded(expanded) {
+	const menuToggle = document.getElementById("menu-toggle");
+	if (!menuToggle) return;
+	menuToggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+	menuToggle.setAttribute("data-nav-menu-extended", expanded ? "true" : "false");
+}
+
 function openHeader(to) {
 	const pageHeader = document.getElementById("pageHeader");
 	const isOpen = pageHeader.getAttribute("open") === "true";
@@ -34,11 +41,13 @@ function openHeader(to) {
 			}, 700);
 		}
 		pageHeader.removeAttribute("open");
+		setMenuExpanded(false);
 		document.body.style.overflow = "auto";
 	}
 	else {
 		clearHeaderClosingState(pageHeader);
 		pageHeader.setAttribute("open", "true");
+		setMenuExpanded(true);
 		document.body.style.overflow = "hidden";
 	}
 }

@@ -25,7 +25,7 @@ const href = (path: string) => toLocalizedHref(locale, path);
       <i class="logo" aria-label={t(locale, 'header.title_icon_aria_label')}></i>
       <p class="name">nmTeam</p>
     </a>
-    <div class="right" onclick="openHeader(false);" data-hide={productHeaderHtml ? 'true' : undefined}>
+    <div class="right" id="nav-menu" onclick="openHeader(false);" data-hide={productHeaderHtml ? 'true' : undefined}>
       <div class="links">
         <a href={href('/')} aria-label={t(locale, 'header.home')}>{t(locale, 'header.home')}</a>
         <a href={href('/products/')} aria-label={t(locale, 'header.products')}>{t(locale, 'header.products')}</a>

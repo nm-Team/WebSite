@@ -52,9 +52,13 @@ test('keeps the legacy stagger scoped to mobile menu closing', async ({ page }, 
 
   await menuToggle.click();
   await expect(header).toHaveAttribute('open', 'true');
+  await expect(menuToggle).toHaveAttribute('aria-expanded', 'true');
+  await expect(menuToggle).toHaveAttribute('data-nav-menu-extended', 'true');
 
   await menuToggle.click();
   await expect(header).not.toHaveAttribute('open');
+  await expect(menuToggle).toHaveAttribute('aria-expanded', 'false');
+  await expect(menuToggle).toHaveAttribute('data-nav-menu-extended', 'false');
   await expect(header).toHaveAttribute('data-closing', 'true');
 
   expect(await transitionDelayFor(header, 'background-color')).toBe(500);
