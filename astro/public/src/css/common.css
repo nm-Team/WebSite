@@ -301,7 +301,8 @@ a:not(.footer-link):visited {
     flex-wrap: wrap;
 }
 
-.action-links a:not(.tip) {
+.action-links a:not(.tip),
+.action-links button:not(.tip) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -312,6 +313,8 @@ a:not(.footer-link):visited {
     text-decoration: none !important;
     color: var(--color-text-primary) !important;
     background: var(--action-link-background);
+    font: inherit;
+    cursor: pointer;
     -webkit-backdrop-filter: blur(20px) saturate(1.6);
     backdrop-filter: blur(20px) saturate(1.6);
     box-shadow: var(--shadow-sm);
@@ -319,31 +322,37 @@ a:not(.footer-link):visited {
 }
 
 .action-links a:not(.tip):hover,
-.action-links a:not(.tip):focus-visible {
+.action-links a:not(.tip):focus-visible,
+.action-links button:not(.tip):hover,
+.action-links button:not(.tip):focus-visible {
     background: var(--action-link-background-hover);
     border-color: var(--action-link-border-color-hover);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
-.action-links a:not(.tip):active {
+.action-links a:not(.tip):active,
+.action-links button:not(.tip):active {
     transform: translateY(0) scale(0.97);
     transition-duration: 0.12s;
 }
 
-.action-links a:not(.tip) span {
+.action-links a:not(.tip) span,
+.action-links button:not(.tip) span {
     font-weight: 600;
     font-size: 15px;
     letter-spacing: 0;
 }
 
-.action-links a:not(.tip) b {
+.action-links a:not(.tip) b,
+.action-links button:not(.tip) b {
     font-weight: 700;
     font-size: 15px;
     letter-spacing: 0;
 }
 
-.action-links a:not(.tip) .svg {
+.action-links a:not(.tip) .svg,
+.action-links button:not(.tip) .svg {
     margin: 1px -2px 0 6px;
     width: 15px;
     height: 15px;
@@ -353,7 +362,9 @@ a:not(.footer-link):visited {
 }
 
 .action-links a:not(.tip):focus-visible .svg,
-.action-links a:not(.tip):hover .svg {
+.action-links a:not(.tip):hover .svg,
+.action-links button:not(.tip):focus-visible .svg,
+.action-links button:not(.tip):hover .svg {
     transform: translateX(3px);
     opacity: 1;
 }
