@@ -235,8 +235,10 @@ a.contact {
     position: relative;
     justify-content: center;
     overflow: hidden;
-    margin: 0 -10vw;
-    padding: 0 10vw;
+    /* 12.5% of the 80%-wide page content preserves its 10% viewport inset
+       without including the classic scrollbar gutter in the calculation. */
+    margin: 0 -12.5%;
+    padding: 0 12.5%;
 }
 
 .cardSwiper .swiper-wrapper {
