@@ -13,7 +13,7 @@ const entries = getSitemapEntries().filter((entry) => entry.locale === locale);
     <div class="sitemap-card">
       <h2><a href={entry.path} title={entry.title}>{entry.title}</a></h2>
       {entry.description && <p class="sitemap-card__description">{entry.description}</p>}
-      <p class="sitemap-card__url">{entry.url}</p>
+      <p class="sitemap-card__url"><a href={entry.path}>{entry.url}</a></p>
     </div>
   ))}
 </div>
