@@ -2,7 +2,7 @@ import { defaultLocale, type PublicLocale, publicLocales } from '@/i18n/locales'
 import { type RouteEntry, routeManifest, toPrefixedPath, toRootPath } from '@/i18n/routes';
 import { t } from '@/i18n/translate';
 
-export const siteOrigin = 'https://nmteam.xyz';
+export const siteOrigin = 'https://nm.team';
 
 export type SitemapEntry = {
   route: RouteEntry;

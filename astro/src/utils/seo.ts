@@ -2,7 +2,7 @@ import type { PublicLocale } from '@/i18n/locales';
 import { t } from '@/i18n/translate';
 
 export const DEFAULT_SITE_IMAGE = 'https://websiteres.nmteam.xyz/producticon/nmTeam/logo@128.png';
-export const SITE_URL = 'https://nmteam.xyz/';
+export const SITE_URL = 'https://nm.team/';
 
 export type SeoInput = {
   locale: PublicLocale;
@@ -56,7 +56,7 @@ export function buildSeoMeta(input: SeoInput): SeoMeta {
   const graph = [
     {
       '@type': 'Organization',
-      '@id': 'https://nmteam.xyz',
+      '@id': 'https://nm.team',
       name: 'nmTeam',
       alternateName: ['柠檬团队', '纳米团队'],
       url: SITE_URL,
@@ -76,29 +76,29 @@ export function buildSeoMeta(input: SeoInput): SeoMeta {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://nmteam.xyz/#website',
+      '@id': 'https://nm.team/#website',
       url: SITE_URL,
       name: `nmTeam ${t(language, 'pagebases.official_website')}`,
       description,
       publisher: {
-        '@id': 'https://nmteam.xyz/aboutus',
+        '@id': 'https://nm.team/aboutus',
       },
       inLanguage: language,
     },
     {
       '@type': 'ItemList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, url: 'https://nmteam.xyz/products/overview/nmBot-Telegram', name: t(language, 'schema.nmbot_intro') },
+        { '@type': 'ListItem', position: 1, url: 'https://nm.team/products/overview/nmBot-Telegram', name: t(language, 'schema.nmbot_intro') },
         { '@type': 'ListItem', position: 2, url: 'https://newsroom.nmteam.xyz', name: 'nmTeam Newsroom' },
         { '@type': 'ListItem', position: 3, url: 'https://nmbot.nmnm.fun', name: t(language, 'schema.nmbot_panel') },
-        { '@type': 'ListItem', position: 4, url: 'https://nmteam.xyz/products', name: t(language, 'schema.products') },
+        { '@type': 'ListItem', position: 4, url: 'https://nm.team/products', name: t(language, 'schema.products') },
         { '@type': 'ListItem', position: 5, url: 'https://support.nmteam.xyz', name: t(language, 'schema.nmteam_support') },
       ],
     },
     {
       '@type': 'WebPage',
-      '@id': 'https://nmteam.xyz/products/overview/nmBot-Telegram',
-      url: 'https://nmteam.xyz/products/overview/nmBot-Telegram',
+      '@id': 'https://nm.team/products/overview/nmBot-Telegram',
+      url: 'https://nm.team/products/overview/nmBot-Telegram',
       name: t(language, 'schema.nmbot_intro'),
       datePublished: '2024-08-20T16:00:00.000Z',
       dateModified: '2024-08-20T16:00:00.000Z',
@@ -130,8 +130,8 @@ export function buildSeoMeta(input: SeoInput): SeoMeta {
     },
     {
       '@type': 'WebPage',
-      '@id': 'https://nmteam.xyz/products',
-      url: 'https://nmteam.xyz/products',
+      '@id': 'https://nm.team/products',
+      url: 'https://nm.team/products',
       name: t(language, 'schema.products'),
       datePublished: '2024-08-20T16:00:00.000Z',
       dateModified: '2024-08-20T16:00:00.000Z',
