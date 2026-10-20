@@ -1,6 +1,6 @@
 # nmTeam Official Website
 
-The nmTeam website is a static [Astro](https://astro.build/) application. Visit the production site at [nmteam.xyz](https://nmteam.xyz?ref=nmTeam_GitHub_HomePage).
+The nmTeam website is a static [Astro](https://astro.build/) application. Visit the production site at [nm.team](https://nm.team?ref=nmTeam_GitHub_HomePage).
 
 ![Website screenshot][screenshot]
 
