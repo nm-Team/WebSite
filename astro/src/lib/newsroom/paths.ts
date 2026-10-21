@@ -42,3 +42,7 @@ export function articlePath(locale: NewsroomLocale, articleId: string, date: Dat
 export function absoluteNewsroomUrl(path: string): string {
   return new URL(path, newsroomOrigin).href;
 }
+
+export function isIndexableNewsroomPath(path: string): boolean {
+  return /^\/(?:zh-CN|en)\/newsroom\//.test(path) && !/\/(?:search|page\/1)\/?$/.test(path) && !/\.(?:json|xml)$/.test(path);
+}

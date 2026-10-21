@@ -49,6 +49,14 @@
 /products/template/nmBot-Telegram.php /products/overview/nmBot-Telegram/ 301
 /:lang/products/template/nmBot-Telegram.php /:lang/products/overview/nmBot-Telegram/ 301
 
+# Newsroom entry points
+/newsroom /en/newsroom/ 301
+/newsroom/ /en/newsroom/ 301
+/en/newsroom/page/1 /en/newsroom/ 301
+/en/newsroom/page/1/ /en/newsroom/ 301
+/zh-CN/newsroom/page/1 /zh-CN/newsroom/ 301
+/zh-CN/newsroom/page/1/ /zh-CN/newsroom/ 301
+
 # Generic legacy PHP fallback
 # NOTE: Cloudflare splats must be referenced as :splat in destinations.
 /:lang/*.php /:lang/:splat/ 301

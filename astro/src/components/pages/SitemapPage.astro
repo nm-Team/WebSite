@@ -1,15 +1,18 @@
 ---
+import { resolveNewsroomLocale } from '@/lib/newsroom/paths';
+import { getNewsroomSitemapEntries } from '@/lib/newsroom/sitemap';
 import { getSitemapEntries } from '@/utils/site-map';
 import type { PageProps } from './PageProps';
 
 const { locale } = Astro.props as PageProps;
 const entries = getSitemapEntries().filter((entry) => entry.locale === locale);
+const newsEntries = (await getNewsroomSitemapEntries()).filter((entry) => entry.locale === resolveNewsroomLocale(locale));
 ---
 <div class="page-title page-title--centered">
   <h1>nmTeam Sitemap</h1>
 </div>
 <div class="page-content sitemap-grid" id="smapBox">
-  {entries.map((entry) => (
+  {[...entries, ...newsEntries].map((entry) => (
     <div class="sitemap-card">
       <h2><a href={entry.path} title={entry.title}>{entry.title}</a></h2>
       {entry.description && <p class="sitemap-card__description">{entry.description}</p>}

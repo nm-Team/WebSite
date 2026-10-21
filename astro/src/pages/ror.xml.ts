@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 
+import { getNewsroomSitemapEntries } from '@/lib/newsroom/sitemap';
 import { getSitemapEntries } from '@/utils/site-map';
 
 function escapeXml(value: string): string {
@@ -11,8 +12,8 @@ function escapeXml(value: string): string {
     .replace(/'/g, '&apos;');
 }
 
-export const GET: APIRoute = () => {
-  const items = getSitemapEntries()
+export const GET: APIRoute = async () => {
+  const items = [...getSitemapEntries(), ...await getNewsroomSitemapEntries()]
     .map(
       (entry) =>
         `  <item><title>${escapeXml(entry.title)}</title><link>${escapeXml(entry.url)}</link><description>${escapeXml(entry.description)}</description></item>`,
