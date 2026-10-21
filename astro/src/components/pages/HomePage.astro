@@ -1,25 +1,18 @@
 ---
 import { toLocalizedHref } from '@/i18n/links';
 import { t } from '@/i18n/translate';
+import { getNewsPosts } from '@/lib/newsroom/content';
+import { newsroomPath, resolveNewsroomLocale } from '@/lib/newsroom/paths';
 import type { PageProps } from './PageProps';
 
 const { locale } = Astro.props as PageProps;
+const newsLocale = resolveNewsroomLocale(locale);
+const newsPosts = (await getNewsPosts(newsLocale)).slice(0, 5);
 
 const href = (path: string) => toLocalizedHref(locale, path);
 const externalIcon = `<svg class="svg" style="transform:scale(0.81)" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M924.402464 1023.068211H0.679665V99.345412h461.861399v98.909208H99.596867v725.896389h725.896389V561.206811h98.909208z"></path><path d="M930.805104 22.977336l69.965436 69.965436-453.492405 453.492404-69.965435-69.901489z"></path><path d="M1022.464381 304.030081h-98.917201V99.345412H709.230573V0.428211h313.233808z"></path></svg>`;
 const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M761.056 532.128c0.512-0.992 1.344-1.824 1.792-2.848 8.8-18.304 5.92-40.704-9.664-55.424L399.936 139.744c-19.264-18.208-49.632-17.344-67.872 1.888-18.208 19.264-17.376 49.632 1.888 67.872l316.96 299.84-315.712 304.288c-19.072 18.4-19.648 48.768-1.248 67.872 9.408 9.792 21.984 14.688 34.56 14.688 12 0 24-4.48 33.312-13.44l350.048-337.376z"></path></svg>`;
 ---
-<script is:inline define:vars={{
-  newsRoomLoadingI18n: t(locale, 'index.newslist_loading'),
-  newsRoomTimeI18n: t(locale, 'index.newslist_date_aria_label'),
-  newsRoomLoadFailedI18n: t(locale, 'index.newslist_error'),
-  newsRoomRetryI18n: t(locale, 'index.retry'),
-}}>
-  window.newsRoomLoadingI18n = newsRoomLoadingI18n;
-  window.newsRoomTimeI18n = newsRoomTimeI18n;
-  window.newsRoomLoadFailedI18n = newsRoomLoadFailedI18n;
-  window.newsRoomRetryI18n = newsRoomRetryI18n;
-</script>
 <h1 class="indexHeaderTitle">nmTeam</h1>
 <div class="indexHeader">
   <div class="indexHeaderBg" aria-hidden="true"></div>
@@ -64,12 +57,21 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
   <div class="page-section page-section--centered page-section--indented">
     <h2 class="page-section-heading">{t(locale, 'index.newslist')}</h2>
     <div class="swiper cardSwiper newsSwiper" data-grow>
-      <div class="swiper-wrapper" id="newsSwiperItems">{t(locale, 'index.newslist_loading')}</div>
+      <div class="swiper-wrapper" id="newsSwiperItems">
+        {newsPosts.map((post) => <a class="swiper-slide" href={post.url} title={post.title} lang={post.locale}>
+          <div class="newsImage" style={`background-image: url(${JSON.stringify(post.image)});`}></div>
+          <h3>{post.title}</h3>
+          <div class="time" aria-label={`${t(locale, 'index.newslist_date_aria_label')}: ${post.dateText}`}>
+            <svg aria-hidden="true" viewBox="0 0 1024 1024"><path d="M512 1024C229.229714 1024 0 794.770286 0 512S229.229714 0 512 0s512 229.229714 512 512-229.229714 512-512 512z m0-73.142857c242.358857 0 438.857143-196.498286 438.857143-438.857143S754.358857 73.142857 512 73.142857 73.142857 269.641143 73.142857 512s196.498286 438.857143 438.857143 438.857143z m36.571429-694.857143v256.365714l255.963428-0.365714 0.073143 73.142857-329.179429 0.475429V256h73.142858z"></path></svg>
+            <time datetime={post.dateTime}>{post.dateParts.year}-{post.dateParts.month}-{post.dateParts.day}</time>
+          </div>
+        </a>)}
+      </div>
     </div>
     <div class="action-links">
-      <a target="_blank" rel="noopener noreferrer" href="https://newsroom.nmteam.xyz?ref=nm.team">
+      <a href={newsroomPath(newsLocale)}>
         <span>{t(locale, 'index.newslist_more')}</span>
-        <Fragment set:html={externalIcon} />
+        <Fragment set:html={arrowIcon} />
       </a>
     </div>
   </div>

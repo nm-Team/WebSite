@@ -1,0 +1,25 @@
+/* Layout only: the local navigation keeps its imported internal styling. */
+#hcont[data-navigation-mode="flow"] {
+  position: relative;
+  z-index: 200;
+  height: 62px;
+}
+#hcont[data-navigation-mode="flow"] .header { position: relative; }
+#hcont[data-navigation-mode="flow"] * { font-family: var(--font-sans); }
+#hcont[data-navigation-mode="flow"] *:focus-visible { outline: var(--focus-ring); }
+.newsroom-header-slot {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  height: 30rem;
+}
+.newsroom-header-slot #newsroom-header { position: relative; z-index: auto; }
+.newsroom-header-slot #newsroom-header[data-nav-menu-extended="true"] {
+  max-height: calc(100dvh - var(--newsroom-header-offset, 0px));
+}
+.newsroom-shell #newsroom-main > .container { margin-top: 0; }
+#newsroom-main { scroll-margin-top: 60px; }
+@media (max-width: 699.99999px) {
+  #hcont[data-navigation-mode="flow"] { height: 56px; }
+  #hcont[data-navigation-mode="flow"] .header[open] { position: fixed; }
+}

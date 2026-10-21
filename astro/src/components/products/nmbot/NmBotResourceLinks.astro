@@ -1,6 +1,7 @@
 ---
 import { nmBotAsset, renderNmBotText, type NmBotTextContext } from './nmBotText';
 import type { PublicLocale } from '@/i18n/locales';
+import { newsroomPath, resolveNewsroomLocale } from '@/lib/newsroom/paths';
 
 interface Props {
   locale: PublicLocale;
@@ -28,7 +29,7 @@ const resources = [
     titleKey: 'products.nmbot_telegram.resources.newsroom_title',
     contentKey: 'products.nmbot_telegram.resources.newsroom_content',
     linkKey: 'products.nmbot_telegram.resources.newsroom_link',
-    href: 'https://newsroom.nmteam.xyz/tag/nmBot/?ref=nmBotIntro',
+    href: newsroomPath(resolveNewsroomLocale(locale), 'tag/nmBot/?ref=nmBotIntro'),
   },
   {
     image: 'website intro community.png',

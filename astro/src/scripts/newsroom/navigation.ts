@@ -5,10 +5,16 @@ let returnFocus: HTMLElement | null = null;
 
 function setOpen(open: boolean) {
   if (!header || !toggle || !panel) return;
+  if ((header.dataset.navMenuExtended === 'true') === open) return;
   if (open) returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
+  if (open) {
+    window.dispatchEvent(new CustomEvent('newsroom-navigation-open'));
+    header.style.setProperty('--newsroom-header-offset', `${Math.max(0, header.getBoundingClientRect().top)}px`);
+  }
   header.querySelectorAll('[data-nav-menu-extended]').forEach((element) => element.setAttribute('data-nav-menu-extended', String(open)));
   header.dataset.navMenuExtended = String(open);
   document.body.dataset.navMenuExtended = String(open);
+  document.body.style.overflow = open || document.getElementById('pageHeader')?.hasAttribute('open') ? 'hidden' : '';
   toggle.setAttribute('aria-expanded', String(open));
   panel.inert = !open;
   if (open) panel.querySelector<HTMLElement>('a, input, button')?.focus({ preventScroll: true });
@@ -33,6 +39,12 @@ document.addEventListener('keydown', (event) => {
   }
 });
 window.addEventListener('resize', () => setOpen(false));
+window.addEventListener('site-navigation-toggle', (event) => {
+  const open = (event as CustomEvent<{ open: boolean }>).detail.open;
+  if (open) setOpen(false);
+  const shell = document.querySelector<HTMLElement>('.newsroom-shell');
+  if (shell) shell.inert = open;
+});
 
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const observer = new IntersectionObserver((entries) => {

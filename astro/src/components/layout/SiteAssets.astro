@@ -1,0 +1,17 @@
+---
+interface Props { pageStyles?: boolean }
+const { pageStyles = true } = Astro.props;
+---
+<link rel="stylesheet" href="/src/css/tokens.css" />
+{pageStyles && <link rel="stylesheet" href="/src/css/common.css" />}
+<link rel="stylesheet" href="/src/css/header.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ayahub/webfont-harmony-sans-sc@1.0.0/css/index.min.css" media="print" onload="this.setAttribute('media', 'all')" />
+<script is:inline>
+  function setTheme(theme) {
+    if (document.documentElement.getAttribute('data-theme-is-const') == 'true') return;
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  setTheme(systemTheme.matches ? 'dark' : 'light');
+  systemTheme.addEventListener('change', (event) => setTheme(event.matches ? 'dark' : 'light'));
+</script>
