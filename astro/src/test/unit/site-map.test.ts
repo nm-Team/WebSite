@@ -20,7 +20,7 @@ describe('generated sitemap entries', () => {
 
   it('uses absolute production URLs', () => {
     for (const entry of getSitemapEntries()) {
-      expect(entry.url).toMatch(/^https:\/\/nmteam\.xyz\//);
+      expect(entry.url).toMatch(/^https:\/\/nm\.team\//);
     }
   });
 });
