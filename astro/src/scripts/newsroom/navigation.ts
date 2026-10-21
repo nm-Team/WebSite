@@ -1,9 +1,28 @@
 const header = document.querySelector<HTMLElement>('#newsroom-header');
+const headerSlot = document.querySelector<HTMLElement>('.newsroom-header-slot');
 const toggle = document.querySelector<HTMLButtonElement>('#newsroom-menu-toggle');
 const panel = document.querySelector<HTMLElement>('#newsroom-extended-menu');
 const searchToggle = header?.querySelector<HTMLAnchorElement>('[data-newsroom-search-toggle]');
 const backdrop = document.querySelector<HTMLElement>('[data-newsroom-backdrop]');
 let returnFocus: HTMLElement | null = null;
+let stickyUpdatePending = false;
+
+function updateStickyState() {
+  stickyUpdatePending = false;
+  if (!header || !headerSlot) return;
+  header.toggleAttribute('data-stuck', headerSlot.getBoundingClientRect().top <= 0);
+}
+
+function scheduleStickyUpdate() {
+  if (stickyUpdatePending) return;
+  stickyUpdatePending = true;
+  requestAnimationFrame(updateStickyState);
+}
+
+updateStickyState();
+window.addEventListener('scroll', scheduleStickyUpdate, { passive: true });
+window.addEventListener('resize', scheduleStickyUpdate);
+window.addEventListener('pageshow', scheduleStickyUpdate);
 
 function setOpen(open: boolean, instant = false) {
   if (!header || !toggle || !panel) return;

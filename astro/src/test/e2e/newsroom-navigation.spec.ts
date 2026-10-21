@@ -173,3 +173,30 @@ test('the local menu animates both ways and handles rapid pointer reversals', as
   await expect(trigger).toBeFocused();
   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
 });
+
+test('the local navigation gains its background only at the sticky boundary', async ({ page }) => {
+  for (const colorScheme of ['light', 'dark'] as const) {
+    await page.emulateMedia({ colorScheme });
+    await page.goto('/en/newsroom/');
+    const local = page.locator('#newsroom-header');
+    const globalHeight = (await page.locator('#hcont').boundingBox())!.height;
+    await expect(local).not.toHaveAttribute('data-stuck');
+    await expect(local).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    await expect(local).toHaveCSS('backdrop-filter', 'none');
+
+    await page.evaluate((top) => window.scrollTo(0, top), globalHeight - 1);
+    await expect.poll(async () => (await local.boundingBox())!.y).toBe(1);
+    await expect(local).not.toHaveAttribute('data-stuck');
+    await expect(local).toHaveCSS('backdrop-filter', 'none');
+    await page.evaluate((top) => window.scrollTo(0, top), globalHeight);
+    await expect.poll(async () => (await local.boundingBox())!.y).toBe(0);
+    await expect(local).toHaveAttribute('data-stuck', '');
+    await expect(local).not.toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    await expect(local).toHaveCSS('backdrop-filter', /blur\(22px\)/);
+
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await expect(local).not.toHaveAttribute('data-stuck');
+    await expect(local).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    await expect(local).toHaveCSS('backdrop-filter', 'none');
+  }
+});

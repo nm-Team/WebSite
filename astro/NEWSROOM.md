@@ -66,6 +66,10 @@ Both navigation levels and footer levels share the same horizontal gutter:
 10% on wide screens, 20px through 900px, and 16-20px on phones. Their content
 edges stay aligned without changing the article or card layout.
 
+The local navigation is transparent while below the viewport top. Its tinted
+background, blur and separator appear only after it reaches the sticky position.
+Scroll, resize and restored page positions update this state once per frame.
+
 ## Build and migration outputs
 
 Run the commands in the repository README from `astro/`. `pnpm build` produces:
