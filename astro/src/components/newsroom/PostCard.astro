@@ -1,0 +1,10 @@
+---
+import type { NewsPost } from '@/lib/newsroom/content';
+
+interface Props { post: NewsPost }
+const { post } = Astro.props;
+---
+<a href={post.url} class="post item come-out-animation">
+  <div class="image" style={`background-image: url(${JSON.stringify(post.image)});`}></div>
+  <div class="info"><div class="category">{post.category.name}</div><h2 class="post-title">{post.title}</h2><time datetime={post.dateTime}>{post.dateText}</time></div>
+</a>

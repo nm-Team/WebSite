@@ -1,0 +1,34 @@
+---
+import Footer from '@/components/newsroom/Footer.astro';
+import Header from '@/components/newsroom/Header.astro';
+import SEOHead from '@/components/newsroom/SEOHead.astro';
+import type { NewsPost } from '@/lib/newsroom/content';
+import { newsroomLabels } from '@/lib/newsroom/labels';
+import type { NewsroomAlternate } from '@/lib/newsroom/pages';
+import type { NewsroomLocale } from '@/lib/newsroom/paths';
+
+interface Props { locale: NewsroomLocale; title: string; url: string; alternates: NewsroomAlternate[]; post?: NewsPost; noindex?: boolean }
+const { locale } = Astro.props;
+---
+<!doctype html>
+<html lang={locale} class="newsroom-site">
+  <head>
+    <SEOHead {...Astro.props} />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ayahub/webfont-harmony-sans-sc@1.0.0/css/index.min.css" />
+    <link rel="stylesheet" href="/newsroom/theme/normalize.css" />
+    <link rel="stylesheet" href="/newsroom/theme/style.css" />
+    <link rel="stylesheet" href="/newsroom/theme/enhancements.css" />
+    <script is:inline defer src="https://a.nmteam.top/script.js" data-website-id="3f6853e3-82e8-4f73-977f-cf685c37e3c3"></script>
+  </head>
+  <body class="newsroom-site" data-nav-menu-extended="false">
+    <div class="newsroom-shell">
+      <a href="#newsroom-main" class="skip-to-content">{newsroomLabels(locale).skip}</a>
+      <Header locale={locale} alternates={Astro.props.alternates} />
+      <main id="newsroom-main" tabindex="-1"><div class="container"><div class="row"><slot /></div></div></main>
+      <Footer locale={locale} />
+    </div>
+    <script>
+      import '@/scripts/newsroom/navigation';
+    </script>
+  </body>
+</html>

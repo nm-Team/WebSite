@@ -1,0 +1,23 @@
+---
+import { newsroomLabels } from '@/lib/newsroom/labels';
+import { type NewsroomLocale, newsroomPath } from '@/lib/newsroom/paths';
+
+interface Props { locale: NewsroomLocale }
+const { locale } = Astro.props;
+const labels = newsroomLabels(locale);
+---
+<div id="newsroom-search" data-locale={locale}>
+  <form class="search-page-form" role="search" method="get" action={newsroomPath(locale, 'search/')}>
+    <label for="newsroom-page-query">{labels.searchLabel}</label>
+    <input id="newsroom-page-query" type="search" name="q" placeholder={labels.searchPlaceholder} />
+    <button type="submit">{labels.search}</button>
+  </form>
+  <div class="post-list">
+    <h1 class="archive-title" id="search-title">{labels.search}</h1>
+    <div id="search-results" class="search-results" aria-live="polite"><p>{labels.searchPrompt}</p></div>
+  </div>
+  <noscript><p class="search-page-form">{labels.searchNeedsJavaScript}</p></noscript>
+</div>
+<script>
+  import '@/scripts/newsroom/search';
+</script>

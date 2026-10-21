@@ -1,0 +1,46 @@
+---
+import { newsroomLabels, newsroomLanguageName } from '@/lib/newsroom/labels';
+import type { NewsroomAlternate } from '@/lib/newsroom/pages';
+import { type NewsroomLocale, newsroomPath } from '@/lib/newsroom/paths';
+
+interface Props { locale: NewsroomLocale; alternates: NewsroomAlternate[] }
+const { locale, alternates } = Astro.props;
+const labels = newsroomLabels(locale);
+const navigation = [
+  { title: labels.home, href: newsroomPath(locale) },
+  { title: labels.website, href: `/${locale}/` },
+  { title: labels.about, href: newsroomPath(locale, 'about/') },
+];
+---
+<header id="newsroom-header" class="clearfix" data-nav-menu-extended="false">
+  <div class="container">
+    <div class="site-name">
+      <a id="newsroom-logo" href={newsroomPath(locale)} tabindex="-1" aria-label={labels.title} style="background-image: url(/favicon.ico);"></a>
+      <a class="site-name-text" href={newsroomPath(locale)}>{labels.title}</a>
+    </div>
+    <nav id="newsroom-nav-menu" class="clearfix" aria-label={labels.menu}>
+      {navigation.map((item) => <a href={item.href} aria-current={Astro.url.pathname === item.href ? 'page' : undefined}>{item.title}</a>)}
+      <a href={newsroomPath(locale, 'search/')} class="search-toggle" data-newsroom-search-toggle>{labels.search}</a>
+    </nav>
+    <button id="newsroom-menu-toggle" class="menu-toggle" aria-label={labels.menu} aria-controls="newsroom-extended-menu" aria-expanded="false" data-nav-menu-extended="false">
+      <span class="bar bar-1"></span><span class="bar bar-2"></span><span class="bar bar-3"></span>
+    </button>
+  </div>
+  <div id="newsroom-extended-menu" class="extend-menu" data-nav-menu-extended="false" inert>
+    <nav id="newsroom-extend-nav-menu" class="clearfix" aria-label={labels.menu}>
+      {navigation.map((item) => <a href={item.href}>{item.title}</a>)}
+    </nav>
+    <div class="site-search">
+      <form class="search-box" method="get" action={newsroomPath(locale, 'search/')} role="search">
+        <label for="newsroom-query" class="sr-only">{labels.searchLabel}</label>
+        <input type="text" id="newsroom-query" name="q" class="text" placeholder={labels.searchPlaceholder} />
+        <button type="submit" class="submit" aria-label={labels.search}>
+          <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M661.44 597.44h-33.92l-11.84-11.52a277.76 277.76 0 1 0-29.76 29.76l11.52 11.84v33.6l213.44 212.8 64-64z m-256 0a192 192 0 1 1 192-192 192 192 0 0 1-192 192z"></path></svg>
+        </button>
+      </form>
+      <p aria-label={labels.language}>
+        {alternates.map((alternate, index) => <Fragment>{index > 0 && ' · '}<a href={alternate.url} lang={alternate.locale} hreflang={alternate.locale} aria-current={alternate.locale === locale ? 'page' : undefined}>{newsroomLanguageName(alternate.locale)}</a></Fragment>)}
+      </p>
+    </div>
+  </div>
+</header>

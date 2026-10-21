@@ -6,7 +6,7 @@ export const legacyNewsroomOrigin = 'https://newsroom.nmteam.xyz';
 export const postsPerPage = 11;
 export const defaultNewsImage = '/newsroom/default-post-image.png';
 
-export function isNewsroomLocale(value: string): value is NewsroomLocale {
+export function isNewsroomLocale(value: unknown): value is NewsroomLocale {
   return value === 'zh-CN' || value === 'en';
 }
 
