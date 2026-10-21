@@ -4,7 +4,7 @@ const labels = {
   'zh-CN': {
     title: 'nmTeam Newsroom',
     description: '在 nmTeam Newsroom 了解 nmTeam 及其产品与服务的最新新闻和资讯。',
-    home: '首页', website: 'nmTeam 官网', about: '关于 nmTeam Newsroom',
+    home: '首页', website: 'nmTeam 官网', about: '关于 nmTeam Newsroom', localAbout: '关于',
     search: '搜索', searchPlaceholder: '输入关键字搜索', searchLabel: '搜索关键字',
     searching: '搜索中', noResults: '没有找到内容', searchError: '搜索内容加载失败，请重试。',
     searchPrompt: '请输入关键字。', searchNeedsJavaScript: '搜索需要启用 JavaScript。您也可以使用页脚的分类和归档浏览文章。',
@@ -16,7 +16,7 @@ const labels = {
   en: {
     title: 'nmTeam Newsroom',
     description: 'Discover the latest news about nmTeam and its products and services in nmTeam Newsroom.',
-    home: 'Home', website: 'nmTeam Website', about: 'About nmTeam Newsroom',
+    home: 'Home', website: 'nmTeam Website', about: 'About nmTeam Newsroom', localAbout: 'About',
     search: 'Search', searchPlaceholder: 'Search Newsroom', searchLabel: 'Search keywords',
     searching: 'Searching', noResults: 'No articles found', searchError: 'Could not load search results. Please try again.',
     searchPrompt: 'Enter a search term.', searchNeedsJavaScript: 'Enable JavaScript to search. You can also browse categories and archives in the footer.',
@@ -28,4 +28,3 @@ const labels = {
 };
 
 export const newsroomLabels = (locale: NewsroomLocale) => labels[locale];
-export const newsroomLanguageName = (locale: NewsroomLocale) => locale === 'zh-CN' ? '简体中文' : 'English';

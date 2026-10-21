@@ -18,6 +18,7 @@ const { locale } = Astro.props;
     <SiteAssets pageStyles={false} />
     <link rel="stylesheet" href="/newsroom/theme/normalize.css" />
     <link rel="stylesheet" href="/newsroom/theme/style.css" />
+    <link rel="stylesheet" href="/newsroom/theme/navigation.css" />
     <link rel="stylesheet" href="/newsroom/theme/enhancements.css" />
     <link rel="stylesheet" href="/newsroom/theme/integration.css" />
     <script is:inline defer src="https://a.nmteam.top/script.js" data-website-id="3f6853e3-82e8-4f73-977f-cf685c37e3c3"></script>
@@ -26,7 +27,7 @@ const { locale } = Astro.props;
     <GlobalHeader locale={locale} navigationMode="flow" skipTarget="#newsroom-main" />
     <script is:inline src="/src/js/header.js"></script>
     <div class="newsroom-shell">
-      <div class="newsroom-header-slot"><Header locale={locale} alternates={Astro.props.alternates} /></div>
+      <div class="newsroom-header-slot"><Header locale={locale} /></div>
       <main id="newsroom-main" tabindex="-1"><div class="container"><div class="row"><slot /></div></div></main>
       <Footer locale={locale} />
     </div>

@@ -79,7 +79,7 @@ html[data-theme=dark] body {
 }
 
 /* Preserve the legacy stagger only while the mobile menu is closing. */
-@media (max-width: 699.99999px) {
+@media (width < 700px) {
     #hcont .header[data-closing]:not([open]).hidden {
         transition: background-color 0.1s 0.5s, backdrop-filter 0.05s 0.55s, -webkit-backdrop-filter 0.05s 0.55s, height 0.7s, overflow-y 0s 0.7s;
     }
@@ -246,7 +246,7 @@ html[data-theme=dark] body {
     }
 }
 
-@media (max-width: 699.99999px) {
+@media (width < 700px) {
     #hcont .header {
         display: flex;
         flex-direction: column;

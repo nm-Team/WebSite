@@ -43,3 +43,44 @@ test('mobile navigation keeps menus separate and restores focus and scrolling', 
   await page.evaluate(() => window.scrollTo(0, 400));
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(400);
 });
+
+test('local navigation fits narrow screens and respects light, dark and reduced-motion settings', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'This test supplies its own viewport matrix');
+  test.setTimeout(60_000);
+  for (const colorScheme of ['light', 'dark'] as const) {
+    await page.emulateMedia({ colorScheme, reducedMotion: 'reduce' });
+    for (const width of [320, 390, 700, 768, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto('/en/newsroom/', { waitUntil: 'domcontentloaded' });
+      await expect(page.locator('html')).toHaveAttribute('data-theme', colorScheme);
+      const local = page.locator('#newsroom-header');
+      expect((await local.boundingBox())!.height).toBe(width < 700 ? 48 : 52);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
+      if (width < 700) {
+        await page.locator('#newsroom-menu-toggle').click();
+        await expect(page.locator('#newsroom-extended-menu')).toBeVisible();
+        await expect(page.locator('#newsroom-main')).toHaveAttribute('inert', '');
+        await expect(page.locator('#newsroom-menu-toggle .bar').first()).toHaveCSS('transition-duration', '0s');
+      } else {
+        await page.locator('[data-newsroom-search-toggle]').click();
+        await expect(page.locator('#newsroom-query')).toBeFocused();
+        await expect(page.locator('[data-newsroom-search-toggle]')).toHaveAttribute('aria-expanded', 'true');
+      }
+      await page.keyboard.press('Escape');
+      await expect(page.locator('#newsroom-extended-menu')).not.toBeVisible();
+      await expect(page.locator('#newsroom-main')).not.toHaveAttribute('inert');
+    }
+  }
+});
+
+test('local navigation contains no language switch and search uses the page language', async ({ page }) => {
+  await page.goto('/zh-CN/newsroom/welcome-2021-08-09/');
+  await expect(page.locator('#newsroom-header [hreflang]')).toHaveCount(0);
+  const mobile = await page.locator('#newsroom-menu-toggle').isVisible();
+  if (mobile) await page.locator('#newsroom-menu-toggle').click();
+  else await page.locator('[data-newsroom-search-toggle]').click();
+  await page.locator('#newsroom-query').fill('nmBot');
+  await page.locator('#newsroom-query').press('Enter');
+  await expect(page).toHaveURL(/\/zh-CN\/newsroom\/search\/\?q=nmBot$/);
+  await expect(page.locator('#search-results a')).not.toHaveCount(0);
+});

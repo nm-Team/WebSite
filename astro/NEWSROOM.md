@@ -37,7 +37,7 @@ categories, tags, monthly archives, search, an about page, and `rss.xml`.
 Article URLs are `/{locale}/newsroom/{articleId}-{YYYY-MM-DD}/`.
 The default `/newsroom/` entry redirects to English. Main-site Chinese locales
 link to Chinese Newsroom; English and Japanese link to English Newsroom.
-Language navigation and `hreflang` only include translations that exist.
+The `hreflang` links only include translations that exist.
 
 The homepage reads the latest five articles at build time. Newsroom search loads
 the selected language's `search-data.json`, including the full article text.
@@ -50,6 +50,12 @@ while the local Newsroom header stays at the viewport top. Newsroom keeps its
 own footer and namespaced CSS. Fonts, theme variables and the system theme
 script are shared with the website. Newsroom uses only its original Umami site
 ID (`3f6853e3-82e8-4f73-977f-cf685c37e3c3`).
+
+The local navigation is 52px high on desktop and 48px below 700px. It contains
+the Newsroom title, about link, and search. Mobile navigation and desktop search
+support Escape, focus restoration, and background scroll locking. Opening the
+global menu closes the local menu. Reduced-motion preferences disable the local
+navigation and card entrance animations.
 
 ## Build and migration outputs
 

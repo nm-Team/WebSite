@@ -1,4 +1,4 @@
-/* Layout only: the local navigation keeps its imported internal styling. */
+/* Shared header flow and local navigation positioning. */
 #hcont[data-navigation-mode="flow"] {
   position: relative;
   z-index: 200;
@@ -11,15 +11,18 @@
   position: sticky;
   top: 0;
   z-index: 90;
-  height: 30rem;
-}
-.newsroom-header-slot #newsroom-header { position: relative; z-index: auto; }
-.newsroom-header-slot #newsroom-header[data-nav-menu-extended="true"] {
-  max-height: calc(100dvh - var(--newsroom-header-offset, 0px));
+  height: 52px;
 }
 .newsroom-shell #newsroom-main > .container { margin-top: 0; }
 #newsroom-main { scroll-margin-top: 60px; }
-@media (max-width: 699.99999px) {
+@media (width < 700px) {
   #hcont[data-navigation-mode="flow"] { height: 56px; }
   #hcont[data-navigation-mode="flow"] .header[open] { position: fixed; }
+  .newsroom-header-slot { height: 48px; }
+}
+@media (min-width: 700px) and (max-width: 900px) {
+  #hcont[data-navigation-mode="flow"] .header { padding: 0 20px; }
+  #hcont[data-navigation-mode="flow"] .header .right .links a { padding-inline: 8px; }
+  #hcont[data-navigation-mode="flow"] .header .right .accountBox p { display: none; }
+  #hcont[data-navigation-mode="flow"] .header .right .accountBox { padding: 5px; }
 }

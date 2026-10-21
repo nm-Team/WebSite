@@ -1,6 +1,8 @@
 const header = document.querySelector<HTMLElement>('#newsroom-header');
 const toggle = document.querySelector<HTMLButtonElement>('#newsroom-menu-toggle');
 const panel = document.querySelector<HTMLElement>('#newsroom-extended-menu');
+const searchToggle = header?.querySelector<HTMLAnchorElement>('[data-newsroom-search-toggle]');
+const backdrop = document.querySelector<HTMLElement>('[data-newsroom-backdrop]');
 let returnFocus: HTMLElement | null = null;
 
 function setOpen(open: boolean) {
@@ -16,17 +18,21 @@ function setOpen(open: boolean) {
   document.body.dataset.navMenuExtended = String(open);
   document.body.style.overflow = open || document.getElementById('pageHeader')?.hasAttribute('open') ? 'hidden' : '';
   toggle.setAttribute('aria-expanded', String(open));
+  searchToggle?.setAttribute('aria-expanded', String(open));
+  if (backdrop) backdrop.hidden = !open;
   panel.inert = !open;
+  document.querySelectorAll<HTMLElement>('#newsroom-main, #newsroom-footer').forEach((element) => { element.inert = open; });
   if (open) panel.querySelector<HTMLElement>('a, input, button')?.focus({ preventScroll: true });
   else if (header.contains(document.activeElement)) returnFocus?.focus({ preventScroll: true });
 }
 
 toggle?.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
-header?.querySelector('[data-newsroom-search-toggle]')?.addEventListener('click', (event) => {
+searchToggle?.addEventListener('click', (event) => {
   event.preventDefault();
   setOpen(toggle?.getAttribute('aria-expanded') !== 'true');
   if (toggle?.getAttribute('aria-expanded') === 'true') document.getElementById('newsroom-query')?.focus({ preventScroll: true });
 });
+backdrop?.addEventListener('click', () => setOpen(false));
 document.addEventListener('keydown', (event) => {
   if (toggle?.getAttribute('aria-expanded') !== 'true' || !header) return;
   if (event.key === 'Escape') { event.preventDefault(); setOpen(false); }

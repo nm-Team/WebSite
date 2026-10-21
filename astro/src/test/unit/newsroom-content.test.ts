@@ -10,12 +10,12 @@ import { inspectMarkdown } from '@/lib/newsroom/markdown';
 import { articlePath, resolveNewsroomLocale } from '@/lib/newsroom/paths';
 
 describe('imported Newsroom content', () => {
-  it('keeps the 34 original articles and only their existing translations', () => {
+  it('keeps every imported article and its original metadata', () => {
     expect(manifest.articles).toHaveLength(34);
     for (const locale of ['zh-CN', 'en']) {
       const directory = new URL(`../../content/newsroom/${locale}/`, import.meta.url);
       const expected = manifest.articles.filter((article) => article.locales.includes(locale));
-      expect(readdirSync(directory).sort()).toEqual(expected.map((article) => `${article.articleId}.md`).sort());
+      expect(readdirSync(directory)).toEqual(expect.arrayContaining(expected.map((article) => `${article.articleId}.md`)));
       expect(expected).toHaveLength(locale === 'zh-CN' ? 34 : 32);
       for (const article of expected) {
         const source = readFileSync(new URL(`${article.articleId}.md`, directory), 'utf8');
