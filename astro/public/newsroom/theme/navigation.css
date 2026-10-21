@@ -59,13 +59,27 @@
 #newsroom-menu-toggle[aria-expanded="true"] .bar-1 { transform: rotate(-45deg); }
 #newsroom-menu-toggle[aria-expanded="true"] .bar-2 { transform: rotate(45deg); }
 #newsroom-extended-menu {
-  display: none;
+  position: absolute;
+  top: 100%;
+  inset-inline: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  background: var(--newsroom-color-article-background);
   border-top: 1px solid var(--color-border-subtle);
   max-height: calc(100dvh - var(--newsroom-header-offset, 0px) - 52px);
   overflow-y: auto;
   overscroll-behavior: contain;
+  transition: opacity 180ms var(--motion-ease-out), transform 180ms var(--motion-ease-out), visibility 0s 180ms;
 }
-#newsroom-extended-menu[data-nav-menu-extended="true"] { display: block; }
+#newsroom-extended-menu[data-nav-menu-extended="true"] {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
+}
 .newsroom-panel-content { width: calc(100% - 48px); max-width: 1116px; margin: 0 auto; padding: 24px 0 28px; }
 #newsroom-extend-nav-menu { display: none; }
 #newsroom-header .site-search { max-width: 680px; margin: 0 auto; }
@@ -84,8 +98,25 @@
 }
 #newsroom-header .search-box button { width: 44px; height: 44px; top: 1px; right: 1px; border-radius: 9px; }
 #newsroom-header .search-box button svg { width: 18px; height: 18px; }
-.newsroom-menu-backdrop { position: fixed; inset: 0; z-index: -1; background: rgba(0, 0, 0, 0.16); }
-.newsroom-menu-backdrop[hidden] { display: none; }
+.newsroom-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.16);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms var(--motion-ease-out), visibility 0s 180ms;
+}
+#newsroom-header[data-nav-menu-extended="true"] + .newsroom-menu-backdrop {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+#newsroom-header[data-instant-toggle="true"] #newsroom-extended-menu,
+#newsroom-header[data-instant-toggle="true"] .bar,
+#newsroom-header[data-instant-toggle="true"] + .newsroom-menu-backdrop { transition: none; }
 @media (width < 700px) {
   #newsroom-header .container { width: calc(100% - 40px); min-height: 47px; }
   #newsroom-nav-menu { display: none; }

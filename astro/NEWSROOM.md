@@ -58,7 +58,9 @@ The local navigation is 52px high on desktop and 48px below 700px. It contains
 the Newsroom title, about link, and search. Mobile navigation and desktop search
 support Escape, focus restoration, and background scroll locking. Opening the
 global menu closes the local menu. Reduced-motion preferences disable the local
-navigation and card entrance animations.
+navigation and card entrance animations. Pointer toggles fade and slide the
+local menu over 180ms, with reversible transitions for rapid toggles. Keyboard
+actions update immediately.
 
 Both navigation levels and footer levels share the same horizontal gutter:
 10% on wide screens, 20px through 900px, and 16-20px on phones. Their content

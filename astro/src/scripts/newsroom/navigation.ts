@@ -5,9 +5,10 @@ const searchToggle = header?.querySelector<HTMLAnchorElement>('[data-newsroom-se
 const backdrop = document.querySelector<HTMLElement>('[data-newsroom-backdrop]');
 let returnFocus: HTMLElement | null = null;
 
-function setOpen(open: boolean) {
+function setOpen(open: boolean, instant = false) {
   if (!header || !toggle || !panel) return;
   if ((header.dataset.navMenuExtended === 'true') === open) return;
+  header.dataset.instantToggle = String(instant);
   if (open) returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
   if (open) {
     window.dispatchEvent(new CustomEvent('newsroom-navigation-open'));
@@ -19,23 +20,22 @@ function setOpen(open: boolean) {
   document.body.style.overflow = open || document.getElementById('pageHeader')?.hasAttribute('open') ? 'hidden' : '';
   toggle.setAttribute('aria-expanded', String(open));
   searchToggle?.setAttribute('aria-expanded', String(open));
-  if (backdrop) backdrop.hidden = !open;
   panel.inert = !open;
   document.querySelectorAll<HTMLElement>('#newsroom-main, #newsroom-footer, #fcont').forEach((element) => { element.inert = open; });
   if (open) panel.querySelector<HTMLElement>('a, input, button')?.focus({ preventScroll: true });
   else if (header.contains(document.activeElement)) returnFocus?.focus({ preventScroll: true });
 }
 
-toggle?.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+toggle?.addEventListener('click', (event) => setOpen(toggle.getAttribute('aria-expanded') !== 'true', event.detail === 0));
 searchToggle?.addEventListener('click', (event) => {
   event.preventDefault();
-  setOpen(toggle?.getAttribute('aria-expanded') !== 'true');
+  setOpen(toggle?.getAttribute('aria-expanded') !== 'true', event.detail === 0);
   if (toggle?.getAttribute('aria-expanded') === 'true') document.getElementById('newsroom-query')?.focus({ preventScroll: true });
 });
 backdrop?.addEventListener('click', () => setOpen(false));
 document.addEventListener('keydown', (event) => {
   if (toggle?.getAttribute('aria-expanded') !== 'true' || !header) return;
-  if (event.key === 'Escape') { event.preventDefault(); setOpen(false); }
+  if (event.key === 'Escape') { event.preventDefault(); setOpen(false, true); }
   if (event.key === 'Tab') {
     const focusable = [...header.querySelectorAll<HTMLElement>('a[href], button, input')].filter((element) => element.tabIndex >= 0 && element.getClientRects().length > 0 && !element.closest('[inert]'));
     const first = focusable[0];
@@ -44,10 +44,10 @@ document.addEventListener('keydown', (event) => {
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
   }
 });
-window.addEventListener('resize', () => setOpen(false));
+window.addEventListener('resize', () => setOpen(false, true));
 window.addEventListener('site-navigation-toggle', (event) => {
   const open = (event as CustomEvent<{ open: boolean }>).detail.open;
-  if (open) setOpen(false);
+  if (open) setOpen(false, true);
   document.querySelectorAll<HTMLElement>('.newsroom-shell, #fcont').forEach((element) => { element.inert = open; });
 });
 

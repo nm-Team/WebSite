@@ -141,3 +141,35 @@ test('both navigation and footer levels share their content edges at every break
     }
   }
 });
+
+test('the local menu animates both ways and handles rapid pointer reversals', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto('/en/newsroom/');
+  const panel = page.locator('#newsroom-extended-menu');
+  const trigger = await page.locator('#newsroom-menu-toggle').isVisible()
+    ? page.locator('#newsroom-menu-toggle') : page.locator('[data-newsroom-search-toggle]');
+  await panel.evaluate((element) => {
+    element.setAttribute('data-opacity-transitions', '0');
+    element.addEventListener('transitionrun', (event) => {
+      if (event.target === element && (event as TransitionEvent).propertyName === 'opacity') {
+        element.setAttribute('data-opacity-transitions', String(Number(element.getAttribute('data-opacity-transitions')) + 1));
+      }
+    });
+  });
+  await trigger.click();
+  await expect(panel).toHaveCSS('opacity', '1');
+  await expect(panel).toHaveAttribute('data-opacity-transitions', '1');
+  await trigger.click();
+  await expect(panel).not.toBeVisible();
+  await expect(panel).toHaveAttribute('data-opacity-transitions', '2');
+
+  const box = (await trigger.boundingBox())!;
+  for (let i = 0; i < 3; i++) await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+  await expect(trigger).toHaveAttribute('aria-expanded', 'true');
+  await expect(panel).toHaveCSS('opacity', '1');
+  await expect(page.locator('#newsroom-query')).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(panel).not.toBeVisible();
+  await expect(trigger).toBeFocused();
+  await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+});
