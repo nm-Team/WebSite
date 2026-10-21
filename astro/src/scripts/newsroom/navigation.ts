@@ -21,7 +21,7 @@ function setOpen(open: boolean) {
   searchToggle?.setAttribute('aria-expanded', String(open));
   if (backdrop) backdrop.hidden = !open;
   panel.inert = !open;
-  document.querySelectorAll<HTMLElement>('#newsroom-main, #newsroom-footer').forEach((element) => { element.inert = open; });
+  document.querySelectorAll<HTMLElement>('#newsroom-main, #newsroom-footer, #fcont').forEach((element) => { element.inert = open; });
   if (open) panel.querySelector<HTMLElement>('a, input, button')?.focus({ preventScroll: true });
   else if (header.contains(document.activeElement)) returnFocus?.focus({ preventScroll: true });
 }
@@ -48,8 +48,7 @@ window.addEventListener('resize', () => setOpen(false));
 window.addEventListener('site-navigation-toggle', (event) => {
   const open = (event as CustomEvent<{ open: boolean }>).detail.open;
   if (open) setOpen(false);
-  const shell = document.querySelector<HTMLElement>('.newsroom-shell');
-  if (shell) shell.inert = open;
+  document.querySelectorAll<HTMLElement>('.newsroom-shell, #fcont').forEach((element) => { element.inert = open; });
 });
 
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

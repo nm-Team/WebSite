@@ -15,6 +15,9 @@
 }
 .newsroom-shell #newsroom-main > .container { margin-top: 0; }
 #newsroom-main { scroll-margin-top: 60px; }
+.newsroom-site #fcont { margin-top: 0; }
+.newsroom-site #fcont * { font-family: var(--font-sans); }
+.newsroom-site #fcont *:focus-visible { outline: var(--focus-ring); }
 @media (width < 700px) {
   #hcont[data-navigation-mode="flow"] { height: 56px; }
   #hcont[data-navigation-mode="flow"] .header[open] { position: fixed; }

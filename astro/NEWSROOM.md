@@ -46,8 +46,11 @@ the legacy post fields, with Chinese articles and new canonical permalinks.
 Its legacy `cid` remains present when the original article had one.
 
 The main header uses `navigationMode="flow"` on Newsroom pages. It scrolls away,
-while the local Newsroom header stays at the viewport top. Newsroom keeps its
-own footer and namespaced CSS. Fonts, theme variables and the system theme
+while the local Newsroom header stays at the viewport top. The local footer
+contains Newsroom categories, archives and feeds, followed by the global website
+footer with legal links and the language selector. That selector returns to an
+available translation, or the selected Newsroom language's index when missing.
+Newsroom keeps its namespaced CSS. Fonts, theme variables and the system theme
 script are shared with the website. Newsroom uses only its original Umami site
 ID (`3f6853e3-82e8-4f73-977f-cf685c37e3c3`).
 

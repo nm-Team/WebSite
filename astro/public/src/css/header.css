@@ -480,6 +480,85 @@ html[data-theme=dark] body {
     }
 }
 
+/* Shared footer consent dialog. */
+.cookie-consent {
+    visibility: hidden;
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    right: -720px;
+    width: min(400px, calc(100vw - 80px));
+    max-height: calc(100vh - 120px);
+    padding: 20px 22px !important;
+    background-color: var(--glass-background);
+    backdrop-filter: var(--glass-filter);
+    -webkit-backdrop-filter: var(--glass-filter);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    color: var(--color-text-primary);
+    overflow-y: auto;
+    transition: right 0.6s var(--motion-ease-out), visibility 0.8s;
+}
+
+.cookie-consent[data-status="open"] {
+    visibility: visible;
+    right: 20px;
+}
+
+.cookie-consent__header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4 !important;
+    padding-bottom: 8px !important;
+}
+
+.cookie-consent__body {
+    font-size: 16px;
+    line-height: 1.7 !important;
+    padding-bottom: 3px !important;
+}
+
+.cookie-consent__footer {
+    padding-top: 1px !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    text-align: end;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.cookie-consent__footer button {
+    color: var(--color-text-primary);
+    padding: 8px 18px !important;
+    background: transparent;
+    border: 1px solid var(--color-border-subtle);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--radius-pill);
+    transition: background-color 0.25s, transform 0.25s var(--motion-ease-out), border-color 0.25s;
+}
+
+.cookie-consent__footer button:last-child {
+    background: var(--color-brand);
+    border-color: transparent;
+    color: #1c1a12;
+}
+
+.cookie-consent__footer button:hover,
+.cookie-consent__footer button:focus-visible {
+    background-color: rgba(128, 128, 128, 0.14);
+    transform: translateY(-1px);
+}
+
+.cookie-consent__footer button:last-child:hover,
+.cookie-consent__footer button:last-child:focus-visible {
+    background: var(--color-brand-hover);
+}
+
 /* footer */
 #fcont {
     position: relative;

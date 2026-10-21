@@ -17,9 +17,5 @@ const archives = getArchives(posts, locale).slice(0, 5);
       <div class="footer-col"><div class="footer-col-title">{labels.archives}</div>{archives.map((archive) => <a href={archive.url}>{archive.label}</a>)}</div>
       <div class="footer-col"><div class="footer-col-title">{labels.more}</div><a href={newsroomPath(locale, 'about/')}>{labels.about}</a><a href={`/${locale}/`}>{labels.website}</a><a href={newsroomPath(locale, 'rss.xml')}>RSS</a></div>
     </div>
-    <div class="footer-bottom"><div class="footer-bottom-left">
-      <p>&copy; {new Date().getFullYear()} <a href={newsroomPath(locale)}>{labels.title}</a>. {labels.rights}</p>
-      <p><a href={`/${locale}/legal/privacy-policy/`}>{labels.privacy}</a> | <a href={`/${locale}/legal/network-service-protocol/`}>{labels.terms}</a> | <a href={`/${locale}/cookies/`}>Cookies</a></p>
-    </div></div>
   </div>
 </footer>

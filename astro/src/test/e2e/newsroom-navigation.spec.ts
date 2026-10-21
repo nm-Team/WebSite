@@ -1,5 +1,9 @@
 import { expect, test } from '@playwright/test';
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => { localStorage.cookieTipv0Checked = 'true'; });
+});
+
 test('the global header scrolls away and local navigation stays at the top', async ({ page }) => {
   await page.goto('/en/newsroom/');
   const global = page.locator('#pageHeader');
@@ -29,6 +33,7 @@ test('mobile navigation keeps menus separate and restores focus and scrolling', 
   await local.click();
   await expect(local).toHaveAttribute('aria-expanded', 'true');
   await expect(page.locator('body')).toHaveCSS('overflow', 'hidden');
+  await expect(page.locator('#fcont')).toHaveAttribute('inert', '');
   await global.click();
   await expect(local).toHaveAttribute('aria-expanded', 'false');
   await expect(global).toHaveAttribute('aria-expanded', 'true');
@@ -40,6 +45,7 @@ test('mobile navigation keeps menus separate and restores focus and scrolling', 
   await expect(local).toHaveAttribute('aria-expanded', 'false');
   await expect(local).toBeFocused();
   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+  await expect(page.locator('#fcont')).not.toHaveAttribute('inert');
   await page.evaluate(() => window.scrollTo(0, 400));
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(400);
 });
@@ -83,4 +89,23 @@ test('local navigation contains no language switch and search uses the page lang
   await page.locator('#newsroom-query').press('Enter');
   await expect(page).toHaveURL(/\/zh-CN\/newsroom\/search\/\?q=nmBot$/);
   await expect(page.locator('#search-results a')).not.toHaveCount(0);
+});
+
+test('the global footer follows the local footer and keeps language switching available', async ({ page }) => {
+  await page.goto('/en/newsroom/welcome-2021-08-09/');
+  const local = page.locator('#newsroom-footer');
+  const global = page.locator('#fcont');
+  await expect(global).toBeVisible();
+  const localBox = (await local.boundingBox())!;
+  const globalBox = (await global.boundingBox())!;
+  expect(globalBox.y).toBeGreaterThanOrEqual(localBox.y + localBox.height - 1);
+  await expect(global.locator('a[href="/en/products/"]')).toBeVisible();
+  await page.locator('#footer_selectLanguageButton').click();
+  await page.locator('[data-lanid="zh-CN"]').click();
+  await expect(page).toHaveURL(/\/zh-CN\/newsroom\/welcome-2021-08-09\/$/);
+
+  await page.goto('/zh-CN/newsroom/nmfun-test-2021-11-20/');
+  await page.locator('#footer_selectLanguageButton').click();
+  await page.locator('[data-lanid="en"]').click();
+  await expect(page).toHaveURL(/\/en\/newsroom\/$/);
 });
