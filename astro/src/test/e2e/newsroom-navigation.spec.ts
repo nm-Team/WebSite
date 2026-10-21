@@ -109,3 +109,35 @@ test('the global footer follows the local footer and keeps language switching av
   await page.locator('[data-lanid="en"]').click();
   await expect(page).toHaveURL(/\/en\/newsroom\/$/);
 });
+
+test('both navigation and footer levels share their content edges at every breakpoint', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'This test supplies its own viewport matrix');
+  for (const width of [320, 390, 699, 700, 768, 900, 901, 1440, 1920]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/en/newsroom/', { waitUntil: 'domcontentloaded' });
+    const edges = await page.evaluate(() => {
+      const global = document.querySelector<HTMLElement>('#pageHeader')!;
+      const box = global.getBoundingClientRect();
+      const style = getComputedStyle(global);
+      const expected = { left: box.left + parseFloat(style.paddingLeft), right: box.right - parseFloat(style.paddingRight) };
+      const actual = ['#newsroom-header .container', '#newsroom-footer .footer-body', '#fcont .footer-body'].map((selector) => {
+        const bounds = document.querySelector(selector)!.getBoundingClientRect();
+        return { left: bounds.left, right: bounds.right };
+      });
+      return { expected, actual, overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth };
+    });
+    for (const actual of edges.actual) {
+      expect(Math.abs(actual.left - edges.expected.left), `left edge at ${width}px`).toBeLessThan(1);
+      expect(Math.abs(actual.right - edges.expected.right), `right edge at ${width}px`).toBeLessThan(1);
+    }
+    expect(edges.overflow).toBeLessThanOrEqual(1);
+    const brand = (await page.locator('#pageHeader .left').boundingBox())!;
+    expect(Math.abs(brand.x - edges.expected.left)).toBeLessThan(1);
+    if (width < 700) {
+      const upperToggle = (await page.locator('#menu-toggle').boundingBox())!;
+      const lowerToggle = (await page.locator('#newsroom-menu-toggle').boundingBox())!;
+      expect(Math.abs(upperToggle.x - lowerToggle.x)).toBeLessThan(1);
+      expect(upperToggle.width).toBe(lowerToggle.width);
+    }
+  }
+});

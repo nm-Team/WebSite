@@ -60,6 +60,10 @@ support Escape, focus restoration, and background scroll locking. Opening the
 global menu closes the local menu. Reduced-motion preferences disable the local
 navigation and card entrance animations.
 
+Both navigation levels and footer levels share the same horizontal gutter:
+10% on wide screens, 20px through 900px, and 16-20px on phones. Their content
+edges stay aligned without changing the article or card layout.
+
 ## Build and migration outputs
 
 Run the commands in the repository README from `astro/`. `pnpm build` produces:
