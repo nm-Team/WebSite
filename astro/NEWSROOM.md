@@ -105,10 +105,14 @@ Run the commands in the repository README from `astro/`. `pnpm build` produces:
 
 - `dist/`: the complete website, including Newsroom and additional main-site
   redirects for historical `/news/`, `/uploads/`, and `/usr/uploads/` paths.
-- `legacy-newsroom-dist/`: a separate redirect deployment for
+  It also accepts every known legacy path beneath `/newsroom/`, so a wildcard
+  redirect from the old hostname can preserve the original path after that prefix.
+  Existing upload and API assets are served directly without self-redirects.
+- `legacy-newsroom-dist/`: an optional separate redirect deployment for
   `newsroom.nmteam.xyz`. Its manifest covers the imported article aliases,
   pagination, categories, tags, archives, special pages, RSS, search, API and
-  both historical upload prefixes. Unknown paths retain a 404 response.
+  both historical upload prefixes, plus the favicon, robots and sitemap files.
+  Unknown paths retain a 404 response.
 
 `integrations/newsroom-compatibility.ts` generates these rules from the imported
 alias manifest, built routes and actual asset files. It fails the build if any
@@ -117,22 +121,42 @@ target is missing or the static rules exceed Cloudflare Pages limits.
 
 The legacy output includes a small Cloudflare Pages Worker routed only to
 `/api/posts` and `/api/posts/`. It preserves query parameters and adds CORS
-headers to the API's 301 response. Other routes use `_redirects`. This is needed
-because [Pages redirects run before header rules](https://developers.cloudflare.com/pages/configuration/redirects/).
-The main website remains a static deployment. The Worker uses
+headers to the API's 301 response, with explicit OPTIONS and method handling.
+Other routes use `_redirects`. When using a different redirect provider, check
+that its API redirect response allows cross-origin access as well as the final
+API response. [Pages redirects run before header rules](https://developers.cloudflare.com/pages/configuration/redirects/),
+so an `_headers` rule alone cannot add headers to a redirect.
+The main website remains a static deployment. The optional Worker uses
 [Pages advanced mode](https://developers.cloudflare.com/pages/functions/advanced-mode/)
 without adding an application runtime or package manager to the old site.
+
+After building, run `pnpm exec playwright test --config playwright.pages.config.ts`
+to verify every prefixed legacy path using the actual Cloudflare Pages engine.
+This command starts a local Wrangler server with a pinned CLI version, using
+pnpm's tool cache without changing project dependencies. Set
+`NEWSROOM_DEPLOYMENT_URL` to run the same checks against a deployed preview.
+The checks cover final HTTP status, redirect destinations, query strings,
+API CORS and unknown-path 404 responses. When `NEWSROOM_LEGACY_URL` also names
+a host configured with the wildcard redirect below, each case verifies the
+old-host redirect before checking the main-site rule and final resource.
 
 ## Production cutover
 
 1. Deploy `dist/` to the existing `nm.team` site. Check both Newsroom languages,
    articles, images, search and RSS on the deployed site.
-2. Deploy `legacy-newsroom-dist/` to the project serving `newsroom.nmteam.xyz`.
-   Keep that hostname's DNS and TLS active. Preserve query strings in equivalent
-   provider rules if using a platform other than Cloudflare Pages.
+2. Configure a permanent redirect from `newsroom.nmteam.xyz/*` to
+   `https://nm.team/newsroom/$1`, preserving the matched path and query string.
+   For a Cloudflare Pages `_redirects` file, the equivalent rule is
+   `/* https://nm.team/newsroom/:splat 301`. Keep the old hostname's DNS and TLS
+   active. Alternatively, deploy `legacy-newsroom-dist/` to reach each final
+   destination directly and retain explicit API OPTIONS handling.
 3. Verify an old `.html` article, a category article alias, an upload under each
    prefix, `/search/?q=nmBot`, `/rss.xml` and the cross-origin API. Each supported
-   legacy URL must reach the final destination without redirect chains.
+   legacy URL must reach its final destination without loops or 404 responses.
+   The wildcard approach adds a main-site redirect for old page aliases; assets
+   and the API are already at their final prefixed paths. The old root reaches
+   the default English Newsroom entry through the wildcard rule, while the
+   optional direct redirect deployment retains the old Chinese homepage.
 4. Keep the old repository read-only after cutover. Publish future articles here.
 
 The Chinese RSS feed preserves imported items' old GUID strings so existing

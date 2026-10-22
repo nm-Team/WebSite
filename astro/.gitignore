@@ -2,6 +2,7 @@ node_modules/
 dist/
 legacy-newsroom-dist/
 .astro/
+.wrangler/
 coverage/
 playwright-report/
 test-results/

@@ -45,11 +45,34 @@ export function buildLegacyNewsroomMap(pagePaths: readonly string[], assetPaths:
   add('/rss.xml', newsroomPath('zh-CN', 'rss.xml'));
   add('/search-data.json', newsroomPath('zh-CN', 'search-data.json'));
   add('/api/posts', '/newsroom/api/posts', true);
+  add('/favicon.ico', '/favicon.ico');
+  add('/robots.txt', '/robots.txt');
+  add('/sitemap-index.xml', '/sitemap.xml');
+  add('/sitemap-0.xml', '/sitemap.xml');
   for (const asset of assetPaths) {
     add(`/uploads/${asset}`, `/newsroom/uploads/${asset}`);
     add(`/usr/uploads/${asset}`, `/newsroom/uploads/${asset}`);
   }
   return Object.fromEntries([...redirects].sort(([a], [b]) => a.localeCompare(b)));
+}
+
+export function buildMainNewsroomMap(legacyRedirects: Readonly<Record<string, string>>): Record<string, string> {
+  const redirects = new Map<string, string>();
+  for (const [source, target] of Object.entries(legacyRedirects)) {
+    if (/^\/(?:news|uploads|usr\/uploads)\//.test(source)) redirects.set(source, target);
+    const prefixed = `/newsroom${source}`;
+    // The root keeps the site's English default; uploads and the API already live here.
+    if (source !== '/' && prefixed !== target) redirects.set(prefixed, target);
+  }
+  return Object.fromEntries(redirects);
+}
+
+function validateRedirectRules(rules: readonly string[]) {
+  const active = rules.filter((line) => line.trim() && !line.trimStart().startsWith('#'));
+  const dynamic = active.filter((line) => /[*:]/.test(line.trim().split(/\s+/, 1)[0])).length;
+  if (active.length - dynamic > 2000 || dynamic > 100 || active.some((line) => line.length > 1000)) {
+    throw new Error('Newsroom redirects exceed Cloudflare Pages rule limits');
+  }
 }
 
 export default function newsroomCompatibility(): AstroIntegration {
@@ -66,14 +89,15 @@ export default function newsroomCompatibility(): AstroIntegration {
           try { await access(path); }
           catch (error) { throw new Error(`Newsroom redirect target was not built: ${target}`, { cause: error }); }
         }
-        const mainRules = Object.entries(redirects).filter(([source]) => source.startsWith('/news/') || source.startsWith('/uploads/') || source.startsWith('/usr/uploads/')).map(([source, target]) => `${source} ${target} 301`);
+        const mainRules = Object.entries(buildMainNewsroomMap(redirects)).map(([source, target]) => `${source} ${target} 301`);
         const existingRules = await readFile(join(output, '_redirects'), 'utf8');
+        validateRedirectRules([...mainRules, ...existingRules.split('\n')]);
         await writeFile(join(output, '_redirects'), `${mainRules.join('\n')}\n\n${existingRules}`);
 
         const legacyOutput = fileURLToPath(new URL('../legacy-newsroom-dist/', dir));
         await mkdir(legacyOutput, { recursive: true });
         const legacyRules = Object.entries(redirects).map(([source, target]) => `${source} ${new URL(target, newsroomOrigin).href} 301`);
-        if (legacyRules.length > 2000 || legacyRules.some((line) => line.length > 1000)) throw new Error('Newsroom redirects exceed Cloudflare Pages static rule limits');
+        validateRedirectRules(legacyRules);
         await writeFile(join(legacyOutput, '_redirects'), `${legacyRules.join('\n')}\n`);
         await writeFile(join(legacyOutput, 'redirect-manifest.json'), `${JSON.stringify(redirects, null, 2)}\n`);
         for (const name of ['_worker.js', '_routes.json', '404.html', 'robots.txt']) {

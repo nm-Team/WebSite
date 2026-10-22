@@ -12,6 +12,9 @@ test('built legacy redirects point directly to available canonical pages and ass
   for (const [source, target] of Object.entries(redirects)) {
     expect(legacyRules).toContain(`${source} https://nm.team${target} 301`);
     if (/^\/(news|uploads|usr\/uploads)\//.test(source)) expect(mainRules).toContain(`${source} ${target} 301`);
+    const prefixed = `/newsroom${source}`;
+    if (source !== '/' && prefixed !== target) expect(mainRules).toContain(`${prefixed} ${target} 301`);
+    expect(mainRules).not.toContain(`${prefixed} ${prefixed} 301`);
   }
   for (const target of new Set(Object.values(redirects))) expect((await request.get(target, { maxRedirects: 0 })).status(), target).toBe(200);
 });
