@@ -1,6 +1,9 @@
 /* Shared header flow and local navigation positioning. */
 html.newsroom-site { --newsroom-chrome-gutter: 10%; }
-.newsroom-shell { --newsroom-content-gutter: 20rem; }
+.newsroom-shell {
+  --newsroom-content-gutter: 20rem;
+  --newsroom-gutter-transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 @media (min-width: 750px) {
   .newsroom-shell { --newsroom-content-gutter: max(20rem, calc((100% - 376rem) / 2)); }
 }
@@ -38,14 +41,14 @@ html.newsroom-site { --newsroom-chrome-gutter: 10%; }
   width: auto;
   max-width: none;
   margin-inline: var(--newsroom-chrome-gutter);
-  transition: margin-inline 220ms var(--motion-ease-out);
+  transition: margin-left var(--newsroom-gutter-transition), margin-right var(--newsroom-gutter-transition);
 }
 #newsroom-header[data-stuck] .container,
 #newsroom-header[data-stuck] .newsroom-panel-content {
   margin-inline: var(--newsroom-content-gutter);
 }
 @media (width > 900px) {
-  #newsroom-nav-menu { padding-right: 0; transition: padding-right 220ms var(--motion-ease-out); }
+  #newsroom-nav-menu { padding-right: 0; transition: padding-right var(--newsroom-gutter-transition); }
   /* Match the account label inside its 14px padding and 1px border. */
   #newsroom-header:not([data-stuck]) #newsroom-nav-menu { padding-right: 15px; }
 }
