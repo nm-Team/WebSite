@@ -52,37 +52,45 @@ the legacy post fields, with Chinese articles and new canonical permalinks.
 Its legacy `cid` remains present when the original article had one.
 
 The main header uses `navigationMode="flow"` on Newsroom pages. It scrolls away,
-while the local Newsroom header stays at the viewport top. The local footer
-contains Newsroom categories, archives and feeds, followed by the global website
-footer with legal links and the language selector. That selector returns to an
-available translation of the same page, using the fallback order above.
+while the local Newsroom header stays at the viewport top. Newsroom pages keep
+the global website footer with legal links and the language selector. That
+selector returns to an available translation of the same page, using the
+fallback order above.
 Newsroom keeps its namespaced CSS. Fonts, theme variables and the system theme
 script are shared with the website. Newsroom uses only its original Umami site
 ID (`3f6853e3-82e8-4f73-977f-cf685c37e3c3`).
 
 The local navigation is 52px high on desktop and 48px below 700px. It contains
-the Newsroom title, Press Release, Stories and search. Both category links also
-remain in the local footer. Mobile navigation and desktop search
-support Escape, focus restoration, and background scroll locking. Opening the
-global menu closes the local menu. Reduced-motion preferences disable the local
-navigation and card entrance animations. Pointer toggles fade and slide the
-local menu over 180ms, with reversible transitions for rapid toggles. Keyboard
-actions update immediately.
+the Newsroom title, Press Release, Stories, Search and RSS. The current page's
+link uses a stronger color and medium font weight. Search opens a dedicated
+page with a search field and category, tag and monthly archive links. Submitted
+results appear before the browsing links; clearing the query restores the
+browsing layout. These browsing links use larger text than their muted section
+labels and become bolder on hover or keyboard focus.
+
+Mobile navigation supports Escape, focus restoration, and background scroll
+locking. Opening the global menu closes the local menu. Reduced-motion
+preferences disable the local navigation and card entrance animations. Pointer
+toggles fade and slide the local menu over 180ms, with reversible transitions
+for rapid toggles. Keyboard actions update immediately. Popup scrollbars stay
+hidden during transitions and become available after opening if the content
+exceeds the available viewport height.
 
 Preview cards replay their entrance animation whenever they re-enter the
 viewport. An inline head marker hides pending cards before the module loads,
 avoiding a visible frame before the animation starts. Without JavaScript or
 with reduced motion enabled, cards remain visible without an entrance animation.
 
-Before the local header sticks, both navigation levels and footer levels share
-the same horizontal gutter:
+Before the local header sticks, both navigation levels and the global footer
+share the same horizontal gutter:
 10% on wide screens, 20px through 900px, and 16-20px on phones. Their content
-edges stay aligned without changing the article or card layout. Once the global
-header scrolls away, the local header transitions over 220ms to the Newsroom
-content edges. List pages follow the card grid's 376rem and 620rem widths. Article
+edges stay aligned without changing the article or card layout. On desktop,
+the local link text ends at the account label's text edge inside its button.
+Once the global header scrolls away, the local header transitions over 220ms to
+the Newsroom content edges. List pages follow the card grid's 376rem and 620rem widths. Article
 pages follow the article container on wide screens and its inner content on
-narrow screens. The popup uses the same edges; the footers keep their original
-alignment. Reduced motion disables the horizontal transition.
+narrow screens. The popup uses the same edges; the global footer keeps its
+original alignment. Reduced motion disables the horizontal transition.
 
 The closed local navigation is transparent while below the viewport top. Its
 tinted background, blur and separator appear at the sticky position or while
