@@ -74,9 +74,15 @@ viewport. An inline head marker hides pending cards before the module loads,
 avoiding a visible frame before the animation starts. Without JavaScript or
 with reduced motion enabled, cards remain visible without an entrance animation.
 
-Both navigation levels and footer levels share the same horizontal gutter:
+Before the local header sticks, both navigation levels and footer levels share
+the same horizontal gutter:
 10% on wide screens, 20px through 900px, and 16-20px on phones. Their content
-edges stay aligned without changing the article or card layout.
+edges stay aligned without changing the article or card layout. Once the global
+header scrolls away, the local header transitions over 220ms to the Newsroom
+content edges. List pages follow the card grid's 376rem and 620rem widths. Article
+pages follow the article container on wide screens and its inner content on
+narrow screens. The popup uses the same edges; the footers keep their original
+alignment. Reduced motion disables the horizontal transition.
 
 The closed local navigation is transparent while below the viewport top. Its
 tinted background, blur and separator appear at the sticky position or while

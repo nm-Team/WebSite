@@ -30,7 +30,7 @@ const { locale } = Astro.props;
   <body class="newsroom-site" data-nav-menu-extended="false">
     <GlobalHeader locale={locale} navigationMode="flow" skipTarget="#newsroom-main" />
     <script is:inline src="/src/js/header.js"></script>
-    <div class="newsroom-shell">
+    <div class="newsroom-shell" data-newsroom-content={Astro.props.post ? 'article' : 'list'}>
       <div class="newsroom-header-slot"><Header locale={locale} /></div>
       <main id="newsroom-main" tabindex="-1"><div class="container"><div class="row"><slot /></div></div></main>
       <Footer locale={locale} />
