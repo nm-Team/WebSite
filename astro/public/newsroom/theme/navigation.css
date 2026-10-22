@@ -32,6 +32,7 @@
 }
 #newsroom-header a { color: var(--newsroom-color-header-nav-link); text-decoration: none; }
 #newsroom-header a:hover { color: var(--newsroom-color-text); }
+#newsroom-header nav a[aria-current="page"] { color: var(--newsroom-color-header-nav-link-active); font-weight: 500; }
 #newsroom-header a:focus-visible,
 #newsroom-header button:focus-visible { outline: var(--focus-ring); outline-offset: 3px; border-radius: 3px; }
 #newsroom-header .site-name-text {
