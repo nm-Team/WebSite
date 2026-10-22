@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('keeps localized product metadata consistent across the sitemap, pages, and ROR feed', async ({ browser }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'Static metadata is viewport-independent.');

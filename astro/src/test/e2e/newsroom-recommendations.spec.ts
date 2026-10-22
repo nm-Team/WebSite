@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('only the final row of article recommendations has no bottom separator', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'This test exercises both sides of the recommendation grid breakpoint');

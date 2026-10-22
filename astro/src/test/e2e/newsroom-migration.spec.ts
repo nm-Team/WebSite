@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('built legacy redirects point directly to available canonical pages and assets', async ({ request }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'The deployment artifacts are shared across viewports');

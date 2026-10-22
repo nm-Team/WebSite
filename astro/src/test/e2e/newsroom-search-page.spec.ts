@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, isolateExternalRequests, test } from './fixtures';
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => { localStorage.cookieTipv0Checked = 'true'; });
@@ -73,6 +73,7 @@ test('search browsing fits narrow screens in both color schemes', async ({ page 
 
 test('the search directory remains usable without JavaScript', async ({ browser, baseURL }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
+  await isolateExternalRequests(context, baseURL);
   const page = await context.newPage();
   await page.goto(`${baseURL}/en/newsroom/search/`);
   await expect(page.locator('.search-notice')).toBeVisible();

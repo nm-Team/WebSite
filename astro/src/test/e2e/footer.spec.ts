@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('uses two footer columns before desktop links become cramped', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'tablet', 'The intermediate footer layout only needs one browser project.');

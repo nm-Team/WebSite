@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, isolateExternalRequests, test } from './fixtures';
 
 test('home news is rendered locally and links to the selected Newsroom language', async ({ page, request }) => {
   const newsRequests: string[] = [];
@@ -22,6 +22,7 @@ test('home news is rendered locally and links to the selected Newsroom language'
 
 test('home news is present in HTML before JavaScript runs', async ({ browser, baseURL }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
+  await isolateExternalRequests(context, baseURL);
   const page = await context.newPage();
   await page.goto(`${baseURL}/en/`);
   const cards = page.locator('#newsSwiperItems .swiper-slide');

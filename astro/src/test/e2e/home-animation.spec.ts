@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('flies the nmTeam title into the header and back while scrolling', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });

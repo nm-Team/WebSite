@@ -1,9 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-import { expect, test } from '@playwright/test';
-
 import { publicLocales } from '../../i18n/locales';
+import { expect, isolateExternalRequests, test } from './fixtures';
 
 test('every article has an HTML entry for every site language and only real translations are indexed', async ({ request }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'Generated HTML is shared across viewports');
@@ -45,6 +44,7 @@ test('language fallbacks retain article context, query and fragment', async ({ p
 
 test('missing article translations redirect without JavaScript', async ({ browser, baseURL }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
+  await isolateExternalRequests(context, baseURL);
   const page = await context.newPage();
   await page.goto(`${baseURL}/en/newsroom/nmfun-test-2021-11-20/`);
   await expect(page).toHaveURL(/\/zh-CN\/newsroom\/nmfun-test-2021-11-20\/$/);

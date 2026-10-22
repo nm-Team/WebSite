@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, isolateExternalRequests, test } from './fixtures';
 
 test('Newsroom has localized lists, article metadata and working translations', async ({ page }) => {
   await page.goto('/en/newsroom/');
@@ -58,6 +58,7 @@ test('Newsroom exposes static per-language indices, RSS and the legacy response 
 
 test('Newsroom content and pagination remain usable without JavaScript', async ({ browser, baseURL }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
+  await isolateExternalRequests(context, baseURL);
   const page = await context.newPage();
   await page.goto(`${baseURL}/en/newsroom/`);
   await expect(page.locator('.post-list > a.item').first()).toBeVisible();

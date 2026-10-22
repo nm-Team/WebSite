@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('local navigation highlights the current page in both color schemes', async ({ page }) => {
   await page.addInitScript(() => { localStorage.cookieTipv0Checked = 'true'; });

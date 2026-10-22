@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('keeps legacy tabs accessible across pages', async ({ page }) => {
   await page.goto('/zh-CN/join/');

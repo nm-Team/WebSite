@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('keeps full-width home carousels inside a viewport with a scrollbar gutter', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'The scrollbar gutter regression only needs one browser project.');

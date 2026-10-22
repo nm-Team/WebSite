@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('the popup hides scrollbars during motion and scrolls when fully open', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'This test supplies a short mobile viewport');

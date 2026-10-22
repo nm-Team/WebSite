@@ -1,6 +1,6 @@
-import { expect, test } from '@playwright/test';
-
 import { routeManifest, toPrefixedPath, toRootPath } from '@/i18n/routes';
+
+import { expect, test } from './fixtures';
 
 const contentPaths = Array.from(new Set([
   ...routeManifest.map((route) => toRootPath(route.slug)),

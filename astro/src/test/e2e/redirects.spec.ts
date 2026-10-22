@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, isolateExternalRequests, test } from './fixtures';
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -22,8 +22,9 @@ const jumpRoutes = [
 ];
 
 for (const route of staticRoutes) {
-  test(`unprefixed ${route} keeps English content without JavaScript`, async ({ browser }) => {
+  test(`unprefixed ${route} keeps English content without JavaScript`, async ({ browser, baseURL }) => {
     const context = await browser.newContext({ javaScriptEnabled: false });
+    await isolateExternalRequests(context, baseURL);
     const page = await context.newPage();
     await page.goto(route);
     await expect(page.locator('body')).toContainText(/nmTeam|Cookies|Business|Privacy|Service|Support|Status/);
@@ -51,8 +52,9 @@ for (const route of staticRoutes) {
 }
 
 for (const route of jumpRoutes) {
-  test(`jump page ${route} keeps English fallback without JavaScript`, async ({ browser }) => {
+  test(`jump page ${route} keeps English fallback without JavaScript`, async ({ browser, baseURL }) => {
     const context = await browser.newContext({ javaScriptEnabled: false });
+    await isolateExternalRequests(context, baseURL);
     const page = await context.newPage();
     await page.goto(route);
     await expect(page.locator('body')).toContainText(/Support|Status|nmTeam/);

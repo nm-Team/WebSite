@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => { localStorage.cookieTipv0Checked = 'true'; });
@@ -70,19 +70,27 @@ test('local links align with the account text before sticking and with content a
       await page.setViewportSize({ width, height: 1000 });
       await page.goto(`/${locale}/newsroom/search/`);
       const measure = () => page.evaluate(() => {
-        const textRight = (selector: string) => {
+        const visibleTextRight = (selector: string) => {
+          const element = document.querySelector<HTMLElement>(selector)!;
           const range = document.createRange();
-          range.selectNodeContents(document.querySelector(selector)!);
-          return range.getBoundingClientRect().right;
+          range.selectNodeContents(element);
+          const right = range.getBoundingClientRect().right;
+          // Range includes hidden glyphs when the account label is ellipsized.
+          return getComputedStyle(element).overflowX === 'hidden' ? Math.min(right, element.getBoundingClientRect().right) : right;
         };
         return {
-          account: textRight('#userName'),
-          local: textRight('#newsroom-nav-menu a:last-child'),
+          account: visibleTextRight('#userName'),
+          local: visibleTextRight('#newsroom-nav-menu a:last-child'),
           content: document.querySelector('.search-page-form')!.getBoundingClientRect().right,
         };
       });
       const initial = await measure();
       expect(Math.abs(initial.account - initial.local), `${locale} text edge at ${width}px`).toBeLessThan(1);
+      await page.locator('#userName').evaluate((element) => { element.style.maxWidth = '40px'; });
+      expect(await page.locator('#userName').evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(true);
+      const clipped = await measure();
+      expect(Math.abs(clipped.account - clipped.local), `${locale} clipped text edge at ${width}px`).toBeLessThan(1);
+      await page.locator('#userName').evaluate((element) => element.style.removeProperty('max-width'));
       await page.evaluate(() => window.scrollTo(0, 100));
       await expect(page.locator('#newsroom-header')).toHaveAttribute('data-stuck');
       const stuck = await measure();
