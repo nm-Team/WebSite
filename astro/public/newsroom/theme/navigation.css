@@ -1,3 +1,4 @@
+.newsroom-header-slot { --newsroom-menu-duration: 300ms; }
 #newsroom-header {
   position: relative;
   width: 100%;
@@ -10,7 +11,7 @@
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   font: 14px / 1.5 var(--font-sans);
-  transition: grid-template-rows 180ms var(--motion-ease-out);
+  transition: grid-template-rows var(--newsroom-menu-duration) var(--motion-ease-out);
 }
 #newsroom-header[data-stuck],
 #newsroom-header[data-menu-visible] {
@@ -64,7 +65,7 @@
   height: 1.5px;
   border-radius: 1px;
   background: var(--newsroom-color-header-menu-icon);
-  transition: transform 180ms ease-out;
+  transition: transform var(--newsroom-menu-duration) ease-out;
 }
 #newsroom-menu-toggle .bar-1 { left: 14px; transform: rotate(45deg); }
 #newsroom-menu-toggle .bar-2 { left: 20px; transform: rotate(-45deg); }
@@ -79,7 +80,7 @@
   max-height: calc(100dvh - var(--newsroom-header-offset, 0px) - 52px);
   overflow-y: hidden;
   overscroll-behavior: contain;
-  transition: opacity 180ms var(--motion-ease-out), transform 180ms var(--motion-ease-out), visibility 0s 180ms;
+  transition: opacity var(--newsroom-menu-duration) var(--motion-ease-out), transform var(--newsroom-menu-duration) var(--motion-ease-out), visibility 0s var(--newsroom-menu-duration);
 }
 #newsroom-extended-menu[data-nav-menu-extended="true"] {
   visibility: visible;
@@ -99,7 +100,7 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 180ms var(--motion-ease-out), visibility 0s 180ms;
+  transition: opacity var(--newsroom-menu-duration) var(--motion-ease-out), visibility 0s var(--newsroom-menu-duration);
 }
 #newsroom-header[data-nav-menu-extended="true"] + .newsroom-menu-backdrop {
   visibility: visible;
