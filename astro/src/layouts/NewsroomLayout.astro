@@ -15,6 +15,9 @@ const { locale } = Astro.props;
 <!doctype html>
 <html lang={locale} class="newsroom-site">
   <head>
+    <script is:inline>
+      document.documentElement.setAttribute('data-newsroom-motion', '');
+    </script>
     <SEOHead {...Astro.props} />
     <SiteAssets pageStyles={false} />
     <link rel="stylesheet" href="/newsroom/theme/normalize.css" />

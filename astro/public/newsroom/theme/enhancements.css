@@ -1,5 +1,8 @@
 .newsroom-shell .post-list .item,
 .newsroom-shell .come-out-animation { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  html[data-newsroom-motion] .newsroom-shell .come-out-animation:not([data-come-out-animation]) { opacity: 0; }
+}
 .newsroom-shell .archive-title { grid-column: 1 / -1; width: auto; overflow-wrap: anywhere; }
 .newsroom-shell .search-page-form { margin: 0 20rem; padding-top: 20rem; }
 .newsroom-shell .search-page-form input { font: inherit; max-width: 500px; }

@@ -70,13 +70,17 @@ window.addEventListener('site-navigation-toggle', (event) => {
   document.querySelectorAll<HTMLElement>('.newsroom-shell, #fcont').forEach((element) => { element.inert = open; });
 });
 
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const observer = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.setAttribute('data-come-out-animation', '');
-      observer.unobserve(entry.target);
-    }
-  });
-  document.querySelectorAll('.newsroom-shell .come-out-animation').forEach((element) => observer.observe(element));
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const cards = document.querySelectorAll('.newsroom-shell .come-out-animation');
+const cardObserver = new IntersectionObserver((entries) => {
+  for (const entry of entries) entry.target.toggleAttribute('data-come-out-animation', entry.isIntersecting);
+});
+function updateCardMotion() {
+  cardObserver.disconnect();
+  for (const card of cards) {
+    card.removeAttribute('data-come-out-animation');
+    if (!motionPreference.matches) cardObserver.observe(card);
+  }
 }
+updateCardMotion();
+motionPreference.addEventListener('change', updateCardMotion);

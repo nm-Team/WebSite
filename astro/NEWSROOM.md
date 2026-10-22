@@ -69,6 +69,11 @@ navigation and card entrance animations. Pointer toggles fade and slide the
 local menu over 180ms, with reversible transitions for rapid toggles. Keyboard
 actions update immediately.
 
+Preview cards replay their entrance animation whenever they re-enter the
+viewport. An inline head marker hides pending cards before the module loads,
+avoiding a visible frame before the animation starts. Without JavaScript or
+with reduced motion enabled, cards remain visible without an entrance animation.
+
 Both navigation levels and footer levels share the same horizontal gutter:
 10% on wide screens, 20px through 900px, and 16-20px on phones. Their content
 edges stay aligned without changing the article or card layout.
