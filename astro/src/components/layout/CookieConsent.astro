@@ -1,0 +1,32 @@
+---
+import type { PublicLocale } from '@/i18n/locales';
+import { localizeHtmlHrefs, toLocalizedHref } from '@/i18n/links';
+import { t } from '@/i18n/translate';
+
+interface Props {
+  locale: PublicLocale;
+}
+
+const { locale } = Astro.props;
+---
+<div
+  class="cookie-consent"
+  id="pageCookieConfirmDialog"
+  role="dialog"
+  aria-modal="false"
+  aria-labelledby="cookie-consent-title"
+  aria-describedby="cookie-consent-description"
+  tabindex="-1"
+>
+  <div class="cookie-consent__header" id="cookie-consent-title">{t(locale, 'cookie.cookieConfirmDialog.header')}</div>
+  <div class="cookie-consent__body" id="cookie-consent-description">
+    <p set:html={localizeHtmlHrefs(locale, t(locale, 'cookie.cookieConfirmDialog.body.0'))}></p>
+    <p set:html={localizeHtmlHrefs(locale, t(locale, 'cookie.cookieConfirmDialog.body.1'))}></p>
+  </div>
+  <div class="cookie-consent__footer">
+    <button type="button" onclick={`window.location.href='${toLocalizedHref(locale, '/cookies')}'`}>{t(locale, 'cookie.cookieConfirmDialog.button.customize')}</button>
+    <button type="button" onclick="acceptCookieConsent()">
+      {t(locale, 'cookie.cookieConfirmDialog.button.accept')}
+    </button>
+  </div>
+</div>

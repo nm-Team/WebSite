@@ -79,7 +79,12 @@ function closeCookieDialog() {
 	const dialog = document.getElementById("pageCookieConfirmDialog");
 	if (!dialog) return;
 	dialog.setAttribute("data-status", "close");
-	if (cookieDialogPreviousFocus?.isConnected) cookieDialogPreviousFocus.focus();
+	if (dialog.contains(document.activeElement)) {
+		const returnFocus = cookieDialogPreviousFocus?.isConnected && cookieDialogPreviousFocus !== document.body
+			? cookieDialogPreviousFocus
+			: document.querySelector(".skip-to-content");
+		if (returnFocus instanceof HTMLElement) returnFocus.focus({ preventScroll: true });
+	}
 	cookieDialogPreviousFocus = null;
 }
 
@@ -87,25 +92,6 @@ window.acceptCookieConsent = function () {
 	localStorage.cookieTipv0Checked = "true";
 	closeCookieDialog();
 };
-
-document.addEventListener("keydown", function (event) {
-	const dialog = document.getElementById("pageCookieConfirmDialog");
-	if (!dialog || dialog.getAttribute("data-status") !== "open" || event.key !== "Tab") return;
-
-	const focusable = Array.from(dialog.querySelectorAll("button, a[href], [tabindex]:not([tabindex='-1'])"))
-		.filter((element) => element instanceof HTMLElement && !element.hasAttribute("disabled"));
-	if (focusable.length === 0) return;
-
-	const first = focusable[0];
-	const last = focusable[focusable.length - 1];
-	if (event.shiftKey && document.activeElement === first) {
-		event.preventDefault();
-		last.focus();
-	} else if (!event.shiftKey && document.activeElement === last) {
-		event.preventDefault();
-		first.focus();
-	}
-});
 
 // Cookie prompt
 function scheduleCookieDialog() {

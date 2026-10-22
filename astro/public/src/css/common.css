@@ -467,8 +467,28 @@ a:not(.footer-link):visited {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     color: var(--color-text-primary);
+    font-size: 14px;
+    line-height: 1.7;
     overflow-y: auto;
     transition: right 0.6s var(--motion-ease-out), visibility 0.8s;
+}
+
+.cookie-consent * {
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+.cookie-consent a {
+    color: var(--footer-a);
+    text-decoration: none;
+    transition: color 0.25s;
+    border-radius: 4px;
+}
+
+.cookie-consent a:hover,
+.cookie-consent a:focus-visible {
+    color: var(--footer-hover);
 }
 
 .cookie-consent[data-status="open"] {

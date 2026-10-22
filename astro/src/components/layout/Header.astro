@@ -15,7 +15,7 @@ const disallowHideHeaderScript = `disallowHideHeader = ${disallowHideHeader ? 't
 const href = (path: string) => toLocalizedHref(locale, path);
 ---
 <script is:inline set:html={disallowHideHeaderScript}></script>
-<a href="#main-content" class="skip-to-content" role="navigation" aria-label={t(locale, 'skip_to_content')}>
+<a href="#main-content" class="skip-to-content" aria-label={t(locale, 'skip_to_content')}>
   {t(locale, 'skip_to_content')}
 </a>
 <div id="hcont">
@@ -55,4 +55,3 @@ const href = (path: string) => toLocalizedHref(locale, path);
     {productHeaderHtml && <div class="product-header" data-hide="true" set:html={productHeaderHtml} />}
   </div>
 </div>
-<span id="main-content"></span>
