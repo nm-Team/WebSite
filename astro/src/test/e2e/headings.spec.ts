@@ -25,6 +25,9 @@ test('all content routes expose one continuous heading hierarchy', async ({ cont
       continue;
     }
 
+    await expect(page.getByRole('main'), path).toHaveCount(1);
+    await expect(page.locator('main#main-content'), path).toHaveAttribute('tabindex', '-1');
+
     const headings = await page.locator('h1, h2, h3, h4, h5, h6').evaluateAll((nodes) => nodes.map((node) => ({
       level: Number(node.tagName.slice(1)),
       text: node.textContent?.trim().replace(/\s+/g, ' ') ?? '',

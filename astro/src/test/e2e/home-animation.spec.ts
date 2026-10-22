@@ -2,6 +2,9 @@ import { expect, test } from '@playwright/test';
 
 test('flies the nmTeam title into the header and back while scrolling', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.addInitScript(() => {
+    localStorage.setItem('cookieTipv0Checked', 'true');
+  });
 
   await page.route('https://websiteres.nmteam.xyz/producticon/nmTeam/logo@64.png', async (route) => {
     await route.abort();
@@ -9,6 +12,7 @@ test('flies the nmTeam title into the header and back while scrolling', async ({
 
   await page.goto('/zh-CN/', { waitUntil: 'domcontentloaded' });
   await page.locator('.indexHeaderName').waitFor({ state: 'attached' });
+  await page.evaluate(() => document.fonts.ready);
 
   const header = page.locator('#pageHeader');
   const nameClones = page.locator('body > .indexHeaderName[aria-hidden="true"]');

@@ -1,6 +1,7 @@
 {
     "page": {
         "productName": "辅助功能",
+        "description": "了解 nmTeam 产品中的键盘导航、焦点提示和替代文本等辅助功能。",
         "theme": "light"
     },
     "header": {

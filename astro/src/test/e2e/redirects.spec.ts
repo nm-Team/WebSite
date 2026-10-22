@@ -123,7 +123,7 @@ test.describe('deployed platform redirects', () => {
 
   const phpRedirectCases = [
     { from: '/aboutus.php', to: '/aboutus/' },
-    { from: '/products/template/nmBot-Telegram.php', to: '/products/template/nmBot-Telegram/' },
+    { from: '/products/template/nmBot-Telegram.php', to: '/nmBot-Telegram/' },
     { from: '/zh-CN/legal/privacy-policy.php', to: '/zh-CN/legal/privacy-policy/' },
     { from: '/zh-CN/products/index.php', to: '/zh-CN/products/' },
     { from: '/business_cooperation.php', to: '/business-cooperation/' },

@@ -1,4 +1,5 @@
 ---
+import CookieConsent from '@/components/layout/CookieConsent.astro';
 import Footer from '@/components/layout/Footer.astro';
 import Header from '@/components/layout/Header.astro';
 import LanguageRedirect from '@/components/layout/LanguageRedirect.astro';
@@ -72,10 +73,13 @@ const clearLegacyLanParamScript = Astro.url.searchParams.has('lan') ? "const url
     />
   </head>
   <body>
+    <CookieConsent locale={lang} />
     <Header locale={lang} disallowHideHeader={disallowHideHeader} hideHeaderTitle={hideHeaderTitle} productHeaderHtml={productHeaderHtml} />
     <script is:inline src="/src/js/header.js"></script>
     <script is:inline src="/src/js/jquery.min.js"></script>
-    <slot />
+    <main id="main-content" tabindex="-1">
+      <slot />
+    </main>
     <Footer locale={lang} pageUpdate={pageUpdate} />
     {bodyJs.map((src) => <script is:inline src={src}></script>)}
     {clearLegacyLanParamScript && <script is:inline set:html={clearLegacyLanParamScript}></script>}

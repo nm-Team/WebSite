@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { getProductDetail, getProductOverview } from '@/data/products/loader';
+import { parseProductDetail } from '@/data/products/schema';
 import { getSponsorData } from '@/data/sponsor';
 
 describe('phase 3 product and sponsor data', () => {
@@ -11,11 +12,11 @@ describe('phase 3 product and sponsor data', () => {
     expect(overview.products.map((product) => product.name)).toEqual(['nmBot', 'StartPage']);
     expect(overview.products.map((product) => product.intro)).toEqual(['nm boost chat.', 'Good day from StartPage.']);
     expect(overview.products[0]?.buttons.map((button) => [button.name, button.href])).toEqual([
-      ['Learn more', '/products/overview/nmBot-Telegram'],
+      ['Learn more', '/nmBot-Telegram/'],
       ['Get started', 'https://t.me/nmnmfunbot'],
     ]);
     expect(overview.products[1]?.buttons.map((button) => [button.name, button.href])).toEqual([
-      ['Learn more', 'overview/nmBrowser-StartPage'],
+      ['Learn more', '/nmBrowser-StartPage/'],
       ['Try now', 'https://bs.nmteam.xyz?from=nmTeamProductsPage'],
     ]);
   });
@@ -41,5 +42,16 @@ describe('phase 3 product and sponsor data', () => {
     }
 
     expect(new Set(sponsorData.sponsor.map(({ name }) => name)).size).toBe(sponsorData.sponsor.length);
+  });
+
+  it('rejects a product without its page description', () => {
+    const detail = getProductDetail('en', 'nmBrowser-StartPage');
+    const page = { productName: detail.page.productName, theme: detail.page.theme };
+
+    expect(() => parseProductDetail({ ...detail, page }, {
+      locale: 'en_US',
+      slug: 'nmBrowser-StartPage',
+      filePath: 'product.json',
+    })).toThrow('product.json.page.description must be a string.');
   });
 });

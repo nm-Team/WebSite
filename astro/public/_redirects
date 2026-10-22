@@ -46,8 +46,26 @@
 /:lang/join/forum.php /:lang/questionnaire-ended/ 301
 /products/overview.php /products/overview/ 301
 /:lang/products/overview.php /:lang/products/overview/ 301
-/products/template/nmBot-Telegram.php /products/overview/nmBot-Telegram/ 301
-/:lang/products/template/nmBot-Telegram.php /:lang/products/overview/nmBot-Telegram/ 301
+/products/template/nmBot-Telegram.php /nmBot-Telegram/ 301
+/:lang/products/template/nmBot-Telegram.php /:lang/nmBot-Telegram/ 301
+/products/template/nmBot-Telegram /nmBot-Telegram/ 301
+/products/template/nmBot-Telegram/ /nmBot-Telegram/ 301
+/:lang/products/template/nmBot-Telegram /:lang/nmBot-Telegram/ 301
+/:lang/products/template/nmBot-Telegram/ /:lang/nmBot-Telegram/ 301
+
+# Product detail pages moved out of the overview directory
+/products/overview/nmBot-Telegram /nmBot-Telegram/ 301
+/products/overview/nmBot-Telegram/ /nmBot-Telegram/ 301
+/:lang/products/overview/nmBot-Telegram /:lang/nmBot-Telegram/ 301
+/:lang/products/overview/nmBot-Telegram/ /:lang/nmBot-Telegram/ 301
+/products/overview/nmBrowser-StartPage /nmBrowser-StartPage/ 301
+/products/overview/nmBrowser-StartPage/ /nmBrowser-StartPage/ 301
+/:lang/products/overview/nmBrowser-StartPage /:lang/nmBrowser-StartPage/ 301
+/:lang/products/overview/nmBrowser-StartPage/ /:lang/nmBrowser-StartPage/ 301
+/products/overview/product-accessibility /product-accessibility/ 301
+/products/overview/product-accessibility/ /product-accessibility/ 301
+/:lang/products/overview/product-accessibility /:lang/product-accessibility/ 301
+/:lang/products/overview/product-accessibility/ /:lang/product-accessibility/ 301
 
 # Newsroom entry points
 /newsroom /en/newsroom/ 301

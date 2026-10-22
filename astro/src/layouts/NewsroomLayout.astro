@@ -1,4 +1,5 @@
 ---
+import CookieConsent from '@/components/layout/CookieConsent.astro';
 import GlobalFooter from '@/components/layout/Footer.astro';
 import GlobalHeader from '@/components/layout/Header.astro';
 import SiteAssets from '@/components/layout/SiteAssets.astro';
@@ -26,6 +27,7 @@ const { locale } = Astro.props;
     <link rel="stylesheet" href="/newsroom/theme/integration.css" />
   </head>
   <body class="newsroom-site" data-nav-menu-extended="false">
+    <CookieConsent locale={locale} />
     <GlobalHeader locale={locale} navigationMode="flow" skipTarget="#newsroom-main" />
     <script is:inline src="/src/js/header.js"></script>
     <div class="newsroom-shell" data-newsroom-content={Astro.props.post ? 'article' : 'list'}>

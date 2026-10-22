@@ -42,4 +42,13 @@ describe('route manifest', () => {
     expect(startPage?.supportedLocales).toEqual(publicLocales);
     expect(accessibility?.supportedLocales).toEqual(publicLocales);
   });
+
+  it('places product detail pages directly under each locale root', () => {
+    const productRoutes = routeManifest.filter((route) => ['generic-product-page', 'custom-product-page'].includes(route.kind));
+    expect(productRoutes.map((route) => toRootPath(route.slug)).sort()).toEqual([
+      '/nmBot-Telegram/',
+      '/nmBrowser-StartPage/',
+      '/product-accessibility/',
+    ]);
+  });
 });

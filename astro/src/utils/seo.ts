@@ -90,7 +90,7 @@ export function buildSeoMeta(input: SeoInput): SeoMeta {
     {
       '@type': 'ItemList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, url: 'https://nm.team/products/overview/nmBot-Telegram', name: t(language, 'schema.nmbot_intro') },
+        { '@type': 'ListItem', position: 1, url: 'https://nm.team/nmBot-Telegram/', name: t(language, 'schema.nmbot_intro') },
         { '@type': 'ListItem', position: 2, url: newsroomUrl, name: 'nmTeam Newsroom' },
         { '@type': 'ListItem', position: 3, url: 'https://nmbot.nmnm.fun', name: t(language, 'schema.nmbot_panel') },
         { '@type': 'ListItem', position: 4, url: 'https://nm.team/products', name: t(language, 'schema.products') },
@@ -99,8 +99,8 @@ export function buildSeoMeta(input: SeoInput): SeoMeta {
     },
     {
       '@type': 'WebPage',
-      '@id': 'https://nm.team/products/overview/nmBot-Telegram',
-      url: 'https://nm.team/products/overview/nmBot-Telegram',
+      '@id': 'https://nm.team/nmBot-Telegram/',
+      url: 'https://nm.team/nmBot-Telegram/',
       name: t(language, 'schema.nmbot_intro'),
       datePublished: '2024-08-20T16:00:00.000Z',
       dateModified: '2024-08-20T16:00:00.000Z',

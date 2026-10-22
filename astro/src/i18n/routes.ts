@@ -263,7 +263,7 @@ export const routeManifest: RouteEntry[] = [
   },
   ...getGenericProductSlugs().map((productSlug): RouteEntry => ({
     id: `products-overview-${productSlug}`,
-    slug: ['products', 'overview', productSlug],
+    slug: [productSlug],
     kind: 'generic-product-page',
     sourcePhpPath: '/products/overview.php',
     productSlug,
@@ -279,7 +279,7 @@ export const routeManifest: RouteEntry[] = [
   })),
   {
     id: 'products-overview-nmbot-telegram',
-    slug: ['products', 'overview', 'nmBot-Telegram'],
+    slug: ['nmBot-Telegram'],
     kind: 'custom-product-page',
     sourcePhpPath: '/products/template/nmBot-Telegram.php',
     pageTitle: 'products.nmbot_telegram.title',

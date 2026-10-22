@@ -1,8 +1,16 @@
 ---
 import { t } from '@/i18n/translate';
+import { routeManifest, toPrefixedPath, toRootPath } from '@/i18n/routes';
 import type { PageProps } from './PageProps';
 
 const { locale } = Astro.props as PageProps;
+const pathFor = (slug: string[]) => Astro.params.lang ? toPrefixedPath(locale, slug) : toRootPath(slug);
+const listingPath = pathFor(['products']);
+const productPaths = Object.fromEntries(
+  routeManifest
+    .filter((route) => ['generic-product-page', 'custom-product-page'].includes(route.kind) && route.supportedLocales.includes(locale))
+    .map((route) => [route.productSlug ?? route.slug.join('/'), pathFor(route.slug)]),
+);
 ---
 <div class="page-title page-title--centered">
   <h1>{t(locale, 'products.title')}</h1>
@@ -12,21 +20,15 @@ const { locale } = Astro.props as PageProps;
     <p>{t(locale, 'products.description')}</p>
   </div>
 </div>
-<script is:inline>
+<script is:inline define:vars={{ productPaths, listingPath }}>
   (() => {
-    const params = new URLSearchParams(window.location.search);
-    const product = params.get('product');
-    if (product) {
-      window.location.replace(
-        `${window.location.pathname.replace(/\/$/, '')}/${encodeURIComponent(product)}/`,
-      );
-    } else {
-      window.location.replace(
-        window.location.pathname.replace(/overview\/?$/, '').replace(/\/$/, '') + '/',
-      );
-    }
+    const url = new URL(window.location.href);
+    const product = url.searchParams.get('product');
+    url.pathname = product && Object.hasOwn(productPaths, product) ? productPaths[product] : listingPath;
+    url.searchParams.delete('product');
+    window.location.replace(url.href);
   })();
 </script>
 <noscript>
-  <p><a href="../">Go to product listing</a></p>
+  <p><a href={listingPath}>Go to product listing</a></p>
 </noscript>

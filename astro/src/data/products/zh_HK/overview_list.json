@@ -5,7 +5,7 @@
             "icon": "https://websiteres.nmteam.xyz/producticon/nmBot/logo@128.png",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmBot-Telegram/overview.webp",
             "intro": "檸動樂聊。",
-            "href": "/products/overview/nmBot-Telegram",
+            "href": "/nmBot-Telegram/",
             "javascript": "",
             "target": "_self",
             "theme": "light",
@@ -16,7 +16,7 @@
                     "id": "seemore",
                     "name": "進一步了解",
                     "javascript": "",
-                    "href": "/products/overview/nmBot-Telegram",
+                    "href": "/nmBot-Telegram/",
                     "towards": "in"
                 },
                 {
@@ -33,7 +33,7 @@
             "icon": "https://websiteres.nmteam.xyz/producticon/nmBrowser/logo@32.png",
             "background": "https://websiteres.nmteam.xyz/pintroimg/nmBrowser-StartPage/bg.png",
             "intro": "美好的一天，始於 nmBrowser 啟動頁。",
-            "href": "/products/overview/nmBrowser-StartPage",
+            "href": "/nmBrowser-StartPage/",
             "javascript": "",
             "target": "_self",
             "theme": "dark",
@@ -44,7 +44,7 @@
                     "id": "seemore",
                     "name": "進一步了解",
                     "javascript": "",
-                    "href": "overview/nmBrowser-StartPage",
+                    "href": "/nmBrowser-StartPage/",
                     "towards": "in"
                 },
                 {

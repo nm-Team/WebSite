@@ -1,4 +1,5 @@
 :root {
+    text-autospace: normal;
     --font-sans: "HarmonyOS Sans SC", "HarmonyOS Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", NotoSansHansRegular, "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
 
     --color-brand: #eac70f;
