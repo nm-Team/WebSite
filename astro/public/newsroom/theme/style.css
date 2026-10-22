@@ -599,6 +599,9 @@ body.newsroom-site[data-nav-menu-extended=true] {
   transition: box-shadow 0.8s, transform 0.8s;
   border-bottom: 1rem solid var(--newsroom-color-border);
 }
+:where(.newsroom-shell) #latest-posts .widget-post-list .post:last-child {
+  border-bottom: 0;
+}
 :where(.newsroom-shell) .widget .widget-post-list .post .image {
   width: 60rem;
   height: 33.75rem;
@@ -638,6 +641,9 @@ body.newsroom-site[data-nav-menu-extended=true] {
 @media (min-width: 900px) {
   :where(.newsroom-shell) .widget .widget-post-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+  :where(.newsroom-shell) #latest-posts .widget-post-list .post:nth-last-child(2):nth-child(odd) {
+    border-bottom: 0;
   }
 }
 
