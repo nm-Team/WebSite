@@ -3,9 +3,8 @@ import { isPublicLocale, publicLocales, type PublicLocale } from '@/i18n/locales
 import { routeManifest, type RouteEntry } from '@/i18n/routes';
 import PageContent from '@/components/pages/PageContent.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { getProductDetail } from '@/data/products/loader';
 import { buildNmBotProductHeaderHtml } from '@/components/products/nmbot/productHeader';
-import { t } from '@/i18n/translate';
+import { getPageMetadata } from '@/utils/page-metadata';
 import nmBotStyles from '@/styles/nmbot.css?url';
 
 export function getStaticPaths() {
@@ -32,21 +31,12 @@ if (!isPublicLocale(lang)) {
 
 const currentLocale = lang as PublicLocale;
 
-let pageTitle: string | undefined;
-let pageTitleKey: string | undefined = route.pageTitle;
-
-if (route.kind === 'generic-product-page' && route.productSlug) {
-  const product = getProductDetail(currentLocale, route.productSlug);
-  const categoryTitle = t(currentLocale, 'products.title');
-  pageTitle = `${product.page.productName} - ${categoryTitle}`;
-  pageTitleKey = undefined;
-}
+const metadata = getPageMetadata(route, currentLocale);
 ---
 <BaseLayout
-  titleKey={pageTitleKey}
-  title={pageTitle}
+  title={metadata.title}
   keywordsKey={route.pageKeywords}
-  descriptionKey={route.pageDescription}
+  description={metadata.description}
   headCss={route.id === 'products-overview-nmbot-telegram' ? [...route.pageHeadCss, nmBotStyles] : route.pageHeadCss}
   headJs={route.pageHeadJs}
   bodyJs={route.pageBodyJs}

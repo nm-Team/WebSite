@@ -80,6 +80,7 @@ export interface ProductDetailFooterItem {
 export interface ProductDetailData {
   page: {
     productName: string;
+    description: string;
     theme: string;
   };
   header: {
@@ -257,6 +258,7 @@ export function parseProductDetail(value: unknown, context: { locale: LegacyLoca
   return {
     page: {
       productName: readString(value.page, 'productName', `${context.filePath}.page`),
+      description: readString(value.page, 'description', `${context.filePath}.page`),
       theme: readString(value.page, 'theme', `${context.filePath}.page`, true),
     },
     header: {
