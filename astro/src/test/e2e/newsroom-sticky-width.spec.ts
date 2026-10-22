@@ -61,3 +61,36 @@ test('the popup follows the sticky header width through resize and scroll revers
   await page.keyboard.press('Escape');
   await expect(page.locator('#newsroom-extended-menu')).not.toBeVisible();
 });
+
+test('local links align with the account text before sticking and with content after sticking', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'This test supplies its own desktop viewport matrix');
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  for (const locale of ['en', 'zh-CN']) {
+    for (const width of [901, 1024, 1440, 1920]) {
+      await page.setViewportSize({ width, height: 1000 });
+      await page.goto(`/${locale}/newsroom/search/`);
+      const measure = () => page.evaluate(() => {
+        const textRight = (selector: string) => {
+          const range = document.createRange();
+          range.selectNodeContents(document.querySelector(selector)!);
+          return range.getBoundingClientRect().right;
+        };
+        return {
+          account: textRight('#userName'),
+          local: textRight('#newsroom-nav-menu a:last-child'),
+          content: document.querySelector('.search-page-form')!.getBoundingClientRect().right,
+        };
+      });
+      const initial = await measure();
+      expect(Math.abs(initial.account - initial.local), `${locale} text edge at ${width}px`).toBeLessThan(1);
+      await page.evaluate(() => window.scrollTo(0, 100));
+      await expect(page.locator('#newsroom-header')).toHaveAttribute('data-stuck');
+      const stuck = await measure();
+      expect(Math.abs(stuck.local - stuck.content), `${locale} sticky edge at ${width}px`).toBeLessThan(1);
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await expect(page.locator('#newsroom-header')).not.toHaveAttribute('data-stuck');
+      const returned = await measure();
+      expect(Math.abs(returned.account - returned.local)).toBeLessThan(1);
+    }
+  }
+});

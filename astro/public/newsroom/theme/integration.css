@@ -41,6 +41,11 @@ html.newsroom-site { --newsroom-chrome-gutter: 10%; }
 #newsroom-header[data-stuck] .newsroom-panel-content {
   margin-inline: var(--newsroom-content-gutter);
 }
+@media (width > 900px) {
+  #newsroom-nav-menu { padding-right: 0; transition: padding-right 220ms var(--motion-ease-out); }
+  /* Match the account label inside its 14px padding and 1px border. */
+  #newsroom-header:not([data-stuck]) #newsroom-nav-menu { padding-right: 15px; }
+}
 .newsroom-site #fcont {
   margin-top: 0;
   padding-inline: var(--newsroom-chrome-gutter);
