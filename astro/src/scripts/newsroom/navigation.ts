@@ -4,6 +4,7 @@ const toggle = document.querySelector<HTMLButtonElement>('#newsroom-menu-toggle'
 const panel = document.querySelector<HTMLElement>('#newsroom-extended-menu');
 const searchToggle = header?.querySelector<HTMLAnchorElement>('[data-newsroom-search-toggle]');
 const backdrop = document.querySelector<HTMLElement>('[data-newsroom-backdrop]');
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 let returnFocus: HTMLElement | null = null;
 let stickyUpdatePending = false;
 
@@ -27,6 +28,8 @@ window.addEventListener('pageshow', scheduleStickyUpdate);
 function setOpen(open: boolean, instant = false) {
   if (!header || !toggle || !panel) return;
   if ((header.dataset.navMenuExtended === 'true') === open) return;
+  const closingAnimation = !instant && !motionPreference.matches && Number.parseFloat(getComputedStyle(panel).opacity) > 0;
+  header.toggleAttribute('data-menu-visible', open || closingAnimation);
   header.dataset.instantToggle = String(instant);
   if (open) returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
   if (open) {
@@ -44,6 +47,12 @@ function setOpen(open: boolean, instant = false) {
   if (open) panel.querySelector<HTMLElement>('a, input, button')?.focus({ preventScroll: true });
   else if (header.contains(document.activeElement)) returnFocus?.focus({ preventScroll: true });
 }
+
+panel?.addEventListener('transitionend', (event) => {
+  if (event.target === panel && event.propertyName === 'opacity' && header?.dataset.navMenuExtended === 'false') {
+    header.removeAttribute('data-menu-visible');
+  }
+});
 
 toggle?.addEventListener('click', (event) => setOpen(toggle.getAttribute('aria-expanded') !== 'true', event.detail === 0));
 searchToggle?.addEventListener('click', (event) => {
@@ -70,12 +79,12 @@ window.addEventListener('site-navigation-toggle', (event) => {
   document.querySelectorAll<HTMLElement>('.newsroom-shell, #fcont').forEach((element) => { element.inert = open; });
 });
 
-const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 const cards = document.querySelectorAll('.newsroom-shell .come-out-animation');
 const cardObserver = new IntersectionObserver((entries) => {
   for (const entry of entries) entry.target.toggleAttribute('data-come-out-animation', entry.isIntersecting);
 });
 function updateCardMotion() {
+  if (motionPreference.matches && header?.dataset.navMenuExtended === 'false') header.removeAttribute('data-menu-visible');
   cardObserver.disconnect();
   for (const card of cards) {
     card.removeAttribute('data-come-out-animation');

@@ -193,6 +193,35 @@ test('the local menu animates both ways and handles rapid pointer reversals', as
   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
 });
 
+test('the open menu shares one header surface before and after sticking', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  for (const colorScheme of ['light', 'dark'] as const) {
+    await page.emulateMedia({ colorScheme });
+    await page.goto('/en/newsroom/');
+    const header = page.locator('#newsroom-header');
+    const panel = page.locator('#newsroom-extended-menu');
+    const trigger = await page.locator('#newsroom-menu-toggle').isVisible()
+      ? page.locator('#newsroom-menu-toggle') : page.locator('[data-newsroom-search-toggle]');
+    for (const top of [0, 300]) {
+      await page.evaluate((y) => window.scrollTo(0, y), top);
+      await trigger.click();
+      await expect(panel).toHaveCSS('opacity', '1');
+      await expect(header).not.toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+      await expect(header).toHaveCSS('backdrop-filter', /blur\(22px\)/);
+      await expect(panel).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+      await expect(panel).toHaveCSS('position', 'static');
+      const outer = (await header.boundingBox())!;
+      const inner = (await panel.boundingBox())!;
+      expect(outer.height).toBeGreaterThan(inner.height);
+      expect(inner.y + inner.height).toBeLessThanOrEqual(outer.y + outer.height);
+      await trigger.click();
+      await expect(panel).not.toBeVisible();
+      await expect(header).not.toHaveAttribute('data-menu-visible');
+      if (top === 0) await expect(header).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    }
+  }
+});
+
 test('the local navigation gains its background only at the sticky boundary', async ({ page }) => {
   for (const colorScheme of ['light', 'dark'] as const) {
     await page.emulateMedia({ colorScheme });

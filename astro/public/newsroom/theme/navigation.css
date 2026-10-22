@@ -2,19 +2,24 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 51px 0fr;
   color: var(--newsroom-color-text);
   background: transparent;
   border-bottom: 1px solid transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   font: 14px / 1.5 var(--font-sans);
+  transition: grid-template-rows 180ms var(--motion-ease-out);
 }
-#newsroom-header[data-stuck] {
+#newsroom-header[data-stuck],
+#newsroom-header[data-menu-visible] {
   background: var(--newsroom-color-header-background);
   border-bottom-color: var(--color-border-subtle);
   backdrop-filter: blur(22px) saturate(1.5);
   -webkit-backdrop-filter: blur(22px) saturate(1.5);
 }
+#newsroom-header[data-nav-menu-extended="true"] { grid-template-rows: 51px 1fr; }
 #newsroom-header .container {
   width: calc(100% - 48px);
   max-width: 1116px;
@@ -65,15 +70,11 @@
 #newsroom-menu-toggle[aria-expanded="true"] .bar-1 { transform: rotate(-45deg); }
 #newsroom-menu-toggle[aria-expanded="true"] .bar-2 { transform: rotate(45deg); }
 #newsroom-extended-menu {
-  position: absolute;
-  top: 100%;
-  inset-inline: 0;
+  min-height: 0;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-6px);
   pointer-events: none;
-  background: var(--newsroom-color-article-background);
-  border-top: 1px solid var(--color-border-subtle);
   max-height: calc(100dvh - var(--newsroom-header-offset, 0px) - 52px);
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -120,10 +121,13 @@
   pointer-events: auto;
   transition-delay: 0s;
 }
+#newsroom-header[data-instant-toggle="true"],
 #newsroom-header[data-instant-toggle="true"] #newsroom-extended-menu,
 #newsroom-header[data-instant-toggle="true"] .bar,
 #newsroom-header[data-instant-toggle="true"] + .newsroom-menu-backdrop { transition: none; }
 @media (width < 700px) {
+  #newsroom-header { grid-template-rows: 47px 0fr; }
+  #newsroom-header[data-nav-menu-extended="true"] { grid-template-rows: 47px 1fr; }
   #newsroom-header .container { width: calc(100% - 40px); min-height: 47px; }
   #newsroom-nav-menu { display: none; }
   #newsroom-menu-toggle { display: block; }
