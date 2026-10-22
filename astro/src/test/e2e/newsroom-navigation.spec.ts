@@ -22,7 +22,7 @@ test('the global header scrolls away and local navigation stays at the top', asy
   });
   expect(duplicateIds).toEqual([]);
   await expect(page.locator('script[data-website-id]')).toHaveCount(1);
-  await expect(page.locator('script[data-website-id]')).toHaveAttribute('data-website-id', '3f6853e3-82e8-4f73-977f-cf685c37e3c3');
+  await expect(page.locator('script[data-website-id]')).toHaveAttribute('data-website-id', '13563ad4-a0f5-4dae-b366-5ab1eb689390');
 });
 
 test('mobile navigation keeps menus separate and restores focus and scrolling', async ({ page }, testInfo) => {

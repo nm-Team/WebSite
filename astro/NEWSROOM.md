@@ -57,8 +57,9 @@ the global website footer with legal links and the language selector. That
 selector returns to an available translation of the same page, using the
 fallback order above.
 Newsroom keeps its namespaced CSS. Fonts, theme variables and the system theme
-script are shared with the website. Newsroom uses only its original Umami site
-ID (`3f6853e3-82e8-4f73-977f-cf685c37e3c3`).
+script are shared with the website. Both layouts load a single Umami script
+from `SiteAssets.astro`, using the main website's site ID
+(`13563ad4-a0f5-4dae-b366-5ab1eb689390`).
 
 The local navigation is 52px high on desktop and 48px below 700px. It contains
 the Newsroom title, Press Release, Stories, Search and RSS. The current page's
