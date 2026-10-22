@@ -91,6 +91,25 @@ test('local navigation contains no language switch and search uses the page lang
   await expect(page.locator('#search-results a')).not.toHaveCount(0);
 });
 
+test('local header and footer both open the press release and stories categories', async ({ page }) => {
+  for (const locale of ['zh-CN', 'en']) {
+    await page.goto(`/${locale}/newsroom/`);
+    for (const slug of ['press-release', 'stories']) {
+      const target = `/${locale}/newsroom/category/${slug}/`;
+      const mobile = await page.locator('#newsroom-menu-toggle').isVisible();
+      if (mobile) await page.locator('#newsroom-menu-toggle').click();
+      const nav = page.locator(mobile ? '#newsroom-extend-nav-menu' : '#newsroom-nav-menu');
+      const link = nav.locator(`a[href="${target}"]`);
+      const title = await link.innerText();
+      await link.click();
+      await expect(page).toHaveURL(new RegExp(`${target}$`));
+      await expect(page.locator('h1')).toHaveText(title);
+      await expect(page.locator(`a[href="${target}"][aria-current="page"]`)).toHaveCount(2);
+      await expect(page.locator(`#newsroom-footer a[href="${target}"]`)).toHaveText(title);
+    }
+  }
+});
+
 test('the global footer follows the local footer and keeps language switching available', async ({ page }) => {
   await page.goto('/en/newsroom/welcome-2021-08-09/');
   const local = page.locator('#newsroom-footer');

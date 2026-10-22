@@ -1,15 +1,20 @@
 ---
+import { categoryNames } from '@/lib/newsroom/content';
 import { newsroomLabels } from '@/lib/newsroom/labels';
 import { type NewsroomLocale, newsroomPath } from '@/lib/newsroom/paths';
 
 interface Props { locale: NewsroomLocale }
 const { locale } = Astro.props;
 const labels = newsroomLabels(locale);
+const links = (['press-release', 'stories'] as const).map((slug) => ({
+  name: categoryNames[slug][locale], url: newsroomPath(locale, `category/${slug}/`),
+}));
 ---
 <header id="newsroom-header" data-nav-menu-extended="false">
   <div class="container">
     <a class="site-name-text" href={newsroomPath(locale)}>Newsroom</a>
     <nav id="newsroom-nav-menu" aria-label={labels.menu}>
+      {links.map((link) => <a href={link.url} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
       <a href={newsroomPath(locale, 'search/')} data-newsroom-search-toggle aria-controls="newsroom-extended-menu" aria-expanded="false">{labels.search}</a>
     </nav>
     <button id="newsroom-menu-toggle" class="menu-toggle" aria-label={labels.menu} aria-controls="newsroom-extended-menu" aria-expanded="false" data-nav-menu-extended="false">
@@ -18,6 +23,9 @@ const labels = newsroomLabels(locale);
   </div>
   <div id="newsroom-extended-menu" class="extend-menu" data-nav-menu-extended="false" inert>
     <div class="newsroom-panel-content">
+      <nav id="newsroom-extend-nav-menu" aria-label={labels.menu}>
+        {links.map((link) => <a href={link.url} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
+      </nav>
       <div class="site-search">
         <form class="search-box" method="get" action={newsroomPath(locale, 'search/')} role="search">
           <label for="newsroom-query" class="sr-only">{labels.searchLabel}</label>

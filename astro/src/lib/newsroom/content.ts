@@ -3,7 +3,7 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import { inspectMarkdown } from './markdown';
 import { articlePath, articleSlug, defaultNewsImage, type NewsroomLocale, newsroomPath, publicationDateParts } from './paths';
 
-const categoryNames = {
+export const categoryNames = {
   'press-release': { 'zh-CN': '新闻稿', en: 'Press Release' },
   update: { 'zh-CN': '更新', en: 'Update' },
   photos: { 'zh-CN': '图片', en: 'Photos' },
