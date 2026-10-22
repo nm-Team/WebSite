@@ -71,7 +71,9 @@ test.describe('nmBot custom landing page', () => {
     }
   });
 
-  test('keeps feature tabs and panels accessible when switching chat types', async ({ page }) => {
+  test('keeps feature tabs and panels accessible when switching chat types', async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name === 'desktop', 'Wide screens display all feature panels in columns.');
+
     const tabs = page.getByRole('tab');
     await expect(tabs).toHaveCount(3);
     await expect(tabs.nth(0)).toHaveAttribute('aria-selected', 'true');
@@ -85,5 +87,13 @@ test.describe('nmBot custom landing page', () => {
     await expect(tabs.nth(1)).toHaveAttribute('tabindex', '0');
     await expect(page.locator('#nmbot-feature-panel-group')).toBeHidden();
     await expect(page.locator('#nmbot-feature-panel-channel')).toBeVisible();
+  });
+
+  test('shows every feature panel in desktop columns', async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== 'desktop', 'The column layout starts at 1020px.');
+
+    for (const chatType of ['group', 'channel', 'private']) {
+      await expect(page.locator(`#nmbot-feature-panel-${chatType}`)).toBeVisible();
+    }
   });
 });

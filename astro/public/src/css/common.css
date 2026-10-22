@@ -474,6 +474,8 @@ a:not(.footer-link):visited {
 .cookie-consent[data-status="open"] {
     visibility: visible;
     right: 20px;
+    /* Make actions focusable on the first frame of the opening animation. */
+    transition: right 0.6s var(--motion-ease-out);
 }
 
 .cookie-consent__header {

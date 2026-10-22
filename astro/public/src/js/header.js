@@ -108,4 +108,12 @@ document.addEventListener("keydown", function (event) {
 });
 
 // Cookie prompt
-if (localStorage.cookieTipv0Checked !== "true") setTimeout(openCookieDialog, 3000);
+function scheduleCookieDialog() {
+	if (localStorage.cookieTipv0Checked !== "true") setTimeout(openCookieDialog, 3000);
+}
+
+if (document.readyState === "loading") {
+	document.addEventListener("DOMContentLoaded", scheduleCookieDialog, { once: true });
+} else {
+	scheduleCookieDialog();
+}

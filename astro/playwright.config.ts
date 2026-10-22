@@ -6,6 +6,8 @@ export default defineConfig({
   use: {
     baseURL: 'http://127.0.0.1:4321',
     browserName: 'chromium',
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
   },
   webServer: process.env.PLAYWRIGHT_SKIP_WEBSERVER ? undefined : {
     command: 'pnpm preview --host 127.0.0.1 --port 4321',

@@ -84,10 +84,33 @@ test('exposes cookie consent as a focused dialog', async ({ page }) => {
   await expect(dialog).toHaveAttribute('aria-labelledby', 'cookie-consent-title');
   await expect(dialog).toHaveAttribute('aria-describedby', 'cookie-consent-description');
   await expect(dialog).toHaveAttribute('data-status', 'open', { timeout: 5_000 });
-  await expect.poll(() => page.evaluate(() => document.activeElement?.textContent?.trim())).toBe('自定义');
+  const customizeButton = dialog.getByRole('button', { name: '自定义', exact: true });
+  const acceptButton = dialog.getByRole('button', { name: '接受并继续', exact: true });
+  const privacyLink = dialog.getByRole('link', { name: '《nmTeam 隐私政策》', exact: true });
+  await expect(customizeButton).toBeFocused();
 
   await page.keyboard.press('Tab');
-  await expect.poll(() => page.evaluate(() => document.activeElement?.textContent?.trim())).toBe('接受并继续');
+  await expect(acceptButton).toBeFocused();
   await page.keyboard.press('Tab');
-  await expect.poll(() => page.evaluate(() => document.activeElement?.textContent?.trim())).toBe('自定义');
+  await expect(privacyLink).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(customizeButton).toBeFocused();
+  await page.keyboard.press('Shift+Tab');
+  await expect(privacyLink).toBeFocused();
+  await page.keyboard.press('Shift+Tab');
+  await expect(acceptButton).toBeFocused();
+});
+
+test('opens cookie consent after a script delays parsing the footer', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'DOM readiness is viewport-independent.');
+
+  await page.route('**/src/js/jquery.min.js', async (route) => {
+    await new Promise((resolve) => setTimeout(resolve, 4_000));
+    await route.continue();
+  });
+  await page.goto('/zh-CN/aboutus/', { waitUntil: 'domcontentloaded' });
+
+  const dialog = page.locator('#pageCookieConfirmDialog');
+  await expect(dialog).toHaveAttribute('data-status', 'open');
+  await expect(dialog.getByRole('button', { name: '自定义', exact: true })).toBeFocused();
 });
