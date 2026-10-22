@@ -29,7 +29,10 @@ html.newsroom-site { --newsroom-chrome-gutter: 10%; }
   height: 52px;
 }
 .newsroom-shell #newsroom-main > .container { margin-top: 0; }
-#newsroom-main { scroll-margin-top: 60px; }
+#newsroom-main {
+  scroll-margin-top: 60px;
+  padding-bottom: 48px;
+}
 #newsroom-header .container,
 #newsroom-header .newsroom-panel-content {
   width: auto;
@@ -66,6 +69,7 @@ html.newsroom-site { --newsroom-chrome-gutter: 10%; }
     height: 44px;
   }
   .newsroom-header-slot { height: 48px; }
+  #newsroom-main { padding-bottom: 32px; }
 }
 @media (min-width: 700px) and (max-width: 900px) {
   #hcont[data-navigation-mode="flow"] .header .right .links a { padding-inline: 8px; }
