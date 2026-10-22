@@ -11,7 +11,17 @@ let menuRevision = 0;
 function updateStickyState() {
   stickyUpdatePending = false;
   if (!header || !headerSlot) return;
-  header.toggleAttribute('data-stuck', headerSlot.getBoundingClientRect().top <= 0);
+  const stuck = headerSlot.getBoundingClientRect().top <= 0;
+  if (header.hasAttribute('data-stuck') === stuck) return;
+  header.toggleAttribute('data-stuck', stuck);
+  if (motionPreference.matches) return;
+  // CSS shortens interrupted reverse transitions. Keep the configured duration from the current position.
+  for (const animation of header.getAnimations({ subtree: true })) {
+    if (!(animation instanceof CSSTransition) || !['margin-left', 'margin-right', 'padding-right'].includes(animation.transitionProperty)) continue;
+    const effect = animation.effect;
+    if (!(effect instanceof KeyframeEffect) || !(effect.target instanceof Element)) continue;
+    effect.updateTiming({ duration: Number.parseFloat(getComputedStyle(effect.target).transitionDuration) * 1000 });
+  }
 }
 
 function scheduleStickyUpdate() {
