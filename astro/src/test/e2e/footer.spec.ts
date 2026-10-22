@@ -110,7 +110,34 @@ test('lets keyboard users leave cookie consent through the skip link', async ({ 
   expect(await page.evaluate(() => localStorage.getItem('cookieTipv0Checked'))).toBeNull();
 });
 
-test('returns focus to the skip link after accepting cookies', async ({ page }) => {
+test('keeps the skip link hidden after accepting cookies with a pointer', async ({ page }, testInfo) => {
+  await page.goto('/zh-CN/aboutus/', { waitUntil: 'domcontentloaded' });
+
+  const dialog = page.locator('#pageCookieConfirmDialog');
+  await expect(dialog).toHaveAttribute('data-status', 'open');
+  const acceptButton = dialog.locator('button').last();
+  if (testInfo.project.name === 'mobile') {
+    await acceptButton.tap();
+  } else {
+    await acceptButton.click();
+  }
+
+  const skipLink = page.locator('.skip-to-content');
+  await expect(dialog).toHaveAttribute('data-status', 'close');
+  await expect(skipLink).toBeFocused();
+  await expect(skipLink).toHaveCSS('opacity', '0');
+  await expect(skipLink).toHaveCSS('pointer-events', 'none');
+  expect(await page.evaluate(() => localStorage.getItem('cookieTipv0Checked'))).toBe('true');
+
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Shift+Tab');
+  await expect(skipLink).toBeFocused();
+  await expect(skipLink).toHaveCSS('opacity', '1');
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('main')).toBeFocused();
+});
+
+test('returns visible focus to the skip link after accepting cookies with the keyboard', async ({ page }) => {
   await page.goto('/zh-CN/aboutus/', { waitUntil: 'domcontentloaded' });
 
   const dialog = page.locator('#pageCookieConfirmDialog');
@@ -119,6 +146,7 @@ test('returns focus to the skip link after accepting cookies', async ({ page }) 
   await page.keyboard.press('Enter');
 
   await expect(dialog).toHaveAttribute('data-status', 'close');
+  await expect(page.locator('.skip-to-content')).toHaveCSS('opacity', '1');
   await expect(page.getByRole('link', { name: '跳到内容', exact: true })).toBeFocused();
   expect(await page.evaluate(() => localStorage.getItem('cookieTipv0Checked'))).toBe('true');
 });

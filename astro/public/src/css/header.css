@@ -47,7 +47,7 @@ html[data-theme=dark] body {
     transition: opacity 0.25s var(--motion-ease-out), transform 0.25s var(--motion-ease-out);
 }
 
-.skip-to-content:focus {
+.skip-to-content:focus-visible {
     outline: none;
     opacity: 1;
     pointer-events: auto;
