@@ -76,7 +76,7 @@
   transform: translateY(-6px);
   pointer-events: none;
   max-height: calc(100dvh - var(--newsroom-header-offset, 0px) - 52px);
-  overflow-y: auto;
+  overflow-y: hidden;
   overscroll-behavior: contain;
   transition: opacity 180ms var(--motion-ease-out), transform 180ms var(--motion-ease-out), visibility 0s 180ms;
 }
@@ -87,6 +87,7 @@
   pointer-events: auto;
   transition-delay: 0s;
 }
+#newsroom-header[data-menu-scrollable] #newsroom-extended-menu { overflow-y: auto; }
 .newsroom-panel-content { width: calc(100% - 48px); max-width: 1116px; margin: 0 auto; padding: 24px 0 28px; }
 #newsroom-extend-nav-menu { display: none; }
 #newsroom-header .site-search { max-width: 680px; margin: 0 auto; }

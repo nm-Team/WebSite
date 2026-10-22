@@ -7,6 +7,7 @@ const backdrop = document.querySelector<HTMLElement>('[data-newsroom-backdrop]')
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 let returnFocus: HTMLElement | null = null;
 let stickyUpdatePending = false;
+let menuRevision = 0;
 
 function updateStickyState() {
   stickyUpdatePending = false;
@@ -38,6 +39,15 @@ function setOpen(open: boolean, instant = false) {
   }
   header.querySelectorAll('[data-nav-menu-extended]').forEach((element) => element.setAttribute('data-nav-menu-extended', String(open)));
   header.dataset.navMenuExtended = String(open);
+  const revision = ++menuRevision;
+  header.removeAttribute('data-menu-scrollable');
+  if (open) requestAnimationFrame(() => {
+    if (!header || revision !== menuRevision) return;
+    // Interrupted transitions reject their finished promise; only the latest toggle may enable scrolling.
+    void Promise.allSettled(header.getAnimations().map((animation) => animation.finished)).then(() => {
+      if (revision === menuRevision) header.setAttribute('data-menu-scrollable', '');
+    });
+  });
   document.body.dataset.navMenuExtended = String(open);
   document.body.style.overflow = open || document.getElementById('pageHeader')?.hasAttribute('open') ? 'hidden' : '';
   toggle.setAttribute('aria-expanded', String(open));
