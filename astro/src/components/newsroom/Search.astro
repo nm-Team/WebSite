@@ -1,4 +1,5 @@
 ---
+import Browse from './Browse.astro';
 import { newsroomLabels } from '@/lib/newsroom/labels';
 import { type NewsroomLocale, newsroomPath } from '@/lib/newsroom/paths';
 
@@ -7,16 +8,20 @@ const { locale } = Astro.props;
 const labels = newsroomLabels(locale);
 ---
 <div id="newsroom-search" data-locale={locale}>
+  <h1 class="sr-only">{labels.search}</h1>
   <form class="search-page-form" role="search" method="get" action={newsroomPath(locale, 'search/')}>
-    <label for="newsroom-page-query">{labels.searchLabel}</label>
+    <label for="newsroom-page-query" class="sr-only">{labels.searchLabel}</label>
     <input id="newsroom-page-query" type="search" name="q" placeholder={labels.searchPlaceholder} />
-    <button type="submit">{labels.search}</button>
+    <button type="submit" aria-label={labels.search}>
+      <svg viewBox="0 0 1024 1024" aria-hidden="true"><path d="M661.44 597.44h-33.92l-11.84-11.52a277.76 277.76 0 1 0-29.76 29.76l11.52 11.84v33.6l213.44 212.8 64-64z m-256 0a192 192 0 1 1 192-192 192 192 0 0 1-192 192z"></path></svg>
+    </button>
   </form>
-  <div class="post-list">
-    <h1 class="archive-title" id="search-title">{labels.search}</h1>
-    <div id="search-results" class="search-results" aria-live="polite"><p>{labels.searchPrompt}</p></div>
-  </div>
-  <noscript><p class="search-page-form">{labels.searchNeedsJavaScript}</p></noscript>
+  <section class="post-list search-result-section" aria-labelledby="search-title" hidden>
+    <h2 class="archive-title" id="search-title">{labels.search}</h2>
+    <div id="search-results" class="search-results" aria-live="polite"></div>
+  </section>
+  <noscript><p class="search-notice">{labels.searchNeedsJavaScript}</p></noscript>
+  <Browse locale={locale} />
 </div>
 <script>
   import '@/scripts/newsroom/search';

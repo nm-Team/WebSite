@@ -33,7 +33,8 @@ test('the sticky header aligns with Newsroom content and returns to the global g
   }
 });
 
-test('the popup follows the sticky header width through resize and scroll reversals', async ({ page }) => {
+test('the popup follows the sticky header width through resize and scroll reversals', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'mobile', 'The popup is only used on mobile');
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto('/en/newsroom/');
   const header = page.locator('#newsroom-header');
@@ -50,8 +51,7 @@ test('the popup follows the sticky header width through resize and scroll revers
   }).toBeLessThan(1);
   const viewport = page.viewportSize()!;
   await page.setViewportSize({ width: viewport.width, height: viewport.height - 80 });
-  const trigger = await page.locator('#newsroom-menu-toggle').isVisible()
-    ? page.locator('#newsroom-menu-toggle') : page.locator('[data-newsroom-search-toggle]');
+  const trigger = page.locator('#newsroom-menu-toggle');
   await trigger.click();
   await expect(page.locator('#newsroom-extended-menu')).toHaveCSS('opacity', '1');
   const topRow = (await bar.boundingBox())!;

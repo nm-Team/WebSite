@@ -41,11 +41,6 @@ html.newsroom-site { --newsroom-chrome-gutter: 10%; }
 #newsroom-header[data-stuck] .newsroom-panel-content {
   margin-inline: var(--newsroom-content-gutter);
 }
-.newsroom-shell #newsroom-footer {
-  max-width: none;
-  margin-inline: 0;
-  padding-inline: var(--newsroom-chrome-gutter);
-}
 .newsroom-site #fcont {
   margin-top: 0;
   padding-inline: var(--newsroom-chrome-gutter);

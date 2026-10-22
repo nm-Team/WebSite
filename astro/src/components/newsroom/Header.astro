@@ -9,13 +9,13 @@ const labels = newsroomLabels(locale);
 const links = (['press-release', 'stories'] as const).map((slug) => ({
   name: categoryNames[slug][locale], url: newsroomPath(locale, `category/${slug}/`),
 }));
+links.push({ name: labels.search, url: newsroomPath(locale, 'search/') }, { name: 'RSS', url: newsroomPath(locale, 'rss.xml') });
 ---
 <header id="newsroom-header" data-nav-menu-extended="false">
   <div class="container">
     <a class="site-name-text" href={newsroomPath(locale)}>Newsroom</a>
     <nav id="newsroom-nav-menu" aria-label={labels.menu}>
       {links.map((link) => <a href={link.url} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
-      <a href={newsroomPath(locale, 'search/')} data-newsroom-search-toggle aria-controls="newsroom-extended-menu" aria-expanded="false">{labels.search}</a>
     </nav>
     <button id="newsroom-menu-toggle" class="menu-toggle" aria-label={labels.menu} aria-controls="newsroom-extended-menu" aria-expanded="false" data-nav-menu-extended="false">
       <span class="bar bar-1"></span><span class="bar bar-2"></span>
@@ -26,15 +26,6 @@ const links = (['press-release', 'stories'] as const).map((slug) => ({
       <nav id="newsroom-extend-nav-menu" aria-label={labels.menu}>
         {links.map((link) => <a href={link.url} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
       </nav>
-      <div class="site-search">
-        <form class="search-box" method="get" action={newsroomPath(locale, 'search/')} role="search">
-          <label for="newsroom-query" class="sr-only">{labels.searchLabel}</label>
-          <input type="search" id="newsroom-query" name="q" placeholder={labels.searchPlaceholder} />
-          <button type="submit" aria-label={labels.search}>
-            <svg viewBox="0 0 1024 1024" aria-hidden="true"><path d="M661.44 597.44h-33.92l-11.84-11.52a277.76 277.76 0 1 0-29.76 29.76l11.52 11.84v33.6l213.44 212.8 64-64z m-256 0a192 192 0 1 1 192-192 192 192 0 0 1-192 192z"></path></svg>
-          </button>
-        </form>
-      </div>
     </div>
   </div>
 </header>

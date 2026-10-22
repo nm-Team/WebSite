@@ -2,7 +2,6 @@
 import GlobalFooter from '@/components/layout/Footer.astro';
 import GlobalHeader from '@/components/layout/Header.astro';
 import SiteAssets from '@/components/layout/SiteAssets.astro';
-import Footer from '@/components/newsroom/Footer.astro';
 import Header from '@/components/newsroom/Header.astro';
 import SEOHead from '@/components/newsroom/SEOHead.astro';
 import type { NewsPost } from '@/lib/newsroom/content';
@@ -33,7 +32,6 @@ const { locale } = Astro.props;
     <div class="newsroom-shell" data-newsroom-content={Astro.props.post ? 'article' : 'list'}>
       <div class="newsroom-header-slot"><Header locale={locale} /></div>
       <main id="newsroom-main" tabindex="-1"><div class="container"><div class="row"><slot /></div></div></main>
-      <Footer locale={locale} />
     </div>
     <GlobalFooter locale={locale} />
     <script>

@@ -10,6 +10,7 @@ if (root && isNewsroomLocale(locale)) {
   const form = root.querySelector('form');
   const results = root.querySelector<HTMLElement>('#search-results');
   const title = root.querySelector<HTMLElement>('#search-title');
+  const resultSection = root.querySelector<HTMLElement>('.search-result-section');
   let posts: SearchPost[] | undefined;
   let requestId = 0;
 
@@ -31,7 +32,7 @@ if (root && isNewsroomLocale(locale)) {
     const category = document.createElement('div');
     category.className = 'category';
     category.textContent = post.category;
-    const heading = document.createElement('h2');
+    const heading = document.createElement('h3');
     heading.className = 'post-title';
     heading.textContent = post.title;
     const time = document.createElement('time');
@@ -46,7 +47,8 @@ if (root && isNewsroomLocale(locale)) {
     const id = ++requestId;
     if (!results || !title || !isNewsroomLocale(locale)) return;
     title.textContent = query.trim() ? `${labels.search}: ${query}` : labels.search;
-    if (!query.trim()) { message(labels.searchPrompt); return; }
+    if (resultSection) resultSection.hidden = !query.trim();
+    if (!query.trim()) { results.replaceChildren(); return; }
     message(labels.searching);
     try {
       if (!posts) {
@@ -71,7 +73,8 @@ if (root && isNewsroomLocale(locale)) {
     event.preventDefault();
     const query = input?.value ?? '';
     const url = new URL(window.location.href);
-    url.searchParams.set('q', query);
+    if (query.trim()) url.searchParams.set('q', query);
+    else url.searchParams.delete('q');
     window.history.replaceState({}, '', url);
     void applySearch(query);
   });

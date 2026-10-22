@@ -1,0 +1,27 @@
+---
+import { getArchives, getCategories, getNewsPosts, getTags } from '@/lib/newsroom/content';
+import { newsroomLabels } from '@/lib/newsroom/labels';
+import type { NewsroomLocale } from '@/lib/newsroom/paths';
+
+interface Props { locale: NewsroomLocale }
+const { locale } = Astro.props;
+const labels = newsroomLabels(locale);
+const posts = await getNewsPosts(locale);
+const categories = getCategories(posts);
+const tags = getTags(posts);
+const archives = getArchives(posts, locale);
+---
+<div class="search-browse">
+  <nav aria-labelledby="browse-categories">
+    <h2 id="browse-categories">{labels.categories}</h2>
+    <ul>{categories.map((category) => <li><a href={category.url}>{category.name}</a></li>)}</ul>
+  </nav>
+  <nav aria-labelledby="browse-tags">
+    <h2 id="browse-tags">{labels.tags}</h2>
+    <ul>{tags.map((tag) => <li><a href={tag.url}>{tag.name}</a></li>)}</ul>
+  </nav>
+  <nav aria-labelledby="browse-dates">
+    <h2 id="browse-dates">{labels.dates}</h2>
+    <ul>{archives.map((archive) => <li><a href={archive.url}>{archive.label}</a></li>)}</ul>
+  </nav>
+</div>

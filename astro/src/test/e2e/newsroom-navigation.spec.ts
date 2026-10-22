@@ -68,9 +68,9 @@ test('local navigation fits narrow screens and respects light, dark and reduced-
         await expect(page.locator('#newsroom-main')).toHaveAttribute('inert', '');
         await expect(page.locator('#newsroom-menu-toggle .bar').first()).toHaveCSS('transition-duration', '0s');
       } else {
-        await page.locator('[data-newsroom-search-toggle]').click();
-        await expect(page.locator('#newsroom-query')).toBeFocused();
-        await expect(page.locator('[data-newsroom-search-toggle]')).toHaveAttribute('aria-expanded', 'true');
+        await page.locator('#newsroom-nav-menu a[href$="/search/"]').click();
+        await expect(page).toHaveURL(/\/en\/newsroom\/search\/$/);
+        await expect(page.locator('#newsroom-page-query')).toBeVisible();
       }
       await page.keyboard.press('Escape');
       await expect(page.locator('#newsroom-extended-menu')).not.toBeVisible();
@@ -84,14 +84,17 @@ test('local navigation contains no language switch and search uses the page lang
   await expect(page.locator('#newsroom-header [hreflang]')).toHaveCount(0);
   const mobile = await page.locator('#newsroom-menu-toggle').isVisible();
   if (mobile) await page.locator('#newsroom-menu-toggle').click();
-  else await page.locator('[data-newsroom-search-toggle]').click();
-  await page.locator('#newsroom-query').fill('nmBot');
-  await page.locator('#newsroom-query').press('Enter');
+  const nav = page.locator(mobile ? '#newsroom-extend-nav-menu' : '#newsroom-nav-menu');
+  await expect(nav.getByRole('link', { name: 'RSS', exact: true })).toHaveAttribute('href', '/zh-CN/newsroom/rss.xml');
+  await nav.locator('a[href$="/search/"]').click();
+  await expect(page).toHaveURL(/\/zh-CN\/newsroom\/search\/$/);
+  await page.locator('#newsroom-page-query').fill('nmBot');
+  await page.locator('#newsroom-page-query').press('Enter');
   await expect(page).toHaveURL(/\/zh-CN\/newsroom\/search\/\?q=nmBot$/);
   await expect(page.locator('#search-results a')).not.toHaveCount(0);
 });
 
-test('local header and footer both open the press release and stories categories', async ({ page }) => {
+test('local header and search directory both open the press release and stories categories', async ({ page }) => {
   for (const locale of ['zh-CN', 'en']) {
     await page.goto(`/${locale}/newsroom/`);
     for (const slug of ['press-release', 'stories']) {
@@ -105,14 +108,17 @@ test('local header and footer both open the press release and stories categories
       await expect(page).toHaveURL(new RegExp(`${target}$`));
       await expect(page.locator('h1')).toHaveText(title);
       await expect(page.locator(`a[href="${target}"][aria-current="page"]`)).toHaveCount(2);
-      await expect(page.locator(`#newsroom-footer a[href="${target}"]`)).toHaveText(title);
+      await expect(page.locator('#newsroom-footer')).toHaveCount(0);
+      await page.goto(`/${locale}/newsroom/search/`);
+      await expect(page.locator(`.search-browse a[href="${target}"]`)).toHaveText(title);
     }
   }
 });
 
-test('the global footer follows the local footer and keeps language switching available', async ({ page }) => {
+test('the global footer follows the content and keeps language switching available', async ({ page }) => {
   await page.goto('/en/newsroom/welcome-2021-08-09/');
-  const local = page.locator('#newsroom-footer');
+  await expect(page.locator('#newsroom-footer')).toHaveCount(0);
+  const local = page.locator('#newsroom-main');
   const global = page.locator('#fcont');
   await expect(global).toBeVisible();
   const localBox = (await local.boundingBox())!;
@@ -129,7 +135,7 @@ test('the global footer follows the local footer and keeps language switching av
   await expect(page).toHaveURL(/\/zh-CN\/newsroom\/nmfun-test-2021-11-20\/$/);
 });
 
-test('both navigation and footer levels share their content edges at every breakpoint', async ({ page }, testInfo) => {
+test('both navigation levels and the global footer share their content edges at every breakpoint', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'This test supplies its own viewport matrix');
   for (const width of [320, 390, 699, 700, 768, 900, 901, 1440, 1920]) {
     await page.setViewportSize({ width, height: 1000 });
@@ -139,7 +145,7 @@ test('both navigation and footer levels share their content edges at every break
       const box = global.getBoundingClientRect();
       const style = getComputedStyle(global);
       const expected = { left: box.left + parseFloat(style.paddingLeft), right: box.right - parseFloat(style.paddingRight) };
-      const actual = ['#newsroom-header .container', '#newsroom-footer .footer-body', '#fcont .footer-body'].map((selector) => {
+      const actual = ['#newsroom-header .container', '#fcont .footer-body'].map((selector) => {
         const bounds = document.querySelector(selector)!.getBoundingClientRect();
         return { left: bounds.left, right: bounds.right };
       });
@@ -161,12 +167,12 @@ test('both navigation and footer levels share their content edges at every break
   }
 });
 
-test('the local menu animates both ways and handles rapid pointer reversals', async ({ page }) => {
+test('the local menu animates both ways and handles rapid pointer reversals', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'mobile', 'The popup is only used on mobile');
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto('/en/newsroom/');
   const panel = page.locator('#newsroom-extended-menu');
-  const trigger = await page.locator('#newsroom-menu-toggle').isVisible()
-    ? page.locator('#newsroom-menu-toggle') : page.locator('[data-newsroom-search-toggle]');
+  const trigger = page.locator('#newsroom-menu-toggle');
   await panel.evaluate((element) => {
     element.setAttribute('data-opacity-transitions', '0');
     element.addEventListener('transitionrun', (event) => {
@@ -186,22 +192,22 @@ test('the local menu animates both ways and handles rapid pointer reversals', as
   for (let i = 0; i < 3; i++) await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
   await expect(trigger).toHaveAttribute('aria-expanded', 'true');
   await expect(panel).toHaveCSS('opacity', '1');
-  await expect(page.locator('#newsroom-query')).toBeVisible();
+  await expect(page.locator('#newsroom-extend-nav-menu a[href$="/search/"]')).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(panel).not.toBeVisible();
   await expect(trigger).toBeFocused();
   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
 });
 
-test('the open menu shares one header surface before and after sticking', async ({ page }) => {
+test('the open menu shares one header surface before and after sticking', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'mobile', 'The popup is only used on mobile');
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   for (const colorScheme of ['light', 'dark'] as const) {
     await page.emulateMedia({ colorScheme });
     await page.goto('/en/newsroom/');
     const header = page.locator('#newsroom-header');
     const panel = page.locator('#newsroom-extended-menu');
-    const trigger = await page.locator('#newsroom-menu-toggle').isVisible()
-      ? page.locator('#newsroom-menu-toggle') : page.locator('[data-newsroom-search-toggle]');
+    const trigger = page.locator('#newsroom-menu-toggle');
     for (const top of [0, 300]) {
       await page.evaluate((y) => window.scrollTo(0, y), top);
       await trigger.click();
