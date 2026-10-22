@@ -6,6 +6,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getProductDetail } from '@/data/products/loader';
 import { buildNmBotProductHeaderHtml } from '@/components/products/nmbot/productHeader';
 import { t } from '@/i18n/translate';
+import nmBotStyles from '@/styles/nmbot.css?url';
 
 export function getStaticPaths() {
   return publicLocales.flatMap((lang) =>
@@ -46,7 +47,7 @@ if (route.kind === 'generic-product-page' && route.productSlug) {
   title={pageTitle}
   keywordsKey={route.pageKeywords}
   descriptionKey={route.pageDescription}
-  headCss={route.pageHeadCss}
+  headCss={route.id === 'products-overview-nmbot-telegram' ? [...route.pageHeadCss, nmBotStyles] : route.pageHeadCss}
   headJs={route.pageHeadJs}
   bodyJs={route.pageBodyJs}
   image={route.pageImage}
