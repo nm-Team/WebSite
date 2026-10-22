@@ -3,7 +3,8 @@ import { resolve } from 'node:path';
 
 import { describe, expect, it } from 'vitest';
 
-import { routeManifest } from '@/i18n/routes';
+import { publicLocales } from '@/i18n/locales';
+import { routeManifest, toPrefixedPath, toRootPath } from '@/i18n/routes';
 
 function loadRedirectRules(): string[] {
   const content = readFileSync(resolve(process.cwd(), 'public/_redirects'), 'utf-8');
@@ -96,6 +97,28 @@ function toExpectedRootPathFromPhp(sourcePhpPath: string): string {
 }
 
 describe('_redirects rules', () => {
+  it('permanently redirects old product paths to existing pages in every locale', () => {
+    const rules = loadRedirectRules();
+    const paths = new Set(routeManifest.flatMap((route) => [
+      toRootPath(route.slug),
+      ...route.supportedLocales.map((locale) => toPrefixedPath(locale, route.slug)),
+    ]));
+
+    for (const slug of ['nmBot-Telegram', 'nmBrowser-StartPage', 'product-accessibility']) {
+      for (const suffix of ['', '/']) {
+        const source = `/products/overview/${slug}${suffix}`;
+        expect(hasRule(rules, source, `/${slug}/`, 301)).toBe(true);
+        expect(hasRule(rules, `/:lang${source}`, `/:lang/${slug}/`, 301)).toBe(true);
+
+        for (const prefix of ['', ...publicLocales.map((locale) => `/${locale}`)]) {
+          const target = `${prefix}/${slug}/`;
+          expect(resolveRedirect(`${prefix}${source}?from=legacy`)).toBe(`${target}?from=legacy`);
+          expect(paths.has(target)).toBe(true);
+        }
+      }
+    }
+  });
+
   it('defines generic php fallbacks', () => {
     const rules = loadRedirectRules();
     expect(hasRule(rules, '/:lang/*.php', '/:lang/:splat/', 301)).toBe(true);
@@ -120,7 +143,7 @@ describe('_redirects rules', () => {
       ['/products/overview.php?product=nmBot-Telegram', '/products/overview/?product=nmBot-Telegram'],
       [
         '/products/template/nmBot-Telegram.php?lan=zh_CN',
-        '/products/overview/nmBot-Telegram/?lan=zh_CN',
+        '/nmBot-Telegram/?lan=zh_CN',
       ],
       ['/join/forum.php?jobType=dev', '/questionnaire-ended/?jobType=dev'],
       ['/unknown/nested.php?x=1', '/unknown/nested/?x=1'],
@@ -137,7 +160,7 @@ describe('_redirects rules', () => {
     const businessExceptionIndex = rules.indexOf('/:lang/business_cooperation.php /:lang/business-cooperation/ 301');
     const externalExceptionIndex = rules.indexOf('/:lang/status.php https://status.nmteam.xyz 302');
     const productTemplateIndex = rules.indexOf(
-      '/:lang/products/template/nmBot-Telegram.php /:lang/products/overview/nmBot-Telegram/ 301',
+      '/:lang/products/template/nmBot-Telegram.php /:lang/nmBot-Telegram/ 301',
     );
     const joinForumIndex = rules.indexOf('/:lang/join/forum.php /:lang/questionnaire-ended/ 301');
 
@@ -188,8 +211,8 @@ describe('_redirects rules', () => {
       }
 
       if (source === '/products/template/nmBot-Telegram.php') {
-        expect(hasRule(rules, source, '/products/overview/nmBot-Telegram/', 301)).toBe(true);
-        expect(hasRule(rules, `/:lang${source}`, '/:lang/products/overview/nmBot-Telegram/', 301)).toBe(true);
+        expect(hasRule(rules, source, '/nmBot-Telegram/', 301)).toBe(true);
+        expect(hasRule(rules, `/:lang${source}`, '/:lang/nmBot-Telegram/', 301)).toBe(true);
         continue;
       }
 

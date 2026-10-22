@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test.describe('nmBot custom landing page', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/zh-CN/products/overview/nmBot-Telegram/');
+    await page.goto('/zh-CN/nmBot-Telegram/');
   });
 
   test('keeps major sections in the expected order', async ({ page }) => {

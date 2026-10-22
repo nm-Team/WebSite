@@ -53,7 +53,7 @@ test('stacks footer navigation into one column on small viewports', async ({ pag
 test('keeps product footnotes visually continuous with the site footer', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'The product footer continuity check only needs one browser project.');
 
-  await page.goto('/zh-CN/products/overview/nmBrowser-StartPage/', { waitUntil: 'domcontentloaded' });
+  await page.goto('/zh-CN/nmBrowser-StartPage/', { waitUntil: 'domcontentloaded' });
 
   const layout = await page.evaluate(() => {
     const notes = document.querySelector<HTMLElement>('.products_footer');

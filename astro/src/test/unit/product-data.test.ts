@@ -11,11 +11,11 @@ describe('phase 3 product and sponsor data', () => {
     expect(overview.products.map((product) => product.name)).toEqual(['nmBot', 'StartPage']);
     expect(overview.products.map((product) => product.intro)).toEqual(['nm boost chat.', 'Good day from StartPage.']);
     expect(overview.products[0]?.buttons.map((button) => [button.name, button.href])).toEqual([
-      ['Learn more', '/products/overview/nmBot-Telegram'],
+      ['Learn more', '/nmBot-Telegram/'],
       ['Get started', 'https://t.me/nmnmfunbot'],
     ]);
     expect(overview.products[1]?.buttons.map((button) => [button.name, button.href])).toEqual([
-      ['Learn more', 'overview/nmBrowser-StartPage'],
+      ['Learn more', '/nmBrowser-StartPage/'],
       ['Try now', 'https://bs.nmteam.xyz?from=nmTeamProductsPage'],
     ]);
   });
