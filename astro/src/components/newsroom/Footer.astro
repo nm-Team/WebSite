@@ -15,7 +15,7 @@ const archives = getArchives(posts, locale).slice(0, 5);
     <div class="footer-table">
       <div class="footer-col"><div class="footer-col-title">{labels.categories}</div>{categories.map((category) => <a href={category.url}>{category.name}</a>)}</div>
       <div class="footer-col"><div class="footer-col-title">{labels.archives}</div>{archives.map((archive) => <a href={archive.url}>{archive.label}</a>)}</div>
-      <div class="footer-col"><div class="footer-col-title">{labels.more}</div><a href={newsroomPath(locale, 'about/')}>{labels.about}</a><a href={`/${locale}/`}>{labels.website}</a><a href={newsroomPath(locale, 'rss.xml')}>RSS</a></div>
+      <div class="footer-col"><div class="footer-col-title">{labels.more}</div><a href={newsroomPath(locale, 'rss.xml')}>RSS</a></div>
     </div>
   </div>
 </footer>

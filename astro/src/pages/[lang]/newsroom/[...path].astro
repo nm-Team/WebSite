@@ -42,6 +42,5 @@ const Content = post ? (await render(post.entry)).Content : undefined;
     </article></div>
     <LatestPosts posts={page.latestPosts} locale={page.locale} />
   </>}
-  {page.kind === 'about' && <div class="post-page"><article class="post"><h1 class="post-title">{labels.about}</h1><div class="post-content"><p>{labels.aboutText}</p><p>{labels.website}: <a href={`/${page.locale}/`}>nm.team</a></p></div></article></div>}
   {page.kind === 'search' && <Search locale={page.locale} />}
 </NewsroomLayout>}

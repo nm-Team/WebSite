@@ -5,13 +5,11 @@ import { type NewsroomLocale, newsroomPath } from '@/lib/newsroom/paths';
 interface Props { locale: NewsroomLocale }
 const { locale } = Astro.props;
 const labels = newsroomLabels(locale);
-const about = newsroomPath(locale, 'about/');
 ---
 <header id="newsroom-header" data-nav-menu-extended="false">
   <div class="container">
     <a class="site-name-text" href={newsroomPath(locale)}>Newsroom</a>
     <nav id="newsroom-nav-menu" aria-label={labels.menu}>
-      <a href={about} aria-current={Astro.url.pathname === about ? 'page' : undefined}>{labels.localAbout}</a>
       <a href={newsroomPath(locale, 'search/')} data-newsroom-search-toggle aria-controls="newsroom-extended-menu" aria-expanded="false">{labels.search}</a>
     </nav>
     <button id="newsroom-menu-toggle" class="menu-toggle" aria-label={labels.menu} aria-controls="newsroom-extended-menu" aria-expanded="false" data-nav-menu-extended="false">
@@ -20,9 +18,6 @@ const about = newsroomPath(locale, 'about/');
   </div>
   <div id="newsroom-extended-menu" class="extend-menu" data-nav-menu-extended="false" inert>
     <div class="newsroom-panel-content">
-      <nav id="newsroom-extend-nav-menu" aria-label={labels.menu}>
-        <a href={about} aria-current={Astro.url.pathname === about ? 'page' : undefined}>{labels.localAbout}</a>
-      </nav>
       <div class="site-search">
         <form class="search-box" method="get" action={newsroomPath(locale, 'search/')} role="search">
           <label for="newsroom-query" class="sr-only">{labels.searchLabel}</label>

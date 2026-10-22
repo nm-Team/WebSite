@@ -33,7 +33,7 @@ runtime. Navigation and search use small browser scripts. Framework components
 can use Astro's `client:*` directives when a future feature needs hydration.
 
 Both `/zh-CN/newsroom/` and `/en/newsroom/` have article lists, pagination,
-categories, tags, monthly archives, search, an about page, and `rss.xml`.
+categories, tags, monthly archives, search, and `rss.xml`.
 Article URLs are `/{locale}/newsroom/{articleId}-{YYYY-MM-DD}/`.
 The default `/newsroom/` entry redirects to English. Main-site Chinese locales
 link to Chinese Newsroom; English and Japanese link to English Newsroom.
@@ -61,7 +61,7 @@ script are shared with the website. Newsroom uses only its original Umami site
 ID (`3f6853e3-82e8-4f73-977f-cf685c37e3c3`).
 
 The local navigation is 52px high on desktop and 48px below 700px. It contains
-the Newsroom title, about link, and search. Mobile navigation and desktop search
+the Newsroom title and search. Mobile navigation and desktop search
 support Escape, focus restoration, and background scroll locking. Opening the
 global menu closes the local menu. Reduced-motion preferences disable the local
 navigation and card entrance animations. Pointer toggles fade and slide the

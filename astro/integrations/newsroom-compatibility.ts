@@ -38,8 +38,8 @@ export function buildLegacyNewsroomMap(pagePaths: readonly string[], assetPaths:
   }
   add('/', prefix);
   add('/page/1/', prefix, true);
-  add('/special/about/', newsroomPath('zh-CN', 'about/'), true);
-  add('/special/about.html', newsroomPath('zh-CN', 'about/'), true);
+  add('/special/about/', prefix, true);
+  add('/special/about.html', prefix, true);
   add('/special/website/', '/zh-CN/', true);
   add('/special/website.html', '/zh-CN/', true);
   add('/rss.xml', newsroomPath('zh-CN', 'rss.xml'));

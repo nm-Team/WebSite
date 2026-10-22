@@ -6,7 +6,7 @@ interface PageBase { locale: NewsroomLocale; url: string; title: string }
 export type NewsroomPage = PageBase & (
   | { kind: 'list'; posts: NewsPost[]; currentPage?: number; totalPages?: number }
   | { kind: 'article'; post: NewsPost; latestPosts: NewsPost[] }
-  | { kind: 'search' | 'about' }
+  | { kind: 'search' }
 );
 export interface NewsroomAlternate { locale: NewsroomLocale; url: string }
 
@@ -28,7 +28,6 @@ export async function getNewsroomPages(): Promise<NewsroomPage[]> {
     for (const tag of getTags(posts)) pages.push({ kind: 'list', locale, url: tag.url, title: tag.name, posts: posts.filter((post) => post.tags.some((item) => item.slug === tag.slug)) });
     for (const archive of getArchives(posts, locale)) pages.push({ kind: 'list', locale, url: archive.url, title: archive.label, posts: posts.filter((post) => post.archiveKey === archive.key) });
     for (const post of posts) pages.push({ kind: 'article', locale, url: post.url, title: post.title, post, latestPosts: posts.filter((item) => item.articleId !== post.articleId).slice(0, 8) });
-    pages.push({ kind: 'about', locale, url: newsroomPath(locale, 'about/'), title: labels.about });
     pages.push({ kind: 'search', locale, url: newsroomPath(locale, 'search/'), title: labels.search });
   }
   const urls = pages.map((page) => page.url);

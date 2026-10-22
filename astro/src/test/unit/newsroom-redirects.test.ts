@@ -14,6 +14,8 @@ describe('Newsroom migration redirects', () => {
     expect(map['/tag/nmBot/']).toBe('/zh-CN/newsroom/tag/nmBot/');
     expect(map['/search']).toBe('/zh-CN/newsroom/search/');
     expect(map['/special/website.html/']).toBe('/zh-CN/');
+    expect(map['/special/about/']).toBe('/zh-CN/newsroom/');
+    expect(map['/special/about.html/']).toBe('/zh-CN/newsroom/');
     expect(map['/']).toBe('/zh-CN/newsroom/');
   });
   it('preserves API query parameters and cross-origin access on the old host', () => {
