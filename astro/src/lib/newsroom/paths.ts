@@ -1,3 +1,5 @@
+import type { PublicLocale } from '../../i18n/locales';
+
 export const newsroomLocales = ['zh-CN', 'en'] as const;
 export type NewsroomLocale = (typeof newsroomLocales)[number];
 
@@ -14,7 +16,7 @@ export function resolveNewsroomLocale(value: string): NewsroomLocale {
   return value.startsWith('zh') ? 'zh-CN' : 'en';
 }
 
-export function newsroomPath(locale: NewsroomLocale, suffix = ''): string {
+export function newsroomPath(locale: PublicLocale, suffix = ''): string {
   return `/${locale}/newsroom/${suffix.replace(/^\/+/, '')}`;
 }
 
@@ -41,8 +43,4 @@ export function articlePath(locale: NewsroomLocale, articleId: string, date: Dat
 
 export function absoluteNewsroomUrl(path: string): string {
   return new URL(path, newsroomOrigin).href;
-}
-
-export function isIndexableNewsroomPath(path: string): boolean {
-  return /^\/(?:zh-CN|en)\/newsroom\//.test(path) && !/\/(?:search|page\/1)\/?$/.test(path) && !/\.(?:json|xml)$/.test(path);
 }

@@ -2,28 +2,30 @@
 import { render } from 'astro:content';
 
 import LatestPosts from '@/components/newsroom/LatestPosts.astro';
+import LanguageRedirect from '@/components/newsroom/LanguageRedirect.astro';
 import PageNavigator from '@/components/newsroom/PageNavigator.astro';
 import PostCard from '@/components/newsroom/PostCard.astro';
 import Search from '@/components/newsroom/Search.astro';
 import NewsroomLayout from '@/layouts/NewsroomLayout.astro';
+import { getNewsroomFallbackPages, type NewsroomFallbackPage } from '@/lib/newsroom/fallbacks';
 import { newsroomLabels } from '@/lib/newsroom/labels';
 import { getNewsroomAlternates, getNewsroomPages, type NewsroomAlternate, type NewsroomPage } from '@/lib/newsroom/pages';
-import { newsroomPath } from '@/lib/newsroom/paths';
+import { newsroomPath, resolveNewsroomLocale } from '@/lib/newsroom/paths';
 
 export async function getStaticPaths() {
   const pages = await getNewsroomPages();
-  return pages.map((page) => ({
+  return [...pages, ...getNewsroomFallbackPages(pages)].map((page) => ({
     params: { lang: page.locale, path: decodeURI(page.url.slice(newsroomPath(page.locale).length).replace(/\/$/, '')) || undefined },
-    props: { page, alternates: getNewsroomAlternates(page, pages) },
+    props: { page, alternates: page.kind === 'redirect' ? [] : getNewsroomAlternates(page, pages) },
   }));
 }
-interface Props { page: NewsroomPage; alternates: NewsroomAlternate[] }
+interface Props { page: NewsroomPage | NewsroomFallbackPage; alternates: NewsroomAlternate[] }
 const { page, alternates } = Astro.props;
-const labels = newsroomLabels(page.locale);
+const labels = newsroomLabels(resolveNewsroomLocale(page.locale));
 const post = page.kind === 'article' ? page.post : undefined;
 const Content = post ? (await render(post.entry)).Content : undefined;
 ---
-<NewsroomLayout locale={page.locale} title={page.title} url={page.url} alternates={alternates} post={post} noindex={page.kind === 'search'}>
+{page.kind === 'redirect' ? <LanguageRedirect page={page} /> : <NewsroomLayout locale={page.locale} title={page.title} url={page.url} alternates={alternates} post={post} noindex={page.kind === 'search'}>
   {page.kind === 'list' && <>
     <div class="post-list">
       <h1 class:list={[page.currentPage === 1 ? 'sr-only' : 'archive-title']}>{page.title}</h1>
@@ -42,4 +44,4 @@ const Content = post ? (await render(post.entry)).Content : undefined;
   </>}
   {page.kind === 'about' && <div class="post-page"><article class="post"><h1 class="post-title">{labels.about}</h1><div class="post-content"><p>{labels.aboutText}</p><p>{labels.website}: <a href={`/${page.locale}/`}>nm.team</a></p></div></article></div>}
   {page.kind === 'search' && <Search locale={page.locale} />}
-</NewsroomLayout>
+</NewsroomLayout>}

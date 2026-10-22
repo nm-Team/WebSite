@@ -1,0 +1,22 @@
+---
+import type { NewsroomFallbackPage } from '@/lib/newsroom/fallbacks';
+import { absoluteNewsroomUrl } from '@/lib/newsroom/paths';
+
+interface Props { page: NewsroomFallbackPage }
+const { page } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,follow" />
+    <link rel="canonical" href={absoluteNewsroomUrl(page.destination)} />
+    <title>Continue to nmTeam Newsroom</title>
+    <script is:inline define:vars={{ destination: page.destination }}>
+      window.location.replace(destination + window.location.search + window.location.hash);
+    </script>
+    <meta http-equiv="refresh" content={`0;url=${page.destination}`} />
+  </head>
+  <body><p><a href={page.destination}>Continue to the available translation in nmTeam Newsroom.</a></p></body>
+</html>

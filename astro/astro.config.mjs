@@ -4,7 +4,6 @@ import { defineConfig } from 'astro/config';
 
 import newsroomCompatibility from './integrations/newsroom-compatibility';
 import { newsroomArticleLinks } from './src/lib/newsroom/article-links';
-import { isIndexableNewsroomPath } from './src/lib/newsroom/paths';
 
 export default defineConfig({
   site: 'https://nm.team',
@@ -17,5 +16,6 @@ export default defineConfig({
     '/en/newsroom/page/1/': '/en/newsroom/',
     '/zh-CN/newsroom/page/1/': '/zh-CN/newsroom/',
   },
-  integrations: [sitemap({ filter: (url) => !new URL(url).pathname.includes('/newsroom') || isIndexableNewsroomPath(new URL(url).pathname) }), newsroomCompatibility()],
+  // Newsroom publishes only actual translations in the canonical /sitemap.xml.
+  integrations: [sitemap({ filter: (url) => !new URL(url).pathname.includes('/newsroom') }), newsroomCompatibility()],
 });

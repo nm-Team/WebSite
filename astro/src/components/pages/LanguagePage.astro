@@ -59,12 +59,10 @@ const localeList = [...publicLocales];
 
       if (unprefixedPath.startsWith("/newsroom/")) {
         const preferredLanguage = lang === "auto" ? navigator.language : lang;
-        const newsroomLocale = preferredLanguage.toLowerCase().startsWith("zh") ? "zh-CN" : "en";
-        const newsroomRoot = `/${newsroomLocale}/newsroom/`;
-        const translatedPath = params.get(`return-${newsroomLocale}`);
-        const translatedUrl = isSafeBackUrl(translatedPath) ? new URL(translatedPath, window.location.origin) : null;
-        const destination = translatedUrl?.pathname.startsWith(newsroomRoot) ? translatedUrl.pathname : newsroomRoot;
-        return `${destination}${original.search}${original.hash}`;
+        const normalized = preferredLanguage.toLowerCase();
+        const newsroomLocale = locales.find((locale) => locale.toLowerCase() === normalized)
+          || (normalized.startsWith("zh-hk") ? "zh-HK" : normalized.startsWith("zh") ? "zh-CN" : normalized.startsWith("ja") ? "ja-JP" : "en");
+        return `/${newsroomLocale}${unprefixedPath}${original.search}${original.hash}`;
       }
 
       if (lang === "auto") {

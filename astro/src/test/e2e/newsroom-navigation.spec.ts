@@ -107,7 +107,7 @@ test('the global footer follows the local footer and keeps language switching av
   await page.goto('/zh-CN/newsroom/nmfun-test-2021-11-20/');
   await page.locator('#footer_selectLanguageButton').click();
   await page.locator('[data-lanid="en"]').click();
-  await expect(page).toHaveURL(/\/en\/newsroom\/$/);
+  await expect(page).toHaveURL(/\/zh-CN\/newsroom\/nmfun-test-2021-11-20\/$/);
 });
 
 test('both navigation and footer levels share their content edges at every breakpoint', async ({ page }, testInfo) => {

@@ -8,10 +8,9 @@ import { newsroomPath, resolveNewsroomLocale } from '@/lib/newsroom/paths';
 interface Props {
   locale: PublicLocale;
   pageUpdate?: string;
-  languageAlternates?: ReadonlyArray<{ locale: PublicLocale; url: string }>;
 }
 
-const { locale, pageUpdate = '', languageAlternates } = Astro.props;
+const { locale, pageUpdate = '' } = Astro.props;
 const href = (path: string) => toLocalizedHref(locale, path);
 const html = (value: string) => localizeHtmlHrefs(locale, value);
 
@@ -54,7 +53,7 @@ const updateText = formatPageUpdate(pageUpdate);
         <a href={href('/supportus')}>{t(locale, 'footer.table.about.supportUs')}</a>
       </div>
       <div class="row">
-        <LanguageSwitcher currentLocale={locale} alternates={languageAlternates} />
+        <LanguageSwitcher currentLocale={locale} />
       </div>
     </div>
     <div class="footer-bottom">

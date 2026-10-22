@@ -37,6 +37,12 @@ categories, tags, monthly archives, search, an about page, and `rss.xml`.
 Article URLs are `/{locale}/newsroom/{articleId}-{YYYY-MM-DD}/`.
 The default `/newsroom/` entry redirects to English. Main-site Chinese locales
 link to Chinese Newsroom; English and Japanese link to English Newsroom.
+Every site locale has an HTML entry for each article and listing. Missing
+translations redirect directly to English, then Chinese if English is absent.
+The language selector preserves the current article, query and fragment. Without
+JavaScript, a meta refresh still reaches the available translation. Source files
+stay grouped by locale; build-time groups match translations by their shared
+article slug, so public URLs and the content directory need no reorganization.
 The `hreflang` links only include translations that exist.
 
 The homepage reads the latest five articles at build time. Newsroom search loads
@@ -49,7 +55,7 @@ The main header uses `navigationMode="flow"` on Newsroom pages. It scrolls away,
 while the local Newsroom header stays at the viewport top. The local footer
 contains Newsroom categories, archives and feeds, followed by the global website
 footer with legal links and the language selector. That selector returns to an
-available translation, or the selected Newsroom language's index when missing.
+available translation of the same page, using the fallback order above.
 Newsroom keeps its namespaced CSS. Fonts, theme variables and the system theme
 script are shared with the website. Newsroom uses only its original Umami site
 ID (`3f6853e3-82e8-4f73-977f-cf685c37e3c3`).
@@ -108,8 +114,9 @@ without adding an application runtime or package manager to the old site.
 
 The Chinese RSS feed preserves imported items' old GUID strings so existing
 subscribers do not receive every historical article again. English uses its new
-canonical URLs as GUIDs. Sitemaps include canonical Newsroom pages and existing
-translations, while search and data endpoints are excluded.
+canonical URLs as GUIDs. The canonical `/sitemap.xml` advertised in `robots.txt`
+includes actual Newsroom translations. Redirect entries, search and data
+endpoints are excluded. The automatic sitemap covers the remaining website.
 
 The repository changes do not deploy or reconfigure the old hostname. If the
 new site must be rolled back before old-host cutover, restore the earlier site
