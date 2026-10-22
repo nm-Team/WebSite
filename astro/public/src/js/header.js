@@ -61,18 +61,10 @@ window.onresize = function () {
 	openHeader(false);
 }
 
-let cookieDialogPreviousFocus = null;
-
 function openCookieDialog() {
 	const dialog = document.getElementById("pageCookieConfirmDialog");
 	if (!dialog) return;
-	const activeElement = document.activeElement;
-	cookieDialogPreviousFocus = activeElement instanceof HTMLElement ? activeElement : null;
 	dialog.setAttribute("data-status", "open");
-	requestAnimationFrame(() => {
-		const firstAction = dialog.querySelector("button");
-		if (firstAction instanceof HTMLElement) firstAction.focus();
-	});
 }
 
 function closeCookieDialog() {
@@ -80,12 +72,9 @@ function closeCookieDialog() {
 	if (!dialog) return;
 	dialog.setAttribute("data-status", "close");
 	if (dialog.contains(document.activeElement)) {
-		const returnFocus = cookieDialogPreviousFocus?.isConnected && cookieDialogPreviousFocus !== document.body
-			? cookieDialogPreviousFocus
-			: document.querySelector(".skip-to-content");
+		const returnFocus = document.querySelector(".skip-to-content");
 		if (returnFocus instanceof HTMLElement) returnFocus.focus({ preventScroll: true });
 	}
-	cookieDialogPreviousFocus = null;
 }
 
 window.acceptCookieConsent = function () {
