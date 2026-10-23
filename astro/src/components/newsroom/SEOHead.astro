@@ -1,5 +1,6 @@
 ---
 import type { NewsPost } from '@/lib/newsroom/content';
+import { selectNewsroomTranslation } from '@/lib/newsroom/fallbacks';
 import { newsroomLabels } from '@/lib/newsroom/labels';
 import type { NewsroomAlternate } from '@/lib/newsroom/pages';
 import { absoluteNewsroomUrl, defaultNewsImage, type NewsroomLocale, newsroomPath } from '@/lib/newsroom/paths';
@@ -14,6 +15,7 @@ interface Props {
 }
 const { locale, title, url, alternates, post, noindex = false } = Astro.props;
 const labels = newsroomLabels(locale);
+const xDefault = selectNewsroomTranslation(alternates, 'en');
 const fullTitle = title === labels.title ? title : `${title} - ${labels.title}`;
 const description = post?.description ?? labels.description;
 const canonical = absoluteNewsroomUrl(url);
@@ -35,6 +37,7 @@ const jsonLd = {
 {noindex && <meta name="robots" content="noindex,follow" />}
 <link rel="canonical" href={canonical} />
 {alternates.map((alternate) => <link rel="alternate" hreflang={alternate.locale} href={absoluteNewsroomUrl(alternate.url)} />)}
+{xDefault && <link rel="alternate" hreflang="x-default" href={absoluteNewsroomUrl(xDefault.url)} />}
 <link rel="alternate" type="application/rss+xml" title={labels.title} href={newsroomPath(locale, 'rss.xml')} />
 <meta property="og:site_name" content={labels.title} />
 <meta property="og:type" content={post ? 'article' : 'website'} />

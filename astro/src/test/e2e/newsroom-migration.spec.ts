@@ -40,7 +40,8 @@ test('sitemaps contain published translations and omit search and duplicate entr
     expect(urls).not.toContain(`https://nm.team/${locale}/newsroom/search/`);
     expect(urls).not.toContain(`https://nm.team/${locale}/newsroom/page/1/`);
   }
-  expect(sitemap.items.find((item) => item.url?.endsWith('/nmfun-test-2021-11-20/'))?.alternates).toEqual(['zh-CN']);
+  expect(sitemap.items.find((item) => item.url?.endsWith('/nmfun-test-2021-11-20/'))?.alternates).toEqual(['zh-CN', 'x-default']);
+  expect(sitemap.items.find((item) => item.url?.endsWith('/en/newsroom/welcome-2021-08-09/'))?.alternates).toEqual(['zh-CN', 'en', 'x-default']);
   const automatic = await (await request.get('/sitemap-0.xml')).text();
   expect(automatic).not.toContain('/newsroom/search/');
   expect(automatic).not.toContain('/newsroom/page/1/');

@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 
+import { selectNewsroomTranslation } from '@/lib/newsroom/fallbacks';
 import { absoluteNewsroomUrl } from '@/lib/newsroom/paths';
 import { getNewsroomSitemapEntries } from '@/lib/newsroom/sitemap';
 import { getSitemapEntries } from '@/utils/site-map';
@@ -17,7 +18,12 @@ export const GET: APIRoute = async () => {
   const entries = [...getSitemapEntries(), ...await getNewsroomSitemapEntries()];
   const items = entries
     .map((entry) => {
-      const alternates = 'alternates' in entry ? entry.alternates.map((alternate) => `<xhtml:link rel="alternate" hreflang="${alternate.locale}" href="${escapeXml(absoluteNewsroomUrl(alternate.url))}"/>`).join('') : '';
+      const localized = 'alternates' in entry ? entry.alternates : [];
+      const xDefault = selectNewsroomTranslation(localized, 'en');
+      const alternates = [
+        ...localized.map((alternate) => `<xhtml:link rel="alternate" hreflang="${alternate.locale}" href="${escapeXml(absoluteNewsroomUrl(alternate.url))}"/>`),
+        ...(xDefault ? [`<xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(absoluteNewsroomUrl(xDefault.url))}"/>`] : []),
+      ].join('');
       const lastmod = 'lastmod' in entry && entry.lastmod ? `<lastmod>${entry.lastmod}</lastmod>` : '';
       return `  <url><loc>${escapeXml(entry.url)}</loc>${lastmod}${alternates}</url>`;
     })
