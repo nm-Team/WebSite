@@ -72,7 +72,7 @@ labels and become bolder on hover or keyboard focus.
 Mobile navigation supports Escape, focus restoration, and background scroll
 locking. Opening the global menu closes the local menu. Reduced-motion
 preferences disable the local navigation and card entrance animations. Pointer
-toggles fade and slide the local menu over 180ms, with reversible transitions
+toggles fade and slide the local menu over 300ms, with reversible transitions
 for rapid toggles. Keyboard actions update immediately. Popup scrollbars stay
 hidden during transitions and become available after opening if the content
 exceeds the available viewport height.
@@ -87,7 +87,7 @@ share the same horizontal gutter:
 10% on wide screens, 20px through 900px, and 16-20px on phones. Their content
 edges stay aligned without changing the article or card layout. On desktop,
 the local link text ends at the account label's text edge inside its button.
-Once the global header scrolls away, the local header transitions over 220ms to
+Once the global header scrolls away, the local header transitions over 300ms to
 the Newsroom content edges. List pages follow the card grid's 376rem and 620rem widths. Article
 pages follow the article container on wide screens and its inner content on
 narrow screens. The popup uses the same edges; the global footer keeps its
