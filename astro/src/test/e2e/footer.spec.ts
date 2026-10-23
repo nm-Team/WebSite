@@ -75,7 +75,29 @@ test('keeps product footnotes visually continuous with the site footer', async (
   expect(Math.abs(layout.gap)).toBeLessThanOrEqual(1);
 });
 
-test('lets keyboard users leave cookie consent through the skip link', async ({ page }) => {
+test('preserves active page focus and scroll when cookie consent appears', async ({ page }) => {
+  await page.goto('/zh-CN/aboutus/', { waitUntil: 'domcontentloaded' });
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  await page.keyboard.press('Tab');
+
+  const contentLink = page.locator('main').getByRole('link', { name: 'nmBot', exact: true });
+  await expect(contentLink).toBeFocused();
+  const dialog = page.locator('#pageCookieConfirmDialog');
+  await expect(dialog).not.toHaveAttribute('data-status', 'open');
+  const scrollY = await page.evaluate(() => window.scrollY);
+
+  await expect(dialog).toHaveAttribute('data-status', 'open');
+  await expect(contentLink).toBeFocused();
+  expect(await page.evaluate(() => window.scrollY)).toBe(scrollY);
+  expect(await page.evaluate(() => localStorage.getItem('cookieTipv0Checked'))).toBeNull();
+
+  await dialog.locator('button').last().click();
+  await expect(page.locator('.skip-to-content')).toBeFocused();
+  await expect(contentLink).not.toBeFocused();
+});
+
+test('lets keyboard users enter and leave cookie consent without automatic focus', async ({ page }) => {
   await page.goto('/zh-CN/aboutus/', { waitUntil: 'domcontentloaded' });
 
   const dialog = page.locator('#pageCookieConfirmDialog');
@@ -88,9 +110,8 @@ test('lets keyboard users leave cookie consent through the skip link', async ({ 
   const acceptButton = dialog.getByRole('button', { name: '接受并继续', exact: true });
   const privacyLink = dialog.getByRole('link', { name: '《nmTeam 隐私政策》', exact: true });
   const skipLink = page.getByRole('link', { name: '跳到内容', exact: true });
-  await expect(customizeButton).toBeFocused();
-
-  await page.keyboard.press('Shift+Tab');
+  await expect(page.locator('body')).toBeFocused();
+  await page.keyboard.press('Tab');
   await expect(privacyLink).toBeFocused();
   await page.keyboard.press('Tab');
   await expect(customizeButton).toBeFocused();
@@ -110,15 +131,46 @@ test('lets keyboard users leave cookie consent through the skip link', async ({ 
   expect(await page.evaluate(() => localStorage.getItem('cookieTipv0Checked'))).toBeNull();
 });
 
-test('returns focus to the skip link after accepting cookies', async ({ page }) => {
+test('keeps the skip link hidden after accepting cookies with a pointer', async ({ page }, testInfo) => {
   await page.goto('/zh-CN/aboutus/', { waitUntil: 'domcontentloaded' });
 
   const dialog = page.locator('#pageCookieConfirmDialog');
+  await expect(dialog).toHaveAttribute('data-status', 'open');
+  const acceptButton = dialog.locator('button').last();
+  if (testInfo.project.name === 'mobile') {
+    await acceptButton.tap();
+  } else {
+    await acceptButton.click();
+  }
+
+  const skipLink = page.locator('.skip-to-content');
+  await expect(dialog).toHaveAttribute('data-status', 'close');
+  await expect(skipLink).toBeFocused();
+  await expect(skipLink).toHaveCSS('opacity', '0');
+  await expect(skipLink).toHaveCSS('pointer-events', 'none');
+  expect(await page.evaluate(() => localStorage.getItem('cookieTipv0Checked'))).toBe('true');
+
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Shift+Tab');
+  await expect(skipLink).toBeFocused();
+  await expect(skipLink).toHaveCSS('opacity', '1');
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('main')).toBeFocused();
+});
+
+test('returns visible focus to the skip link after accepting cookies with the keyboard', async ({ page }) => {
+  await page.goto('/zh-CN/aboutus/', { waitUntil: 'domcontentloaded' });
+
+  const dialog = page.locator('#pageCookieConfirmDialog');
+  await expect(dialog).toHaveAttribute('data-status', 'open');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
   await expect(dialog.getByRole('button', { name: '自定义', exact: true })).toBeFocused();
   await page.keyboard.press('Tab');
   await page.keyboard.press('Enter');
 
   await expect(dialog).toHaveAttribute('data-status', 'close');
+  await expect(page.locator('.skip-to-content')).toHaveCSS('opacity', '1');
   await expect(page.getByRole('link', { name: '跳到内容', exact: true })).toBeFocused();
   expect(await page.evaluate(() => localStorage.getItem('cookieTipv0Checked'))).toBe('true');
 });
@@ -169,5 +221,5 @@ test('opens cookie consent after a script delays parsing the page', async ({ pag
 
   const dialog = page.locator('#pageCookieConfirmDialog');
   await expect(dialog).toHaveAttribute('data-status', 'open');
-  await expect(dialog.getByRole('button', { name: '自定义', exact: true })).toBeFocused();
+  await expect(page.locator('body')).toBeFocused();
 });
