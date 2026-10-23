@@ -194,8 +194,12 @@ test('supports cookie consent and the skip link in the Newsroom layout', async (
   await expect(dialog).toHaveCount(1);
   await expect(dialog).toHaveAttribute('aria-modal', 'false');
   await expect(dialog).toHaveCSS('font-size', '14px');
-  await expect(customizeButton).toBeFocused();
+  await expect(page.locator('body')).toBeFocused();
 
+  await page.keyboard.press('Tab');
+  await expect(dialog.getByRole('link')).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(customizeButton).toBeFocused();
   await page.keyboard.press('Tab');
   await expect(acceptButton).toBeFocused();
   await page.keyboard.press('Tab');
