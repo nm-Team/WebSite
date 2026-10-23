@@ -192,6 +192,7 @@ test('supports cookie consent and the skip link in the Newsroom layout', async (
   const acceptButton = dialog.getByRole('button').last();
   const skipLink = page.locator('.skip-to-content');
   await expect(dialog).toHaveCount(1);
+  await expect(dialog).toHaveAttribute('data-status', 'open', { timeout: 5_000 });
   await expect(dialog).toHaveAttribute('aria-modal', 'false');
   await expect(dialog).toHaveCSS('font-size', '14px');
   await expect(page.locator('body')).toBeFocused();
