@@ -79,7 +79,7 @@ html[data-theme=dark] body {
 }
 
 /* Preserve the legacy stagger only while the mobile menu is closing. */
-@media (max-width: 699.99999px) {
+@media (width < 700px) {
     #hcont .header[data-closing]:not([open]).hidden {
         transition: background-color 0.1s 0.5s, backdrop-filter 0.05s 0.55s, -webkit-backdrop-filter 0.05s 0.55s, height 0.7s, overflow-y 0s 0.7s;
     }
@@ -246,7 +246,7 @@ html[data-theme=dark] body {
     }
 }
 
-@media (max-width: 699.99999px) {
+@media (width < 700px) {
     #hcont .header {
         display: flex;
         flex-direction: column;
@@ -478,6 +478,107 @@ html[data-theme=dark] body {
         word-break: break-all;
         margin: 0 0 0 50px;
     }
+}
+
+/* Shared cookie consent dialog. */
+.cookie-consent {
+    visibility: hidden;
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    right: -720px;
+    width: min(400px, calc(100vw - 80px));
+    max-height: calc(100vh - 120px);
+    padding: 20px 22px !important;
+    background-color: var(--glass-background);
+    backdrop-filter: var(--glass-filter);
+    -webkit-backdrop-filter: var(--glass-filter);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    color: var(--color-text-primary);
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-y: auto;
+    transition: right 0.6s var(--motion-ease-out), visibility 0.8s;
+}
+
+.cookie-consent * {
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+.cookie-consent a {
+    color: var(--footer-a);
+    text-decoration: none;
+    transition: color 0.25s;
+    border-radius: 4px;
+}
+
+.cookie-consent a:hover,
+.cookie-consent a:focus-visible {
+    color: var(--footer-hover);
+}
+
+.cookie-consent[data-status="open"] {
+    visibility: visible;
+    right: 20px;
+    /* Make actions focusable on the first frame of the opening animation. */
+    transition: right 0.6s var(--motion-ease-out);
+}
+
+.cookie-consent__header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4 !important;
+    padding-bottom: 8px !important;
+}
+
+.cookie-consent__body {
+    font-size: 16px;
+    line-height: 1.7 !important;
+    padding-bottom: 3px !important;
+}
+
+.cookie-consent__footer {
+    padding-top: 1px !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    text-align: end;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.cookie-consent__footer button {
+    color: var(--color-text-primary);
+    padding: 8px 18px !important;
+    background: transparent;
+    border: 1px solid var(--color-border-subtle);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--radius-pill);
+    transition: background-color 0.25s, transform 0.25s var(--motion-ease-out), border-color 0.25s;
+}
+
+.cookie-consent__footer button:last-child {
+    background: var(--color-brand);
+    border-color: transparent;
+    color: #1c1a12;
+}
+
+.cookie-consent__footer button:hover,
+.cookie-consent__footer button:focus-visible {
+    background-color: rgba(128, 128, 128, 0.14);
+    transform: translateY(-1px);
+}
+
+.cookie-consent__footer button:last-child:hover,
+.cookie-consent__footer button:last-child:focus-visible {
+    background: var(--color-brand-hover);
 }
 
 /* footer */

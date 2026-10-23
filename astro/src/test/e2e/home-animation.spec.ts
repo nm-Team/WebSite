@@ -1,16 +1,9 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('flies the nmTeam title into the header and back while scrolling', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.addInitScript(() => {
     localStorage.setItem('cookieTipv0Checked', 'true');
-  });
-
-  await page.route('https://newsroom.nmteam.xyz/api/posts**', async (route) => {
-    await route.fulfill({
-      contentType: 'application/json',
-      body: JSON.stringify({ status: 200, data: [] }),
-    });
   });
 
   await page.route('https://websiteres.nmteam.xyz/producticon/nmTeam/logo@64.png', async (route) => {

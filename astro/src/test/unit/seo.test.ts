@@ -11,7 +11,8 @@ describe('SEO metadata', () => {
 
     expect(meta.jsonLd).toContain('"@id":"https://nm.team"');
     expect(meta.jsonLd).not.toContain('https://nmteam.xyz');
-    expect(meta.jsonLd).toContain('https://newsroom.nmteam.xyz');
+    expect(meta.jsonLd).toContain('https://nm.team/en/newsroom/');
+    expect(meta.jsonLd).not.toContain('https://newsroom.nmteam.xyz');
     expect(meta.jsonLd).toContain('https://support.nmteam.xyz');
     expect(meta.image).toBe('https://websiteres.nmteam.xyz/producticon/nmTeam/logo@128.png');
   });

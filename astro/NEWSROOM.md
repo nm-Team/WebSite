@@ -1,0 +1,171 @@
+# Newsroom
+
+Newsroom is part of this Astro application. Content and assets were imported from
+`nm-Team/astro-newsroom` at commit `309550cc5efcaaf42c1a54b65a3f2b0b52389dab`.
+The original repository retains its Git history. Future publishing happens here.
+
+## Content
+
+Articles live in `src/content/newsroom/{locale}/{articleId}.md`. Supported locales
+are `zh-CN` and `en`. Use the same `articleId` and publication timestamp for all
+translations. Preserve IDs, including their capitalization, after publication.
+Dates in URLs are calculated in `Asia/Shanghai`.
+
+The import contains 34 Chinese articles and 32 English translations. The nmFun
+test announcement and service outage explanation have no English version.
+`src/data/newsroom/import-manifest.json` records the imported article inventory
+and original SHA-256 hashes. Do not add invented translations to fill gaps.
+
+Use a separate Markdown file for each translation. Keep shared image references
+and link definitions in every translation that needs them. Store images under
+`public/newsroom/uploads/` and reference them as `/newsroom/uploads/...`.
+The `cover` field can override the first Markdown image. Category identifiers
+are `press-release`, `update`, `photos`, `stories`, and `statement`.
+
+Article-body links open a new window with `noopener noreferrer`. This behavior
+is applied by the Sätteri plugin only to the Newsroom content collection.
+
+## Routes and rendering
+
+The application uses Astro's static rendering and component architecture. The
+imported UI is already written in Astro, so it does not need a React or Vue
+runtime. Navigation and search use small browser scripts. Framework components
+can use Astro's `client:*` directives when a future feature needs hydration.
+
+Both `/zh-CN/newsroom/` and `/en/newsroom/` have article lists, pagination,
+categories, tags, monthly archives, search, and `rss.xml`.
+Article URLs are `/{locale}/newsroom/{articleId}-{YYYY-MM-DD}/`.
+The default `/newsroom/` entry redirects to English. Main-site Chinese locales
+link to Chinese Newsroom; English and Japanese link to English Newsroom.
+Every site locale has an HTML entry for each article and listing. Missing
+translations redirect directly to English, then Chinese if English is absent.
+The language selector preserves the current article, query and fragment. Without
+JavaScript, a meta refresh still reaches the available translation. Source files
+stay grouped by locale; build-time groups match translations by their shared
+article slug, so public URLs and the content directory need no reorganization.
+The `hreflang` links only include translations that exist.
+
+The homepage reads the latest five articles at build time. Newsroom search loads
+the selected language's `search-data.json`, including the full article text.
+The compatibility endpoint `/newsroom/api/posts` retains `{ status, data }` and
+the legacy post fields, with Chinese articles and new canonical permalinks.
+Its legacy `cid` remains present when the original article had one.
+
+The main header uses `navigationMode="flow"` on Newsroom pages. It scrolls away,
+while the local Newsroom header stays at the viewport top. Newsroom pages keep
+the global website footer with legal links and the language selector. That
+selector returns to an available translation of the same page, using the
+fallback order above.
+Newsroom keeps its namespaced CSS. Fonts, theme variables and the system theme
+script are shared with the website. Both layouts load a single Umami script
+from `SiteAssets.astro`, using the main website's site ID
+(`13563ad4-a0f5-4dae-b366-5ab1eb689390`).
+
+The local navigation is 52px high on desktop and 48px below 700px. It contains
+the Newsroom title, Press Release, Stories, Search and RSS. The current page's
+link uses a stronger color and medium font weight. Search opens a dedicated
+page with a search field and category, tag and monthly archive links. Submitted
+results appear before the browsing links; clearing the query restores the
+browsing layout. These browsing links use larger text than their muted section
+labels and become bolder on hover or keyboard focus.
+
+Mobile navigation supports Escape, focus restoration, and background scroll
+locking. Opening the global menu closes the local menu. Reduced-motion
+preferences disable the local navigation and card entrance animations. Pointer
+toggles fade and slide the local menu over 300ms, with reversible transitions
+for rapid toggles. Keyboard actions update immediately. Popup scrollbars stay
+hidden during transitions and become available after opening if the content
+exceeds the available viewport height.
+
+Preview cards replay their entrance animation whenever they re-enter the
+viewport. An inline head marker hides pending cards before the module loads,
+avoiding a visible frame before the animation starts. Without JavaScript or
+with reduced motion enabled, cards remain visible without an entrance animation.
+
+Before the local header sticks, both navigation levels and the global footer
+share the same horizontal gutter:
+10% on wide screens, 20px through 900px, and 16-20px on phones. Their content
+edges stay aligned without changing the article or card layout. On desktop,
+the local link text ends at the account label's text edge inside its button.
+Once the global header scrolls away, the local header transitions over 300ms to
+the Newsroom content edges. List pages follow the card grid's 376rem and 620rem widths. Article
+pages follow the article container on wide screens and its inner content on
+narrow screens. The popup uses the same edges; the global footer keeps its
+original alignment. Reduced motion disables the horizontal transition.
+
+The closed local navigation is transparent while below the viewport top. Its
+tinted background, blur and separator appear at the sticky position or while
+the menu is visible. The header and expanding menu share one grid container and
+one background, including during the closing animation.
+Scroll, resize and restored page positions update this state once per frame.
+
+## Build and migration outputs
+
+Run the commands in the repository README from `astro/`. `pnpm build` produces:
+
+- `dist/`: the complete website, including Newsroom and additional main-site
+  redirects for historical `/news/`, `/uploads/`, and `/usr/uploads/` paths.
+  It also accepts every known legacy path beneath `/newsroom/`, so a wildcard
+  redirect from the old hostname can preserve the original path after that prefix.
+  Existing upload and API assets are served directly without self-redirects.
+- `legacy-newsroom-dist/`: an optional separate redirect deployment for
+  `newsroom.nmteam.xyz`. Its manifest covers the imported article aliases,
+  pagination, categories, tags, archives, special pages, RSS, search, API and
+  both historical upload prefixes, plus the favicon, robots and sitemap files.
+  Unknown paths retain a 404 response.
+
+`integrations/newsroom-compatibility.ts` generates these rules from the imported
+alias manifest, built routes and actual asset files. It fails the build if any
+target is missing or the static rules exceed Cloudflare Pages limits.
+`legacy-newsroom-dist/redirect-manifest.json` is the reviewable inventory.
+
+The legacy output includes a small Cloudflare Pages Worker routed only to
+`/api/posts` and `/api/posts/`. It preserves query parameters and adds CORS
+headers to the API's 301 response, with explicit OPTIONS and method handling.
+Other routes use `_redirects`. When using a different redirect provider, check
+that its API redirect response allows cross-origin access as well as the final
+API response. [Pages redirects run before header rules](https://developers.cloudflare.com/pages/configuration/redirects/),
+so an `_headers` rule alone cannot add headers to a redirect.
+The main website remains a static deployment. The optional Worker uses
+[Pages advanced mode](https://developers.cloudflare.com/pages/functions/advanced-mode/)
+without adding an application runtime or package manager to the old site.
+
+After building, run `pnpm exec playwright test --config playwright.pages.config.ts`
+to verify every prefixed legacy path using the actual Cloudflare Pages engine.
+This command starts a local Wrangler server with a pinned CLI version, using
+pnpm's tool cache without changing project dependencies. Set
+`NEWSROOM_DEPLOYMENT_URL` to run the same checks against a deployed preview.
+The checks cover final HTTP status, redirect destinations, query strings,
+API CORS and unknown-path 404 responses. When `NEWSROOM_LEGACY_URL` also names
+a host configured with the wildcard redirect below, each case verifies the
+old-host redirect before checking the main-site rule and final resource.
+
+## Production cutover
+
+1. Deploy `dist/` to the existing `nm.team` site. Check both Newsroom languages,
+   articles, images, search and RSS on the deployed site.
+2. Configure a permanent redirect from `newsroom.nmteam.xyz/*` to
+   `https://nm.team/newsroom/$1`, preserving the matched path and query string.
+   For a Cloudflare Pages `_redirects` file, the equivalent rule is
+   `/* https://nm.team/newsroom/:splat 301`. Keep the old hostname's DNS and TLS
+   active. Alternatively, deploy `legacy-newsroom-dist/` to reach each final
+   destination directly and retain explicit API OPTIONS handling.
+3. Verify an old `.html` article, a category article alias, an upload under each
+   prefix, `/search/?q=nmBot`, `/rss.xml` and the cross-origin API. Each supported
+   legacy URL must reach its final destination without loops or 404 responses.
+   The wildcard approach adds a main-site redirect for old page aliases; assets
+   and the API are already at their final prefixed paths. The old root reaches
+   the default English Newsroom entry through the wildcard rule, while the
+   optional direct redirect deployment retains the old Chinese homepage.
+4. Keep the old repository read-only after cutover. Publish future articles here.
+
+The Chinese RSS feed preserves imported items' old GUID strings so existing
+subscribers do not receive every historical article again. English uses its new
+canonical URLs as GUIDs. The canonical `/sitemap.xml` advertised in `robots.txt`
+includes actual Newsroom translations. Redirect entries, search and data
+endpoints are excluded. The automatic sitemap covers the remaining website.
+
+The repository changes do not deploy or reconfigure the old hostname. If the
+new site must be rolled back before old-host cutover, restore the earlier site
+deployment. After cutover, restore the old Newsroom deployment first so old
+links keep working while the main site is rolled back.

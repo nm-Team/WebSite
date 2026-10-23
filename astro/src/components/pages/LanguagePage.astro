@@ -57,6 +57,14 @@ const localeList = [...publicLocales];
       const original = isSafeBackUrl(backCallURL) ? new URL(backCallURL, window.location.origin) : fallback;
       const unprefixedPath = removeLocalePrefix(original.pathname);
 
+      if (unprefixedPath.startsWith("/newsroom/")) {
+        const preferredLanguage = lang === "auto" ? navigator.language : lang;
+        const normalized = preferredLanguage.toLowerCase();
+        const newsroomLocale = locales.find((locale) => locale.toLowerCase() === normalized)
+          || (normalized.startsWith("zh-hk") ? "zh-HK" : normalized.startsWith("zh") ? "zh-CN" : normalized.startsWith("ja") ? "ja-JP" : "en");
+        return `/${newsroomLocale}${unprefixedPath}${original.search}${original.hash}`;
+      }
+
       if (lang === "auto") {
         return `${unprefixedPath}${original.search}${original.hash}`;
       }

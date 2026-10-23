@@ -27,3 +27,7 @@ pnpm test:e2e
 ```
 
 Legacy PHP URLs remain compatible through the static redirect rules in [`astro/public/_redirects`](astro/public/_redirects).
+
+Newsroom is maintained in this repository under `astro/src/content/newsroom/`.
+See [`astro/NEWSROOM.md`](astro/NEWSROOM.md) for publishing, language support,
+legacy URL migration, and the deployment order for the former Newsroom domain.

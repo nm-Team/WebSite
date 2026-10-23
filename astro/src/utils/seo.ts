@@ -1,5 +1,6 @@
 import type { PublicLocale } from '@/i18n/locales';
 import { t } from '@/i18n/translate';
+import { absoluteNewsroomUrl, newsroomPath, resolveNewsroomLocale } from '@/lib/newsroom/paths';
 
 export const DEFAULT_SITE_IMAGE = 'https://websiteres.nmteam.xyz/producticon/nmTeam/logo@128.png';
 export const SITE_URL = 'https://nm.team/';
@@ -52,6 +53,7 @@ export function buildSeoMeta(input: SeoInput): SeoMeta {
     'pagebases.site_intro',
   )}`;
   const image = input.image || DEFAULT_SITE_IMAGE;
+  const newsroomUrl = absoluteNewsroomUrl(newsroomPath(resolveNewsroomLocale(language)));
 
   const graph = [
     {
@@ -89,7 +91,7 @@ export function buildSeoMeta(input: SeoInput): SeoMeta {
       '@type': 'ItemList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, url: 'https://nm.team/nmBot-Telegram/', name: t(language, 'schema.nmbot_intro') },
-        { '@type': 'ListItem', position: 2, url: 'https://newsroom.nmteam.xyz', name: 'nmTeam Newsroom' },
+        { '@type': 'ListItem', position: 2, url: newsroomUrl, name: 'nmTeam Newsroom' },
         { '@type': 'ListItem', position: 3, url: 'https://nmbot.nmnm.fun', name: t(language, 'schema.nmbot_panel') },
         { '@type': 'ListItem', position: 4, url: 'https://nm.team/products', name: t(language, 'schema.products') },
         { '@type': 'ListItem', position: 5, url: 'https://support.nmteam.xyz', name: t(language, 'schema.nmteam_support') },
@@ -108,13 +110,13 @@ export function buildSeoMeta(input: SeoInput): SeoMeta {
     },
     {
       '@type': 'WebPage',
-      '@id': 'https://newsroom.nmteam.xyz',
-      url: 'https://newsroom.nmteam.xyz',
+      '@id': newsroomUrl,
+      url: newsroomUrl,
       name: 'nmTeam Newsroom',
       datePublished: '2024-08-20T16:00:00.000Z',
       dateModified: '2024-08-20T16:00:00.000Z',
       description: t(language, 'schema.newsroom_description'),
-      inLanguage: language,
+      inLanguage: resolveNewsroomLocale(language),
       author: 'nmTeam',
     },
     {

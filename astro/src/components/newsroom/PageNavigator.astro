@@ -1,0 +1,13 @@
+---
+import { newsroomLabels } from '@/lib/newsroom/labels';
+import { type NewsroomLocale, newsroomPath } from '@/lib/newsroom/paths';
+
+interface Props { locale: NewsroomLocale; currentPage: number; totalPages: number }
+const { locale, currentPage, totalPages } = Astro.props;
+const labels = newsroomLabels(locale);
+const href = (page: number) => newsroomPath(locale, page === 1 ? '' : `page/${page}/`);
+---
+{totalPages > 1 && <nav aria-label={labels.pagination}><ol class="page-navigator">
+  {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => <li class={page === currentPage ? 'current' : undefined}><a href={href(page)} aria-current={page === currentPage ? 'page' : undefined}><span>{page}</span></a></li>)}
+  {currentPage < totalPages && <li class="next"><a href={href(currentPage + 1)} rel="next"><span>{labels.next} &raquo;</span></a></li>}
+</ol></nav>}

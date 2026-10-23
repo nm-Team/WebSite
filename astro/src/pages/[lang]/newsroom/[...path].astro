@@ -1,0 +1,46 @@
+---
+import { render } from 'astro:content';
+
+import LatestPosts from '@/components/newsroom/LatestPosts.astro';
+import LanguageRedirect from '@/components/newsroom/LanguageRedirect.astro';
+import PageNavigator from '@/components/newsroom/PageNavigator.astro';
+import PostCard from '@/components/newsroom/PostCard.astro';
+import Search from '@/components/newsroom/Search.astro';
+import NewsroomLayout from '@/layouts/NewsroomLayout.astro';
+import { getNewsroomFallbackPages, type NewsroomFallbackPage } from '@/lib/newsroom/fallbacks';
+import { newsroomLabels } from '@/lib/newsroom/labels';
+import { getNewsroomAlternates, getNewsroomPages, type NewsroomAlternate, type NewsroomPage } from '@/lib/newsroom/pages';
+import { newsroomPath, resolveNewsroomLocale } from '@/lib/newsroom/paths';
+
+export async function getStaticPaths() {
+  const pages = await getNewsroomPages();
+  return [...pages, ...getNewsroomFallbackPages(pages)].map((page) => ({
+    params: { lang: page.locale, path: decodeURI(page.url.slice(newsroomPath(page.locale).length).replace(/\/$/, '')) || undefined },
+    props: { page, alternates: page.kind === 'redirect' ? [] : getNewsroomAlternates(page, pages) },
+  }));
+}
+interface Props { page: NewsroomPage | NewsroomFallbackPage; alternates: NewsroomAlternate[] }
+const { page, alternates } = Astro.props;
+const labels = newsroomLabels(resolveNewsroomLocale(page.locale));
+const post = page.kind === 'article' ? page.post : undefined;
+const Content = post ? (await render(post.entry)).Content : undefined;
+---
+{page.kind === 'redirect' ? <LanguageRedirect page={page} /> : <NewsroomLayout locale={page.locale} title={page.title} url={page.url} alternates={alternates} post={post} noindex={page.kind === 'search'}>
+  {page.kind === 'list' && <>
+    <div class="post-list">
+      <h1 class:list={[page.currentPage === 1 ? 'sr-only' : 'archive-title']}>{page.title}</h1>
+      {page.posts.map((item) => <PostCard post={item} />)}
+    </div>
+    {page.currentPage && page.totalPages && <PageNavigator locale={page.locale} currentPage={page.currentPage} totalPages={page.totalPages} />}
+  </>}
+  {page.kind === 'article' && post && Content && <>
+    <div class="post-page"><article class="post">
+      <h1 class="post-title"><a href={post.url}>{post.title}</a></h1>
+      <ul class="post-meta"><li><time datetime={post.dateTime}>{post.dateText}</time></li><li><a href={post.category.url}>{post.category.name}</a></li></ul>
+      <div class="post-content"><Content /></div>
+      {post.tags.length > 0 && <p class="tags">{labels.tags}: {post.tags.map((tag, index) => <Fragment>{index > 0 && ', '}<a href={tag.url}>{tag.name}</a></Fragment>)}</p>}
+    </article></div>
+    <LatestPosts posts={page.latestPosts} locale={page.locale} />
+  </>}
+  {page.kind === 'search' && <Search locale={page.locale} />}
+</NewsroomLayout>}

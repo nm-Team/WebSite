@@ -17,6 +17,7 @@ window.onload = function () {
 }
 
 let headerCloseTimerId;
+let flowHeaderPreviousFocus = null;
 function clearHeaderClosingState(pageHeader) {
 	clearTimeout(headerCloseTimerId);
 	pageHeader.removeAttribute("data-closing");
@@ -32,6 +33,11 @@ function setMenuExpanded(expanded) {
 function openHeader(to) {
 	const pageHeader = document.getElementById("pageHeader");
 	const isOpen = pageHeader.getAttribute("open") === "true";
+	const flowMode = pageHeader.parentElement.dataset.navigationMode === "flow";
+	const willOpen = !(to === false || (to !== true && isOpen));
+	if (flowMode && isOpen !== willOpen) {
+		window.dispatchEvent(new CustomEvent("site-navigation-toggle", { detail: { open: willOpen } }));
+	}
 	if (to === false || (to !== true && isOpen)) {
 		if (isOpen) {
 			clearHeaderClosingState(pageHeader);
@@ -43,14 +49,33 @@ function openHeader(to) {
 		pageHeader.removeAttribute("open");
 		setMenuExpanded(false);
 		document.body.style.overflow = "auto";
+		if (flowMode && isOpen && pageHeader.contains(document.activeElement)) flowHeaderPreviousFocus?.focus({ preventScroll: true });
 	}
 	else {
+		if (flowMode && !isOpen) flowHeaderPreviousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
 		clearHeaderClosingState(pageHeader);
 		pageHeader.setAttribute("open", "true");
 		setMenuExpanded(true);
 		document.body.style.overflow = "hidden";
+		if (flowMode) requestAnimationFrame(() => pageHeader.querySelector(".links a")?.focus({ preventScroll: true }));
 	}
 }
+
+window.addEventListener("newsroom-navigation-open", function () {
+	if (document.getElementById("pageHeader").hasAttribute("open")) openHeader(false);
+});
+
+document.addEventListener("keydown", function (event) {
+	const pageHeader = document.getElementById("pageHeader");
+	if (pageHeader.parentElement.dataset.navigationMode !== "flow" || !pageHeader.hasAttribute("open")) return;
+	if (event.key === "Escape") { event.preventDefault(); openHeader(false); return; }
+	if (event.key !== "Tab") return;
+	const focusable = Array.from(pageHeader.querySelectorAll("a[href], button")).filter((element) => element.getClientRects().length > 0);
+	const first = focusable[0];
+	const last = focusable[focusable.length - 1];
+	if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+	else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+});
 
 window.addEventListener("scroll", function () {
 	const pageHeader = document.getElementById("pageHeader");

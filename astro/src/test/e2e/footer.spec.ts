@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('uses two footer columns before desktop links become cramped', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'tablet', 'The intermediate footer layout only needs one browser project.');
@@ -182,6 +182,37 @@ test('keeps the skip link first when cookie consent is already saved', async ({ 
   await expect(page.getByRole('link', { name: '跳到内容', exact: true })).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(page.getByRole('main')).toBeFocused();
+});
+
+test('supports cookie consent and the skip link in the Newsroom layout', async ({ page }) => {
+  await page.goto('/en/newsroom/', { waitUntil: 'domcontentloaded' });
+
+  const dialog = page.locator('#pageCookieConfirmDialog');
+  const customizeButton = dialog.getByRole('button').first();
+  const acceptButton = dialog.getByRole('button').last();
+  const skipLink = page.locator('.skip-to-content');
+  await expect(dialog).toHaveCount(1);
+  await expect(dialog).toHaveAttribute('data-status', 'open', { timeout: 5_000 });
+  await expect(dialog).toHaveAttribute('aria-modal', 'false');
+  await expect(dialog).toHaveCSS('font-size', '14px');
+  await expect(page.locator('body')).toBeFocused();
+
+  await page.keyboard.press('Tab');
+  await expect(dialog.getByRole('link')).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(customizeButton).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(acceptButton).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(skipLink).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('main')).toBeFocused();
+  await expect(dialog).toHaveAttribute('data-status', 'open');
+
+  await acceptButton.click();
+  await expect(dialog).toHaveAttribute('data-status', 'close');
+  await expect(skipLink).toBeFocused();
+  expect(await page.evaluate(() => localStorage.getItem('cookieTipv0Checked'))).toBe('true');
 });
 
 test('opens cookie consent after a script delays parsing the page', async ({ page }, testInfo) => {

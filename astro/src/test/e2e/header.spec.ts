@@ -1,4 +1,4 @@
-import { expect, type Locator, test } from '@playwright/test';
+import { expect, type Locator, test } from './fixtures';
 
 function cssTimeToMilliseconds(value: string): number {
   const time = Number.parseFloat(value);

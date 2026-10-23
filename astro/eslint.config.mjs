@@ -8,7 +8,7 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 export default [
   {
-    ignores: ['.astro/**', 'dist/**', 'node_modules/**', 'public/**'],
+    ignores: ['.astro/**', '.wrangler/**', 'dist/**', 'node_modules/**', 'public/**'],
   },
   js.configs.recommended,
   {

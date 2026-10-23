@@ -1,0 +1,15 @@
+---
+import type { NewsPost } from '@/lib/newsroom/content';
+import { newsroomLabels } from '@/lib/newsroom/labels';
+import type { NewsroomLocale } from '@/lib/newsroom/paths';
+
+interface Props { posts: NewsPost[]; locale: NewsroomLocale }
+const { posts, locale } = Astro.props;
+---
+<aside class="widget" id="latest-posts">
+  <h2 class="widget-title">{newsroomLabels(locale).latest}</h2>
+  <div class="widget-post-list">{posts.map((post) => <a href={post.url} class="post">
+    <div class="image" style={`background-image: url(${JSON.stringify(post.image)});`}></div>
+    <div class="info"><h3 class="post-title">{post.title}</h3><div class="other"><span class="category">{post.category.name}</span><time datetime={post.dateTime}>{post.dateText}</time></div></div>
+  </a>)}</div>
+</aside>

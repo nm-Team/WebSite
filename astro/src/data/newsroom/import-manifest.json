@@ -1,0 +1,276 @@
+{
+  "repository": "https://github.com/nm-Team/astro-newsroom",
+  "commit": "309550cc5efcaaf42c1a54b65a3f2b0b52389dab",
+  "articles": [
+    {
+      "articleId": "12th-Global-Accessibility-Awareness-Day",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "eac05e10e095549b42c2edee9d0e1d0428f57e68217d6280b5622508f6273fb1"
+    },
+    {
+      "articleId": "2022-chinese-year-wish-to-all",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "55135c7f31e91bc9cd7c6521a5e937af8347d695086312fbb202ce734dd28d2d"
+    },
+    {
+      "articleId": "announcing-nmbot-next",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "78dba8adc47f1c8817f27a5b1cc90521483c18158c7d233322e36d1ce572d634"
+    },
+    {
+      "articleId": "Bulletin",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "b3efed67f0c2a660f5698c016348a1bdfd8183b0cdbdb89696684e013e635e75"
+    },
+    {
+      "articleId": "gaad-13th",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "6aea6e5c9c023f1d996a94908dedfe76484527bcc0b00aa37e3f16d03b6d7f4d"
+    },
+    {
+      "articleId": "nmBot-Celebrates-Its-Fourth-Anniversary",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "ca55fa5c246d146cb1b72aaa286b15f57ee37fa34972106fcd16c9172db0154d"
+    },
+    {
+      "articleId": "nmBot-is-now-available-on-Telegram",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "3920b6e5521fae22f781b8850f735a0ca07806a3c21975ae8e8c43bbac2feb4e"
+    },
+    {
+      "articleId": "nmBot-NEXT-Officially-Launched",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "a3d4805eee02d18b0fb7e0d86c8c42e136928d856fecf37a8efad2fc49ad043e"
+    },
+    {
+      "articleId": "nmBot-Telegram-Celebrates-Third-Anniversary-of-Official-Launch",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "4832691e9aa564e96e54fff65a9092b468b5bd5129b6aabacda6afcfddef727c"
+    },
+    {
+      "articleId": "nmfun-test",
+      "locales": [
+        "zh-CN"
+      ],
+      "sourceSha256": "7de77a511dd4759bb5b38b13d895b8644c7d56945a513cb74c102e1df2da8a50"
+    },
+    {
+      "articleId": "nmStickers-for-Telegram",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "50dd652391b0558ba85bd5703fbb6da86cbcb7466f02436ed225a6a72bbe2690"
+    },
+    {
+      "articleId": "nmteam-account-center-new-avatar-setting-panel",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "53d1745e2d8e33d49b041e871a4397010556fd3c5395d60e30c7c60decc4d49c"
+    },
+    {
+      "articleId": "nmTeam-Announcement-on-Adjusting-the-Member-List-and-Clarifying-Member-Joining-Rules",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "eca2c119e77e9d93c4adda3c1f64b4583cfe1e56a8f006186f4ba6851c51b0b8"
+    },
+    {
+      "articleId": "nmteam-celebrates-fifth-anniversary",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "a2944915c7378de719d52d0dc7c8707415665483f66e241f70ac674b48054a2e"
+    },
+    {
+      "articleId": "nmTeam-Celebrates-Fourth-Anniversary",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "0385c414fdc31ce5dca4c858a78597c7f1fd197326656e0466d7125aa1044842"
+    },
+    {
+      "articleId": "nmTeam-Celebrates-Third-Anniversary",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "a5e819556c7f6b63ef75c4df2ee982759b18e669a3966c36af3fc4a0d81cb137"
+    },
+    {
+      "articleId": "nmTeam-has-been-established-for-2-months",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "706e5f71baaf5e6995b70c4974ad7c833ca57724fea857d04b9e09b72081bec1"
+    },
+    {
+      "articleId": "nmTeam-Launches-New-nmTeam-Support-Website",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "67745141005d71596eb4eeb5991bbe612d488a91891f9ed6bb1662ce253b81c6"
+    },
+    {
+      "articleId": "nmTeam-launches-nmBot-plus",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "9ca976470a43e2d84cf4f8016634a0596d1f8159315e46c82412ff470bf81e0e"
+    },
+    {
+      "articleId": "nmTeam-launches-product-accessibility-promotion-page",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "7f15b41c94cb9f11d8b5f15b1076a3f53b843eda3d3a6b9e8229989e756dbf9e"
+    },
+    {
+      "articleId": "nmteam-new-product-overview-page-testing",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "ff010c6c9522ea10323636696639949108967aa5a8237fa769a386e7ec89a24a"
+    },
+    {
+      "articleId": "nmTeam-releases-nmBot-Intelligence",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "c92beb675a4546b1753c540881613fbfd9333984f0e0ae62e15102b4e6564dfc"
+    },
+    {
+      "articleId": "nmTeam-s-New-Account-Center-Enters-Public-Beta-Today",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "fc798672e7fa02175499dae88c983ebdad5d69420238885d36974206240894d9"
+    },
+    {
+      "articleId": "nmteam-second-anniversary",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "83dabbdb60f52cf773a5d53ba4ce89094addc6c7c7fe26bba0f49d42aeb3b269"
+    },
+    {
+      "articleId": "nmteam-service-error-detail",
+      "locales": [
+        "zh-CN"
+      ],
+      "sourceSha256": "1337ff6dccc287003638a529ccf46a272372eb9e75c448eb2e2b8d277ce56d02"
+    },
+    {
+      "articleId": "nmteam-service-status-announcement",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "9294ffd367ce6fd9286653cb66e9c183108d6c6b3ba86dc5f4b333fa6a2da24e"
+    },
+    {
+      "articleId": "nmTeam-welcomes-the-14th-Global-Accessibility-Awareness-Day-and-opens-a-dedicated-email-for-accessibility-feedback",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "6292fcfac9e30ac6788743b1adb346c4dc4b993d3d3fde47bddea0d637b571ee"
+    },
+    {
+      "articleId": "nmTeam-welcomes-the-15th-Global-Accessibility-Awareness-Day",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "050cd7d1c337475ec7635659bd31bfd21883cfa12c2b1ecd6cc179afce591515"
+    },
+    {
+      "articleId": "nmTeam-will-use-new-domains",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "2b5c08acc920ba3adb1810ca0f8246ae13cc8027393021689c8529689f5cef20"
+    },
+    {
+      "articleId": "nmTeams-First-Anniversary",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "4061fcfeefa8bc59e1e5c8a53d4606a8d327f3e4ba7b8b5357d0d358b72914af"
+    },
+    {
+      "articleId": "the-first-anniversary-of-nmBot-landing-on-Telegram",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "529c221cf86066bff552b623dde3aba85bba59593314a292bc4f1da9bcfa67c0"
+    },
+    {
+      "articleId": "The-first-batch-of-nmBot-intelligence-launched-in-beta-version",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "9ee7b5a4eba6039a294373bfd1ed591b78ff115c65363f12dde0b7378564c2df"
+    },
+    {
+      "articleId": "the-second-anniversary-of-nmBot-landing-on-Telegram",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "6e5d23826e607caf71ab0432511a184fa835683f38f4b9930af01392f3809492"
+    },
+    {
+      "articleId": "welcome",
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "sourceSha256": "3d4918e9723f9bb4bc06e981bc4df6a57eb10b4a46fd915c361d69791aec5384"
+    }
+  ]
+}
