@@ -2,12 +2,16 @@ import { expect, isolateExternalRequests, test } from './fixtures';
 
 test('Newsroom has localized lists, article metadata and working translations', async ({ page }) => {
   await page.goto('/en/newsroom/');
+  await expect(page).toHaveTitle('Newsroom - nmTeam Official Website');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.locator('.post-list > a.item')).toHaveCount(11);
   const first = page.locator('.post-list > a.item').first();
   const headline = await first.locator('h2').innerText();
   await first.click();
   await expect(page.locator('h1')).toHaveText(headline);
+  await expect(page).toHaveTitle(`${headline} - Newsroom - nmTeam Official Website`);
+  await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', await page.title());
+  await expect(page.locator('meta[name="twitter:title"]')).toHaveAttribute('content', await page.title());
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', /^https:\/\/nm\.team\/en\/newsroom\//);
   await expect(page.locator('link[hreflang="zh-CN"]')).toHaveCount(1);
   const structured = await page.locator('script[type="application/ld+json"]').textContent();
@@ -18,8 +22,11 @@ test('Newsroom has localized lists, article metadata and working translations', 
     await expect(link).toHaveAttribute('rel', /noopener/);
     await expect(link).toHaveAttribute('rel', /noreferrer/);
   }
+  await page.goto('/zh-CN/newsroom/');
+  await expect(page).toHaveTitle('Newsroom - nmTeam 官方网站');
   await page.goto('/zh-CN/newsroom/nmfun-test-2021-11-20/');
   await expect(page.locator('h1')).toContainText('nmFun');
+  await expect(page).toHaveTitle(`${await page.locator('h1').innerText()} - Newsroom - nmTeam 官方网站`);
   await expect(page.locator('link[hreflang="en"]')).toHaveCount(0);
   await expect(page.locator('#newsroom-header a[hreflang="en"]')).toHaveCount(0);
 });

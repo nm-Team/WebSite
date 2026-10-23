@@ -1,4 +1,5 @@
 ---
+import { t } from '@/i18n/translate';
 import type { NewsPost } from '@/lib/newsroom/content';
 import { selectNewsroomTranslation } from '@/lib/newsroom/fallbacks';
 import { newsroomLabels } from '@/lib/newsroom/labels';
@@ -16,7 +17,8 @@ interface Props {
 const { locale, title, url, alternates, post, noindex = false } = Astro.props;
 const labels = newsroomLabels(locale);
 const xDefault = selectNewsroomTranslation(alternates, 'en');
-const fullTitle = title === labels.title ? title : `${title} - ${labels.title}`;
+const pageTitle = title === labels.title ? 'Newsroom' : `${title} - Newsroom`;
+const fullTitle = `${pageTitle} - nmTeam ${t(locale, 'pagebases.official_website')}`;
 const description = post?.description ?? labels.description;
 const canonical = absoluteNewsroomUrl(url);
 const image = absoluteNewsroomUrl(post?.image ?? defaultNewsImage);
@@ -42,14 +44,14 @@ const jsonLd = {
 <meta property="og:site_name" content={labels.title} />
 <meta property="og:type" content={post ? 'article' : 'website'} />
 <meta property="og:locale" content={locale === 'zh-CN' ? 'zh_CN' : 'en_US'} />
-<meta property="og:title" content={title} />
+<meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={image} />
 <meta property="og:image:alt" content={post?.imageAlt ?? labels.title} />
 {post && <><meta property="article:published_time" content={post.dateTime} /><meta property="article:modified_time" content={post.updatedDateTime ?? post.dateTime} /><meta property="article:section" content={post.category.name} /></>}
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={title} />
+<meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={image} />
 <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd).replaceAll('<', '\\u003c')}></script>
