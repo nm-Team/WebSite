@@ -4,24 +4,41 @@ const toggle = document.querySelector<HTMLButtonElement>('#newsroom-menu-toggle'
 const panel = document.querySelector<HTMLElement>('#newsroom-extended-menu');
 const backdrop = document.querySelector<HTMLElement>('[data-newsroom-backdrop]');
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const gutterElements = [...document.querySelectorAll<HTMLElement>('#newsroom-header .site-name-text, #newsroom-nav-menu, #newsroom-menu-toggle, .newsroom-panel-content')];
+const gutterAnimations = new Map<HTMLElement, Animation>();
 let returnFocus: HTMLElement | null = null;
 let stickyUpdatePending = false;
 let menuRevision = 0;
+
+function cancelGutterAnimations() {
+  for (const animation of gutterAnimations.values()) animation.cancel();
+  gutterAnimations.clear();
+}
 
 function updateStickyState() {
   stickyUpdatePending = false;
   if (!header || !headerSlot) return;
   const stuck = headerSlot.getBoundingClientRect().top <= 0;
   if (header.hasAttribute('data-stuck') === stuck) return;
+  // Capture the visible positions before cancelling an interrupted movement.
+  const previous = gutterElements.map((element) => element.getBoundingClientRect().left);
+  cancelGutterAnimations();
   header.toggleAttribute('data-stuck', stuck);
   if (motionPreference.matches) return;
-  // CSS shortens interrupted reverse transitions. Keep the configured duration from the current position.
-  for (const animation of header.getAnimations({ subtree: true })) {
-    if (!(animation instanceof CSSTransition) || !['margin-left', 'margin-right', 'padding-right'].includes(animation.transitionProperty)) continue;
-    const effect = animation.effect;
-    if (!(effect instanceof KeyframeEffect) || !(effect.target instanceof Element)) continue;
-    effect.updateTiming({ duration: Number.parseFloat(getComputedStyle(effect.target).transitionDuration) * 1000 });
-  }
+  const current = gutterElements.map((element) => element.getBoundingClientRect());
+  // Resolve responsive gutters once, then move only the content so WebKit can composite the animation.
+  gutterElements.forEach((element, index) => {
+    const offset = previous[index] - current[index].left;
+    if (offset === 0 || current[index].width === 0) return;
+    const animation = element.animate([
+      { transform: `translateX(${offset}px)` },
+      { transform: 'translateX(0)' },
+    ], { duration: 300, easing: 'cubic-bezier(0.4, 0, 0.2, 1)' });
+    gutterAnimations.set(element, animation);
+    animation.addEventListener('finish', () => {
+      if (gutterAnimations.get(element) === animation) gutterAnimations.delete(element);
+    }, { once: true });
+  });
 }
 
 function scheduleStickyUpdate() {
@@ -97,6 +114,7 @@ const cardObserver = new IntersectionObserver((entries) => {
   for (const entry of entries) entry.target.toggleAttribute('data-come-out-animation', entry.isIntersecting);
 });
 function updateCardMotion() {
+  if (motionPreference.matches) cancelGutterAnimations();
   if (motionPreference.matches && header?.dataset.navMenuExtended === 'false') header.removeAttribute('data-menu-visible');
   cardObserver.disconnect();
   for (const card of cards) {

@@ -34,7 +34,7 @@ test('the sticky header aligns with Newsroom content and returns to the global g
 });
 
 test('the popup follows the sticky header width through resize and scroll reversals', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'mobile', 'The popup is only used on mobile');
+  test.skip(!testInfo.project.use.isMobile, 'The popup is only used on mobile');
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto('/en/newsroom/');
   const header = page.locator('#newsroom-header');
@@ -62,53 +62,66 @@ test('the popup follows the sticky header width through resize and scroll revers
   await expect(page.locator('#newsroom-extended-menu')).not.toBeVisible();
 });
 
-test('rapid returns to the page top keep the full width transition', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'desktop', 'The transition timing is shared across viewports');
-  await page.emulateMedia({ reducedMotion: 'no-preference' });
+test('rapid returns preserve visible positions and the full width animation', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/en/newsroom/', { waitUntil: 'domcontentloaded' });
   const header = page.locator('#newsroom-header');
-  const bar = page.locator('#newsroom-header .container');
-  const initial = (await bar.boundingBox())!;
-  await header.evaluate((element) => {
-    // Pause each real CSS transition halfway through so every reversal occurs during motion.
-    element.addEventListener('transitionrun', (event) => {
-      const { propertyName } = event as TransitionEvent;
-      if (!['margin-left', 'margin-right', 'padding-right'].includes(propertyName) || !(event.target instanceof Element)) return;
-      for (const animation of event.target.getAnimations()) {
-        if (!(animation instanceof CSSTransition) || animation.transitionProperty !== propertyName) continue;
-        animation.pause();
-        animation.currentTime = Number(animation.effect!.getTiming().duration) / 2;
-      }
-    });
-  });
+  const content = page.locator('#newsroom-header .site-name-text, #newsroom-nav-menu, #newsroom-menu-toggle');
+  const positions = () => content.evaluateAll((elements) => elements.filter((element) => element.getBoundingClientRect().width > 0).map((element) => element.getBoundingClientRect().left));
+  const initial = await positions();
+  await page.evaluate(() => window.scrollTo(0, 1000));
+  await expect(header).toHaveAttribute('data-stuck');
+  const stuck = await positions();
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await expect(header).not.toHaveAttribute('data-stuck');
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
 
   for (const top of [1000, 0, 1000, 0]) {
-    await page.evaluate((y) => window.scrollTo(0, y), top);
-    if (top === 0) await expect(header).not.toHaveAttribute('data-stuck');
-    else await expect(header).toHaveAttribute('data-stuck');
-    await expect.poll(() => bar.evaluate((element) => element.getAnimations().some((animation) => animation.playState === 'paused'))).toBe(true);
-    const transitions = await header.evaluate((element) => element.getAnimations({ subtree: true }).flatMap((animation) => {
-      const effect = animation.effect;
-      if (!(animation instanceof CSSTransition) || !(effect instanceof KeyframeEffect) || !(effect.target instanceof Element)) return [];
-      if (!['margin-left', 'margin-right', 'padding-right'].includes(animation.transitionProperty)) return [];
-      return [{ property: animation.transitionProperty, duration: effect.getTiming().duration, expected: Number.parseFloat(getComputedStyle(effect.target).transitionDuration) * 1000 }];
-    }));
-    expect(transitions.length).toBeGreaterThan(0);
-    for (const transition of transitions) expect(transition.duration, `${transition.property} after scrolling to ${top}`).toBe(transition.expected);
+    const movement = await header.evaluate((element, top) => new Promise<{ before: number[]; start: number[]; halfway: number[]; durations: number[] }>((resolve) => {
+      const elements = [...element.querySelectorAll('.site-name-text, #newsroom-nav-menu, #newsroom-menu-toggle')].filter((child) => child.getBoundingClientRect().width > 0);
+      const measure = () => elements.map((child) => child.getBoundingClientRect().left);
+      const before = measure();
+      // Pause real animations before the next paint to inspect motion independently of frame rate.
+      const observer = new MutationObserver(() => {
+        observer.disconnect();
+        const animations = element.getAnimations({ subtree: true });
+        for (const animation of animations) { animation.pause(); animation.currentTime = 0; }
+        const start = measure();
+        for (const animation of animations) animation.currentTime = 150;
+        resolve({ before, start, halfway: measure(), durations: animations.map((animation) => Number(animation.effect!.getTiming().duration)) });
+      });
+      observer.observe(element, { attributes: true, attributeFilter: ['data-stuck'] });
+      window.scrollTo(0, top);
+    }), top);
+    expect(movement.durations.length).toBeGreaterThan(0);
+    for (const duration of movement.durations) expect(duration).toBe(300);
+    const destination = top === 0 ? initial : stuck;
+    movement.start.forEach((position, index) => {
+      expect(Math.abs(position - movement.before[index]), `continuous start after scrolling to ${top}`).toBeLessThan(0.1);
+      const middle = movement.halfway[index];
+      expect(middle).toBeGreaterThan(Math.min(position, destination[index]));
+      expect(middle).toBeLessThan(Math.max(position, destination[index]));
+    });
+    const viewport = page.viewportSize()!;
+    if (top === 0 && viewport.width < 700) {
+      // Mobile browser toolbars resize the viewport height while scrolling.
+      await page.setViewportSize({ width: viewport.width, height: viewport.height - 30 });
+      (await positions()).forEach((position, index) => expect(Math.abs(position - movement.halfway[index])).toBeLessThan(0.1));
+    }
   }
 
   await header.evaluate(async (element) => {
     const animations = element.getAnimations({ subtree: true });
-    for (const animation of animations) animation.play();
+    for (const animation of animations) animation.finish();
     await Promise.all(animations.map((animation) => animation.finished));
   });
-  const returned = (await bar.boundingBox())!;
-  expect(Math.abs(returned.x - initial.x)).toBeLessThan(1);
-  expect(Math.abs(returned.width - initial.width)).toBeLessThan(1);
-  await page.emulateMedia({ reducedMotion: 'reduce' });
+  (await positions()).forEach((position, index) => expect(Math.abs(position - initial[index])).toBeLessThan(0.1));
+
   await page.evaluate(() => window.scrollTo(0, 1000));
   await expect(header).toHaveAttribute('data-stuck');
-  expect(await bar.evaluate((element) => element.getAnimations().length)).toBe(0);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await expect.poll(() => header.evaluate((element) => element.getAnimations({ subtree: true }).length)).toBe(0);
+  (await positions()).forEach((position, index) => expect(Math.abs(position - stuck[index])).toBeLessThan(0.1));
 });
 
 test('local links align with the account text before sticking and with content after sticking', async ({ page }, testInfo) => {
