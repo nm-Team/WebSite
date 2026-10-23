@@ -19,5 +19,10 @@ export default defineConfig({
     { name: 'mobile', use: { ...devices['Pixel 5'], browserName: 'chromium' } },
     { name: 'tablet', use: { viewport: { width: 768, height: 1024 }, browserName: 'chromium' } },
     { name: 'desktop', use: { viewport: { width: 1440, height: 1000 }, browserName: 'chromium' } },
+    {
+      name: 'webkit-mobile',
+      testMatch: ['newsroom-sticky-width.spec.ts', 'newsroom-navigation.spec.ts'],
+      use: { ...devices['iPhone 13'], browserName: 'webkit' },
+    },
   ],
 });

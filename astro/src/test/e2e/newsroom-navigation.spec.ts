@@ -25,22 +25,22 @@ test('the global header scrolls away and local navigation stays at the top', asy
   await expect(page.locator('script[data-website-id]')).toHaveAttribute('data-website-id', '13563ad4-a0f5-4dae-b366-5ab1eb689390');
 });
 
-test('mobile navigation keeps menus separate and restores focus and scrolling', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'mobile', 'Both mobile menus are needed');
+test('mobile keyboard navigation keeps menus separate and restores focus and scrolling', async ({ page }, testInfo) => {
+  test.skip(!testInfo.project.use.isMobile, 'Both mobile menus are needed');
   await page.goto('/en/newsroom/');
   const local = page.locator('#newsroom-menu-toggle');
   const global = page.locator('#menu-toggle');
-  await local.click();
+  await local.press('Enter');
   await expect(local).toHaveAttribute('aria-expanded', 'true');
   await expect(page.locator('body')).toHaveCSS('overflow', 'hidden');
   await expect(page.locator('#fcont')).toHaveAttribute('inert', '');
-  await global.click();
+  await global.press('Enter');
   await expect(local).toHaveAttribute('aria-expanded', 'false');
   await expect(global).toHaveAttribute('aria-expanded', 'true');
   await page.keyboard.press('Escape');
   await expect(global).toHaveAttribute('aria-expanded', 'false');
   await expect(global).toBeFocused();
-  await local.click();
+  await local.press('Enter');
   await page.keyboard.press('Escape');
   await expect(local).toHaveAttribute('aria-expanded', 'false');
   await expect(local).toBeFocused();
@@ -103,6 +103,8 @@ test('local header and search directory both open the press release and stories 
       if (mobile) await page.locator('#newsroom-menu-toggle').click();
       const nav = page.locator(mobile ? '#newsroom-extend-nav-menu' : '#newsroom-nav-menu');
       const link = nav.locator(`a[href="${target}"]`);
+      await expect(link).toBeVisible();
+      if (mobile) await expect(page.locator('#newsroom-extended-menu')).toHaveCSS('opacity', '1');
       const title = await link.innerText();
       await link.click();
       await expect(page).toHaveURL(new RegExp(`${target}$`));
@@ -168,7 +170,7 @@ test('both navigation levels and the global footer share their content edges at 
 });
 
 test('the local menu animates both ways and handles rapid pointer reversals', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'mobile', 'The popup is only used on mobile');
+  test.skip(!testInfo.project.use.isMobile, 'The popup is only used on mobile');
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto('/en/newsroom/');
   const panel = page.locator('#newsroom-extended-menu');
@@ -195,12 +197,12 @@ test('the local menu animates both ways and handles rapid pointer reversals', as
   await expect(page.locator('#newsroom-extend-nav-menu a[href$="/search/"]')).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(panel).not.toBeVisible();
-  await expect(trigger).toBeFocused();
+  expect(await panel.evaluate((element) => element.contains(document.activeElement))).toBe(false);
   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
 });
 
 test('the open menu shares one header surface before and after sticking', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'mobile', 'The popup is only used on mobile');
+  test.skip(!testInfo.project.use.isMobile, 'The popup is only used on mobile');
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   for (const colorScheme of ['light', 'dark'] as const) {
     await page.emulateMedia({ colorScheme });
