@@ -6,16 +6,16 @@ import { type NewsroomLocale, newsroomPath } from '@/lib/newsroom/paths';
 interface Props { locale: NewsroomLocale }
 const { locale } = Astro.props;
 const labels = newsroomLabels(locale);
-const links = (['press-release', 'stories'] as const).map((slug) => ({
+const links: { name: string; url: string; target?: string; rel?: string }[] = (['press-release', 'stories'] as const).map((slug) => ({
   name: categoryNames[slug][locale], url: newsroomPath(locale, `category/${slug}/`),
 }));
-links.push({ name: labels.search, url: newsroomPath(locale, 'search/') }, { name: 'RSS', url: newsroomPath(locale, 'rss.xml') });
+links.push({ name: labels.search, url: newsroomPath(locale, 'search/') }, { name: 'RSS', url: newsroomPath(locale, 'rss.xml'), target: '_blank', rel: 'noopener' });
 ---
 <header id="newsroom-header" data-nav-menu-extended="false">
   <div class="container">
     <a class="site-name-text" href={newsroomPath(locale)}>Newsroom</a>
     <nav id="newsroom-nav-menu" aria-label={labels.menu}>
-      {links.map((link) => <a href={link.url} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
+      {links.map((link) => <a href={link.url} target={link.target} rel={link.rel} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
     </nav>
     <button id="newsroom-menu-toggle" class="menu-toggle" aria-label={labels.menu} aria-controls="newsroom-extended-menu" aria-expanded="false" data-nav-menu-extended="false">
       <span class="bar bar-1"></span><span class="bar bar-2"></span>
@@ -24,7 +24,7 @@ links.push({ name: labels.search, url: newsroomPath(locale, 'search/') }, { name
   <div id="newsroom-extended-menu" class="extend-menu" data-nav-menu-extended="false" inert>
     <div class="newsroom-panel-content">
       <nav id="newsroom-extend-nav-menu" aria-label={labels.menu}>
-        {links.map((link) => <a href={link.url} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
+        {links.map((link) => <a href={link.url} target={link.target} rel={link.rel} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
       </nav>
     </div>
   </div>
