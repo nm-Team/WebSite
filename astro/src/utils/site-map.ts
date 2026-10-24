@@ -34,22 +34,22 @@ export function getSitemapEntries(): SitemapEntry[] {
   const localizedEntries = routeManifest
     .filter((route) => route.inSitemap !== false)
     .flatMap((route) =>
-    publicLocales
-      .filter((locale) => route.supportedLocales.includes(locale))
-      .map((locale) => {
-        const path = toPrefixedPath(locale, route.slug);
-        const metadata = getPageMetadata(route, locale);
-        return {
-          route,
-          locale,
-          path,
-          url: new URL(path, siteOrigin).toString(),
-          title: metadata.title || 'nmTeam',
-          description: metadata.description,
-          isRootFallback: false,
-        };
-      }),
-  );
+      publicLocales
+        .filter((locale) => route.supportedLocales.includes(locale))
+        .map((locale) => {
+          const path = toPrefixedPath(locale, route.slug);
+          const metadata = getPageMetadata(route, locale);
+          return {
+            route,
+            locale,
+            path,
+            url: new URL(path, siteOrigin).toString(),
+            title: metadata.title || 'nmTeam',
+            description: metadata.description,
+            isRootFallback: false,
+          };
+        }),
+    );
 
   return [...rootEntries, ...localizedEntries];
 }
