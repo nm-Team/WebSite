@@ -20,14 +20,10 @@ function createListPages(locale: NewsroomLocale, baseUrl: string, title: string,
   const totalPages = Math.max(1, Math.ceil(posts.length / postsPerPage));
   return Array.from({ length: totalPages }, (_, index) => {
     const currentPage = index + 1;
-    const pageName = title === newsroomLabels(locale).title ? 'Newsroom' : title;
-    const pageTitle = currentPage === 1
-      ? title
-      : `${pageName} - ${locale === 'en' ? `Page ${currentPage}` : `第 ${currentPage} 页`}`;
     return {
       kind: 'list', locale,
       url: currentPage === 1 ? paginationBaseUrl : `${paginationBaseUrl}page/${currentPage}/`,
-      title: pageTitle,
+      title,
       posts: posts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage),
       currentPage, totalPages, paginationBaseUrl,
     };
