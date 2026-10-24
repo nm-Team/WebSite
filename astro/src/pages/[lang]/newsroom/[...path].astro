@@ -28,7 +28,7 @@ const Content = post ? (await render(post.entry)).Content : undefined;
 {page.kind === 'redirect' ? <LanguageRedirect page={page} /> : <NewsroomLayout locale={page.locale} title={page.title} url={page.url} alternates={alternates} post={post} noindex={page.kind === 'search'}>
   {page.kind === 'list' && <>
     <div class="post-list">
-      <h1 class:list={[page.url === newsroomPath(page.locale) ? 'sr-only' : 'archive-title']}>{page.title}</h1>
+      <h1 class:list={[page.paginationBaseUrl === newsroomPath(page.locale) ? 'sr-only' : 'archive-title']}>{page.title}</h1>
       {page.posts.map((item) => <PostCard post={item} />)}
     </div>
     {page.currentPage && page.totalPages && <PageNavigator locale={page.locale} baseUrl={page.paginationBaseUrl} currentPage={page.currentPage} totalPages={page.totalPages} />}
