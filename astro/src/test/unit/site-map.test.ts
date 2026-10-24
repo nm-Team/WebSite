@@ -31,6 +31,9 @@ describe('generated sitemap entries', () => {
     const paths = new Set(getSitemapEntries().map((entry) => entry.path));
 
     for (const route of routeManifest) {
+      if (route.inSitemap === false) {
+        continue;
+      }
       expect(paths.has(toRootPath(route.slug))).toBe(true);
       for (const locale of publicLocales) {
         if (route.supportedLocales.includes(locale)) {
@@ -38,6 +41,12 @@ describe('generated sitemap entries', () => {
         }
       }
     }
+  });
+
+  it('omits routes excluded from the sitemap', () => {
+    const entries = getSitemapEntries().filter((entry) => entry.route.inSitemap === false);
+    expect(entries).toHaveLength(0);
+    expect(getSitemapEntries().some((entry) => entry.route.id === 'questionnaire-ended')).toBe(false);
   });
 
   it('uses absolute production URLs', () => {

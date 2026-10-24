@@ -16,7 +16,7 @@ export type SitemapEntry = {
 
 export function getSitemapEntries(): SitemapEntry[] {
   const rootEntries = routeManifest
-    .filter((route) => route.supportedLocales.includes(defaultLocale))
+    .filter((route) => route.inSitemap !== false && route.supportedLocales.includes(defaultLocale))
     .map((route) => {
       const path = toRootPath(route.slug);
       const metadata = getPageMetadata(route, defaultLocale);
@@ -31,7 +31,9 @@ export function getSitemapEntries(): SitemapEntry[] {
       };
     });
 
-  const localizedEntries = routeManifest.flatMap((route) =>
+  const localizedEntries = routeManifest
+    .filter((route) => route.inSitemap !== false)
+    .flatMap((route) =>
     publicLocales
       .filter((locale) => route.supportedLocales.includes(locale))
       .map((locale) => {

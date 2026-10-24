@@ -17,6 +17,8 @@ export type RouteEntry = {
   pageBodyJs: readonly string[];
   pageImage?: string;
   pageUpdate?: string;
+  /** Set to false to keep the route out of the generated sitemaps. */
+  inSitemap?: boolean;
   supportedLocales: readonly PublicLocale[];
 };
 
@@ -94,6 +96,7 @@ export const routeManifest: RouteEntry[] = [
     pageBodyJs: [],
     pageImage: '',
     pageUpdate: '',
+    inSitemap: false,
     supportedLocales: publicLocales,
   },
   {
