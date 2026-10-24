@@ -47,6 +47,7 @@ export function buildLegacyNewsroomMap(pagePaths: readonly string[], assetPaths:
   add('/api/posts', '/newsroom/api/posts', true);
   add('/favicon.ico', '/favicon.ico');
   add('/robots.txt', '/robots.txt');
+  add('/sitemap.xml', '/sitemap.xml');
   add('/sitemap-index.xml', '/sitemap.xml');
   add('/sitemap-0.xml', '/sitemap.xml');
   for (const asset of assetPaths) {

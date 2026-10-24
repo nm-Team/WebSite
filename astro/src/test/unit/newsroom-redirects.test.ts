@@ -17,6 +17,7 @@ describe('Newsroom migration redirects', () => {
     expect(map['/special/about/']).toBe('/zh-CN/newsroom/');
     expect(map['/special/about.html/']).toBe('/zh-CN/newsroom/');
     expect(map['/']).toBe('/zh-CN/newsroom/');
+    expect(map['/sitemap.xml']).toBe('/sitemap.xml');
   });
   it('accepts prefixed legacy URLs without redirecting existing API and upload assets to themselves', () => {
     const main = buildMainNewsroomMap(map);
@@ -31,6 +32,7 @@ describe('Newsroom migration redirects', () => {
     expect(main['/newsroom/search']).toBe('/zh-CN/newsroom/search/');
     expect(main['/newsroom/favicon.ico']).toBe('/favicon.ico');
     expect(main['/newsroom/robots.txt']).toBe('/robots.txt');
+    expect(main['/newsroom/sitemap.xml']).toBe('/sitemap.xml');
     expect(main['/newsroom/sitemap-index.xml']).toBe('/sitemap.xml');
     expect(main['/newsroom/sitemap-0.xml']).toBe('/sitemap.xml');
     expect(main['/newsroom/unknown-article/']).toBeUndefined();
