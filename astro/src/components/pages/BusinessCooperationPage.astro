@@ -9,7 +9,7 @@ const businessEmailAddress = 'business@nmteam.xyz';
   .email-btn {
     display: inline-block;
     padding: 10px 22px;
-    margin: 6px 0;
+    margin: 6px 8px 6px 0;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: -0.01em;
@@ -58,7 +58,7 @@ const businessEmailAddress = 'business@nmteam.xyz';
     <p>{t(locale, 'business_cooperation.content_0')}</p>
     <p>
       <button class="email-btn" onclick={`window.location.href='mailto:${businessEmailAddress}'`}>{businessEmailAddress}</button>
-      &nbsp;&nbsp;<a id="copyEmailLink" href="#copy-email-status" onclick="copyEmail(event)">{t(locale, 'business_cooperation.copy_email')}</a>
+      <a id="copyEmailLink" href="#copy-email-status" onclick="copyEmail(event)">{t(locale, 'business_cooperation.copy_email')}</a>
       <span id="copyEmailStatus" class="copy-email-status" role="status" aria-live="polite"></span>
     </p>
     <p>{t(locale, 'business_cooperation.content_1')}</p>
