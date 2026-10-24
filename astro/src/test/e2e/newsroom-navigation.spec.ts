@@ -109,7 +109,11 @@ test('local header and search directory both open the press release and stories 
       await link.click();
       await expect(page).toHaveURL(new RegExp(`${target}$`));
       await expect(page.locator('h1')).toHaveText(title);
-      await expect(page.locator(`a[href="${target}"][aria-current="page"]`)).toHaveCount(2);
+      for (const menu of ['#newsroom-nav-menu', '#newsroom-extend-nav-menu']) {
+        const current = page.locator(menu).locator('[aria-current="page"]');
+        await expect(current).toHaveCount(1);
+        await expect(current).toHaveAttribute('href', target);
+      }
       await expect(page.locator('#newsroom-footer')).toHaveCount(0);
       await page.goto(`/${locale}/newsroom/search/`);
       await expect(page.locator(`.search-browse a[href="${target}"]`)).toHaveText(title);
