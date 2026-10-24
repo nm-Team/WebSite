@@ -13,6 +13,11 @@ html.newsroom-site { --newsroom-chrome-gutter: 10%; }
 @media (width < 1200px) {
   .newsroom-shell[data-newsroom-content="article"] { --newsroom-content-gutter: max(5vw, calc((100% - 600rem) / 2)); }
 }
+.newsroom-shell #latest-posts {
+  max-width: none;
+  margin-inline: var(--newsroom-content-gutter);
+  padding-inline: 0;
+}
 #hcont[data-navigation-mode="flow"] {
   position: relative;
   z-index: 200;
