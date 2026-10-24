@@ -1,0 +1,33 @@
+---
+const destination = '/en/newsroom/';
+const title = 'Newsroom - nmTeam Official Website';
+const description = 'Discover the latest news about nmTeam and its products and services in nmTeam Newsroom.';
+const image = 'https://nm.team/newsroom/default-post-image.png';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,follow" />
+    <meta http-equiv="refresh" content={`0;url=${destination}`} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={`https://nm.team${destination}`} />
+    <meta property="og:site_name" content="nmTeam Newsroom" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={`https://nm.team${destination}`} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content="nmTeam Newsroom" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+  </head>
+  <body>
+    <p><a href={destination}>Continue to nmTeam Newsroom.</a></p>
+  </body>
+</html>

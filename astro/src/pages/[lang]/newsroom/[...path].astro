@@ -31,7 +31,7 @@ const Content = post ? (await render(post.entry)).Content : undefined;
       <h1 class:list={[page.currentPage === 1 ? 'sr-only' : 'archive-title']}>{page.title}</h1>
       {page.posts.map((item) => <PostCard post={item} />)}
     </div>
-    {page.currentPage && page.totalPages && <PageNavigator locale={page.locale} currentPage={page.currentPage} totalPages={page.totalPages} />}
+    {page.currentPage && page.totalPages && <PageNavigator locale={page.locale} baseUrl={page.paginationBaseUrl} currentPage={page.currentPage} totalPages={page.totalPages} />}
   </>}
   {page.kind === 'article' && post && Content && <>
     <div class="post-page"><article class="post">

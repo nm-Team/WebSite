@@ -31,6 +31,32 @@ test('Newsroom has localized lists, article metadata and working translations', 
   await expect(page.locator('#newsroom-header a[hreflang="en"]')).toHaveCount(0);
 });
 
+test('category and tag lists paginate within their own paths', async ({ page }) => {
+  for (const [basePath, secondPagePath] of [
+    ['/en/newsroom/category/press-release/', '/en/newsroom/category/press-release/page/2/'],
+    ['/en/newsroom/tag/nmTeam/', '/en/newsroom/tag/nmTeam/page/2/'],
+  ]) {
+    await page.goto(basePath);
+    await expect(page.locator('.post-list > a.item')).toHaveCount(11);
+    await expect(page.locator('.page-navigator')).toBeVisible();
+    await expect(page.locator('.page-navigator a').filter({ hasText: /^2$/ })).toHaveAttribute('href', secondPagePath);
+    await page.locator('.page-navigator a').filter({ hasText: /^2$/ }).click();
+    await expect(page).toHaveURL(new RegExp(`${secondPagePath.replaceAll('/', '\\/')}$`));
+    const pageItems = page.locator('.post-list > a.item');
+    expect(await pageItems.count()).toBeGreaterThan(0);
+    expect(await pageItems.count()).toBeLessThanOrEqual(11);
+  }
+});
+
+test('the default Newsroom entry exposes its preview metadata before redirecting', async ({ request }) => {
+  const response = await request.get('/newsroom/');
+  expect(response.status()).toBe(200);
+  const html = await response.text();
+  expect(html).toContain('property="og:site_name" content="nmTeam Newsroom"');
+  expect(html).toContain('property="og:title" content="Newsroom - nmTeam Official Website"');
+  expect(html).toContain('property="og:url" content="https://nm.team/en/newsroom/"');
+});
+
 test('Newsroom search supports a reloadable query and treats text safely', async ({ page }) => {
   await page.goto('/en/newsroom/search/?q=nmBot');
   await expect(page.locator('#search-results a')).not.toHaveCount(0);

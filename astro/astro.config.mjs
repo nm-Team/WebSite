@@ -12,7 +12,6 @@ export default defineConfig({
   trailingSlash: 'ignore',
   markdown: { processor: satteri({ hastPlugins: [newsroomArticleLinks] }) },
   redirects: {
-    '/newsroom/': '/en/newsroom/',
     '/en/newsroom/page/1/': '/en/newsroom/',
     '/zh-CN/newsroom/page/1/': '/zh-CN/newsroom/',
   },

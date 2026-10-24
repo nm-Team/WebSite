@@ -3,12 +3,36 @@ import { newsroomLabels } from './labels';
 import { type NewsroomLocale, newsroomLocales, newsroomPath, postsPerPage } from './paths';
 
 interface PageBase { locale: NewsroomLocale; url: string; title: string }
-export type NewsroomPage = PageBase & (
-  | { kind: 'list'; posts: NewsPost[]; currentPage?: number; totalPages?: number }
-  | { kind: 'article'; post: NewsPost; latestPosts: NewsPost[] }
-  | { kind: 'search' }
-);
+type NewsroomListPage = PageBase & {
+  kind: 'list';
+  posts: NewsPost[];
+  currentPage: number;
+  totalPages: number;
+  paginationBaseUrl: string;
+};
+type NewsroomArticlePage = PageBase & { kind: 'article'; post: NewsPost; latestPosts: NewsPost[] };
+type NewsroomSearchPage = PageBase & { kind: 'search' };
+export type NewsroomPage = NewsroomListPage | NewsroomArticlePage | NewsroomSearchPage;
 export interface NewsroomAlternate { locale: NewsroomLocale; url: string }
+
+function createListPages(locale: NewsroomLocale, baseUrl: string, title: string, posts: NewsPost[]): NewsroomListPage[] {
+  const paginationBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const totalPages = Math.max(1, Math.ceil(posts.length / postsPerPage));
+  return Array.from({ length: totalPages }, (_, index) => {
+    const currentPage = index + 1;
+    const pageName = title === newsroomLabels(locale).title ? 'Newsroom' : title;
+    const pageTitle = currentPage === 1
+      ? title
+      : `${pageName} - ${locale === 'en' ? `Page ${currentPage}` : `第 ${currentPage} 页`}`;
+    return {
+      kind: 'list', locale,
+      url: currentPage === 1 ? paginationBaseUrl : `${paginationBaseUrl}page/${currentPage}/`,
+      title: pageTitle,
+      posts: posts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage),
+      currentPage, totalPages, paginationBaseUrl,
+    };
+  });
+}
 
 export async function getNewsroomPages(): Promise<NewsroomPage[]> {
   const allPosts = await getAllNewsPosts();
@@ -16,17 +40,10 @@ export async function getNewsroomPages(): Promise<NewsroomPage[]> {
   for (const locale of newsroomLocales) {
     const posts = allPosts.filter((post) => post.locale === locale);
     const labels = newsroomLabels(locale);
-    const totalPages = Math.max(1, Math.ceil(posts.length / postsPerPage));
-    for (let page = 1; page <= totalPages; page++) {
-      pages.push({
-        kind: 'list', locale, url: newsroomPath(locale, page === 1 ? '' : `page/${page}/`),
-        title: page === 1 ? labels.title : locale === 'en' ? `Newsroom — Page ${page}` : `Newsroom — 第 ${page} 页`,
-        posts: posts.slice((page - 1) * postsPerPage, page * postsPerPage), currentPage: page, totalPages,
-      });
-    }
-    for (const category of getCategories(posts)) pages.push({ kind: 'list', locale, url: category.url, title: category.name, posts: posts.filter((post) => post.category.slug === category.slug) });
-    for (const tag of getTags(posts)) pages.push({ kind: 'list', locale, url: tag.url, title: tag.name, posts: posts.filter((post) => post.tags.some((item) => item.slug === tag.slug)) });
-    for (const archive of getArchives(posts, locale)) pages.push({ kind: 'list', locale, url: archive.url, title: archive.label, posts: posts.filter((post) => post.archiveKey === archive.key) });
+    pages.push(...createListPages(locale, newsroomPath(locale), labels.title, posts));
+    for (const category of getCategories(posts)) pages.push(...createListPages(locale, category.url, category.name, posts.filter((post) => post.category.slug === category.slug)));
+    for (const tag of getTags(posts)) pages.push(...createListPages(locale, tag.url, tag.name, posts.filter((post) => post.tags.some((item) => item.slug === tag.slug))));
+    for (const archive of getArchives(posts, locale)) pages.push(...createListPages(locale, archive.url, archive.label, posts.filter((post) => post.archiveKey === archive.key)));
     for (const post of posts) pages.push({ kind: 'article', locale, url: post.url, title: post.title, post, latestPosts: posts.filter((item) => item.articleId !== post.articleId).slice(0, 8) });
     pages.push({ kind: 'search', locale, url: newsroomPath(locale, 'search/'), title: labels.search });
   }
