@@ -1,4 +1,5 @@
 ---
+import LemonProductionLine from '@/components/home/LemonProductionLine.astro';
 import { toLocalizedHref } from '@/i18n/links';
 import { t } from '@/i18n/translate';
 import { getNewsPosts } from '@/lib/newsroom/content';
@@ -96,7 +97,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
     </div>
   </div>
 </div>
-<img src="https://websiteres.nmteam.xyz/nmwebsite/index/nmTeam_Website_Lemon_Line_Img.png" class="lemonLine" ondragstart="return false;" oncontextmenu="return false;" alt="Lemon Production Line" />
+<LemonProductionLine locale={locale} />
 <script is:inline>
   // Replay the saved scroll position now that the whole page is parsed
   // (native restoration is disabled in homeScrollRestore.js), then reveal

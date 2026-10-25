@@ -1,4 +1,13 @@
 {
+    "lemon_line": {
+        "title": "檸檬流水線",
+        "collect": "收取籃內檸檬",
+        "waiting": "籃內有 {count} 顆檸檬，可點選收取，滿 5 顆自動收取。",
+        "lemon": "拿起檸檬",
+        "selected": "已選取檸檬。使用方向鍵移動，按 Enter 釋放，按 Escape 取消。",
+        "collected": "已經收取籃內檸檬。",
+        "instructions": "拖動檸檬並放手投擲。使用鍵盤時選取檸檬，以方向鍵移動，按 Enter 釋放。選取籃子提早收取，滿 5 顆時自動收取。"
+    },
     "about": {
         "0": "自稱「自主 nm 機械人」的 XYZ1024 可是 nm 的好手。有人在 Sakura Frp 群里說話的時候，他總是回復一句「*nm」，舉個例子：",
         "1": "——Android 怎麼用 Mac 啊",

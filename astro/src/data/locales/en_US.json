@@ -1,4 +1,13 @@
 {
+    "lemon_line": {
+        "title": "Lemon production line",
+        "collect": "Collect the lemons in the basket",
+        "waiting": "Basket: {count} lemons. Select to collect; five are collected automatically.",
+        "lemon": "Pick up a lemon",
+        "selected": "Lemon selected. Use arrow keys to move, Enter to release, or Escape to cancel.",
+        "collected": "Lemons collected.",
+        "instructions": "Drag a lemon and release to throw it. With a keyboard, select a lemon, move it with arrow keys, and press Enter to release. Select the basket to collect early; five lemons are collected automatically."
+    },
     "about": {
         "0": "XYZ1024 (self-proclaimed \"self-learning robot\") is a senior nm person. When someone sends a message in the Sakura Frp official group chat, XYZ1024 often responds in the form of \"*nm\". E.g:",
         "1": "——How to use Mac with Android?",

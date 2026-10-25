@@ -1,0 +1,55 @@
+---
+import type { PublicLocale } from '@/i18n/locales';
+import { t } from '@/i18n/translate';
+
+interface Props { locale: PublicLocale }
+const { locale } = Astro.props;
+const labels = Object.fromEntries(['waiting', 'lemon', 'selected', 'collected']
+  .map(key => [`data-label-${key}`, t(locale, `lemon_line.${key}`)]));
+---
+<div class="lemonLine lemon-line" data-lemon-line data-testid="lemon-line" role="group" aria-label={t(locale, 'lemon_line.title')} {...labels}>
+  <img class="lemon-line__fallback" src="/src/img/lemon-line/fallback.svg" width="1296" height="393" alt={t(locale, 'lemon_line.title')} draggable="false" />
+  <noscript><img class="lemon-line__fallback lemon-line__noscript" src="/src/img/lemon-line/fallback.svg" width="1296" height="393" alt={t(locale, 'lemon_line.title')} /></noscript>
+  <canvas class="lemon-line__canvas" width="1296" height="393" aria-hidden="true"></canvas>
+  <div class="lemon-line__controls" data-lemon-controls>
+    <p class="lemon-line__sr" id="lemon-line-instructions">{t(locale, 'lemon_line.instructions')}</p>
+    <div class="lemon-line__hotspot lemon-line__machine" data-machine aria-hidden="true"></div>
+    <button type="button" class="lemon-line__hotspot lemon-line__basket" data-basket aria-label={t(locale, 'lemon_line.collect')}></button>
+    <span class="lemon-line__sr" data-notice role="status" aria-live="polite"></span>
+  </div>
+</div>
+<script>
+  import { initializeLemonLine } from '@/lib/lemon-line/initialize';
+
+  document.querySelectorAll<HTMLElement>('[data-lemon-line]').forEach(root => initializeLemonLine(root));
+</script>
+<style is:global>
+  .lemon-line { position: relative; overflow: hidden; isolation: isolate; }
+  .lemon-line__fallback, .lemon-line__canvas, .lemon-line__controls {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+  }
+  .lemon-line__fallback, .lemon-line__canvas, .lemon-line__controls { visibility: hidden; }
+  .lemon-line[data-fallback="true"] .lemon-line__fallback,
+  .lemon-line .lemon-line__noscript { visibility: visible; }
+  .lemon-line[data-ready="true"] .lemon-line__canvas,
+  .lemon-line[data-ready="true"][data-motion="animated"] .lemon-line__controls { visibility: visible; }
+  .lemon-line__canvas, .lemon-line__controls { pointer-events: none; }
+  .lemon-line__hotspot {
+    all: unset; box-sizing: border-box; position: absolute; top: 0; left: 0;
+    pointer-events: auto; cursor: pointer; touch-action: manipulation;
+    border-radius: 12px; -webkit-tap-highlight-color: transparent;
+  }
+  .lemon-line__hotspot[hidden] { display: none; }
+  .lemon-line__hotspot:focus { outline: none; box-shadow: none; }
+  .lemon-line:not([data-input="pointer"]) .lemon-line__hotspot:focus-visible {
+    outline: 2px solid #aa7710; outline-offset: -3px;
+  }
+  .lemon-line__machine, .lemon-line__basket { z-index: 3; }
+  .lemon-line__machine { cursor: default; }
+  .lemon-line__fruit { border-radius: 50%; touch-action: none; cursor: grab; }
+  .lemon-line__fruit[aria-pressed="true"] { cursor: grabbing; }
+  .lemon-line__sr {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+  }
+</style>
