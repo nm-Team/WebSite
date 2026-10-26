@@ -15,13 +15,13 @@ const externalIcon = `<svg class="svg" style="transform:scale(0.81)" viewBox="0 
 const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M761.056 532.128c0.512-0.992 1.344-1.824 1.792-2.848 8.8-18.304 5.92-40.704-9.664-55.424L399.936 139.744c-19.264-18.208-49.632-17.344-67.872 1.888-18.208 19.264-17.376 49.632 1.888 67.872l316.96 299.84-315.712 304.288c-19.072 18.4-19.648 48.768-1.248 67.872 9.408 9.792 21.984 14.688 34.56 14.688 12 0 24-4.48 33.312-13.44l350.048-337.376z"></path></svg>`;
 ---
 <h1 class="indexHeaderTitle">nmTeam</h1>
-<div class="indexHeader">
+<div class="indexHeader" id="top">
   <div class="indexHeaderBg" aria-hidden="true"></div>
   <div class="indexHeaderLogo" aria-hidden="true"></div>
   <div class="indexHeaderName" aria-hidden="true">nmTeam</div>
 </div>
 <div class="page-content">
-  <div class="page-section page-section--centered page-section--indented">
+  <div class="page-section page-section--centered page-section--indented" id="about">
     <h2 class="page-section-heading">{t(locale, 'index.what_is_nmteam')}</h2>
     <p>{t(locale, 'index.nmteam_is_this_a')}</p>
     <p>{t(locale, 'index.nmteam_is_this_b')}</p>
@@ -32,7 +32,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
       </a>
     </div>
   </div>
-  <div class="page-section page-section--centered page-section--indented">
+  <div class="page-section page-section--centered page-section--indented" id="products">
     <h2 class="page-section-heading">{t(locale, 'index.what_we_does')}</h2>
     <p>{t(locale, 'index.what_we_does_ans')}</p>
     <div class="swiper cardSwiper productsSwiper" data-grow>
@@ -55,7 +55,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
       </a>
     </div>
   </div>
-  <div class="page-section page-section--centered page-section--indented">
+  <div class="page-section page-section--centered page-section--indented" id="news">
     <h2 class="page-section-heading">{t(locale, 'index.newslist')}</h2>
     <div class="swiper cardSwiper newsSwiper" data-grow>
       <div class="swiper-wrapper" id="newsSwiperItems">
@@ -76,7 +76,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
       </a>
     </div>
   </div>
-  <div class="page-section page-section--centered page-section--indented">
+  <div class="page-section page-section--centered page-section--indented" id="contact">
     <h2 class="page-section-heading">{t(locale, 'index.connect_us')}</h2>
     <p>{t(locale, 'index.connect_para')}</p>
     <div class="action-links">
@@ -85,7 +85,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
       <a href="https://twitter.com/nmnmfun" target="_blank" rel="noopener noreferrer"><b>X&nbsp;</b>@nmnmfun<Fragment set:html={externalIcon} /></a>
     </div>
   </div>
-  <div class="page-section page-section--centered page-section--indented">
+  <div class="page-section page-section--centered page-section--indented" id="join">
     <h2 class="page-section-heading">{t(locale, 'index.join_us')}</h2>
     <p>{t(locale, 'index.join_para')}</p>
     <p>{t(locale, 'index.join_para_2')}</p>
@@ -111,7 +111,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
   // handler re-applies the position in case async content still shifts.
   try {
     var nmHomeScrollSaved = parseInt(sessionStorage.getItem('nmHomeScrollY'), 10);
-    if (nmHomeScrollSaved > 0) {
+    if (!window.location.hash && nmHomeScrollSaved > 0) {
       var nmHomeScrollDone = false;
       var nmHomeScrollReveal = function () {
         document.documentElement.removeAttribute('data-nm-home-restore');
@@ -123,7 +123,7 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
       var nmHomeScrollFinish = function () {
         if (nmHomeScrollDone) return;
         nmHomeScrollDone = true;
-        window.scrollTo(0, nmHomeScrollSaved);
+        if (!window.location.hash) window.scrollTo(0, nmHomeScrollSaved);
         nmHomeScrollReveal();
       };
       window.scrollTo(0, nmHomeScrollSaved);
@@ -133,7 +133,9 @@ const arrowIcon = `<svg class="svg" viewBox="0 0 1024 1024" version="1.1" xmlns=
       } else {
         nmHomeScrollFinish();
       }
-      window.addEventListener('load', function () { window.scrollTo(0, nmHomeScrollSaved); });
+      window.addEventListener('load', function () {
+        if (!window.location.hash) window.scrollTo(0, nmHomeScrollSaved);
+      });
     } else {
       document.documentElement.removeAttribute('data-nm-home-restore');
       document.documentElement.removeAttribute('data-nm-home-no-transition');

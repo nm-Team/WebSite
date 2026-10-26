@@ -7,7 +7,7 @@ const { locale } = Astro.props;
 const labels = Object.fromEntries(['waiting', 'lemon', 'selected', 'collected']
   .map(key => [`data-label-${key}`, t(locale, `lemon_line.${key}`)]));
 ---
-<div class="lemonLine lemon-line" data-lemon-line data-testid="lemon-line" role="group" aria-label={t(locale, 'lemon_line.title')} {...labels}>
+<div class="lemonLine lemon-line" id="lemon-line" data-lemon-line data-testid="lemon-line" role="group" aria-label={t(locale, 'lemon_line.title')} {...labels}>
   <img class="lemon-line__fallback" src="/src/img/lemon-line/fallback.svg" width="1296" height="393" alt={t(locale, 'lemon_line.title')} draggable="false" />
   <noscript><img class="lemon-line__fallback lemon-line__noscript" src="/src/img/lemon-line/fallback.svg" width="1296" height="393" alt={t(locale, 'lemon_line.title')} /></noscript>
   <canvas class="lemon-line__canvas" width="1296" height="393" aria-hidden="true"></canvas>

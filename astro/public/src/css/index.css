@@ -24,6 +24,16 @@ body {
     overflow-x: hidden;
 }
 
+.page-section[id],
+.lemonLine[id] {
+    scroll-margin-top: 82px;
+}
+
+/* Keep the fragment target stationary while the browser positions it. */
+.page-content:has(.page-section:target) {
+    animation: none;
+}
+
 /* Set by homeScrollRestore.js when a saved scroll position is replayed:
    keep the page hidden until the inline script at the end of the home page
    has scrolled to it, so the first painted frame is already in place. */
