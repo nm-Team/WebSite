@@ -1,0 +1,21 @@
+---
+import SecondaryNavigation from '@/components/layout/SecondaryNavigation.astro';
+import { getNmBotText } from '@/components/products/nmbot/nmBotText';
+import { toLocalizedHref } from '@/i18n/links';
+import type { PublicLocale } from '@/i18n/locales';
+import { t } from '@/i18n/translate';
+
+interface Props { locale: PublicLocale }
+const { locale } = Astro.props;
+const links = [
+  { name: getNmBotText(locale, 'products.nmbot_telegram.go_to_panel'), url: 'https://nmbot.nmnm.fun?ref=nmBotHeader', target: '_blank', rel: 'noopener noreferrer' },
+  { name: getNmBotText(locale, 'products.nmbot_telegram.start_use'), url: 'https://t.me/nmnmfunbot', target: '_blank', rel: 'noopener noreferrer', primary: true },
+];
+---
+<SecondaryNavigation
+  id="nmbot"
+  title={getNmBotText(locale, 'products.nmbot_telegram.header_name')}
+  href={toLocalizedHref(locale, '/nmBot-Telegram/')}
+  menuLabel={t(locale, 'header.nav_button_aria_label')}
+  links={links}
+/>

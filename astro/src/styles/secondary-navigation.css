@@ -61,7 +61,7 @@
 .secondary-navigation[data-stuck] .secondary-navigation-panel-content {
   margin-inline: var(--secondary-navigation-content-gutter, var(--site-chrome-gutter));
 }
-.secondary-navigation a:where(:link, :visited) {
+.secondary-navigation a:is(:link, :visited) {
   color: var(--secondary-navigation-link, var(--header-a));
   text-decoration: none;
 }
@@ -82,6 +82,15 @@
 }
 .secondary-navigation-links { display: flex; align-items: center; gap: 24px; }
 .secondary-navigation-links a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; }
+.secondary-navigation-action {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-hover);
+  color: #000;
+  font-size: 14px;
+  line-height: 1.5;
+}
 .secondary-navigation-toggle {
   display: none;
   position: relative;

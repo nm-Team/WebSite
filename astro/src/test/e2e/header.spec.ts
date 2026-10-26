@@ -31,6 +31,7 @@ test('starts scroll-driven header transitions without delay', async ({ page }) =
   await page.goto('/');
 
   const header = page.locator('#pageHeader');
+  await expect(header).toHaveCSS('position', 'fixed');
   await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
   await expect(header).not.toHaveClass(/\bhidden\b/);
 
@@ -49,6 +50,7 @@ test('keeps the legacy stagger scoped to mobile menu closing', async ({ page }, 
 
   const header = page.locator('#pageHeader');
   const menuToggle = page.locator('#menu-toggle');
+  await expect(header).toHaveCSS('position', 'fixed');
 
   await menuToggle.click();
   await expect(header).toHaveAttribute('open', 'true');

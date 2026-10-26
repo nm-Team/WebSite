@@ -21,7 +21,7 @@ export default defineConfig({
     { name: 'desktop', use: { viewport: { width: 1440, height: 1000 }, browserName: 'chromium' } },
     {
       name: 'webkit-mobile',
-      testMatch: ['newsroom-sticky-width.spec.ts', 'newsroom-navigation.spec.ts', 'home-lemon-line.spec.ts'],
+      testMatch: ['newsroom-sticky-width.spec.ts', 'newsroom-navigation.spec.ts', 'nmbot-navigation.spec.ts', 'home-lemon-line.spec.ts'],
       use: { ...devices['iPhone 13'], browserName: 'webkit' },
     },
   ],

@@ -6,7 +6,7 @@ interface Props {
   title: string;
   href: string;
   menuLabel: string;
-  links: { name: string; url: string; target?: string; rel?: string }[];
+  links: { name: string; url: string; target?: string; rel?: string; primary?: boolean }[];
 }
 
 const { id, title, href, menuLabel, links } = Astro.props;
@@ -16,7 +16,7 @@ const { id, title, href, menuLabel, links } = Astro.props;
     <div class="container secondary-navigation-bar">
       <a class="site-name-text" href={href}>{title}</a>
       <nav id={`${id}-nav-menu`} class="secondary-navigation-links" aria-label={menuLabel}>
-        {links.map((link) => <a href={link.url} target={link.target} rel={link.rel} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
+        {links.map((link) => <a href={link.url} target={link.target} rel={link.rel} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.primary ? <span class="secondary-navigation-action">{link.name}</span> : link.name}</a>)}
       </nav>
       <button id={`${id}-menu-toggle`} class="secondary-navigation-toggle" aria-label={menuLabel} aria-controls={`${id}-extended-menu`} aria-expanded="false" data-nav-menu-extended="false">
         <span class="bar bar-1"></span><span class="bar bar-2"></span>
@@ -25,7 +25,7 @@ const { id, title, href, menuLabel, links } = Astro.props;
     <div id={`${id}-extended-menu`} class="secondary-navigation-panel" data-nav-menu-extended="false" inert>
       <div class="secondary-navigation-panel-content">
         <nav id={`${id}-extend-nav-menu`} class="secondary-navigation-mobile-links" aria-label={menuLabel}>
-          {links.map((link) => <a href={link.url} target={link.target} rel={link.rel} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.name}</a>)}
+          {links.map((link) => <a href={link.url} target={link.target} rel={link.rel} aria-current={Astro.url.pathname === link.url ? 'page' : undefined}>{link.primary ? <span class="secondary-navigation-action">{link.name}</span> : link.name}</a>)}
         </nav>
       </div>
     </div>

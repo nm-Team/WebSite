@@ -388,28 +388,6 @@ const clientScript = `
     }, 50);
   }
 
-  function initProductHeader() {
-    const nmBotHeader = document.querySelector("#pageHeader .product-header");
-    if (!nmBotHeader) return;
-    const pageHeaders = document.querySelectorAll("#pageHeader .left, #pageHeader .right, #pageHeader .menu-toggle");
-    let lastScrollTop;
-    function calcPageHeader() {
-      const scrollTop = document.documentElement.scrollTop;
-      const scrollPercent = scrollTop / window.innerHeight;
-      if (scrollPercent > 1 && (!lastScrollTop || scrollTop - lastScrollTop > 1)) {
-        pageHeaders.forEach((item) => item.setAttribute("data-hide", "true"));
-        nmBotHeader.setAttribute("data-hide", "false");
-      } else if (scrollPercent < 1 || (lastScrollTop && scrollTop - lastScrollTop < -1)) {
-        pageHeaders.forEach((item) => item.setAttribute("data-hide", "false"));
-        nmBotHeader.setAttribute("data-hide", "true");
-      }
-      lastScrollTop = scrollTop;
-    }
-    window.addEventListener("scroll", calcPageHeader);
-    window.addEventListener("resize", calcPageHeader);
-    calcPageHeader();
-  }
-
   window.addEventListener("scroll", calcBackgroundPositionY);
   window.addEventListener("resize", calcBackgroundPositionY);
   window.addEventListener("scroll", calcPanelScreenshotImage);
@@ -424,7 +402,6 @@ const clientScript = `
 
   initFeaturesList();
   initHalo();
-  initProductHeader();
   calcBackgroundPositionY();
   calcPanelScreenshotImage();
   calcDataBlock();

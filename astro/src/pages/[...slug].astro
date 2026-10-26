@@ -3,7 +3,7 @@ import { defaultLocale } from '@/i18n/locales';
 import { routeManifest, type RouteEntry } from '@/i18n/routes';
 import PageContent from '@/components/pages/PageContent.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { buildNmBotProductHeaderHtml } from '@/components/products/nmbot/productHeader';
+import NmBotNavigation from '@/components/products/nmbot/NmBotNavigation.astro';
 import { getPageMetadata } from '@/utils/page-metadata';
 import nmBotStyles from '@/styles/nmbot.css?url';
 
@@ -37,11 +37,11 @@ const metadata = getPageMetadata(route, defaultLocale);
   pageUpdate={route.pageUpdate}
   constTheme={route.id === 'products-overview-nmbot-telegram' ? 'dark' : undefined}
   htmlData={route.id === 'products-overview-nmbot-telegram' ? { 'data-nmbot-page': 'true' } : undefined}
-  disallowHideHeader={route.id === 'products-overview-nmbot-telegram'}
   hideHeaderTitle={route.id === 'home'}
-  productHeaderHtml={route.id === 'products-overview-nmbot-telegram' ? buildNmBotProductHeaderHtml(defaultLocale) : undefined}
+  navigationMode={route.id === 'products-overview-nmbot-telegram' ? 'flow' : 'fixed'}
   lang={defaultLocale}
   enableLanguageRedirect
 >
+  {route.id === 'products-overview-nmbot-telegram' && <NmBotNavigation slot="secondary-navigation" locale={defaultLocale} />}
   <PageContent route={route} locale={defaultLocale} />
 </BaseLayout>

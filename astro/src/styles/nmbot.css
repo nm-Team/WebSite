@@ -2,6 +2,14 @@ html[data-nmbot-page="true"] {
         font-size: min(0.25vw, 0.25vh, 1px);
 }
 
+html[data-nmbot-page="true"] [data-secondary-navigation-content] {
+    --secondary-navigation-content-gutter: max(var(--site-chrome-gutter), calc((100% - 990px) / 2));
+}
+
+html[data-nmbot-page="true"] #main-content {
+    scroll-margin-top: 60px;
+}
+
 .nmbot-telegram {
         --intelligence-gradient-color-0: #fdff8a;
         --intelligence-gradient-color-1: #FFEE7E;
@@ -20,7 +28,7 @@ html[data-nmbot-page="true"] {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: -80rem;
+        margin-top: 0;
         background-color: #1a1a1a;
         color: #ffffff;
         text-align: center;
@@ -658,88 +666,3 @@ html[data-nmbot-page="true"] {
             line-height: 1.5;
             margin-bottom: 10rem;
         }
-
-html[data-nmbot-page="true"] .product-header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: -1px;
-        transform: translate(0, 120%);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        transition: transform 0.4s;
-        pointer-events: none;
-    }
-
-    html[data-nmbot-page="true"] #hcont .product-header {
-        padding: 0 10%;
-    }
-
-    html[data-nmbot-page="true"] .product-header .product-header-inner {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 990px;
-    }
-
-    html[data-nmbot-page="true"] .product-header[data-hide=false] {
-        pointer-events: auto;
-    }
-
-    html[data-nmbot-page="true"] .product-header .product-name {
-        font-size: 20px;
-        font-weight: 500;
-        color: var(--header-name);
-    }
-
-    html[data-nmbot-page="true"] .product-header .action-buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    html[data-nmbot-page="true"] .product-header .action-button {
-        padding: 5px 10px !important;
-        margin-left: 5px !important;
-        font-size: 14px !important;
-        font-weight: 400 !important;
-        color: var(--header-a) !important;
-        border: none !important;
-        border-radius: 500px !important;
-        cursor: pointer !important;
-        text-decoration: none !important;
-    }
-
-    html[data-nmbot-page="true"] .product-header .action-button.primary {
-        background-color: #ead050 !important;
-        color: #000000 !important;
-    }
-
-    html[data-nmbot-page="true"] #hcont #pageHeader {
-        overflow: hidden;
-    }
-
-    html[data-nmbot-page="true"] #hcont .header:not([open]) .left,
-    html[data-nmbot-page="true"] #hcont .header:not([open]) .right,
-    html[data-nmbot-page="true"] #hcont .header:not([open]) .menu-toggle,
-    html[data-nmbot-page="true"] #hcont .header:not([open]) .product-header {
-        transition: transform 0.4s !important;
-    }
-
-    html[data-nmbot-page="true"] #pageHeader .left[data-hide=true],
-    html[data-nmbot-page="true"] #pageHeader .right[data-hide=true],
-    html[data-nmbot-page="true"] #pageHeader .menu-toggle[data-hide=true] {
-        transform: translate(0, -200%);
-        pointer-events: none;
-    }
-
-    html[data-nmbot-page="true"] .product-header[data-hide=false] {
-        transform: translate(0, 0%);
-    }

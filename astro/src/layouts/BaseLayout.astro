@@ -22,7 +22,7 @@ interface Props {
   constTheme?: string;
   disallowHideHeader?: boolean;
   hideHeaderTitle?: boolean;
-  productHeaderHtml?: string;
+  navigationMode?: 'fixed' | 'flow';
   enableLanguageRedirect?: boolean;
   htmlData?: Record<string, string>;
 }
@@ -43,11 +43,12 @@ const {
   constTheme,
   disallowHideHeader = false,
   hideHeaderTitle = false,
-  productHeaderHtml,
+  navigationMode = 'fixed',
   enableLanguageRedirect = false,
   htmlData = {},
 } = Astro.props;
 
+const hasSecondaryNavigation = navigationMode === 'flow';
 const htmlAttributes = {
   ...htmlData,
   ...(constTheme ? { 'data-theme': constTheme, 'data-theme-is-const': 'true' } : {}),
@@ -74,12 +75,17 @@ const clearLegacyLanParamScript = Astro.url.searchParams.has('lan') ? "const url
   </head>
   <body>
     <CookieConsent locale={lang} />
-    <Header locale={lang} disallowHideHeader={disallowHideHeader} hideHeaderTitle={hideHeaderTitle} productHeaderHtml={productHeaderHtml} />
+    <Header locale={lang} disallowHideHeader={disallowHideHeader} hideHeaderTitle={hideHeaderTitle} navigationMode={navigationMode} />
     <script is:inline src="/src/js/header.js"></script>
     <script is:inline src="/src/js/jquery.min.js"></script>
-    <main id="main-content" tabindex="-1">
-      <slot />
-    </main>
+    {hasSecondaryNavigation ? (
+      <div data-secondary-navigation-content>
+        <slot name="secondary-navigation" />
+        <main id="main-content" tabindex="-1"><slot /></main>
+      </div>
+    ) : (
+      <main id="main-content" tabindex="-1"><slot /></main>
+    )}
     <Footer locale={lang} pageUpdate={pageUpdate} />
     {bodyJs.map((src) => <script is:inline src={src}></script>)}
     {clearLegacyLanParamScript && <script is:inline set:html={clearLegacyLanParamScript}></script>}

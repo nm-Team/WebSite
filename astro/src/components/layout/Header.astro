@@ -8,12 +8,11 @@ interface Props {
   locale: PublicLocale;
   disallowHideHeader?: boolean;
   hideHeaderTitle?: boolean;
-  productHeaderHtml?: string;
   navigationMode?: 'fixed' | 'flow';
   skipTarget?: string;
 }
 
-const { locale, disallowHideHeader = false, hideHeaderTitle = false, productHeaderHtml, navigationMode = 'fixed', skipTarget = '#main-content' } = Astro.props;
+const { locale, disallowHideHeader = false, hideHeaderTitle = false, navigationMode = 'fixed', skipTarget = '#main-content' } = Astro.props;
 const disallowHideHeaderScript = `disallowHideHeader = ${disallowHideHeader || navigationMode === 'flow' ? 'true' : 'false'};`;
 const href = (path: string) => toLocalizedHref(locale, path);
 ---
@@ -24,11 +23,11 @@ const href = (path: string) => toLocalizedHref(locale, path);
 <div id="hcont" data-navigation-mode={navigationMode}>
   {navigationMode === 'fixed' && <div class="placeHolder"></div>}
   <div class:list={['header', { hidden: navigationMode === 'fixed', hidetitle: hideHeaderTitle }]} id="pageHeader">
-    <a class="left" href={href('/')} aria-label={t(locale, 'header.title_button_aria_label')} data-hide={productHeaderHtml ? 'true' : undefined}>
+    <a class="left" href={href('/')} aria-label={t(locale, 'header.title_button_aria_label')}>
       <i class="logo" aria-label={t(locale, 'header.title_icon_aria_label')}></i>
       <p class="name">nmTeam</p>
     </a>
-    <div class="right" id="nav-menu" onclick="openHeader(false);" data-hide={productHeaderHtml ? 'true' : undefined}>
+    <div class="right" id="nav-menu" onclick="openHeader(false);">
       <div class="links">
         <a href={href('/')} aria-label={t(locale, 'header.home')}>{t(locale, 'header.home')}</a>
         <a href={href('/products/')} aria-label={t(locale, 'header.products')}>{t(locale, 'header.products')}</a>
@@ -49,12 +48,10 @@ const href = (path: string) => toLocalizedHref(locale, path);
       data-nav-menu-extended="false"
       onclick="openHeader()"
       aria-label={t(locale, 'header.nav_button_aria_label')}
-      data-hide={productHeaderHtml ? 'true' : undefined}
     >
       <span class="bar bar-1"></span>
       <span class="bar bar-2"></span>
       <span class="bar bar-3"></span>
     </button>
-    {productHeaderHtml && <div class="product-header" data-hide="true" set:html={productHeaderHtml} />}
   </div>
 </div>
