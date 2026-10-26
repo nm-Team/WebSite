@@ -20,6 +20,7 @@
   height: 52px;
 }
 .secondary-navigation {
+  --secondary-navigation-filter: none;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -28,17 +29,19 @@
   color: var(--secondary-navigation-text, var(--color-text-primary));
   background: transparent;
   border-bottom: 1px solid transparent;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
+  backdrop-filter: var(--secondary-navigation-filter);
   font: 14px / 1.5 var(--font-sans);
   transition: grid-template-rows var(--secondary-navigation-menu-duration) var(--motion-ease-out);
 }
 .secondary-navigation[data-stuck],
 .secondary-navigation[data-menu-visible] {
+  --secondary-navigation-filter: blur(22px) saturate(1.5);
   background: var(--secondary-navigation-background, var(--glass-background));
   border-bottom-color: var(--color-border-subtle);
-  -webkit-backdrop-filter: blur(22px) saturate(1.5);
-  backdrop-filter: blur(22px) saturate(1.5);
+}
+/* Keep the WebKit fallback separate so CSS minification preserves it. */
+@supports (-webkit-backdrop-filter: blur(0)) {
+  .secondary-navigation { -webkit-backdrop-filter: var(--secondary-navigation-filter); }
 }
 .secondary-navigation[data-nav-menu-extended="true"] { grid-template-rows: 51px 1fr; }
 .secondary-navigation .secondary-navigation-bar {
