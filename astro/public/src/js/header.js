@@ -61,7 +61,7 @@ function openHeader(to) {
 	}
 }
 
-window.addEventListener("newsroom-navigation-open", function () {
+window.addEventListener("secondary-navigation-open", function () {
 	if (document.getElementById("pageHeader").hasAttribute("open")) openHeader(false);
 });
 

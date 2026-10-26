@@ -22,7 +22,6 @@ const { locale } = Astro.props;
     <SiteAssets pageStyles={false} />
     <link rel="stylesheet" href="/newsroom/theme/normalize.css" />
     <link rel="stylesheet" href="/newsroom/theme/style.css" />
-    <link rel="stylesheet" href="/newsroom/theme/navigation.css" />
     <link rel="stylesheet" href="/newsroom/theme/enhancements.css" />
     <link rel="stylesheet" href="/newsroom/theme/integration.css" />
   </head>
@@ -30,13 +29,13 @@ const { locale } = Astro.props;
     <CookieConsent locale={locale} />
     <GlobalHeader locale={locale} navigationMode="flow" skipTarget="#newsroom-main" />
     <script is:inline src="/src/js/header.js"></script>
-    <div class="newsroom-shell" data-newsroom-content={Astro.props.post ? 'article' : 'list'}>
-      <div class="newsroom-header-slot"><Header locale={locale} /></div>
+    <div class="newsroom-shell" data-secondary-navigation-content data-newsroom-content={Astro.props.post ? 'article' : 'list'}>
+      <Header locale={locale} />
       <main id="newsroom-main" tabindex="-1"><div class="container"><div class="row"><slot /></div></div></main>
     </div>
     <GlobalFooter locale={locale} />
     <script>
-      import '@/scripts/newsroom/navigation';
+      import '@/scripts/newsroom/motion';
     </script>
   </body>
 </html>

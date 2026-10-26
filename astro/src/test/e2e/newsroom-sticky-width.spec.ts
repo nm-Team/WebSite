@@ -55,7 +55,7 @@ test('the popup follows the sticky header width through resize and scroll revers
   await trigger.click();
   await expect(page.locator('#newsroom-extended-menu')).toHaveCSS('opacity', '1');
   const topRow = (await bar.boundingBox())!;
-  const popup = (await page.locator('.newsroom-panel-content').boundingBox())!;
+  const popup = (await page.locator('.secondary-navigation-panel-content').boundingBox())!;
   expect(Math.abs(topRow.x - popup.x)).toBeLessThan(1);
   expect(Math.abs(topRow.width - popup.width)).toBeLessThan(1);
   await page.keyboard.press('Escape');

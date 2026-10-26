@@ -1,7 +1,11 @@
-/* Shared header flow and local navigation positioning. */
-html.newsroom-site { --newsroom-chrome-gutter: 10%; }
+/* Newsroom content widths and navigation theme. */
 .newsroom-shell {
   --newsroom-content-gutter: 20rem;
+  --secondary-navigation-content-gutter: var(--newsroom-content-gutter);
+  --secondary-navigation-text: var(--newsroom-color-text);
+  --secondary-navigation-background: var(--newsroom-color-header-background);
+  --secondary-navigation-link: var(--newsroom-color-header-nav-link);
+  --secondary-navigation-menu-icon: var(--newsroom-color-header-menu-icon);
 }
 @media (min-width: 750px) {
   .newsroom-shell { --newsroom-content-gutter: max(20rem, calc((100% - 376rem) / 2)); }
@@ -18,67 +22,17 @@ html.newsroom-site { --newsroom-chrome-gutter: 10%; }
   margin-inline: var(--newsroom-content-gutter);
   padding-inline: 0;
 }
-#hcont[data-navigation-mode="flow"] {
-  position: relative;
-  z-index: 200;
-  height: 62px;
-}
-#hcont[data-navigation-mode="flow"] .header {
-  position: relative;
-  padding-inline: var(--newsroom-chrome-gutter);
-}
-#hcont[data-navigation-mode="flow"] * { font-family: var(--font-sans); }
-#hcont[data-navigation-mode="flow"] *:focus-visible { outline: var(--focus-ring); }
-.newsroom-header-slot {
-  position: sticky;
-  top: 0;
-  z-index: 90;
-  height: 52px;
-}
 .newsroom-shell #newsroom-main > .container { margin-top: 0; }
 #newsroom-main {
   scroll-margin-top: 60px;
   padding-bottom: 48px;
 }
-#newsroom-header .container,
-#newsroom-header .newsroom-panel-content {
-  width: auto;
-  max-width: none;
-  margin-inline: var(--newsroom-chrome-gutter);
-}
-#newsroom-header[data-stuck] .container,
-#newsroom-header[data-stuck] .newsroom-panel-content {
-  margin-inline: var(--newsroom-content-gutter);
-}
-@media (width > 900px) {
-  #newsroom-nav-menu { padding-right: 0; }
-  /* Match the account label inside its 14px padding and 1px border. */
-  #newsroom-header:not([data-stuck]) #newsroom-nav-menu { padding-right: 15px; }
-}
 .newsroom-site #fcont {
   margin-top: 0;
-  padding-inline: var(--newsroom-chrome-gutter);
+  padding-inline: var(--site-chrome-gutter);
 }
 .newsroom-site #fcont * { font-family: var(--font-sans); }
 .newsroom-site #fcont *:focus-visible { outline: var(--focus-ring); }
-@media (width <= 900px) {
-  html.newsroom-site { --newsroom-chrome-gutter: 20px; }
-}
 @media (width < 700px) {
-  html.newsroom-site { --newsroom-chrome-gutter: clamp(16px, 5vw, 20px); }
-  #hcont[data-navigation-mode="flow"] { height: 56px; }
-  #hcont[data-navigation-mode="flow"] .header[open] { position: fixed; }
-  #hcont[data-navigation-mode="flow"] .header .left { margin-inline: 0; }
-  #hcont[data-navigation-mode="flow"] .header .menu-toggle {
-    right: calc(var(--newsroom-chrome-gutter) - 8px);
-    width: 44px;
-    height: 44px;
-  }
-  .newsroom-header-slot { height: 48px; }
   #newsroom-main { padding-bottom: 32px; }
-}
-@media (min-width: 700px) and (max-width: 900px) {
-  #hcont[data-navigation-mode="flow"] .header .right .links a { padding-inline: 8px; }
-  #hcont[data-navigation-mode="flow"] .header .right .accountBox p { display: none; }
-  #hcont[data-navigation-mode="flow"] .header .right .accountBox { padding: 5px; }
 }

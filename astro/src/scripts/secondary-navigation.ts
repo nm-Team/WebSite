@@ -1,10 +1,12 @@
-const header = document.querySelector<HTMLElement>('#newsroom-header');
-const headerSlot = document.querySelector<HTMLElement>('.newsroom-header-slot');
-const toggle = document.querySelector<HTMLButtonElement>('#newsroom-menu-toggle');
-const panel = document.querySelector<HTMLElement>('#newsroom-extended-menu');
-const backdrop = document.querySelector<HTMLElement>('[data-newsroom-backdrop]');
+export {};
+
+const header = document.querySelector<HTMLElement>('.secondary-navigation');
+const headerSlot = document.querySelector<HTMLElement>('.secondary-navigation-slot');
+const toggle = header?.querySelector<HTMLButtonElement>('.secondary-navigation-toggle');
+const panel = header?.querySelector<HTMLElement>('.secondary-navigation-panel');
+const backdrop = headerSlot?.querySelector<HTMLElement>('.secondary-navigation-backdrop');
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-const gutterElements = [...document.querySelectorAll<HTMLElement>('#newsroom-header .site-name-text, #newsroom-nav-menu, #newsroom-menu-toggle, .newsroom-panel-content')];
+const gutterElements = [...document.querySelectorAll<HTMLElement>('.secondary-navigation .site-name-text, .secondary-navigation-links, .secondary-navigation-toggle, .secondary-navigation-panel-content')];
 const gutterAnimations = new Map<HTMLElement, Animation>();
 let returnFocus: HTMLElement | null = null;
 let stickyUpdatePending = false;
@@ -60,8 +62,8 @@ function setOpen(open: boolean, instant = false) {
   header.dataset.instantToggle = String(instant);
   if (open) returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
   if (open) {
-    window.dispatchEvent(new CustomEvent('newsroom-navigation-open'));
-    header.style.setProperty('--newsroom-header-offset', `${Math.max(0, header.getBoundingClientRect().top)}px`);
+    window.dispatchEvent(new CustomEvent('secondary-navigation-open'));
+    header.style.setProperty('--secondary-navigation-offset', `${Math.max(0, header.getBoundingClientRect().top)}px`);
   }
   header.querySelectorAll('[data-nav-menu-extended]').forEach((element) => element.setAttribute('data-nav-menu-extended', String(open)));
   header.dataset.navMenuExtended = String(open);
@@ -78,7 +80,7 @@ function setOpen(open: boolean, instant = false) {
   document.body.style.overflow = open || document.getElementById('pageHeader')?.hasAttribute('open') ? 'hidden' : '';
   toggle.setAttribute('aria-expanded', String(open));
   panel.inert = !open;
-  document.querySelectorAll<HTMLElement>('#newsroom-main, #fcont').forEach((element) => { element.inert = open; });
+  document.querySelectorAll<HTMLElement>('main, #fcont').forEach((element) => { element.inert = open; });
   if (open) panel.querySelector<HTMLElement>('a, input, button')?.focus({ preventScroll: true });
   else if (header.contains(document.activeElement)) returnFocus?.focus({ preventScroll: true });
 }
@@ -106,21 +108,10 @@ window.addEventListener('resize', () => setOpen(false, true));
 window.addEventListener('site-navigation-toggle', (event) => {
   const open = (event as CustomEvent<{ open: boolean }>).detail.open;
   if (open) setOpen(false, true);
-  document.querySelectorAll<HTMLElement>('.newsroom-shell, #fcont').forEach((element) => { element.inert = open; });
+  document.querySelectorAll<HTMLElement>('[data-secondary-navigation-content], #fcont').forEach((element) => { element.inert = open; });
 });
 
-const cards = document.querySelectorAll('.newsroom-shell .come-out-animation');
-const cardObserver = new IntersectionObserver((entries) => {
-  for (const entry of entries) entry.target.toggleAttribute('data-come-out-animation', entry.isIntersecting);
-});
-function updateCardMotion() {
+motionPreference.addEventListener('change', () => {
   if (motionPreference.matches) cancelGutterAnimations();
   if (motionPreference.matches && header?.dataset.navMenuExtended === 'false') header.removeAttribute('data-menu-visible');
-  cardObserver.disconnect();
-  for (const card of cards) {
-    card.removeAttribute('data-come-out-animation');
-    if (!motionPreference.matches) cardObserver.observe(card);
-  }
-}
-updateCardMotion();
-motionPreference.addEventListener('change', updateCardMotion);
+});
