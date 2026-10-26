@@ -32,12 +32,12 @@ export const scene = {
   step: 1 / 60,
 } as const;
 
-// Leave room for the full-size artwork beyond each fruit's smaller collision body.
+// Let the full-size artwork meet the frame with a small amount of natural overhang.
 export const basketInterior: Rect = {
-  x: scene.basket.x + 20,
+  x: scene.basket.x + 12,
   y: scene.basket.y,
-  width: scene.basket.width - 40,
-  height: scene.basket.height - 24,
+  width: scene.basket.width - 24,
+  height: scene.basket.height - 12,
 };
 
 export const basketFloorAngle = Math.PI / 60;

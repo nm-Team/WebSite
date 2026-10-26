@@ -26,8 +26,8 @@ transient physics contacts. New fruit starts completely outside the left edge.
 
 Lemon artwork and equipment keep their original dimensions. The collision ellipse
 is 52 by 52 design units, allowing four fruit across the existing basket with
-partial visual overlap. Basket collision faces sit 20 units inside the side edges
-and 24 units above the bottom, leaving room for the larger artwork and its rotation.
+partial visual overlap. Basket collision faces sit 12 units inside the side edges
+and 12 units above the bottom so the artwork meets the frame with slight overhang.
 The hidden floor slopes three degrees toward the right to fill the lower row.
 The initial collected fruit rests at the right end of that floor.
 Automatic collection starts at five settled fruit.
