@@ -307,6 +307,56 @@ function nmApplyState(morphed) {
     }
 }
 
+// Keep the links' layout space while hero artwork passes through their area.
+// Only track animation frames while the artwork is moving; scroll and resize
+// schedule a single measurement when the hero is otherwise at rest.
+var nmHeader = document.getElementById("pageHeader");
+var nmHeaderLinks = nmHeader.querySelector(".links");
+var nmDesktopHeader = window.matchMedia("(min-width: 700px)");
+var nmLinksHidden = false;
+var nmLinksFrame = 0;
+
+function nmScheduleHeroLinks() {
+    if (!nmLinksFrame) nmLinksFrame = requestAnimationFrame(nmUpdateHeroLinks);
+}
+
+function nmUpdateHeroLinks() {
+    nmLinksFrame = 0;
+    var hidden = false;
+    var moving = false;
+
+    // Allow links to return at takeoff; CSS briefly staggers their fade-in.
+    if (!nmMorphed && nmDesktopHeader.matches && !nmHeader.hasAttribute("open")) {
+        var linksRect = nmHeaderLinks.getBoundingClientRect();
+        // Keep a small release margin to prevent flicker without delaying restoration.
+        var margin = nmLinksHidden ? 6 : 4;
+        nmFlyers.forEach(function (f) {
+            var artwork = f.clone || f.source;
+            if (!artwork) return;
+            if (artwork.getAnimations().some(function (animation) {
+                return animation.playState === "running";
+            })) moving = true;
+            var style = window.getComputedStyle(artwork);
+            if (style.visibility !== "visible" || Number(style.opacity) === 0) return;
+            var rect = f.scaleByFont ? nmGlyphRect(artwork) : artwork.getBoundingClientRect();
+            if (rect.left < linksRect.right + margin && rect.right > linksRect.left - margin &&
+                rect.top < linksRect.bottom + margin && rect.bottom > linksRect.top - margin) {
+                hidden = true;
+            }
+        });
+    }
+
+    if (hidden !== nmLinksHidden) {
+        nmLinksHidden = hidden;
+        nmHeader.toggleAttribute("data-hero-links-hidden", hidden);
+        nmHeaderLinks.inert = hidden;
+    }
+    if (moving) nmScheduleHeroLinks();
+}
+
+var nmHeaderSizeObserver = new ResizeObserver(nmScheduleHeroLinks);
+nmHeaderSizeObserver.observe(nmHeader.querySelector(".right"));
+
 function setHeader() {
     if (!nmHero) return;
     var heroH = nmHero.getBoundingClientRect().height;
@@ -318,6 +368,7 @@ function setHeader() {
     nmApplyState(nmMorphed === true
         ? window.scrollY > threshold - 36
         : window.scrollY > threshold);
+    nmScheduleHeroLinks();
 }
 
 window.onscroll = setHeader;

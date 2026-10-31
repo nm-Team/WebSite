@@ -51,6 +51,38 @@ html[data-nm-home-no-transition] #hcont #pageHeader * {
     transition: none !important;
 }
 
+/* Keep account placement stable while the hero temporarily needs this space.
+   Override the shared header's delayed visibility transitions on desktop. */
+@media (min-width: 700px) {
+    #hcont #pageHeader:not(.hidden) {
+        --hero-links-reveal-delay: 0.08s;
+    }
+
+    #hcont #pageHeader .links {
+        transition: opacity 0.06s var(--motion-ease-out) var(--hero-links-reveal-delay, 0s), visibility 0s var(--hero-links-reveal-delay, 0s) !important;
+    }
+
+    /* The shared header delays each link's inherited visibility by 0.5s.
+       Let the container control the text's fade and reveal timing instead. */
+    #hcont #pageHeader .links a {
+        transition: color 0.1s !important;
+    }
+
+    #hcont #pageHeader[data-hero-links-hidden] .links {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.1s var(--motion-ease-out), visibility 0s 0.1s !important;
+    }
+}
+
+@media (min-width: 700px) and (prefers-reduced-motion: reduce) {
+    #hcont #pageHeader .links,
+    #hcont #pageHeader[data-hero-links-hidden] .links {
+        transition: none !important;
+    }
+}
+
 /* ============ Hero ============ */
 .indexHeader {
     position: relative;
